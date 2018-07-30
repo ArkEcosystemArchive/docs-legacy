@@ -1,0 +1,63 @@
+---
+title: "List all transactions"
+---
+
+# List all transactions
+
+[[toc]]
+
+## Endpoint
+
+```
+GET /api/transactions
+```
+
+## Query Parameters
+
+| Name            | Type   | Description                                                    | Required |
+|-----------------|:------:|----------------------------------------------------------------|:--------:|
+| offset          | int    | The offset of resources that will be returned.                 | :x:      |
+| limit           | int    | The number of resources per page.                              | :x:      |
+| blockId         | int    | Unique identifier for the block.                               | :x:      |
+| type            | int    | Unique identifier for the transaction type.                    | :x:      |
+| orderBy         | string | The column by which the resources will be sorted.              | :x:      |
+| senderPublicKey | string | The sender public key by which the resources will be filtered. | :x:      |
+| vendorField     | string | The vendor field by which the resources will be filtered.      | :x:      |
+| ownerPublicKey  | string | The owner public key by which the resources will be filtered.  | :x:      |
+| ownerAddress    | string | The owner address by which the resources will be filtered.     | :x:      |
+| senderId        | string | The sender address by which the resources will be filtered.    | :x:      |
+| recipientId     | string | The recipient address by which the resources will be filtered. | :x:      |
+| amount          | int    | The amount by which the resources will be filtered.            | :x:      |
+| fee             | int    | The fee by which the resources will be filtered.               | :x:      |
+
+## Response
+
+```json
+{
+    "transactions": [
+        {
+            "id": "5c6ce775447a5acd22050d72e2615392494953bb1fb6287e9ffb3c33eaeb79aa",
+            "blockid": "4271682877946294396",
+            "type": 0,
+            "timestamp": 32794053,
+            "amount": 32106400000,
+            "fee": 10000000,
+            "recipientId": "DQnQNoJuNCvpjYhxL7fsnGepHBqrumgsyP",
+            "senderId": "DDiTHZ4RETZhGxcyAi1VruCXZKxBFqXMeh",
+            "senderPublicKey": "027742333b7f06acef9d3a7b3a9a924dbe6b9ddd3dd164c808546cacd49f6e8682",
+            "signature": "3044022047c39f6f45a46a87f91ca867f9551dbebf0035adcfcbdc1370222c7a1517fc0002206fb5ecc10460e0352a8b626a508e2fcc76e39e490b0a2581dd772ebc8079696e",
+            "confirmations": 2279
+        }
+    ],
+    "success": true
+}
+```
+
+## Example
+
+<request-example>
+```bash
+curl -X GET https://explorer.ark.io:8443/api/transactions \
+  -H "API-Version: 1"
+```
+</request-example>

@@ -1,0 +1,35 @@
+{
+    "name": "@arkecosystem/docs",
+    "description": "Official documentation for the Ark Ecosystem",
+    "contributors": [
+        "Brian Faust <brian@ark.io>"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "ark",
+        "blockchain",
+        "crypto",
+        "dpos",
+        "docs",
+        "api"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ArkEcosystem/docs.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ArkEcosystem/docs/issues"
+    },
+    "homepage": "https://github.com/ArkEcosystem/docs",
+    "scripts": {
+        "dev": "vuepress dev",
+        "build": "vuepress build"
+    },
+    "devDependencies": {
+        "vuepress": "^0.12.0",
+        "axios": "^0.18.0",
+        "highlight.js": "^9.12.0",
+        "nprogress": "^0.2.0",
+        "sweetalert": "^2.1.0"
+    }
+}

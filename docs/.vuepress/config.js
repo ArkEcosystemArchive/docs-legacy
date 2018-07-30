@@ -9,10 +9,12 @@ module.exports = {
     ],
     themeConfig: {
         logo: 'https://ark.io/images/media-kit/red-no-text.png',
+        repo: 'ArkEcosystem/docs',
+        repoLabel: 'Contribute!',
         editLinks: true,
         editLinkText: 'Help us improve this page!',
+        docsDir: 'docs',
         lastUpdated: true,
-        repo: 'ArkEcosystem/docs',
         nav: [{
             text: 'Home',
             link: '/'

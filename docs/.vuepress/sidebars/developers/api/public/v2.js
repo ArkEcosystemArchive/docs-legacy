@@ -42,13 +42,13 @@ module.exports = [
             '/developers/api/public/v2/transactions/list-all-transaction-types',
         ]
     }, {
-        title: 'Transactions',
+        title: 'Votes',
         children: [
             '/developers/api/public/v2/votes/list-all-votes',
             '/developers/api/public/v2/votes/retrieve-a-vote',
         ]
     }, {
-        title: 'Transactions',
+        title: 'Wallets',
         children: [
             '/developers/api/public/v2/wallets/list-all-wallets',
             '/developers/api/public/v2/wallets/retrieve-a-wallet',

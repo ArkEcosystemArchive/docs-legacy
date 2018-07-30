@@ -91,9 +91,7 @@ ___
 
 Your Ark Wallet stores your Ark for you. In order to interface with Ark you need to add some to your wallet.
 
-1. First you will need to buy some Ark, which is available across many exchanges today and growing regularly. You can find a list of exchanges here:
-
-<https://ark.io/exchanges>
+1. First you will need to buy some Ark, which is available across many exchanges today and growing regularly. You can find a list of exchanges here: [https://ark.io/exchanges](https://ark.io/exchanges)
 
 2. Once you've purchased some Ark via an exchange you will be ready to send your Ark to your Ark Wallet.
 

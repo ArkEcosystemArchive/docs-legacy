@@ -12,7 +12,7 @@ module.exports = {
         editLinks: true,
         editLinkText: 'Help us improve this page!',
         lastUpdated: true,
-        repo: 'ArkEcosystem/docs.ark.io',
+        repo: 'ArkEcosystem/docs',
         nav: [{
             text: 'Home',
             link: '/'

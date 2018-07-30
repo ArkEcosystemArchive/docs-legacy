@@ -16,8 +16,8 @@
 import nprogress from 'nprogress'
 import swal from 'sweetalert'
 
-import curl from '../../utils/curl'
-import request from '../../utils/request'
+import curl from '../utils/curl'
+import request from '../utils/request'
 
 export default {
     name: 'request-example',
@@ -60,7 +60,7 @@ export default {
             })
         },
         renderResponse(data) {
-            const highlight = require('../../utils/highlight')
+            const highlight = require('../utils/highlight')
             const markdown = require('markdown-it')().set({ highlight })
 
             let content = '```json\n'

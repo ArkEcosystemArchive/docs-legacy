@@ -69,6 +69,8 @@ module.exports = [
             '/developers/api/p2p/',
             '/developers/api/public/v1/',
             '/developers/api/public/v2/',
+            ['/developers/sdk/clients/guidelines', 'SDK Clients'],
+            ['/developers/sdk/cryptography/guidelines', 'SDK Cryptography'],
             '/developers/api/json-rpc/',
             '/developers/api/webhooks/',
         ]

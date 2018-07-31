@@ -37,7 +37,7 @@ Once the transaction is sent from Dustin's wallet it is broadcast to the network
 
 ![Transactions 5](./assets/understanding-transactions-and-block-propagation/Transactions_05.png)
 
-For ease of understanding from now forward in this example, just consider "nodes" and "forging delegates" as verifiers on the ARK network.  If you are interested in learning more about **nodes** consult our section on [Peers and Nodes, what are they and what is their role in the network?](http://www.ark.io/) and for delegates, [What is DPOS and how it relates to other consensus mechanisms](http://www.ark.io/).
+For ease of understanding from now forward in this example, just consider "nodes" and "forging delegates" as verifiers on the ARK network.  If you are interested in learning more about **nodes** consult our section on [Peers and Nodes, what are they and what is their role in the network?](http://www.ark.io/) and for delegates, [What is DPOS and how it relates to other consensus mechanisms](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html).
 
 ![Transactions 6](./assets/understanding-transactions-and-block-propagation/Transactions_06.png)
 
@@ -67,35 +67,35 @@ There are various fees for different types of transactions on the ARK network th
 
 The ARK network currently charges  the following fees, however they will be lowered after next Core update.
 
-**Vote**
+### Vote
 
-Fee: 1 ARK
+**Fee: 1 ARK**
 
 To stake your wallet and vote for a delegate will cost you 1 ARK. If you decided to vote for a different delegate you will need to unvote and vote again for a new delegate, each of these transactions will cost 1 ARK.   So if spent 1 ARK to vote for delegate A yesterday and today you decide to vote for delegate B the unvoting of delegate A will cost 1 ARK along with another 1 ARK to vote for delegate B.
 
-**Transactions**
+### Transactions
 
-Fee: 0.1 ARK
+**Fee: 0.1 ARK**
 
 This includes all normal transactions on the network such as send ARK from one wallet to another, on and off exchanges, etc.  For other transactions such as using ARK Contract Execution Nodes (ACES) nodes, those fees will be dictated by the ACES node you are connected to.  For more information on what ACES nodes are and how they bridge functionality between ARK and Ethereum refer to our blog post on them [ACES Nodes](http://www.blog.ark.io/aces-ark-contract-excution-services-d6924486b8c5)
 
-**Register 2nd Passphrase**
+### Register 2nd Passphrase
 
-Fee: 5 ARK
+**Fee: 5 ARK**
 
 When you set up your ARK wallet you will be prompted to write down a 12 word mnemonic passphrase.  This is the private key to your wallet, without which you will be unable access or move any of your funds.  ARK allows for users to register for a "second" passphrase which is an additional 12-word mnemonic phrase for enhanced security of your wallet and funds.
 
-**Delegate Registration**
+### Delegate Registration
 
-Fee: 25 ARK
+**Fee: 25 ARK**
 
 Delegates are individuals who are vying for community votes to become forging delegates who confirm blocks of transactions on the ARK blockchain.  Anyone is free to run as a delegate and seek votes from the community however only those who maintain the 51 highest vote counts become active forging delegates.
 
-When registering as a delegate you will choose a delegate name that is forever associated with this account.  Your delegate name cannot match an already registered delegate name and be under 20 characters (only lowercase, numbers and special characters are allowed).  To learn more about Delegated Proof of Stake and how it works refer to our section on [What is DPOS and how it relates to other consensus mechanisms](http://www.ark.io/)
+When registering as a delegate you will choose a delegate name that is forever associated with this account.  Your delegate name cannot match an already registered delegate name and be under 20 characters (only lowercase, numbers and special characters are allowed).  To learn more about Delegated Proof of Stake and how it works refer to our section on [What is DPOS and how it relates to other consensus mechanisms](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
 
-**Smartbridge Transactions**
+### Smartbridge Transactions
 
-Fee: Varying
+**Fee: Varying**
 
 Smartbridge technology is the pillar of innovation underlying the ARK network, allowing for cross blockchain transactions using ARK as the medium.  Currently every blockchain is like an island city state with no way to transact or interact with each other.  ARK's Smartbridge technology will allow for you to engage every blockchain or even multiple blockchain's using what are called "Encoded Listener Nodes".  These nodes allow you to send ARK to them and be swapped for the other blockchain's medium of exchange such as Bitcoin or Ethereum and use that networks functionality and reach through these nodes but stay within the ARK ecosystem, making ARK a de facto hive mind of the blockchain space.  Soon you will never need to leave ARK to operate and transact within ANY other blockchain.
 

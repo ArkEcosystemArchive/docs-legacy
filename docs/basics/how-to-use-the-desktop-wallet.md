@@ -53,7 +53,7 @@ When you arrive on this page you will see multiple options for the ArkClient. Se
 
 ___
 
-### <a name="creatingarkwallet">Creating your Ark Wallet</a>
+## Creating your Ark Wallet
 
 Your Ark Wallet is a unique address that will store your Ark.
 
@@ -78,7 +78,7 @@ Your Ark Wallet is a unique address that will store your Ark.
 
 ___
 
-#### <a name="idwalletaddress">Identifying your Ark Wallet Address</a>
+### Identifying your Ark Wallet Address
 
 Your Ark Wallet address is presented to you at the top of the client, under 'Address' and to the right of the *Copy* icon. This address is 100% unique to your wallet. You will need this address in the future to send Ark to your wallet. You can automatically copy is by simply clicking on it.
 
@@ -87,7 +87,7 @@ Your Ark Wallet address is presented to you at the top of the client, under 'Add
 ___
 
 
-### <a name="sendingarkto">Sending Ark to your Ark Wallet (*from an exchange*)</a>
+## Sending Ark to your Ark Wallet (*from an exchange*)
 
 Your Ark Wallet stores your Ark for you. In order to interface with Ark you need to add some to your wallet.
 
@@ -113,7 +113,7 @@ Your Ark Wallet stores your Ark for you. In order to interface with Ark you need
 
 ___
 
-### <a name="sendingarkfrom">Sending Ark from your Ark Wallet</a>
+## Sending Ark from your Ark Wallet
 
 Now that your have a balance of Ark in your wallet, you may want to send it out. Someone may want to send Ark to another Ark Address for any number of reasons, perhaps you want to sell your Ark, pay for a good or service, or donate Ark to the Ark Community Fund. Sending Ark is quick & easy.
 
@@ -141,7 +141,7 @@ Now that your have a balance of Ark in your wallet, you may want to send it out.
 
 ___
 
-### <a name="voting">Voting with your Ark Wallet</a>
+## Voting with your Ark Wallet
 
 Voting or otherwise known as staking your Ark has several purposes. By voting for a delegate you help secure the Ark network (most importantly), and the lure of voting is that most delegates provide an incentive for voting for them by rewarding you with Ark on a periodic basis (amount and how often paid differs between delegates). Some think of this as interest earned for their Ark.
 
@@ -176,7 +176,7 @@ ___
 ___
 
 
-### <a name="unvote">Unvoting a delegate</a>
+## Unvoting a delegate
 
 If your delegate is not contributing to the Ark community in a way he/she had promised, isn't paying their voters, or maybe a different delegate simply seems more attractive to you, you may wish to unvote your delegate.
 
@@ -192,11 +192,11 @@ If your delegate is not contributing to the Ark community in a way he/she had pr
 
 ___
 
-### Various functions & featues within the ArkClient/Desktop Application
+## Various functions & featues within the ArkClient/Desktop Application
 
 The ArkClient/Desktop Application offers a myriad of functions and features for the user to explore and utilize. This User Guide will cover and explain some of the features most often used by the average user.
 
-#### <a name="appear">Appearance</a>
+### Appearance
 
 You may change the background or theme in your ArkClient to fit your personal style and flavor.
 
@@ -225,7 +225,7 @@ You may also choose to set a background picture from your personal selection of 
 
 ___
 
-#### <a name="rename">Renaming your Ark Wallet</a>
+### Renaming your Ark Wallet
 
 Instead of your Ark Wallet Address displaying on the homescreen of the ArkClient you can choose to rename/relabel your Ark Wallet to what you wish. A couple reasons for wanting to rename your Ark Wallet could be you have multiple wallets and wish to easily distinguish between them, or perhaps you have different wallets for different purposes.
 
@@ -251,7 +251,7 @@ Instead of your Ark Wallet Address displaying on the homescreen of the ArkClient
 
 ___
 
-#### <a name="2ndpass">Adding a second passphrase</a>
+### Adding a second passphrase
 
 You can add a second passphrase to your Ark Wallet for an added layer of security. You may want to do this if you have a large amount of Ark or if you believe somebody else may know your first passphrase (or most of it).
 
@@ -280,7 +280,7 @@ You can add a second passphrase to your Ark Wallet for an added layer of securit
 ___
 
 
-#### <a name="removewallet">Remove wallet from Client</a>
+### Remove wallet from Client
 
 You may want to remove a wallet from the ArkClient if you have multiple wallets and you have some wallets you don't use anymore, or you're using a shared computer and don't want your wallets information to populate for when the next user opens ArkClient. Removing a wallet is easy and will **not** delete your wallet and it's contents. You can learn how to re-import your removed wallet in the next section.
 
@@ -300,7 +300,7 @@ You may want to remove a wallet from the ArkClient if you have multiple wallets 
 
 ___
 
-#### <a name="import">Import Account</a>
+### Import Account
 
 You may want to import an account if you're on a new computer, newly downloaded ArkClient, or if you previously removed your wallet from the client.
 
@@ -314,7 +314,7 @@ You may want to import an account if you're on a new computer, newly downloaded 
 
 ___
 
-### <a name="export">Export Account</a>
+### Export Account
 
 You may want to Export your account to keep track of the data within your wallet in a separate text file or there may be a program that will utilize the data and interpret it for you. The ArkClient will export your
 account in a .csv file (commonly known as a flat file).
@@ -329,7 +329,7 @@ account in a .csv file (commonly known as a flat file).
 
 ___
 
-#### <a name="timestamp">Timestamp a File</a>
+### Timestamp a File
 
 With the ArkClient you can timestamp a file on the Ark Blockchain. ArkClient will hash the file with SHA256. Hashing provides a unique string of characters based on the data within the file (does not include meta data). If so much as a period is removed from the file (in a text document for instance) the unique string will be vastly different. This provides proof of authenticity for the file and the timestamp provides the instance in time existed exactly as it is. This data being written to the Ark Blockchain provides immutable proof of a documents authenticity.
 
@@ -357,9 +357,9 @@ With the ArkClient you can timestamp a file on the Ark Blockchain. ArkClient wil
 
 ___
 
-#### Different settings within ArkClient/Desktop Application
+### Different settings within ArkClient/Desktop Application
 
-##### <a name="currency">Currency</a>
+##### Currency
 
 ArkClient is automatically set to USD. If you want the ArkClient to display Arks current exchange rate with your preferred currency (if available) you can change it so it appears by default on the homescreen and within your wallet.
 
@@ -385,7 +385,7 @@ The price is retrieved from <https://coinmarketcap.com/>
 
 ___
 
-##### <a name="lang">Language</a>
+##### Language
 
 ArkClient is automatically set to English as the default language. You can change this to your preferred language in settings.
 
@@ -401,7 +401,7 @@ ArkClient is automatically set to English as the default language. You can chang
 
 ___
 
-#### <a name="contacts">Add Contacts</a>
+### Add Contacts
 
 You may want to Add Contacts within your ArkClient to easily identify owners of wallets that you interact with. This will also make that wallet more readily available for you to interact with and provide some transaction data.
 
@@ -418,7 +418,7 @@ You may want to Add Contacts within your ArkClient to easily identify owners of 
 ___
 
 
-#### <a name="FAQ">Frequently Asked Questions</a>
+### Frequently Asked Questions
 
 *Q: What happens if my ArkClient/Desktop Application gets deleted/uninstalled? Do I lose all my Ark?*
 

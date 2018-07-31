@@ -22,12 +22,16 @@ module.exports = [
             '/blockchain/understanding-consensus-models',
         ]
     }, {
-        title: 'Guides',
+        title: 'Developers',
         children: [
-            '/guides/wallets/desktop',
-            '/guides/wallets/mobile',
-            '/guides/explorer',
-            '/guides/core-commander',
+            '/developers/',
+            '/developers/api/p2p/',
+            '/developers/api/public/v1/',
+            '/developers/api/public/v2/',
+            ['/developers/sdk/clients/guidelines', 'SDK Clients'],
+            ['/developers/sdk/cryptography/guidelines', 'SDK Cryptography'],
+            '/developers/api/json-rpc/',
+            '/developers/api/webhooks/',
         ]
     }, {
         title: 'Ark Core',
@@ -50,6 +54,14 @@ module.exports = [
             '/node/secure',
         ]
     }, {
+        title: 'Guides',
+        children: [
+            '/guides/wallets/desktop',
+            '/guides/wallets/mobile',
+            '/guides/explorer',
+            '/guides/core-commander',
+        ]
+    }, {
         title: 'Deployer',
         children: [
             '/deployer/setup',
@@ -61,18 +73,6 @@ module.exports = [
             '/exchanges/',
             '/exchanges/installation',
             '/exchanges/communication',
-        ]
-    }, {
-        title: 'Developers',
-        children: [
-            '/developers/',
-            '/developers/api/p2p/',
-            '/developers/api/public/v1/',
-            '/developers/api/public/v2/',
-            ['/developers/sdk/clients/guidelines', 'SDK Clients'],
-            ['/developers/sdk/cryptography/guidelines', 'SDK Cryptography'],
-            '/developers/api/json-rpc/',
-            '/developers/api/webhooks/',
         ]
     }, {
         title: 'FAQ',

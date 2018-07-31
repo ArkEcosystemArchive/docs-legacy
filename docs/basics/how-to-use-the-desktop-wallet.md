@@ -99,17 +99,17 @@ Your Ark Wallet stores your Ark for you. In order to interface with Ark you need
 
 3. In this example we are withdrawing from Bittrex. Each exchange is unique in its own way, but withdrawing will generally follow the same steps. Click on the '-' icon in Bittrex to begin your withdrawal.
 
+![Bittrex-withdraw](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw.png)
 
 4. You will be presented with a 'Confirm Ark Withdrawal' page. Enter your Ark Address to your wallet (simply click on the address in your Ark Desktop Application, within your wallet) and paste. Then, enter the amount of Ark you'd like to send to your Ark Wallet. Then select "Withdrawal", and "Confirm" the transaction.
 
-![Imgur](https://i.imgur.com/vqYrwRJ.png)
-![Bittrex-withdraw](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw.png)
+![Bittrex-withdraw-confirm](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw-confirm.png)
 
 **Note:** Bittrex, like many exchanges, will send you an email that you need to open and select a link in to confirm the transaction. This is a typical security measure most exchanges perform.
 
 5. Your Ark will be sent on it's way to your Ark Wallet! You will soon be able to see your new Ark balance in the Ark Desktop Application!
 
-![Bittrex-withdraw-confirm](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw-confirm.png)
+![Wallet-balance](./assets/how-to-use-the-desktop-wallet/Wallet-balance.png)
 
 ___
 
@@ -341,11 +341,11 @@ With the ArkClient you can timestamp a file on the Ark Blockchain. ArkClient wil
 
 2. You will notice a new ribbon of options appear at the bottom of your ArkClient. Select the "TIMESTAMP DOCUMENT" option.
 
-![Wallet-settings](./assets/how-to-use-the-desktop-wallet/Wallet-settings.png)
+![Timestamp-button](./assets/how-to-use-the-desktop-wallet/Timestamp-button.png)
 
 3. A new box will appear titled "Timestamp Document On (wallet address)". Select "OPEN FILE" to be hashed and timestamped and select your file. Input your passphrase and select "NEXT".
 
-![Timestamp-button](./assets/how-to-use-the-desktop-wallet/Timestamp-button.png)
+![Timestamp-passphrase](./assets/how-to-use-the-desktop-wallet/Timestamp-passphrase.png)
 
 4. On the next screen transaction details will be provided. Select "SEND NOW" to complete.
 

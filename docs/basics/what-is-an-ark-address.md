@@ -18,7 +18,7 @@ It is impossible to compute the private key from the public key. Because of this
 
 ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [elliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
-ECDSA generates the private key and the public key pair from a unique 32-bytes-size seed. As the seeds are not very human readable, we have the option to generate the seed from something more convenient&nbsp;: a passphrase.
+ECDSA generates the private key and the public key pair from a unique 32-bytes-size seed. As the seeds are not very human readable, we have the option to generate the seed from something more convenient : a passphrase.
 
 The passphrase is a written in simple readable text. It often consists of twelve words according to the [Bitcoin Improvement Protocol #39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) (BIP39). The usage of the protocol is not mandatory as a seed can be generated from any kind text, but is recommended. A passphrase needs enough complexity and has to be random enough in order to be considered secure.
 
@@ -43,12 +43,12 @@ The ARK address is like a bank account where only the owner of the private key c
 
 ![Diagram 002](./assets/what-is-an-ark-address/arkDiagram04-002.png)
 
-A modifier is a byte used to customize the address. It is useful to differentiate networks&nbsp;:
+A modifier is a byte used to customize the address. It is useful to differentiate networks :
  + On ARK mainnet modifier = `0x17` so ARK address starts with `A`
  + On ARK devnet modifier = `0x1e` so DARK address starts with `D`
  + On KAPU mainnet modifier = `0x2d` so KAPU address starts with `K`
 
-Here is the table giving the address start char according to hexadecimal modifier value&nbsp;:
+Here is the table giving the address start char according to hexadecimal modifier value :
 
 |hex|start char|hex|start char|hex|start char|hex|start char|hex|start char|
 |:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|:-:|:--------:|
@@ -92,11 +92,11 @@ Here is the table giving the address start char according to hexadecimal modifie
 
 The best way to secure ARK address is to use a device that can sign transactions off the network. ARK team developed an application running on [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) hardware wallet allowing such a security.
 
-The Ledger Nano S device does not store tokens. It is a device that generates public and private keys from a master seed. Keys are issued from the seed using the derivation path. For Ark blockchain (and cloned ones) the derivation path is structured like this&nbsp;:
+The Ledger Nano S device does not store tokens. It is a device that generates public and private keys from a master seed. Keys are issued from the seed using the derivation path. For Ark blockchain (and cloned ones) the derivation path is structured like this :
 
 `44'\111'\<account index>'\0\<address number>`
 
-So the derivation path of address #1 from account #1 is&nbsp;:
+So the derivation path of address #1 from account #1 is :
 
 `44'\111'\0'\0\0`
 
@@ -104,11 +104,11 @@ So the derivation path of address #1 from account #1 is&nbsp;:
 
 ### BIP39 account possibilities
 
-Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) available in BIP39 list gives&nbsp;:
+Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md) available in BIP39 list gives :
 
-<img src="https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}" title="\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}"/>
+![\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!}](https://latex.codecogs.com/svg.latex?\frac{n!}{(n-k)!}=\frac{2048!}{(2048-12)!})
 
-**5&nbsp;271&nbsp;537&nbsp;971&nbsp;301&nbsp;488&nbsp;476&nbsp;000&nbsp;309&nbsp;317&nbsp;528&nbsp;200&nbsp;000&nbsp;000 combinations**
+**5 271 537 971 301 488 476 000 309 317 528 200 000 000 combinations**
 
 #### References
 1. WebSite GlobalSign, https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/

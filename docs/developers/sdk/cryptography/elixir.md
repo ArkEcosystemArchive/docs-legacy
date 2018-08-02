@@ -8,11 +8,11 @@ title: "Elixir"
 
 ## Installation
 
-The package can be installed by adding `ark_crypto` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `arkecosystem_crypto` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:ark_crypto, "~> 0.1.0"}]
+  [{:arkecosystem_crypto, "~> 0.1.0"}]
 end
 ```
 

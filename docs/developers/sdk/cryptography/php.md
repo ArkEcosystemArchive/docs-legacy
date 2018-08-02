@@ -92,3 +92,68 @@ $message = Message::new([
 
 echo($message->verify() ? 'Valid' : 'Invalid');
 ```
+
+## Identities
+
+### Address
+
+#### Get an address from a passphrase
+```php
+Address::fromPassphrase('address');
+```
+
+#### Get an address from a public key
+```php
+Address::fromPublicKey('public_key');
+```
+
+#### Get an address from a private key
+```php
+Address::fromPrivateKey($privateKey);
+```
+
+#### Validate an address
+```php
+Address::validate('address');
+```
+
+### Private Key
+
+#### Get a private key from a passphrase
+```php
+PrivateKey::fromPassphrase('passphrase');
+```
+
+#### Get a private key instance object from hex
+```php
+PrivateKey::fromHex('private_key_as_hex');
+```
+
+#### Get a private key from a WIF
+```php
+PrivateKey::fromWif('base58_wif');
+```
+
+### Public Key
+
+#### Get a public key from a passphrase
+```php
+PublicKey::fromPassphrase('passphrase');
+```
+
+#### Get a public key instance object from hex
+```php
+PublicKey::fromHex('public_key_as_hex');
+```
+
+#### Validate a public key
+```php
+PublicKey::validate('public_key_as_hex');
+```
+
+### WIF
+
+#### Get a WIF from a passphrase
+```php
+WIF::fromPassphrase('passphrase');
+```

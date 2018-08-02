@@ -20,7 +20,7 @@ compile group: 'org.arkecosystem.crypto', name: 'crypto', version: '0.1.0'
 
 ### Maven
 
-```bash
+```xml
 <dependency>
     <groupId>org.arkecosystem.crypto</groupId>
     <artifactId>crypto</artifactId>
@@ -50,8 +50,8 @@ import org.arkecosystem.crypto.transactions.Serializer
 import org.arkecosystem.crypto.transactions.Transaction
 
 def transaction = new Transaction()
-transaction.type = fixture.data.type
-transaction.amount = fixture.data.amount
+transaction.type = 0
+transaction.amount = 200000000
 ...
 
 new Serializer().serialize(transaction)

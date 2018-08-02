@@ -12,36 +12,73 @@ This project is still under development. This page will get more content as the 
 
 ## Installation
 
-```bash
+### Gradle
 
+```bash
+compile group: 'org.arkecosystem.crypto', name: 'crypto', version: '0.1.0'
+```
+
+### Maven
+
+```bash
+<dependency>
+    <groupId>org.arkecosystem.crypto</groupId>
+    <artifactId>crypto</artifactId>
+    <version>0.1.0</version>
+    <scope>test</scope>
+</dependency>
 ```
 
 ## Creating a Transaction
 
-```java
+```groovy
+import org.arkecosystem.crypto.transactions.builder.Transfer
 
+def transfer = new Transfer()
+    .recipient('AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25')
+    .amount(133380000000)
+    .vendorField('This is a transaction from PHP')
+    .sign('this is a top secret passphrase')
+
+System.out.println(transfer.getTransaction().verify())
 ```
 
 ## Serializing a Transaction (AIP11)
 
-```java
+```groovy
+import org.arkecosystem.crypto.transactions.Serializer
+import org.arkecosystem.crypto.transactions.Transaction
 
+def transaction = new Transaction()
+transaction.type = fixture.data.type
+transaction.amount = fixture.data.amount
+...
+
+new Serializer().serialize(transaction)
 ```
 
 ## Deserializing a Transaction (AIP11)
 
-```java
+```groovy
+import org.arkecosystem.crypto.transactions.Deserializer
 
+new Deserializer().deserialize("serialized-hex")
 ```
 
 ## Signing a Message
 
-```java
+```groovy
+import org.arkecosystem.crypto.utils.Message
 
+Message.sign("Hello World", "this is a top secret passphrase")
 ```
 
 ## Verifying a Message
 
-```java
+```groovy
+import org.arkecosystem.crypto.utils.Message
 
+def message = Message.sign("Hello World", "this is a top secret passphrase")
+
+System.out.println(message.verify())
 ```

@@ -7,7 +7,7 @@ title: "How To Deploy Your Own ARK Chain On Azure?"
 [[toc]]
 
 ::: tip
-**This deployment method can be used to jump-start your journey to your own BridgeChain in the process [outlined here (ARK Deployer)](https://arkdocs.readme.io/docs/ark-deployer-guide)**
+**This deployment method can be used to jump-start your journey to your own BridgeChain in the process [outlined here (ARK Deployer)](https://docs.ark.io/deployer/setup.html)**
 :::
 
 **Prerequisites**

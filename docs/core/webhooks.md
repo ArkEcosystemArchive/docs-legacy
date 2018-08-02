@@ -69,4 +69,4 @@ Let's break down the steps we took here:
 
 ## Closing
 
-This is all you need to know about how to secure and handle webhooks. Head over to the [API docs](https://arkdocs.readme.io/v1.0/reference#webhooks) for webhooks to get started.
+This is all you need to know about how to secure and handle webhooks. Head over to the [API docs](https://docs.ark.io/developers/api/webhooks/) for webhooks to get started.

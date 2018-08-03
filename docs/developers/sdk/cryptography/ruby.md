@@ -77,3 +77,58 @@ message = ArkEcosystem::Crypto::Message.new(
 
 puts message.verify
 ```
+
+## Identities
+
+### Address
+
+#### Get an address from a passphrase
+```ruby
+ArkEcosystem::Crypto::Identities::Address.from_passphrase('passphrase')
+```
+
+#### Get an address from a public key
+```ruby
+ArkEcosystem::Crypto::Identities::Address.from_public_key(identity.data.publicKey)
+```
+
+#### Get an address from a private key
+```ruby
+ArkEcosystem::Crypto::Identities::Address.from_private_key(private_key)
+```
+
+#### Validate an address
+```ruby
+ArkEcosystem::Crypto::Identities::Address.validate('passphrase')
+```
+
+### Private Key
+
+#### Get a private key from a passphrase
+```ruby
+ArkEcosystem::Crypto::Identities::PrivateKey.from_passphrase('passphrase')
+```
+
+#### Get a private key instance object from hex
+```ruby
+ArkEcosystem::Crypto::Identities::PrivateKey.from_hex('private_key_as_hex')
+```
+
+### Public Key
+
+#### Get a public key from a passphrase
+```ruby
+ArkEcosystem::Crypto::Identities::PublicKey.from_passphrase('passphrase')
+```
+
+#### Get a public key instance object from hex
+```ruby
+ArkEcosystem::Crypto::Identities::PublicKey.from_hex('public_key_as_hex')
+```
+
+### WIF
+
+#### Get a WIF from a passphrase
+```ruby
+ArkEcosystem::Crypto::Identities::WIF.from_passphrase('passphrase')
+```

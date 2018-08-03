@@ -86,3 +86,76 @@ var message = Message.Sign("Hello World", "passphrase");
 
 Console.WriteLine(message.Verify());
 ```
+
+## Identities
+
+### Address
+
+#### Get an address from a passphrase
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.Address.FromPassphrase('passphrase');
+```
+
+#### Get an address from a public key
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.Address.FromPublicKey(publicKey);
+```
+
+#### Get an address from a private key
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.Address.FromPrivateKey(privateKey);
+```
+
+#### Validate an address
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.Address.Validate('address');
+```
+
+### Private Key
+
+#### Get a private key from a passphrase
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.PrivateKey.FromPassphrase('passphrase');
+```
+
+#### Get a private key instance object from hex
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.PrivateKey.FromHex('private_key_as_hex');
+```
+
+### Public Key
+
+#### Get a public key from a passphrase
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.PublicKey.FromPassphrase('passphrase');
+```
+
+#### Get a public key instance object from hex
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.PublicKey.FromHex('public_key_as_hex');
+```
+
+### WIF
+
+#### Get a WIF from a passphrase
+```csharp
+using ArkEcosystem.Crypto;
+
+Identities.WIF.FromPassphrase('passphrase')
+```

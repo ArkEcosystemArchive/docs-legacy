@@ -14,13 +14,11 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 composer require arkecosystem/crypto
 ```
 
-## Creating a Transaction
+## Transactions
+
+### Sign
 
 ```php
-<?php
-
-require_once('vendor/autoload.php');
-
 use ArkEcosystem\Crypto\Transactions\Builder\Transfer;
 
 $transaction = Transfer::new()
@@ -33,13 +31,9 @@ echo("Verified: ".$transaction->verify());
 echo("JSON: ".$transaction->toJSON());
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```php
-<?php
-
-require_once('vendor/autoload.php');
-
 use ArkEcosystem\Crypto\Transactions\Serializer;
 
 $buffer = Serializer::new($transaction)->serialize();
@@ -47,13 +41,9 @@ $buffer = Serializer::new($transaction)->serialize();
 echo($buffer->getHex());
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```php
-<?php
-
-require_once('vendor/autoload.php');
-
 use ArkEcosystem\Crypto\Transactions\Deserializer;
 
 $transaction = Deserializzer::new($serializedTransaction)->deserialize();
@@ -61,13 +51,11 @@ $transaction = Deserializzer::new($serializedTransaction)->deserialize();
 echo($transaction->id);
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```php
-<?php
-
-require_once('vendor/autoload.php');
-
 use ArkEcosystem\Crypto\Utils\Message;
 
 $message = Message::sign('Hello World', 'passphrase');
@@ -75,13 +63,9 @@ $message = Message::sign('Hello World', 'passphrase');
 echo($message);
 ```
 
-## Verifying a Message
+### Verify
 
 ```php
-<?php
-
-require_once('vendor/autoload.php');
-
 use ArkEcosystem\Crypto\Utils\Message;
 
 $message = Message::new([
@@ -99,61 +83,61 @@ echo($message->verify() ? 'Valid' : 'Invalid');
 
 #### Get an address from a passphrase
 ```php
-Address::fromPassphrase('address');
+ArkEcosystem\Crypto\Identities\Address::fromPassphrase('address');
 ```
 
 #### Get an address from a public key
 ```php
-Address::fromPublicKey('public_key');
+ArkEcosystem\Crypto\Identities\Address::fromPublicKey('public_key');
 ```
 
 #### Get an address from a private key
 ```php
-Address::fromPrivateKey($privateKey);
+ArkEcosystem\Crypto\Identities\Address::fromPrivateKey($privateKey);
 ```
 
 #### Validate an address
 ```php
-Address::validate('address');
+ArkEcosystem\Crypto\Identities\Address::validate('address');
 ```
 
 ### Private Key
 
 #### Get a private key from a passphrase
 ```php
-PrivateKey::fromPassphrase('passphrase');
+ArkEcosystem\Crypto\Identities\PrivateKey::fromPassphrase('passphrase');
 ```
 
 #### Get a private key instance object from hex
 ```php
-PrivateKey::fromHex('private_key_as_hex');
+ArkEcosystem\Crypto\Identities\PrivateKey::fromHex('private_key_as_hex');
 ```
 
 #### Get a private key from a WIF
 ```php
-PrivateKey::fromWif('base58_wif');
+ArkEcosystem\Crypto\Identities\PrivateKey::fromWif('base58_wif');
 ```
 
 ### Public Key
 
 #### Get a public key from a passphrase
 ```php
-PublicKey::fromPassphrase('passphrase');
+ArkEcosystem\Crypto\Identities\PublicKey::fromPassphrase('passphrase');
 ```
 
 #### Get a public key instance object from hex
 ```php
-PublicKey::fromHex('public_key_as_hex');
+ArkEcosystem\Crypto\Identities\PublicKey::fromHex('public_key_as_hex');
 ```
 
 #### Validate a public key
 ```php
-PublicKey::validate('public_key_as_hex');
+ArkEcosystem\Crypto\Identities\PublicKey::validate('public_key_as_hex');
 ```
 
 ### WIF
 
 #### Get a WIF from a passphrase
 ```php
-WIF::fromPassphrase('passphrase');
+ArkEcosystem\Crypto\Identities\WIF::fromPassphrase('passphrase');
 ```

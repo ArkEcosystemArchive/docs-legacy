@@ -71,6 +71,7 @@ Following these guidelines is required to provide a streamlined experience acros
 - **parseSignatures** Parse the signature, second signature and multi signatures.
 - **serialize** Serialise the object via AIP11.
 - **deserialize** Deserialise the given hex string via AIP11.
+- **fromJson** Map the JSON to a new transaction object.
 - **toBytes** Turn the transaction into its v1 byte representation.
 - **toArray** Turn the transaction into a standardised array.
 - **toJson** Turn the transaction into a JSON string using the `toArray` data as source.

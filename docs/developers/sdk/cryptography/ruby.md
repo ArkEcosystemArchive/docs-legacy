@@ -6,7 +6,7 @@ title: "Ruby"
 
 [[toc]]
 
-## Installation
+### Installation
 
 Add this line to your application's Gemfile and then execute `bundle`
 
@@ -14,7 +14,9 @@ Add this line to your application's Gemfile and then execute `bundle`
 gem 'arkecosystem-crypto'
 ```
 
-## Creating a Transaction
+## Transactions
+
+### Sign
 
 ```ruby
 require 'arkecosystem/crypto'
@@ -30,7 +32,7 @@ puts transaction.to_params
 
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```ruby
 require 'arkecosystem/crypto'
@@ -40,7 +42,7 @@ serializer = ArkEcosystem::Crypto::Serializer.new(transaction)
 puts serializer.serialize
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```ruby
 require 'arkecosystem/crypto'
@@ -50,7 +52,9 @@ deserializer = ArkEcosystem::Crypto::Deserializer.new(serialized_transaction)
 puts deserialiser.deserialize
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```ruby
 require 'arkecosystem/crypto'
@@ -60,7 +64,7 @@ message = ArkEcosystem::Crypto::Message.sign('Hello World', 'passphrase')
 puts message.to_params
 ```
 
-## Verifying a Message
+### Verify
 
 ```ruby
 require 'arkecosystem/crypto'

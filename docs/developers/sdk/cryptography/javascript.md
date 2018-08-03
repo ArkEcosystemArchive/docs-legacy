@@ -16,31 +16,35 @@ This project is still under development. This page will get more content as the 
 
 ```
 
-## Creating a Transaction
+## Transactions
+
+## Sign
 
 ```js
 
 ```
 
-## Serializing a Transaction (AIP11)
+## Serialize (AIP11)
 
 ```js
 
 ```
 
-## Deserializing a Transaction (AIP11)
+## Deserialize (AIP11)
 
 ```js
 
 ```
 
-## Signing a Message
+## Message
+
+## Sign
 
 ```js
 
 ```
 
-## Verifying a Message
+## Verify
 
 ```js
 

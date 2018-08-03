@@ -95,28 +95,28 @@ Console.WriteLine(message.Verify());
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.Address.FromPassphrase('passphrase');
+Identities.Address.FromPassphrase('this is a top secret passphrase');
 ```
 
 #### Get an address from a public key
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.Address.FromPublicKey(publicKey);
+Identities.Address.FromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
 
 #### Get an address from a private key
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.Address.FromPrivateKey(privateKey);
+Identities.Address.FromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
 ```
 
 #### Validate an address
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.Address.Validate('address');
+Identities.Address.Validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib');
 ```
 
 ### Private Key
@@ -125,14 +125,14 @@ Identities.Address.Validate('address');
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.PrivateKey.FromPassphrase('passphrase');
+Identities.PrivateKey.FromPassphrase('this is a top secret passphrase');
 ```
 
 #### Get a private key instance object from hex
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.PrivateKey.FromHex('private_key_as_hex');
+Identities.PrivateKey.FromHex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
 ```
 
 ### Public Key
@@ -141,14 +141,14 @@ Identities.PrivateKey.FromHex('private_key_as_hex');
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.PublicKey.FromPassphrase('passphrase');
+Identities.PublicKey.FromPassphrase('this is a top secret passphrase');
 ```
 
 #### Get a public key instance object from hex
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.PublicKey.FromHex('public_key_as_hex');
+Identities.PublicKey.FromHex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
 
 ### WIF
@@ -157,5 +157,5 @@ Identities.PublicKey.FromHex('public_key_as_hex');
 ```csharp
 using ArkEcosystem.Crypto;
 
-Identities.WIF.FromPassphrase('passphrase')
+Identities.WIF.FromPassphrase('this is a top secret passphrase')
 ```

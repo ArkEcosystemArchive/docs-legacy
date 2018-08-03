@@ -16,31 +16,33 @@ This project is still under development. This page will get more content as the 
 
 ```
 
-## Creating a Transaction
+### Sign
 
 ```swift
 
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```swift
 
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```swift
 
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```swift
 
 ```
 
-## Verifying a Message
+### Verify
 
 ```swift
 

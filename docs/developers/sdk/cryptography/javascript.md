@@ -35,17 +35,3 @@ This project is still under development. This page will get more content as the 
 ```js
 
 ```
-
-## Message
-
-## Sign
-
-```js
-
-```
-
-## Verify
-
-```js
-
-```

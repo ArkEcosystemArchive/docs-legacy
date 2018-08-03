@@ -16,7 +16,9 @@ def deps do
 end
 ```
 
-## Creating a Transaction
+## Transactions
+
+### Sign
 
 ```elixir
 alias ArkEcosystem.Crypto.Transactions.Transaction
@@ -32,7 +34,7 @@ transaction = Builder.build_transfer(
 IO.puts Transaction.verify(transaction)
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```elixir
 alias ArkEcosystem.Crypto.Transactions.Serializer
@@ -42,7 +44,7 @@ serialized = Serializer.serialize(transaction, %{underscore: true})
 IO.puts serialized
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```elixir
 alias ArkEcosystem.Crypto.Transactions.Deserializer
@@ -52,7 +54,9 @@ transaction = Deserializer.deserialize(serialized_transaction)
 IO.puts transaction[:id]
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```elixir
 alias ArkEcosystem.Crypto.Utils.Message
@@ -64,7 +68,7 @@ IO.puts message[:signature]
 IO.puts message[:message]
 ```
 
-## Verifying a Message
+### Verify
 
 ```elixir
 alias ArkEcosystem.Crypto.Utils.Message

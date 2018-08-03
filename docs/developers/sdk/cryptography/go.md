@@ -12,7 +12,9 @@ title: "Go"
 go get github.com/ArkEcosystem/go-crypto/crypto
 ```
 
-## Creating a Transaction
+## Transactions
+
+### Sign
 
 ```go
 package main
@@ -29,7 +31,7 @@ func main() {
 }
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```go
 package main
@@ -48,7 +50,7 @@ func main() {
 }
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```go
 package main
@@ -65,7 +67,9 @@ func main() {
 }
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```go
 package main
@@ -82,7 +86,7 @@ func main() {
 }
 ```
 
-## Verifying a Message
+### Verify
 
 ```go
 package main

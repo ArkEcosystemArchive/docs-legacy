@@ -29,7 +29,9 @@ compile group: 'org.arkecosystem.crypto', name: 'crypto', version: '0.1.0'
 </dependency>
 ```
 
-## Creating a Transaction
+## Transactions
+
+### Sign
 
 ```groovy
 import org.arkecosystem.crypto.transactions.builder.Transfer
@@ -43,7 +45,7 @@ def transfer = new Transfer()
 System.out.println(transfer.getTransaction().verify())
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```groovy
 import org.arkecosystem.crypto.transactions.Serializer
@@ -57,7 +59,7 @@ transaction.amount = 200000000
 new Serializer().serialize(transaction)
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```groovy
 import org.arkecosystem.crypto.transactions.Deserializer
@@ -65,7 +67,9 @@ import org.arkecosystem.crypto.transactions.Deserializer
 new Deserializer().deserialize("serialized-hex")
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```groovy
 import org.arkecosystem.crypto.utils.Message
@@ -73,7 +77,7 @@ import org.arkecosystem.crypto.utils.Message
 Message.sign("Hello World", "this is a top secret passphrase")
 ```
 
-## Verifying a Message
+### Verify
 
 ```groovy
 import org.arkecosystem.crypto.utils.Message

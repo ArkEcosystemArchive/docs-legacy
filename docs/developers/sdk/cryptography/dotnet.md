@@ -26,7 +26,9 @@ dotnet add package ArkEcosystem.Crypto --version 0.1.0
 paket add ArkEcosystem.Crypto --version 0.1.0
 ```
 
-## Creating a Transaction
+## Transactions
+
+### Sign
 
 ```csharp
 using ArkEcosystem.Crypto;
@@ -41,7 +43,7 @@ var transaction = Crypto.Builder.Transfer.Create(
 Console.WriteLine(transaction.Verify());
 ```
 
-## Serializing a Transaction (AIP11)
+### Serialize (AIP11)
 
 ```csharp
 using ArkEcosystem.Crypto;
@@ -51,7 +53,7 @@ var transaction = new Serializer(transactionObject).Serialize();
 Console.WriteLine(transaction);
 ```
 
-## Deserializing a Transaction (AIP11)
+### Deserialize (AIP11)
 
 ```csharp
 using ArkEcosystem.Crypto;
@@ -61,7 +63,9 @@ var transaction = new Deserializer(serializedTransaction).Deserialize();
 Console.WriteLine(transaction.Id);
 ```
 
-## Signing a Message
+## Message
+
+### Sign
 
 ```csharp
 using ArkEcosystem.Crypto;
@@ -73,7 +77,7 @@ Console.WriteLine(message.signature);
 Console.WriteLine(message.message);
 ```
 
-## Verifying a Message
+### Verify
 
 ```csharp
 using ArkEcosystem.Crypto;

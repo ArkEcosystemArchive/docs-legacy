@@ -77,3 +77,58 @@ message = Message.sign("Hello World", "passphrase")
 
 IO.puts Message.verify(message)
 ```
+
+## Identities
+
+### Address
+
+#### Get an address from a passphrase
+```elixir
+ArkEcosystem.Crypto.Identities.Address.from_passphrase('passphrase')
+```
+
+#### Get an address from a public key
+```elixir
+ArkEcosystem.Crypto.Identities.Address.from_public_key('public_key_as_hex')
+```
+
+#### Get an address from a private key
+```elixir
+ArkEcosystem.Crypto.Identities.Address.from_private_key('private_key_as_hex')
+```
+
+#### Validate an address
+```elixir
+ArkEcosystem.Crypto.Identities.Address.validate('address')
+```
+
+### Private Key
+
+#### Get a private key from a passphrase
+```elixir
+ArkEcosystem.Crypto.Identities.PrivateKey.from_passphrase('passphrase')
+```
+
+#### Get a private key instance object from hex
+```elixir
+ArkEcosystem.Crypto.Identities.PrivateKey.from_hex('private_key_as_hex')
+```
+
+### Public Key
+
+#### Get a public key from a passphrase
+```elixir
+ArkEcosystem.Crypto.Identities.PublicKey.from_passphrase('passphrase')
+```
+
+#### Get a public key instance object from hex
+```elixir
+ArkEcosystem.Crypto.Identities.PublicKey.from_hex('public_key_as_hex')
+```
+
+### WIF
+
+#### Get a WIF from a passphrase
+```elixir
+ArkEcosystem.Crypto.Identities.WIF.from_passphrase('passphrase')
+```

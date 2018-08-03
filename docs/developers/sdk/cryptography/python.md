@@ -16,31 +16,35 @@ This project is still under development. This page will get more content as the 
 
 ```
 
-## Creating a Transaction
+## Transactions
+
+## Sign
 
 ```python
 
 ```
 
-## Serializing a Transaction (AIP11)
+## Serialize (AIP11)
 
 ```python
 
 ```
 
-## Deserializing a Transaction (AIP11)
+## Deserialize (AIP11)
 
 ```python
 
 ```
 
-## Signing a Message
+## Message
+
+## Sign
 
 ```python
 
 ```
 
-## Verifying a Message
+## Verify
 
 ```python
 

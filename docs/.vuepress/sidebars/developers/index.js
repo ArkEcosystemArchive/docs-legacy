@@ -38,6 +38,12 @@ module.exports = [
             '/developers/sdk/cryptography/swift',
         ]
     }, {
+        title: 'SDK Reference - Frameworks',
+        children: [
+            '/developers/sdk/frameworks/laravel',
+            '/developers/sdk/frameworks/symfony',
+        ]
+    }, {
         title: 'API Reference',
         children: [
             '/developers/api/p2p/',

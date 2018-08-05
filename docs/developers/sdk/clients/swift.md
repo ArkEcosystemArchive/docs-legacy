@@ -24,7 +24,7 @@ This package is still under development. This page will get more content as it e
 If you are using Carthage, you can integrate the Ark Swift Client in your project by specifying it in your `Cartfile`:
 
 ```
-	github "ArkEcosystem/swift-client" ~> 0.1.0
+github "ArkEcosystem/swift-client" ~> 0.1.0
 ``` 
 
 Afterwards, run `Carthage update` to build the framework.
@@ -36,15 +36,11 @@ You can then drag the generated `.framework` file into your project.
 You can use it to integrate the Ark Swift Client in your project, by adding it to your `Podfile` as follows:
 
 ```
-	pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '0.1.0'
+pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '0.1.0'
 ```
 
 Afterwards, install it by running `pod install`.
 You are then able to use it in your project by using `import SwiftClient`.
-
-### Build from source
-
-TODO
 
 ## Usage
 
@@ -58,7 +54,7 @@ A `Connection` expects a `host`, which is an url on which the API can be reached
 An example `Connection` that connects to a v2 API of a node, would be created as follows:
 
 ```swift
-	let conn = Connection(host: "http://0.0.0.0:4003/api", version: 2) // Mind the '/api' after the url
+let conn = Connection(host: "http://0.0.0.0:4003/api", version: 2) // Mind the '/api' after the url
 ```
 
 When making requests to an `Accounts` endpoint, the connection would be used to create the `http://0.0.0.0:4003/api/accounts` url.
@@ -69,28 +65,41 @@ There is also a `ConnectionManager` available that you can use to keep track of 
 If you would like to have a `mainnet` and `devnet` connection, you can add them both to the manager in the following way:
 
 ```swift
-	// Create the connections you want to be able to use
-	let mainConn = Connection(host: "mainnetHost:4003/api", version: 2)
-    let devConn = Connection(host: "devnetHost:4003/api", version: 2)
+// Create the connections you want to be able to use
+let mainConn = Connection(host: "mainnetHost:4003/api", version: 2)
+let devConn = Connection(host: "devnetHost:4003/api", version: 2)
 
-    // Create a ConnectionManager instance
-    let manager = ConnectionManager()
+// Create a ConnectionManager instance
+let manager = ConnectionManager()
 
-    // Add the connections to the manager
-    manager.connect(to: mainConn, withName: "main")
-	manager.connect(to: devConn, withName: "dev")
+// Add the connections to the manager
+manager.connect(to: mainConn, withName: "main")
+manager.connect(to: devConn, withName: "dev")
 
-	// You can now retrieve the connection you want and use it for API requests
-	let conn = try manager.connection("main")
+// You can now retrieve the connection you want and use it for API requests
+let conn = try manager.connection("main")
 ```
 
 ### Making an API Request
 
-* TODO
-	* example of creating an api request (connection + endpoint + performing request + example response)
-	* requests are async, and are returned in a closure
-	* note that you can override the get / post handling with your own functions, if wanted. Specify the required parameters for that.
+The below example shows how you can perform a request.
 
 ```swift
-	let blocks = Two.Blocks(connection: connection)
+// Create connection
+let conn = Connection(host: "host:4003/api", version: 2)
+
+// Use connection to access endpoint
+let blocks = Two.Blocks(connection: conn)
+
+// Perform an API call, note that requests are async and returned in a closure
+blocks.all { (response) in
+    // Do something with the response
+    // Note that response is of type [String: Any]
+}
 ```
+
+By default, the requests are performed with [Alamofire](https://github.com/Alamofire/Alamofire) and the response is given to the callback function as `[String: Any]`.
+The functions that are responsible for this can be found in `Utils.swift`.
+You can easily override this default functionality by defining your own `handleApiGet` and `handleApiPost` functions and passing them to the endpoint object (e.g. `Two.Blocks`.
+An example of how this is done can be found by looking at the tests, for example those of [Blocks](https://github.com/ArkEcosystem/swift-client/blob/master/Client/ClientTests/Api/Two/BlocksTwoTest.swift), as a mocked api handler is used for them.
+

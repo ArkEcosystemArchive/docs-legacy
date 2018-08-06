@@ -10,6 +10,14 @@ title: "Repository Management"
 
 While the following guidelines are not an absolute requirement or need to be enforced by tools, it is a recommendation based on what we have been trying to do in our projects lately.
 
+## Squashing Pull-Requests
+
+**When working on any project all pull-requests must be squashed.**
+
+The goal of doing so first and foremost is to keep PRs small and focused on a single issue. If you think to yourself `all my hard work and organized commits are going to be lost` then your PR is most likely out of scope and trying to solve more then one issue at a time which means you should split it up into multiple PRs that are meaningful even after being squashed.
+
+Another benefit of squashing is to have a clean & flat git history which allows to easily blame changes without having to go through 100 commits to finally reach what you were looking for.
+
 ## Structure
 
 Repositories across an organisation should have a consistent basic structure to make it easy to find everything across multiple different repositories.

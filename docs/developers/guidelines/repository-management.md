@@ -36,6 +36,8 @@ The goal of doing so first and foremost is to keep PRs small and focused on a si
 
 Another benefit of squashing is to have a clean & flat git history which allows to easily blame changes without having to go through 100 commits to finally reach what you were looking for.
 
+**We only care about the net effect of the pull-requests, i.e. "feat: wallet integration", we don't care about the 30 commits of "bugfix, added, removed, refactored". We want a clear and concise history without any noise.**
+
 ## How to organize GitHub Issues & Pull Requests
 
 **Platform:** `#bfd4f2`

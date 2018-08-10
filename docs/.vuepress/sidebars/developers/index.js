@@ -2,6 +2,7 @@ module.exports = [
     ['/developers/', 'Introduction'], {
         title: 'Guidelines',
         children: [
+            '/developers/guidelines/git-branch-guidelines',
             '/developers/guidelines/git-commit-guidelines',
             '/developers/guidelines/repository-management',
             '/developers/guidelines/project-structuring',

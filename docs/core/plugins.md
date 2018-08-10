@@ -44,6 +44,20 @@ The **options** parameter is whatever options the user passes to your plugin whe
 
 **register** should be an async function that returns once your plugin has completed whatever steps are necessary for it to be ready. Alternatively your register plugin should throw an error if an error occurred while registering your plugin.
 
+## Putting the Plugin in place
+
+Core consist of 2 directories, which are `packages` and `plugins`, both of them serve different purposes.
+
+### Packages
+
+The `packages` directory holds all official packages shipped by ArkEcosystem together with core. These should not be modified or you might end up with git conflicts when you try to pull or update.
+
+### Plugins
+
+The `plugins` directory holds all unofficial/third-party packages that you choose to install. This directory will be ignored by git, thus not resulting in any conflicts when you try to pull or update.
+
+**If you install a third-party plugin, remember to run `lerna bootstrap` from the root of core in order to install all of its dependencies.**
+
 ## Registering the Plugin
 
 In order to make sure that your plugin is registered you need to modify the **plugins.json** and add your plugin to a specific point in the application lifecycle.

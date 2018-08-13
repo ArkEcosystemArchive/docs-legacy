@@ -29,12 +29,12 @@ module.exports = {
             link: '/developers/api/public/v2/'
         }],
         sidebar: {
-            '/developers/api/public/v1/': require('./sidebars/developers/api/public/v1.js'),
-            '/developers/api/public/v2/': require('./sidebars/developers/api/public/v2.js'),
-            '/developers/api/json-rpc/': require('./sidebars/developers/api/json-rpc.js'),
-            '/developers/api/webhooks/': require('./sidebars/developers/api/webhooks.js'),
-            '/developers/api/p2p/': require('./sidebars/developers/api/p2p.js'),
-            '/developers/': require('./sidebars/developers'),
+            // '/developers/api/public/v1/': require('./sidebars/developers/api/public/v1.js'),
+            // '/developers/api/public/v2/': require('./sidebars/developers/api/public/v2.js'),
+            // '/developers/api/json-rpc/': require('./sidebars/developers/api/json-rpc.js'),
+            // '/developers/api/webhooks/': require('./sidebars/developers/api/webhooks.js'),
+            // '/developers/api/p2p/': require('./sidebars/developers/api/p2p.js'),
+            // '/developers/': require('./sidebars/developers'),
             '/': require('./sidebars/main.js'),
         }
     }

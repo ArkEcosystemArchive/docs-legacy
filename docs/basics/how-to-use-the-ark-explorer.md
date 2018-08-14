@@ -60,9 +60,11 @@ Across the top of the page you will also see a list of information about the cur
 **Drop Down Menu:** This contains the following Information
 -    **Home:** This will take you back to the explorer home page
 -    **Top Wallets:** This will show you the wallets, descending from high to low, that hold the most ARK.  From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control.  Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.
-![Top Wallets](./assets/how-to-use-the-ark-explorer/TOPWALLETS.png)
+
+     ![Top Wallets](./assets/how-to-use-the-ark-explorer/TOPWALLETS.png)
 -    **Delegate Monitor:** This shows the current list of delegates and their votes on the network.  ARK is run by its community who vote for delegates.  Delegates, among other things, vote on their behalf in community related matters and most importantly forge (verify) blocks.  The top 51 delegates perform these functions for the network and rely on community support to maintain their position within the network.  For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
-![Delegate Monitor Overview](./assets/how-to-use-the-ark-explorer/DELEGATEMONITOROVERVIEW.png)
+
+     ![Delegate Monitor Overview](./assets/how-to-use-the-ark-explorer/DELEGATEMONITOROVERVIEW.png)
 
 The delegate monitor shows two tabs, **"Active"** and **"Standby"**.
 Active will list the current top 51 active delegates, an overview of blocks recently forged, blocks missed, delegates who are not forging and those delegates waiting to forge the next blocks.

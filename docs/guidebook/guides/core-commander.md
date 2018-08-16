@@ -1,5 +1,6 @@
 ---
 title: "Core Commander"
+sidebar: "auto"
 ---
 
 # Core Commander

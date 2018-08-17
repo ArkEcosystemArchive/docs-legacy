@@ -14,9 +14,11 @@ GET /api/delegates/{id}/voters
 
 ## Path Parameters
 
-| Name | Type   | Description                                     | Required           |
-|------|:------:|-------------------------------------------------|:------------------:|
-| id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
+| Name  | Type   | Description                                     | Required           |
+|-------|:------:|-------------------------------------------------|:------------------:|
+| id^   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
+
+^ id can be one of `username`, `address` or `publicKey`.
 
 ## Query Parameters
 

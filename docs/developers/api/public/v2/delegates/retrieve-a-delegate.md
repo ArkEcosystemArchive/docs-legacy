@@ -14,12 +14,12 @@ GET /api/delegates/{id}
 
 ## Path Parameters
 
-| Name  | Type   | Description                                     | Required           |
-|-------|:------:|-------------------------------------------------|:------------------:|
-| id^   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
+| Name | Type   | Description                                     | Required           |
+|------|:------:|-------------------------------------------------|:------------------:|
+| id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
 
 ::: tip
-^ id can be one of `username`, `address` or `publicKey`.
+id can be one of `username`, `address` or `publicKey`.
 :::
 
 ## Response

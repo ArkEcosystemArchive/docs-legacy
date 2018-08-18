@@ -55,7 +55,6 @@ Once installed you will see output similar to this. Passphrase is the genesis pa
 ```
 
 **Note: --name is important as it relates to the config files for your chain**
-```
 
 ![Image 3](./assets/setup/3.png)
 

@@ -6,11 +6,14 @@
 
 > Official documentation for the Ark Ecosystem powered by VuePress.
 
-## Quick start
+## Development
 
-- clone this repository: `git clone https://github.com/arkecosystem/docs`
-- install dependencies: `npm install`
-- launch dev server: `npm run dev` and open your favorite browser with [http://localhost:8080/](http://localhost:8080/)
+```
+git clone https://github.com/arkecosystem/docs
+cd docs
+yarn install
+yarn dev
+```
 
 ## Security
 

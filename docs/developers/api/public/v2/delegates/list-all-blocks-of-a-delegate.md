@@ -14,9 +14,13 @@ GET /api/delegates/{id}/blocks
 
 ## Path Parameters
 
-| Name | Type   | Description                                     | Required           |
-|------|:------:|-------------------------------------------------|:------------------:|
-| id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
+| Name  | Type   | Description                                     | Required           |
+|-------|:------:|-------------------------------------------------|:------------------:|
+| id^   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
+
+::: tip
+^ id can be one of `username`, `address` or `publicKey`.
+:::
 
 ## Query Parameters
 

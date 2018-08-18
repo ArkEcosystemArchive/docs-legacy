@@ -18,7 +18,9 @@ GET /api/delegates/{id}/blocks
 |-------|:------:|-------------------------------------------------|:------------------:|
 | id^   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
 
+::: tip
 ^ id can be one of `username`, `address` or `publicKey`.
+:::
 
 ## Query Parameters
 

@@ -31,8 +31,8 @@ paket add ArkEcosystem.Client --version 0.1.0
 ```csharp
 using ArkEcosystem.Client;
 
-// Available connctions are Connections<One> and Connections<Two>
-var connection = new Connections<One>("https://127.0.0.1:4003/api/");
+// Available connctions are Connection<One> and Connection<Two>
+var connection = new Connection<One>("https://127.0.0.1:4003/api/");
 
 var response = connection.Api.Accounts.Balance("DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN");
 
@@ -46,8 +46,8 @@ if ((bool) response["success"]) {
 ```csharp
 using ArkEcosystem.Client;
 
-ConnectionManager.Connect(new Connections<One>("http://my-main.ark.node:port/api/"))
-ConnectionManager.Connect(new Connections<One>("http://my-backup.ark.node:port/api/", "backup"))
+ConnectionManager.Connect(new Connection<One>("http://my-main.ark.node:port/api/"))
+ConnectionManager.Connect(new Connection<One>("http://my-backup.ark.node:port/api/", "backup"))
 
 var response = null;
 

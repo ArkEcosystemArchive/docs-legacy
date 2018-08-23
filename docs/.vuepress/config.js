@@ -36,6 +36,10 @@ const config = {
       "/guidebook/": require('./sidebars/guidebook'),
       "/": require('./sidebars/main'),
     },
+    algolia: {
+      apiKey: '93e1d829aa41bf2114b9de44dadb4998',
+      indexName: 'ark'
+    }
   }
 };
 

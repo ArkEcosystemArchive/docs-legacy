@@ -2,10 +2,19 @@ module.exports = [
   ['/', 'Back to Table of Contents'],
   ["/cookbook/", "Cookbook Home"],
   {
+    title: "Usage Guides",
+    collapsable: false,
+    children: buildChildren("cookbook/usage-guides", [
+      "how-to-use-ark-explorer",
+      "how-to-use-ark-desktop-wallet",
+      "how-to-use-ark-mobile-wallet"
+    ])
+  },
+  {
     title: "Deployer",
     collapsable: false,
     children: buildChildren("cookbook/deployer", [
-      "setup", 
+      "setup",
       "setup-with-azure"
     ])
   },
@@ -17,15 +26,6 @@ module.exports = [
       "installation"
     ])
   },
-  {
-    title: "Usage Guides",
-    collapsable: false,
-    children: buildChildren("cookbook/usage-guides", [
-      "how-to-use-ark-explorer",
-      "how-to-use-ark-desktop-wallet",
-      "how-to-use-ark-mobile-wallet"
-    ])
-  }
 ];
 
 function buildChildren(base, children) {

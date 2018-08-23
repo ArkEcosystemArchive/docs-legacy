@@ -1,5 +1,5 @@
 module.exports = [
-  ['/api/', 'Back to API'],
+  ['/api/', 'Back to API Home'],
   ['/api/json-rpc/', 'JSON-RPC Home'],
   {
     title: "JSON-RPC API Reference",

@@ -25,6 +25,19 @@ const config = {
     editLinkText: "Help us improve this page!",
     docsDir: "docs",
     lastUpdated: true,
+    nav: [{
+      text: 'Home',
+      link: '/'
+    }, {
+      text: 'P2P API',
+      link: '/api/p2p/'
+    }, {
+      text: 'Public API 1.0',
+      link: '/api/public/v1/'
+    }, {
+      text: 'Public API 2.0',
+      link: '/api/public/v2/'
+    }],
     sidebar: {
       "/api/sdk/": require("./sidebars/api/sdk"),
       "/api/json-rpc/": require("./sidebars/api/json-rpc"),

@@ -6,6 +6,15 @@
 
 > Official documentation for the Ark Ecosystem powered by VuePress.
 
+## Development
+
+```
+git clone https://github.com/arkecosystem/docs
+cd docs
+yarn install
+yarn dev
+```
+
 ## Security
 
 If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.

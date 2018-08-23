@@ -4,8 +4,6 @@ title: "Desktop Wallet"
 
 # Desktop Wallet
 
-[[toc]]
-
 ## Where can I download ARK desktop wallet?
 
 You can download the latest version of the ARK desktop wallet from our official GitHub repository : https://github.com/ArkEcosystem/ark-desktop/releases .

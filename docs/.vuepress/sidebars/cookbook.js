@@ -1,24 +1,33 @@
-const returnChildren = require("../utils/buildSidebar").buildChildren;
-
 module.exports = [
-  ["/cookbook", "Cookbook Home"],
+  ['/', 'Back to Table of Contents'],
+  ["/cookbook/", "Cookbook Home"],
   {
     title: "Deployer",
-    children: returnChildren("cookbook/deployer", ["setup", "setup-with-azure"])
+    collapsable: false,
+    children: buildChildren("cookbook/deployer", [
+      "setup", 
+      "setup-with-azure"
+    ])
   },
   {
     title: "Exchanges",
-    children: returnChildren("cookbook/exchanges", [
+    collapsable: false,
+    children: buildChildren("cookbook/exchanges", [
       "communication",
       "installation"
     ])
   },
   {
     title: "Usage Guides",
-    children: returnChildren("cookbook/usage-guides", [
-      "how-to-use-the-ark-explorer",
-      "how-to-use-the-desktop-wallet",
-      "how-to-use-the-mobile-wallet"
+    collapsable: false,
+    children: buildChildren("cookbook/usage-guides", [
+      "how-to-use-ark-explorer",
+      "how-to-use-ark-desktop-wallet",
+      "how-to-use-ark-mobile-wallet"
     ])
   }
 ];
+
+function buildChildren(base, children) {
+  return children.map(child => `/${base}/${child}`);
+}

@@ -1,7 +1,9 @@
 module.exports = [
+  ['/', 'Back to Table of Contents'],
   ['/guidebook/', 'Guidebook Home'],
   {
     title: 'Contribution Guidelines',
+    collapsable: false,
     children: [
       '/guidebook/contribution-guidelines/clean-code-and-tests',
       '/guidebook/contribution-guidelines/contributing',
@@ -15,6 +17,7 @@ module.exports = [
   },
   {
     title: 'Ark Core',
+    collapsable: false,
     children: [
       '/guidebook/core/configuration',
       '/guidebook/core/database',
@@ -30,6 +33,7 @@ module.exports = [
   },
   {
     title: 'Guides',
+    collapsable: false,
     children: [
       '/guidebook/guides/mobile',
       '/guidebook/guides/desktop',

@@ -18,7 +18,7 @@ While the following guidelines are not an absolute requirement or need to be enf
 2. Everything you added, modified or removed is covered by tests and has sufficient coverage.
 3. All your code is following the code style guidelines specified in the project.
 
-## Dos und Don'ts
+## Dos and Don'ts
 
 - **Do** commit features, refactors and additions to your branch. **If you do commit them, rebase your repository to remove them before sending your pull request.**
 

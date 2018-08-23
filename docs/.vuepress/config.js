@@ -5,7 +5,7 @@ const fs = require("fs");
 const DOCSPATH = "docs";
 
 
-module.exports = {
+const config = {
   title: "Ark Ecosystem Documentation",
   description: "The central knowledge hub for all things Ark Ecosystem",
   head: [
@@ -26,67 +26,17 @@ module.exports = {
     docsDir: "docs",
     lastUpdated: true,
     sidebar: {
+      "/api/sdk/": require("./sidebars/api/sdk"),
+      "/api/json-rpc/": require("./sidebars/api/json-rpc"),
+      "/api/public/": require("./sidebars/api/public"),
+      "/api/": require("./sidebars/api"),
+      "/faq/": require("./sidebars/faq"),
+      "/introduction/": require("./sidebars/introduction"),
+      "/cookbook/": require('./sidebars/cookbook'),
+      "/guidebook/": require('./sidebars/guidebook'),
       "/": require('./sidebars/main'),
-      "/cookbook/": require('./sidebars/cookbook')
     },
   }
 };
 
-function buildSidebars() {
-  /* 
-  1. fetch top-level directory contents
-  2. make home routes array with links to second-level directories (topics)
-  3. use each topic name to build their own navigation
-
-  */
-  let sidebars = {};
-
-  const topics = fs
-    .readdirSync(path.resolve(DOCSPATH))
-    .filter(
-      topic =>
-        fs.lstatSync(DOCSPATH + "/" + topic).isDirectory() && // 
-        topic != ".vuepress"
-    );
-
-  sidebars["/"] = buildTableOfContents(topics);
-
-  topics.forEach(topic => {
-    sidebars["/" + topic + "/"] = buildTopicSidebar(topic);
-  });
-
-  return sidebars;
-  /*
-  returns object of this format: 
-
-  { 
-    '/': RoutesArray,
-    '/api/': ApiRoutesArray
-    ...
-  }
-  */
-}
-
-function buildTableOfContents(topics) {
-  return [
-    "/",
-    {
-      title: "Table of Contents",
-      children: topics.map(topic => "/" + topic + "/")
-    }
-  ];
-}
-
-function buildTopicSidebar(topic) {
-
-  const filepath = DOCSPATH + '/' + topic;
-
-  //topics = ls.readdirSync(filepath).filter
-  /**
-   * start with the topic directory and fetch all assets
-   * 
-   * case:
-   *   directory and not assets: buildSidebar()
-   *   file and not README: add to children
-   */
-}
+module.exports = config

@@ -15,7 +15,7 @@ Let’s begin our journey into the ARK explorer, first looking at mobile functio
 
 ![MOBILE BLOCK EXPL Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
 
-When you first arrive at explorer.ark.io you will find the following information immediately available.
+When you first arrive at [explorer.ark.io](https://explorer.ark.io) you will find the following information immediately available.
 If you are using the desktop version of the ARK block explorer, you will see a price graph on the home page.  This interactive graph allows you to see ARK price in relation to your chosen national currency over periods of day, week, month, quarter and year views.
 
 ![LATEST TRANSACTION Overview](./assets/how-to-use-the-ark-explorer/LatestTransactionOverview.png)

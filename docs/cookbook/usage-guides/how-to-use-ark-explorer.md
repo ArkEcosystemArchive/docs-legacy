@@ -10,7 +10,7 @@ title: "How To Use The ARK Explorer?"
 
 If a Blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus; a guide to every aspect of that highway as you travel through it.  Most people when they use the block explorer are only doing so to confirm a transaction they have sent or are receiving, this however only taps into a tiny fraction of the power contained within the explorer.
 Block explorers can give anyone access to all the information contained within that blockchain.  You can search every block ever created, see every transaction an address has conducted as well as a snapshot of the status of that network in totality.
-Every Blockchain uses has block explorer and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users at any level, from novice to advanced and our block explorer is an example of that committment.
+Every Blockchain has a block explorer and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users at any level, from novice to advanced and our block explorer is an example of that committment.
 Let’s begin our journey into the ARK explorer, first looking at mobile functionality followed by the slightly more robust desktop experience.
 
 ![MOBILE BLOCK EXPL Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)

@@ -23,7 +23,7 @@ If you are using the desktop version of the ARK block explorer, you will see a p
 ### Latest Transactions:
 
 This will be a list of the most recent transactions that have been broadcast to the network.  Inside each transaction you will be able to find out the following information
--    **ID:** This will show the unique identification (ID) number for this transaction.  This can be used to prove to another party that this transaction was sent from an address to another address and approved by the network.  If you click on this ID, you will be able to see how many confirmations it has received and most importantly what Block it was included in.  By being written into a block it proves that the network has accepted it as a valid transaction and is forever written in to the ARK blockchain.
+-    **ID:** This will show the unique identification (ID) number for this transaction.  This can be used to prove to another party that this transaction was sent from an address to another address and approved by the network.  If you click on this ID, you will be able to see how many confirmations it has received and most importantly what Block it was included in.  By being written into a block it proves that the network has accepted it as a valid transaction and is forever included into the ARK blockchain.
 -    **Timestamp:** This indicates the exact time that the transaction was broadcasted and accepted by the network.
 -    **Sender:** This field shows the ARK wallet address that initiated the transaction, i.e. who is sending the transaction.
 -    **Recipient:** Here we see the wallet address who the sender (above) wished to send this transaction to, i.e. who is receiving the transaction.

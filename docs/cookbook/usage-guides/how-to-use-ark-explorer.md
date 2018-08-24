@@ -99,7 +99,7 @@ The currency symbol can be changed to reflect the live price of ARK to your nati
 This is merely an aesthetic choice depending on the user and how they prefer the interface to look.
 
 ### Mobile and Desktop Differences
-There are few minor differences between the desktop and mobile versions of the explorer, although most of the experience is the same. The most marked difference is the presence of a price graph on the home page of the block explorer when using the desktop version. This interactive graph allows you to see the ARK price in relation to your chosen national currency over day, week, month, quarter and year views. The other two functional differences are in the network information bar near the top of the page.
+There are few minor differences between the desktop and mobile versions of the explorer, although most of the experience is the same. The most marked difference is the presence of a price graph with chosen currency pairing on the home page of the block explorer when using the desktop version. The other two functional differences are in the network information bar near the top of the page.
 
 ### Conclusion
 With this information you can now take advantage of the full breadth of functionality contained within the ARK explorer.  While this may seem like a simple tool, it is a window into why cryptocurrencies are so powerful. Block explorers help individuals like yourself to see that the blockchain is a permanent record of transactions so that trust can be placed in a trustless system.

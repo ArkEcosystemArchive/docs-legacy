@@ -88,7 +88,7 @@ The last three menu option are as follows
 
 **Search Bar:**
 
-Here you can input any ARK wallet address, transaction or block ID to find detailed information about them.  For example, most users will use this to check the status of a transaction that they sent or are to receive.   If you were sending someone a transaction of 5 ARK, once you send the payment a transaction ID will be generated, and you will be able to forward that information to the recipient as both a validation of payment and a digital tracking ID as to its disposition in the network.
+Here you can input any ARK wallet address, transaction or block ID to find detailed information about them.  For example, most users will use this to check the status of a transaction that they sent or are to receive. If you were sending someone a transaction of 5 ARK, a transaction ID will be generated and you will be able to forward that information to the recipient as both a validation of payment and a digital tracking ID as to its disposition in the network.
 
 **Currency Pairing:**
 

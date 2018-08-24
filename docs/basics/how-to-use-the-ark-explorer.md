@@ -71,12 +71,12 @@ Active will list the current top 51 active delegates, an overview of blocks rece
 
 ![Delegate Overview](./assets/how-to-use-the-ark-explorer/DELEGATEOVERVIEW.png)
 
-If you click on a delegate’s username you will be taken to delegate's wallet address page and see the following information.
+If you click on a delegate’s username you will be taken to the delegate's wallet address page and see the following information
 -    **Balance:** Total amount of ARK in the delegate's wallet.
--    **Transactions:** Green  arrows indicate the number of transactions INTO the delegate's wallet, while red arrows indicate transactions OUT of the delegate's wallet.
--    **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online they are not forging (verifying) new blocks, thus this can be an important aspect for ARK community members to consider when voting.
--    **Rank/Status:** This shows what the delegate's ranking is in terms of votes.  For example, if you see the number six it means that that delegate has the sixth highest number of votes for all delegates in the network.
--    **Approval:** This field will show the percentage of the total network votes they control.  If this shows 5% then that means that 5% of all votes in the network are pledged to them.
+-    **Transactions:** Green arrows indicate the number of transactions INTO the delegate's wallet, while red arrows indicate transactions OUT of the delegate's wallet.
+-    **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online they are not forging (verifying) new blocks, thus this can be an important aspect for Ark community members to consider when voting.
+-    **Rank/Status:** This shows what the delegate's ranking is in terms of votes. For example, if you see the number six it means that the delegate has the sixth highest number of votes of all the delegates in the network.
+-    **Approval:** This field will show the percentage of the total network votes they control.  If this shows 5% then it means that 5% of all votes in the network are pledged to them.
 -    **Forged:** Indicates how many total ARK they have been rewarded through forging (verifying) blocks.
 -    **Blocks:** Shows the total number of blocks this delegate has forged on the network.
 -    **Votes:** Who this wallet has cast their delegate vote towards.

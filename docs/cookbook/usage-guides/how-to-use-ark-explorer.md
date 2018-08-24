@@ -16,7 +16,7 @@ Let’s begin our journey into the ARK explorer, first looking at mobile functio
 ![MOBILE BLOCK EXPL Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
 
 When you first arrive at [explorer.ark.io](https://explorer.ark.io) you will find the following information immediately available.
-If you are using the desktop version of the ARK block explorer, you will see a price graph on the home page.  This interactive graph allows you to see ARK price in relation to your chosen national currency over periods of day, week, month, quarter and year views.
+If you are using the desktop version of the ARK block explorer, you will see a price graph on the home page.  This interactive graph allows you to see ARK price in relation to your chosen currency over periods of day, week, month, quarter and year views.
 
 ![LATEST TRANSACTION Overview](./assets/how-to-use-the-ark-explorer/LatestTransactionOverview.png)
 
@@ -46,11 +46,11 @@ This will be a list of the most recent transactions that have been broadcast to 
 ### Network Information:
 Across the top of the page you will also see a list of details about the current state of the network you are viewing.
 -    **Height:**  This is current live view of how many blocks have been created since the first (genesis) block when the ARK blockchain was created.
--    **ARK/Fiat:** This indicates the current price of ARK in your chosen national currency. This will often be auto set to the national currency of wherever you are connecting to the internet from.  For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the national currency of your choice.
+-    **ARK/Currency:** This indicates the current price of ARK in your chosen currency. This will often be automatically set to the national currency of wherever you are connecting to the internet from.  For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the currency of your choice.
 -    **Supply:** This area shows the total supply of ARK currently exists.  Depending on the coin, total supply can mean the total amount of coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year.  For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
 
 -    **Network:** This will indicate whether you are viewing the mainnet or testnet. Mainnet is where transactions are conducted and settled in real time. In contrast the testnet is used by developers to test functionality before introducing features or other applications onto the mainnet.  For the average user this is of no consequence and your experience will always be on the mainnet.
--    **Market Cap:** This refers to the market capitalization of ARK, the total value of all the ARK that exist by multiplying the Total Supply by the current price of your chosen national currency.
+-    **Market Cap:** This refers to the market capitalization of ARK, the total value of all the ARK that exist by multiplying the Total Supply by the current price of your chosen currency.
 
 ![DROPDOWN Overview](./assets/how-to-use-the-ark-explorer/DROPDOWN.png)
 
@@ -92,7 +92,7 @@ Here you can input any ARK wallet address, transaction or block ID to find detai
 
 **Currency Pairing:**
 
-The currency symbol can be changed to reflect the live price of ARK to your national currency of choice.
+The currency symbol can be changed to reflect the live price of ARK to your currency of choice.
 
 **Day/Night Mode:**
 

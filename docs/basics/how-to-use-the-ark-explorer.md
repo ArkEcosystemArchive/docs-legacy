@@ -44,7 +44,7 @@ This will be a list of the most recent transactions that have been broadcast to 
 ![NETWORK INFORMATIION Overview](./assets/how-to-use-the-ark-explorer/NetworkInformation.png)
 
 ### Network Information:
-Across the top of the page you will also see a list of information about the current state of the network you are viewing.
+Across the top of the page you will also see a list of details about the current state of the network you are viewing.
 -    **Height:**  This is current live view of how many blocks have been created since the first (genesis) block when the ARK blockchain was created.
 -    **ARK/Fiat:** This indicates the current price of ARK in your chosen national currency. This will often be auto set to the national currency of wherever you are connecting to the internet from.  For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the national currency of your choice.
 -    **Supply:** This area shows the total supply of ARK currently exists.  Depending on the coin, total supply can mean the total amount of coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year.  For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)

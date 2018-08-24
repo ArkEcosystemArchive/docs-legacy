@@ -57,7 +57,7 @@ Across the top of the page you will also see a list of details about the current
 ### Top Menu Bar
 **ARK ICON:** This will take you back to the ARK explorer home page
 
-**Drop Down Menu:** This contains the following Information
+**Drop Down Menu:** This contains the following information
 -    **Home:** This will take you back to the explorer home page
 -    **Top Wallets:** This will show you the wallets, descending from high to low, that hold the most ARK.  From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control.  Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.
 

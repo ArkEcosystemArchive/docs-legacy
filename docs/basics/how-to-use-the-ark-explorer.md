@@ -28,7 +28,7 @@ This will be a list of the most recent transactions that have been broadcast to 
 -    **Sender:** This field shows the ARK wallet address that initiated the transaction, i.e. who is sending the transaction.
 -    **Recipient:** Here we see the wallet address who the sender (above) wished to send this transaction to, i.e. who is receiving the transaction.
 -    **Smart bridge:** This field indicates the ARK SmartBridge that was used in the transaction.  SmartBridges are the groundbreaking innovation that drives the ARK Ecosystem; allowing for disparate blockchains to interact with each other.  Think of each blockchain like an island with no communication between them. If you work on Ethereum Island but your business partner only works on Bitcoin island you can't trade or work together.  ARK SmartBridges are like an airstrip, cargo barge, cellphone towers and internet all rolled into one.  You can do business with any of the other islands from any other island, instantaneously and nearly friction free.  A more detailed explanation of Smart bridges can be found in our section [**What are bridge chains and how to use them**](https://docs.ark.io/basics/how-does-ark-smartbridge-work.html)
--    **Amount:** This will indicate the amount of ARK that was send from the Sender to the Recipient
+-    **Amount:** This will indicate the amount of ARK that was sent from the Sender to the Recipient
 -    **Fee:** This indicates the fee paid to send the transaction.  A list of current fees on the ARK network can be found in [**Fees for Transactions**](https://docs.ark.io/basics/understanding-transactions-and-block-propagation.html#fees-for-transactions)
 
 ![LATEST BLOCK Overview](./assets/how-to-use-the-ark-explorer/LatestBlockOverview.png)

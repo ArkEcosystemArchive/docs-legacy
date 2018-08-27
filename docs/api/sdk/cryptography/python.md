@@ -13,7 +13,7 @@ This project is still under development. This page will get more content as the 
 ## Installation
 
 ```bash
-
+pip install arkecosystem-crypto
 ```
 
 ## Transactions

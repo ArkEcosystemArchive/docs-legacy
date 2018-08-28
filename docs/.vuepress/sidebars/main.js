@@ -9,7 +9,7 @@ module.exports = [
       '/cookbook/',
       '/api/',
       '/faq/',
-      '/other/glossary',
+      '/glossary/',
     ]
   }
 ]

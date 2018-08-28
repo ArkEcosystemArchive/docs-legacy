@@ -14,11 +14,9 @@ This User Guide is for the everyday, non-developer Ark consumer.
 
 ### First things first...
 
-We first have to download the ArkClient to get started. Start here (*if you already have the ArkClient downloaded feel free to skip to the next section to get started on the topic you're interested in learning more about*) :
+We first have to download the ArkClient to get started:
 
 [ArkClient Download](https://github.com/ArkEcosystem/ark-desktop/releases)
-
-*or* feel free to type in the URL bar <https://ark.io/>, dropdown Wallets and select Desktop Wallet.
 
 ::: warning
 **Note**: The above link is the authoritative source for the latest ArkClient. As a friendly reminder, don't ever click on links that are not sponsored by or provided by the Official Ark Team
@@ -27,29 +25,6 @@ We first have to download the ArkClient to get started. Start here (*if you alre
 When you arrive on this page you will see multiple options for the ArkClient. Select the one that reflects your operating system:
 
 ![Client-Page](./assets/how-to-use-the-desktop-wallet/Client-Page.png)
-
-* **[Creating your Ark Wallet](#creatingarkwallet)**
-    * [Identifying your Ark Wallet Address](#idwalletaddress)
-* **[Sending Ark to your Ark Wallet](#sendingarkto)** (*from an exchange*)
-* **[Sending Ark from your Ark Wallet](#sendingarkfrom)**
-* **[Voting with your Ark Wallet](#voting)**
-* **[Unvoting a delegate](#unvote)**
-* **Various functions & features within the ArkClient/Desktop Application**
-    * [Appearance](#appear)
-    * [Renaming your Ark Wallet](#rename)
-    * [Adding a second passphrase](#2ndpass)
-    * [Remove wallet from ArkClient](#removewallet)
-    * [Import Account](#import)
-    * [Export Account](#export)
-    * [Timestamp a File](#timestamp)
-    * Different settings within ArkClient/Desktop Application
-        * [Currency](#currency)
-            * Price
-        * [Language](#lang)
-    * [Add Contacts](#contacts)
-* **[Frequently Asked Questions](#FAQ)**
-* **[Appendix/Useful Links](#appen)**
-
 
 ___
 

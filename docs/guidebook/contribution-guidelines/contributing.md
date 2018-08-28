@@ -4,11 +4,9 @@ title: "Contributing"
 
 # Contributing
 
-[[toc]]
-
 ## Introduction
 
-While the following guidelines are not an absolute requirement or need to be enforced by tools, it is a recommendation based on what we have been trying to do in our projects lately.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Ark Ecosystem and increases the likelihood your pull request will be accepted.
 
 ## Minimum Requirements
 
@@ -22,15 +20,15 @@ While the following guidelines are not an absolute requirement or need to be enf
 
 - **Do** commit features, refactors and additions to your branch. **If you do commit them, rebase your repository to remove them before sending your pull request.**
 
-- **Don't** commit console.logs, debugging and alike to your branch. They are only of value during local development and differ for each developer.
+- **Don't** commit console.logs, debugging or related functions to your branch. They are only of value during local development and differ for each developer.
 
-- **Do** send pull requests that have an issue attached to them and use `Resolves [link-to-issue]` to indicate the relationship of your pull request to it.
+- **Do** send pull requests that have an issue attached to them. In the body of your request, use `Resolves [link-to-issue]` to indicate the issue you're resolving with your request.
 
-- **Don't** send pull requests that are missing an issue. First open an issue, then send a pull request.
+- **Don't** send pull requests without an issue. First open an issue, then send a pull request.
 
 - **Do** send pull requests that come from `feat/*` or `bug/*` branches.
 
-- **Don't** send pull requests that come from master or branches that have non-descriptive names.
+- **Don't** send pull requests that come from master or branches that have non-descriptive names. Switch to a more descriptive branch before committing.
 
 - **Do** send pull requests that add new features that were previously discussed.
 
@@ -38,15 +36,15 @@ While the following guidelines are not an absolute requirement or need to be enf
 
 - **Do** send pull requests that improve code readability.
 
-- **Don't** send pull requests that improve code readability to your own liking. _Following the standards that are specified in the project._
+- **Don't** send pull requests that improve code readability to your own liking. _Following the standards that are specified in the project. Should you have questions, refer to the [contribution guides](/guidebook/guides/)._
 
 - **Do** send pull requests that improve stability.
 
-- **Don't** send pull requests that improve stability by replacing dependencies which could result in breaking changes without previous discussion.
+- **Don't** send pull requests that improve stability by replacing dependencies. Without discussion, this can lead to breaking changes.
 
 - **Do** send pull requests that improve test coverage.
 
-- **Don't** send pull requests that improve test coverage by refactoring major internal parts which could result in breaking changes without previous discussion.
+- **Don't** send pull requests that improve test coverage by refactoring major internal parts. If your branch contains significant changes, ensure that all tests pass before submitting your pull request, even tests not directly related to your package.
 
 ## Issues & Pull Requests
 
@@ -58,4 +56,4 @@ When your pull-request gets merged the issue will be automatically closed and a 
 
 The ARK Team distances itself from anything that is related to payouts by delegates or voter calculations.
 
-If the feature you would like to add contains anything that adds functionality to calculate or process payouts to voters in way, consider forking or creating an extension if you really need that functionality or think people will greatly benefit from it.
+If the feature you would like to add contains anything that adds functionality to calculate or process payouts to voters in this way, consider creating an extension using plugins or our SDKs to implement it yourself.

@@ -4,8 +4,6 @@ title: "Roadmap & Updates"
 
 # Roadmap & Updates
 
-[[toc]]
-
 ## What are you guys working on now, whats the next update?
 
 You can check our roadmap for current updates and ongoing projects: https://ark.io/roadmap/

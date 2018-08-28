@@ -4,8 +4,6 @@ title: "When Do You Need A Blockchain?"
 
 # When Do You Need A Blockchain?
 
-[[toc]]
-
 It seems easy to slap “Blockchain” onto an idea and expect millions of users to come rolling in.  This notion seems especially true in this “Blockchain Renaissance” of 2017 and 2018.  The complex truth is, however, that to achieve mass adoption, one must overcome the hurdles of user experience and gain massive advantages against the the centralized incumbents.  The traditional banking system and FAANG companies like Facebook and Amazon have a strong foothold in our society.  Although it can surely be said that Blockchain is a truly disruptive technology, that doesn’t necessarily mean that your specific idea is guaranteed to actually disrupt anything.
 
 When do you need a blockchain?  Instead of listing off industries and sectors to which blockchain can be applied, we’re going to take a look at the abstract concepts that give blockchain a leg up on traditional, centralized solutions.  The more of these concepts your idea fits into, the more likely your idea can thrive because of using Blockchain.

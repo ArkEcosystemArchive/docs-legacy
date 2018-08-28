@@ -4,9 +4,6 @@ title: "Releases & Versioning"
 
 # Releases & Versioning
 
-[[toc]]
-
-## Introduction
 
 While the following guidelines are not an absolute requirement or need to be enforced by tools, it is a recommendation based on what we have been trying to do in our projects lately.
 
@@ -22,7 +19,7 @@ A common standard used for commits is https://conventionalcommits.org/. Its spec
 
 This paragraph is from the introduction section of https://semver.org/. A spec that aims to provide make the life of software developers and that of the ones that use their projects easier by providing a standardised approach to versioning.
 
-Good software should be, no, needs to be properly versioned to avoid any breaking changes for your users. This is mission critical if you provide software that can cost people large amounts of money by introducing a breaking change and not tagging a new major release.
+Good software needs to be properly versioned to avoid any breaking changes for your users. This is mission critical if you provide software that can cost people large amounts of money by introducing a breaking change and not tagging a new major release.
 
 _Let's take a look at what Semantic Versioning recommends to do for versioning your software to make breaking changes clear_
 
@@ -32,7 +29,7 @@ _Let's take a look at what Semantic Versioning recommends to do for versioning y
 
 Following this pattern of `MAJOR.MINOR.PATCH` you would have versions like `1.3.6`. Now you might think if you are going to introduce a breaking change you should just tag `1.4.0` so people can stick with `1.3.*` if they don't want to be affected by this change.
 
-This is wrong as you made a change that changes the behaviour of your project which is no longer compatible with any of the previous `1.*` versions. It doesn't matter if you are on version `1.0.7` and introduce a breaking change and think to yourself `We are still at this early of a version in 1.*, let's just tag 1.1.0 and tell people to change their integrations`, you still should tag version `2.0.0` as any previous `1.*` versions are incompatible.
+However, as you made a change that changes the behaviour of your project, it is no longer compatible with any of the previous `1.*` versions. It doesn't matter if you are on version `1.0.7`. You still should tag version `2.0.0` as any previous `1.*` versions are incompatible.
 
 ## Keep a Changelog
 

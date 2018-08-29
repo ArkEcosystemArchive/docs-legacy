@@ -4,30 +4,26 @@ module.exports = [
   {
     title: "Usage Guides",
     collapsable: false,
-    children: buildChildren("cookbook/usage-guides", [
-      "how-to-use-ark-explorer",
-      "how-to-use-ark-desktop-wallet",
-      "how-to-use-ark-mobile-wallet"
-    ])
+    children: [
+      "/cookbook/usage-guides/how-to-use-ark-explorer",
+      "/cookbook/usage-guides/how-to-use-ark-desktop-wallet",
+      "/cookbook/usage-guides/how-to-use-ark-mobile-wallet"
+    ]
   },
   {
     title: "Deployer",
     collapsable: false,
-    children: buildChildren("cookbook/deployer", [
-      "setup",
-      "setup-with-azure"
-    ])
+    children: [
+      "/cookbook/deployer/setup",
+      "/cookbook/deployer/setup-with-azure"
+    ]
   },
   {
     title: "Exchanges",
     collapsable: false,
-    children: buildChildren("cookbook/exchanges", [
-      "communication",
-      "installation"
-    ])
+    children: [
+      "/cookbook/exchanges/communication",
+      "/cookbook/exchanges/installation"
+    ]
   },
 ];
-
-function buildChildren(base, children) {
-  return children.map(child => `/${base}/${child}`);
-}

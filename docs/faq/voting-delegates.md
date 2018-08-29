@@ -4,8 +4,6 @@ title: "Voting & Delegates"
 
 # Voting & Delegates
 
-[[toc]]
-
 ## How can I vote for a delegate?
 [Follow our voting guide.](https://blog.ark.io/how-to-vote-or-un-vote-an-ark-delegate-and-how-does-it-all-work-819c5439da68)
 
@@ -24,7 +22,8 @@ No. All you can “lose” is the 1 ARK voting fee. All other ARK tokens will st
 ## How can I change my vote?
 
 You can remove the vote registration from a delegate (unvote). Then it’s best to restart the desktop client and vote for the new delegate of your choice.
-Follow our unvoting guide.
+
+Follow our [unvoting guide](/cookbook/usage-guides/how-to-use-ark-desktop-wallet.html#unvoting-a-delegate).
 
 ## Can I vote for multiple delegates?
 

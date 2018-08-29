@@ -4,9 +4,6 @@ title: "Events"
 
 # Events
 
-[[toc]]
-
-## Introduction
 
 In order to create efficient integrations on your server, similar to how webhooks work, an event emitter will inform you about any events that could require actions to be performed like missing a block.
 

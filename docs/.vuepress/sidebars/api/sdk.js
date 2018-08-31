@@ -30,6 +30,7 @@ module.exports = [
       "/api/sdk/cryptography/php.md",
       "/api/sdk/cryptography/python.md",
       "/api/sdk/cryptography/ruby.md",
+      "/api/sdk/cryptography/rust.md",
       "/api/sdk/cryptography/swift.md",
     ]
   },

@@ -18,7 +18,7 @@ In order to guarantee that only your server is allowed to send data to your webh
 
 Lets take the following token as an example `fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66` which is 64 characters long and breaks down into 2 parts at 32 characters length each.
 
-The first 32 characters will be stored in the database and be send to you as a header `Authorization: fe944e318edb02b979d6bf0c87978b64` via a POST request.
+The first 32 characters will be stored in the database and sent to you as a header `Authorization: fe944e318edb02b979d6bf0c87978b64` via a POST request.
 
 The last 32 characters `0c8e74e1cbfe36404386d33a5bbd8b66` need to be stored by you and will serve as a way for you to verify that the request is authorized.
 
@@ -69,4 +69,4 @@ Let's break down the steps we took here:
 
 ## Closing
 
-This is all you need to know about how to secure and handle webhooks. Head over to the [API docs](https://docs.ark.io/developers/api/webhooks/) for webhooks to get started.
+This is all you need to know about how to secure and handle webhooks. Head over to the [API docs](/api/webhooks/) for webhooks to get started.

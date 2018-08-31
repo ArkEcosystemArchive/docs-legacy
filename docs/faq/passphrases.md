@@ -4,8 +4,6 @@ title: "Passphrases"
 
 # Passphrases
 
-[[toc]]
-
 ## What do I do with the passphrase ?
 
 The passphrase is the master password(key) for your ARK tokens. Every ARK address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.

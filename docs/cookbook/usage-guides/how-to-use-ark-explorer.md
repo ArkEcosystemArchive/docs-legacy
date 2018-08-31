@@ -2,11 +2,10 @@
 title: "How To Use The ARK Explorer?"
 ---
 
-# How To Use The ARK Explorer?
+# How To Use The ARK Explorer
 
-[[toc]]
 
-# What is a block explorer?
+## What is a block explorer?
 
 If a Blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus; a guide to every aspect of that highway as you travel through it. Most people when they use the block explorer are only doing so to confirm a transaction they have sent or are receiving, this however only taps into a tiny fraction of the power contained within the explorer.
 Block explorers can give anyone access to all the information contained within that blockchain. You can search every block ever created, see every transaction an address has conducted as well as a snapshot of the status of that network in totality.
@@ -20,7 +19,7 @@ If you are using the desktop version of the ARK block explorer, you will see a p
 
 ![LATEST TRANSACTION Overview](./assets/how-to-use-the-ark-explorer/LatestTransactionOverview.png)
 
-### Latest Transactions:
+## Latest Transactions:
 
 This will be a list of the most recent transactions that have been broadcast to the network. Inside each transaction you will be able to find out the following information
 -    **ID:** This will show the unique identification (ID) number for this transaction. This can be used to prove to another party that this transaction was sent from an address to another address and approved by the network. If you click on this ID, you will be able to see how many confirmations it has received and most importantly what Block it was included in. By being included into a block it proves that the network has accepted it as a valid transaction and is forever written into the ARK blockchain.
@@ -48,13 +47,12 @@ Across the top of the page you will also see a list of details about the current
 -    **Height:** This is current live view of how many blocks have been created since the first (genesis) block when the ARK blockchain was created.
 -    **ARK/Currency:** This indicates the current price of ARK in your chosen currency. This will often be automatically set to the national currency of wherever you are connecting to the internet from. For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the currency of your choice.
 -    **Supply:** This area shows the total supply of ARK currently exists. Depending on the coin, total supply can mean the total amount of coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year. For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
-
 -    **Network:** This will indicate whether you are viewing the mainnet or testnet. Mainnet is where transactions are conducted and settled in real time. In contrast the testnet is used by developers to test functionality before introducing features or other applications onto the mainnet. For the average user this is of no consequence and your experience will always be on the mainnet.
 -    **Market Cap:** This refers to the market capitalization of ARK, the total value of all the ARK that exist by multiplying the Total Supply by the current price of your chosen currency.
 
 ![DROPDOWN Overview](./assets/how-to-use-the-ark-explorer/DROPDOWN.png)
 
-### Top Menu Bar
+## Top Menu Bar
 **ARK ICON:** This will take you back to the ARK explorer home page
 
 **Drop Down Menu:** This contains the following information
@@ -86,15 +84,15 @@ If you click on a delegate’s username you will be taken to the delegate's wall
 
 The last three menu option are as follows
 
-**Search Bar:**
+## Search Bar
 
 Here you can input any ARK wallet address, transaction or block ID to find detailed information about them. For example, most users will use this to check the status of a transaction that they sent or are to receive. If you were sending someone a transaction of 5 ARK, a transaction ID will be generated and you will be able to forward that information to the recipient as both a validation of payment and a digital tracking ID as to its disposition in the network.
 
-**Currency Pairing:**
+## Currency Pairing
 
 The currency symbol can be changed to reflect the live price of ARK to your currency of choice.
 
-**Day/Night Mode:**
+## Day/Night Mode
 
 This is merely an aesthetic choice depending on the user and how they prefer the interface to look.
 

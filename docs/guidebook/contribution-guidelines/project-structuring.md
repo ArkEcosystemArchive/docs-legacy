@@ -4,11 +4,7 @@ title: "Project Structuring"
 
 # Project Structuring
 
-[[toc]]
-
-## Introduction
-
-While the following guidelines are not an absolute requirement or need to be enforced by tools, it is a recommendation based on what we have been trying to do in our projects lately.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Ark Ecosystem and increases the likelihood your pull request will be accepted.
 
 ## How to approach `JavaScript` projects
 
@@ -27,11 +23,11 @@ Make sure that all dependencies you use are maintainted and receive new releases
 
 #### lib
 
-If you are developing a module only for server-side use with node.js all files should be placed in the `lib` directory.
+If you are developing a module only for server-side use with node.js, your project files should be placed in the `lib` directory.
 
 #### src
 
-If you are developing a module for server-side and/or browser use all files should be placed in the `src` directory.
+If you are developing a module for server-side and/or browser use, your project files should be placed in the `src` directory.
 
 #### build
 
@@ -39,11 +35,11 @@ If you are building a module that needs to run both in the browser and on a serv
 
 #### dist
 
-If your module is to be built for use with other platforms through webpack, the output should be placed in the `dist` directory.
+If you're using Webpack to bundle your assets, the output should be placed in the `dist` directory.
 
 #### bin
 
-The `bin` folder is for any system modules your package will use or generate.
+The `bin` folder is for any system modules your package will use or generate, including:
 
 * The compiled `node_gyp` output for your module's binary code.
 * Pre-compiled platform binaries.

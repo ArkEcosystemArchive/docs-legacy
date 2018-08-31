@@ -99,7 +99,7 @@ Once the explorer is running, you can give it a test by navigating to it through
 
 ## Adding the Bridgechain to your Desktop Wallet
 
-Having a bridgechain is great, but you may want to interact with it and send out some of your genesis tokens. This will be required when forging with new delegate nodes (instead of auto-forging).
+Having a bridgechain is great, but you'll probably to interact with it and send out some of your genesis tokens. This will be required when forging with new delegate nodes (instead of auto-forging).
 
 ![Image 7](./assets/setup/7.png)
 

@@ -4,8 +4,6 @@ title: "How To Use The Mobile Wallet?"
 
 # How To Use The Mobile Wallet?
 
-[[toc]]
-
 ## The Preparation
 
 The Ark Mobile Wallet is a great way to access your ARK tokens, it's fast and easy and while being mobile, it can securely store the data using PBKDF2 algorithm and AES-256 encryption protected by a created PIN code. This guide will show you where to get the mobile wallet on Android and iOS devices and help you with installing it! The mobile wallet has no need to download the blockchain, but can vote for a delegate, and send/receive ARK. Whether you're importing a wallet or generating a new one the wallet will have all the features you need.
@@ -48,7 +46,7 @@ Once you've placed your name, you can sign in by touching onto the profile you c
 
 ## Creating a wallet
 
-If you choose to generate a wallet and follow the prompts you will be shown your shareable Public Address and your Secret Passphrase. **Keep your secret passphrase safe and secure**, without it you will not be able to restore your wallet, send transactions, and you will **lose all of your ARK tokens**.
+If you choose to generate a wallet and follow the prompts you will be shown your shareable Public Address and your Secret Passphrase. **Keep your secret passphrase safe and secure**, without it you will not be able to restore your wallet and you will lose all of your ARK tokens.
 
 After hitting '*Next*', you will be asked to input 3 of the words in your Secret Passphrase. Once you've placed the appropriate numbered word into its field, you will be asked to put in your PIN again. The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satoshi's, and the 24 hour Change.
 
@@ -57,15 +55,16 @@ After hitting '*Next*', you will be asked to input 3 of the words in your Secret
 ## Importing a wallet
 
 If you choose to import a wallet and follow the prompts, you will have two options to import your wallet: QR Code or by putting in your secret passphrase or address manually.
-**If you decide to copy and paste your information into the app, make sure your device does not add a space after your passphrase or address. If the space is there, it will create a new wallet and not import your own wallet**.
 
-The application may place you on a screen that shows your transactions, your public address and the amount of ARK tokens in your wallet.
+**If you decide to copy and paste your information into the app, make sure your device does not add a space after your passphrase or address. If the space is there, it will create a new wallet and not import your own wallet**.
 
 ![Ark Mobile Wallet Transactions](./assets/how-to-use-the-mobile-wallet/arkWallet10.png)
 
 ## The Ark Wallet
 
-You are able to hit the triple bar in the top left corner, doing so will give you numerous options for you to select. Choosing *'Wallets'*, will place you at the main Ark Wallet balance screen. After you reach the main Ark Wallet balance screen, you are able to add another wallet, touch the triple bar on the top left corner, or choose an existing wallet to view even closer.
+You are able to hit the triple bar in the top left corner, doing so will give you numerous options for you to select. 
+
+Choosing *'Wallets'*, will place you at the main Ark Wallet balance screen. After you reach the main Ark Wallet balance screen, you are able to add another wallet, touch the triple bar on the top left corner, or choose an existing wallet to view even closer.
 If you want to add another wallet, you would push the blue circle we used earlier to create or import a wallet.
 If you hit the triple bar on the top left corner, you get numerous options where you are able to view and select:
 - Main wallet balance screen

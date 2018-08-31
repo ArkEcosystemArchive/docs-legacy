@@ -4,30 +4,7 @@ title: "Configuration"
 
 # Configuration
 
-[[toc]]
-
-## Introduction
-
 In order to operate a node in any ARK network you need to provide configuration to it one way or another.
-
-The default method of providing the required configuration is to load it from a local directory on your server but implementing a different way of loading your configuration is a breeze.
-
-## A look under the hood
-
-Let's take a closer look at how the configuration is bootstrapped and how easy it is to extend it.
-
-```js
-const configManager = pluginManager.get('configManager')
-await configManager.makeDriver(new JsonDriver(options))
-
-return configManager.driver()
-```
-
-The first thing we do is to grab an instance of the `ConfigManager` that is available through the `Container` that provides us with all instances of other plugins.
-
-Next we create an instance of our `JsonDriver` which is the concrete implementation of a `ConfigInterface` provided by `@arkecosystem/core-config` which loads the configuration from JSON files.
-
-Imagine how you could implement a `HttpDriver` that pulls in the configuration for hundreds of nodes in a private network from a central server instead of having to update local files on all of those nodes.
 
 ## Environment Configuration
 ARK Core allows you to use an [.env](https://github.com/bevry/envfile) to provide configuration that is environment specific without having to touch the `~/.ark/config/plugins.js` file. The `.env` file needs to be stored at `~/.ark/.env`.

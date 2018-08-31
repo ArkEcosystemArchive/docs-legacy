@@ -4,15 +4,11 @@ title: "Repository Management"
 
 # Repository Management
 
-[[toc]]
-
-## Introduction
-
-While the following guidelines are not an absolute requirement or need to be enforced by tools, it is a recommendation based on what we have been trying to do in our projects lately.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Ark Ecosystem and increases the likelihood your pull request will be accepted.
 
 ## Structure
 
-Repositories across an organisation should have a consistent basic structure to make it easy to find everything across multiple different repositories.
+Repositories across an organisation should have a consistent basic structure to make it easy to find everything across different repositories.
 
 **At a bare minimum a repository should contain the following:**
 
@@ -24,9 +20,9 @@ Repositories across an organisation should have a consistent basic structure to 
 
 ## Development
 
-When a new repository is created for a project the first thing that should be done is to create a `develop` branch and set it as default which will indicate to developers that this project is not stable yet. This branch should be used until the initial implementation is done and merged to master without squashing and `master` should be set as the default branch.
+When a new repository is created for a project, the first thing you should do is create a `develop` branch and set it as default. This will indicate to developers that this project is not stable yet. This branch should be used until the initial implementation is done, and merged to `master` without squashing. `master` should then be set as the default branch.
 
-Once the initial implementation is done and merged only squash merging should be enabled and all future PRs should be squashed with meaningful commit messages.
+Once the initial implementation is done and merged, only squash merging should be enabled and all future PRs should be squashed with meaningful commit messages.
 
 ## Squashing Pull-Requests
 
@@ -36,7 +32,7 @@ The goal of doing so first and foremost is to keep PRs small and focused on a si
 
 Another benefit of squashing is to have a clean & flat git history which allows to easily blame changes without having to go through 100 commits to finally reach what you were looking for.
 
-**We only care about the net effect of the pull-requests, i.e. "feat: wallet integration", we don't care about the 30 commits of "bugfix, added, removed, refactored". We want a clear and concise history without any noise.**
+**We only care about the net effect of the pull-requests, i.e. "feat: wallet integration". We don't care about the 30 commits of "bugfix, added, removed, refactored". We want a clear and concise history without any noise.**
 
 ## How to organize GitHub Issues & Pull Requests
 

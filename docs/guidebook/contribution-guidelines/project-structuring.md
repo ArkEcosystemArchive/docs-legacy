@@ -10,7 +10,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 ### Dependencies
 
-Make sure that all dependencies you use are maintainted and receive new releases on a regular basis. Also try to use https://www.npmjs.com/package/npm-check-updates every now and then to check for outdated dependencies in your package.
+Make sure that all dependencies you use are maintainted and receive new releases on a regular basis. Also try to use [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) every now and then to check for outdated dependencies in your package.
 
 ### Directory Structure
 

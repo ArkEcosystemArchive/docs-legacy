@@ -17,7 +17,7 @@ Since we are working on the next-gen version of the wallet, we won't be reviewin
 Please do not submit Pull-Requests (PRs) unless they solve an urgent problem.
 
 ## Pinned: Help us with translations
-Collaborate with other translators on our OneSky project and help us get wallet translated in other languages  http://osjc1wl.oneskyapp.com/collaboration/project?id=95031
+Collaborate with other translators on [our OneSky project](http://osjc1wl.oneskyapp.com/collaboration/project?id=95031) and help us get wallet translated in other languages.
 
 Please do not submit Pull-Requests (PRs) for translations, but use the link above!
 

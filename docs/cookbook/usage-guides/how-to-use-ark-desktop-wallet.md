@@ -354,7 +354,7 @@ ____
 
 You can view the current price each Ark is trading for on your homescreen, it will be displayed as your set currency rate. Price changes are also provided by 1 hour, 24 hour, and 7 days % change increments.
 
-The price is retrieved from <https://coinmarketcap.com/>
+The price is retrieved from [CoinMarketCap](https://coinmarketcap.com/)
 
 ![Price](./assets/how-to-use-the-desktop-wallet/Price.png)
 

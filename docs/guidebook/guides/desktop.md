@@ -54,7 +54,7 @@ brew cask install arkclient
 * Customized backgrounds and themes for better user experience.
 * Choose between dark or light mode.
 * Isolated processes on Windows and MacOSX to prevent from data sniffing or injection.
-* Translations (thanks to the ARK community) - help out http://osjc1wl.oneskyapp.com/collaboration/project?id=95031
+* Translations (thanks to the ARK community) - help out on [our OneSky project](http://osjc1wl.oneskyapp.com/collaboration/project?id=95031)
 * Organise your accounts with virtual folders (for instance savings, personnal etc...) so you don't pay any transfer fee (stored locally).
 * Change your delegate vote.
 * When new version is available, message is shown in the right upper part.

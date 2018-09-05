@@ -14,6 +14,7 @@ module.exports = [
       "/api/sdk/clients/php.md",
       "/api/sdk/clients/python.md",
       "/api/sdk/clients/ruby.md",
+      "/api/sdk/clients/rust.md",
       "/api/sdk/clients/swift.md",
     ]
   },

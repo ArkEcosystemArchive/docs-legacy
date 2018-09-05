@@ -11,7 +11,9 @@ title: "Rust"
 Add the following to your `Cargo.toml`:
 ```ini
 [dependencies]
-arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", branch = "develop" }
+arkecosystem-crypto = "0.1.0"
+# or
+arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", branch = "master" }
 ```
 
 ## Transactions
@@ -19,7 +21,6 @@ arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", bran
 ### Sign
 
 ```rust
-extern crate arkecosystem_crypto;
 use arkecosystem_crypto::transactions::builder;
 
 let transaction = builder::build_transfer(

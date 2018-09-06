@@ -15,7 +15,7 @@ Getting started with the development of ARK Core is much easier compared to the 
 Before you can get started with working on ARK Core you need to setup lerna as previously mentioned.
 
 ```bash
-yarn global add lerna
+sudo yarn global add lerna
 git clone https://github.com/ArkEcosystem/ark-core
 cd ark-core
 lerna bootstrap

@@ -130,7 +130,7 @@ Each delegate is unique and brings different skill sets to the Ark Ecosystem, so
 
 3. A new box will appear labeled "Vote". The first selection is a drop down labeled "Active delegates (forging)". Select it.
 
-4. You will now see a list of the top 51 delegates that are currently forging blocks on the Ark blockchain. (*learn more about what this means in FAQ or Glossary*)
+4. You will now see a list of the top 51 delegates that are currently forging blocks on the Ark Blockchain. (*learn more about what this means in FAQ or Glossary*)
 
 ![Delegates-list](./assets/how-to-use-the-desktop-wallet/Delegates-list.png)
 

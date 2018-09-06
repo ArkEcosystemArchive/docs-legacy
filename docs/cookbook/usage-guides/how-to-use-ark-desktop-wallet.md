@@ -8,7 +8,7 @@ title: "How To Use The Desktop Wallet?"
 
 ### What is it?
 
-The ARK Desktop Application is the primary software that most users will utilize to store, send, receive, vote and do much more with their Ark. The desktop application/client interfaces with your wallet and allows you to interface with Ark!
+The Ark Desktop Application is the primary software that most users will utilize to store, send, receive, vote and do much more with their ARK. The desktop application/client interfaces with your wallet and allows you to interface with Ark!
 
 This User Guide is for the everyday, non-developer Ark consumer.
 
@@ -30,7 +30,7 @@ ___
 
 ## Creating your Ark Wallet
 
-Your Ark Wallet is a unique address that will store your Ark.
+Your Ark Wallet is a unique address that will store your ARK.
 
 1. Open the ArkClient.
 2. Select "CREATE ACCOUNT".
@@ -55,20 +55,20 @@ ___
 
 ### Identifying your Ark Wallet Address
 
-Your Ark Wallet address is presented to you at the top of the client, under 'Address' and to the right of the *Copy* icon. This address is 100% unique to your wallet. You will need this address in the future to send Ark to your wallet. You can automatically copy is by simply clicking on it.
+Your Ark Wallet address is presented to you at the top of the client, under 'Address' and to the right of the *Copy* icon. This address is 100% unique to your wallet. You will need this address in the future to send ARK to your wallet. You can automatically copy is by simply clicking on it.
 
 ![Ark-address](./assets/how-to-use-the-desktop-wallet/Ark-address.png)
 
 ___
 
 
-## Sending Ark to your Ark Wallet (*from an exchange*)
+## Sending ARK to your Ark Wallet (*from an exchange*)
 
-Your Ark Wallet stores your Ark for you. In order to interface with Ark you need to add some to your wallet.
+Your Ark Wallet stores your ARK for you. In order to interface with Ark you need to add some to your wallet.
 
-1. First you will need to buy some Ark, which is available across many exchanges today and growing regularly. You can find a list of exchanges here: [https://ark.io/exchanges](https://ark.io/exchanges)
+1. First you will need to buy some ARK, which is available across many exchanges today and growing regularly. You can find a list of exchanges here: [https://ark.io/exchanges](https://ark.io/exchanges)
 
-2. Once you've purchased some Ark via an exchange you will be ready to send your Ark to your Ark Wallet.
+2. Once you've purchased some ARK via an exchange you will be ready to send your ARK to your Ark Wallet.
 
 ![Pro-tip](./assets/how-to-use-the-desktop-wallet/Pro-tip.png)
 
@@ -76,31 +76,31 @@ Your Ark Wallet stores your Ark for you. In order to interface with Ark you need
 
 ![Bittrex-withdraw](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw.png)
 
-4. You will be presented with a 'Confirm Ark Withdrawal' page. Enter your Ark Address to your wallet (simply click on the address in your Ark Desktop Application, within your wallet) and paste. Then, enter the amount of Ark you'd like to send to your Ark Wallet. Then select "Withdrawal", and "Confirm" the transaction.
+4. You will be presented with a 'Confirm ARK Withdrawal' page. Enter your Ark Address to your wallet (simply click on the address in your Ark Desktop Application, within your wallet) and paste. Then, enter the amount of ARK you'd like to send to your Ark Wallet. Then select "Withdrawal", and "Confirm" the transaction.
 
 ![Bittrex-withdraw-confirm](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw-confirm.png)
 
 **Note:** Bittrex, like many exchanges, will send you an email that you need to open and select a link in to confirm the transaction. This is a typical security measure most exchanges perform.
 
-5. Your Ark will be sent on it's way to your Ark Wallet! You will soon be able to see your new Ark balance in the Ark Desktop Application!
+5. Your ARK will be sent on it's way to your Ark Wallet! You will soon be able to see your new ARK balance in the Ark Desktop Application!
 
 ![Wallet-balance](./assets/how-to-use-the-desktop-wallet/Wallet-balance.png)
 
 ___
 
-## Sending Ark from your Ark Wallet
+## Sending ARK from your Ark Wallet
 
-Now that your have a balance of Ark in your wallet, you may want to send it out. Someone may want to send Ark to another Ark Address for any number of reasons, perhaps you want to sell your Ark, pay for a good or service, or donate Ark to the Ark Community Fund. Sending Ark is quick & easy.
+Now that your have a balance of ARK in your wallet, you may want to send it out. Someone may want to send ARK to another Ark Address for any number of reasons, perhaps you want to sell your ARK, pay for a good or service, or donate ARK to the Ark Community Fund. Sending ARK is quick & easy.
 
 1. Within your Ark Desktop Application and within your wallet, you will see an arrow pointing to the right in the top right hand corner of the Ark Address box. This is the send icon. Select it.
 
 ![Send-icon](./assets/how-to-use-the-desktop-wallet/Send-icon.png)
 
-2. Now you are in the send box. The 1st line you see will be the Ark Address line you are *sending* your Ark to. To the left of the line is a QR Scan function. If you click it (and have a web cam hooked up to your computer) you will be able to scan the QR code of the Ark Address you wish to send to and the address will automatically propagate to the Ark Address line. Otherwise you will simply copy and paste the address you're sending to.
+2. Now you are in the send box. The 1st line you see will be the Ark Address line you are *sending* your ARK to. To the left of the line is a QR Scan function. If you click it (and have a web cam hooked up to your computer) you will be able to scan the QR code of the Ark Address you wish to send to and the address will automatically propagate to the Ark Address line. Otherwise you will simply copy and paste the address you're sending to.
 
 ![Send-ark](./assets/how-to-use-the-desktop-wallet/Send-ark.png)
 
-3. The next line is the amount of Ark you wish to send. If you'd like to send you're entire balance select the "SEND ALL" option and your entire balance will propagate to that line.
+3. The next line is the amount of ARK you wish to send. If you'd like to send you're entire balance select the "SEND ALL" option and your entire balance will propagate to that line.
 
 4. Smartbridge data is not required. It can be used in specific and unique instances. Ignore it at this time.
 
@@ -112,13 +112,13 @@ Now that your have a balance of Ark in your wallet, you may want to send it out.
 
 ![Send-ark-confirm](./assets/how-to-use-the-desktop-wallet/Send-ark-confirm.png)
 
-8. All done! Your Ark is on its way to its destination address!
+8. All done! Your ARK is on its way to its destination address!
 
 ___
 
 ## Voting with your Ark Wallet
 
-Voting or otherwise known as staking your Ark has several purposes. By voting for a delegate you help secure the Ark network (most importantly), and the lure of voting is that most delegates provide an incentive for voting for them by rewarding you with Ark on a periodic basis (amount and how often paid differs between delegates). Some think of this as interest earned for their Ark.
+Voting or otherwise known as staking your ARK has several purposes. By voting for a delegate you help secure the Ark network (most importantly), and the lure of voting is that most delegates provide an incentive for voting for them by rewarding you with ARK on a periodic basis (amount and how often paid differs between delegates). Some think of this as interest earned for their ARK.
 
 Each delegate is unique and brings different skill sets to the Ark Ecosystem, so before voting for who you think should be entrusted with securing the Ark network you should conduct your due diligence and research the delegates. More information about the delegates and frequently asked questions regarding voting and delegates can be found in the [Frequently Asked Questions](#FAQ) and [Appendix/Useful Links](#appen) section towards the bottom of this User Guide.
 
@@ -130,7 +130,7 @@ Each delegate is unique and brings different skill sets to the Ark Ecosystem, so
 
 3. A new box will appear labeled "Vote". The first selection is a drop down labeled "Active delegates (forging)". Select it.
 
-4. You will now see a list of the top 51 delegates that are currently forging Ark. (*learn more about what this means in FAQ*)
+4. You will now see a list of the top 51 delegates that are currently forging blocks on the Ark blockchain. (*learn more about what this means in FAQ or Glossary*)
 
 ![Delegates-list](./assets/how-to-use-the-desktop-wallet/Delegates-list.png)
 
@@ -138,9 +138,9 @@ Each delegate is unique and brings different skill sets to the Ark Ecosystem, so
 
 ![Delegates-passphrase](./assets/how-to-use-the-desktop-wallet/Delegates-passphrase.png)
 
-6. In the next window you will be prompted to send Ark in order to vote, this is a voting fee required that may change over time. When you're ready to vote for your selected delegate select "SEND NOW".
+6. In the next window you will be prompted to send ARK in order to vote, this is a voting fee required that may change over time. When you're ready to vote for your selected delegate select "SEND NOW".
 
-7. You will now see within the "Vote" tab your delegates rank (within top 51, for this example arkland is # 19), your delegates name, their wallet address, their approval and productivity. You will also see an "UNVOTE" option which will be reviewed in the next section. You are now voting/staking your Ark for your selected delegate.
+7. You will now see within the "Vote" tab your delegates rank (within top 51, for this example arkland is # 19), your delegates name, their wallet address, their approval and productivity. You will also see an "UNVOTE" option which will be reviewed in the next section. You are now voting/staking your ARK for your selected delegate.
 
 ![Vote-show](./assets/how-to-use-the-desktop-wallet/Vote-show.png)
 
@@ -161,7 +161,7 @@ If your delegate is not contributing to the Ark community in a way he/she had pr
 
 ![Vote-remove](./assets/how-to-use-the-desktop-wallet/Vote-remove.png)
 
-3. You will now be prompted to send the required Ark fee in order to unvote your delegate. Select "SEND NOW".
+3. You will now be prompted to send the required ARK fee in order to unvote your delegate. Select "SEND NOW".
 
 4. You will now notice your delegates name is no longer within the "VOTES" section. You have unvoted your delegate.
 
@@ -228,7 +228,7 @@ ___
 
 ### Adding a second passphrase
 
-You can add a second passphrase to your Ark Wallet for an added layer of security. You may want to do this if you have a large amount of Ark or if you believe somebody else may know your first passphrase (or most of it).
+You can add a second passphrase to your Ark Wallet for an added layer of security. You may want to do this if you have a large amount of ARK or if you believe somebody else may know your first passphrase (or most of it).
 
 **Note:** By adding a second passphrase you will be required from that point forward to use both your first and second passphrase to send transactions. You cannot remove the second passphrase once it is added and it is just as important to keep safe and kept secure as your first. This is usually not advised for the average user.
 
@@ -240,7 +240,7 @@ You can add a second passphrase to your Ark Wallet for an added layer of securit
 
 ![Second-passphrase-button](./assets/how-to-use-the-desktop-wallet/Second-passphrase-button.png)
 
-3. A warning box will appear advising you it will cost you 5 Ark to add a second passphrase. Select "CONTINUE".
+3. A warning box will appear advising you it will cost you 5 ARK to add a second passphrase. Select "CONTINUE".
 
 4. A new window titled "Create Second Passphrase" will appear. The warning to copy your passphrase exactly will also be present, and below that will be your second 12 word passphrase. Copy it down exactly and verify you have done so. Select "NEXT".
 
@@ -336,7 +336,7 @@ ___
 
 ##### Currency
 
-ArkClient is automatically set to USD. If you want the ArkClient to display Arks current exchange rate with your preferred currency (if available) you can change it so it appears by default on the homescreen and within your wallet.
+ArkClient is automatically set to USD. If you want the ArkClient to display the current exchange rate for ARK with your preferred currency (if available) you can change it so it appears by default on the homescreen and within your wallet.
 
 1. From the homescreen or within your wallet the ribbon along the top of the client remains stationary. There is a gear icon for settings. Select it.
 
@@ -352,7 +352,7 @@ ____
 
 ##### Price
 
-You can view the current price each Ark is trading for on your homescreen, it will be displayed as your set currency rate. Price changes are also provided by 1 hour, 24 hour, and 7 days % change increments.
+You can view the current price each ARK is trading for on your homescreen, it will be displayed as your set currency rate. Price changes are also provided by 1 hour, 24 hour, and 7 days % change increments.
 
 The price is retrieved from <https://coinmarketcap.com/>
 
@@ -395,7 +395,7 @@ ___
 
 ### Frequently Asked Questions
 
-*Q: What happens if my ArkClient/Desktop Application gets deleted/uninstalled? Do I lose all my Ark?*
+*Q: What happens if my ArkClient/Desktop Application gets deleted/uninstalled? Do I lose all my ARK?*
 
 **A: No. You simply need to reinstall the ArkClient and [re-import](#import) your wallet using your passphrase.**
 
@@ -405,35 +405,35 @@ ___
 
 *Q: If I added a second passphrase to my wallet can I still send transactions if I lost my second passphrase? Is there a way to remove the second passphrase?*
 
-**A: If you do not know your second passphrase you will not be able to send transactions. The second passphrase is just as important as your first passphrase. However, you will be able to import your wallet with just your first passphrase and view it. But you will not be able to use the Ark in it without the second passphrase.**
+**A: If you do not know your second passphrase you will not be able to send transactions. The second passphrase is just as important as your first passphrase. However, you will be able to import your wallet with just your first passphrase and view it. But you will not be able to use the ARK in it without the second passphrase.**
 
-*Q: How long does it take to transfer Ark to/from an exchange?*
+*Q: How long does it take to transfer ARK to/from an exchange?*
 
-**A: The time it takes to send Ark to/from an exchange may vary depending on how busy that exchange is. If an extensive amount of time has lapsed (days, although this should not happen) you may want to contact a delegate to assist you.**
+**A: The time it takes to send ARK to/from an exchange may vary depending on how busy that exchange is. If an extensive amount of time has lapsed (days, although this should not happen) you may want to contact a delegate to assist you.**
 
-*Q: If I am already voting for a delegate and I add more Ark to my wallet, do I need to revote for the delegate for that Ark to count?*
+*Q: If I am already voting for a delegate and I add more ARK to my wallet, do I need to revote for the delegate for that ARK to count?*
 
 **A: No. Most delegates check your wallet weight on every block they forge.**
 
 *Q: How fast are Ark blocks forged?*
 
-**A: A block is forged every 8 seconds. Each block forged creates 2 Ark.**
+**A: A block is forged every 8 seconds. Each block forged creates 2 ARK.**
 
 *Q: What does "top 51" delegates mean? Are there more delegates?*
 
-**A: Only the top 51 delegates with the most votes are allowed to forge/validate/secure the Ark Network. It is up to the community to keep the most trusted/honest delegates in charge of doing so. This creates a democracy of sorts, giving power to the Ark holders.**
+**A: Only the top 51 delegates with the most votes are allowed to forge/validate/secure the Ark Network. It is up to the community to keep the most trusted/honest delegates in charge of doing so. This creates a democracy of sorts, giving power to the ARK holders.**
 
 *Q: Can I vote for 2 delegates at the same time with 1 wallet?*
 
-**A: No. You can only vote for 1 delegate with each wallet. 1 Ark = 1 Vote for 1 Delegate. This system ensures individuals with large amounts of Ark cannot act maliciously by voting for multiple delegates with one wallet.**
+**A: No. You can only vote for 1 delegate with each wallet. 1 ARK = 1 Vote for 1 Delegate. This system ensures individuals with large amounts of ARK cannot act maliciously by voting for multiple delegates with one wallet.**
 
 *Q: When can I expect payment from my delegate?*
 
-**A: Payment from your delegate depends on various things like the amount of Ark you're staking and their payout frequency and minimum payout amount. You can learn more about this in the delegate proposals subreddit. Link provided in [Appendix](#appen).**
+**A: Payment from your delegate depends on various things like the amount of ARK you're staking and their payout frequency and minimum payout amount. You can learn more about this in the delegate proposals subreddit. Link provided in [Appendix](#appen).**
 
-*Q: If I am voting for a delegate can I still send or use my Ark or is it ‘locked’ up? Do I keep my Ark when I vote?*
+*Q: If I am voting for a delegate can I still send or use my ARK or is it ‘locked’ up? Do I keep my ARK when I vote?*
 
-**A: Your Ark is not given away to the delegate nor is it locked up. It is still your Ark and you can do with it what you wish.**
+**A: Your ARK is not given away to the delegate nor is it locked up. It is still your ARK and you can do with it what you wish.**
 
 *Q: Does my wallet need to be open and running for my vote to count and collect payout?*
 

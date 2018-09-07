@@ -6,13 +6,13 @@ title: Public Delegates API
 
 ## List all delegates
 
-## Endpoint
+### Endpoint
 
 ```
 GET /api/delegates
 ```
 
-## Query Parameters
+### Query Parameters
 
 | Name    | Type | Description                                       | Required |
 |---------|:----:|---------------------------------------------------|:--------:|
@@ -20,7 +20,7 @@ GET /api/delegates
 | limit   | int  | The number of resources per page.                 | :x:      |
 | orderBy | int  | The column by which the resources will be sorted. | :x:      |
 
-## Response
+### Response
 
 ```json
 {
@@ -36,7 +36,7 @@ GET /api/delegates
 }
 ```
 
-## Example
+### Example
 
 <request-example>
 ```bash

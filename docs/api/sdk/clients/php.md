@@ -11,7 +11,7 @@ title: "PHP"
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require arkecosystem/client
+composer require arkecosystem/client php-http/guzzle6-adapter
 ```
 
 ## Basics

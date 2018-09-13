@@ -11,7 +11,7 @@ title: "Laravel"
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-$ composer require arkecosystem/laravel
+$ composer require arkecosystem/laravel php-http/guzzle6-adapter
 ```
 
 ## Configuration

@@ -51,13 +51,23 @@ In Ark, a node can also be a forger. If the delegate account associated with the
 
 The network is alive and usable as long as there are peers running enough nodes for the consensus to maintain validity and while the network is readily available to the public - in the case of a public Blockchain.
 ## Signature
-A signature is a cryptographic way to prove the provenance of a message or transaction.
+A signature is a cryptographic one-way hashing function which allows a lightweight and secure way to determine the authenticity and integrity of a message. In the case of blockchain networks, messages mainly refer to transactions and their payloads (SmartBridge for Ark) or blocks.
+
+Signatures are necessary to prove that a block or transaction was forged or created by the owner of the secret passphrase linked to the publicly facing identity of the user.
 
 ## MultiSignature
-A multisignature is a cryptographic way to prove that a message or transaction comes from a minimum number of possible accounts.
+To provide added security and utility, certain blockchain networks enable the creation of multisignature accounts, which operate much like traditional user accounts, although they are technically owned by multiple users.
+
+A multisignature is useful to determine a list of public keys, owned by normal users, by which a transaction outgoing from the multisignature wallet must be signed. for it to be included into a block by the forging nodes. A minimum number of users must sign the outgoing transactions from a multisignature wallet.
 
 ## Transaction
-The signed transfer of value from one account to another
+The transaction is undoubtedly the most common type of transfer which occurs on the Ark blockchain. It is a very simple value exchange from one address to another and cannot be refuted.
+
+For a transaction to be valid in a blockchain, it must first be signed by the owner of the issuing account, then it must be propagated through the network of peers until it reaches the transaction pool of one or many delegates. When a delegate node forges a block, it may decide to include the newly created transaction in the list of transactions which will be valid once the block is finally forged and shared with other peers.
+
+A transaction is increasingly valid the more blocks are forged, as sometimes errors can happen in the distributed network due to consensus complications.
+
+It is recommended to let several blocks be forged before taking any action related to the transaction.
 
 ## Transport
 A Transport happens to data as it flows through the network from peer to peer.
@@ -72,7 +82,11 @@ A reward is attributed to the block creator for its validation efforts.
 A fee is taken from the transaction and added to the reward.
 
 ## Height
-The height is the block number or specific location in the blockchain.
+It is useful to have some way to track the progression of a blockchain. Considering the linear nature of a blockchain's progression, it is important to have some way of identifying when specific blocks, or transactions within blocks, as well as events occur on the blockchain.
+
+The height of the blockchain refers to a specific point in its history and is calculated by adding up every single block since the genesis block.
+
+Future height can be estimated based on block times which are governed by the network-specific consensus algorithm.
 
 ## Forged
 A forged block is created by a delegate.

@@ -136,7 +136,7 @@ Following these guidelines is required to provide a streamlined experience acros
 
 The structure outline here should be followed as closely as possible. If you work with an **Object Oriented Programming Language** you should be able to implement this structure as is, small adjustments might be required for languages like Go as nested packages can get hacky.
 
-You can check https://github.com/ArkEcosystem/php-crypto for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
+You can check [https://github.com/ArkEcosystem/php-crypto](https://github.com/ArkEcosystem/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
 
 ```
 [src | lib | crypto]

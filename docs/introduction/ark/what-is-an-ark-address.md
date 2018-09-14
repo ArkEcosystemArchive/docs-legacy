@@ -111,4 +111,4 @@ Choosing 12 words randomly from the [2048 words](https://github.com/bitcoin/bips
 **5 271 537 971 301 488 476 000 309 317 528 200 000 000 combinations**
 
 #### References
-1. WebSite GlobalSign, https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/
+1. [WebSite GlobalSign](https://www.globalsign.com/en/ssl-information-center/what-is-public-key-cryptography/)

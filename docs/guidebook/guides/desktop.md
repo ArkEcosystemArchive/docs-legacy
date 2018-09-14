@@ -17,7 +17,7 @@ Since we are working on the next-gen version of the wallet, we won't be reviewin
 Please do not submit Pull-Requests (PRs) unless they solve an urgent problem.
 
 ## Pinned: Help us with translations
-Collaborate with other translators on our OneSky project and help us get wallet translated in other languages  http://osjc1wl.oneskyapp.com/collaboration/project?id=95031
+Collaborate with other translators on [our OneSky project](http://osjc1wl.oneskyapp.com/collaboration/project?id=95031) and help us get wallet translated in other languages.
 
 Please do not submit Pull-Requests (PRs) for translations, but use the link above!
 
@@ -54,7 +54,7 @@ brew cask install arkclient
 * Customized backgrounds and themes for better user experience.
 * Choose between dark or light mode.
 * Isolated processes on Windows and MacOSX to prevent from data sniffing or injection.
-* Translations (thanks to the ARK community) - help out http://osjc1wl.oneskyapp.com/collaboration/project?id=95031
+* Translations (thanks to the ARK community) - help out on [our OneSky project](http://osjc1wl.oneskyapp.com/collaboration/project?id=95031)
 * Organise your accounts with virtual folders (for instance savings, personnal etc...) so you don't pay any transfer fee (stored locally).
 * Change your delegate vote.
 * When new version is available, message is shown in the right upper part.

@@ -11,9 +11,9 @@ title: "Voting & Delegates"
 
 The best places to find delegate information are:
 
-https://www.reddit.com/r/ArkDelegates/
-https://forum.ark.io/category/5/delegates
-https://arkdelegates.io/
+- [Reddit](https://www.reddit.com/r/ArkDelegates/)
+- [Ark forum](https://forum.ark.io/category/5/delegates)
+- [arkdelegates.io](https://arkdelegates.io/)
 
 ## Is voting a risk for my wallet?
 

@@ -11,6 +11,14 @@ module.exports = [
     ]
   },
   {
+    title: "Node",
+    collapsable: false,
+    children: [
+      "/cookbook/node/setup",
+      "/cookbook/node/secure"
+    ]
+  },
+  {
     title: "Deployer",
     collapsable: false,
     children: [

@@ -57,6 +57,10 @@ This project is still under development. This page will get more content as the 
 
 ### Validate an address
 ```js
+const { validator } = require('@arkecosystem/crypto')
 
+validator.__validateWithRule('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN', 'address')
+
+validator.passes() // returns true
 ```
 

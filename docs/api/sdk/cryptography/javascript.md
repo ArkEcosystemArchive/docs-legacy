@@ -18,44 +18,55 @@ This project is still under development. This page will get more content as the 
 
 ## Transactions
 
-## Sign
+### Sign
 
 ```js
 
 ```
 
-## Serialize (AIP11)
+### Serialize (AIP11)
 
 ```js
 
 ```
 
-## Deserialize (AIP11)
+### Deserialize (AIP11)
 
 ```js
 
 ```
+
+## Message
+
+### Sign
+
+### Verify
+
 
 ## Identities
 
-## Address
+### Address
 
-### Get an address from a passphrase
+#### Get an address from a passphrase
+
 ```js
 
 ```
 
-### Get an address from a public key
+#### Get an address from a public key
+
 ```js
 
 ```
 
-### Get an address from a private key
+#### Get an address from a private key
+
 ```js
 
 ```
 
-### Validate an address
+#### Validate an address
+
 ```js
 const { validator } = require('@arkecosystem/crypto')
 
@@ -64,3 +75,43 @@ validator.__validateWithRule('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN', 'address')
 validator.passes() // returns true
 ```
 
+### Private Key
+
+#### Get a private key from a passphrase
+
+```js
+```
+
+#### Get a private key instance object from hex
+
+```js
+```
+
+#### Get a private key from a WIF
+
+```js
+```
+	
+### Public Key
+
+#### Get a public key from a passphrase
+
+```js
+```
+
+#### Get a public key instance object from hex
+
+```js
+```
+
+#### Validate a public key
+
+```js
+```
+
+### WIF
+
+#### Get a WIF from a passphrase
+
+```js
+```

@@ -265,3 +265,33 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/search?q=arkx \
   -H "API-Version: 1"
 ```
 </request-example>
+
+## Retrieve the list of next forging delegates
+
+### Endpoint
+
+```
+GET /api/delegates/getNextForgers
+```
+
+### Response
+
+```json
+{
+    "currentBlock": 279727,
+    "currentSlot": 5921125,
+    "delegates": [
+        "03f08761f99892996c6771761955ec41ee6cdffadd43171228f5f28f8c76423b3d", "02d0244d939fad9004cc104f71b46b428d903e4f2988a65f39fdaa1b7482894c9e", "036f1cb6a811173e8d193e41a4ceb77253c3e4f2832e7a4ba3cf3f8f9e606f5f05", "02677f73453da6073f5cf76db8f65fabc1a3b7aadc7b06027e0df709f14e097790", "022e13de675e14a409ce636706c76d42857c673d8dc0dda4e5bfceffdbf86e13c9", "03ef692bb144c368b4844ceca3ffd30fb8c82b97b5b40220473e9009925637e9f9", "03153c994e5306b2fbba9bb533f22871e12e4c1d1d3960d1eeef385ab143b258b4", "03ea97a59522c4cb4bb3420fc94555f6223813d9817dd421bf533b390a7ea140db", "03120f521f7025f76341a09112f88a6c072411c549e4bfa8c92946fcf1c57cdf1e", "021b0f58eca7f123428a8647ffe0644a9454c510f066d3864c27d8c7ad8f5a8aa4"
+    ],
+    "success": true
+}
+```
+
+### Example
+
+<request-example>
+```bash
+curl -X GET https://explorer.ark.io:8443/api/delegates/getNextForgers \
+  -H "API-Version: 1"
+```
+</request-example>

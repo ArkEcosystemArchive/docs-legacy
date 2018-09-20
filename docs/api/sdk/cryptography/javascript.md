@@ -79,7 +79,7 @@ const signed = {
 ### Verify
 
 ```js
-crypto.verifyHash(signed.hash, signed.signature, keys.publicKey) //returns true
+crypto.verifyHash(signed.hash, signed.signature, keys.publicKey)
 ```
 ## Identities
 

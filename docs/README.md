@@ -58,8 +58,11 @@ The [*SDK*](/api/sdk/) section includes information on how to use any of the ARK
   - Swift
   - Laravel
   - Symfony
+
 [*P2P*](/api/p2p/) outlines the functions available to the P2P API.
+
 [*JSON-RPC*](/api/json-rpc/) contains instructions on how to use the JSON-RPC API to interact with the ARK blockchain. This technology is of particular interest to exchanges looking to use a Bitcoin RPC-like interface to integrate ARK into their platform.
+
 [*Webhooks*](/api/webhooks/) describes how to use the webhooks feature of Ark v2 to "listen" to events on the ARK blockchain. This is especially useful for developers who are looking to drive action in their applications in response to specific blockchain events (transactions, vote, etc.)
 
 ### [FAQ](/faq/)

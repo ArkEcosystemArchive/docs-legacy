@@ -72,7 +72,7 @@ const hash = utils.sha256(message)
 const signature = crypto.signHash(hash, keys)
 
 const signed = { 
-  message, hash, signature, keys.publicKey
+  message, hash, signature
 }
 ```
 

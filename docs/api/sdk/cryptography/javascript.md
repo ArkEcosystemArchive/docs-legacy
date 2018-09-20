@@ -16,12 +16,38 @@ This project is still under development. This page will get more content as the 
 yarn add @arkecosystem/crypto
 ```
 
+To perform cryptographic functions with the Ark JavaScript Crypto library, you must first require it:
+
+```js
+const { crypto } = require('@arkecosystem/crypto')
+```
+
+Throughout this document, the keys object used is:
+
+```js
+const keys = crypto.getKeys('top secret passphrase')
+```
+
 ## Transactions
+
+The transaction object used for this section:
+
+```js
+const transaction = {
+  type: 0,
+  amount: 1000,
+  fee: 2000,
+  recipientId: 'DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP',
+  timestamp: 121212,
+  asset: {},
+  senderPublicKey: keys.publicKey
+}
+```
 
 ### Sign
 
 ```js
-
+crypto.sign(transaction, keys)
 ```
 
 ### Serialize (AIP11)
@@ -40,52 +66,48 @@ yarn add @arkecosystem/crypto
 
 ### Sign
 
-### Verify
-
-
-## Identities
-
-To manage identities, the crypto object must first be required:
-
 ```js
-const { crypto } = require('@arkecosystem/crypto')
+const message = "Arbitrary entry of data"
+const hash = utils.sha256(message)              
+const signature = crypto.signHash(hash, keys)
+
+const signed = { 
+  message, hash, signature, keys.publicKey
+}
 ```
 
-This is true for getting addresses, public keys, private keys and WIFs.
+### Verify
+
+```js
+crypto.verifyHash(signed.hash, signed.signature, keys.publicKey) //returns true
+
+## Identities
 
 ### Address
 
 #### Get an address from a passphrase
 
 ```js
-const { crypto } = require('@arkecosystem/crypto')
-
-const keyPair = crypto.getKeys('top secret passphrase')
-const address = crypto.getAddress(keyPair.publicKey.toString('hex'))
+crypto.getAddress(crypto.getKeys('top secret passphrase'))
 ```
 
 #### Get an address from a public key
 
 ```js
-const { crypto } = require('@arkecosystem/crypto')
-
-const publicKey = '03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad17437aad8e096389101f1'
-const address = crypto.getAddress(publicKey.toString('hex'))
+crypto.getAddress(keys.publicKey)
 ```
 
 #### Get an address from a private key
 
-```js
-const { crypto } = require('@arkecosystem/crypto')
+Assuming the public key is not part of the keys object, it can also be omitted:
 
-const key = {
-  privateKey: '26cb357307fc1ba59af3eb244f799578ea9a998a154b0b54fa0bfd77688bdc86',
+```js
+const keys = {
+  privateKey: '26cb357307fc1ba59af3eb244f799578ea9a998a154b0b54fa0bfd77688bdc86'
   compressed: true
 }
 
-const WIF = crypto.keysToWIF(key)
-const keyPair = crypto.getKeysFromWIF(WIF)
-const address = crypto.getAddress(keyPair.publicKey.toString('hex'))
+crypto.getAddress(crypto.getKeysFromWIF(crypto.keysToWIF(keys))['publicKey'])
 ```
 
 #### Validate an address
@@ -110,6 +132,7 @@ crypto.getKeys('top secret passphrase')['privateKey']
 #### Get a private key from a WIF
 
 ```js
+crypto.getKeysFromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')['privateKey']
 ```
 	
 ### Public Key

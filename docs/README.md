@@ -41,7 +41,7 @@ The counterpart to the Guidebook, the Cookbook contains practical code snippets 
 [*Deployer*](/cookbook/deployer/) is the place to go for code snippets and tutorials related to building your own blockchain. We cover setting up your blockchain and deploying it to major cloud hosting service providers.
 [*Exchanges*](/cookbook/exchanges/) is where developers for cryptocurrency exchanges can find information on how to integrate the ARK coin into their platforms. Though we cannot make any guarantees about the codebases of any projects besides the ARK coin, this recipe should serve as a good starting point for integrating ARK bridgechain coins as well.
 
-### [ARK API](/api/)
+### [Ark API](/api/)
 
 This section describes the structure of all ARK APIs, as well as usage examples. After you've read the Guidebook and Cookbook, this section should be the first place you turn to find out how to interact with the Ark Ecosystem software.
 

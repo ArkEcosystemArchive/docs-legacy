@@ -80,7 +80,7 @@ const signed = {
 
 ```js
 crypto.verifyHash(signed.hash, signed.signature, keys.publicKey) //returns true
-
+```
 ## Identities
 
 ### Address

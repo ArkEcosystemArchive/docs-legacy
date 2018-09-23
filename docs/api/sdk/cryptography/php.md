@@ -83,7 +83,7 @@ echo($message->verify() ? 'Valid' : 'Invalid');
 
 #### Get an address from a passphrase
 ```php
-ArkEcosystem\Crypto\Identities\Address::fromPassphrase('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib');
+ArkEcosystem\Crypto\Identities\Address::fromPassphrase('this is a top secret passphrase');
 ```
 
 #### Get an address from a public key

@@ -68,10 +68,10 @@ crypto.sign(transaction, keys)
 
 ```js
 const message = "Arbitrary entry of data"
-const hash = utils.sha256(message)              
+const hash = utils.sha256(message)
 const signature = crypto.signHash(hash, keys)
 
-const signed = { 
+const signed = {
   message, hash, signature
 }
 ```
@@ -134,7 +134,7 @@ crypto.getKeys('top secret passphrase')['privateKey']
 ```js
 crypto.getKeysFromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')['privateKey']
 ```
-	
+
 ### Public Key
 
 #### Get a public key from a passphrase

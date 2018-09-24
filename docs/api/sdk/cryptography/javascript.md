@@ -44,6 +44,12 @@ const transaction = {
 }
 ```
 
+For serializing and deserializing, we must require the Transaction model:
+
+```js
+const { Transaction } = require('@arkecosystem/crypto').models
+```
+
 ### Sign
 
 ```js
@@ -53,13 +59,13 @@ crypto.sign(transaction, keys)
 ### Serialize (AIP11)
 
 ```js
-
+const serialized = Transaction.serialize(transaction).toString('hex')
 ```
 
 ### Deserialize (AIP11)
 
 ```js
-
+const deserialized = Transaction.deserialize(serialized)
 ```
 
 ## Message
@@ -68,10 +74,10 @@ crypto.sign(transaction, keys)
 
 ```js
 const message = "Arbitrary entry of data"
-const hash = utils.sha256(message)              
+const hash = utils.sha256(message)
 const signature = crypto.signHash(hash, keys)
 
-const signed = { 
+const signed = {
   message, hash, signature
 }
 ```
@@ -134,7 +140,7 @@ crypto.getKeys('top secret passphrase')['privateKey']
 ```js
 crypto.getKeysFromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')['privateKey']
 ```
-	
+
 ### Public Key
 
 #### Get a public key from a passphrase
@@ -161,4 +167,3 @@ crypto.validatePublicKey('03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad17437aad8
 ```js
 crypto.keysToWIF(crypto.getKeys('top secret passphrase'))
 ```
-

@@ -51,10 +51,10 @@ If you want to start a relay you can use any of the following commands (inside `
 
 If you want to start a forger you can use any of the following commands (inside `packages/core`).
 
-- `yarn forge` => `~/.ark`
-- `yarn forge:mainnet` => `packages/core/lib/config/networks/mainnet`
-- `yarn forge:devnet` => `packages/core/lib/config/networks/devnet`
-- `yarn forge:testnet` => `packages/core/lib/config/networks/testnet`
+- `yarn forger` => `~/.ark`
+- `yarn forger:mainnet` => `packages/core/lib/config/networks/mainnet`
+- `yarn forger:devnet` => `packages/core/lib/config/networks/devnet`
+- `yarn forger:testnet` => `packages/core/lib/config/networks/testnet`
 
 ## Creating a snapshot
 

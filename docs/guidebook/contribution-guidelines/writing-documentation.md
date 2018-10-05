@@ -72,7 +72,7 @@ To provide an easy to access and clean reference to a website, especially when d
 answers can be searched for on https://google.com
 :::
 :::tip
-answers can be search for on [google](https://google.com)
+answers can be searched for on [google](https://google.com)
 :::
 
 ## Images
@@ -104,4 +104,23 @@ Please use this template for every document which has any reference at all:
 > - **Ark mediakit**: [https://ark.io/mediakit](https://ark.io/mediakit)
 > - **Ark blog**: [https://blog.ark.io](https://blog.ark.io)
 
+<!-- integrate webpack for .refs file, easier to write for contributors who aren't as tech savvy, better file structure
+by decoupling references and content -->
 
+<!-- scrape favicon for mini-render -->
+<ReferencesTemplate v-bind:references="[
+  {
+    name: 'from v-bind',
+    desc: 'vbind desc',
+    link: 'somelink.co'},
+  {
+    name: 'example',
+    link: 'example.com',
+    desc: 'my example description string which is actually really quite long for css learning purposes; aka how to format'
+  },
+  {
+    name: 'example2, with a longer title',
+    link: 'docs.ark.io',
+    desc: 'Link to docs.ark.io website'
+  }
+]"/>

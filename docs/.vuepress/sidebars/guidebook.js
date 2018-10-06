@@ -35,7 +35,7 @@ module.exports = [
     ]
   },
   {
-    title: "Guides",
+    title: "Developer Guides",
     collapsable: false,
     children: [
       "/guidebook/guides/",

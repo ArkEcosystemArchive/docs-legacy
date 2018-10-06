@@ -17,10 +17,8 @@
 }
 
 .referenceName {
-  font-size: 1.1em;
-  weight: 800;
-  font-weight: bold;
-  max-width: 50%;
+  max-width: 30%;
+  font-weight: 500;
   display: inline-block;
   border-right: 0.1em solid lightgrey;
   margin-right: 0.3em;
@@ -32,14 +30,16 @@
   white-space: nowrap;
   text-align: center;
   overflow: hidden;
+  vertical-align: bottom;
   text-overflow: ellipsis;
-  max-width: 50%;
+  max-width: 65%;
   margin-top: 0;
-  display: inline;
+  display: inline-block;
   margin-bottom: 0;
 }
 
 .referenceDescription {
+  font-weight: 300;
   display: block;
   margin-top: 0
 }

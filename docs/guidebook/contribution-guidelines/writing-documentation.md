@@ -39,6 +39,7 @@ The specific terms above MUST be capitalized to prevent reader confusion.
 For certain cases (docs, website, forum), it is acceptable to use the actual URL subdomain.domain.tld format if it's intuitive:
 
  - *"Find all relevant information on the [docs.ark.io](https://docs.ark.io)"*
+
  - *"Blog, Forums, Roadmap and more can be found at the [ark.io](https://ark.io) website"*
  - *"I love the community over at the [forum.ark.io](https://forum.ark.io)"*
 
@@ -84,43 +85,37 @@ If writing a document for an Ark project, like Ark Mobile, you MUST use the offi
 
 When needing to use official Ark imagery, you may find suitable media assets at [ark.io/mediakit](https://ark.io/mediakit). Otherwise, you are encouraged to design your own images, use external images with proper attribution in the references component or outsource the graphical design task to someone else.
 
-## References
-Here you can find an example reference component, temporary until a [vuepress](https://vuepress.vuejs.org) component.
-
-Please use this template for every document which has any reference at all:
-
-> - **Ark Core**: [https://github.com/arkecosystem/core](https://github.com/arkecosystem/core)
-> - **Ark Node**: [https://github.com/arkecosystem/ark-node](https://github.com/arkecosystem/ark-node)
-> - **Ark Explorer**: [https://github.com/arkecosystem/explorer](https://github.com/arkecosystem/explorer)
-> - **Ark Mobile**: [https://github.com/arkecosystem/mobile-wallet](https://github.com/arkecosystem/mobile-wallet)
-> - **Ark Desktop**: [https://github.com/arkecosystem/desktop-wallet](https://github.com/arkecosystem/desktop-wallet)
-> - **AIPs, Ark Improvement Proposals**: [https://github.com/arkecosystem/aips](https://github.com/arkecosystem/aips)
-> - **Ark (LANG) Client**: [https://github.com/arkecosystem/php-client](https://github.com/arkecosystem/php-client) There are many implementations, all named with the same convention. Replace the programming language for a different implementation
-> - **Ark (LANG) Crypto**: [https://github.com/arkecosystem/php-crypto](https://github.com/arkecosystem/php-crypto) Same as clients, every client implementation has a related crypto implementation
-> - **Ark Deployer**: [https://github.com/arkecosystem/ark-deployer](https://github.com/arkecosystem/deployer)
-> - **Ark website**: [https://ark.io](https://ark.io)
-> - **Ark documentation**: [https://docs.ark.io](https://docs.ark.io)
-> - **Ark forum**: [https://forum.ark.io](https://forum.ark.io)
-> - **Ark mediakit**: [https://ark.io/mediakit](https://ark.io/mediakit)
-> - **Ark blog**: [https://blog.ark.io](https://blog.ark.io)
-
 <!-- integrate webpack for .refs file, easier to write for contributors who aren't as tech savvy, better file structure
 by decoupling references and content -->
 
 <!-- scrape favicon for mini-render -->
-<ReferencesTemplate v-bind:references="[
+
+<!-- include references -->
+
+<References v-bind:references="[
   {
-    name: 'from v-bind',
-    desc: 'vbind desc',
-    link: 'somelink.co'},
-  {
-    name: 'example',
-    link: 'example.com',
-    desc: 'my example description string which is actually really quite long for css learning purposes; aka how to format'
+    name: `Ark Core`,
+    link: `https://github.com/arkecosystem/core`,
+    desc: `description test`
+  },  {
+    name: `Ark Node`,
+    link: `https://github.com/arkecosystem/ark-node`,
+    desc: `optional text`
   },
   {
-    name: 'example2, with a longer title',
-    link: 'docs.ark.io',
-    desc: 'Link to docs.ark.io website'
+    name: `Ark Node`,
+    link: `https://github.com/arkecosystem/explorer`,
+    desc: ``
+  },
+  {
+    name: `Ark Mobile`,
+    link: `https://github.com/arkecosystem/mobile-wallet`,
+    desc: ``
+  },
+  {
+    name: `Ark Desktop`,
+    link: `https://github.com/arkecosystem/desktop-wallet`,
+    desc: ``
   }
+
 ]"/>

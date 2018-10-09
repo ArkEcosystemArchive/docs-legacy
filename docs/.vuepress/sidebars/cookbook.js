@@ -27,6 +27,13 @@ module.exports = [
     ]
   },
   {
+    title: "Pay",
+    collapsable: false,
+    children: [
+      "/cookbook/pay/installation"
+    ]
+  },
+  {
     title: "Exchanges",
     collapsable: false,
     children: [

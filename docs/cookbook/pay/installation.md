@@ -50,9 +50,6 @@ gateway.on('error', data => {
     // React to the error, note that errors are not always critical, etc.
 })
 
-// The "prepare" method will load a list of seeds, peers and exchange rates.
-await gateway.prepare()
-
 // The "start" method will initialise the transaction listener.
 await gateway.start()
 ```

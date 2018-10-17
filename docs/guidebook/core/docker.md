@@ -36,7 +36,7 @@ docker-compose up -d
 
 ## Use case #2
 
-> Run PostgreSQL and Redis Docker containers, build and run ARK-Core container.
+> Run PostgreSQL and Redis Docker containers, build and run Ark-Core container.
 
 ::: tip
 Along with PostgreSQL and Redis containers, now you have also NodeJS container which mounts your local ark-core git folder inside the container and installs all NPM prerequisites.
@@ -56,5 +56,5 @@ docker exec -it ark-core bash
 *Need to start everything from scratch and make sure there aren't any cached containers, images or volumes left, just use **purge_all.sh** script.*
 
 ::: warning
-**Current files/preset are not Production ready. Official Production ARK-Core Docker images will be released soon after ARK-Core v2 goes live**.
+**Current files/preset are not Production ready. Official Production Ark-Core Docker images will be released soon after Ark-Core v2 goes live**.
 :::

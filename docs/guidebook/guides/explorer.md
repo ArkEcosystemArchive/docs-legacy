@@ -10,7 +10,7 @@ title: "Explorer"
 
 [![Build Status](https://img.shields.io/travis/ArkEcosystem/ark-explorer/master.svg?style=flat)](https://travis-ci.org/ArkEcosystem/ark-explorer)
 
-# ARK Explorer 3.0
+# Ark Explorer 3.0
 
 > Designed and developed from the ground-up, using lean & fast developmental frameworks (Tailwind CSS & Vue.JS).
 
@@ -127,7 +127,7 @@ If you discover a security vulnerability within this package, please send an e-m
 ## 8. Contributing
 
 * If you find any bugs, submit an [issue](../../issues) or open a [pull-request](../../pulls), helping us catch and fix them.
-* Engage with other users and developers on [ARK Slack](https://ark.io/slack/).
+* Engage with other users and developers on [Ark Slack](https://ark.io/slack/).
 * Join our [gitter](https://gitter.im/ark-developers/Lobby).
 * [Contribute bounties](https://github.com/ArkEcosystem/ARK-Bounty-Program).
 

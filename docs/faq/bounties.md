@@ -6,15 +6,15 @@ title: "Bounties"
 
 [[toc]]
 
-Thanks for your interest in contributing to the ARK Ecosystem! Please take a moment to review this document **before submitting a pull request**.
+Thanks for your interest in contributing to the Ark Ecosystem! Please take a moment to review this document **before submitting a pull request**.
 
 ## Introduction
 
-ARK has a bounty program for all accepted PR (Pull Requests) for this repository
+Ark has a bounty program for all accepted PR (Pull Requests) for this repository
 
 More information can be found at [https://blog.ark.io/ark-github-development-bounty-113806ae9ffe](https://blog.ark.io/ark-github-development-bounty-113806ae9ffe)
 
-Before pushing PR, please [jump in our slack #development](https://ark.io/slack) channel in order to discuss your contributions or to connect with other ARK developers.
+Before pushing PR, please [jump in our slack #development](https://ark.io/slack) channel in order to discuss your contributions or to connect with other Ark developers.
 
 ### Guidelines
 
@@ -30,7 +30,7 @@ Before pushing PR, please [jump in our slack #development](https://ark.io/slack)
 - General Bug Fixes
 - Implement new features
 - Improve documentation
-- create something new for ARK.
+- create something new for Ark.
 
 ## Pull requests
 

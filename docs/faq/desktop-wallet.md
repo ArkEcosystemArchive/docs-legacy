@@ -4,9 +4,9 @@ title: "Desktop Wallet"
 
 # Desktop Wallet
 
-## Where can I download ARK desktop wallet?
+## Where can I download Ark desktop wallet?
 
-You can download the latest version of the ARK desktop wallet from our official GitHub repository : https://github.com/ArkEcosystem/ark-desktop/releases .
+You can download the latest version of the Ark desktop wallet from our official GitHub repository : https://github.com/ArkEcosystem/ark-desktop/releases .
 Just choose the wallet download that matches your operating system.
 
 ## Why is there a line through a cloud next to my address?
@@ -15,7 +15,7 @@ Don’t worry about it, it means this account is new to the network. The symbol 
 
 ## I can’t send a transaction because I get an ‘Invalid timestamp error’. What should i do?
 
-Your operating system time is wrong and is set manually. Please update your computer time/system clock to sync using the internet. You can google guides how to do that for every OS. After you do restart your ARK Client.
+Your operating system time is wrong and is set manually. Please update your computer time/system clock to sync using the internet. You can google guides how to do that for every OS. After you do restart your Ark Client.
 
 ## When I try to send/vote I get the ‘Error: Passphrase is not corresponding to account’ what does it mean?
 
@@ -25,12 +25,12 @@ It means you did not write/copy your passphrase correctly when signing the trans
 
 You can use the offline folders to split-up your funds within a wallet. This allows you to better organize your ARK without paying any fees within the same address. The splitting up of your ARK is local to your computer and not stored on the blockchain.
 
-## When I open my ARK desktop wallet I see an empty ARK address which should have ARK tokens in it.
+## When I open my Ark desktop wallet I see an empty Ark address which should have ARK tokens in it.
 
-Most likely you are not connected to the network, make sure the cloud icon in the upper right menu (3rd icon) has a checkmark inside it (meaning connected to network) and does not have line through it(disconnected from ARK network). If it has a line through it, it means either you are not connected to the internet or your firewall maybe blocking your data traffic.
+Most likely you are not connected to the network, make sure the cloud icon in the upper right menu (3rd icon) has a checkmark inside it (meaning connected to network) and does not have line through it(disconnected from Ark network). If it has a line through it, it means either you are not connected to the internet or your firewall maybe blocking your data traffic.
 
-## When I open ARK Desktop I see black screen and nothing is there / I’m trying to make a screenshot and screen is black?
+## When I open Ark Desktop I see black screen and nothing is there / I’m trying to make a screenshot and screen is black?
 
-If you are connecting to your computer via remote software (eg. Teamviewer) your screen will be black for security reasons (prevents someone trying to access from remote computer, they won’t be able to see your ARK wallet). Same goes when you are trying to make a screenshot (screen will show black).
+If you are connecting to your computer via remote software (eg. Teamviewer) your screen will be black for security reasons (prevents someone trying to access from remote computer, they won’t be able to see your Ark wallet). Same goes when you are trying to make a screenshot (screen will show black).
 
 If you want to disable this, click in the upper left menu Application -> Disable screenshot protection (unsafe). It will be re-enabled every time you restart the wallet.

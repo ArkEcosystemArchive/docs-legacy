@@ -1,13 +1,13 @@
 ---
-title: "How To Deploy Your Own ARK Chain On Azure?"
+title: "How To Deploy Your Own Ark Chain On Azure?"
 ---
 
-# How To Deploy Your Own ARK Chain On Azure?
+# How To Deploy Your Own Ark Chain On Azure?
 
 [[toc]]
 
 ::: tip
-**This deployment method can be used to jump-start your journey to your own BridgeChain in the process [outlined here (ARK Deployer)](https://docs.ark.io/deployer/setup.html)**
+**This deployment method can be used to jump-start your journey to your own BridgeChain in the process [outlined here (Ark Deployer)](https://docs.ark.io/deployer/setup.html)**
 :::
 
 **Prerequisites**
@@ -16,10 +16,10 @@ Active [Microsoft Azure](https://azure.microsoft.com/en-us/) account (Trial is O
 **End result**
 - Ubuntu VM in Azure
 - Azure PublicIP and Firewall configurations pre-built
-- Your own BridgeChain node and ARK Explorer running in < 20 minutes
+- Your own BridgeChain node and Ark Explorer running in < 20 minutes
 - Re-usable and customizable deployment script
 
-**Script available at [ARK Azure on GitHub](https://github.com/ArkEcosystem/ark-azure)**
+**Script available at [Ark Azure on GitHub](https://github.com/ArkEcosystem/ark-azure)**
 
 ## 1. Virtual Machine Quick Deployment
 
@@ -45,7 +45,7 @@ Currently, the VM produced is a Standard_A1 size VM. This is a very low-cost res
 
 Click ‘Agree’, and ‘Purchase’ to begin deployment. Should take 5–10 minutes.
 
-## 2. Connecting to VM + ARK Deployer
+## 2. Connecting to VM + Ark Deployer
 
 You are welcome to explore your new VM’s Overview, etc, by clicking on ‘Resource Groups’ and finding your new group, and the VM inside. There are lots of configuration items here.
 
@@ -68,7 +68,7 @@ SSH into your new VM using the Public DNS Name and login with the credentials us
 ::: tip
 **Starting here, is the default quick-installation method with the chain being named “MyTest”. If you wish to customize it, please see the bottom-most section of this article.**
 
-Run the following command (It’s a one-liner, copy and paste the full contents from here or from the **[ARK Azure Github page](https://github.com/ArkEcosystem/ark-azure)**)
+Run the following command (It’s a one-liner, copy and paste the full contents from here or from the **[Ark Azure Github page](https://github.com/ArkEcosystem/ark-azure)**)
 
 ```bash
 curl -o- https://raw.githubusercontent.com/ArkEcosystem/ark-azure/master/script/arkdefaultinstall.sh | bash
@@ -82,13 +82,13 @@ Just after the node gets installed, there will be 3 lines of text to record. Cop
 
 ![Image 6](./assets/setup-with-azure/6.jpeg)
 
-This information will be used later on, as you explore ARK past the deployment phase with [ARK Deployer](https://github.com/ArkEcosystem/ark-deployer). Copy and paste it right out of the console window for safe keeping.
+This information will be used later on, as you explore Ark past the deployment phase with [Ark Deployer](https://github.com/ArkEcosystem/ark-deployer). Copy and paste it right out of the console window for safe keeping.
 
 ## 3. Final result — see explorer in action
 
 ![Image 7](./assets/setup-with-azure/7.png)
 
-This is the Public IP of your server, and the port required to view the ARK Explorer for your BridgeChain (4200). The API should be available on port 4100.
+This is the Public IP of your server, and the port required to view the Ark Explorer for your BridgeChain (4200). The API should be available on port 4100.
 
 You can highlight the URL straight from the SSH window, such as http://13.65.29.3:4200 and hit CTRL+C to copy it. Paste into a browser, and voila!
 
@@ -96,11 +96,11 @@ You can highlight the URL straight from the SSH window, such as http://13.65.29.
 
 ## 4. Customizing Your Deployment
 
-If you wish to customize your deployment of ARK within the bounds of ARK Deployer, download a copy of the [Azure Shell script](https://raw.githubusercontent.com/ArkEcosystem/ark-azure/master/script/arkdefaultinstall.sh).
+If you wish to customize your deployment of Ark within the bounds of Ark Deployer, download a copy of the [Azure Shell script](https://raw.githubusercontent.com/ArkEcosystem/ark-azure/master/script/arkdefaultinstall.sh).
 
 ![Image 9](./assets/setup-with-azure/9.png)
 
-Within this file, you’re welcome to edit the list of variables on lines 21–31 and personalize them. These variables all align with an optional parameter of ARK Deployer (See GitHub: [https://github.com/ArkEcosystem/ark-deployer#optional-parameters](https://github.com/ArkEcosystem/ark-deployer#optional-parameters))
+Within this file, you’re welcome to edit the list of variables on lines 21–31 and personalize them. These variables all align with an optional parameter of Ark Deployer (See GitHub: [https://github.com/ArkEcosystem/ark-deployer#optional-parameters](https://github.com/ArkEcosystem/ark-deployer#optional-parameters))
 
 You can then run this new version of your script against a new VM, or, you can uninstall the original node/explorer and re-install using the script again. We would recommend just rolling out a new server for ease of use, but that’s your call.
 
@@ -122,8 +122,8 @@ You can now, on a prepared VM, run via SSH:
 curl -o- paste-raw-gist-URL-here-ending-in.sh | bash
 ```
 
-For more in-depth and customizable BridgeChain enjoy following along with the [ARK Deployer](https://blog.ark.io/ark-deployer-setup-guide-c10825ebb0e4) guide going forward in your ARK journey. Welcome aboard ARK.
+For more in-depth and customizable BridgeChain enjoy following along with the [Ark Deployer](https://blog.ark.io/ark-deployer-setup-guide-c10825ebb0e4) guide going forward in your Ark journey. Welcome aboard Ark.
 
 ## Special Mention
 
-Special thanks to [Walrusface](https://medium.com/@walrusface) for writing this guide and script, delegate [Jarunik](https://medium.com/@jarunik) for sponsoring its development and our dev [Alex Barnsley](https://medium.com/@alexbarnsley) for testing and modifying necessary things in ARK deployer.
+Special thanks to [Walrusface](https://medium.com/@walrusface) for writing this guide and script, delegate [Jarunik](https://medium.com/@jarunik) for sponsoring its development and our dev [Alex Barnsley](https://medium.com/@alexbarnsley) for testing and modifying necessary things in Ark deployer.

@@ -1,12 +1,12 @@
 ---
-title: "How To Setup Your ARK Node"
+title: "How To Setup Your Ark Node"
 ---
 
-# How To Setup Your ARK Node
+# How To Setup Your Ark Node
 
 [[toc]]
 
-Welcome, the purpose of this document is to help you setup a full ARK relay or delegate
+Welcome, the purpose of this document is to help you setup a full Ark relay or delegate
 node. This will guide you step by step and get you up and running relaying transactions
 and securing the Ark Network.
 
@@ -114,43 +114,43 @@ By default this is a `superuser`.
 usermod -a -G sudo username
 ```
 
-## Installing your ARK Node
-We're now ready to begin installing ARK. The initial install may take awhile
+## Installing your Ark Node
+We're now ready to begin installing Ark. The initial install may take awhile
 and at times appear to not be doing anything. Please have patience and let the process
 finish.
 
-### Switch to the ARK user
-While installing ARK, we should use the ARK user that we created above. To switch to it, run
+### Switch to the Ark user
+While installing Ark, we should use the Ark user that we created above. To switch to it, run
 
 ```
 sudo su - ark
 ```
-### Download ARK Commander
+### Download Ark Commander
 
 ```
 wget https://ark.io/ARKcommander.sh
 ```
 
-### Make ARK Commander Executable
+### Make Ark Commander Executable
 Next we need to make the file we just downloaded executable by our user.
 ```
 chmod +x ARKcommander.sh
 ```
 
-### Run ARK Commander
-Now we'll run the file we just downloaded and begin our ARK Node installation.
+### Run Ark Commander
+Now we'll run the file we just downloaded and begin our Ark Node installation.
 ```
 ./ARKcommander.sh
 ```
 #### Sudo Password
-ARK Commander is then going to ask you for your `sudo` password. This is
+Ark Commander is then going to ask you for your `sudo` password. This is
 the password you used to login to the user account with. Enter your password
 and press enter.
 
 ![ark_commander_login](./assets/setup/ark_commander_login.png)
 
 #### System Updates and Prerequisites
-The first time you run ARK Commander it is going to update your system and make sure
+The first time you run Ark Commander it is going to update your system and make sure
 you have the latest updates to required dependencies.
 
 ![ark_commander_login](./assets/setup/update_ark_commander.png)
@@ -175,20 +175,20 @@ ssh ark@ipaddress
 ```
 
 
-### Run ARK Commander
-After reconnecting to the server go ahead and run ARK Commander
+### Run Ark Commander
+After reconnecting to the server go ahead and run Ark Commander
 ```
 ./ARKcommander.sh
 ```
 
-### Install ARK Node
-Select option `1` to install ARK Node. Again, don't interrupt this process as it
+### Install Ark Node
+Select option `1` to install Ark Node. Again, don't interrupt this process as it
 will take a few minutes to install the required packages.
 
 ![ark node installation](./assets/setup/install_ark_node.png)
 
 ### Setting up a Delegate Node
-After ARK Node installs you will be asked if you want to setup your secret key.
+After Ark Node installs you will be asked if you want to setup your secret key.
 If you're just setting up a relay node, or not ready to setup your delegate node
 at this time select `N`. Otherwise select `Y` and enter your delegate node secret
 key now.
@@ -196,7 +196,7 @@ key now.
 ![setup secret](./assets/setup/setup_secret.png)
 
 ### Restoring your Database from a Snapshot
-Letting the ARK blockchain download from peers can take a long time. We have
+Letting the Ark blockchain download from peers can take a long time. We have
 the ability to download a snapshot of the blockchain and import it right into our
 database. Let's go ahead and do that now.
 
@@ -216,7 +216,7 @@ If everything went as planned we should now be able to choose the `L` option
 from the menu and see the transmission of block data across our node.
 
 If you see `New block received` in your log congratulations, you now have a working
-ARK node. If not, you may need to wait a couple minutes as the last few blocks sync that
+Ark node. If not, you may need to wait a couple minutes as the last few blocks sync that
 were not in the latest snapshot.
 
 If you need to go back and setup your delegate node you can do so by using option
@@ -226,7 +226,7 @@ If you need to go back and setup your delegate node you can do so by using optio
 Great! you have a working node, but now you should really think about securing it.
 It is especially important if you plan on using this as your delegate node.
 
-In our next section we'll discuss making sure your ARK node is as secure as possible.
-As the ARK network grows, hacking attempts on delegate and relay nodes will become
+In our next section we'll discuss making sure your Ark node is as secure as possible.
+As the Ark network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.

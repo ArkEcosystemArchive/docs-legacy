@@ -10,11 +10,11 @@ title: "JSON-RPC"
     <img src="https://raw.githubusercontent.com/ArkEcosystem/ARK-JSON-RPC/master/banner.png" />
 </p>
 
-> A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the ARK blockchain.
+> A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the Ark blockchain.
 
 ## Installation
 
-If you would like to use the JSON-RPC server, head over to your `~/.ark/config/plugins.js` and look for `@arkecosystem/json-rpc` which is installed by default. _Just change it to the following and start your ARK Core._
+If you would like to use the JSON-RPC server, head over to your `~/.ark/config/plugins.js` and look for `@arkecosystem/json-rpc` which is installed by default. _Just change it to the following and start your Ark Core._
 
 ```js
 '@arkecosystem/core-json-rpc': {

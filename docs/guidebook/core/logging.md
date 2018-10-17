@@ -8,7 +8,7 @@ title: "Logging"
 
 ## Introduction
 
-In order to efficiently operate a node in any ARK network you need to get some insight into what actually went wrong when any issues occur on your node.
+In order to efficiently operate a node in any Ark network you need to get some insight into what actually went wrong when any issues occur on your node.
 
 The default logger we provide is [winston](https://github.com/winstonjs/winston) which allows you to use multiple transports with very little configuration needed.
 

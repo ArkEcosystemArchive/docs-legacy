@@ -1,13 +1,13 @@
 ---
-title: "ARK Bridgechain Setup Guide"
+title: "Ark Bridgechain Setup Guide"
 ---
 
-# ARK Bridgechain Setup Guide
+# Ark Bridgechain Setup Guide
 
 [[toc]]
 
 ::: tip
-**This guide is to help you get setup with your own ARK bridgechain. It will focus on launching your own ARK clone bridgechain, auto-forging setup, adding your own delegate nodes and making it accessible via the ARK wallet.**
+**This guide is to help you get setup with your own Ark bridgechain. It will focus on launching your own Ark clone bridgechain, auto-forging setup, adding your own delegate nodes and making it accessible via the Ark wallet.**
 :::
 
 ## Setting up your Bridgechain Node
@@ -18,7 +18,7 @@ The nodes are a core part of the network. They are what forge the blocks, valida
 
 ![Image 1](./assets/setup/1.png)
 
-::: tip Download ARK Deployer
+::: tip Download Ark Deployer
 ```bash
 cd ~
 git clone https://github.com/ArkEcosystem/ark-deployer.git
@@ -178,9 +178,9 @@ You will also see your Delegate showing in the Explorer Delegate Monitor.
 
 ##### Setup a forging Node
 
-You will need a new machine ready for us to setup. To make it easier, we will use ARKCommander to setup all dependencies then overwrite with our bridgechain configuration.
+You will need a new machine ready for us to setup. To make it easier, we will use ArkCommander to setup all dependencies then overwrite with our bridgechain configuration.
 
-::: tip Download and run ARKCommander
+::: tip Download and run ArkCommander
 ```bash
 wget http://ark.io/ARKcommander.sh
 bash ARKcommander.sh
@@ -335,7 +335,7 @@ We have also provided a Vagrantfile which allows you to deploy your own Bridgech
 
 ** Note: This requires Vagrant version 2+ to be installed from [here](https://www.vagrantup.com/downloads.html).**
 
-::: tip Download ARK Deployer
+::: tip Download Ark Deployer
 ```bash
 cd ~
 git clone https://github.com/ArkEcosystem/ark-deployer.git

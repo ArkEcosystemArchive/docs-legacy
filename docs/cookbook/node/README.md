@@ -1,7 +1,7 @@
 ---
-title: ARK Node
+title: Ark Node
 ---
 
-# ARK Node Recipes
+# Ark Node Recipes
 
-This section of the Ark Ecosystem Cookbook is dedicated to helping you setup and secure your own node on the ARK blockchain.
+This section of the Ark Ecosystem Cookbook is dedicated to helping you setup and secure your own node on the Ark blockchain.

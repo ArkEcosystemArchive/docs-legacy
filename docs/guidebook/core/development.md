@@ -8,11 +8,11 @@ title: "Development"
 
 ## Introduction
 
-Getting started with the development of ARK Core is much easier compared to the initial release known as `ark-node`. Everything from the development to the publication of the core is managed by [Lerna](https://github.com/lerna/lerna).
+Getting started with the development of Ark Core is much easier compared to the initial release known as `ark-node`. Everything from the development to the publication of the core is managed by [Lerna](https://github.com/lerna/lerna).
 
 ## Getting started with Lerna
 
-Before you can get started with working on ARK Core you need to setup lerna as previously mentioned.
+Before you can get started with working on Ark Core you need to setup lerna as previously mentioned.
 
 ```bash
 yarn global add lerna
@@ -25,7 +25,7 @@ Just follow those steps and you are ready to get started. Happy Hacking!
 
 ## Database
 
-ARK Core stores all the blockchain data in a database. You could read more about it, in the [database section](https://docs.ark.io/core/database.html#introduction).
+Ark Core stores all the blockchain data in a database. You could read more about it, in the [database section](https://docs.ark.io/core/database.html#introduction).
 
 For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](https://docs.ark.io/core/docker.html).
 

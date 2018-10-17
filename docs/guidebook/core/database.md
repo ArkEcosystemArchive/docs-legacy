@@ -4,7 +4,7 @@ title: "Database"
 
 # Database
 
-In order to operate a node in any ARK network you need some way of storing the blocks, transactions and wallets in a database on your server.
+In order to operate a node in any Ark network you need some way of storing the blocks, transactions and wallets in a database on your server.
 
 The default driver for database communication we provide is [Sequelize](https://github.com/sequelize/sequelize) which supports SQLite, PostgreSQL and MySQL.
 

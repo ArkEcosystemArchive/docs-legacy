@@ -46,17 +46,18 @@ The counterpart to the Guidebook, the Cookbook contains practical code snippets 
 This section describes the structure of all ARK APIs, as well as usage examples. After you've read the Guidebook and Cookbook, this section should be the first place you turn to find out how to interact with the Ark Ecosystem software.
 
 [*Public API*](/api/public/) describes the API that's accessible through any ARK node. API references for ARK v1 and v2 are included.
-The [*SDK*](/api/sdk/) section includes information on how to use any of the ARK API wrappers we've written for supercharged development in your language of choice. Currently, the following SDKs are available:
+The [*SDK*](/api/sdk/) section includes information on how to use any of the Ark API wrappers we've written for supercharged development in your language of choice. Currently, the following SDKs are available:
   - .NET
   - Elixir
   - Go
   - Java
   - JavaScript
+  - Laravel
   - PHP
   - Python
   - Ruby
+  - Rust
   - Swift
-  - Laravel
   - Symfony
 
 [*P2P*](/api/p2p/) outlines the functions available to the P2P API.

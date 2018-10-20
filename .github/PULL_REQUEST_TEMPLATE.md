@@ -23,7 +23,7 @@ _Put an `x` in the boxes that apply and remove the rest of them: keep this PR as
 _Put an `x` in the boxes that apply and remove this text and the rest of them. You can also fill these out after creating the PR. If you're unsure about any of them, don't hesitate to ask. We're re here to help! This is simply a reminder of what we are going to look for before merging your code._
 -->
 
-- [ ] I have read the [CONTRIBUTING](https://docs.ark.io/developers/guidelines/contributing.html) documentation
+- [ ] I have read the [CONTRIBUTING](https://docs.ark.io/guidebook/contribution-guidelines/contributing.html) documentation
 - [ ] I have read the [WRITING DOCUMENTATION](https://docs.ark.io/guidebook/contribution-guidelines/writing-documentation.html) guidelines
 - [ ] I have added necessary documentation
 <!--

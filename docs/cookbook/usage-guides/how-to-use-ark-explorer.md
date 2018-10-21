@@ -7,75 +7,80 @@ title: "How To Use The ARK Explorer?"
 
 ## What is a block explorer?
 
-If a Blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus; a guide to every aspect of that highway as you travel through it. Most people when they use the block explorer are only doing so to confirm a transaction they have sent or are receiving, this however only taps into a tiny fraction of the power contained within the explorer.
-Block explorers can give anyone access to all the information contained within that blockchain. You can search every block ever created, see every transaction an address has conducted as well as a snapshot of the status of that network in totality.
-Every Blockchain has a block explorer and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users at any level, from novice to advanced and our block explorer is an example of that committment.
-Let’s begin our journey into the ARK explorer, first looking at mobile functionality followed by the slightly more robust desktop experience.
+If a Blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus: the guide to every aspect of that highway as you travel through it. Most people, when using the block explorer, are only doing so to confirm a transaction they have sent or are receiving, this however only taps into a tiny fraction of the power contained within the explorer.
+Block explorers can give anyone access to all the information contained within that blockchain. You can search every block that was ever created, see every transaction an address has conducted as well as a snapshot of the status of that network.
+Every Blockchain has a block explorer and Ark is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users of any level. From novice to advanced users, our block explorer is easy to use.
 
-![MOBILE BLOCK EXPL Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
+There are few minor differences between the desktop and mobile versions of the explorer, although most of the experience is the same. The most marked difference is the presence of a price graph with the chosen currency pairing on the home page of the block explorer when using the desktop version.
 
-When you first arrive at [explorer.ark.io](https://explorer.ark.io) you will find the following information immediately available.
-If you are using the desktop version of the ARK block explorer, you will see a price graph on the home page. This interactive graph allows you to see ARK price in relation to your chosen currency over periods of day, week, month, quarter and year views.
+Let’s begin our journey into the Ark explorer.
+
+![MOBILE BLOCK EXPLORER Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
+
+When you first arrive at [explorer.ark.io](https://explorer.ark.io), you will find some immediately available information.
+If you are using the desktop version of the Ark block explorer, you will see a price graph on the home page. This interactive graph allows you to see the ARK price in relation with your chosen currency. The price comparison is shown over periods of day, week, month, quarter and year views.
 
 ![LATEST TRANSACTION Overview](./assets/how-to-use-the-ark-explorer/LatestTransactionOverview.png)
 
 ## Latest Transactions:
 
-This will be a list of the most recent transactions that have been broadcast to the network. Inside each transaction you will be able to find out the following information
--    **ID:** This will show the unique identification (ID) number for this transaction. This can be used to prove to another party that this transaction was sent from an address to another address and approved by the network. If you click on this ID, you will be able to see how many confirmations it has received and most importantly what Block it was included in. By being included into a block it proves that the network has accepted it as a valid transaction and is forever written into the ARK blockchain.
--    **Timestamp:** This indicates the exact time that the transaction was broadcasted and accepted by the network.
--    **Sender:** This field shows the ARK wallet address that initiated the transaction, i.e. who is sending the transaction.
--    **Recipient:** Here we see the wallet address who the sender (above) wished to send this transaction to, i.e. who is receiving the transaction.
--    **Smart bridge:** This field indicates the ARK SmartBridge that was used in the transaction. SmartBridges are the groundbreaking innovation that drives the ARK Ecosystem; allowing for disparate blockchains to interact with each other. Think of each blockchain like an island with no communication between them. If you work on Ethereum Island but your business partner only works on Bitcoin island you can't trade or work together. ARK SmartBridges are like an airstrip, cargo barge, cellphone towers and internet all rolled into one. You can do business with any of the other islands from any other island, instantaneously and nearly friction free. A more detailed explanation of Smart bridges can be found in our section [**What are bridge chains and how to use them**](https://docs.ark.io/basics/how-does-ark-smartbridge-work.html)
+This is a list of the most recent transactions to have been broadcast over the network. Inside each transaction details page, you will be able to view the following information:
+-    **ID:** This will show the unique identification (ID) hash for this transaction. This can be used to prove to another party that this transaction was sent from an address to another address and approved by the network. If you click on this ID, you will be able to see how many confirmations it has received and what block it has been included in. By being included into a block, it proves the network has accepted the transaction as valid and it will forever be written into the Ark blockchain.
 -    **Amount:** This will indicate the amount of ARK that was sent from the Sender to the Recipient
+-    **Sender:** This field shows the Ark address which signed the transaction; i.e. who is sending the transaction.
+-    **Recipient:** Here we see the Ark address to which the sender (above) sent this transaction to; i.e. who is receiving the transaction.
+-    **Timestamp:** This indicates the exact time at which the transaction was broadcasted and accepted by the network.
 -    **Fee:** This indicates the fee paid to send the transaction. A list of current fees on the ARK network can be found in [**Fees for Transactions**](https://docs.ark.io/basics/understanding-transactions-and-block-propagation.html#fees-for-transactions)
+-    **SmartBridge:** This field indicates the Ark SmartBridge that was used in the transaction. SmartBridges are part of the innovations driving the Ark Ecosystem: it allows for disparate blockchains to interact with each other. Think of each blockchain as an island with no outside communication. If you work on Ethereum Island and your business partner only works on Bitcoin Island, you can't trade or work together. Ark SmartBridges are like an airstrip, cargo barge, cellphone towers and internet all rolled into one. You can do business with any of the other islands from any island instantaneously and friction free. A more detailed explanation of SmartBridges can be found in the section [**What are bridge chains and how to use them**](https://docs.ark.io/basics/how-does-ark-smartbridge-work.html)
 
 ![LATEST BLOCK Overview](./assets/how-to-use-the-ark-explorer/LatestBlockOverview.png)
+
 ### Latest Blocks:
--    **ID:** This will the show unique identification (ID) for the Block that was forged.  If you want to learn more about blockchain refer to our section on [**What is The Blockchain?**](https://docs.ark.io/blockchain/what-is-the-blockchain.html) and [**When Do You Need A Blockchain?**](https://docs.ark.io/blockchain/when-do-you-need-a-blockchain.html)
--    **Height:** This section will show how far from the initial (genesis) block, the blockchain has progressed. For example, if you are looking at a block with the height listed as 1000, this will indicate that this specific block is the 999th since the first (genesis) block.
--    **Timestamp:** This indicates the date and time the block was forged and written onto the ARK blockchain.
--    **Transactions:** Here you will see how many transactions were included in this block.
--    **Generated By:** Refers to which delegate forged this specific block. For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
--    **Amount:** Indicates the total amount of ARK for all transactions inside the block
--    **Fee:** Shows the total fees associated with all transactions within the block.
+This is a list of the most recent blocks to have been broadcast over the network. Inside each block details page, you will be able to view the following information:
+-    **ID:** This will the show unique identification (ID) hash for the forged block.  If you want to learn more about "blockchain", refer to our section on [**What is The Blockchain?**](https://docs.ark.io/blockchain/what-is-the-blockchain.html) and [**When Do You Need A Blockchain?**](https://docs.ark.io/blockchain/when-do-you-need-a-blockchain.html)
+-    **Height:** This section will show how far from the first (genesis) block the blockchain has progressed. For example, if you are looking at a block with a height of 1000, this will indicate that the block is the 999th since the first (genesis) block.
+-    **Timestamp:** This indicates the date and time at which block was forged and written onto the Ark blockchain.
+-    **Transactions:** Here you will see how many transactions were included in the block.
+-    **Generated By:** Refers to which delegate forged the specific block. For more information on Delegated Proof of Stake and delegates, refer to our section on [**What is DPOS and how it relates to other consensus mechanisms.**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
+-    **Amount:** Indicates the sum of ARK for all transactions in the block.
+-    **Fee:** Shows the total fees associated with all the block's transactions.
 
 ![NETWORK INFORMATIION Overview](./assets/how-to-use-the-ark-explorer/NetworkInformation.png)
 
 ### Network Information:
-Across the top of the page you will also see a list of details about the current state of the network you are viewing.
--    **Height:** This is current live view of how many blocks have been created since the first (genesis) block when the ARK blockchain was created.
--    **ARK/Currency:** This indicates the current price of ARK in your chosen currency. This will often be automatically set to the national currency of wherever you are connecting to the internet from. For mobile users, in the upper right-hand corner you can, by clicking the currency icon, change this setting to the currency of your choice.
--    **Supply:** This area shows the total supply of ARK currently exists. Depending on the coin, total supply can mean the total amount of coins that will ever exist, however in ARK's case this number goes up over time with a set number of coins created every year. For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
--    **Network:** This will indicate whether you are viewing the mainnet or testnet. Mainnet is where transactions are conducted and settled in real time. In contrast the testnet is used by developers to test functionality before introducing features or other applications onto the mainnet. For the average user this is of no consequence and your experience will always be on the mainnet.
--    **Market Cap:** This refers to the market capitalization of ARK, the total value of all the ARK that exist by multiplying the Total Supply by the current price of your chosen currency.
+Across the top of the page, you will also see a list of details about the current state of the network you are viewing:
+-    **Height:** This is a live view of how many blocks have been created since the first (genesis) block.
+-    **ARK/Currency:** This indicates the current price of ARK in your chosen currency. This will often be automatically set to the national currency of wherever you are connecting to the internet from. For mobile users, in the upper right-hand corner you can change this setting by clicking on the currency icon.
+-    **Supply:** This area shows the total supply of ARK in existence. In ARK's case this number goes up over time by a set number of coins every year.
+-    **Network:** This indicates whether you are viewing the Mainnet, Testnet or Devnet. Mainnet is where transactions are conducted and settled in real time. In contrast, the test and dev networks are used by developers to test functionality before introducing features or other applications onto the mainnet. For most users, the Mainnet is most relevant.
+-    **Market Cap:** This refers to the market capitalization of ARK, which is the value obtained by multiplying the Supply by the current price of a coin.
 
 ![DROPDOWN Overview](./assets/how-to-use-the-ark-explorer/DROPDOWN.png)
 
 ## Top Menu Bar
-**ARK ICON:** This will take you back to the ARK explorer home page
+**Ark Icon:** This takes you back to the Ark explorer home page.
 
-**Drop Down Menu:** This contains the following information
--    **Home:** This will take you back to the explorer home page
--    **Top Wallets:** This will show you the wallets, descending from high to low, that hold the most ARK. From there you will be able to see their numerical ranking (in relation to total balance), wallet address, balance and the percentage of total supply they control. Currently the ARK development team holds the largest percentage of ARK, which is used to pay for projects and developers to improve network functionality and other projects that bring value to the ARK community.
+**Drop Down Menu:**
+-    **Home:** This will take you back to the Ark explorer home page.
+-    **Top Wallets:** This will show you the wallets, by order of high to low, which hold the most ARK. From there, you will be able to see their ranking, wallet address, balance and the percentage of Supply they own. Currently, the Ark development team holds the largest percentage of ARK, which is used to pay for projects and developers in order to bring network improvements and community support.
 
      ![Top Wallets](./assets/how-to-use-the-ark-explorer/TOPWALLETS.png)
--    **Delegate Monitor:** This shows the current list of delegates and their votes on the network. ARK is run by its community who vote for delegates. Delegates, among other things, vote on their behalf in community related matters and most importantly forge (verify) blocks. The top 51 delegates perform these functions for the network and rely on community support to maintain their position within the network. For more information on DPOS/delegates refer to our section on [**What is DPOS and how it relates to other consensus mechanisms**](https://docs.ark.io/basics/what-is-delegated-proof-of-stake.html)
+-    **Delegate Monitor:** This shows the current list of delegates and all the votes they've earned. Ark is run by its community, whose members vote for delegates. Delegates, among other things, participate in community matters and forge blocks. The top 51 delegates are allowed to forge. Many delegates rely on community support to maintain their position within the network. 
 
      ![Delegate Monitor Overview](./assets/how-to-use-the-ark-explorer/DELEGATEMONITOROVERVIEW.png)
 
-The delegate monitor shows two tabs, **"Active"** and **"Standby"**.
-Active will list the current top 51 active delegates, an overview of blocks recently forged, blocks missed, delegates who are not forging and those delegates waiting to forge the next blocks.
+The delegate monitor shows two tabs: **"Active"** and **"Standby"**.
+"Active" will list the current top 51 active delegates, an overview of blocks recently forged, blocks missed, delegates who are not forging and those delegates waiting to forge the next blocks.
 
 ![Delegate Overview](./assets/how-to-use-the-ark-explorer/DELEGATEOVERVIEW.png)
 
-If you click on a delegate’s username you will be taken to the delegate's wallet address page and see the following information
+If you click on a delegate’s username, you will be taken to the delegate's wallet address page and see the following information
 -    **Balance:** Total amount of ARK in the delegate's wallet.
 -    **Transactions:** Green arrows indicate the number of transactions INTO the delegate's wallet, while red arrows indicate transactions OUT of the delegate's wallet.
--    **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online they are not forging (verifying) new blocks, thus this can be an important aspect for Ark community members to consider when voting.
--    **Rank/Status:** This shows what the delegate's ranking is in terms of votes. For example, if you see the number six it means that the delegate has the sixth highest number of votes of all the delegates in the network.
--    **Approval:** This field will show the percentage of the total network votes they control. If this shows 5% then it means that 5% of all votes in the network are pledged to them.
--    **Forged:** Indicates how many total ARK they have been rewarded through forging (verifying) blocks.
+-    **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online, they are not forging (verifying) new blocks, thus this can be an important aspect for Ark community members to consider when voting.
+-    **Rank/Status:** This shows what the delegate's ranking is in terms of votes. For example, seeing the number 6 means the delegate has the sixth highest number of votes of all the delegates in the network.
+-    **Approval:** This field will show the percentage of the total votes they control. If this shows 5%, then it means that 5% of all votes in the network are pledges to that delegate.
+-    **Forged:** Indicates the total amount of ARK they have been rewarded through forging (verifying) blocks.
 -    **Blocks:** Shows the total number of blocks this delegate has forged on the network.
 -    **Votes:** Who this wallet has cast their delegate vote towards.
 -    **Voters:** How many total voters have pledged to the delegate.
@@ -86,18 +91,11 @@ The last three menu option are as follows
 
 ## Search Bar
 
-Here you can input any ARK wallet address, transaction or block ID to find detailed information about them. For example, most users will use this to check the status of a transaction that they sent or are to receive. If you were sending someone a transaction of 5 ARK, a transaction ID will be generated and you will be able to forward that information to the recipient as both a validation of payment and a digital tracking ID as to its disposition in the network.
-
-## Currency Pairing
-
-The currency symbol can be changed to reflect the live price of ARK to your currency of choice.
+Here you can input any Ark address, transaction ID or block ID and find detailed information about them. Most users will use this to check the status of a transaction they have sent or are expecting. If you were to send someone a transaction of 5 ARK, a transaction ID would be generated and you could forward that information to the recipient as both a validation of payment and a digital receipt.
 
 ## Day/Night Mode
 
-This is merely an aesthetic choice depending on the user and how they prefer the interface to look.
-
-### Mobile and Desktop Differences
-There are few minor differences between the desktop and mobile versions of the explorer, although most of the experience is the same. The most marked difference is the presence of a price graph with chosen currency pairing on the home page of the block explorer when using the desktop version. The other two functional differences are in the network information bar near the top of the page.
+This is merely an aesthetic choice depending on the user and how they prefer the interface to look. When browsing the [Devnet block explorer](https://dexplorer.ark.io), the Night them is enabled by default.
 
 ### Conclusion
-With this information you can now take advantage of the full breadth of functionality contained within the ARK explorer. While this may seem like a simple tool, it is a window into why cryptocurrencies are so powerful. Block explorers help individuals like yourself to see that the blockchain is a permanent record of transactions so that trust can be placed in a trustless system.
+With this information you can now take advantage of the full breadth of functionality contained within the Ark explorer. While this may seem like a simple tool, it is also powerful. Block explorers help individuals see what the blockchain is up to!

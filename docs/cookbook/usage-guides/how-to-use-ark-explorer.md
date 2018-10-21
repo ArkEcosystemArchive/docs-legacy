@@ -2,8 +2,7 @@
 title: "How To Use The ARK Explorer?"
 ---
 
-# How To Use The ARK Explorer
-
+# How to use the Ark Explorer on Mobile
 
 ## What is a block explorer?
 
@@ -11,14 +10,11 @@ If a Blockchain is a highway of transactional records, from the very first to th
 Block explorers can give anyone access to all the information contained within that blockchain. You can search every block that was ever created, see every transaction an address has conducted as well as a snapshot of the status of that network.
 Every Blockchain has a block explorer and Ark is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users of any level. From novice to advanced users, our block explorer is easy to use.
 
-There are few minor differences between the desktop and mobile versions of the explorer, although most of the experience is the same. The most marked difference is the presence of a price graph with the chosen currency pairing on the home page of the block explorer when using the desktop version.
-
 Let’s begin our journey into the Ark explorer.
 
 ![MOBILE BLOCK EXPLORER Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
 
 When you first arrive at [explorer.ark.io](https://explorer.ark.io), you will find some immediately available information.
-If you are using the desktop version of the Ark block explorer, you will see a price graph on the home page. This interactive graph allows you to see the ARK price in relation with your chosen currency. The price comparison is shown over periods of day, week, month, quarter and year views.
 
 ![LATEST TRANSACTION Overview](./assets/how-to-use-the-ark-explorer/LatestTransactionOverview.png)
 

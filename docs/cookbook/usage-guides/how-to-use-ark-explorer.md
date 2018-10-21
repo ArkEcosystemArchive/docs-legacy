@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Ark Explorer on Mobile"
+title: "How To Use The Ark Explorer?"
 ---
 
 # How to use the Ark Explorer on Mobile

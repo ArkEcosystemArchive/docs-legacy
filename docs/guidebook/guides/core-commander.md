@@ -5,9 +5,7 @@ sidebar: "auto"
 
 # Core Commander
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/ArkEcosystem/core-commander/master/banner.png?token=AVHqNxmhmnOhqtSdYkaRqeLcjFfBAvxxks5bDTSDwA%3D%3D" />
-</p>
+![Core Commander](https://i.imgur.com/UipxOEF.png)
 
 **A shell script to easily setup, configure and maintain an Ark Core.**
 

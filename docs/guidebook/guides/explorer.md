@@ -4,9 +4,8 @@ title: "Explorer"
 
 # Explorer
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/ArkEcosystem/ark-explorer/master/ARKExplorer.png" />
-</p>
+![Explorer](https://i.imgur.com/dIEFdxF.png)
+
 
 [![Build Status](https://img.shields.io/travis/ArkEcosystem/ark-explorer/master.svg?style=flat)](https://travis-ci.org/ArkEcosystem/ark-explorer)
 

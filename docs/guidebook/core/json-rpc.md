@@ -6,9 +6,7 @@ title: "JSON-RPC"
 
 [[toc]]
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/ArkEcosystem/ARK-JSON-RPC/master/banner.png" />
-</p>
+![JSON RPC](https://i.imgur.com/0uKUUok.png)
 
 > A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the Ark blockchain.
 

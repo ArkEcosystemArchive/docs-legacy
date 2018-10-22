@@ -1,5 +1,5 @@
 # Writing Documentation for Ark
-![ark-docs-banner](https://github.com/ArkEcosystem/docs/blob/master/banner.png?raw=true)
+![ark-docs-banner](https://i.imgur.com/iaEwBqC.png)
 
 **On this page you will find all the details necessary to writing compliant documentation for Ark.**
 ## Terminology

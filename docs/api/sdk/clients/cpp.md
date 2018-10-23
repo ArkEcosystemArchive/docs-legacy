@@ -17,7 +17,7 @@ If you are using CMake head over to [https://www.cmake.org/download/](https://ww
 ```sh
 git clone https://github.com/ArkEcosystem/cpp-client
 cd cpp-client
-init & update micro-ecc submodule
+// init & update micro-ecc submodule
 git submodule init
 git submodule update
 cmake .

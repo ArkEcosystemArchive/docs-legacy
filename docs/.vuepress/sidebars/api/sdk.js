@@ -6,6 +6,7 @@ module.exports = [
     collapsable: false,
     children: [
       "/api/sdk/clients/guidelines.md",
+      "/api/sdk/clients/cpp.md",
       "/api/sdk/clients/dotnet.md",
       "/api/sdk/clients/elixir.md",
       "/api/sdk/clients/go.md",
@@ -23,6 +24,7 @@ module.exports = [
     collapsable: false,
     children: [
       "/api/sdk/cryptography/guidelines.md",
+      "/api/sdk/cryptography/cpp.md",
       "/api/sdk/cryptography/dotnet.md",
       "/api/sdk/cryptography/elixir.md",
       "/api/sdk/cryptography/go.md",

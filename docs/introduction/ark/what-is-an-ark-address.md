@@ -1,8 +1,8 @@
 ---
-title: "What Is An ARK Address?"
+title: "What Is An Ark Address?"
 ---
 
-# What Is An ARK Address?
+# What Is An Ark Address?
 
 [[toc]]
 
@@ -16,7 +16,7 @@ A blockchain account is defined by its address that is derived from a public key
 
 It is impossible to compute the private key from the public key. Because of this, public keys can be freely shared, allowing users an easy and convenient method for encrypting content and verifying digital signatures, and private keys can be kept secret, ensuring only the owners of the private keys can decrypt content and create digital signatures [1].
 
-ARK uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [elliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
+Ark uses the [SECP256k1](https://en.bitcoin.it/wiki/Secp256k1) curve from the [elliptic curve digital signature algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (ECDSA).
 
 ECDSA generates the private key and the public key pair from a unique 32-bytes-size seed. As the seeds are not very human readable, we have the option to generate the seed from something more convenient : a passphrase.
 
@@ -26,7 +26,7 @@ The passphrase is a written in simple readable text. It often consists of twelve
 
 ![Diagram 001](./assets/what-is-an-ark-address/arkDiagram04-001.png)
 
-## ARK address
+## Ark address
 
 |passphrase |`simple secret`                                                     |
 |-----------|--------------------------------------------------------------------|
@@ -37,15 +37,15 @@ The passphrase is a written in simple readable text. It often consists of twelve
 
 A blockchain is a distributed database where records are stored according to a consensus mechanism (secure protocol) executed by a network of nodes (Peer-To-Peer network). The unitary element used in this process is an account to account transaction containing information such as `senderId`, `recipientId`, `amount` and `fee`. A sender and recipient account needs to be identifiable. This is enabled by using an address and information related to token balance and transaction history are linked to it.
 
-The ARK address is like a bank account where only the owner of the private key can validate and broadcast transactions. It is very important to keep the passphrase safe.
+The Ark address is like a bank account where only the owner of the private key can validate and broadcast transactions. It is very important to keep the passphrase safe.
 
-**From a public key to an ARK address**
+**From a public key to an Ark address**
 
 ![Diagram 002](./assets/what-is-an-ark-address/arkDiagram04-002.png)
 
 A modifier is a byte used to customize the address. It is useful to differentiate networks :
- + On ARK mainnet modifier = `0x17` so ARK address starts with `A`
- + On ARK devnet modifier = `0x1e` so DARK address starts with `D`
+ + On Ark mainnet modifier = `0x17` so Ark address starts with `A`
+ + On Ark devnet modifier = `0x1e` so DArk address starts with `D`
  + On KAPU mainnet modifier = `0x2d` so KAPU address starts with `K`
 
 Here is the table giving the address start char according to hexadecimal modifier value :
@@ -90,7 +90,7 @@ Here is the table giving the address start char according to hexadecimal modifie
 
 ## Ledger Nano S
 
-The best way to secure ARK address is to use a device that can sign transactions off the network. ARK team developed an application running on [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) hardware wallet allowing such a security.
+The best way to secure Ark address is to use a device that can sign transactions off the network. Ark team developed an application running on [Ledger Nano S](https://www.ledgerwallet.com/products/ledger-nano-s) hardware wallet allowing such a security.
 
 The Ledger Nano S device does not store tokens. It is a device that generates public and private keys from a master seed. Keys are issued from the seed using the derivation path. For Ark blockchain (and cloned ones) the derivation path is structured like this :
 

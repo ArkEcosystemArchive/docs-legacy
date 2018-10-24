@@ -67,4 +67,4 @@ class CoolStuffController extends Controller
 
 ## Documentation
 
-There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the ARK php-client package](https://github.com/ArkEcosystem/php-client).
+There are other classes in this package that are not documented here. This is because the package is a Laravel wrapper of [the Ark php-client package](https://github.com/ArkEcosystem/php-client).

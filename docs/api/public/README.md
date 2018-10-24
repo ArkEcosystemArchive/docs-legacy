@@ -1,4 +1,4 @@
 ---
-title: ARK Public API
+title: Ark Public API
 ---
-This is the reference guide for the ARK API.
+This is the reference guide for the Ark API.

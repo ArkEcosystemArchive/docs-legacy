@@ -1,15 +1,15 @@
 ---
-title: "How To Secure Your ARK Node"
+title: "How To Secure Your Ark Node"
 ---
 
-# How To Secure Your ARK Node
+# How To Secure Your Ark Node
 
 [[toc]]
 
-When running an ARK node, especially a delegate node, you should have security
+When running an Ark node, especially a delegate node, you should have security
 as first class citizen in your network. This guide will walk you through securing your nodes.
 You could do more, but this is a good start. You will need to have created a user in our
-previous guide [Setup Your ARK Node]() to follow along completely.
+previous guide [Setup Your Ark Node]() to follow along completely.
 
 :warning:
 **It is very important you follow this guide closely, not doing so could mean losing access to your node. If you lose access to your node there is no possible way for us to help you get it back. You will have to start over with a fresh server.**
@@ -98,7 +98,7 @@ exit
 ssh user@yournode -p 55555
 ```
 
-If everything was setup successfully you should be reconnected to your ARK node. Replace `55555` with the port you chose when setting up your `sshd_config`
+If everything was setup successfully you should be reconnected to your Ark node. Replace `55555` with the port you chose when setting up your `sshd_config`
 
 ### Install Fail2Ban
 #### What is Fail2Ban
@@ -255,7 +255,7 @@ sudo apt-get install knockd
 #### Troubleshooting and Testing
 Logs for knockd appear in `syslog` and will be crucial if you need to troubleshot.
 
-Run the following command on your ARK node server.
+Run the following command on your Ark node server.
 ```
 tail -f /var/log/syslog
 ```
@@ -344,7 +344,7 @@ Windows users can generate their ssh key using [PuTTY Key Generator](https://www
 
 ##### Copy your **PUBLIC KEY** to your Server
 
-Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your ARK node server.
+Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your Ark node server.
 
 #### Disable Password Authentication
 ```
@@ -426,7 +426,7 @@ Scroll down to `Origin Certificates` and click the `Create Certificate` button. 
 
 ![cloudflare origin certificate](./assets/secure/cloudflare_certificate.png)
 
-##### Open Terminal on your ARK Node Server
+##### Open Terminal on your Ark Node Server
 We need to create a new folder and copy our keys to our server.
 
 ```
@@ -442,7 +442,7 @@ Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
 sudo service nginx start
 ```
 
-If everything started fine you should be able to now access your ARK node API's
+If everything started fine you should be able to now access your Ark node API's
 behind SSL. Giving you the added bonus of cloudflare DDOS protection.
 
 Otherwise, if you get any errors run the following command to troubleshoot nginx.

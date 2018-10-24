@@ -11,7 +11,7 @@ title: "Mobile Wallet"
 # Ark Mobile
 > A Wallet for Everyone
 
-ARK’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
+Ark’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and Ark’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the Ark network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
 ## Download
 
@@ -25,9 +25,9 @@ ARK’s mobile wallet is a hybrid application (using the same codebase for Andro
 - Encrypt access to your profile with a custom 6 digit PIN (AES256+PBKDF2).
 - Most transaction types are available: send, receive, vote, unvote, register a delegate.
 - Connects to both mainnet and devnet.
-- Option for additional profiles (separate profiles for different ARK addresses or networks).
+- Option for additional profiles (separate profiles for different Ark addresses or networks).
 - Option to add contacts and easily transact with them.
-- Total balance of your combined ARK addresses.
+- Total balance of your combined Ark addresses.
 - Wallet backup - input your selected PIN to decrypt your wallet and gain view of your private data.
 - Change PIN - if you want to change your encryption/decryption PIN you can easily do so..
 - Clear Data — you can clear all your data from the phone.
@@ -83,7 +83,7 @@ $ npm run test:e2e
 ## Contributing
 
 - If you find any bugs, submit an [issue](../../issues) or open [pull-request](../../pulls), helping us catch and fix them.
-- Engage with other users and developers on [ARK Slack](https://ark.io/slack/).
+- Engage with other users and developers on [Ark Slack](https://ark.io/slack/).
 - Join to our [gitter](https://gitter.im/ark-developers/Lobby).
 
 ## Authors

@@ -8,7 +8,7 @@ title: "Webhooks"
 
 ## Introduction
 
-With the release of ARK Core 2.0 a new feature was introduced, called [Webhooks](https://en.wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
+With the release of Ark Core 2.0 a new feature was introduced, called [Webhooks](https://en.wikipedia.org/wiki/Webhook) which allows you to create more flexible and automated systems while also reducing traffic/load on your server.
 
 ## Authorization
 

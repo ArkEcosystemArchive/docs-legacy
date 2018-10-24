@@ -9,7 +9,7 @@ sidebar: "auto"
     <img src="https://raw.githubusercontent.com/ArkEcosystem/core-commander/master/banner.png?token=AVHqNxmhmnOhqtSdYkaRqeLcjFfBAvxxks5bDTSDwA%3D%3D" />
 </p>
 
-**A shell script to easily setup, configure and maintain an ARK Core.**
+**A shell script to easily setup, configure and maintain an Ark Core.**
 
 ## Installation
 

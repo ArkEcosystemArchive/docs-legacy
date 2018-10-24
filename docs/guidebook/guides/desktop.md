@@ -43,18 +43,18 @@ brew cask install arkclient
 
 ## Features
 * Available on ***Windows***, ***Linux*** (Ubuntu/Debian) and ***MacOSX*** (signed).
-* No need to download ARK blockchain, just sync to the network: launch and use within seconds.
+* No need to download Ark blockchain, just sync to the network: launch and use within seconds.
 * View any account from its address (transactions, delegate status and votes).
 * Label any account and add your own contacts.
 * Hardware wallet support : Ledger Nano S.
 * Real-time currency value (updated every 5 min) in USD, EUR, BTC, HKD, JPY, CNY, AUD, GBP, Rubble, ...
-* Autoconnect to a healthy ARK network peer. If the peer is not good anymore, it will automatically find a new one.
+* Autoconnect to a healthy Ark network peer. If the peer is not good anymore, it will automatically find a new one.
 * Send ark from / to any account.
 * Easily switch to a different network, or private chains.
 * Customized backgrounds and themes for better user experience.
 * Choose between dark or light mode.
 * Isolated processes on Windows and MacOSX to prevent from data sniffing or injection.
-* Translations (thanks to the ARK community) - help out on [our OneSky project](http://osjc1wl.oneskyapp.com/collaboration/project?id=95031)
+* Translations (thanks to the Ark community) - help out on [our OneSky project](http://osjc1wl.oneskyapp.com/collaboration/project?id=95031)
 * Organise your accounts with virtual folders (for instance savings, personnal etc...) so you don't pay any transfer fee (stored locally).
 * Change your delegate vote.
 * When new version is available, message is shown in the right upper part.
@@ -62,7 +62,7 @@ brew cask install arkclient
 * Second signature supported.
 * (soon) Deposit or withdraw ARK using altcoins or USD (via exchange) - no registration needed.
 * (soon) Multisignature accounts.
-* **SAVE YOUR PASSPHRASE(S) - if you lose it, you lose access to that particular ARK address(es). There is no forgot my password option with blockchains and no one can help you retrieve it!**
+* **SAVE YOUR PASSPHRASE(S) - if you lose it, you lose access to that particular Ark address(es). There is no forgot my password option with blockchains and no one can help you retrieve it!**
 
 
 ## Screenshots
@@ -104,7 +104,7 @@ brew bundle
 ## Contributing
 
 * If you find any bugs, submit an [issue](../../issues) or open [pull-request](../../pulls), helping us catch and fix them.
-* Engage with other users and developers on [ARK Slack](https://ark.io/slack/).
+* Engage with other users and developers on [Ark Slack](https://ark.io/slack/).
 * Join to our [gitter](https://gitter.im/ark-developers/Lobby).
 
 ## Authors
@@ -115,4 +115,4 @@ brew bundle
 
 ## License
 
-ARK Desktop is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+Ark Desktop is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.

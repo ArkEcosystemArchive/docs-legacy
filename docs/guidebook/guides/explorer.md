@@ -2,7 +2,7 @@
 title: "Explorer"
 ---
 
-# Ark Explorer 3.0
+# Explorer
 
 <p align="center">
     <img src="https://github.com/ArkEcosystem/explorer/raw/master/ARKExplorer.png" />

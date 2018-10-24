@@ -11,6 +11,13 @@ module.exports = [
     ]
   },
   {
+    title: "Developer",
+    collapsable: false,
+    children: [
+      "/cookbook/developer/setup-dev-environment"
+    ]
+  },
+  {
     title: "Node",
     collapsable: false,
     children: [

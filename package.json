@@ -26,9 +26,9 @@
         "build": "vuepress build docs"
     },
     "devDependencies": {
-        "vuepress": "^0.12.0",
+        "vuepress": "^0.14.4",
         "axios": "^0.18.0",
-        "highlight.js": "^9.12.0",
+        "highlight.js": "^9.13.1",
         "nprogress": "^0.2.0",
         "sweetalert": "^2.1.0"
     }

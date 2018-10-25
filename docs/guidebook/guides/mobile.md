@@ -2,21 +2,25 @@
 title: "Mobile Wallet"
 ---
 
-# Mobile Wallet
-
-![ARK Mobile](https://i.imgur.com/0BjkC9C.png)
-
-[![Build Status](https://travis-ci.org/ArkEcosystem/ark-mobile.svg?branch=master)](https://travis-ci.org/ArkEcosystem/ark-mobile)
-
 # Ark Mobile
+
+<p align="center">
+    <img src="https://github.com/ArkEcosystem/mobile-wallet/raw/master/banner.png" />
+</p>
+
 > A Wallet for Everyone
 
-Ark’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and Ark’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the Ark network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
+[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/mobile-wallet)](https://circleci.com/gh/ArkEcosystem/mobile-wallet)
+[![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/mobile-wallet)](https://codecov.io/gh/arkecosystem/mobile-wallet)
+[![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/mobile-wallet)](https://github.com/ArkEcosystem/mobile-wallet/releases/latest)
+[![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
+
+ARK’s mobile wallet is a hybrid application (using the same codebase for Android and iOS which helps with coordinated development). Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
 ## Download
 
 - [Google Play](https://play.google.com/store/apps/details?id=io.ark.wallet.mobile)
-- [App Store](https://itunes.apple.com/us/app/mobile-ark/id1324625967?ls=1&mt=8)
+- [App Store](https://itunes.apple.com/us/app/mobile-ark/id1324625967)
 
 ## Features
 
@@ -25,9 +29,9 @@ Ark’s mobile wallet is a hybrid application (using the same codebase for Andro
 - Encrypt access to your profile with a custom 6 digit PIN (AES256+PBKDF2).
 - Most transaction types are available: send, receive, vote, unvote, register a delegate.
 - Connects to both mainnet and devnet.
-- Option for additional profiles (separate profiles for different Ark addresses or networks).
+- Option for additional profiles (separate profiles for different ARK addresses or networks).
 - Option to add contacts and easily transact with them.
-- Total balance of your combined Ark addresses.
+- Total balance of your combined ARK addresses.
 - Wallet backup - input your selected PIN to decrypt your wallet and gain view of your private data.
 - Change PIN - if you want to change your encryption/decryption PIN you can easily do so..
 - Clear Data — you can clear all your data from the phone.
@@ -80,16 +84,24 @@ To run the E2E (end to end) tests:
 $ npm run test:e2e
 ```
 
+## Security
+
+If you discover a security vulnerability within this application, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+
 ## Contributing
 
-- If you find any bugs, submit an [issue](../../issues) or open [pull-request](../../pulls), helping us catch and fix them.
-- Engage with other users and developers on [Ark Slack](https://ark.io/slack/).
+- If you find any bugs, submit an [issue](https://github.com/ArkEcosystem/mobile-wallet/issues) or open [pull-request](https://github.com/ArkEcosystem/mobile-wallet/pulls), helping us catch and fix them.
+- Engage with other users and developers on the [ArkEcosystem Slack](https://ark.io/slack/).
 - Join to our [gitter](https://gitter.im/ark-developers/Lobby).
+- [Contribution bounties](https://docs.ark.io/guidebook/contribution-guidelines/contributing.html).
+- [Help translate](https://github.com/ArkEcosystem/mobile-wallet/blob/master/TRANSLATING.md).
 
-## Authors
-- Lúcio Rubens <lucio@ark.io>
-- Alex Barnsley <alex@ark.io>
+## Credits
+
+- [Lúcio Rubens](https://github.com/luciorubeens)
+- [Alex Barnsley](https://github.com/alexbarnsley)
+- [All Contributors](https://github.com/ArkEcosystem/mobile-wallet/contributors)
 
 ## License
 
-Ark Mobile is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+[MIT](https://github.com/ArkEcosystem/mobile-wallet/blob/master/LICENSE) © [ArkEcosystem](https://ark.io)

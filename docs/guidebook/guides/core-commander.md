@@ -1,12 +1,11 @@
 ---
 title: "Core Commander"
-sidebar: "auto"
 ---
 
 # Core Commander
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ArkEcosystem/core-commander/master/banner.png?token=AVHqNxmhmnOhqtSdYkaRqeLcjFfBAvxxks5bDTSDwA%3D%3D" />
+    <img src="https://raw.githubusercontent.com/ArkEcosystem/core-commander/master/banner.png" />
 </p>
 
 **A shell script to easily setup, configure and maintain an Ark Core.**
@@ -27,8 +26,8 @@ If you discover a security vulnerability within this package, please send an e-m
 
 - [Brian Faust](https://github.com/faustbrian)
 - [Alex Barnsley](https://github.com/alexbarnsley)
-- [All Contributors](./contributors)
+- [All Contributors](https://github.com/ArkEcosystem/core-commander/contributors)
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](https://github.com/ArkEcosystem/core-commander/blob/master/LICENSE) © [ArkEcosystem](https://ark.io)

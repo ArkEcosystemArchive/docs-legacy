@@ -1,6 +1,6 @@
 # How to Setup Your Dev Environment
 
-The best means of getting started with ARK development is to spin up your own local network, complete with 51 test delegates. This Cookbook recipe will show you how to do exactly that: we'll cover the tools you'll need to setup your testnet, along with how to use those tools to get your network up and running.
+The best means of getting started with Ark development is to spin up your own local network, complete with 51 test delegates. This Cookbook recipe will show you how to do exactly that: we'll cover the tools you'll need to setup your testnet, along with how to use those tools to get your network up and running.
 
 ## Installation
 

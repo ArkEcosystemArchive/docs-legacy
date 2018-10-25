@@ -1,18 +1,29 @@
-# Ark Core Plugin
+# How to write an Ark Core Plugin
 
 In this guide, you will find the information which can enable you to write a proper Ark Core plugin, for use in your own Ark deployments; both in the case of Ark Core nodes and your own Bridgechain nodes.
 
 ## Setup
+
+### Ark Core
 Make sure you have an up-to-date version of the Ark Core repository
 ```sh
 git clone https://github.com/ArkEcosystem/core
 cd core/
 ```
+### Docker
+Docker (docker-compose or docker-machine) is also required, it will help with running a local blockchain for testing and production purposes.
 
-Install yarn and lerna
+Please view instructions at the [official docker website](https://docker.io/get-started) for Windows and Mac.
+
+For Linux Ubuntu, it can be installed with `sudo apt-get install docker-compose`.
+
+With docker installed, you must run the development swarm by running `docker-compose up -d` in the `docker/development/` folder under the core repository.
+
+### Yarn & Lerna
+Install yarn and lerna if you don't have them already
 ```sh
-npm i -g yarn #if you dont have yarn installed
-yarn global add lerna #if you dont have lerna installed
+npm i -g yarn
+yarn global add lerna
 ```
 
 Add ~/.yarn/bin to path
@@ -21,34 +32,154 @@ echo 'PATH=$PATH:~/.yarn/bin' >> ~/.profile
 source ~/.profile
 ```
 
+### Plugin Skeleton
 Add a submodule for the plugin skeleton
 ```sh
 cd plugins/
 git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
 cd core-plugin-skeleton
 ```
+
 ## Configure
 This is when you make changes to the plugin skeleton.
 
 Make sure to modify the default names for the files:
- - README.md (header)
- - package.json (many fields)
- - lib/index.js (alias)
- - lib/defaults.js (exports)
+ - **core-plugin-skeleton/** (folder name)
+ - **README.md** (header)
+ - **package.json** (many fields)
+ - **lib/index.js** (alias)
+ - **lib/defaults.js** (exports)
 
-Additionally, you should install all the dependencies for your plugin.
+The name of our plugin is **demo-plugin**.
 
-For this example, the above files will be changes to reflect the name of our plugin: demo-plugin.
+We're also going to require BigNumber to demonstrate how to properly add dependencies to the plugin.
 
-We're also going to require express and build our own API.
-
-After having changed the name of the plugin, make sure to run lerna bootstrap to expose the package name for scoped package installation
-Run lerna bootstrap
+After having changed the name of the plugin, make sure to run `lerna bootstrap` to expose the package name for scoped package installation
 ```sh
 lerna bootstrap
 ```
+:::danger
+`lerna bootstrap` takes a long time! Don't get worried if it's doing its thing for a long time; that's normal.
+:::
 
 Add your dependencies **only to the specific plugin package**
 ```sh
-lerna add --scope=@arkecosystem/demo-plugin express --dev
+lerna add --scope=@arkecosystem/demo-plugin big-number --dev
 ```
+
+## Develop
+Once everything is setup and configured, we can move on to developing the plugin.
+
+The file we'll be writing our vendor code in is called `demo.js` and it's located in the `lib/` folder of the plugin skeleton.
+
+### Coding
+The sample code we will use for this demo is
+```js
+let logger
+
+module.exports = async (container) => {
+  logger = await container.resolvePlugin('logger')
+
+  return {
+    log: function (message) {
+      logger.warn(message)
+      return {
+        success: true
+      }
+    }
+  }
+}
+```
+
+Before writing tests, it is important to properly setup the registration and deregistration of our plugin in the `index.js` file of the `lib/` folder.
+
+```js
+'use strict'
+
+const demo = require('./demo')
+
+/**
+ * The struct used by the plugin container.
+ * @type {Object}
+ */
+exports.plugin = {
+  pkg: require('../package.json'),
+  defaults: require('./defaults'),
+  alias: 'demo-plugin',
+  async register (container, options) {
+    return await demo(container)
+  },
+  async deregister (container, options) {
+    return
+  }
+}
+```
+
+### Testing
+Testing is streamlined by the `test-utils` Ark Core package.
+
+Before writing our ***jest*** testing suite, we will first setup the test environment in a file called `setup.js` under the existing `__tests__` folder.
+
+```js
+const container = require('@arkecosystem/core-container')
+const containerHelper = require('@arkecosystem/core-test-utils/lib/helpers/container')
+
+jest.setTimeout(10000)
+
+exports.setUp = async () => {
+  await containerHelper.setUp({
+    exclude: [
+      '@arkecosystem/core-api',
+      '@arkecosystem/core-forger'
+    ]
+  })
+
+  return container
+}
+
+exports.tearDown = async () => {
+  await container.tearDown()
+}
+```
+
+In the `__tests__` folder, we then write our ***jest*** testing suite in a file called `demo.test.js`.
+
+```js
+const BigNumber = require('big-number')
+const app = require('./setup')
+
+beforeAll(async () => {
+  container = await app.setUp()
+})
+
+afterAll(async () => {
+  app.tearDown()
+})
+
+describe('Demo Plugin', () => {
+  it('should return successfully upon calling the log function', async () => {
+    const result = container.resolvePlugin('demo-plugin').log(`A message sent at ${BigNumber(new Date().getTime())}`)
+
+    expect(result.success).toBe(true)
+  })
+})
+```
+
+Lastly, before running our tests, we need to include `@arkecosystem/demo-plugin` in the testnet configuration for it to load when running the suite.
+
+This is done by changing the file `packages/core-test-utils/config/testnet/plugins.js` in the root of the `core` repository.
+
+The plugin must be added to the end, as follows
+```js
+module.exports = {
+...,
+...,
+...,
+  '@arkecosystem/demo-plugin': {}
+}
+```
+
+Finally, we are able to verify that our plugin functions correctly by invoking `yarn test` under the plugin's folder and monitoring the output generated by ***jest***.
+
+## Conclusion
+In the end, you should be able to write your own plugin for Ark Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.

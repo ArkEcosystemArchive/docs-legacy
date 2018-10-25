@@ -60,6 +60,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 **Feedback:** `#cc317c`
 - ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) `discussion`
 - ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) `question`
+- ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) `help wanted`
 
 **Improvements:** `#5ebeff`
 - ![#5ebeff](https://placehold.it/15/5ebeff/000000?text=+) `enhancement`
@@ -81,3 +82,4 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 **Miscellaneous:** `#fef2c0`
 - ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `chore`
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `good first issue`

@@ -13,6 +13,7 @@ Use the sidebar to navigate this section, or follow the links below:
 * [Developer](/cookbook/developer/)
 * [Node](/cookbook/node/)
 * [Deployer](/cookbook/deployer/)
+* [Pay](/cookbook/pay/)
 * [Exchanges](/cookbook/exchanges/)
 
 [open an issue](https://github.com/ArkEcosystem/docs).

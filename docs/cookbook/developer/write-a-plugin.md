@@ -3,6 +3,7 @@
 In this guide, you will find the information which can enable you to write a proper Ark Core plugin, for use in your own Ark deployments; both in the case of Ark Core nodes and your own Bridgechain nodes.
 
 ## Setup
+Many components are required to have a proper environment setup for the development of your Ark Core plugin.
 
 ### Ark Core
 Make sure you have an up-to-date version of the Ark Core repository

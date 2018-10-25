@@ -4,15 +4,15 @@ jobs:
     working_directory: ~/docs
     docker:
       - image: circleci/node:9
-    steps: &teststeps
+    steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: cache-node9-{{ checksum "package.json" }}
       - run:
           name: Install
           command: yarn
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: cache-node9-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
@@ -23,7 +23,20 @@ jobs:
     working_directory: ~/docs
     docker:
       - image: circleci/node:latest
-    steps: *teststeps
+    steps:
+      - checkout
+      - restore_cache:
+          key: cache-nodeLatest-{{ checksum "package.json" }}
+      - run:
+          name: Install
+          command: yarn
+      - save_cache:
+          key: cache-nodeLatest-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Build
+          command: yarn build
 
 workflows:
   version: 2

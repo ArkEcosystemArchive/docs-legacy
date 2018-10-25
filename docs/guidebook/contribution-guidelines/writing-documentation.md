@@ -32,7 +32,6 @@ Here is a list of officially recognized terms and the proper way to use each of 
    - **Ark Desktop Wallet**: *"Use the Ark Desktop client if using Windows, MacOS or Linux"*
    - **AIPs, Ark Improvement Proposals**: *"I'm rolling in all these AIPs (Ark Improvement Proposals)"*
    - **Ark (LANG) Client**: *"I'm using the Ark PHP Client as my API client"*
-   - **Ark (LANG) Crypto**: *"Please contribute to Ark PHP Crypto"*
    - **Ark Deployer**: *"You can use Ark Deployer to launch your own BrideChain"*
 
 The specific terms above SHOULD be capitalized to prevent reader confusion.

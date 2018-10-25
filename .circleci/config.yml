@@ -1,52 +1,33 @@
 version: 2
 jobs:
-  build-node9:
+  test-node-9:
     working_directory: ~/docs
     docker:
       - image: circleci/node:9
-    steps:
+    steps: &teststeps
       - checkout
-      - run:
-          name: Install yarn
-          command: 'curl -o- -L https://yarnpkg.com/install.sh | bash && export PATH="$HOME/.yarn/bin:$PATH" && yarn config set cache-folder $HOME/.cache/yarn'
       - restore_cache:
-          key: core-node9-{{ checksum "package.json" }}-1
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Install packages
+          name: Install
           command: yarn
       - save_cache:
-          key: core-node9-{{ checksum "package.json" }}-1
+          key: dependency-cache-{{ checksum "package.json" }}
           paths:
-            -  ./node_modules
+            - ./node_modules
       - run:
-          name: Yarn build
+          name: Build
           command: yarn build
-
-  build-node10:
+      
+  test-node-stable:
     working_directory: ~/docs
     docker:
-      - image: circleci/node:10
-    steps:
-      - checkout
-      - run:
-          name: Install yarn
-          command: 'curl -o- -L https://yarnpkg.com/install.sh | bash && export PATH="$HOME/.yarn/bin:$PATH" && yarn config set cache-folder $HOME/.cache/yarn'
-      - restore_cache:
-          key: core-node10-{{ checksum "package.json" }}-1
-      - run:
-          name: Install packages
-          command: yarn
-      - save_cache:
-          key: core-node10-{{ checksum "package.json" }}-1
-          paths:
-            -  ./node_modules
-      - run:
-          name: Yarn build
-          command: yarn build
+      - image: circleci/node:latest
+    steps: *teststeps
 
 workflows:
   version: 2
-  build:
+  test:
     jobs:
-      - build-node9
-      - build-node10
+      - test-node-9
+      - test-node-stable

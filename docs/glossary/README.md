@@ -81,7 +81,11 @@ A Dark address is on the Development Network of Ark and holds the DARK currency.
 A reward is attributed to the block creator for its validation efforts.
 
 ## Fee
-A fee is taken from the transaction and added to the reward.
+On the Ark blockchain and similar Bridgechains, fees are charged based on the type of transaction sent. A flat fee can be charged for every transfer of ARK from one address to another or when performing transactions such as: delegate registrations, second signature registrations, multisignature registrations, etc.
+
+With Ark Core, a new dynamic fee structure is implemented. The new structure allows for delegates, who are responsible for forging blocks from transactions, to set their own fees on a transaction type basis. This means that your transaction can cost more or less in fees for it to be included into a block and then the blockchain.
+
+The standard rate for a simple transfer of ARK from one address to another is 0.1 ARK, for example. You can view the current value of 1 ARK on [the Ark Explorer](https://explorer.ark.io).
 
 ## Height
 It is useful to have some way to track the progression of a blockchain. Considering the linear nature of a blockchain's progression, it is important to have some way of identifying when specific blocks, or transactions within blocks, as well as events occur on the blockchain.

@@ -25,9 +25,9 @@ Just follow those steps and you are ready to get started. Happy Hacking!
 
 ## Database
 
-Ark Core stores all the blockchain data in a database. You could read more about it, in the [database section](https://docs.ark.io/core/database.html#introduction).
+Ark Core stores all the blockchain data in a database. You could read more about it, in the [database section](https://docs.ark.io/guidebook/core/database.html#introduction).
 
-For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](https://docs.ark.io/core/docker.html).
+For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](https://docs.ark.io/guidebook/core/docker.html).
 
 ## Starting a node
 

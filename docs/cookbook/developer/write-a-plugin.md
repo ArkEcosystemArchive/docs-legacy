@@ -53,7 +53,7 @@ Make sure to modify the default names for the files:
 
 The name of our plugin is **demo-plugin**.
 
-We're also going to require BigNumber to demonstrate how to properly add dependencies to the plugin.
+We're also going to require ***BigNumber*** to demonstrate how to properly add dependencies to the plugin.
 
 After having changed the name of the plugin, make sure to run `lerna bootstrap` to expose the package name for scoped package installation
 ```sh
@@ -87,6 +87,12 @@ module.exports = async (container) => {
       return {
         success: true
       }
+    },
+    exit: function() {
+      logger.info('Exiting from the demo plugin')
+      return {
+        success: true
+      }
     }
   }
 }
@@ -111,7 +117,7 @@ exports.plugin = {
     return await demo(container)
   },
   async deregister (container, options) {
-    return
+    return await container.resolvePlugin('demo-plugin').exit()
   }
 }
 ```
@@ -159,7 +165,8 @@ afterAll(async () => {
 
 describe('Demo Plugin', () => {
   it('should return successfully upon calling the log function', async () => {
-    const result = container.resolvePlugin('demo-plugin').log(`A message sent at ${BigNumber(new Date().getTime())}`)
+    const result = container.resolvePlugin('demo-plugin')
+      .log(`A message sent at ${BigNumber(new Date().getTime())}`)
 
     expect(result.success).toBe(true)
   })

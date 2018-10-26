@@ -1,16 +1,16 @@
 ---
-title: "Ark Bridgechain Setup Guide"
+title: "Ark BridgeChain Setup Guide"
 ---
 
-# Ark Bridgechain Setup Guide
+# Ark BridgeChain Setup Guide
 
 [[toc]]
 
 ::: tip
-**This guide is to help you get setup with your own Ark bridgechain. It will focus on launching your own Ark clone bridgechain, auto-forging setup, adding your own delegate nodes and making it accessible via the Ark wallet.**
+**This guide is to help you get setup with your own Ark BridgeChain. It will focus on launching your own Ark clone BridgeChain, auto-forging setup, adding your own delegate nodes and making it accessible via the Ark wallet.**
 :::
 
-## Setting up your Bridgechain Node
+## Setting up your BridgeChain Node
 
 The nodes are a core part of the network. They are what forge the blocks, validate transactions, provide API access to the data contained within the network, and ultimately what keeps everything running and secure.
 
@@ -35,7 +35,7 @@ sudo apt-get update && sudo apt-get install -y jq
 ```
 :::
 
-::: tip Install & Setup Your Bridgechain
+::: tip Install & Setup Your BridgeChain
 ```bash
 ./bridgechain.sh install-node --name MyTest --database ark_mytest --token MYTEST --symbol MT --node-ip 51.141.3.209 --explorer-ip 51.141.3.209 --autoinstall-deps
 ```
@@ -49,7 +49,7 @@ There are many more options available when installing the node, which can be fou
 
 Once installed you will see output similar to this. Passphrase is the genesis passphrase which contains all pre-mined tokens. You will need this in order to distribute tokens to other wallets.
 
-::: tip Start the Bridgechain
+::: tip Start the BridgeChain
 ```bash
 ./bridgechain.sh start-node --name MyTest
 ```
@@ -58,9 +58,9 @@ Once installed you will see output similar to this. Passphrase is the genesis pa
 
 ![Image 3](./assets/setup/3.png)
 
-## Setting up your Bridgechain Explorer
+## Setting up your BridgeChain Explorer
 
-The explorer is used to view information on your bridgechain. It provides details about the delegates that are active and on standby. It also provides information about all the addresses, transactions and blocks that are available. In summary, everything you need to know about your bridgechain can be found in the explorer.
+The explorer is used to view information on your BridgeChain. It provides details about the delegates that are active and on standby. It also provides information about all the addresses, transactions and blocks that are available. In summary, everything you need to know about your BridgeChain can be found in the explorer.
 
 ::: tip Install Explorer (Not Azure)
 ```bash
@@ -97,9 +97,9 @@ Once the explorer is running, you can give it a test by navigating to it through
 
 ![Image 6](./assets/setup/6.png)
 
-## Adding the Bridgechain to your Desktop Wallet
+## Adding the BridgeChain to your Desktop Wallet
 
-Having a bridgechain is great, but you'll probably to interact with it and send out some of your genesis tokens. This will be required when forging with new delegate nodes (instead of auto-forging).
+Having a BridgeChain is great, but you'll probably to interact with it and send out some of your genesis tokens. This will be required when forging with new delegate nodes (instead of auto-forging).
 
 ![Image 7](./assets/setup/7.png)
 
@@ -107,7 +107,7 @@ From your desktop wallet, go to Settings (the gear icon at the top-right) and ch
 
 ![Image 8](./assets/setup/8.png)
 
-Go to the “New” tab, give your network a name, input the URL of your bridgechain node (including “http://” and leaving the “/” off the end), and then enable “Force”. The Force option means the desktop wallet will always connect to this peer when dealing with the Network, and won’t deal with any Peers. Once done, click on the “Create” button.
+Go to the “New” tab, give your network a name, input the URL of your BridgeChain node (including “http://” and leaving the “/” off the end), and then enable “Force”. The Force option means the desktop wallet will always connect to this peer when dealing with the Network, and won’t deal with any Peers. Once done, click on the “Create” button.
 
 ![Image 9](./assets/setup/9.png)
 
@@ -178,7 +178,7 @@ You will also see your Delegate showing in the Explorer Delegate Monitor.
 
 ##### Setup a forging Node
 
-You will need a new machine ready for us to setup. To make it easier, we will use ArkCommander to setup all dependencies then overwrite with our bridgechain configuration.
+You will need a new machine ready for us to setup. To make it easier, we will use ArkCommander to setup all dependencies then overwrite with our BridgeChain configuration.
 
 ::: tip Download and run ArkCommander
 ```bash
@@ -224,7 +224,7 @@ rm -rf ~/ark-node/
 scp -r bridgechain@51.141.3.209:~/ark-bridgechain ~/ark-node
 ```
 
-**Note: You will have to change the username and IP to the auto-forging node you’re copying from. You will also have to change the path you’re copying from if you chose to install the bridgechain somewhere different.**
+**Note: You will have to change the username and IP to the auto-forging node you’re copying from. You will also have to change the path you’re copying from if you chose to install the BridgeChain somewhere different.**
 :::
 
 ::: tip Navigate to the Node folder
@@ -261,7 +261,7 @@ npm install
 ```
 :::
 
-::: tip Create Postgres Database for our Bridgechain to use
+::: tip Create Postgres Database for our BridgeChain to use
 ```bash
 createdb ark_bridgechain
 ```
@@ -331,7 +331,7 @@ You can also use a JSON config file to setup both the node and the explorer. You
 
 ## Easy Vagrant Setup
 
-We have also provided a Vagrantfile which allows you to deploy your own Bridgechain and Explorer together with no configuration necessary.
+We have also provided a Vagrantfile which allows you to deploy your own BridgeChain and Explorer together with no configuration necessary.
 
 ** Note: This requires Vagrant version 2+ to be installed from [here](https://www.vagrantup.com/downloads.html).**
 
@@ -355,8 +355,8 @@ vagrant destroy
 ```
 :::
 
-##### Tweaking Bridgechain Options (Advanced)
-Open up `~/ark-deployer/vagrant/config.json` and you will see all the possible options that you can change. These are all used when deploying the bridgechain on Vagrant and can be customised. Refer to the [node options](https://github.com/ArkEcosystem/ark-deployer#optional-parameters) and [explorer options](https://github.com/ArkEcosystem/ark-deployer#optional-parameters-1) before continuing to get an idea of what each do. Once you are happy with your settings, go ahead and start the Vagrant environment as above.
+##### Tweaking BridgeChain Options (Advanced)
+Open up `~/ark-deployer/vagrant/config.json` and you will see all the possible options that you can change. These are all used when deploying the BridgeChain on Vagrant and can be customised. Refer to the [node options](https://github.com/ArkEcosystem/ark-deployer#optional-parameters) and [explorer options](https://github.com/ArkEcosystem/ark-deployer#optional-parameters-1) before continuing to get an idea of what each do. Once you are happy with your settings, go ahead and start the Vagrant environment as above.
 
 ## Ark’s Next Steps
 
@@ -365,12 +365,12 @@ We will be updating deployer to work with Ark Core v2 once it is in the testing 
 ## FAQ
 
 1. **Why do I need to “Force” my Network in the Desktop Wallet?**
-When your bridgechain node is auto-forging, it uses loopback addresses (127.0.0.x) to connect to itself and act as a forging node. If the Force option isn’t enabled, the Desktop Wallet will try to connect to the loopback addresses as they show as peers when querying the /api/peers endpoint. Forcing a connection means you connect directly with your bridgechain seed node, instead of having to launch a range of relay nodes to serve as peers.
+When your BridgeChain node is auto-forging, it uses loopback addresses (127.0.0.x) to connect to itself and act as a forging node. If the Force option isn’t enabled, the Desktop Wallet will try to connect to the loopback addresses as they show as peers when querying the /api/peers endpoint. Forcing a connection means you connect directly with your BridgeChain seed node, instead of having to launch a range of relay nodes to serve as peers.
 2. **I lost my Genesis Passphrase. Where can I find it?**
 Take a look in ~/ark-bridgechain/tasks/demo/genesisPassphrase.MyTest.json. You will find it in there (unless you removed it).
 3. **Will Deployer work on XYZ Operating System?**
 We recommend only running the Ark Node on Ubuntu 16.04. It may be possible on other Operating systems, but it is more specifically tested/used on this Operating System.
-4. **Can I change the fees for my bridgechain?**
+4. **Can I change the fees for my BridgeChain?**
 Yes you can which can be found under node options, however this causes issues with the Desktop Wallet (and anything that uses the ark-js package).
 5. **What is a Seed Node?**
 A Seed Node is used as a master node. Something that is used as a basis for Nodes to connect with, to then become “attached” to the Network.

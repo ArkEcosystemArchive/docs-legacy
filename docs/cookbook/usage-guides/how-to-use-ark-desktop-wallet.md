@@ -93,7 +93,7 @@ Now that your have a balance of ARK in your wallet, you may want to send it out.
 
 3. The next line is the amount of ARK you wish to send. If you'd like to send you're entire balance select the "SEND ALL" option and your entire balance will propagate to that line.
 
-4. Smartbridge data is not required. It can be used in specific and unique instances. Ignore it at this time.
+4. SmartBridge data is not required. It can be used in specific and unique instances. Ignore it at this time.
 
 5. The final line is where you will enter your passphrase. Your passphrase must be entered exactly as it was presented to you. It is all lower case, 12 words, 1 space between each word, and no space at the end.
 
@@ -292,7 +292,7 @@ With the ArkClient you can timestamp a file on the Ark Blockchain. ArkClient wil
 
 4. On the next screen transaction details will be provided. Select "SEND NOW" to complete.
 
-5. You'll notice within your wallet transactions the SHA256 hash in the Smartbridge column, and the time & date it was committed to the blockchain in the Date column. Timestamp document complete.
+5. You'll notice within your wallet transactions the SHA256 hash in the SmartBridge column, and the time & date it was committed to the blockchain in the Date column. Timestamp document complete.
 
 ![Timestamp-show](./assets/how-to-use-the-desktop-wallet/Timestamp-show.png)
 
@@ -398,7 +398,7 @@ You may want to Add Contacts within your ArkClient to easily identify owners of 
 
 *Q: Will timestamping my file make it viewable to others that explore the blockchain?*
 
-**A: No, your timestamped document is not viewable to others. However, the transaction is viewable to everyone. If someone is viewing your wallet they will be able to see the transaction. (date, and hash in the Smartbridge data, but the hash is useless to them, they cannot decrypt it.)**
+**A: No, your timestamped document is not viewable to others. However, the transaction is viewable to everyone. If someone is viewing your wallet they will be able to see the transaction. (date, and hash in the SmartBridge data, but the hash is useless to them, they cannot decrypt it.)**
 
 *Q: By adding a contact and assigning a name, will others also see that name I've given them?*
 

@@ -15,7 +15,7 @@ module.exports = [
     collapsable: false,
     children: [
       "/cookbook/developer/setup-dev-environment",
-      "/cookbook/developer/send-transaction-sdk"
+      "/cookbook/developer/send-transaction-ark-sdk"
     ]
   },
   {

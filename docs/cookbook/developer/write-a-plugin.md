@@ -5,35 +5,11 @@ In this guide, you will find the information which can enable you to write a pro
 ## Setup
 Many components are required to have a proper environment setup for the development of your Ark Core plugin.
 
-### Ark Core
-Make sure you have an up-to-date version of the Ark Core repository
-```sh
-git clone https://github.com/ArkEcosystem/core
-cd core/
-```
-### Docker
-Docker (docker-compose or docker-machine) is also required, it will help with running a local blockchain for testing and production purposes.
-
-Please view instructions at the [official docker website](https://docker.io/get-started) for Windows and Mac.
-
-For Linux Ubuntu, it can be installed with `sudo apt-get install docker-compose`.
-
-With docker installed, you must run the development swarm by running `docker-compose up -d` in the `docker/development/` folder under the core repository.
-
-### Yarn & Lerna
-Install yarn and lerna if you don't have them already
-```sh
-npm i -g yarn
-yarn global add lerna
-```
-
-Add ~/.yarn/bin to path
-```sh
-echo 'PATH=$PATH:~/.yarn/bin' >> ~/.profile
-source ~/.profile
-```
+You can view instructions on how to setup your development environment in the [cookbook for dev environment](./setup-dev-environment.md).
 
 ### Plugin Skeleton
+Make sure you are in the Ark Core folder cloned from the official [GitHub repo](https://github.com/ArkEcosystem/core).
+
 Add a submodule for the plugin skeleton
 ```sh
 cd plugins/

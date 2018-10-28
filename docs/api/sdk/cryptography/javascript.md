@@ -40,7 +40,7 @@ const transaction = {
   recipientId: 'DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP',
   timestamp: 121212,
   asset: {},
-  senderPublicKey: 034151a3ec46b5670a682b0a63394f863587d1bc97483b1b
+  senderPublicKey: '034151a3ec46b5670a682b0a63394f863587d1bc97483b1b'
 }
 ```
 
@@ -85,7 +85,7 @@ const signed = {
 ### Verify
 
 ```js
-crypto.verifyHash(signed.hash, signed.signature, keys.publicKey)
+crypto.verifyHash(signed.hash, signed.signature, '034151a3ec46b5670a682b0a63394f863587d1bc97483b1b')
 ```
 ## Identities
 
@@ -106,7 +106,7 @@ identities.address.fromPassphrase('this is a top secret passphrase')
 #### Get an address from a public key
 
 ```js
-identities.address.fromPublicKey(034151a3ec46b5670a682b0a63394f863587d1bc97483b1b)
+identities.address.fromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b')
 ```
 
 #### Get an address from a private key

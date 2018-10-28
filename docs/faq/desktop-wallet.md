@@ -4,9 +4,9 @@ title: "Desktop Wallet"
 
 # Desktop Wallet
 
-## Where can I download Ark desktop wallet?
+## Where can I download Ark Desktop Wallet?
 
-You can download the latest version of the Ark desktop wallet from our official GitHub repository : https://github.com/ArkEcosystem/ark-desktop/releases .
+You can download the latest version of the Ark Desktop Wallet from our official GitHub repository : https://github.com/ArkEcosystem/ark-desktop/releases .
 Just choose the wallet download that matches your operating system.
 
 ## Why is there a line through a cloud next to my address?
@@ -25,7 +25,7 @@ It means you did not write/copy your passphrase correctly when signing the trans
 
 You can use the offline folders to split-up your funds within a wallet. This allows you to better organize your ARK without paying any fees within the same address. The splitting up of your ARK is local to your computer and not stored on the blockchain.
 
-## When I open my Ark desktop wallet I see an empty Ark address which should have ARK tokens in it.
+## When I open my Ark Desktop Wallet I see an empty Ark address which should have ARK tokens in it.
 
 Most likely you are not connected to the network, make sure the cloud icon in the upper right menu (3rd icon) has a checkmark inside it (meaning connected to network) and does not have line through it(disconnected from Ark network). If it has a line through it, it means either you are not connected to the internet or your firewall maybe blocking your data traffic.
 

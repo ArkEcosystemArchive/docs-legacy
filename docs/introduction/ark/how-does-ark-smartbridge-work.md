@@ -1,8 +1,8 @@
 ---
-title: "How Does Ark Smartbridge Work?"
+title: "How Does Ark SmartBridge Work?"
 ---
 
-# How Does Ark Smartbridge Work?
+# How Does Ark SmartBridge Work?
 
 [[toc]]
 

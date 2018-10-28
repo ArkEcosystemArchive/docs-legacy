@@ -31,6 +31,7 @@ Here is a list of officially recognized terms and the proper way to use each of 
    - **Ark Mobile Wallet**: *"Ark Mobile is available for both Android and iOS"*
    - **Ark Desktop Wallet**: *"Use the Ark Desktop client if using Windows, MacOS or Linux"*
    - **AIPs, Ark Improvement Proposals**: *"I'm rolling in all these AIPs (Ark Improvement Proposals)"*
+   - **Ark (LANG) Crypto**: *"The Ark JS Crypto documentation needs some love!"*
    - **Ark (LANG) Client**: *"I'm using the Ark PHP Client as my API client"*
    - **Ark Deployer**: *"You can use Ark Deployer to launch your own BrideChain"*
 

@@ -26,8 +26,6 @@ When you arrive on this page you will see multiple options for the ArkClient. Se
 
 ![Client-Page](./assets/how-to-use-the-desktop-wallet/Client-Page.png)
 
-___
-
 ## Creating your Ark Wallet
 
 Your Ark Wallet is a unique address that will store your ARK.
@@ -51,16 +49,11 @@ Your Ark Wallet is a unique address that will store your ARK.
 
 ![Wallet-homepage](./assets/how-to-use-the-desktop-wallet/Wallet-homepage.png)
 
-___
-
 ### Identifying your Ark Wallet Address
 
 Your Ark Wallet address is presented to you at the top of the client, under 'Address' and to the right of the *Copy* icon. This address is 100% unique to your wallet. You will need this address in the future to send ARK to your wallet. You can automatically copy is by simply clicking on it.
 
 ![Ark-address](./assets/how-to-use-the-desktop-wallet/Ark-address.png)
-
-___
-
 
 ## Sending ARK to your Ark Wallet (*from an exchange*)
 
@@ -85,8 +78,6 @@ Your Ark Wallet stores your ARK for you. In order to interface with Ark you need
 5. Your ARK will be sent on it's way to your Ark Wallet! You will soon be able to see your new ARK balance in the Ark Desktop Application!
 
 ![Wallet-balance](./assets/how-to-use-the-desktop-wallet/Wallet-balance.png)
-
-___
 
 ## Sending ARK from your Ark Wallet
 
@@ -113,8 +104,6 @@ Now that your have a balance of ARK in your wallet, you may want to send it out.
 ![Send-ark-confirm](./assets/how-to-use-the-desktop-wallet/Send-ark-confirm.png)
 
 8. All done! Your ARK is on its way to its destination address!
-
-___
 
 ## Voting with your Ark Wallet
 
@@ -144,12 +133,7 @@ Each delegate is unique and brings different skill sets to the Ark Ecosystem, so
 
 ![Vote-show](./assets/how-to-use-the-desktop-wallet/Vote-show.png)
 
-___
-
 ![Vote-helps](./assets/how-to-use-the-desktop-wallet/Vote-helps.png)
-
-___
-
 
 ## Unvoting a delegate
 
@@ -164,8 +148,6 @@ If your delegate is not contributing to the Ark community in a way he/she had pr
 3. You will now be prompted to send the required ARK fee in order to unvote your delegate. Select "SEND NOW".
 
 4. You will now notice your delegates name is no longer within the "VOTES" section. You have unvoted your delegate.
-
-___
 
 ## Various functions & featues within the ArkClient/Desktop Application
 
@@ -197,9 +179,6 @@ You may also choose to set a background picture from your personal selection of 
 
 4. Scroll up to the top of the background/theme selections. Your custom photo will be there. Select it, then select "SAVE". Your custom photo is set.
 
-
-___
-
 ### Renaming your Ark Wallet
 
 Instead of your Ark Wallet Address displaying on the homescreen of the ArkClient you can choose to rename/relabel your Ark Wallet to what you wish. A couple reasons for wanting to rename your Ark Wallet could be you have multiple wallets and wish to easily distinguish between them, or perhaps you have different wallets for different purposes.
@@ -223,8 +202,6 @@ Instead of your Ark Wallet Address displaying on the homescreen of the ArkClient
 ![Wallet-name](./assets/how-to-use-the-desktop-wallet/Wallet-name.png)
 
 6. If you navigate to the ArkClient homescreen (by selecting "Ark Client" in the upper left hand corner) you will also see the newly labeled wallet there. You have completed Renaming your Ark Wallet.
-
-___
 
 ### Adding a second passphrase
 
@@ -252,9 +229,6 @@ You can add a second passphrase to your Ark Wallet for an added layer of securit
 
 7. Your second passphrase has been added to your wallet.
 
-___
-
-
 ### Remove wallet from Client
 
 You may want to remove a wallet from the ArkClient if you have multiple wallets and you have some wallets you don't use anymore, or you're using a shared computer and don't want your wallets information to populate for when the next user opens ArkClient. Removing a wallet is easy and will **not** delete your wallet and it's contents. You can learn how to re-import your removed wallet in the next section.
@@ -273,8 +247,6 @@ You may want to remove a wallet from the ArkClient if you have multiple wallets 
 
 4. You wallet is now removed from that ArkClient.
 
-___
-
 ### Import Account
 
 You may want to import an account if you're on a new computer, newly downloaded ArkClient, or if you previously removed your wallet from the client.
@@ -286,8 +258,6 @@ You may want to import an account if you're on a new computer, newly downloaded 
 3. Input your passphrase and select "IMPORT".
 
 4. Your wallet is now imported into the ArkClient.
-
-___
 
 ### Export Account
 
@@ -301,8 +271,6 @@ account in a .csv file (commonly known as a flat file).
 3. The next window will appear and show you how many transactions were included in your export.
 
 4. Select "DOWNLOAD FILE". The default file name will be your Ark Wallet Address. Select where you'd like to save your file and save. You have exported your account.
-
-___
 
 ### Timestamp a File
 
@@ -330,8 +298,6 @@ With the ArkClient you can timestamp a file on the Ark Blockchain. ArkClient wil
 
 *More about hashing and timestamping can be found in the [FAQ](#FAQ) & [Appendix/Useful Links](#appen) sections of this User Guide.*
 
-___
-
 ### Different settings within ArkClient/Desktop Application
 
 ##### Currency
@@ -348,8 +314,6 @@ ArkClient is automatically set to USD. If you want the ArkClient to display the 
 
 4. Your selected currency is now set as the default currency.
 
-____
-
 ##### Price
 
 You can view the current price each ARK is trading for on your homescreen, it will be displayed as your set currency rate. Price changes are also provided by 1 hour, 24 hour, and 7 days % change increments.
@@ -357,8 +321,6 @@ You can view the current price each ARK is trading for on your homescreen, it wi
 The price is retrieved from [CoinMarketCap](https://coinmarketcap.com/)
 
 ![Price](./assets/how-to-use-the-desktop-wallet/Price.png)
-
-___
 
 ##### Language
 
@@ -374,8 +336,6 @@ ArkClient is automatically set to English as the default language. You can chang
 
 5. Your selected language is now set as the default language and the ArkClient will reflect it.
 
-___
-
 ### Add Contacts
 
 You may want to Add Contacts within your ArkClient to easily identify owners of wallets that you interact with. This will also make that wallet more readily available for you to interact with and provide some transaction data.
@@ -389,9 +349,6 @@ You may want to Add Contacts within your ArkClient to easily identify owners of 
 5. You will now see that contact added on the left hand side of the ArkClient. If you hover your cursor over the "i" (information) icon within that contact you can see transactions between you and that wallet/contact. You have completed Add Contacts.
 
 ![Contact-info](./assets/how-to-use-the-desktop-wallet/Contact-info.png)
-
-___
-
 
 ### Frequently Asked Questions
 

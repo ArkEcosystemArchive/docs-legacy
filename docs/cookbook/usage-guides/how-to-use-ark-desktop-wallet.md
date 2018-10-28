@@ -1,8 +1,8 @@
 ---
-title: "How To Use The Desktop Wallet?"
+title: "How to Use the Desktop Wallet"
 ---
 
-# How To Use The Desktop Wallet?
+# How to Use the Desktop Wallet
 
 [[toc]]
 

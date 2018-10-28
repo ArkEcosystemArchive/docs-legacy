@@ -1,8 +1,8 @@
 ---
-title: "How To Use The Mobile Wallet?"
+title: "How to Use the Mobile Wallet"
 ---
 
-# How To Use The Mobile Wallet?
+# How to Use the Mobile Wallet
 
 ## The Preparation
 

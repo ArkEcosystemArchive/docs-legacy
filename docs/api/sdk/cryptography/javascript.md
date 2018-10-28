@@ -40,7 +40,7 @@ const transaction = {
   recipientId: 'DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP',
   timestamp: 121212,
   asset: {},
-  senderPublicKey: keys.publicKey
+  senderPublicKey: 034151a3ec46b5670a682b0a63394f863587d1bc97483b1b
 }
 ```
 
@@ -106,13 +106,13 @@ identities.address.fromPassphrase('this is a top secret passphrase')
 #### Get an address from a public key
 
 ```js
-identities.address.fromPublicKey(keys.privateKey)
+identities.address.fromPublicKey(034151a3ec46b5670a682b0a63394f863587d1bc97483b1b)
 ```
 
 #### Get an address from a private key
 
 ```js
-identities.address.fromPrivateKey(keys.privateKey)
+identities.address.fromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
 ```
 
 #### Validate an address

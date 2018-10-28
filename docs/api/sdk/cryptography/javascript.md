@@ -89,37 +89,36 @@ crypto.verifyHash(signed.hash, signed.signature, keys.publicKey)
 ```
 ## Identities
 
+To use identities in your project, first require the module
+
+```js
+const { identities } = require('@arkecosystem/crypto')
+```
+
 ### Address
 
 #### Get an address from a passphrase
 
 ```js
-crypto.getAddress(crypto.getKeys('top secret passphrase'))
+identities.address.fromPassphrase('top secret passphrase')
 ```
 
 #### Get an address from a public key
 
 ```js
-crypto.getAddress(keys.publicKey)
+identities.address.fromPublicKey(keys.publicKey)
 ```
 
 #### Get an address from a private key
 
-Assuming the public key is not part of the keys object, it can also be omitted:
-
 ```js
-const keys = {
-  privateKey: '26cb357307fc1ba59af3eb244f799578ea9a998a154b0b54fa0bfd77688bdc86'
-  compressed: true
-}
-
-crypto.getAddress(crypto.getKeysFromWIF(crypto.keysToWIF(keys))['publicKey'])
+identities.address.fromPrivateKey(keys.privateKey)
 ```
 
 #### Validate an address
 
 ```js
-crypto.validateAddress('DTZrKeW8Mn61SqXVvTGt5Q3juNvn2cMJLx')
+identities.address.validate('DTZrKeW8Mn61SqXVvTGt5Q3juNvn2cMJLx')
 ```
 
 ### Private Key
@@ -127,18 +126,19 @@ crypto.validateAddress('DTZrKeW8Mn61SqXVvTGt5Q3juNvn2cMJLx')
 #### Get a private key from a passphrase
 
 ```js
-crypto.getKeys('top secret passphrase')['privateKey']
+identities.privateKey.fromPassphrase('top secret passphrase')
 ```
 
 #### Get a private key instance object from hex
 
 ```js
+unimplemented
 ```
 
 #### Get a private key from a WIF
 
 ```js
-crypto.getKeysFromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')['privateKey']
+identities.privateKey.fromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')
 ```
 
 ### Public Key
@@ -146,18 +146,25 @@ crypto.getKeysFromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')['p
 #### Get a public key from a passphrase
 
 ```js
-crypto.getKeys('top secret passphrase')['publicKey']
+identities.publicKey.fromPassphrase('top secret passphrase')
 ```
 
 #### Get a public key instance object from hex
 
 ```js
+unimplemented
+```
+
+#### Get a private key from a WIF
+
+```js
+identities.publicKey.fromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')
 ```
 
 #### Validate a public key
 
 ```js
-crypto.validatePublicKey('03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad17437aad8e096389101f1')
+identities.publicKey.validate('03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad17437aad8e096389101f1')
 ```
 
 ### WIF
@@ -165,5 +172,5 @@ crypto.validatePublicKey('03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad17437aad8
 #### Get a WIF from a passphrase
 
 ```js
-crypto.keysToWIF(crypto.getKeys('top secret passphrase'))
+identities.wif.fromPassphrase('top secret passphrase')
 ```

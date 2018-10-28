@@ -35,7 +35,7 @@ No. The vote weight will automatically adapt to your wallet balance for every de
 
 ## Can I vote from an exchange?
 
-No. You need to send the ARK to your personal Ark address and vote via the official Ark desktop wallet.
+No. You need to send the ARK to your personal Ark address and vote via the official Ark Desktop Wallet.
 
 ## I just put all my ARK on a Ledger Nano S, do I need to re-vote?
 

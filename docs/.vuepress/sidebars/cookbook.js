@@ -14,7 +14,8 @@ module.exports = [
     title: "Developer",
     collapsable: false,
     children: [
-      "/cookbook/developer/setup-dev-environment"
+      "/cookbook/developer/setup-dev-environment",
+      "/cookbook/developer/write-a-plugin"
     ]
   },
   {

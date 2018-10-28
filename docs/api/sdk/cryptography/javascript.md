@@ -25,7 +25,7 @@ const { crypto } = require('@arkecosystem/crypto')
 Throughout this document, the keys object used is:
 
 ```js
-const keys = crypto.getKeys('top secret passphrase')
+const keys = crypto.getKeys('this is a top secret passphrase')
 ```
 
 ## Transactions
@@ -100,13 +100,13 @@ const { identities } = require('@arkecosystem/crypto')
 #### Get an address from a passphrase
 
 ```js
-identities.address.fromPassphrase('top secret passphrase')
+identities.address.fromPassphrase('this is a top secret passphrase')
 ```
 
 #### Get an address from a public key
 
 ```js
-identities.address.fromPublicKey(keys.publicKey)
+identities.address.fromPublicKey(keys.privateKey)
 ```
 
 #### Get an address from a private key
@@ -118,7 +118,7 @@ identities.address.fromPrivateKey(keys.privateKey)
 #### Validate an address
 
 ```js
-identities.address.validate('DTZrKeW8Mn61SqXVvTGt5Q3juNvn2cMJLx')
+identities.address.validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib')
 ```
 
 ### Private Key
@@ -126,7 +126,7 @@ identities.address.validate('DTZrKeW8Mn61SqXVvTGt5Q3juNvn2cMJLx')
 #### Get a private key from a passphrase
 
 ```js
-identities.privateKey.fromPassphrase('top secret passphrase')
+identities.privateKey.fromPassphrase('this is a top secret passphrase')
 ```
 
 #### Get a private key instance object from hex
@@ -138,7 +138,7 @@ unimplemented
 #### Get a private key from a WIF
 
 ```js
-identities.privateKey.fromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')
+identities.privateKey.fromWIF('SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA')
 ```
 
 ### Public Key
@@ -146,7 +146,7 @@ identities.privateKey.fromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRh
 #### Get a public key from a passphrase
 
 ```js
-identities.publicKey.fromPassphrase('top secret passphrase')
+identities.publicKey.fromPassphrase('this is a top secret passphrase')
 ```
 
 #### Get a public key instance object from hex
@@ -158,13 +158,13 @@ unimplemented
 #### Get a private key from a WIF
 
 ```js
-identities.publicKey.fromWIF('SAsbyqRNUBsqfn1kH7CeH4oMBwFHukAWhFW9M32vbHT68psRhP8D')
+identities.publicKey.fromWIF('SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA')
 ```
 
 #### Validate a public key
 
 ```js
-identities.publicKey.validate('03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad17437aad8e096389101f1')
+identities.publicKey.validate('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
 ```
 
 ### WIF
@@ -172,5 +172,5 @@ identities.publicKey.validate('03f0a5be9bbed6ccf7b241198295e60de919bf56dc4ad1743
 #### Get a WIF from a passphrase
 
 ```js
-identities.wif.fromPassphrase('top secret passphrase')
+identities.wif.fromPassphrase('this is a top secret passphrase')
 ```

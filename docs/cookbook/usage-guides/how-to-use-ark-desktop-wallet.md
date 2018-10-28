@@ -8,7 +8,7 @@ title: "How to Use the Desktop Wallet"
 
 ### What is it?
 
-The Ark Desktop Application is the primary software that most users will utilize to store, send, receive, vote and do much more with their ARK. The desktop application/client interfaces with your wallet and allows you to interface with Ark!
+The Ark Desktop Wallet is the primary software that most users will utilize to store, send, receive, vote and do much more with their ARK. The desktop application/client interfaces with your wallet and allows you to interface with Ark!
 
 This User Guide is for the everyday, non-developer Ark consumer.
 
@@ -69,13 +69,13 @@ Your Ark Wallet stores your ARK for you. In order to interface with Ark you need
 
 ![Bittrex-withdraw](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw.png)
 
-4. You will be presented with a 'Confirm ARK Withdrawal' page. Enter your Ark Address to your wallet (simply click on the address in your Ark Desktop Application, within your wallet) and paste. Then, enter the amount of ARK you'd like to send to your Ark Wallet. Then select "Withdrawal", and "Confirm" the transaction.
+4. You will be presented with a 'Confirm ARK Withdrawal' page. Enter your Ark Address to your wallet (simply click on the address in your Ark Desktop Wallet, within your wallet) and paste. Then, enter the amount of ARK you'd like to send to your Ark Wallet. Then select "Withdrawal", and "Confirm" the transaction.
 
 ![Bittrex-withdraw-confirm](./assets/how-to-use-the-desktop-wallet/Bittrex-withdraw-confirm.png)
 
 **Note:** Bittrex, like many exchanges, will send you an email that you need to open and select a link in to confirm the transaction. This is a typical security measure most exchanges perform.
 
-5. Your ARK will be sent on it's way to your Ark Wallet! You will soon be able to see your new ARK balance in the Ark Desktop Application!
+5. Your ARK will be sent on it's way to your Ark Wallet! You will soon be able to see your new ARK balance in the Ark Desktop Wallet!
 
 ![Wallet-balance](./assets/how-to-use-the-desktop-wallet/Wallet-balance.png)
 
@@ -83,7 +83,7 @@ Your Ark Wallet stores your ARK for you. In order to interface with Ark you need
 
 Now that your have a balance of ARK in your wallet, you may want to send it out. Someone may want to send ARK to another Ark Address for any number of reasons, perhaps you want to sell your ARK, pay for a good or service, or donate ARK to the Ark Community Fund. Sending ARK is quick & easy.
 
-1. Within your Ark Desktop Application and within your wallet, you will see an arrow pointing to the right in the top right hand corner of the Ark Address box. This is the send icon. Select it.
+1. Within your Ark Desktop Wallet and within your wallet, you will see an arrow pointing to the right in the top right hand corner of the Ark Address box. This is the send icon. Select it.
 
 ![Send-icon](./assets/how-to-use-the-desktop-wallet/Send-icon.png)
 

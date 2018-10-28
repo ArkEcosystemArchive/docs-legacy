@@ -2,7 +2,7 @@
 title: "Mobile Wallet"
 ---
 
-# Ark Mobile
+# Ark Mobile Wallet
 
 <p align="center">
     <img src="https://github.com/ArkEcosystem/mobile-wallet/raw/master/banner.png" />

@@ -38,8 +38,17 @@ Some parameters are common to all transaction types:
 ```
 
 :::tip
---base-url is node IP being broadcasted to (replace that with your Node’s IP, or localhost) and --passphrase is the secret for wallet you wish to send transactions from.
+**`--base-url`** is the node IP to which you'll be broadcasting (replace that with **your own node’s IP**, **localhost** or **any other relay node's IP**).
+
+**`--passphrase`** is the **secret** for the wallet you wish to send transactions from.
 :::
+
+The basic premise is the following:
+ 1. Fill in a command with the passphrase to a wallet with enough DARK
+ 2. A transfer will be issued to a randomly generated address
+ 3. After a moment the type-specific transaction will be issued other randomly generated addresses
+
+Accounts randomly generated are available in the `./test-wallets` file.
 
 ### Transfer
 
@@ -54,22 +63,27 @@ tester transfer \
 the output should be similar to
 
 ```sh
-[1540760827746] INFO (ark-tester-cli/12780 on machine_name): Sending 1 transfer transactions
-[1540760827882] INFO (ark-tester-cli/12780 on machine_name): Sender starting balance: 1007610000000
-[1540760827907] INFO (ark-tester-cli/12780 on machine_name): 0 ==> ebe2e24f458ca6313545b409b7abad09d2e3fb9d117767d49e464ef5682f78a7, DFCsS8KVMrzq9Jcp5woM8FHfP41qFP37Xw (fee: 10000000)
-[1540760827907] INFO (ark-tester-cli/12780 on machine_name): Sender expected ending balance: 1007599998000
-[1540760830284] INFO (ark-tester-cli/12780 on machine_name): Waiting 20 seconds to apply transfer transactions
-[1540760850440] ERROR (ark-tester-cli/12780 on machine_name): Sender balance incorrect: '1007610000000' but should be '1007599998000'
-[1540760850789] ERROR (ark-tester-cli/12780 on machine_name): Incorrect destination balance for DFCsS8KVMrzq9Jcp5woM8FHfP41qFP37Xw. Should be '2000' but is '0'
-[1540760850789] ERROR (ark-tester-cli/12780 on machine_name): Test failed on run 1
-[1540760850789] INFO (ark-tester-cli/12780 on machine_name): Testing VendorField value is set correctly
-[1540760850792] INFO (ark-tester-cli/12780 on machine_name): 0 ==> b642d49ef151cc36d29d9c9bebb3bb5ce1dc5788ffcb0f2fae40d01cdd88139a, DFCsS8KVMrzq9Jcp5woM8FHfP41qFP37Xw (fee: 10000000)
-[1540760850824] INFO (ark-tester-cli/12780 on machine_name): Waiting 20 seconds to apply transactions
-[1540760870854] ERROR (ark-tester-cli/12780 on machine_name): Transaction 'b642d49ef151cc36d29d9c9bebb3bb5ce1dc5788ffcb0f2fae40d01cdd88139a' should be on the blockchain
+[INFO]: Sending 1 transfer transactions
+[INFO]: Sender starting balance: 999779173791
+[INFO]: 0 ==> c0a4e698c78ce947c07356c19eafb9365db3d80b0ae8ecc7362cd5fbc6dc308c, D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk (fee: 10000000)
+[INFO]: Sender expected ending balance: 999569173791
+[INFO]: Waiting 20 seconds to apply transfer transactions
+[INFO]: All transactions have been received and forged for run 1!
+[INFO]: Waiting 20 seconds to apply transfer transactions
+[INFO]: All transactions have been received and forged for run 2!
+[INFO]: Testing VendorField value is set correctly
+[INFO]: 0 ==> d5c8494a7963955af620abd50cdc60690f843d259874a925e3cc3786a1639c36, D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk (fee: 10000000)
+[INFO]: Waiting 20 seconds to apply transactions
+[INFO]: Testing empty VendorField value
+[INFO]: 0 ==> fcb6ac6b3b220b23dbaf64753864c4561ac3c8857c184ec793ec8d064728f8d8, D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk (fee: 10000000)
+[INFO]: Waiting 20 seconds to apply transactions
+[ERROR]: Transaction 'fcb6ac6b3b220b23dbaf64753864c4561ac3c8857c184ec793ec8d064728f8d8' should not have vendorField value 'Transaction 1'
 ```
-(Give or take a few ERROR messages, depending on the up-to-datedness of your node and whether you're forging or not).
+(Give or take a few ERROR messages).
 
-In my case, the first attempted transfer was actually successful and the one produced by the retry doesn't show up on the [dexplorer.ark.io](https://dexplorer.ark.io/transaction/ebe2e24f458ca6313545b409b7abad09d2e3fb9d117767d49e464ef5682f78a7).
+In my case, 3 transfers were made: one from my original wallet, and two to the randomly picked recipient (sending to itself). 
+
+[More details](https://dexplorer.ark.io/wallets/D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk).
 
 ### Delegate Registration
 
@@ -80,6 +94,7 @@ tester delegate-registration \
 --number 1 \
 --base-url http://localhost \
 --passphrase "your 12 word passphrase"
+```
 
 For the output of
 
@@ -204,13 +219,13 @@ Finally, we receive as a response
 [INFO]: Waiting 20 seconds to apply transactions
 ```
 
-From which we can easily track the flow by looking at [the created address' transactions](https://dexplorer.ark.io/wallets/DGdddVsyBmKz7SyzMsZBm1MHepkqZ3JjKy)
+From which we can easily track the flow by looking at [the created address' transactions](https://dexplorer.ark.io/wallets/DGdddVsyBmKz7SyzMsZBm1MHepkqZ3JjKy).
 
 ## Dynamic Fees
 
-For all transactions, you can set `--transfer-fee <number || number-number>` to provide a dynamic value or range of random values to choose from for the fee(s).
+For all transactions, you can set `--transfer-fee <number || number-number>` to provide a dynamic value or range of random values to choose from for the initial transfer fee(s).
 
-Additionally, types other than transfer have the extra `--<type>-fee <number>` parameter to specify a strict fee catered to that transaction type.
+Additionally, types other than transfer have the extra `--<type>-fee <number || number-number>` parameter to specify a similar fee catered to that transaction type.
 
 ### Transfer
 
@@ -231,4 +246,45 @@ will produce output showing 2 transactions with different fees
 1 ==> 663867b8452388002b3e47118ca67d94e17ba9f82399c057b910c6358c371a43, D9mwARuRihGV8hNyEFvrsTttBKnrmewfHM (fee: 39493)
 ```
 
-the 0th transaction can be viewed on the [dexplorer.ark.io](https://dexplorer.ark.io/transaction/9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b)
+the 0th transaction can be viewed on the [dexplorer.ark.io](https://dexplorer.ark.io/transaction/9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b).
+
+### Other types
+
+As with the transfer transaction type, other types also follow the same model. When specifying a dynamic fee or range of fees for a given transaction to the tester-cli, the transaction will only be accepted if a delegate has a minimum fee for its type equal to or lower than the specified value/range.
+
+The syntax and output follows the same model as the transfer transaction, with the added type-specific parameter.
+
+Here is an example
+
+```sh
+tester delegate-registration \
+--number 1 \
+--base-url http://localhost \
+--passphrase "your 12 word passphrase" \
+--delegate-fee 100000000
+```
+
+For the output
+
+```sh
+[INFO]: Sending 1 transfer transactions
+[INFO]: Sender starting balance: 1001689173791
+[INFO]: 0 ==> b2b2aaf2997455fdadf3cad34ea991fd714b841b50bba6789174408e4a473d92, D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD (fee: 10000000)
+[INFO]: Sender expected ending balance: 999179173791
+[INFO]: Waiting 20 seconds to apply transfer transactions
+[INFO]: All transactions have been received and forged for run 1!
+[INFO]: Sending 1 delegate registration transactions
+[INFO]: Starting delegate count: 120
+[INFO]: 0 ==> c59491e6f908716d00f7d9ab2751a4193a00e0dbdd96b9a105fc5dc0c5370d31, D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD (fee: 100000000, username: cleopatra)
+[INFO]: Expected end delegate count: 121
+[INFO]: Waiting 20 seconds to apply delegate transactions
+[INFO]: All transactions have been sent! Total delegates: 120
+[ERROR]: Delegate count incorrect. '120' but should be '121'
+```
+
+Now, despite the error, the new registered delegate can still be found [there](https://dexplorer.ark.io/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 arktoshi (1 ARK only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the Ark Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not. 
+
+## Conclusion
+
+You should now be able to properly manage your test transactions with the help of the tester cli utility! If you have any questions or signals to present, please do so either on [Slack](https://arkecosystem.slack.com) with a message or [GitHub](https://github.com/ArkEcosystem/docs) with an issue.
+

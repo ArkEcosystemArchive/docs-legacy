@@ -1,8 +1,8 @@
 ---
-title: "How To Use The Mobile Wallet?"
+title: "How to Use the Mobile Wallet"
 ---
 
-# How To Use The Mobile Wallet?
+# How to Use the Mobile Wallet
 
 ## The Preparation
 
@@ -17,7 +17,7 @@ We can [download the .ipa here.](https://github.com/vmunich/ark-mobile/blob/mast
 Once Cydia Impactor opens it should show your iOS device, if it doesn't make sure the device is plugged in and the screen is unlocked. Once it loads you will want to click **Device -> Install Package**.
 ![Image of Impactor](./assets/how-to-use-the-mobile-wallet/impactor.png)
 
-Find and choose the Ark Mobile .ipa file we downloaded earlier. Impactor will prompt you to type in your Apple ID and password so it may install the application. If you have **2 Factor Authentication enabled**, you are going to need to [login here](https://appleid.apple.com/#!&page=signin). Navigate to the Security section so you may create an app-specific password. Once the password has been generated, use it on Impactor to install the wallet on your device. Impactor will now install the application.
+Find and choose the Ark Mobile Wallet .ipa file we downloaded earlier. Impactor will prompt you to type in your Apple ID and password so it may install the application. If you have **2 Factor Authentication enabled**, you are going to need to [login here](https://appleid.apple.com/#!&page=signin). Navigate to the Security section so you may create an app-specific password. Once the password has been generated, use it on Impactor to install the wallet on your device. Impactor will now install the application.
 
 ## Starting the Ark Wallet
 
@@ -31,16 +31,16 @@ You may skip the introduction or continue by hitting Next on the bottom right ha
 
 When we've either skipped or proceeded, you will be asked to create your profile:
 
-![Create a Profile on Ark Mobile](./assets/how-to-use-the-mobile-wallet/arkWallet4.png)
+![Create a Profile on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet4.png)
 
 After you hit the '*Create A Profile*' button, you will be asked to create a 6 digit PIN and then confirm the PIN.
 **You will need to remember this PIN**.
 
-![Create a Pin on Ark Mobile](./assets/how-to-use-the-mobile-wallet/arkWallet5.png)
+![Create a Pin on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet5.png)
 
 You will be asked to create a name for your profile. You can create one for the Mainnet or the Devnet, which is the Development Network. For this guide we will be on the Mainnet.
 
-![Create a Name on Ark Mobile](./assets/how-to-use-the-mobile-wallet/arkWallet6.png)
+![Create a Name on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet6.png)
 
 Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From here, you can follow the prompts and click on the button that's displayed on the screen to import or create a wallet. If you are importing a wallet, click [here](#importWallet). If you are creating a new wallet, continue reading.
 

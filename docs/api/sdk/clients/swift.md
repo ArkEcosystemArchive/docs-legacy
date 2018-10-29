@@ -4,10 +4,6 @@ title: "Swift"
 
 # Swift
 
-::: warning
-This package is still under development. This page will get more content as it evolves more. In the meantime you can view its source on [Github](https://github.com/ArkEcosystem/swift-client/).
-:::
-
 [[toc]]
 
 ## Requirements
@@ -25,7 +21,7 @@ If you are using Carthage, you can integrate the Ark Swift Client in your projec
 
 ```
 github "ArkEcosystem/swift-client" ~> 0.1.0
-``` 
+```
 
 Afterwards, run `Carthage update` to build the framework.
 You can then drag the generated `.framework` file into your project.

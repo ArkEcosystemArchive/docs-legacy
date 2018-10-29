@@ -76,6 +76,10 @@ POST /
 
 ## Broadcast transactions
 
+::: tip
+This replaces the `POST /:network/broadcast` endpoint.
+:::
+
 ### Endpoint
 
 ```
@@ -139,6 +143,10 @@ POST /
 ```
 
 ## Create a transaction
+
+::: tip
+This replaces the `POST /:network/transaction` endpoint.
+:::
 
 ### Endpoint
 
@@ -207,6 +215,10 @@ POST /
 ```
 
 ## Create a transaction from a BIP38
+
+::: tip
+This replaces the `POST /:network/transaction/bip38` endpoint.
+:::
 
 ### Endpoint
 

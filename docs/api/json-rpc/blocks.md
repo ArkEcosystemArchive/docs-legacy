@@ -6,6 +6,10 @@ title: JSON-RPC Blocks API
 
 ## Get a block
 
+::: tip
+This replaces the `GET /:network/account/:address` endpoint.
+:::
+
 ### Endpoint
 
 ```
@@ -87,6 +91,10 @@ POST /
 
 ## Get the latest block
 
+::: tip
+This replaces the `GET /:network/account/:address` endpoint.
+:::
+
 ### Endpoint
 
 ```
@@ -162,6 +170,10 @@ POST /
 ```
 
 ## Get a blocks transactions
+
+::: tip
+This replaces the `GET /:network/account/:address` endpoint.
+:::
 
 ### Endpoint
 

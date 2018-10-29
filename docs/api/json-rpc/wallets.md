@@ -5,6 +5,10 @@ title: JSON-RPC Wallets API
 
 ## Get a wallet
 
+::: tip
+This replaces the `GET /:network/account/:address` endpoint.
+:::
+
 ### Endpoint
 
 ```
@@ -65,6 +69,10 @@ POST /
 ```
 
 ## Get a wallets transactions
+
+::: tip
+This replaces the `GET /:network/transactions/:address` endpoint.
+:::
 
 ### Endpoint
 
@@ -140,6 +148,10 @@ POST /
 
 ## Create a wallet
 
+::: tip
+This replaces the `POST /:network/account` endpoint.
+:::
+
 ### Endpoint
 
 ```
@@ -198,6 +210,10 @@ POST /
 
 ## Get a BIP38 wallet
 
+::: tip
+This replaces the `GET /:network/account/bip38/:userid` endpoint.
+:::
+
 ### Endpoint
 
 ```
@@ -254,6 +270,10 @@ POST /
 ```
 
 ## Create a BIP38 wallet
+
+::: tip
+This replaces the `POST /:network/account/bip38` endpoint.
+:::
 
 ### Endpoint
 

@@ -5,9 +5,9 @@ module.exports = [
     title: "JSON-RPC API Reference",
     collapsable: false,
     children: [
-      ['/api/json-rpc/accounts', 'Accounts'],
       ['/api/json-rpc/blocks', 'Blocks'],
       ['/api/json-rpc/transactions', 'Transactions'],
+      ['/api/json-rpc/wallets', 'Wallets'],
     ]
   },
 ]

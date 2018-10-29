@@ -13,17 +13,28 @@ This project is still under development. This page will get more content as the 
 ## Installation
 
 ```bash
-...
+yarn add @arkecosystem/client
 ```
 
 ## Basics
 
 ```js
-...
-```
+const Client = require('@arkecosystem/client')
 
-## Connections
+const client = new Client('http://my.ark.node:port')
+client.setVersion(2)
 
-```js
-...
+const init = await () => {
+    try {
+        const response = await client.resource('wallets').get('AFrPtEmzu6wdVpa2CnRDEKGQQMWgq8nE9V')
+
+        if (response.data) {
+            console.log(response.data.data.balance)
+        }
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
+init()
 ```

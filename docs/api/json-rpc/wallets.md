@@ -26,7 +26,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "wallets.info",
     "params": {
         "address": "ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo"
@@ -39,7 +39,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "address": "ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo",
         "publicKey": "03287bfebba4c7881a0509717e71b34b63f31e40021c321f89ae04f84be6d6ac37",
@@ -88,7 +88,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "wallets.transactions",
     "params": {
         "address": "ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo"
@@ -101,7 +101,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "count": 153,
         "data": [{
@@ -161,7 +161,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "wallets.create",
     "params": {
         "passphrase": "this is a top secret passphrase"
@@ -174,7 +174,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "publicKey": "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
         "address": "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC"
@@ -219,7 +219,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "wallets.bip38.info",
     "params": {
         "userId": "123"
@@ -232,7 +232,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "wif": "6PYTWME2aAJTx2NcRyS33zYrS79Hk7KiNbHZmGQWUYJYKWGZn4N36AdUMf"
     }
@@ -277,7 +277,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "wallets.bip38.create",
     "params": {
         "userId": "123",
@@ -291,7 +291,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "publicKey": "022cf1c9de60c22c0b5a138b6545777cb2edaf82fe3906faa345580352000f84b6",
         "address": "AL4z4quXFVPR4ybDHeJ67HfSEmFrguQ6e5",

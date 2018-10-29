@@ -27,7 +27,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "blocks.info",
     "params": {
         "id": "9336364900436444611"
@@ -40,7 +40,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "id": "9336364900436444611",
         "version": 0,
@@ -106,7 +106,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "blocks.latest"
 }
 ```
@@ -116,7 +116,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "id": "1453043075643523354",
         "version": 0,
@@ -185,7 +185,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "blocks.transactions",
     "params": {
         "id": "17184958558311101492"
@@ -198,7 +198,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "count": 153,
         "data": [{

@@ -27,7 +27,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "transactions.info",
     "params": {
         "id": "49a4cc2b931e75da4676c5b06649543d3ea30f1097e944549e2ab3d67bc91e6a"
@@ -40,7 +40,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "id": "49a4cc2b931e75da4676c5b06649543d3ea30f1097e944549e2ab3d67bc91e6a",
         "blockId": "1957735382338577043",
@@ -97,7 +97,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "transactions.broadcast",
     "params": {
         "id": "49a4cc2b931e75da4676c5b06649543d3ea30f1097e944549e2ab3d67bc91e6a"
@@ -110,7 +110,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "id": "49a4cc2b931e75da4676c5b06649543d3ea30f1097e944549e2ab3d67bc91e6a",
         "signature": "304502210084484fc57bd1c0af1e6bf2fc79e1d5c210b29d7651e3482cc764d2160bbd887a0220776362194a30f4c04365061344dd4b4ac2cc6f5efc479afcda07d26be9621e04",
@@ -163,7 +163,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "transactions.create",
     "params": {
         "passphrase": "this is a top secret passphrase",
@@ -178,7 +178,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "id": "58f4f8ed866d2c6a42fc2b48d49fc5c949af6768b55d307376aaac61f930d8b6",
         "signature": "304402201ace9afcaf9d0ec64a31fd98c589767c76b5360d5b22dfe3cde2dfffdfef61dc022026d276a6140e6abbd80775541479cc71cf52590895bd24c0c577a9c57ecae581",
@@ -232,7 +232,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "method": "transactions.bip38.create",
     "params": {
         "bip38": "this is a top secret passphrase",
@@ -248,7 +248,7 @@ POST /
 ```json
 {
     "jsonrpc": "2.0",
-    "id": 1,
+    "id": "unique-request-id",
     "result": {
         "id": "729d8f1974bd1eb517619fe9a4c45c3e769f49bbe1b682237ef3f049038c5421",
         "signature": "304402207a4877d3515b2dc3c2d8bc337b767cea62718e80d4b9ba02d8f2f873c82e2987022067951e8aa731fed8223b650419c29ef7e71460807920604ea23d3c2872328217",

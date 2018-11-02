@@ -27,7 +27,7 @@ Make sure to modify the default names for the files:
  - **lib/index.js** (alias)
  - **lib/defaults.js** (exports)
 
-The name of our plugin is **demo-plugin**.
+The name of our plugin is **demo-plugin**. Make sure to change the name in your package.json accordingly. It is recommended to scope your packages with a prefix like `@your-vendor/` to distinguish it from other npm packages. Check [https://docs.npmjs.com/misc/scope](https://docs.npmjs.com/misc/scope) for more information.
 
 We're also going to require ***BigNumber*** to demonstrate how to properly add dependencies to the plugin.
 

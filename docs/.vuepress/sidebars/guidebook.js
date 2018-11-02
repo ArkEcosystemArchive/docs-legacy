@@ -6,7 +6,7 @@ module.exports = [
     collapsable: false,
     children: [
       "/guidebook/core/",
-      "/guidebook/node-lifecycle",
+      "/guidebook/core/node-lifecycle",
       "/guidebook/core/configuration",
       "/guidebook/core/database",
       "/guidebook/core/development",

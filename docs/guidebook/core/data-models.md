@@ -46,7 +46,7 @@ Transactions are the heart of any blockchain, cryptocurrency or otherwise. They 
 - **signature** *the signature of the sending party*
 - **signSignature** *if secondSignature is enabled, the second signature is stored here*
 - **signatures** *an array of the transaction's signatures, used in multisignature transactions to validate more than two signatures*
-- **vendorField** an optional text field written by the sender and associated with the transaction*
+- **vendorField** *an optional text field written by the sender and associated with the transaction*
 - **asset** *the type-specific transaction payload*
 - **confirmations** *the amount of times this transaction's block has been confirmed*
 - **timestamp**

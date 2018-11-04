@@ -50,7 +50,7 @@ docker-compose up -d
 *You can now enter your ark-core container and use nodejs in a Docker container (Linux environment).*
 
 ```bash
-docker exec -it ark-core bash
+docker exec -it ark-$NETWORK-core bash
 ```
 
 *Need to start everything from scratch and make sure there aren't any cached containers, images or volumes left, just use **purge_all.sh** script.*

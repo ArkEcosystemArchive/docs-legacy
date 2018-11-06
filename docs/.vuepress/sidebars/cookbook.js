@@ -18,7 +18,6 @@ module.exports = [
       "/cookbook/developer/send-transaction-ark-sdk",
       "/cookbook/developer/write-a-plugin",
       "/cookbook/developer/tester-cli-transaction",
-      "/cookbook/developer/listen-to-blockchain"
     ]
   },
   {

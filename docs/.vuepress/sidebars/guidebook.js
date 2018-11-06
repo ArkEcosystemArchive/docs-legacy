@@ -17,7 +17,6 @@ module.exports = [
       "/guidebook/core/plugins",
       "/guidebook/core/testing",
       "/guidebook/core/webhooks",
-      "/guidebook/core/data-models"
     ]
   },
   {

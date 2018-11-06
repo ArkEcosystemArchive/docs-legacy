@@ -61,7 +61,6 @@ Note in particular that private keys and passphrases are not included on this mo
 - **publicKey** *the wallet's public key, derived from private key*
 - **secondPublicKey** *if the wallet has enabled a second key, that second key is stored here*
 - **vote** *the delegate username of this wallet's vote recipient*
-- **createdAt** *the timestamp of this wallet's creation*
 
 ## Delegate
 

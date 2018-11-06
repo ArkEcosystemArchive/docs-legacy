@@ -84,4 +84,3 @@ Peers are nodes in the Ark network that work together to relay transactions and 
 - **status** *the operational status of the peer*
 - **os** *the operating system running on the peer*
 - **latency** *the average delay between contacting the peer and receiving a response*
-**

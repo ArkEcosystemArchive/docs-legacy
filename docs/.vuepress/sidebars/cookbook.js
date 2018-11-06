@@ -25,7 +25,8 @@ module.exports = [
     collapsable: false,
     children: [
       "/cookbook/node/setup",
-      "/cookbook/node/secure"
+      "/cookbook/node/secure",
+      "/cookbook/node/dynamic-fees"
     ]
   },
   {

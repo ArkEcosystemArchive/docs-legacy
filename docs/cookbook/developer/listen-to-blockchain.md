@@ -125,19 +125,19 @@ function listenToDelegate (block) {
 Next, we'll require our `event-emitter` into a listener object. We'll do so by loading our container, then resolving our plugin out of it:
 ```js
 const container = require('@arkecosystem/core-container')
-const listener = container.resolvePlugin('event-emitter')
+const emitter = container.resolvePlugin('event-emitter')
 ```
 Now, because we'll want to attach our listener when our node boots up and detach our listener when our node shuts down, we'll want to export functions that we can use in our plugin's `register` and `deregister` hooks. Let's add two functions to our `module.exports`:
 ```js
 const container = require('@arkecosystem/core-container')
-const listener = container.resolvePlugin('event-emitter')
+const emitter = container.resolvePlugin('event-emitter')
 
 module.exports = {
     startListening () {
-        listener.on('block.applied', listenToDelegate)
+        emitter.on('block.applied', listenToDelegate)
     },
     stopListening () {
-        listener.off('block.applied', listenToDelegate)
+        emitter.off('block.applied', listenToDelegate)
     }
 }
 
@@ -166,10 +166,10 @@ exports.plugin = {
     defaults: require('./defaults'),
     alias: 'core-delegate-listener',
     async register (container, options) {
-    startListening()
+      startListening()
     },
     async deregister (container, options) {
-    stopListening()
+      stopListening()
     }
 }
 ```

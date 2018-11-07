@@ -13,9 +13,9 @@ title: "Core Commander"
 ## Installation
 
 ```bash
-git clone https://github.com/ArkEcosystem/ARKcommander
-cd ARKcommander
-bash ARKcommander.sh
+git clone https://github.com/ArkEcosystem/core-commander
+cd core-commander
+bash commander.sh
 ```
 
 ## Security

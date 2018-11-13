@@ -47,6 +47,7 @@ This section describes the structure of all Ark APIs, as well as usage examples.
 
 [*Public API*](/api/public/) describes the API that's accessible through any Ark node. API references for Ark v1 and v2 are included.
 The [*SDK*](/api/sdk/) section includes information on how to use any of the Ark API wrappers we've written for supercharged development in your language of choice. Currently, the following SDKs are available:
+  - C++
   - .NET
   - Elixir
   - Go

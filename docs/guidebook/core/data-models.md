@@ -46,7 +46,7 @@ Transactions are the heart of any blockchain, cryptocurrency or otherwise. They 
 - **signature** *the signature of the sending party*
 - **signSignature** *if secondSignature is enabled, the second signature is stored here*
 - **signatures** *an array of the transaction's signatures, used in multisignature transactions to validate more than two signatures*
-- **vendorField** an optional text field written by the sender and associated with the transaction*
+- **vendorField** *an optional text field written by the sender and associated with the transaction*
 - **asset** *the type-specific transaction payload*
 - **confirmations** *the amount of times this transaction's block has been confirmed*
 - **timestamp**
@@ -61,7 +61,6 @@ Note in particular that private keys and passphrases are not included on this mo
 - **publicKey** *the wallet's public key, derived from private key*
 - **secondPublicKey** *if the wallet has enabled a second key, that second key is stored here*
 - **vote** *the delegate username of this wallet's vote recipient*
-- **createdAt** *the timestamp of this wallet's creation*
 
 ## Delegate
 
@@ -85,4 +84,3 @@ Peers are nodes in the Ark network that work together to relay transactions and 
 - **status** *the operational status of the peer*
 - **os** *the operating system running on the peer*
 - **latency** *the average delay between contacting the peer and receiving a response*
-**

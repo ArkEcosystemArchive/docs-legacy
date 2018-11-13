@@ -146,7 +146,7 @@ PUT /api/webhooks/{id}
 |------|:------:|----------------------------------------------|:------------------:|
 | id   | string | The identifier of the webhook to be updated. | :white_check_mark: |
 
-### Query Parameters
+### Body Parameters
 
 | Name       | Type   | Description                                             | Required |
 |------------|:------:|---------------------------------------------------------|:--------:|

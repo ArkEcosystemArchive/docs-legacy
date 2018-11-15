@@ -72,7 +72,6 @@ module.exports = {
   '@arkecosystem/core-database': {},
   '@arkecosystem/core-database-sequelize': {},
   '@arkecosystem/core-transaction-pool': {},
-  '@arkecosystem/core-transaction-pool-redis': {},
   '@arkecosystem/core-p2p': {},
   '@arkecosystem/core-blockchain': {},
   '@arkecosystem/core-api': {},

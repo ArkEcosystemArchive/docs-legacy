@@ -27,12 +27,6 @@ This variable is used to specify the password `@arkecosystem/core-database-seque
 **ARK_DB_DATABASE**
 This variable is used to specify the database `@arkecosystem/core-database-sequelize` will use. The default is `ark_devnet`.
 
-**ARK_REDIS_HOST**
-This variable is used to specify the redis host any plugins will use. The default is `localhost`.
-
-**ARK_REDIS_PORT**
-This variable is used to specify the redis port any plugins will use. The default is `6379`.
-
 **ARK_P2P_HOST**
 This variable is used to specify the host `@arkecosystem/core-p2p` will use. The default is `0.0.0.0`.
 

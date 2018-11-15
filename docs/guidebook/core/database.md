@@ -6,7 +6,7 @@ title: "Database"
 
 In order to operate a node in any Ark network you need some way of storing the blocks, transactions and wallets in a database on your server.
 
-The default driver for database communication we provide is Postgres.
+The default driver for database communication we provide is [PostgresQL](https://www.postgresql.org/).
 
 ## A look under the hood
 

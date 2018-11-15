@@ -55,7 +55,7 @@ bash core-commander/commander.sh
 
 8. Log back in and run Core Commander with bash again
 ```sh
-bash core-commander/commander.sh
+username@host:~$ bash core-commander/commander.sh
 ```
 
 9. You will be told that your system is up to date

@@ -168,7 +168,7 @@ GET /api/transactions/unconfirmed/{id}
 {
     "data": {
         "id": "5c6ce775447a5acd22050d72e2615392494953bb1fb6287e9ffb3c33eaeb79aa",
-        "blockId": "4271682877946294396",
+        "blockId": "",
         "type": 0,
         "amount": 32106400000,
         "fee": 10000000,

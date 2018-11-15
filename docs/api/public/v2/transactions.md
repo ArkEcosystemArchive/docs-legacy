@@ -152,7 +152,9 @@ GET /api/transactions/unconfirmed
 
 ### Endpoint
 
+```
 GET /api/transactions/unconfirmed/{id}
+```
 
 ### Query Parameters
 

@@ -9,7 +9,7 @@ The experience is similar to the old solution for v1: Ark Commander.
 
 Core Commander only supports Ubuntu (16.04, 18.04).
 
-Docker images for running a relay node with configurability can be found [there](./docker).
+Docker images for running a relay node with configurability can be found [there](/cookbook/exchanges/docker).
 
 ## Requirements
  - 4GB RAM
@@ -17,44 +17,74 @@ Docker images for running a relay node with configurability can be found [there]
  - 2 Cores
 
 ## Instructions
-
 On a fresh Ubuntu installation, follow these commands
 
+1. Update and Upgrade
 ```sh
 sudo apt-get update && sudo apt-get upgrade
+```
+
+2. Add new user and add to sudo group
+```sh
 sudo adduser username
 sudo usermod -aG sudo username
+```
+
+3. Login to the new user account and clone Core Commander
+```sh
 sudo su - username
 git clone https://github.com/ArkEcosystem/core-commander
+```
+
+4. Execute commander.sh with bash
+```sh
 bash core-commander/commander.sh
 ```
 
-You will be asked for your sudo password
+5. Enter your sudo password
+![sudo password welcome screen Core Commander](./assets/relay/password_ask-07.png)
 
-After entering your password, it will immediately install dependencies and configure things like NTP and PostgreSQL
+6. Let Core Commander install software dependencies
+![dependency 1](./assets/relay/installing-deps-1.png)
+![dependency 2](./assets/relay/installing-deps-2.png)
+![dependency 3](./assets/relay/installing-deps-3.png)
+![dependency 4](./assets/relay/installing-deps-5.png)
 
-With dependencies installed, your system will be updated and upgraded
+7. Reboot your system
+![reboot when dependencies have installed](./assets/relay/ask_for_reboot-08.png)
 
-Once finished, you are asked to reboot your system
+8. Log back in and run Core Commander with bash again
+```sh
+bash core-commander/commander.sh
+```
 
-After logging back into `username` after the reboot, run Core Commander again
+9. You will be told that your system is up to date
+![system is up to date](./assets/relay/commander-after-install-first-boot-09.png)
 
-You will be told that your system is up to date
+10. Choose `I`, `ENTER` to Install Ark Core on the main menu
+![main menu press I to install Ark Core](./assets/relay/install-main-menu-10.png)
 
-And brought to the main menu, where you can choose `I` to Install Ark Core
+11. Let Core Commander clone and build Ark Core
+![build and clone Ark Core](./assets/relay/install-progress-11.png)
 
-With password entered, it will clone and build the repo
+12. Choose your network version
+![select network version (mainnet)](./assets/relay/configure-network-12.png)
 
-Then ask you to choose your network version
+13. Configure database settings and log level for your setup
+![configure host, port, username, password and name for database](./assets/relay/configure-5.png)
+![configure log level](./assets/relay/configure-6.png)
 
-And configure Ark Core settings (database host, database port, database username, database password, database name)
+14. Start the relay node
+![enter Y to start the relay node](./assets/relay/start-relay-13.png)
 
-Also log level
+15. Monitor the sync progress with `R`, `ENTER`, `L`, `ENTER`
+![enter R on main menu](./assets/relay/start-relay-14.png)
+![enter L on Relay menu](./assets/relay/show-logs-16.png)
+![relay syncing logs shown](./assets/relay/log-example-17.png)
 
-And finally it will ask you to start the relay node when the database has been configured
+The node will sync and the messages will show you when it is ready to be used.
 
-Now that the relay is on, we can check its logs (`R`, `ENTER`, `L`, `ENTER`)
+## Notes
+Please read the documentation pages for all of our [Ark Client and Crypto libraries](/api/sdk/) (offerred in many programming languages).
 
-Then, the sync logs are shown
-
-The node will sync and the messages will show you when it is ready to be used
+Also, read the [API documentation](/api/public/v2/).

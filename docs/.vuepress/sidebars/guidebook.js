@@ -8,7 +8,6 @@ module.exports = [
       "/guidebook/core/",
       "/guidebook/core/node-lifecycle",
       "/guidebook/core/configuration",
-      "/guidebook/core/database",
       "/guidebook/core/development",
       "/guidebook/core/docker",
       "/guidebook/core/events",

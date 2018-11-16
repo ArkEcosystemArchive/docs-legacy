@@ -13,25 +13,19 @@ Ark Core allows you to use an [.env](https://github.com/bevry/envfile) to provid
 This variable is used to specify the file `@arkecosystem/core-logger-winston` will use to create logfiles. The default is `${process.env.ARK_PATH_DATA}/logs/core/${process.env.ARK_NETWORK_NAME}/%DATE%.log`.
 
 **ARK_DB_STORAGE**
-This variable is used to specify the file `@arkecosystem/core-database-sequelize` will use for SQLite. The default is `${process.env.ARK_PATH_DATA}/database/${process.env.ARK_NETWORK_NAME}.sqlite`.
+This variable is used to specify the file `@arkecosystem/core-database-postgres` will use for PostgreSQL. The default is `${process.env.ARK_PATH_DATA}/database/${process.env.ARK_NETWORK_NAME}`.
 
 **ARK_DB_HOST**
-This variable is used to specify the host `@arkecosystem/core-database-sequelize` will use for PostgreSQL. The default is `localhost`.
+This variable is used to specify the host `@arkecosystem/core-database-postgres` will use for PostgreSQL. The default is `localhost`.
 
 **ARK_DB_USERNAME**
-This variable is used to specify the username `@arkecosystem/core-database-sequelize` will use for PostgreSQL. The default is `ark`.
+This variable is used to specify the username `@arkecosystem/core-database-postgres` will use for PostgreSQL. The default is `ark`.
 
 **ARK_DB_PASSWORD**
-This variable is used to specify the password `@arkecosystem/core-database-sequelize` will use for PostgreSQL. The default is `password`.
+This variable is used to specify the password `@arkecosystem/core-database-postgres` will use for PostgreSQL. The default is `password`.
 
 **ARK_DB_DATABASE**
-This variable is used to specify the database `@arkecosystem/core-database-sequelize` will use. The default is `ark_devnet`.
-
-**ARK_REDIS_HOST**
-This variable is used to specify the redis host any plugins will use. The default is `localhost`.
-
-**ARK_REDIS_PORT**
-This variable is used to specify the redis port any plugins will use. The default is `6379`.
+This variable is used to specify the database `@arkecosystem/core-database-postgres` will use. The default is `ark_devnet`.
 
 **ARK_P2P_HOST**
 This variable is used to specify the host `@arkecosystem/core-p2p` will use. The default is `0.0.0.0`.

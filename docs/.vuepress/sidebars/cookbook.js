@@ -50,7 +50,8 @@ module.exports = [
     collapsable: false,
     children: [
       "/cookbook/exchanges/communication",
-      "/cookbook/exchanges/installation"
+      "/cookbook/exchanges/installation",
+      "/cookbook/exchanges/relay"
     ]
   },
 ];

@@ -17,7 +17,9 @@ pip install arkecosystem-client
 ### Example for v2
 
 ```python
-client = ArkClient('http://127.0.0.1:4003/api/')
+from ark.client import ArkClient
+
+client = ArkClient('http://127.0.0.1:4003/api')
 
 delegates = ark.delegates().delegates()
 delegates = client.delegates.all()
@@ -26,7 +28,9 @@ delegates = client.delegates.all()
 ### Example for v1
 
 ```python
-client = ArkClient('http://127.0.0.1:4002/api/', api_version='v1')
+from ark.client import ArkClient
+
+client = ArkClient('http://127.0.0.1:4002/api', api_version='v1')
 
 delegates = ark.delegates().delegates()
 delegates = client.delegates.all()

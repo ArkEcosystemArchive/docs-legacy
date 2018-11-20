@@ -41,7 +41,7 @@ You can use dynamic fee constants to alter how the dynamic fee formula is applie
 ```
 Notice the first two keys in the `dynamicFees` object: `minFeePool` and `minFeeBroadcast`. 
 
-The `minFeePool` value represents the minimum fee a transaction should have to include the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee a transaction should have in order to broadcast this transaction to peers for possible inclusion elsewhere in the network. Differentating between these two values can allow forgers to filter out low-fee transactions without rejecting them from the network altogether.
+The `minFeePool` value represents the minimum fee in Arktoshi per byte a transaction should have to include the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Arktoshi per byte a transaction should have in order to broadcast this transaction to peers for possible inclusion elsewhere in the network. Differentating between these two values can allow forgers to filter out low-fee transactions without rejecting them from the network altogether.
 
 Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation add this addonBytes value to each transaction's length in bytes before multiplying by the node's arktoshi-per-byte value:
 ```js

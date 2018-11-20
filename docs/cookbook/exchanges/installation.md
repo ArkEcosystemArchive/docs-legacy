@@ -7,28 +7,35 @@ title: "Installation"
 [[toc]]
 
 ::: danger
-All calls should be made from the server where RPC is running at ( i.e., `localhost` or `127.0.0.1` ). The RPC server should never be publicly accessible. If you wish to access ark-rpc from a remote address, you can whitelist the address with `--allow <address>`. Addresses allow you to use wildcards, eg. `192.168.1.*` or `10.0.*.*`.
+All calls should be made from the server where RPC is running at (i.e., `localhost` or `127.0.0.1`). The RPC server should never be publicly accessible. If you wish to access ark-rpc from a remote address, you can whitelist the address in `~/.ark/config/plugins.js`. Addresses allow you to use wildcards, eg. `192.168.1.*` or `10.0.*.*`.
 :::
 
 If you do want to allow access from all remotes, start ark-rpc with the `--allow-remote` command-line switch. This can be dangerous.
 
-## Installing and running the RPC server
+## Installation
 
-- install Node.JS ( https://nodejs.org/en/download/package-manager/)
-- install forever `npm install -g forever`
-- install ark-rpc: `npm install arkecosystem/ark-rpc#master`
-- start RPC server: `ark-rpc --port 8000` (default port is 8080)
+The JSON-RPC is installed by default but disabled. You can find its configuration in `~/.ark/config/plugins.js`.
 
-## Docker installation
-
-If you would like to run from a docker environment, you will first need to build the container by running:
-
-```bash
-docker build -t ark-rpc .
+```js
+module.exports = {
+  ...
+  '@arkecosystem/core-json-rpc': {
+    enabled: process.env.ARK_JSON_RPC_ENABLED,
+    host: process.env.ARK_JSON_RPC_HOST || '0.0.0.0',
+    port: process.env.ARK_JSON_RPC_PORT || 8080,
+    allowRemote: false,
+    whitelist: ['127.0.0.1', '::ffff:127.0.0.1'],
+    database: {
+      uri: process.env.ARK_JSON_RPC_DATABASE || `sqlite://${process.env.ARK_PATH_DATA}/database/json-rpc.sqlite`,
+      options: {},
+    },
+  },
+  ...
+}
 ```
 
-You will need to run the container with the `--allow-remote` option to allow the host machine to access the container.
+If you wish to enable the JSON-RPC simply open the `~/.ark/.env` file and insert `ARK_JSON_RPC_ENABLED=true`. Once you have done that you need to restart your relay and you are all setup.
 
-```bash
-docker run -d -p 8080:8080 ark-rpc --allow-remote
-```
+## Usage
+
+Now that the JSON-RPC is configured head over to the [JSON-RPC API Reference](/api/json-rpc/) to get started with the integration process into your applications.

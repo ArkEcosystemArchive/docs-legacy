@@ -84,7 +84,12 @@ username@host:~$ bash core-commander/commander.sh
 
 The node will sync and the messages will show you when it is ready to be used.
 
+## JSON-RPC
+
+Now that the relay is setup you can head over to the [JSON-RPC installation guide](/cookbook/exchanges/installation.html) if you wish to use the JSON-RPC to manage your wallets and transactions.
+
 ## Notes
+
 Please read the documentation pages for all of our [Ark Client and Crypto libraries](/api/sdk/) (offerred in many programming languages).
 
 Also, read the [API documentation](/api/public/v2/).

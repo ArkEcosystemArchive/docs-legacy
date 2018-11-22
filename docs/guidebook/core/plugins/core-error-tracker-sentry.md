@@ -16,6 +16,8 @@ yarn add @arkecosystem/core-error-tracker-sentry
 
 ## Configuration
 
+> Check https://docs.sentry.io/quickstart?platform=node to find your DSN and more information about available options.
+
 ```js
 module.exports = {
   dsn: process.env.ARK_ERROR_TRACKER_SENTRY_DSN,

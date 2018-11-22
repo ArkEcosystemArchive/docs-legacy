@@ -16,6 +16,8 @@ yarn add @arkecosystem/core-error-tracker-bugsnag
 
 ## Configuration
 
+> Check https://docs.bugsnag.com/platforms/nodejs/other/configuration-options/ for more options and details.
+
 ```js
 module.exports = {
   apiKey: process.env.ARK_ERROR_TRACKER_BUGSNAG_API_KEY,

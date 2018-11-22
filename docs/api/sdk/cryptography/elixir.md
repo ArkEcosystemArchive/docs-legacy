@@ -12,7 +12,7 @@ The package can be installed by adding `arkecosystem_crypto` to your list of dep
 
 ```elixir
 def deps do
-  [{:arkecosystem_crypto, "~> 0.1.0"}]
+  {:arkecosystem_crypto, "~> 0.1.0"}
 end
 ```
 

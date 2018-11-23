@@ -80,6 +80,10 @@ POST /
 This replaces the `POST /:network/broadcast` endpoint.
 :::
 
+::: warning
+In order to broadcast transactions via the JSON-RPC they also need to be created through it. If you are looking to just broadcast any transactions you should take a look at [Create a transactions](/api/public/v2/transactions.html#create-a-transaction) for the public API.
+:::
+
 ### Endpoint
 
 ```

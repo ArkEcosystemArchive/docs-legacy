@@ -46,7 +46,7 @@ echo($buffer->getHex());
 ```php
 use ArkEcosystem\Crypto\Transactions\Deserializer;
 
-$transaction = Deserializzer::new($serializedTransaction)->deserialize();
+$transaction = Deserializer::new($serializedTransaction)->deserialize();
 
 echo($transaction->id);
 ```

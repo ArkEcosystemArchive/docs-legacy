@@ -2,11 +2,11 @@
 title: "API Reference"
 ---
 
+# Introduction
+
 ::: warning
 All HTTP requests have to be send with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
 :::
-
-# Introduction
 
 This is an API reference to the various Ark Ecosystem codebases.
 

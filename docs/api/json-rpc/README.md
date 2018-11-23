@@ -4,6 +4,10 @@ title: "JSON-RPC"
 
 # Introduction
 
+::: warning
+All HTTP requests have to be send with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+:::
+
 ```js
 const axios = require('axios')
 
@@ -17,6 +21,10 @@ const init = async () => {
         userId: require('crypto').randomBytes(32).toString('hex'),
         bip38: 'this is a top secret passphrase'
       }
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
     })
 
     console.log(response.data.result.address)

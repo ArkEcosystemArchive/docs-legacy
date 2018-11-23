@@ -2,6 +2,10 @@
 title: "JSON-RPC"
 ---
 
+::: warning
+If you are looking to just broadcast transactions you should take a look at [Create a transactions](/api/public/v2/transactions.html#create-a-transaction) for the public API instead.
+:::
+
 # JSON-RPC
 
 ::: tip

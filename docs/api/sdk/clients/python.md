@@ -54,7 +54,7 @@ print(client.blocks.all(limit=10))
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.blocks.all(page=5, limit=10))
 
@@ -76,7 +76,7 @@ print(client.delegates.all(limit=51))
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.delegates.all(page=5, limit=20))
 
@@ -100,7 +100,7 @@ print(client.loader.sync_status())
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.node.syncing())
 
@@ -122,7 +122,7 @@ print(client.peers.all(limit=10))
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.peers.all())
 
@@ -156,7 +156,7 @@ print(client.transactions.all(limit=10))
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.transactions.all(limit=5))
 
@@ -168,7 +168,7 @@ print(client.transactions.all(limit=5))
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.votes.all(limit=5))
 
@@ -180,7 +180,7 @@ print(client.votes.all(limit=5))
 ```python
 from client import ArkClient
 
-client = ArkClient('https://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 
 print(client.wallets.all(limit=5))
 

@@ -71,8 +71,8 @@ A transaction is increasingly valid the more blocks are forged, as sometimes err
 
 It is recommended to let several blocks be forged before taking any action related to the transaction.
 
-## DArk Address
-A DArk address behaves like a normal Ark address, but it is only available on the Development Network of Ark and holds the DARK currency.
+## Dark Address
+A Dark address behaves like a normal Ark address, but it is only available on the Development Network of Ark and holds the DARK currency.
 
 ## Reward
 Once very 8 seconds, when a block is forged, the fees for every transaction and a steady bonus is awarded to the forging delegate.

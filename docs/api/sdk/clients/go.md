@@ -48,7 +48,7 @@ func main() {
     client := two.NewClient(nil)
 
     // You can specify the URL of your choice otherwise a default one is provided
-    url, _ := url.Parse("https://explorer.ark.io:4001/api/")
+    url, _ := url.Parse("http://my.node.ip:port/api/")
     client.BaseURL = url
     // And then start to work with it
     // ...

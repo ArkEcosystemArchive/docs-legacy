@@ -37,8 +37,8 @@ fn main() {
     // For v1
     let v1 = Connection::<One>::new("http://my.ark.node:port/api/");
     // For v2
-    // Parameters are passed as a Vec of string tuples (key, value).
     let v2 = Connection::<Two>::new("http://my.ark.node:port/api/");
+    // Parameters are passed as a Vec of string tuples (key, value).
     let params = Vec::<(String, String)>::new();
     // ...
 }
@@ -94,7 +94,7 @@ println!("{:?}", delegates);
 
 ```rust
 // ...
-let blocks = v2.blocks.all(&params);
+let blocks = v2.delegates.all(&params);
 println!("{:?}", blocks);
 
 ... > Ok(Response { meta: Some(Meta {
@@ -139,7 +139,6 @@ println!("{:?}", peers);
 ```
 
 ```rust
-// Invalid type integer 200 expected a string line: 0 column 0 libcore\result.rs:1009:5
 // ...
 let peers = v2.peers.all(&params);
 println!("{:?}", peers);
@@ -165,7 +164,7 @@ println!("{:?}", signatures);
 
 ```rust
 // ...
-let transactions = v1.peers.transactions(vec![("", "")]);
+let transactions = v1.transactions.all(vec![("", "")]);
 println!("{:?}", transactions);
 
 ... > Ok(Object({

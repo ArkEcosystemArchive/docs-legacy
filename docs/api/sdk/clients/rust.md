@@ -94,7 +94,7 @@ println!("{:?}", delegates);
 
 ```rust
 // ...
-let blocks = v2.delegates.all(&params);
+let delegates = v2.delegates.all(&params);
 println!("{:?}", blocks);
 
 ... > Ok(Response { meta: Some(Meta {

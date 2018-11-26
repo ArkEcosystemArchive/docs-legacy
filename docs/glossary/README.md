@@ -71,14 +71,13 @@ A transaction is increasingly valid the more blocks are forged, as sometimes err
 
 It is recommended to let several blocks be forged before taking any action related to the transaction.
 
-## Transport
-A Transport happens to data as it flows through the network from peer to peer.
-
-## Dark Address
-A Dark address is on the Development Network of Ark and holds the DARK currency.
+## DArk Address
+A DArk address behaves like a normal Ark address, but it is only available on the Development Network of Ark and holds the DARK currency.
 
 ## Reward
-A reward is attributed to the block creator for its validation efforts.
+Once very 8 seconds, when a block is forged, the fees for every transaction and a steady bonus is awarded to the forging delegate.
+
+The block reward is important to provide an economic incentive for delegates to remain in the top 51.
 
 ## Fee
 On the Ark blockchain and similar Bridgechains, fees are charged based on the type of transaction sent. A flat fee can be charged for every transfer of ARK from one address to another or when performing transactions such as: delegate registrations, second signature registrations, multisignature registrations, etc.
@@ -94,11 +93,15 @@ The height of the blockchain refers to a specific point in its history and is ca
 
 Future height can be estimated based on block times which are governed by the network-specific consensus algorithm.
 
-## Forged
-A forged block is created by a delegate.
+## Forged block
+A forged block is a collection of transactions which were verified and bundled into a block by a delegate. There is a total of 51 blocks per round, each being forged by a unique delegate within that round. Once every 8 seconds, a new forged block is appended to the Blockchain, further confirming the validity of the preceding block.
+
+Forging can only be performed by one top delegate at a time, otherwise there would most likely be many diverging chains due to the lack of coordination. 
 
 ## Block missed
-A block missed wasn't forged by the approved delegate on time.
+Sometimes, a delegate can have problems with their responsibility to forge a block when their time comes to do so.
+
+When a delegate doesn't forge and broadcast a block within the time slot allocated, their productivity decreases. Delegates with lower productivity typically lose voters when they begin missing many blocks.
 
 ## Approval
 This is a value derived from the amount of votes, counted in ARK, a delegate has to their name and the total amount of ARK used for voting on the Blockchain.
@@ -106,7 +109,7 @@ This is a value derived from the amount of votes, counted in ARK, a delegate has
 Delegates with more votes than others will also show a higher approval rating, often shown in percentage.
 
 ## Vote
-A vote is a weighing of the voting power towards a delegate
+In a Proof of Stake Blockchain like Ark, the nodes responsible for forging blocks are the 51 registered delegates who have the most votes. A given address can only vote for a single registered delegate and the weight of a vote is proportional to the amount of ARK held by the voter.
 
 ## Voter
-A voter holds the power to elect a delegate with his account.
+Every Ark address with a sufficient balance can become a voter by sending a vote.

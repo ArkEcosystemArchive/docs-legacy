@@ -32,7 +32,7 @@ A delegate is any account, or account owner, who has registered as one on the Bl
 
 Once an account is recorded as an eligible delegate in the Blockchain, it may be the recipient of vote transactions (pledges) by other accounts.
 
-For Ark, the top 51 delegates are responsible of forging blocks and maintaining consensus over the transaction history of the Blockchain. If a deleagte is inactive for a given 51 block round, it temporarily loses its ability to forge a block and is replaced by another delegate.
+For Ark, the top 51 delegates are responsible of forging blocks and maintaining consensus over the transaction history of the Blockchain. If a delegate is inactive for a given 51 block round, it temporarily loses its ability to forge a block and is replaced by another delegate.
 
 Delegated block production is an advantage for a Blockchain. It allows for a seamless processing of blocks because the delegates are incentivized, through monetary reward, to maintain their voters' pledges by acting appropriately.
 

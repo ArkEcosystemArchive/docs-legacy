@@ -53,6 +53,7 @@ module.exports = [
       "/guidebook/core/plugins/core-utils",
       "/guidebook/core/plugins/core-vote-report",
       "/guidebook/core/plugins/core-webhooks",
+      "/guidebook/core/plugins/crypto"
     ]
   },
   {

@@ -23,13 +23,13 @@ Let’s look over an Ark network transaction step by step so you can see how it 
 
 ![Transactions 1](./assets/understanding-transactions-and-block-propagation/Transactions_01.png)
 
-Dustin owned 50 ARK and yesterday Jim sent Dustin 100 ARK.  Dustin now has a balance of 150 ARK in his wallet.
+Dustin owned 50 ARK and yesterday John sent Dustin 100 ARK.  Dustin now has a balance of 150 ARK in his wallet.
 
 Today Dustin decided to send Cassandra her first 100 ARK.   Dustin will now go into his wallet to initiate the transaction by inputting Cassandra's Public Key (address), Amount of ARK to send (100) and pressing Send.  When he presses send he will have to input his Private Key, which is like a password, and confirms the transaction.
 
 ![Transactions 3](./assets/understanding-transactions-and-block-propagation/Transactions_03.png)
 
-Inside this transaction is a reference to a prior output (Jim sending the 100 ARK) in the input (The 100 ARK being sent to Cassandra) so that the network can verify Dustin has the ARK in his wallet necessary to complete the transaction.
+Inside this transaction is a reference to a prior output (John sending the 100 ARK) in the input (The 100 ARK being sent to Cassandra) so that the network can verify Dustin has the ARK in his wallet necessary to complete the transaction.
 
 ![Transactions 4](./assets/understanding-transactions-and-block-propagation/Transactions_04.png)
 

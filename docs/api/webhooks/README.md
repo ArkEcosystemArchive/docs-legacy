@@ -2,6 +2,12 @@
 title: "Webhooks"
 ---
 
+# Webhooks
+
+::: warning
+All HTTP requests have to be send with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+:::
+
 ## Authentication
 
 In order to communicate with the Webhooks API you will need to provide the token you configured on your node through the `Authorization` header. Authenticating with an invalid token will return `401 Unauthorized`.

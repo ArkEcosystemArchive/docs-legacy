@@ -7,7 +7,8 @@ module.exports = [
     children: [
       "/cookbook/usage-guides/how-to-use-ark-explorer",
       "/cookbook/usage-guides/how-to-use-ark-desktop-wallet",
-      "/cookbook/usage-guides/how-to-use-ark-mobile-wallet"
+      "/cookbook/usage-guides/how-to-use-ark-mobile-wallet",
+      "/cookbook/usage-guides/how-to-vote-in-the-ark-desktop-wallet"
     ]
   },
   {

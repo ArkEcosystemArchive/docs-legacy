@@ -45,7 +45,6 @@ module.exports = [
       "/guidebook/core/plugins/core-logger-winston",
       "/guidebook/core/plugins/core-p2p",
       "/guidebook/core/plugins/core-snapshots",
-      "/guidebook/core/plugins/core-snapshots-cli",
       "/guidebook/core/plugins/core-test-utils",
       "/guidebook/core/plugins/core-tester-cli",
       "/guidebook/core/plugins/core-transaction-pool",

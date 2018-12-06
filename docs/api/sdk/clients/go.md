@@ -159,7 +159,7 @@ func main() {
 func main() {
 	// ...
 	query := &two.Pagination{Limit: 10}
-	responseStruct, _, _ := client.Delegates.List(context.Background(), query)
+	responseStruct, _, _ := client.Node.Status(context.Background())
 
 	spew.Dump(responseStruct)
 }
@@ -202,7 +202,7 @@ func main() {
 ... > }})
 ```
 
-### Signatures - V1 
+### Signatures - V1
 
 ```go
 func main() {

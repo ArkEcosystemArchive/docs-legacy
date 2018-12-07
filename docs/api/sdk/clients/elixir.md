@@ -29,11 +29,11 @@ $ mix deps.get
 
 ### Initializing the Client
 
-First step is to initialize the Client
+First step is to initialize the Client, the nethash and version values might be different :
 
 ```elixir
 iex > client = ArkEcosystem.Client.new(%{
-... >             host: "http://128.199.60.136:4001/api",
+... >             host: "http://my.node.ip:myport/api",
 ... >             nethash: "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23",
 ... >             version: "1.1.1"
 ... > })
@@ -132,7 +132,7 @@ iex> ArkEcosystem.Client.API.Two.Peers.list(client)
 
 [More details](https://github.com/ArkEcosystem/elixir-client/blob/master/lib/arkecosystem/client/api/two/peers.ex#L8)
 
-### Signatures - V1 
+### Signatures - V1
 
 ```elixir
 iex> ArkEcosystem.Client.API.One.Signatures.fee(client)

@@ -95,7 +95,7 @@ println!("{:?}", delegates);
 ```rust
 // ...
 let delegates = v2.delegates.all(&params);
-println!("{:?}", blocks);
+println!("{:?}", delegates);
 
 ... > Ok(Response { meta: Some(Meta {
 ... > ...
@@ -199,7 +199,7 @@ println!("{:?}", votes);
 ```rust
 // ...
 let wallets = v2.wallets.all(&params).unwrap();
-println!("{:?}", votes);
+println!("{:?}", wallets);
 
 ... > Ok(Response { meta: Some(Meta {
 ... > ...

@@ -48,10 +48,10 @@ module.exports = [
       "/guidebook/core/plugins/core-test-utils",
       "/guidebook/core/plugins/core-tester-cli",
       "/guidebook/core/plugins/core-transaction-pool",
-      "/guidebook/core/plugins/core-transaction-pool-mem",
       "/guidebook/core/plugins/core-utils",
       "/guidebook/core/plugins/core-vote-report",
       "/guidebook/core/plugins/core-webhooks",
+      "/guidebook/core/plugins/crypto"
     ]
   },
   {

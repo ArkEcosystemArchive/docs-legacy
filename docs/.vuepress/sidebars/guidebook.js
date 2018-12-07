@@ -30,7 +30,6 @@ module.exports = [
       "/guidebook/core/plugins/core-config",
       "/guidebook/core/plugins/core-container",
       "/guidebook/core/plugins/core-database",
-      "/guidebook/core/plugins/core-database-postgres",
       "/guidebook/core/plugins/core-debugger-cli",
       "/guidebook/core/plugins/core-deployer",
       "/guidebook/core/plugins/core-elasticsearch",

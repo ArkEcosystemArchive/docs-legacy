@@ -70,14 +70,14 @@ GET /api/blocks
 ### Endpoint
 
 ```
-GET /api/blocks/{id}
+GET /api/blocks/{id|height}
 ```
 
 ### Path Parameters
 
-| Name | Type   | Description                                  | Required           |
-|------|:------:|----------------------------------------------|:------------------:|
-| id   | string | The identifier of the block to be retrieved. | :white_check_mark: |
+| Name | Type   | Description                                            | Required           |
+|------|:------:|--------------------------------------------------------|:------------------:|
+| id   | string | The identifier or height of the block to be retrieved. | :white_check_mark: |
 
 ### Response
 

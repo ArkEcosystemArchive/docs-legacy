@@ -32,8 +32,6 @@ gem 'arkecosystem-client'
 ```ruby
 require 'arkecosystem/client'
 
-// V1
-connection = ArkEcosystem::Client::Connection.new(host: 'http://my.ark.node:port/api/', version: 1)
 // V2
 connection = ArkEcosystem::Client::Connection.new(host: 'http://my.ark.node:port/api/', version: 2)
 ... 
@@ -49,12 +47,12 @@ manager = ArkEcosystem::Client::ConnectionManager.new()
 
 manager.connect(ArkEcosystem::Client::Connection.new({
   host: "http://my.ark.node:port/api/",
-  version: 1
+  version: 2
 }), 'main')
 
 manager.connect(ArkEcosystem::Client::Connection.new({
   host: "http://my.ark.node:port/api/",
-  version: 1
+  version: 2
 }), 'backup')
 
 begin
@@ -70,33 +68,7 @@ else
 end
 ```
 
-### Accounts - V1
-
-```ruby
-// ...
-response = connection.accounts.balance('AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv').body
-
-if response['success']
-  puts response['balance']
-end
-
-... > 2039101835000000
-```
-
-### Blocks V1 and V2
-
-```ruby
-// ...
-response = connection.blocks.all().body
-
-if response['success']
-  puts response
-end
-
-... > {"success"=>true, "blocks"=>[{
-... > ...
-... > }]}
-```
+### Blocks V2
 
 ```ruby
 // ...
@@ -109,20 +81,7 @@ puts response
 ... > }}
 ```
 
-### Delegates V1 and V2
-
-```ruby
-// ...
-response = connection.delegates.all().body
-
-if response['success']
-  puts response
-end
-
-... > {"success"=>true, "delegates"=>[{
-... > ...
-... > }]}
-```
+### Delegates V2
 
 ```ruby
 // ...
@@ -133,21 +92,6 @@ puts response
 ... > {"meta"=>{"count"=>100,
 ... > ...
 ... > }}
-```
-
-### Loader - V1
-
-```ruby
-// ...
-response = connection.loader.status().body
-
-if response['success']
-  puts response
-end
-
-... > {"success"=>true, ...
-... > ...
-... > }
 ```
 
 ### Node - V2
@@ -163,20 +107,7 @@ puts response
 ... > }}
 ```
 
-### Peers - V1 and V2
-
-```ruby
-// ...
-response = connection.peers.all().body
-
-if response['success']
-  puts response
-end
-
-... > {"success"=>true, "peers"=>[{
-... > ...
-... > }]}
-```
+### Peers - V2
 
 ```ruby
 // ...
@@ -189,33 +120,7 @@ puts response
 ... > }}
 ```
 
-### Signatures - V1 
-
-```ruby
-// ...
-response = connection.signatures.fee().body
-
-if response['success']
-  puts response
-end
-
-... > {"success"=>true, "fee"=>500000000}
-```
-
-### Transactions - V1 and V2
-
-```ruby
-// ...
-response = connection.transactions.all().body
-
-if response['success']
-  puts response
-end
-
-... > {"success"=>true, "transactions"=>[{
-... > ...
-... > }]}
-```
+### Transactions - V2
 
 ```ruby
 // ...

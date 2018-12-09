@@ -31,60 +31,12 @@ First step is to initialize the Client
 const Client = require('@arkecosystem/client')
 
 const client = new Client('http://my.node.ip:port');
-// For V1
-client.setVersion(1);
 // For V2
 client.setVersion(2);
 ...
 ```
 
-### Accounts - V1
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('accounts').all('limit': 1);
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ accounts:
-... > [{
-... >   ...
-... > }]
-... >}
-```
-
-### Blocks V1 and V2
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('blocks').all('limit': 1);
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ blocks:
-... > [{
-... >   ...
-... > }]
-... >}
-```
+### Blocks V2
 
 ```js
 ...
@@ -108,29 +60,7 @@ init().then(json => {
 ... >}
 ```
 
-### Delegates V1 and V2
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('delegates').search({"q": "ark", "limit": 1});
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ delegates:
-... > [{
-... >   ...
-... > }]
-... >}
-```
+### Delegates V2
 
 ```js
 ...
@@ -154,26 +84,6 @@ init().then(json => {
 ... >}
 ```
 
-### Loader - V1
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('loader').status();
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ loaded: ... }
-```
-
 ### Node - V2
 
 ```js
@@ -194,29 +104,7 @@ init().then(json => {
 ... >{ data: {...} }
 ```
 
-### Peers - V1 and V2
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('peers').all({"limit": 1});
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ peers:
-... > [{
-... >   ...
-... > }]
-... >}
-```
+### Peers - V2
 
 ```js
 ...
@@ -240,49 +128,7 @@ init().then(json => {
 ... >}
 ```
 
-### Signatures - V1
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('signatures').fee();
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ fee: ... }
-```
-
-### Transactions - V1 and V2
-
-```js
-...
-async function init() {
-  try {
-    const response = await client.resource('transactions').all({"senderId": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv"});
-    return response.data;
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-init().then(json => {
-  console.log(json);
-})
-
-... >{ transactions:
-... > [{
-... >   ...
-... > }]
-... >}
-```
+### Transactions - V2
 
 ```js
 ...

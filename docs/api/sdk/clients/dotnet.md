@@ -33,8 +33,8 @@ paket add ArkEcosystem.Client --version 0.1.0
 ```csharp
 using ArkEcosystem.Client;
 
-ConnectionManager.Connect(new Connection<One>("http://my-main.ark.node:port/api/"))
-ConnectionManager.Connect(new Connection<One>("http://my-backup.ark.node:port/api/", "backup"))
+ConnectionManager.Connect(new Connection<Two>("http://my-main.ark.node:port/api/"))
+ConnectionManager.Connect(new Connection<Two>("http://my-backup.ark.node:port/api/", "backup"))
 
 var response = null;
 
@@ -47,7 +47,7 @@ try {
 if ((bool) response["success"]) {
     Console.WriteLine(response["balance"]);
 } else {
-    Console.WriteLine("Both the main and backup node did not repsond.");
+    Console.WriteLine("Both the main and backup node did not respond.");
 }
 ```
 
@@ -55,46 +55,18 @@ if ((bool) response["success"]) {
 
 ```csharp
 using ArkEcosystem.Client;
-// For V1
-using ArkEcosystem.Client.API.One;
 // For V2
 using ArkEcosystem.Client.API.Two;
 
 static void Main(string[] args)
 {
-    // For V1
-    var connection = new Connection<One>("http://my.node.ip:port/api/");
     // For V2
     var connection = new Connection<Two>("http://my.node.ip:port/api/");
     ...
 }
 ```
 
-### Accounts - V1
-
-```csharp
-// ...
-var response = connection.Api.Accounts.Balance("AKATy581uXWrbm8B4DTQh4R9RbqaWRiKRY");
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
-```
-
-### Blocks V1 and V2
-
-```csharp
-// ...
-var response = connection.Api.Blocks.All();
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
-```
+### Blocks V2
 
 ```csharp
 // ...
@@ -104,18 +76,7 @@ Console.WriteLine(response);
 ... > ArkEcosystem.Client.API.Two.Response`1[System.Collections.Generic.List`1[ArkEcosystem.Client.API.Two.Models.Block]]
 ```
 
-### Delegates V1 and V2
-
-```csharp
-// ...
-var response = connection.Api.Delegates.All();
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
-```
+### Delegates V2
 
 ```csharp
 // ...
@@ -123,19 +84,6 @@ var response = connection.Api.Delegates.All();
 Console.WriteLine(response);
 
 ... > ArkEcosystem.Client.API.Two.Response`1[System.Collections.Generic.List`1[ArkEcosystem.Client.API.Two.Models.Delegates]]
-```
-
-### Loader - V1
-
-```csharp
-// ...
-var response = connection.Api.Loader.Status();
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
 ```
 
 ### Node - V2
@@ -148,18 +96,7 @@ Console.WriteLine(response);
 ... > ArkEcosystem.Client.API.Two.Response`1[ArkEcosystem.Client.API.Two.Models.NodeConfiguration]
 ```
 
-### Peers - V1 and V2
-
-```csharp
-// ...
-var response = connection.Api.Peers.All();
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
-```
+### Peers - V2
 
 ```csharp
 // ...
@@ -169,31 +106,7 @@ Console.WriteLine(response);
 ... > ArkEcosystem.Client.API.Two.Response`1[System.Collections.Generic.List`1[ArkEcosystem.Client.API.Two.Models.Peer]]
 ```
 
-### Signatures - V1 
-
-```csharp
-// ...
-var response = connection.Api.Signatures.Fee();
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
-```
-
-### Transactions - V1 and V2
-
-```csharp
-// ...
-var response = connection.Api.Transactions.All();
-Console.WriteLine(response);
-
-... > {
-... > "success": true,
-... > ...
-... > }
-```
+### Transactions - V2
 
 ```csharp
 // ...

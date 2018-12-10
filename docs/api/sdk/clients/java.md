@@ -40,15 +40,13 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         HashMap<String, Object> map = new HashMap<>();
-        // For V1
-        map.put("host", "my.node.v1.ip");
-        map.put("version", 1);
+
         // For V2
         map.put("host", "my.node.v2.ip");
-        map.put("version", 2);
+        map.put("API-Version", 2);
 
         ConnectionManager manager = new ConnectionManager();
-        manager.connect(map);
+        Connection<Two> connection = manager.connect(map);
         ...
         manager.disconnect();
     }
@@ -73,12 +71,12 @@ public class Main {
         // V1
         HashMap<String, Object> map = new HashMap<>();
         map.put("host", "http://my.node.v1.ip:port/api/");
-        map.put("version", 1);
+        map.put("API-Version", 1);
         Connection<One> connection = new Connection(map);
         // V2
         HashMap<String, Object> map = new HashMap<>();
         map.put("host", "http://my.node.v2.ip:port/api/");
-        map.put("version", 2);
+        map.put("API-Version", 2);
         Connection<Two> connection = new Connection(map);
         ...
     }

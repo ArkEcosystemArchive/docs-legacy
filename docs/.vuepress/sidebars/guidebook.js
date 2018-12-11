@@ -30,7 +30,6 @@ module.exports = [
       "/guidebook/core/plugins/core-config",
       "/guidebook/core/plugins/core-container",
       "/guidebook/core/plugins/core-database",
-      "/guidebook/core/plugins/core-database-postgres",
       "/guidebook/core/plugins/core-debugger-cli",
       "/guidebook/core/plugins/core-deployer",
       "/guidebook/core/plugins/core-elasticsearch",
@@ -45,14 +44,13 @@ module.exports = [
       "/guidebook/core/plugins/core-logger-winston",
       "/guidebook/core/plugins/core-p2p",
       "/guidebook/core/plugins/core-snapshots",
-      "/guidebook/core/plugins/core-snapshots-cli",
       "/guidebook/core/plugins/core-test-utils",
       "/guidebook/core/plugins/core-tester-cli",
       "/guidebook/core/plugins/core-transaction-pool",
-      "/guidebook/core/plugins/core-transaction-pool-mem",
       "/guidebook/core/plugins/core-utils",
       "/guidebook/core/plugins/core-vote-report",
       "/guidebook/core/plugins/core-webhooks",
+      "/guidebook/core/plugins/crypto"
     ]
   },
   {

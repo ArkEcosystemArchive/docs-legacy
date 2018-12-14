@@ -23,7 +23,7 @@ $ pip install arkecosystem-crypto
 
 ## Development setup
 
-If you want to contribute to the code of this package yadi yada
+If you want to contribute to the code of this package execute the following commands
 
 1) Fork the [package](https://github.com/ArkEcosystem/python-crypto)
 

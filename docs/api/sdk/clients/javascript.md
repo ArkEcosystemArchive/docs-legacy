@@ -44,7 +44,7 @@ client.setVersion(2);
 ...
 async function init() {
   try {
-    const response = await client.resource('accounts').all('limit': 1);
+    const response = await client.accounts.all({'limit': 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -68,7 +68,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('blocks').all('limit': 1);
+    const response = await client.blocks.all({'limit': 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -90,7 +90,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('blocks').all('limit': 1);
+    const response = await client.blocks.all({'limit': 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -114,7 +114,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('delegates').search({"q": "ark", "limit": 1});
+    const response = await client.delegates.search({"q": "ark", "limit": 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -136,7 +136,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('delegates').all({"limit": 1});
+    const response = await client.delegates.all({"limit": 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -160,7 +160,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('loader').status();
+    const response = await client.loader.status();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -180,7 +180,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('node').status();
+    const response = await client.node.status();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -200,7 +200,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('peers').all({"limit": 1});
+    const response = await client.peers.all({"limit": 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -222,7 +222,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('peers').all({"limit": 1});
+    const response = await client.peers.all({"limit": 1});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -246,7 +246,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('signatures').fee();
+    const response = await client.signatures.fee();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -266,7 +266,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('transactions').all({"senderId": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv"});
+    const response = await client.transactions.all({"senderId": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv"});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -288,7 +288,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('transactions').all({"senderId": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv", "orderBy": "timestamp.epoch"});
+    const response = await client.transactions.all({"senderId": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv", "orderBy": "timestamp.epoch"});
     return response.data;
   } catch (e) {
     console.log(e);
@@ -312,7 +312,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('votes').all();
+    const response = await client.votes.all();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -336,7 +336,7 @@ init().then(json => {
 ...
 async function init() {
   try {
-    const response = await client.resource('wallets').get('AFrPtEmzu6wdVpa2CnRDEKGQQMWgq8nE9V');
+    const response = await client.wallets.get('AFrPtEmzu6wdVpa2CnRDEKGQQMWgq8nE9V');
     return response.data;
   } catch (e) {
     console.log(e);

@@ -18,7 +18,6 @@ For further informations on how to install Python on your operating system :
 ## Installation
 
 ```bash
-pip install arkecosystem-crypto
 $ pip install arkecosystem-crypto
 ```
 

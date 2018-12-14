@@ -6,12 +6,55 @@ title: "Python"
 
 [[toc]]
 
+## Python Installation
+
+Python can be downloaded [here](https://www.python.org/downloads/).
+For further informations on how to install Python on your operating system :
+
+[Windows guide](https://docs.python.org/3/using/windows.html)
+[Unix guide](https://docs.python.org/3/using/unix.html)
+[OSx guide](https://docs.python.org/3/using/mac.html)
+
 ## Installation
 
 ```bash
 pip install arkecosystem-crypto
+$ pip install arkecosystem-crypto
 ```
 
+## Development setup
+
+If you want to contribute to the code of this package yadi yada
+
+1) Fork the [package](https://github.com/ArkEcosystem/python-crypto)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/python-crypto
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd python-crypto
+```
+
+4) The next step would be to create something like a [virtual environment](https://virtualenv.pypa.io/en/latest/)
+and install the dependencies of this package inside it
+
+5) Once the previous point done, you can proceed to install the dependencies, these are listed inside the setup.py file
+
+```bash
+$ pip install flake8 flake8-import-order flake8-print flake8-quotes pytest pytest-cov
+```
+
+6) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+
+```bash
+$ pytest
+...
+```
 ## Transactions
 
 ### Sign

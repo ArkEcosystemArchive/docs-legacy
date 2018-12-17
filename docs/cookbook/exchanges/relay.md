@@ -9,8 +9,6 @@ The experience is similar to the old solution for v1: Ark Commander.
 
 Core Commander only supports Ubuntu (16.04, 18.04).
 
-Docker images for running a relay node with configurability can be found [there](/cookbook/exchanges/docker).
-
 ## Requirements
  - 4GB RAM
  - 40GB SSD
@@ -86,7 +84,7 @@ The node will sync and the messages will show you when it is ready to be used.
 
 ## JSON-RPC
 
-Now that the relay is setup you can head over to the [JSON-RPC installation guide](/cookbook/exchanges/installation.html) if you wish to use the JSON-RPC to manage your wallets and transactions.
+Now that the relay is setup you can head over to the [JSON-RPC installation guide](/cookbook/exchanges/json-rpc.html) if you wish to use the JSON-RPC to manage your wallets and transactions.
 
 ## Notes
 

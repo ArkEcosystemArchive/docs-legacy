@@ -6,15 +6,45 @@ title: "Elixir"
 
 [[toc]]
 
+## Elixir Installation
+
+Elixir can be installed by following [this guide](https://elixir-lang.org/install.html)
+
 ## Installation
 
 The package can be installed by adding `arkecosystem_crypto` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  {:arkecosystem_crypto, "~> 0.1.0"}
+  {:arkecosystem_crypto, "~> 0.1.1"}
 end
 ```
+
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/elixir-crypto)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/elixir-crypto
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd elixir-crypto
+```
+
+4) Install the dependencies
+
+```bash
+$ mix deps.get
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
 
 ## Transactions
 
@@ -75,7 +105,7 @@ alias ArkEcosystem.Crypto.Utils.Message
 
 message = Message.sign("Hello World", "passphrase")
 
-IO.puts Message.verify(message)
+IO.puts Message.verify(message.message, message.signature, message.publicKey)
 ```
 
 ## Identities

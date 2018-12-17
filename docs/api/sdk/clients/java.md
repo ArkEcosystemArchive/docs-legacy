@@ -11,17 +11,16 @@ title: "Java"
 ### Gradle
 
 ```bash
-compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.0'
+compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.2'
 ```
 
 ### Maven
 
 ```xml
 <dependency>
-    <groupId>org.arkecosystem.client</groupId>
-    <artifactId>client</artifactId>
-    <version>0.1.0</version>
-    <scope>test</scope>
+  <groupId>org.arkecosystem</groupId>
+  <artifactId>client</artifactId>
+  <version>0.1.2</version>
 </dependency>
 ```
 
@@ -58,9 +57,6 @@ public class Main {
 ```java
 import com.google.gson.internal.LinkedTreeMap;
 import org.arkecosystem.client.Connection;
-// For V1
-import org.arkecosystem.client.api.one.One;
-// For V2
 import org.arkecosystem.client.api.two.Two;
 
 import java.util.HashMap;
@@ -68,11 +64,6 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // V1
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("host", "http://my.node.v1.ip:port/api/");
-        map.put("API-Version", 1);
-        Connection<One> connection = new Connection(map);
         // V2
         HashMap<String, Object> map = new HashMap<>();
         map.put("host", "http://my.node.v2.ip:port/api/");
@@ -81,18 +72,6 @@ public class Main {
         ...
     }
 }
-```
-
-### Accounts - V1
-
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().accounts.all();
-System.out.println(actual);
-
-... > {accounts= [{
-... > ...
-... > ]}}
 ```
 
 ### Blocks V1 and V2
@@ -138,17 +117,6 @@ System.out.println(actual);
 ... > ...
 ... > ]}}
 ```
-
-### Loader - V1
-
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().loader.status();
-System.out.println(actual);
-
-... > {loaded=..., success=true}
-```
-
 ### Node - V2
 
 ```java
@@ -179,16 +147,6 @@ System.out.println(actual);
 ... > {peers= [{
 ... > ...
 ... > ]}}
-```
-
-### Signatures - V1 
-
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().signatures.fee();
-System.out.println(actual);
-
-... > {fee=5.0E8, success=true}
 ```
 
 ### Transactions - V1 and V2

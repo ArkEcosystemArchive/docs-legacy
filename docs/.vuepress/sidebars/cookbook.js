@@ -50,9 +50,10 @@ module.exports = [
     title: "Exchanges",
     collapsable: false,
     children: [
-      "/cookbook/exchanges/communication",
+      "/cookbook/exchanges",
+      "/cookbook/exchanges/json-rpc",
+      "/cookbook/exchanges/public-api",
       "/cookbook/exchanges/relay",
-      "/cookbook/exchanges/installation"
     ]
   },
 ];

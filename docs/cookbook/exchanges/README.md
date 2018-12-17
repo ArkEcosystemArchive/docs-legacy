@@ -20,15 +20,8 @@ By replacing dedicated protocols and communication methods with a standardized i
 The majority of platforms utilising bitcoin use this RPC procedure. To accommodate these services and make the integration of Ark as user friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The Ark RPC will minimise headaches and streamline the addition process for all.
 :::
 
-## Key Features
+## Quick Guides
 
-With development of Ark RPC a few key features have been implemented that will also be used in other Ark projects.
+The two most popular means of accessing the Ark blockchain are via the Public API and the JSON-RPC. Though the Public API is the recommended approach, we include instructions here on how to accomplish the most common tasks on both API surfaces.
 
-[**BIP38 encryption**](https://github.com/bitcoin/bips/blob/master/bip-0038.mediawiki) — we implemented BIP38 encryption which is a method for encrypting and encoding a passphrase-protected Ark private key record in the form of a Base58Check-encoded string.
-Each record string contains all the information needed to reconstitute the private key except for a passphrase, and the methodology uses salting to resist brute-force attacks.
-
-[**Backend in LevelDB** ](http://leveldb.org/)— backend of Ark-RPC is using LevelDB (Level Database), which was developed by Google.
-By default, LevelDB stores entries lexicographically, sorted by keys. The sorting is one of the main distinguishing features of LevelDB amongst similar embedded data storage libraries and comes in very useful for querying.
-LevelDB is designed to compress data and use the least possible space while providing a highly transparent, light-weight foundation.
-
-**Network layer** — the server is automatically syncing with Ark blockchain looking for good peers to connect with, reducing the risk of disconnection.
+We have added "quick guides" to walk you through the process of interacting with the Ark blockchain in each API.

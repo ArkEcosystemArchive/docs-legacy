@@ -9,7 +9,7 @@ module.exports = [
     ]
   },
   {
-    title: "Public API endpoints",
+    title: "Communication endpoints",
     collapsable: false,
     children: [
       "/exchanges/public-api",

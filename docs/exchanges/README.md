@@ -16,4 +16,4 @@ Use the sidebar to navigate this section, or follow the links below:
 
 * [Relay node installation instructions](/exchanges/relay.html)
 * [Public API documentation](/exchanges/public-api.html)
-* [JSON-RPC documentation](/exchanges/json=rpc.html/)
+* [JSON-RPC documentation](/exchanges/json-rpc.html)

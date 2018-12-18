@@ -86,10 +86,12 @@ The node will sync and the messages will show you when it is ready to be used.
 If your organization policy doesn't allow to use other installation tools - meaning requirements clearly state that a standalone installation is needed, then the following scripts will help you with installation of the Ark blockchain.
 
 ::: tip
-The following scripts assume that NodeJs and Postgres are already installed on your system. For minimum versions, please use NodeJs >10 and Postgres >9.5. Install them according to you operating system instructions. 
+The following scripts assume that NodeJs and Postgres are already installed on your system. For minimum versions, please use `NodeJs >10` and `Postgres database >9.5`. Install them according to your operating system instructions. 
 :::
 
+
 ### Installation script
+The script bellow is an ARK-Core v2 general linux install script. You can adjust it to your own needs and system requirements.
 ```bash
 sudo yarn global add pm2 lerna
 sudo -u postgres psql -c "create user ark with password 'password';"

@@ -97,7 +97,7 @@ On the wallet detail page, which is accessed by clicking on the wallet's name or
  - send an ARK transfer
  - view and sort the wallet's transactions
  - vote for a registered delegate
- - verify your wallet by signing a message
+ - sign and verify messages cryptographically
  - purchase ARK through [Changelly](https://changelly.com)
  - register a second passphrase for added security
  - register the wallet as a delegate
@@ -116,10 +116,11 @@ Upon clicking ***Next***, you will then have to review the transfer transaction'
 
 ![Submit Transfer](./assets/how-to-use-the-desktop-wallet/new/SubmitTransfer.png)
 
-### Voting for a Registered Delegate
+### Voting for a Registered Delegate and Unvoting
 
 Delegated Proof of Stake, the consensus algorithm used by the Ark Core, requires network participants to vote for delegates with their funds. A vote is not like a transfer, it is simply helps determine which delegates have the most support from network members. You may only vote for one delegate at a time and your funds are not locked while you are voting.
 
+***Voting***
  - **Browse the list of registered delegates**
 ![Delegate List](./assets/how-to-use-the-desktop-wallet/new/Delegates.png)
 
@@ -129,8 +130,24 @@ Delegated Proof of Stake, the consensus algorithm used by the Ark Core, requires
  - **Fill in the required vote transaction fields and click *Next***
 ![Vote Fields](./assets/how-to-use-the-desktop-wallet/new/Vote.png)
 
- - **Submit, discard or save the vote transaction by pressing either Send, Back or Save**
+ - **Submit, discard or save the vote transaction by pressing either *Send*, *Back* or *Save***
 ![Submit Vote](./assets/how-to-use-the-desktop-wallet/new/SubmitVote.png)
+
+***Unvoting***
+ - **Open the list of registered delegates**
+![Delegate List Unvote](./assets/how-to-use-the-desktop-wallet/new/DelegateListUnvote.png)
+
+ - **Click on the *Unvote* button**
+![Click Unvote Button](./assets/how-to-use-the-desktop-wallet/new/ClickUnvoteButton.png)
+
+ - **Review the delegate's stats and click the *Unvote* button**
+![Review Unvote](./assets/how-to-use-the-desktop-wallet/new/ReviewUnvote.png)
+
+ - **Choose a transcation fee, enter your security details and click *Next***
+![Unvote Details](./assets/how-to-use-the-desktop-wallet/new/UnvoteDetails.png)
+
+ - **Submit the unvote transaction and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
+![Submit Unvote](./assets/how-to-use-the-desktop-wallet/new/SubmitUnvote.png)
 
 ### Signing and Verifying Messages
 
@@ -173,4 +190,26 @@ Registering as a delegate is a simple transaction. It provides network nodes wit
  - **Click the *Register delegate* button**
 ![Register Delegate Button](./assets/how-to-use-the-desktop-wallet/new/RegisterDelegateButton.png)
 
- - 
+ - **Enter your desired Username, Transaction fee and security details; then click *Next***
+![Delegate Registration](./assets/how-to-use-the-desktop-wallet/new/DelegateRegistration.png)
+
+ - **Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
+![Submit Delegate Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitDelegateRegistration.png)
+
+### Register a Second Passphrase
+Security is very important. By issuing a second signature transaction, you tell network nodes to verify that every transaction coming from your wallet is also signed by another Passphrase.
+
+ - **Expose more options in the wallet detail page by clicking the icon in the header**
+![More Icon](./assets/how-to-use-the-desktop-wallet/new/MoreIcon.png)
+
+ - **Click the *Second passphrase* button**
+![Second Signature Button](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureButton.png)
+
+ - **Save your 12-word BIP39 second Passphrase and click *Next***
+![Second Signature Passphrase Generation](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureGeneration.png)
+
+ - **Prove that you have saved your second Passphrase, select your desired transaction fee, enter your security details and click *Next***
+![Second Signature Details](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureVerification.png)
+
+ - **Verify the second signature transaction details and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
+![Submit Second Signature Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitSecondSignature.png)

@@ -55,6 +55,11 @@ Upon successfully creating your profile, you will be brought to te dashboard.
 
 ![Dashbaord](./assets/how-to-use-the-desktop-wallet/new/Dashboard.png)
 
+## News and Important Updates
+There's a dedicated section provided by the Ark Desktop Wallet that is dedicated to news and other relevant updates in the Ark Ecosystem. Often, you will receive new blog posts in this section, which can be access via clicking the newspaper icon in the wallet's navigation bar.
+
+![News](./assets/how-to-use-the-desktop-wallet/new/News.png)
+
 ## Creating or Importing your Ark Wallet
 
 The Ark Desktop Wallet allows you to both create new wallets and import existing ones. You can begin either process by clicking the appropriate button at the top of the sidebar when on the app dashboard.
@@ -213,3 +218,4 @@ Security is very important. By issuing a second signature transaction, you tell 
 
  - **Verify the second signature transaction details and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
 ![Submit Second Signature Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitSecondSignature.png)
+

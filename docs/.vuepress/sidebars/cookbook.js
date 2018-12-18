@@ -45,15 +45,5 @@ module.exports = [
     children: [
       "/cookbook/pay/installation"
     ]
-  },
-  {
-    title: "Exchanges",
-    collapsable: false,
-    children: [
-      "/cookbook/exchanges/",
-      "/cookbook/exchanges/relay",
-      "/cookbook/exchanges/public-api",
-      "/cookbook/exchanges/json-rpc",
-    ]
-  },
+  }
 ];

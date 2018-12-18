@@ -6,11 +6,11 @@ title: "How to Use the Desktop Wallet"
 
 [[toc]]
 
-### What is it?
+## What is it?
 
 The Ark Desktop Wallet is an application which allows you to manage Ark transactions. It provides extensive functionality, including management of profiles and wallets, creation of both online and offline transactions, wallet summary, stylistic customizations, multilingual support, various currency integrations including BTC and much more!
 
-### First things first...
+## Installation
 
 To download the application, you can visit the link below and select the appropriate release for your computer's platform. Ark Desktop Wallet is available for Windows, Mac and Linux.
 

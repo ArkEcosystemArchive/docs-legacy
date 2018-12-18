@@ -14,8 +14,7 @@ use ArkEcosystem\Client\Connection;
 
 // Instantiate a client
 $connection = new Connection([
-    'host' => 'http://node-ip:port/api', // NO TRAILING SLASH!
-    'version' => 2
+    'host' => 'http://node-ip:port/api/', // TRAILING SLASH!
 ]);
 
 // find block with height 545774

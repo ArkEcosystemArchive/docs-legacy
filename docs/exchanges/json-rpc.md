@@ -2,6 +2,16 @@
 title: "JSON-RPC Quick Actions"
 ---
 
+# What is RPC?
+
+Remote Procedure Call (RPC) is a protocol that allows one program to request a service from software located on another computer network without having to understand all of the network’s details. A procedure call is also sometimes known as a function call or a subroutine call.
+
+By replacing dedicated protocols and communication methods with a standardized interface, RPC is designed to facilitate communication between client and server processes. The functions contained within RPC are accessible by any program that must communicate using a client/server methodology.
+
+::: tip
+The majority of platforms utilising bitcoin use this RPC procedure. To accommodate these services and make the integration of Ark as user friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The Ark RPC will minimise headaches and streamline the addition process for all.
+:::
+
 # JSON-RPC Quick Actions
 
 ## Setup

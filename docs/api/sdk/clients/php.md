@@ -11,7 +11,7 @@ title: "PHP"
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require arkecosystem/client php-http/guzzle6-adapter
+composer require arkecosystem/client
 ```
 
 ## Basics
@@ -24,14 +24,13 @@ require_once('vendor/autoload.php');
 use ArkEcosystem\Client\Connection;
 
 $connection = new Connection([
-    'host' => 'http://my.ark.node:port/api', // NO TRAILING SLASH!
-    'version' => 1
+    'host' => 'http://my.ark.node:port/api/', // TRAILING SLASH!
 ]);
 
-$response = $connection->accounts()->balance('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN');
+$response = $connection->wallets()->show('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN');
 
-if ($response['success']) {
-    echo($response['balance']);
+if ($response['data']) {
+    echo($response['data']);
 }
 ```
 
@@ -48,25 +47,23 @@ use ArkEcosystem\Client\ConnectionManager;
 $manager = new ConnectionManager();
 
 $manager->connect([
-    'host' => 'http://my-main.ark.node:port/api', // NO TRAILING SLASH!
-    'version' => 1
+    'host' => 'http://my-main.ark.node:port/api/', // TRAILING SLASH!
 ], 'main');
 
 $manager->connect([
-    'host' => 'http://my-backup.ark.node:port/api', // NO TRAILING SLASH!
-    'version' => 1
+    'host' => 'http://my-backup.ark.node:port/api/', // TRAILING SLASH!
 ], 'backup');
 
 $response = [];
 
 try {
-    $response = $manager->connection('main')->accounts()->balance('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN');
+    $response = $manager->connection('main')->wallets()->show('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN');
 } catch (Exception $e) {
-    $response = $manager->connection('backup')->accounts()->balance('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN');
+    $response = $manager->connection('backup')->wallets()->show('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN');
 }
 
-if ($response['success']) {
-    echo($response['balance']);
+if ($response['data']) {
+    echo($response['data']);
 } else {
     echo('Both the main and backup node did not repsond.');
 }

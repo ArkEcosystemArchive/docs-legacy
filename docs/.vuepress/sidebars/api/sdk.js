@@ -41,7 +41,8 @@ module.exports = [
       title: "Examples",
       collapsable: false,
       children: [
-          "/api/sdk/examples/java.md"
+          "/api/sdk/examples/java.md",
+          "/api/sdk/examples/php.md",
       ]
   },
   {

@@ -219,3 +219,66 @@ Security is very important. By issuing a second signature transaction, you tell 
  - **Verify the second signature transaction details and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
 ![Submit Second Signature Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitSecondSignature.png)
 
+
+## Contact Interface
+The application provides you a neat interface to add addresses to your contact list. This feature enables you to aggregate all of the addresses which you may transact with or be interested in.
+
+### Adding a contact
+You can access the contact creation menu by first clicking on the contact icon in the wallet's navigation bar which will expose your contact list.
+
+![Contacts](./assets/how-to-use-the-desktop-wallet/new/Contacts.png)
+
+ - **Enter the contact's address and click *Next***
+![Contact Details](./assets/how-to-use-the-desktop-wallet/new/ContactDetails.png)
+
+ - *(Optionally)* **Enter a name for the contact and click *Done**
+![Contact Name](./assets/how-to-use-the-desktop-wallet/new/ContactConfirmation.png)
+
+ - **You can now view that contact's activity**
+![Contact Activity](./assets/how-to-use-the-desktop-wallet/new/ContactActivity.png)
+
+ - **And have access to the contact's activity through the contact interface**
+![Contact Interface](./assets/how-to-use-the-desktop-wallet/new/ContactInterface.png)
+
+## Changing the Application's Settings
+There's a bunch of options for how you may customize the look, behaviour and feel of the application.
+
+### Network Options
+Network settings can be modified by clicking on the cloud icon in the navigation bar; bringing up a popaside menu. In the Network settings menu, you may select another peer to use for fetching transaction and wallet updates. Also, the menu offers some valuable information about the network and advanced configuration options in the **Network Overview** section.
+
+![Network Options](./assets/how-to-use-the-desktop-wallet/new/NetworkOptions.png)
+
+### Appearance Options
+There are two locations where you can change style and behavior settings.
+
+#### Changing Display Settings
+In the first menu, which you access by clicking the settings icon of the navigation bar, you can:
+ - Change the default currency
+ - Toggle dark mode
+ - Toggle ledger hardware wallet background syncing
+ - Toggle the display of the price chart on the dashboard
+ - Reset the wallet's data
+
+:::warning
+Resetting the wallet's data should almost never be done. It will permanentaly delete all of your profile, wallet, contact, addresses and all other data associate with the application.
+:::
+
+![Current Settings](./assets/how-to-use-the-desktop-wallet/new/CurrentSettings.png)
+
+#### Changing Profile Settings
+The choices you made when creating your profile can be changed by a menu that is accessible by clicking on your profile icon in the navigation bar
+
+From this menu, you can create a new profile or edit your existing profile(s).
+
+There's a few profile settings you can affect in this way, namely:
+ - The profile's name
+ - The language for this profile
+ - The language for the 12 BIP39 passphrase words
+ - The default currency for this profile
+ - Which avatar to use for this profile
+
+![Profile Settings](./assets/how-to-use-the-desktop-wallet/new/ProfileSettings.png)
+
+## Security
+
+If you discover a security vulnerability within this project, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.

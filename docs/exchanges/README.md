@@ -15,5 +15,6 @@ We have added "quick guides" to walk you through the process of interacting with
 Use the sidebar to navigate this section, or follow the links below:
 
 * [Relay node installation instructions](/exchanges/relay.html)
-* [Public API documentation](/exchanges/public-api.html)
-* [JSON-RPC documentation](/exchanges/json-rpc.html)
+* [Generic linux install instructions](/exchanges/relay.html#generic-linux-installation)
+* [Public API quick guide](/exchanges/public-api.html)
+* [JSON-RPC quick guide](/exchanges/json-rpc.html)

@@ -154,6 +154,29 @@ POST /api/webhooks
 | not-between | Check if the given value is not between min and max |
 | regexp      | Check if the given value matches                    |
 | truthy      | Check if the given value is true                    |
+    
+### Events  
+
+| Event                | Description |
+|----------------------|-------------|
+| block.applied        |             |
+| block.forged         |             |
+| block.reverted       |             |
+| delegate.registered  |             |
+| delegate.resigned    |             |
+| forger.failed        |             |
+| forger.missing       |             |
+| forger.started       |             |
+| peer.added           |             |
+| peer.removed         |             |
+| round.created        |             |
+| state:started        |             |
+| transaction.applied  |             |
+| transaction.expired  |             |
+| transaction.forged   |             |
+| transaction.reverted |             |
+| wallet.saved         |             |
+| wallet.created.cold  |             |
 
 ## Update a webhook
 

@@ -29,14 +29,14 @@ const config = {
       text: 'Home',
       link: '/'
     }, {
+      text: 'Exchanges',
+      link: '/exchanges/'
+    }, {
+      text: 'Public API',
+      link: '/api/public/v2/'
+    },{
       text: 'P2P API',
       link: '/api/p2p/'
-    }, {
-      text: 'Public API 1.0',
-      link: '/api/public/v1/'
-    }, {
-      text: 'Public API 2.0',
-      link: '/api/public/v2/'
     }],
     sidebar: {
       "/api/sdk/": require("./sidebars/api/sdk"),
@@ -47,6 +47,7 @@ const config = {
       "/introduction/": require("./sidebars/introduction"),
       "/cookbook/": require('./sidebars/cookbook'),
       "/guidebook/": require('./sidebars/guidebook'),
+      "/exchanges/": require('./sidebars/exchanges'),
       "/": require('./sidebars/main'),
     },
     //algolia: {

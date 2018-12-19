@@ -138,6 +138,23 @@ POST /api/webhooks
 }
 ```
 
+### Conditions  
+
+| Condition   | Description                                         |
+|-------------|-----------------------------------------------------|  
+| between     | Check if the given value is between min and max     |
+| contains    | Check if A contains B                               |
+| eq          | Check if A equals B                                 |
+| falsy       | Check if the given value is false                   |
+| gt          | Check if A is greater than B                        |
+| gte         | Check if A is greater than or equal to B            |
+| lt          | Check if A is lesser than B                         |
+| lte         | Check if A is lesser than or equal to B             |
+| ne          | Check if A does not equal B                         |
+| not-between | Check if the given value is not between min and max |
+| regexp      | Check if the given value matches                    |
+| truthy      | Check if the given value is true                    |
+
 ## Update a webhook
 
 ### Endpoint

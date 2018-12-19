@@ -5,7 +5,7 @@ title: "Public API 2.0"
 # Public API 2.0: Introduction
 
 ::: warning
-All HTTP requests have to be send with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
 :::
 
 This describes the resources that make up the official Public API v2. If you have any problems or requests please [open an issue](https://github.com/ArkEcosystem/core/issues/new/choose).

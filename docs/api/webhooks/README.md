@@ -66,7 +66,7 @@ GET /api/webhooks
 }
 ```
 
-# Retrieve a webhook
+## Retrieve a webhook
 
 ### Endpoint
 

@@ -14,6 +14,12 @@ This describes the resources that make up the official Public API v2. If you hav
 
 By default, all requests to a relay receive the v1 version of the Public API. We encourage you to explicitly request this version via the `API-Version` header.
 
+You can also set the API version by adding the `v2` prefix:
+
+```
+GET /api/v2/blocks
+```
+
 ## Pagination
 
 Requests that return multiple items will be paginated to 100 items by default. You can specify further pages with the `?page` parameter. For some resources, you can also set a custom page size up to 100 with the `?limit` parameter. Note that for technical reasons not all endpoints respect the `?limit` parameter.

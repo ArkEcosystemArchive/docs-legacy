@@ -138,23 +138,6 @@ POST /api/webhooks
 }
 ```
 
-### Conditions  
-
-| Condition   | Description                                         |
-|-------------|-----------------------------------------------------|  
-| between     | Check if the given value is between min and max     |
-| contains    | Check if A contains B                               |
-| eq          | Check if A equals B                                 |
-| falsy       | Check if the given value is false                   |
-| gt          | Check if A is greater than B                        |
-| gte         | Check if A is greater than or equal to B            |
-| lt          | Check if A is lesser than B                         |
-| lte         | Check if A is lesser than or equal to B             |
-| ne          | Check if A does not equal B                         |
-| not-between | Check if the given value is not between min and max |
-| regexp      | Check if the given value matches                    |
-| truthy      | Check if the given value is true                    |
-    
 ### Events  
 
 | Event                | Description                                                                         | Implemented        |
@@ -177,6 +160,23 @@ POST /api/webhooks
 | transaction.reverted | Fires when a transaction is removed from the database                               | :x:                |
 | wallet.saved         | Fires when a wallet is updated (e.g. its balance changed, voted etc)                | :white_check_mark: |
 | wallet.created.cold  | Fires when a wallet that never existed before is saved (e.g. received its first tx) | :white_check_mark: |
+
+### Conditions  
+
+| Condition   | Description                                         |
+|-------------|-----------------------------------------------------|  
+| between     | Check if the given value is between min and max     |
+| contains    | Check if A contains B                               |
+| eq          | Check if A equals B                                 |
+| falsy       | Check if the given value is false                   |
+| gt          | Check if A is greater than B                        |
+| gte         | Check if A is greater than or equal to B            |
+| lt          | Check if A is lesser than B                         |
+| lte         | Check if A is lesser than or equal to B             |
+| ne          | Check if A does not equal B                         |
+| not-between | Check if the given value is not between min and max |
+| regexp      | Check if the given value matches                    |
+| truthy      | Check if the given value is true                    |
 
 ## Update a webhook
 

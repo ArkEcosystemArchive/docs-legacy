@@ -11,19 +11,19 @@ title: ".NET"
 ### Package Manager
 
 ```bash
-Install-Package ArkEcosystem.Client -Version 0.1.0
+Install-Package ArkEcosystem.Client -Version 0.2.1
 ```
 
 ### .NET CLI
 
 ```bash
-dotnet add package ArkEcosystem.Client --version 0.1.0
+dotnet add package ArkEcosystem.Client --version 0.2.1
 ```
 
 ### Paket CLI
 
 ```bash
-paket add ArkEcosystem.Client --version 0.1.0
+paket add ArkEcosystem.Client --version 0.2.1
 ```
 
 ## Usage

@@ -14,6 +14,12 @@ Add this line to your application's Gemfile and then execute `bundle`
 gem 'arkecosystem-crypto'
 ```
 
+Or install it from the command line
+
+```bash
+$ gem install arkecosystem-crypto
+```
+
 ## Transactions
 
 ### Sign
@@ -21,7 +27,7 @@ gem 'arkecosystem-crypto'
 ```ruby
 require 'arkecosystem/crypto'
 
-transaction = ArkEcosystem::Crypto::Builder::Transfer.new()
+transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
   .set_recipient_id('DGihocTkwDygiFvmg6aG8jThYTic47GzU9')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')

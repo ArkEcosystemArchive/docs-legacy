@@ -25,6 +25,12 @@ Add this line to your application's Gemfile and then execute `bundle`
 gem 'arkecosystem-client'
 ```
 
+Or install it from the command line
+
+```bash
+$ gem install arkecosystem-client
+```
+
 ## Usage
 
 

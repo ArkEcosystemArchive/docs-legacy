@@ -16,7 +16,6 @@ transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
                   .set_vendor_field('Hello from Ruby !')
                   .sign('mysupersecretppassphrase')
 
-
 puts transaction.verify
 
 response = connection.transactions.create({transactions: [transaction.to_params]})

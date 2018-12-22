@@ -1,58 +1,59 @@
 module.exports = [
-  ["/api/", "Back to API Home"],
-  ["/api/sdk/", "SDK Overview"],
-  {
-    title: "Examples",
-    collapsable: false,
-    children: [
-        "/api/sdk/examples/elixir.md",
-        "/api/sdk/examples/java.md",
-        "/api/sdk/examples/php.md",
-        "/api/sdk/examples/python.md",
-    ]
-  },
+  ["/", "Back to Table of Contents"],
+  ["/sdk/", "SDK Overview"],
+  
   {
     title: "Clients",
     collapsable: false,
     children: [
-      "/api/sdk/clients/guidelines.md",
-      "/api/sdk/clients/cpp.md",
-      "/api/sdk/clients/dotnet.md",
-      "/api/sdk/clients/elixir.md",
-      "/api/sdk/clients/go.md",
-      "/api/sdk/clients/java.md",
-      "/api/sdk/clients/javascript.md",
-      "/api/sdk/clients/php.md",
-      "/api/sdk/clients/python.md",
-      "/api/sdk/clients/ruby.md",
-      "/api/sdk/clients/rust.md",
-      "/api/sdk/clients/swift.md",
+      "/sdk/clients/guidelines.md",
+      "/sdk/clients/cpp.md",
+      "/sdk/clients/dotnet.md",
+      "/sdk/clients/elixir.md",
+      "/sdk/clients/go.md",
+      "/sdk/clients/java.md",
+      "/sdk/clients/javascript.md",
+      "/sdk/clients/php.md",
+      "/sdk/clients/python.md",
+      "/sdk/clients/ruby.md",
+      "/sdk/clients/rust.md",
+      "/sdk/clients/swift.md",
     ]
   },
   {
     title: "Cryptography",
     collapsable: false,
     children: [
-      "/api/sdk/cryptography/guidelines.md",
-      "/api/sdk/cryptography/cpp.md",
-      "/api/sdk/cryptography/dotnet.md",
-      "/api/sdk/cryptography/elixir.md",
-      "/api/sdk/cryptography/go.md",
-      "/api/sdk/cryptography/java.md",
-      "/api/sdk/cryptography/javascript.md",
-      "/api/sdk/cryptography/php.md",
-      "/api/sdk/cryptography/python.md",
-      "/api/sdk/cryptography/ruby.md",
-      "/api/sdk/cryptography/rust.md",
-      "/api/sdk/cryptography/swift.md",
+      "/sdk/cryptography/guidelines.md",
+      "/sdk/cryptography/cpp.md",
+      "/sdk/cryptography/dotnet.md",
+      "/sdk/cryptography/elixir.md",
+      "/sdk/cryptography/go.md",
+      "/sdk/cryptography/java.md",
+      "/sdk/cryptography/javascript.md",
+      "/sdk/cryptography/php.md",
+      "/sdk/cryptography/python.md",
+      "/sdk/cryptography/ruby.md",
+      "/sdk/cryptography/rust.md",
+      "/sdk/cryptography/swift.md",
     ]
   },
   {
     title: "Frameworks",
     collapsable: false,
     children: [
-      "/api/sdk/frameworks/laravel.md",
-      "/api/sdk/frameworks/symfony.md",
+      "/sdk/frameworks/laravel.md",
+      "/sdk/frameworks/symfony.md",
+    ]
+  }, 
+  {
+    title: "Examples",
+    collapsable: false,
+    children: [
+        "/sdk/examples/elixir.md",
+        "/sdk/examples/java.md",
+        "/sdk/examples/php.md",
+        "/sdk/examples/python.md",
     ]
   }
 ]

@@ -40,10 +40,10 @@ const config = {
       link: '/api/p2p/'
     }],
     sidebar: {
-      "/api/sdk/": require("./sidebars/api/sdk"),
       "/api/json-rpc/": require("./sidebars/api/json-rpc"),
       "/api/public/": require("./sidebars/api/public"),
       "/api/": require("./sidebars/api"),
+      "/sdk/": require("./sidebars/sdk"),
       "/faq/": require("./sidebars/faq"),
       "/introduction/": require("./sidebars/introduction"),
       "/cookbook/": require('./sidebars/cookbook'),

@@ -62,11 +62,6 @@ exchangeClient
 console.log(wallet.balance)
 ```
 :::
-::: tab java
-```java
-console.log("add code")
-```
-:::
 ::::
 ## Find Block Information
 

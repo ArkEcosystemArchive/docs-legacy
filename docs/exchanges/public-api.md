@@ -121,7 +121,7 @@ exchangeClient
 ## Create and Broadcast Transactions
 
 To create transactions, make use of the **transactionBuilder** module of `@arkecosystem/crypto`. First, install the package from npm:
-```sh
+```bash
 yarn add @arkecosystem/crypto
 ```
 The `crypto` package functionality we'll use here is the transactionBuilder, which provides a series of "chainable" methods that can be called, one after another, to produce a transaction object. These methods create and define your transaction: its type, its amount in arktoshis, its signature, and more.

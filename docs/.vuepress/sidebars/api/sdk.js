@@ -45,6 +45,16 @@ module.exports = [
     ]
   },
   {
+      title: "Examples",
+      collapsable: false,
+      children: [
+          "/api/sdk/examples/elixir.md",
+          "/api/sdk/examples/java.md",
+          "/api/sdk/examples/php.md",
+          "/api/sdk/examples/python.md",
+      ]
+  },
+  {
     title: "Frameworks",
     collapsable: false,
     children: [

@@ -24,7 +24,7 @@ To view which parameters each transaction type requires and offers, use `tester 
 
 Some parameters are common to all transaction types:
 
-```sh
+```bash
   -n, --number <number>            number of wallets (default: 10)
   -a, --amount <number>            initial wallet token amount (default: 200000000)
   --transfer-fee <number>          transfer fee (default: 10000000)
@@ -54,7 +54,7 @@ Accounts randomly generated are available in the `./test-wallets` file.
 
 For the command
 
-```sh
+```bash
 tester transfer \
 --number 1 \
 --base-url http://localhost \
@@ -62,7 +62,7 @@ tester transfer \
 ```
 the output should be similar to
 
-```sh
+```bash
 [INFO]: Sending 1 transfer transactions
 [INFO]: Sender starting balance: 999779173791
 [INFO]: 0 ==> c0a4e698c78ce947c07356c19eafb9365db3d80b0ae8ecc7362cd5fbc6dc308c, D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk (fee: 10000000)
@@ -89,7 +89,7 @@ In my case, 3 transfers were made: one from my original wallet, and two to the r
 
 Very similar to a standard transfer transaction
 
-```sh
+```bash
 tester delegate-registration \
 --number 1 \
 --base-url http://localhost \
@@ -98,7 +98,7 @@ tester delegate-registration \
 
 For the output of
 
-```sh
+```bash
 [INFO]: Sending 1 transfer transactions
 [INFO]: Sender starting balance: 4800000000
 [INFO]: 0 ==> d647f7d6dfeed9b54c40e8717bd940c2da5805f34231168507a3810ed1c27844, DEPu5PezAvSZ5DhMHTNjBFq7n5KfaLSQVE (fee: 10000000)
@@ -122,7 +122,7 @@ You can view the delegate this transaction registered on the [dexplorer.ark.io](
 
 Again, the format is almost identical
 
-```sh
+```bash
 tester vote \
 --number 1 \
 --base-url http://localhost \
@@ -132,7 +132,7 @@ tester vote \
 
 An errorless yield looks like
 
-```sh
+```bash
 [INFO]: Sending 1 transfer transactions
 [INFO]: Sender starting balance: 2080000000
 [INFO]: 0 ==> 88a6b701a6026bd9cf82e8596e8073aa16d8edbfaf0e7951e9b0a15f3d074d26, DRBiMija3y75HnVnzUHAA9krXaA8DJS7mJ (fee: 10000000)
@@ -154,7 +154,7 @@ Here's [a link to the specific voting transaction in question](https://dexplorer
 
 The command issued for this transaction was
 
-```sh
+```bash
 tester second-signature \
 --number 1 \
 --base-url http://localhost \
@@ -163,7 +163,7 @@ tester second-signature \
 
 And the associated output
 
-```sh
+```bash
 [INFO]: Sending 1 transfer transactions
 [INFO]: Sender starting balance: 1870000000
 [INFO]: 0 ==> cde612dbae244c912e9f39a926d5ff38644570b4813f7e9ef05d5f4a7eccaf7d, DHS2SvNtdzyvcPccQKV8h17azuREW8pUHB (fee: 10000000)
@@ -181,7 +181,7 @@ And the associated output
 
 Example CLI input
 
-```sh
+```bash
 tester multi-signature \
 --number 1 \
 --base-url http://localhost \
@@ -190,7 +190,7 @@ tester multi-signature \
 
 Finally, we receive as a response
 
-```sh
+```bash
 [INFO]: Sending 1 transfer transactions
 [INFO]: Sender starting balance: 999099173791
 [INFO]: 0 ==> d606365f5467f125e16dd2206eda769b97c6529ffb810bbacb0df2f0b9b7b146, DGdddVsyBmKz7SyzMsZBm1MHepkqZ3JjKy (fee: 10000000)
@@ -231,7 +231,7 @@ Additionally, types other than transfer have the extra `--<type>-fee <number || 
 
 The simple demo
 
-```sh
+```bash
 tester transfer \
 --number 2 \
 --base-url http://localhost \
@@ -241,7 +241,7 @@ tester transfer \
 ```
 will produce output showing 2 transactions with different fees
 
-```sh
+```bash
 0 ==> 9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b, D9mwARuRihGV8hNyEFvrsTttBKnrmewfHM (fee: 38056)
 1 ==> 663867b8452388002b3e47118ca67d94e17ba9f82399c057b910c6358c371a43, D9mwARuRihGV8hNyEFvrsTttBKnrmewfHM (fee: 39493)
 ```
@@ -256,7 +256,7 @@ The syntax and output follows the same model as the transfer transaction, with t
 
 Here is an example
 
-```sh
+```bash
 tester delegate-registration \
 --number 1 \
 --base-url http://localhost \
@@ -266,7 +266,7 @@ tester delegate-registration \
 
 For the output
 
-```sh
+```bash
 [INFO]: Sending 1 transfer transactions
 [INFO]: Sender starting balance: 1001689173791
 [INFO]: 0 ==> b2b2aaf2997455fdadf3cad34ea991fd714b841b50bba6789174408e4a473d92, D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD (fee: 10000000)

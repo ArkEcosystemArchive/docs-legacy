@@ -2,6 +2,16 @@ module.exports = [
   ["/api/", "Back to API Home"],
   ["/api/sdk/", "SDK Overview"],
   {
+    title: "Examples",
+    collapsable: false,
+    children: [
+        "/api/sdk/examples/elixir.md",
+        "/api/sdk/examples/java.md",
+        "/api/sdk/examples/php.md",
+        "/api/sdk/examples/python.md",
+    ]
+  },
+  {
     title: "Clients",
     collapsable: false,
     children: [
@@ -36,16 +46,6 @@ module.exports = [
       "/api/sdk/cryptography/rust.md",
       "/api/sdk/cryptography/swift.md",
     ]
-  },
-  {
-      title: "Examples",
-      collapsable: false,
-      children: [
-          "/api/sdk/examples/elixir.md",
-          "/api/sdk/examples/java.md",
-          "/api/sdk/examples/php.md",
-          "/api/sdk/examples/python.md",
-      ]
   },
   {
     title: "Frameworks",

@@ -21,10 +21,27 @@ While the below examples are written using Node, there are SDKs available for a 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.
 
 In JavaScript, this is:
+:::: tabs
+
+::: tab javascript
 ```js
 const Client = require('@arkecosystem/client')
 const exchangeClient = new Client('YOUR.NODE.IP', 2)
 ```
+:::
+::: tab java
+```java
+import org.arkecosystem.client.Connection;
+import org.arkecosystem.client.api.two.Two;
+import org.arkecosystem.crypto.configuration.Network;
+import org.arkecosystem.crypto.networks.Devnet;
+import org.arkecosystem.crypto.networks.Mainnet;
+import org.arkecosystem.crypto.transactions.Transaction;
+import org.arkecosystem.crypto.transactions.builder.Transfer;
+```
+:::
+
+::::
 ## Check Wallet Balance
 
 Checking a wallet balance involves using the `wallets` resource to `get` the wallet corresponding to a given Ark address.

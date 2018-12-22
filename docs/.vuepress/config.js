@@ -8,6 +8,7 @@ const DOCSPATH = "docs";
 const config = {
   title: "Ark Ecosystem Documentation",
   description: "The central knowledge hub for all things Ark Ecosystem",
+  plugins: [ 'tabs' ],
   head: [
     [
       "link",

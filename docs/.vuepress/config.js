@@ -36,8 +36,8 @@ const config = {
       text: 'Public API',
       link: '/api/public/v2/'
     },{
-      text: 'P2P API',
-      link: '/api/p2p/'
+      text: 'SDK Overview',
+      link: '/SDK/'
     }],
     sidebar: {
       "/api/json-rpc/": require("./sidebars/api/json-rpc"),

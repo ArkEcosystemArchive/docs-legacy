@@ -2,6 +2,16 @@
 title: "Elixir"
 ---
 
+The code represents minimal example of `client` and `crypto` libraries usage for the specified programming language. Example functionality consists of:
+- importing/loading the needed dependencies/libraries
+- initialisation of the client and connecting to an ark-node(peer)
+- retrieve a specific block via API
+- create transaction payload
+- post transaction payload to an ark-node(peer)
+- handle response data from API
+
+Please refer to the code comments or check more detailed documentation for specific SDK in the left menu.
+
 # Install dependencies
 
 The packages can be installed by adding them to your list of dependencies in mix.exs : 

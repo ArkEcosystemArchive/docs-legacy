@@ -40,10 +40,6 @@ module.exports = (str, lang) => {
         lang = 'bash'
     }
 
-    if (lang === 'yml') {
-        lang = 'yaml'
-    }
-
     if (!prism.languages[lang]) {
         require(`prismjs/components/prism-${lang}`)
     }

@@ -1,6 +1,8 @@
 ---
-title: "Java"
+title: "Minimalistic SDK demos"
 ---
+
+## SDK client and crypto usage samples
 
 The code represents minimal example of `client` and `crypto` libraries usage for the specified programming language. Example functionality consists of:
 - importing/loading the needed dependencies/libraries
@@ -12,8 +14,8 @@ The code represents minimal example of `client` and `crypto` libraries usage for
 
 Please refer to the code comments or check more detailed documentation for specific SDK in the left menu.
 
-# Java SDK Demo
-
+:::: tabs 
+::: tab java
 ```java
 import com.google.gson.internal.LinkedTreeMap;
 import org.arkecosystem.client.Connection;
@@ -95,3 +97,124 @@ public class Main {
     }
 }
 ```
+:::
+
+::: tab php
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+use ArkEcosystem\Crypto\Transactions\Builder\Transfer;
+use ArkEcosystem\Client\Connection;
+
+// Instantiate a client
+$connection = new Connection([
+    'host' => 'http://node-ip:port/api/', // TRAILING SLASH!
+]);
+
+// find block with height 545774
+$response = $connection->blocks()->show('545774');
+var_dump($response['data']);
+
+// creating a transaction with the arkecosystem-java-crypto builder
+$transfer = Transfer::new()
+    ->recipient('AJDkvwkwxW4N9bTYqJUijmEtY3rKwniCZQ')
+    ->amount(1)
+    ->vendorField('This is a transaction from PHP')
+    ->sign('secret passphrase');
+
+// adding transaction to payload, payload is an array of transactions
+$transactions = [$transfer->toArray()];
+
+// posting transactions to the connected node as specified in the connection above
+$response = $connection->transactions()->create($transactions);
+
+var_dump($response['data']);
+var_dump($response['data']['accept']);
+var_dump($response['data']['broadcast']);
+```
+:::
+
+::: tab elixir
+```elixir
+defmodule ElixirTest do
+
+  alias ArkEcosystem.Crypto.Transactions.Transaction
+  alias ArkEcosystem.Crypto.Transactions.Builder
+
+  @client ArkEcosystem.Client.new(%{
+          host: "https://dexplorer.ark.io:8443/api/v2",
+          nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+          version: "2.0.0"
+  })
+
+  def main do
+    #Find a block with height 939627
+    IO.inspect ArkEcosystem.Client.API.Two.Block.show(@client, '939627')
+
+    transaction = Builder.build_transfer(
+      "D5rHMAmTXVbG7HVF3NvTN3ghpWGEii5mH2",
+      100000,
+      "This is a transaction from Elixir",
+      "my super secret seedpass"
+    )
+
+    # adding transaction to payload, payload is an array of transactions
+    transaction = transaction |> Transaction.to_params
+
+    # posting transactions to the connected node as specified in the connection above
+    ArkEcosystem.Client.API.Two.Transaction.create(@client, [transaction])
+  end
+end
+```
+:::
+
+::: tab python
+```python
+from ark.client import ArkClient
+from crypto.transactions.builder.transfer import Transfer
+
+# Instantiate the client
+client = ArkClient('https://dexplorer.ark.io:8443/api/', api_version='v2')
+
+# find block with height 545774
+response = client.blocks.get('545774')
+
+# Creating a transaction with the Arkecosystem-Python-Crypto builder
+tx = Transfer(recipientId='D5rHMAmTXVbG7HVF3NvTN3ghpWGEii5mH2', amount=10000000,
+              vendorField="This is a transaction from Python")
+
+tx.sign('my super secret seedpass')
+
+# adding transaction to payload, payload is an array of transactions
+transaction_dict = tx.to_dict()
+
+
+if __name__ == '__main__':
+    # posting transactions to the connected node as specifid in the connection above
+    client.transactions.create([transaction_dict])
+```
+:::
+
+::: tab ruby
+```ruby
+require 'arkecosystem/client'
+require 'arkecosystem/crypto'
+
+connection = ArkEcosystem::Client::Connection.new(host: "http://my.ark.node:4003/api/", version: 2)
+
+transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
+                  .set_recipient_id('DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8')
+                  .set_amount(100000)
+                  .set_vendor_field('Hello from Ruby !')
+                  .sign('mysupersecretppassphrase')
+
+puts transaction.verify
+
+response = connection.transactions.create({transactions: [transaction.to_params]})
+
+puts response.body
+```
+:::
+::::

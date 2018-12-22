@@ -50,10 +50,7 @@ module.exports = [
     title: "Examples",
     collapsable: false,
     children: [
-        "/sdk/examples/elixir.md",
-        "/sdk/examples/java.md",
-        "/sdk/examples/php.md",
-        "/sdk/examples/python.md",
+        "/sdk/examples/sdk-demos.md",
     ]
   }
 ]

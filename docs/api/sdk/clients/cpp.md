@@ -14,10 +14,10 @@ If you are using CMake head over to [https://www.cmake.org/download/](https://ww
 
 #### Make
 
-```sh
+```bash
 git clone https://github.com/ArkEcosystem/cpp-client
 cd cpp-client
-// init & update micro-ecc submodule
+# init & update micro-ecc submodule
 git submodule init
 git submodule update
 cmake .
@@ -26,7 +26,7 @@ cmake --build .
 
 #### Tests
 
-```sh
+```bash
 ./bin/Ark-Cpp-Crypto-tests
 ```
 
@@ -55,7 +55,7 @@ Python is required to run PlatformIO, so grab an installer package from [https:/
 
 #### Installation
 
-```sh
+```bash
 pip install -U platformio
 platformio lib -g install 2778 1665
 ```
@@ -64,14 +64,14 @@ platformio lib -g install 2778 1665
 
 ##### ESP8266
 
-```sh
+```bash
 cd cpp-client/test
 pio run -e esp8266 -t upload
 ```
 
 ##### ESP32
 
-```sh
+```bash
 cd cpp-client/test
 pio run -e esp32 -t upload
 ```

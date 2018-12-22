@@ -30,7 +30,7 @@ This last command, `yarn full:testnet`, is where the magic happens. Let's do a q
 
 1. The `full:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env ARK_ENV=test ./bin/ark start --config ./lib/config/testnet --network testnet --network-start`
 2. As seen in the previous step, the `./bin/ark` file is called with the `start` command. That command looks like this:
-```sh
+```js
 app
   .command('start')
   .description('start a relay node and the forger')

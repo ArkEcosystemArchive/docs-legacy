@@ -24,13 +24,13 @@ All SDK implementations are split into two libraries. The `client` library is re
 
 We'll make extensive use of both libraries, so let's install them now. Run the following command from your terminal while in your project folder:
 
-```sh
+```bash
 yarn add @arkecosystem/client @arkecosystem/crypto
 ```
 
 Next, let's create an `index.js` file in which to write our code:
 
-```sh
+```bash
 touch index.js
 ```
 

@@ -8,6 +8,7 @@ const DOCSPATH = "docs";
 const config = {
   title: "Ark Ecosystem Documentation",
   description: "The central knowledge hub for all things Ark Ecosystem",
+  plugins: [ 'tabs' ],
   head: [
     [
       "link",
@@ -35,14 +36,14 @@ const config = {
       text: 'Public API',
       link: '/api/public/v2/'
     },{
-      text: 'P2P API',
-      link: '/api/p2p/'
+      text: 'SDK Overview',
+      link: '/SDK/'
     }],
     sidebar: {
-      "/api/sdk/": require("./sidebars/api/sdk"),
       "/api/json-rpc/": require("./sidebars/api/json-rpc"),
       "/api/public/": require("./sidebars/api/public"),
       "/api/": require("./sidebars/api"),
+      "/sdk/": require("./sidebars/sdk"),
       "/faq/": require("./sidebars/faq"),
       "/introduction/": require("./sidebars/introduction"),
       "/cookbook/": require('./sidebars/cookbook'),

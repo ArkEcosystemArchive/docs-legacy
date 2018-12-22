@@ -56,15 +56,6 @@ If you want to start a forger you can use any of the following commands (inside 
 - `yarn forger:devnet` => `packages/core/lib/config/networks/devnet`
 - `yarn forger:testnet` => `packages/core/lib/config/networks/testnet`
 
-## Creating a snapshot
-
-If you want to create a snapshot you can use any of the following commands.
-
-- `yarn snapshot` => `~/.ark`
-- `yarn snapshot:mainnet` => `packages/core/lib/config/networks/mainnet`
-- `yarn snapshot:devnet` => `packages/core/lib/config/networks/devnet`
-- `yarn snapshot:testnet` => `packages/core/lib/config/networks/testnet`
-
 ## Debugging
 
 It is possible to run a variation of these commands that enables the [Node debugger](https://nodejs.org/api/debugger.html):

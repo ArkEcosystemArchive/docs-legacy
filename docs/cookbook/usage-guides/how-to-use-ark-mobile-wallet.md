@@ -36,7 +36,7 @@ Your new profile must then be assigned a name and a network. The Mainnet is the 
 
 ![Create a Name on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet6.png)
 
-Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From there, you can click on the bottom-right button to either create or import a wallet. If you are importing a wallet, click [here](#importWallet). If you are creating a new wallet, continue reading.
+Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From there, you can click on the bottom-right button to either create or import a wallet. If you are importing a wallet, click [here](#importing-a-wallet). If you are creating a new wallet, continue reading.
 
 ## Creating a wallet
 

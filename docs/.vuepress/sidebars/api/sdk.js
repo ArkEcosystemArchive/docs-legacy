@@ -2,13 +2,6 @@ module.exports = [
   ["/api/", "Back to API Home"],
   ["/api/sdk/", "SDK Overview"],
   {
-    title: "Usage examples",
-    collapsable: false,
-    children: [
-        "/api/sdk/examples/usage-examples.md"
-    ]
-  },
-  {
     title: "Clients",
     collapsable: false,
     children: [

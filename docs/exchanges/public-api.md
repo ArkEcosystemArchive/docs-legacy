@@ -31,13 +31,11 @@ const exchangeClient = new Client('YOUR.NODE.IP', 2)
 :::
 ::: tab java
 ```java
-import org.arkecosystem.client.Connection;
-import org.arkecosystem.client.api.two.Two;
-import org.arkecosystem.crypto.configuration.Network;
-import org.arkecosystem.crypto.networks.Devnet;
-import org.arkecosystem.crypto.networks.Mainnet;
-import org.arkecosystem.crypto.transactions.Transaction;
-import org.arkecosystem.crypto.transactions.builder.Transfer;
+HashMap<String, Object> map = new HashMap<>();
+map.put("host", "http://node-ip:port/api/");
+map.put("API-Version", 2);
+
+Connection<Two> connection = new Connection(map);
 ```
 :::
 
@@ -45,6 +43,8 @@ import org.arkecosystem.crypto.transactions.builder.Transfer;
 ## Check Wallet Balance
 
 Checking a wallet balance involves using the `wallets` resource to `get` the wallet corresponding to a given Ark address.
+:::: tabs
+::: tab javascript
 ```js
 const walletAddress = 'ARKADDRESS' // get address from user 
 let wallet 
@@ -61,7 +61,13 @@ exchangeClient
 
 console.log(wallet.balance)
 ```
-
+:::
+::: tab java
+```java
+console.log("add code")
+```
+:::
+::::
 ## Find Block Information
 
 If you know the ID of the block you are looking for, you can use the `get` method on the `blocks` resource to return information on that block.

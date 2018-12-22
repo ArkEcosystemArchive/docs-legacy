@@ -14,10 +14,12 @@ GET /api/blocks
 
 ### Query Parameters
 
-| Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| Name   | Type   | Description                                   | Required |
+|--------|:------:|-----------------------------------------------|:--------:|
+| page   | int    | The number of the page that will be returned. | :x:      |
+| limit  | int    | The number of resources per page.             | :x:      |
+| id     | string | The identifier of the block to be retrieved.  | :x:      |
+| height | int    | The identifier of the block to be retrieved.  | :x:      |
 
 ### Response
 
@@ -70,14 +72,14 @@ GET /api/blocks
 ### Endpoint
 
 ```
-GET /api/blocks/{id}
+GET /api/blocks/{id|height}
 ```
 
 ### Path Parameters
 
-| Name | Type   | Description                                  | Required           |
-|------|:------:|----------------------------------------------|:------------------:|
-| id   | string | The identifier of the block to be retrieved. | :white_check_mark: |
+| Name | Type   | Description                                            | Required           |
+|------|:------:|--------------------------------------------------------|:------------------:|
+| id   | string | The identifier or height of the block to be retrieved. | :white_check_mark: |
 
 ### Response
 

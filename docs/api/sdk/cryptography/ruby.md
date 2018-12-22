@@ -14,6 +14,12 @@ Add this line to your application's Gemfile and then execute `bundle`
 gem 'arkecosystem-crypto'
 ```
 
+Or install it from the command line
+
+```bash
+$ gem install arkecosystem-crypto
+```
+
 ## Transactions
 
 ### Sign
@@ -21,7 +27,7 @@ gem 'arkecosystem-crypto'
 ```ruby
 require 'arkecosystem/crypto'
 
-transaction = ArkEcosystem::Crypto::Builder::Transfer.new()
+transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
   .set_recipient_id('DGihocTkwDygiFvmg6aG8jThYTic47GzU9')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')
@@ -37,7 +43,7 @@ puts transaction.to_params
 ```ruby
 require 'arkecosystem/crypto'
 
-serializer = ArkEcosystem::Crypto::Serializer.new(transaction)
+serializer = ArkEcosystem::Crypto::Transactions::Serializer.new(transaction)
 
 puts serializer.serialize
 ```
@@ -47,7 +53,7 @@ puts serializer.serialize
 ```ruby
 require 'arkecosystem/crypto'
 
-deserializer = ArkEcosystem::Crypto::Deserializer.new(serialized_transaction)
+deserializer = ArkEcosystem::Crypto::Transactions::Deserializer.new(serialized_transaction)
 
 puts deserialiser.deserialize
 ```
@@ -59,7 +65,7 @@ puts deserialiser.deserialize
 ```ruby
 require 'arkecosystem/crypto'
 
-message = ArkEcosystem::Crypto::Message.sign('Hello World', 'this is a top secret passphrase')
+message = ArkEcosystem::Crypto::Utils::Message.sign('Hello World', 'this is a top secret passphrase')
 
 puts message.to_params
 ```
@@ -69,7 +75,7 @@ puts message.to_params
 ```ruby
 require 'arkecosystem/crypto'
 
-message = ArkEcosystem::Crypto::Message.new(
+message = ArkEcosystem::Crypto::Utils::Message.new(
   publickey: '02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9',
   signature: '304402202e00853a2438249fbaa030151b47e25bc1668dfed6eb7bc159fb347e50e7a87e0220472dcef61c89904fd05e2069cedf89ccbf644fe8d741a0b78aa3933056ca0802',
   message: 'Hello World'
@@ -99,7 +105,7 @@ ArkEcosystem::Crypto::Identities::Address.from_private_key('d8839c2432bfd0a67ef1
 
 #### Validate an address
 ```ruby
-ArkEcosystem::Crypto::Identities::Address.validate('this is a top secret passphrase')
+ArkEcosystem::Crypto::Identities::Address.validate('address')
 ```
 
 ### Private Key

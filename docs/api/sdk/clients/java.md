@@ -11,47 +11,186 @@ title: "Java"
 ### Gradle
 
 ```bash
-compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.0'
+compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.2'
 ```
 
 ### Maven
 
 ```xml
 <dependency>
-    <groupId>org.arkecosystem.client</groupId>
-    <artifactId>client</artifactId>
-    <version>0.1.0</version>
-    <scope>test</scope>
+  <groupId>org.arkecosystem</groupId>
+  <artifactId>client</artifactId>
+  <version>0.1.2</version>
 </dependency>
 ```
 
-## Basics
-
-```java
-import org.arkecosystem.client.Connection
-
-Connection connection = new Connection([
-    host: 'http://my.ark.node:port/api/',
-    version: 1
-])
-
-def response = connection.api('transactions').get('dummy')
-```
+## Usage
 
 ## Connections
 
 ```java
-import org.arkecosystem.client.ConnectionManager
+import com.google.gson.internal.LinkedTreeMap;
+import org.arkecosystem.client.Connection;
+import org.arkecosystem.client.ConnectionManager;
 
-def manager = new ConnectionManager()
+import java.util.HashMap;
+import java.io.IOException;
 
-manager.connect([
-    host: 'http://my-main.ark.node:port/api/',
-    version: 1
-], 'main')
+public class Main {
+    public static void main(String[] args) throws IOException {
+        HashMap<String, Object> map = new HashMap<>();
 
-manager.connect([
-    host: 'http://my-backup.ark.node:port/api/',
-    version: 1
-], 'backup')
+        // For V2
+        map.put("host", "my.node.v2.ip");
+        map.put("API-Version", 2);
+
+        ConnectionManager manager = new ConnectionManager();
+        Connection<Two> connection = manager.connect(map);
+        ...
+        manager.disconnect();
+    }
+}
+```
+
+### Initialization
+
+```java
+import com.google.gson.internal.LinkedTreeMap;
+import org.arkecosystem.client.Connection;
+import org.arkecosystem.client.api.two.Two;
+
+import java.util.HashMap;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        // V2
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("host", "http://my.node.v2.ip:port/api/");
+        map.put("API-Version", 2);
+        Connection<Two> connection = new Connection(map);
+        ...
+    }
+}
+```
+
+### Blocks V1 and V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().blocks.all();
+System.out.println(actual);
+
+... > {blocks= [{
+... > ...
+... > ]}}
+```
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().blocks.all();
+System.out.println(actual);
+
+... > {blocks= [{
+... > ...
+... > ]}}
+```
+
+### Delegates V1 and V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().delegates.all();
+System.out.println(actual);
+
+... > {delegates= [{
+... > ...
+... > ]}}
+```
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().delegates.all();
+System.out.println(actual);
+
+... > {delegates= [{
+... > ...
+... > ]}}
+```
+### Node - V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().node.status();
+System.out.println(actual);
+
+... > {statusCode=...}
+```
+
+### Peers - V1 and V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().peers.all();
+System.out.println(actual);
+
+... > {peers= [{
+... > ...
+... > ]}}
+```
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().peers.all();
+System.out.println(actual);
+
+... > {peers= [{
+... > ...
+... > ]}}
+```
+
+### Transactions - V1 and V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().transactions.all();
+System.out.println(actual);
+
+... > {transactions= [{
+... > ...
+... > ]}}
+```
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().transactions.all();
+System.out.println(actual);
+
+... > {transactions= [{
+... > ...
+... > ]}}
+```
+
+### Votes - V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().votes.all();
+System.out.println(actual);
+
+... > {votes= [{
+... > ...
+... > ]}}
+```
+
+### Wallets - V2
+
+```java
+// ...
+LinkedTreeMap<String, Object> actual = connection.api().wallets.all();
+System.out.println(actual);
+
+... > {wallets= [{
+... > ...
+... > ]}}
 ```

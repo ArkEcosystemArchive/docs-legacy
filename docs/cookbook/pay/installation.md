@@ -12,6 +12,34 @@ title: "Installation"
 yarn add @arkecosystem/pay
 ```
 
+## Usage with Browsers
+
+::: warning
+When using this module from a website that requires secure connections via HTTPS (SSL) you will need to specify peers that use HTTPS as browsers will not allow connections from HTTPS to HTTP (Peers). The default for Ark Core is to run the public API on HTTP connections without SSL.
+:::
+
+Below you can find two of our secure HTTPS (SSL) nodes. If you wish to use them call the below snippets before `gateway.start()`.
+
+### Mainnet
+
+```js
+gateway.peers([{
+    ip: 'explorer.ark.io',
+    port: 8443,
+    protocol: 'https',
+}])
+```
+
+### Devnet
+
+```js
+gateway.peers([{
+    ip: 'dexplorer.ark.io',
+    port: 8443,
+    protocol: 'https',
+}])
+```
+
 ## Example
 
 ```js

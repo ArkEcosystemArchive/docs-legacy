@@ -2,6 +2,12 @@
 title: "Webhooks"
 ---
 
+# Webhooks
+
+::: warning
+All HTTP requests have to be send with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+:::
+
 ## Authentication
 
 In order to communicate with the Webhooks API you will need to provide the token you configured on your node through the `Authorization` header. Authenticating with an invalid token will return `401 Unauthorized`.
@@ -60,7 +66,7 @@ GET /api/webhooks
 }
 ```
 
-# Retrieve a webhook
+## Retrieve a webhook
 
 ### Endpoint
 
@@ -131,6 +137,46 @@ POST /api/webhooks
     }
 }
 ```
+
+### Events  
+
+| Event                | Description                                                                         | Implemented        |
+|----------------------|-------------------------------------------------------------------------------------|--------------------|
+| block.applied        | Fires when a block is saved                                                         | :white_check_mark: |
+| block.forged         | Fires when a block is forged                                                        | :white_check_mark: |
+| block.reverted       | Fires when a block is removed from the database (e.g. on a rollback)                | :white_check_mark: |
+| delegate.registered  | Fires when a new delegate is registered                                             | :white_check_mark: |
+| delegate.resigned    | Fires when a delegate resigns                                                       | :white_check_mark: |
+| forger.failed        | Fires when the forger module fails to start                                         | :white_check_mark: |
+| forger.missing       | Fires when it is detected that the forger module isn't running                      | :white_check_mark: |
+| forger.started       | Fires when the forger module forges a new block                                     | :x:                |
+| peer.added           | Fires when a peer is added                                                          | :white_check_mark: |
+| peer.removed         | Fires when a peer is removed                                                        | :white_check_mark: |
+| round.created        | Fires when a new round is created and saved to the database                         | :white_check_mark: |
+| state:started        |                                                                                     | :x:                |
+| transaction.applied  | Fires when a transaction is saved                                                   | :white_check_mark: |
+| transaction.expired  | Fires when an unconfirmed transaction expires                                       | :white_check_mark: |
+| transaction.forged   | Fires when a transaction is forged by a delegate                                    | :white_check_mark: |
+| transaction.reverted | Fires when a transaction is removed from the database                               | :x:                |
+| wallet.saved         | Fires when a wallet is updated (e.g. its balance changed, voted etc)                | :white_check_mark: |
+| wallet.created.cold  | Fires when a wallet that never existed before is saved (e.g. received its first tx) | :white_check_mark: |
+
+### Conditions  
+
+| Condition   | Description                                         |
+|-------------|-----------------------------------------------------|  
+| between     | Check if the given value is between min and max     |
+| contains    | Check if A contains B                               |
+| eq          | Check if A equals B                                 |
+| falsy       | Check if the given value is false                   |
+| gt          | Check if A is greater than B                        |
+| gte         | Check if A is greater than or equal to B            |
+| lt          | Check if A is lesser than B                         |
+| lte         | Check if A is lesser than or equal to B             |
+| ne          | Check if A does not equal B                         |
+| not-between | Check if the given value is not between min and max |
+| regexp      | Check if the given value matches                    |
+| truthy      | Check if the given value is true                    |
 
 ## Update a webhook
 

@@ -4,13 +4,9 @@ title: "JSON-RPC"
 
 # Introduction
 
-::: danger
-THESE DOCS ARE FOR [https://github.com/ArkEcosystem/core/tree/master/packages/core-json-rpc](https://github.com/ArkEcosystem/core/tree/master/packages/core-json-rpc) WHICH IS CURRENTLY UNDER DEVELOPMENT.
-
-IF YOU ARE LOOKING FOR THE CURRENT RPC SERVER HEAD OVER OVER TO [https://github.com/ArkEcosystem/rpc-server](https://github.com/ArkEcosystem/rpc-server).
+::: warning
+All HTTP requests have to be send with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
 :::
-
-# Example Request
 
 ```js
 const axios = require('axios')
@@ -25,6 +21,10 @@ const init = async () => {
         userId: require('crypto').randomBytes(32).toString('hex'),
         bip38: 'this is a top secret passphrase'
       }
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
     })
 
     console.log(response.data.result.address)

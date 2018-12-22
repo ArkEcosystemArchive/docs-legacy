@@ -16,6 +16,8 @@ Before we start working on the implementation of a webhook handler we will take 
 
 In order to guarantee that only your server is allowed to send data to your webhook handler, an authorization token is generated on creation of a webhook. **The generated token will only be returned once and not be visible again.**
 
+To generate an authorization token, you need to [create a webhook](/api/webhooks/#create-a-webhook).
+
 Lets take the following token as an example `fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66` which is 64 characters long and breaks down into 2 parts at 32 characters length each.
 
 The first 32 characters will be stored in the database and sent to you as a header `Authorization: fe944e318edb02b979d6bf0c87978b64` via a POST request.

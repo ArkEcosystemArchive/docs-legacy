@@ -18,24 +18,24 @@ Core Commander only supports Ubuntu (16.04, 18.04).
 On a fresh Ubuntu installation, follow these commands
 
 1. Update and Upgrade
-```sh
+```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
 
 2. Add new user and add to sudo group
-```sh
+```bash
 sudo adduser username
 sudo usermod -aG sudo username
 ```
 
 3. Login to the new user account and clone Core Commander
-```sh
+```bash
 sudo su - username
 git clone https://github.com/ArkEcosystem/core-commander
 ```
 
 4. Execute commander.sh with bash
-```sh
+```bash
 bash core-commander/commander.sh
 ```
 
@@ -52,7 +52,7 @@ bash core-commander/commander.sh
 ![reboot when dependencies have installed](./assets/relay/ask_for_reboot-08.png)
 
 8. Log back in and run Core Commander with bash again
-```sh
+```bash
 username@host:~$ bash core-commander/commander.sh
 ```
 

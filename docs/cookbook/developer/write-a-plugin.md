@@ -11,7 +11,7 @@ You can view instructions on how to setup your development environment in the [c
 Make sure you are in the Ark Core folder cloned from the official [GitHub repo](https://github.com/ArkEcosystem/core).
 
 Add a submodule for the plugin skeleton
-```sh
+```bash
 cd plugins/
 git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
 cd core-plugin-skeleton
@@ -32,7 +32,7 @@ The name of our plugin is **demo-plugin**. Make sure to change the name in your 
 We're also going to require ***BigNumber*** to demonstrate how to properly add dependencies to the plugin.
 
 After having changed the name of the plugin, make sure to run `lerna bootstrap` to expose the package name for scoped package installation
-```sh
+```bash
 lerna bootstrap
 ```
 :::danger
@@ -40,7 +40,7 @@ lerna bootstrap
 :::
 
 Add your dependencies **only to the specific plugin package**
-```sh
+```bash
 lerna add --scope=@arkecosystem/demo-plugin big-number --dev
 ```
 

@@ -19,6 +19,35 @@ Add the following to your Cargo.toml:
 arkecosystem-client = {git = "https://github.com/ArkEcosystem/rust-client", branch = "master" }
 ```
 
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/rust-client)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/rust-client
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd rust-client
+```
+
+4) Install the dependencies
+
+```bash
+$ cargo build
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+```bash
+$ cargo test
+```
+
 ## Usage
 
 ### Initialization

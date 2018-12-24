@@ -26,6 +26,4 @@ Requests that return multiple items will be paginated to 100 items by default. Y
 
 ## Public Testing Relay
 
-::: tip
-Currently there is no public relay available for the Public API v2 as it currently is under development.
-:::
+If you are not running a relay yourself you can use [https://node1.arknet.cloud/api/v2/](https://node1.arknet.cloud/api/v2/) to test API calls. Happy developing!

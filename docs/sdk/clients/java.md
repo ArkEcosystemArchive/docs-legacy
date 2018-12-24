@@ -39,7 +39,6 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         HashMap<String, Object> map = new HashMap<>();
-
         // For V2
         map.put("host", "my.node.v2.ip");
         map.put("API-Version", 2);
@@ -57,6 +56,7 @@ public class Main {
 ```java
 import com.google.gson.internal.LinkedTreeMap;
 import org.arkecosystem.client.Connection;
+// For V2
 import org.arkecosystem.client.api.two.Two;
 
 import java.util.HashMap;
@@ -74,7 +74,7 @@ public class Main {
 }
 ```
 
-### Blocks V1 and V2
+### Blocks V2
 
 ```java
 // ...
@@ -86,17 +86,7 @@ System.out.println(actual);
 ... > ]}}
 ```
 
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().blocks.all();
-System.out.println(actual);
-
-... > {blocks= [{
-... > ...
-... > ]}}
-```
-
-### Delegates V1 and V2
+### Delegates V2
 
 ```java
 // ...
@@ -108,15 +98,6 @@ System.out.println(actual);
 ... > ]}}
 ```
 
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().delegates.all();
-System.out.println(actual);
-
-... > {delegates= [{
-... > ...
-... > ]}}
-```
 ### Node - V2
 
 ```java
@@ -127,7 +108,7 @@ System.out.println(actual);
 ... > {statusCode=...}
 ```
 
-### Peers - V1 and V2
+### Peers - V2
 
 ```java
 // ...
@@ -139,27 +120,7 @@ System.out.println(actual);
 ... > ]}}
 ```
 
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().peers.all();
-System.out.println(actual);
-
-... > {peers= [{
-... > ...
-... > ]}}
-```
-
-### Transactions - V1 and V2
-
-```java
-// ...
-LinkedTreeMap<String, Object> actual = connection.api().transactions.all();
-System.out.println(actual);
-
-... > {transactions= [{
-... > ...
-... > ]}}
-```
+### Transactions - V2
 
 ```java
 // ...

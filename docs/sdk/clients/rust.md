@@ -55,16 +55,11 @@ $ cargo test
 ```rust
 extern crate arkecosystem_client;
 
-// Both V1 & V2
 use arkecosystem_client::connection::Connection;
-// For V1
-use arkecosystem_client::api::one::One;
 // For V2
 use arkecosystem_client::api::two::Two;
 
 fn main() {
-    // For v1
-    let v1 = Connection::<One>::new("http://my.ark.node:port/api/");
     // For v2
     let v2 = Connection::<Two>::new("http://my.ark.node:port/api/");
     // Parameters are passed as a Vec of string tuples (key, value).
@@ -74,30 +69,7 @@ fn main() {
 
 ```
 
-### Accounts - V1
-
-```rust
-// ...
-let balance = v1.accounts.balance("AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv".to_owned());
-println!("{:?}", balance);
-
-... > Ok(Object({
-... > ...
-... > }))
-```
-
-
-### Blocks V1 and V2
-
-```rust
-// ...
-let blocks = v1.blocks.all(vec![("", "")]);
-println!("{:?}", blocks);
-
-... > Ok(Object({
-... > ...
-... > }))
-```
+### Blocks V2
 
 ```rust
 // ...
@@ -109,17 +81,7 @@ println!("{:?}", blocks);
 ... > })})
 ```
 
-### Delegates V1 and V2
-
-```rust
-// ...
-let delegates = v1.delegates.all(vec![("", "")]);
-println!("{:?}", delegates);
-
-... > Ok(Object({
-... > ...
-... > }))
-```
+### Delegates V2
 
 ```rust
 // ...
@@ -129,18 +91,6 @@ println!("{:?}", delegates);
 ... > Ok(Response { meta: Some(Meta {
 ... > ...
 ... > })})
-```
-
-### Loader - V1
-
-```rust
-// ...
-let loader = v1.loader.status();
-println!("{:?}", loader);
-
-... > Ok(Object({
-... > ...
-... > }))
 ```
 
 ### Node - V2
@@ -155,17 +105,7 @@ println!("{:?}", node);
 ... > }
 ```
 
-### Peers - V1 and V2
-
-```rust
-// ...
-let peers = v1.peers.all(vec![("", "")]);
-println!("{:?}", peers);
-
-... > Ok(Object({
-... > ...
-... > }))
-```
+### Peers - V2
 
 ```rust
 // ...
@@ -177,29 +117,7 @@ println!("{:?}", peers);
 ... > })})
 ```
 
-### Signatures - V1 
-
-```rust
-// ...
-let signatures = v1.signatures.fee();
-println!("{:?}", signatures);
-
-... > Ok(Object({
-... > ...
-... > }))
-```
-
-### Transactions - V1 and V2
-
-```rust
-// ...
-let transactions = v1.transactions.all(vec![("", "")]);
-println!("{:?}", transactions);
-
-... > Ok(Object({
-... > ...
-... > }))
-```
+### Transactions - V2
 
 ```rust
 // ...

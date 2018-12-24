@@ -6,6 +6,10 @@ title: "Rust"
 
 [[toc]]
 
+## Rust Installation
+
+Rust can be installed by following [this guide](https://www.rust-lang.org/tools/install)
+
 ## Installation
 
 Add the following to your `Cargo.toml`:
@@ -14,6 +18,35 @@ Add the following to your `Cargo.toml`:
 arkecosystem-crypto = "0.1.0"
 # or
 arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", branch = "master" }
+```
+
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/rust-crypto)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/rust-crypto
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd rust-crypto
+```
+
+4) Install the dependencies
+
+```bash
+$ cargo build
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+```bash
+$ cargo test
 ```
 
 ## Transactions

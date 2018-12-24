@@ -21,13 +21,30 @@ While the below examples are written using Node, there are SDKs available for a 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.
 
 In JavaScript, this is:
+:::: tabs
+
+::: tab javascript
 ```js
 const Client = require('@arkecosystem/client')
 const exchangeClient = new Client('YOUR.NODE.IP', 2)
 ```
+:::
+::: tab java
+```java
+HashMap<String, Object> map = new HashMap<>();
+map.put("host", "http://node-ip:port/api/");
+map.put("API-Version", 2);
+
+Connection<Two> connection = new Connection(map);
+```
+:::
+
+::::
 ## Check Wallet Balance
 
 Checking a wallet balance involves using the `wallets` resource to `get` the wallet corresponding to a given Ark address.
+:::: tabs
+::: tab javascript
 ```js
 const walletAddress = 'ARKADDRESS' // get address from user 
 let wallet 
@@ -44,7 +61,8 @@ exchangeClient
 
 console.log(wallet.balance)
 ```
-
+:::
+::::
 ## Find Block Information
 
 If you know the ID of the block you are looking for, you can use the `get` method on the `blocks` resource to return information on that block.

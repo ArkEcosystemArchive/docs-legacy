@@ -36,6 +36,10 @@ module.exports = (str, lang) => {
         lang = 'python'
     }
 
+    if (lang === 'sh') {
+        lang = 'bash'
+    }
+
     if (!prism.languages[lang]) {
         require(`prismjs/components/prism-${lang}`)
     }

@@ -4,20 +4,15 @@ title: "How to Use the Mobile Wallet"
 
 # How to Use the Mobile Wallet
 
-## The Preparation
+The Ark Mobile Wallet is an easy to use, portable application. It enables you to manage all of your Ark accounts and view information about delegates. The wallet also provides an interface to add contacts by their address, which can save you some time when making transactions.
 
-The Ark Mobile Wallet is a great way to access your ARK tokens, it's fast and easy and while being mobile, it can securely store the data using PBKDF2 algorithm and AES-256 encryption protected by a created PIN code. This guide will show you where to get the mobile wallet on Android and iOS devices and help you with installing it! The mobile wallet has no need to download the blockchain, but can vote for a delegate, and send/receive ARK. Whether you're importing a wallet or generating a new one the wallet will have all the features you need.
+The application is built using the Ionic Framework, which enables the code base to be shared and functionally similar on both iOS and Android.
 
-Before we begin, we're going to need to download the mobile wallet. If you have an Android device you can download the mobile wallet [here!](https://play.google.com/store/apps/details?id=io.ark.wallet.mobile&hl=en_US)
+## Installation
 
-Now for iOS devices, you will need to download Cydia Impactor and the .ipa file of the wallet. Cydia Impactor can be used to install IPA files on iOS devices. Your device doesn't need to be jailbroken to use this application. We can download the application this way until Apple approves of the iOS version of the mobile wallet. Here we can find the [latest version here](http://www.cydiaimpactor.com/). Direct download links : [Windows](https://cydia.saurik.com/api/latest/2), [Mac OS X](https://cydia.saurik.com/api/latest/1),  [Linux 32-bit](https://cydia.saurik.com/api/latest/4), [Linux 64-bit](https://cydia.saurik.com/api/latest/5).
+Like any useful application, you'll be able to find the Ark Mobile Wallet application in your phone's store. It is completely free to download and use.
 
-We can [download the .ipa here.](https://github.com/vmunich/ark-mobile/blob/master/Ark%20Mobile%201.1%202018-04-09%2011-10-58.ipa) Once we have downloaded the Impactor, make sure the iOS device is recognized by your computer. **If you're on OS X**, open the Cydia Impactor Download and you can double click on Impactor. **If you're on Windows**, extract the zip folder and run the application in the folder that is created.
-
-Once Cydia Impactor opens it should show your iOS device, if it doesn't make sure the device is plugged in and the screen is unlocked. Once it loads you will want to click **Device -> Install Package**.
-![Image of Impactor](./assets/how-to-use-the-mobile-wallet/impactor.png)
-
-Find and choose the Ark Mobile Wallet .ipa file we downloaded earlier. Impactor will prompt you to type in your Apple ID and password so it may install the application. If you have **2 Factor Authentication enabled**, you are going to need to [login here](https://appleid.apple.com/#!&page=signin). Navigate to the Security section so you may create an app-specific password. Once the password has been generated, use it on Impactor to install the wallet on your device. Impactor will now install the application.
+Download the wallet on the [Apple App Store](https://itunes.apple.com/us/app/mobile-ark/id1324625967?ls=1&mt=8) or the [Google Play Store](https://play.google.com/store/apps/details?id=io.ark.wallet.mobile).
 
 ## Starting the Ark Wallet
 
@@ -25,30 +20,31 @@ Once you load the application you will be met with this screen:
 
 ![Image of Ark Welcome Screen](./assets/how-to-use-the-mobile-wallet/arkWallet.png)
 
-You may skip the introduction or continue by hitting Next on the bottom right hand corner of your screen. If you hit Next, you will see the following screens:
+The content of each slide shares some details about some security and usability features of the app.
 
-![Second image of Ark Welcome Screen](./assets/how-to-use-the-mobile-wallet/arkWallet2.png)       ![Third image of Ark Welcome Screen](./assets/how-to-use-the-mobile-wallet/arkWallet3.png)
-
-When we've either skipped or proceeded, you will be asked to create your profile:
+After reading through the welcome slides, you will be able to create a profile.
 
 ![Create a Profile on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet4.png)
 
-After you hit the '*Create A Profile*' button, you will be asked to create a 6 digit PIN and then confirm the PIN.
-**You will need to remember this PIN**.
+After you hit the '*Create A Profile*' button, you will be prompted to create a 6 digit PIN confirm it afterwards.
+
+**You will need to remember this PIN, it is very important.**
 
 ![Create a Pin on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet5.png)
 
-You will be asked to create a name for your profile. You can create one for the Mainnet or the Devnet, which is the Development Network. For this guide we will be on the Mainnet.
+Your new profile must then be assigned a name and a network. The Mainnet is the one where your ARK tokens will be sent to and from. The Devnet is used for team members and contributors wishing to test additional functionality and should not be used. The remainder of this document assumes you've created a profile that uses the Mainnet.
 
 ![Create a Name on Ark Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet6.png)
 
-Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From here, you can follow the prompts and click on the button that's displayed on the screen to import or create a wallet. If you are importing a wallet, click [here](#importWallet). If you are creating a new wallet, continue reading.
+Once you've placed your name, you can sign in by touching onto the profile you created and by entering in the PIN you created earlier. From there, you can click on the bottom-right button to either create or import a wallet. If you are importing a wallet, click [here](#importing-a-wallet). If you are creating a new wallet, continue reading.
 
 ## Creating a wallet
 
 If you choose to generate a wallet and follow the prompts you will be shown your shareable Public Address and your Secret Passphrase. **Keep your secret passphrase safe and secure**, without it you will not be able to restore your wallet and you will lose all of your ARK tokens.
 
-After hitting '*Next*', you will be asked to input 3 of the words in your Secret Passphrase. Once you've placed the appropriate numbered word into its field, you will be asked to put in your PIN again. The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satoshi's, and the 24 hour Change.
+After hitting '*Next*', you will be asked to verify your Secret Passphrase. In order to encrypt your address, your PIN will be required. 
+
+The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satishis, and the 24 hour Change.
 
 ![Ark Mobile Wallet Passphrase](./assets/how-to-use-the-mobile-wallet/arkWallet8.png)             ![Ark Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet9.png)
 
@@ -110,8 +106,6 @@ Choosing a Delegate will prompt you to vote for 1 ARK.
 
 ![Ark Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet18.png)
 
-If you have any questions regarding how much you will receive from voting for a delegate, you can find that [here](http://calculator.reconnico.com/).
-
 ## Conclusion
 
-Your Ark Mobile Wallet is now ready for use! That's all it takes to install the Ark wallet. If you have any questions regarding voting and delegates, take a look at Ark's [FAQ](https://blog.ark.io/ark-frequently-asked-questions-faq-bcb90a0537cc)!
+Your Ark Mobile Wallet is now ready for use! That's all it takes to install the Ark wallet. If you have any questions regarding voting and delegates, take a look at the [Glossary](/glossary/) or Ark's [FAQ](https://blog.ark.io/ark-frequently-asked-questions-faq-bcb90a0537cc)!

@@ -39,6 +39,7 @@ GET /api/delegates
             "address": "D5PXQVeJmchVrZFHL7cALZK8mWWzjCaVfz",
             "publicKey": "02a9a0ac34a94f9d27fd9b4b56eb3c565a9a3f61e660f269775fb456f7f3301586",
             "votes": 0,
+            "rank": 1,
             "blocks": {
                 "produced": 0,
                 "missed": 0,
@@ -83,6 +84,7 @@ GET /api/delegates/{id}
         "address": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
         "publicKey": "022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d",
         "votes": 0,
+        "rank": 29,
         "blocks": {
             "produced": 0,
             "missed": 0,

@@ -1,46 +1,25 @@
 version: 2
 jobs:
-  test-node-9:
-    working_directory: ~/docs
-    docker:
-      - image: circleci/node:9
-    steps:
-      - checkout
-      - restore_cache:
-          key: cache-node9-{{ checksum "package.json" }}
-      - run:
-          name: Install
-          command: yarn
-      - save_cache:
-          key: cache-node9-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: Build
-          command: yarn build
-      
-  test-node-stable:
+  build:
     working_directory: ~/docs
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
       - restore_cache:
-          key: cache-nodeLatest-{{ checksum "package.json" }}
+          key: cache-{{ checksum "yarn.lock" }}
       - run:
           name: Install
           command: yarn
       - save_cache:
-          key: cache-nodeLatest-{{ checksum "package.json" }}
+          key: cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
       - run:
           name: Build
           command: yarn build
-
 workflows:
   version: 2
   test:
     jobs:
-      - test-node-9
-      - test-node-stable
+      - build

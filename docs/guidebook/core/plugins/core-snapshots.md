@@ -49,7 +49,7 @@ The following options are available to all commands:
 
 ## Create A Snapshot
 
-Calling the `create` CLI command prompts your node to create a backup and save it in the data directory specified at runtime. The folder name will 
+Calling the `create` CLI command prompts your node to create a backup and save it in the data directory specified at runtime. The folder name will follow the format `{data}/snapshots/{network}/{startblock}-{endblock}` and contains `transactions.lite`, `blocks.lite` and `meta.json`.
 
 ## **Creating a fresh new snapshot**
 

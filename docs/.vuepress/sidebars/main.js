@@ -7,7 +7,9 @@ module.exports = [
       '/introduction/',
       '/guidebook/',
       '/cookbook/',
+      '/exchanges/',
       '/api/',
+      '/sdk/',
       '/faq/',
       '/glossary/',
     ]

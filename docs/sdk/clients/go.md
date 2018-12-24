@@ -24,6 +24,36 @@ If you are using the v2 API
 go get github.com/ArkEcosystem/go-client/client/two
 ```
 
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/go-client)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/go-client
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd go-client
+```
+
+4) Install the dependencies
+
+```bash
+# -t will also fetch dependencies related to tests
+$ go get -t ./... 
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+```bash
+$ go test ./...
+```
+
 ## Usage
 
 ### Initialization

@@ -20,7 +20,7 @@ title: "Swift"
 You can use it to integrate the Ark Swift Client in your project, by adding it to your `Podfile` as follows:
 
 ```
-pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '1.0.0'
+pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '1.0.1'
 ```
 
 Afterwards, install it by running `pod install`.

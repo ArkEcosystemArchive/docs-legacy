@@ -232,7 +232,7 @@ class ViewController: UIViewController {
         // Initiate the client
         let conn = Connection(host: "https://dexplorer.ark.io:8443/api")
 
-        // Set the correct network, devnet is default but explicitely set here
+        // Set the correct network, devnet is default but explicitly set here
         ArkNetwork.shared.set(network: Devnet())
 
         // Create a transfer transaction

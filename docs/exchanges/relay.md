@@ -151,6 +151,6 @@ Now that the relay node is setup you can head over to the [JSON-RPC installation
 
 ## Notes
 
-Please read the documentation pages for all of our [Ark Client and Crypto libraries](/api/sdk/) (offerred in many programming languages).
+Please read the documentation pages for all of our [Ark Client and Crypto libraries](/sdk/) (offerred in many programming languages).
 
 Also, read the [API documentation](/api/public/v2/).

@@ -217,4 +217,38 @@ response = connection.transactions.create({transactions: [transaction.to_params]
 puts response.body
 ```
 :::
+
+::: tab swift
+```swift
+import UIKit
+import SwiftClient
+import SwiftCrypto
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Initiate the client
+        let conn = Connection(host: "https://dexplorer.ark.io:8443/api")
+
+        // Set the correct network, devnet is default but explicitely set here
+        ArkNetwork.shared.set(network: Devnet())
+
+        // Create a transfer transaction
+        let transfer = ArkBuilder.buildTransfer("secret passphrase",
+                                                secondPassphrase: nil,
+                                                to: "DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8",
+                                                amount: 10000000,
+                                                vendorField: "this is a tx from Swift")
+
+        // Send the transaction
+        let transactions = Transactions(connection: conn)
+        transactions.create(body: ["transactions": [transfer.toDict()]]) { (response) in
+            print(response)
+        }
+    }
+}
+```
+:::
 ::::

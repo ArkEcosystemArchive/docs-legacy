@@ -6,7 +6,8 @@ title: "Desktop Wallet"
 
 ## Where can I download Ark Desktop Wallet?
 
-You can download the latest version of the Ark Desktop Wallet from our official GitHub repository : https://github.com/ArkEcosystem/ark-desktop/releases .
+You can download the latest version of the Ark Desktop Wallet from our official [GitHub Repository](https://github.com/ArkEcosystem/ark-desktop/releases).
+
 Just choose the wallet download that matches your operating system.
 
 ## Why is there a line through a cloud next to my address?

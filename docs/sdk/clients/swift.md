@@ -26,6 +26,37 @@ pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :
 Afterwards, install it by running `pod install`.
 You are then able to use it in your project by using `import SwiftClient`.
 
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/swift-client)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/swift-client
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd swift-client/Client
+```
+
+4) Install the dependencies
+
+For this you will first need to install [Carthage](https://github.com/Carthage/Carthage), which can be done easily with Homebrew: `brew install carthage`
+
+```bash
+$ carthage update
+```
+
+You will also need to install [Swiftlint](https://github.com/realm/SwiftLint) as an additional step, as that is used to lint our code.
+The easiest way to install this is by using Homebrew: `brew install swiftlint`.
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should by opening the `Client.xcodeproj` in Xcode.
+
 ## Usage
 
 The Swift Client is meant to be used for creating request to an API endpoint.
@@ -164,4 +195,4 @@ wallets.all { (response) in
 By default, the requests are performed with [Alamofire](https://github.com/Alamofire/Alamofire) and the response is given to the callback function as `[String: Any]`.
 The functions that are responsible for this can be found in `Utils.swift`.
 You can easily override this default functionality by defining your own `handleApiGet` and `handleApiPost` functions and passing them to the endpoint object (e.g. `Blocks`.
-An example of how this is done can be found by looking at the tests, e.g. those of [Blocks](https://github.com/ArkEcosystem/swift-client/blob/master/Client/ClientTests/Api/Two/BlocksTwoTest.swift), as a mocked api handler is used for them.
+An example of how this is done can be found by looking at the tests, e.g. those of [Blocks](https://github.com/ArkEcosystem/swift-client/blob/master/Client/ClientTests/Api/Endpoints/BlocksTest.swift), as a mocked api handler is used for them.

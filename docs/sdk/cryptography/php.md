@@ -47,7 +47,7 @@ $ composer install
 5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
 
 ```bash
-$ phpunit tests/
+$ phpunit
 ...
 ```
 

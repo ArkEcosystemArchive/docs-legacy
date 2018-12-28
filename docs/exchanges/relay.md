@@ -106,18 +106,14 @@ ARK_P2P_HOST=0.0.0.0
 ARK_P2P_PORT=4001
 ARK_API_HOST=0.0.0.0
 ARK_API_PORT=4003
+ARK_API_RATE_LIMIT=false
+ARK_API_ENABLED=true
 ARK_WEBHOOKS_HOST=0.0.0.0
 ARK_WEBHOOKS_PORT=4004
 ARK_GRAPHQL_HOST=0.0.0.0
 ARK_GRAPHQL_PORT=4005
 ARK_JSON_RPC_HOST=0.0.0.0
 ARK_JSON_RPC_PORT=8080
-ARK_API_RATE_LIMIT=false
-ARK_API_SSL=false
-ARK_API_SSL_HOST=0.0.0.0
-ARK_API_SSL_PORT=8443
-ARK_API_SSL_KEY=~/.ark/ssl/ark.key
-ARK_API_SSL_CERT=~/.ark/ssl/ark.crt
 EOL
 cd ~/
 git clone https://github.com/ArkEcosystem/core.git ark-core
@@ -139,7 +135,7 @@ lerna bootstrap
 rm -f ~/.ark/config/peers_backup.*
 cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.ark/config/.
 cp -f /home/node/ark-core/packages/crypto/lib/networks/ark/mainnet.json /home/node/.ark/config/network.json
-pm2 start all
+pm2 start all --update-env
 ```
 
 ## Next steps

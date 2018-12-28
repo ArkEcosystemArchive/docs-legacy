@@ -6,13 +6,13 @@ title: "Migrating your Tools from Ark Node to Ark Core"
 
 ## Introduction
 
-This article will guide you through the steps required to migrate your tools and applications from Ark Node to Ark Core so you can be ready in time for the hard-fork in a few months without having to do last minute migrations.
+This article will guide you through the steps required to migrate your tools and applications from Ark Node to Ark Core v2.
 
 ## Posting Transactions
 
-In Ark Node you would post your signed transactions to the P2P API at http://127.0.0.1:4002/peer/transactions and receive a list of transaction IDs.
+In Ark Node you would post your signed transactions to the P2P API at `http://127.0.0.1:4002/peer/transactions` and receive a list of transaction IDs.
 
-This endpoint is still available in Ark Core. However, you are now advised to use http://127.0.0.1:4003/api/v2/transactions to post your transactions. It behaves the same way as the P2P API but has no risk of being deprecated in the near future as it is integrated into the new Public API.
+This endpoint is still available in Ark Core. However, you are now advised to use `http://127.0.0.1:4003/api/v2/transactions` to post your transactions. It behaves the same way as the P2P API but has no risk of being deprecated in the near future as it is integrated into the new Public API.
 
 **This new endpoint will return you 3 lists of transaction IDs:**
 - Transactions that have been accepted to be processed.

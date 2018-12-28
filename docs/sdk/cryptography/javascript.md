@@ -6,11 +6,53 @@ title: "JavaScript"
 
 [[toc]]
 
+## NodeJS Installation
+NodeJS can be downloaded [here](https://nodejs.org/en/download/)
+
+A good way to manage your NodeJS installation and be able to work with multiple version is to go through [NVM](https://github.com/creationix/nvm)
+
+## Yarn Installation
+
+Yarn can be downloaded [here](https://yarnpkg.com/lang/en/docs/install/#windows-stable)
+
 ## Installation
 
 ```bash
 yarn add @arkecosystem/crypto
 ```
+
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/javascript-crypto)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/javascript-crypto
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd javascript-crypto
+```
+
+4) Once the previous point done, you can proceed to install the dependencies
+
+```bash
+$ yarn install
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+
+```bash
+$ yarn test
+...
+```
+
+## Usage
 
 To perform cryptographic functions with the Ark JavaScript Crypto library, you must first require it:
 

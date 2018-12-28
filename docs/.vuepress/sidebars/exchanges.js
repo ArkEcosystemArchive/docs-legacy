@@ -12,9 +12,10 @@ module.exports = [
     title: "Communication endpoints",
     collapsable: false,
     children: [
+      "/exchanges/migrating-to-ark-core",
       "/exchanges/public-api",
       "/exchanges/json-rpc-quick",
-      "/exchanges/migrating-to-ark-core"
+
     ]
   },
   {

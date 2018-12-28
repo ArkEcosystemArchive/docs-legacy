@@ -16,7 +16,7 @@ The majority of platforms utilising bitcoin use this RPC procedure. To accommoda
 :::
 
 > A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the Ark blockchain.
-> 
+
 ::: warning
 If you are looking to just broadcast transactions you should take a look at [Create a transactions](/api/public/v2/transactions.html#create-a-transaction) for the public API instead.
 :::

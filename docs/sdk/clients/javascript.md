@@ -21,6 +21,37 @@ Yarn can be downloaded [here](https://yarnpkg.com/lang/en/docs/install/#windows-
 $ yarn add @arkecosystem/client
 ```
 
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/javascript-client)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/javascript-client
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd javascript-client
+```
+
+4) Once the previous point done, you can proceed to install the dependencies
+
+```bash
+$ yarn install
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+
+```bash
+$ yarn test
+...
+```
+
 ## Usage
 
 ### Initializing the Client

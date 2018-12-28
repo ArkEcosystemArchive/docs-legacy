@@ -6,6 +6,12 @@ title: "PHP"
 
 [[toc]]
 
+## PHP Installation
+
+Documentation can be found [here](http://php.net/manual/fr/install.php).
+
+Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available
+
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
@@ -13,6 +19,39 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 ```bash
 composer require arkecosystem/crypto
 ```
+
+## Development setup
+
+If you want to contribute to the code of this package execute the following commands
+
+1) Fork the [package](https://github.com/ArkEcosystem/php-crypto)
+
+2) Clone your forked repository
+
+```bash
+$ git clone https://github.com/<githubusername>/php-crypto
+```
+
+3) Next, move into the fresh cloned directory
+
+```bash
+$ cd php-crypto
+```
+
+4) Install the dependencies with composer
+
+```bash
+$ composer install
+```
+
+5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
+
+```bash
+$ phpunit
+...
+```
+
+## Usage
 
 ## Transactions
 

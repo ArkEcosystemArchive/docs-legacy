@@ -324,6 +324,16 @@ GET /api/wallets/top
 
 ```json
 {
+    "meta": {
+        "count": 100,
+        "pageCount": 1859,
+        "totalCount": 185829,
+        "next": "/api/v2/wallets/top?page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/wallets/top?page=1&limit=100",
+        "first": "/api/v2/wallets/top?page=1&limit=100",
+        "last": "/api/v2/wallets/top?page=1859&limit=100"
+    },
     "data": [
         {
             "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",

@@ -19,7 +19,7 @@ const config = {
     ]
   ],
   themeConfig: {
-    logo: "https://ark.io/images/media-kit/red-no-text.png",
+    logo: "https://ark.io/images/media-kit/red-corners.png",
     repo: "ArkEcosystem/docs",
     repoLabel: "Contribute!",
     editLinks: true,

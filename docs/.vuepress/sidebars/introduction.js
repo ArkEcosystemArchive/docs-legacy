@@ -2,7 +2,7 @@ module.exports = [
   ['/', 'Back to Table of Contents'],
   ["/introduction/", "From Blockchain to Ark"],
   {
-    title: "Blockchain",
+    title: "Blockchain introduction",
     collapsable: false,
     children:  [
       ["/introduction/blockchain/", "Intro to Blockchain"],

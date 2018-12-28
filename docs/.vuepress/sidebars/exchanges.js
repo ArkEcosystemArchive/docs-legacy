@@ -2,7 +2,7 @@ module.exports = [
   ['/', 'Back to Table of Contents'],
   ["/exchanges/", "Exchanges Home"],
   {
-    title: "Installation",
+    title: "Node Installation",
     collapsable: false,
     children: [
       "/exchanges/relay",
@@ -18,7 +18,7 @@ module.exports = [
     ]
   },
   {
-    title: "Advanced configuration",
+    title: "Advanced node configuration",
     collapsable: false,
     children: [
       "/exchanges/json-rpc",

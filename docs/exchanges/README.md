@@ -17,4 +17,6 @@ Use the sidebar to navigate this section, or follow the links below:
 * [Relay node installation instructions](/exchanges/relay.html)
 * [Generic linux install instructions](/exchanges/relay.html#generic-linux-installation)
 * [Public API quick guide](/exchanges/public-api.html)
-* [JSON-RPC quick guide](/exchanges/json-rpc.html)
+* [JSON-RPC quick guide](/exchanges/json-rpc-quick.html)
+* [Migration to Ark-Core - What do I need to know?](/exchanges/migrating-to-ark-core.html)
+* [JSON-RPC setup guide](/exchanges/json-rpc.html)

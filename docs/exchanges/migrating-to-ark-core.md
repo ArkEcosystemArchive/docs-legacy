@@ -6,7 +6,7 @@ title: "Migrating your Tools from Ark Node to Ark Core"
 
 ## Introduction
 
-This article will guide you through the steps required to migrate your tools and applications from Ark Node to Ark Core so you can be ready in time for the hard-fork in a few months without having to do last minute migrations.
+This article will guide you through the steps required to migrate your tools and applications from Ark Node to Ark Core v2.
 
 ## Posting Transactions
 

@@ -135,7 +135,7 @@ lerna bootstrap
 rm -f ~/.ark/config/peers_backup.*
 cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.ark/config/.
 cp -f /home/node/ark-core/packages/crypto/lib/networks/ark/mainnet.json /home/node/.ark/config/network.json
-pm2 start all
+pm2 start all --update-env
 ```
 
 ## Next steps

@@ -36,9 +36,11 @@ GET /api/peers
     "data": [
         {
             "ip": "167.114.29.53",
-            "port": 4002,
-            "version": "1.1.1",
-            "status": "OK",
+            "port": 4001,
+            "version": "2.0.16",
+            "height": 6881793,
+            "status": 200,
+            "os": "linux", 
             "latency": 1390
         }
     ]
@@ -65,9 +67,11 @@ GET /api/peers/{ip}
 {
     "data": {
         "ip": "167.114.29.55",
-        "port": 4002,
-        "version": "1.1.1",
-        "status": "OK",
+        "port": 4001,
+        "version": "2.0.16",
+        "height": 6881793,
+        "status": 200,
+        "os": "linux", 
         "latency": 355
     }
 }

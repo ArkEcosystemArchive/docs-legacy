@@ -59,7 +59,7 @@ GET /api/peers/{ip}
 
 | Name | Type   | Description                                  | Required           |
 |------|:------:|----------------------------------------------|:------------------:|
-| ip   | string | The IP address of the block to be retrieved. | :white_check_mark: |
+| ip   | string | The IP address of the peer to be retrieved.  | :white_check_mark: |
 
 ### Response
 

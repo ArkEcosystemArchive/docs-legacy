@@ -59,17 +59,38 @@ $ pytest
 ...
 ```
 
-## Usage
-
-### Blocks - V2
+## Import Client
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
+```
 
+## API V2.0 Endpoint Usage
+
+### Blocks
+
+#### List all blocks
+```python
 print(client.blocks.all(page=5, limit=10))
+>> {'meta': {'count': 10, ... }}
+```
 
+#### Retrieve a block
+```python
+print(client.blocks.get(block_id="11023286547481793189"))
+>> {'data': {'id': '11023286547481793189' ... }}
+```
+
+#### List all transactions of a block
+```python
+print(client.blocks.transactions(block_id=1596548201794970158, limit=10))
+>> {'meta': {'count': 10, ... }}
+```
+
+#### Search all blocks - DOES NOT WORK YET - CHECK CLIENT CODE
+```python
+print(client.blocks.transactions({'previousBlock': '1337'}, page=5, limit=69))
 >> {'meta': {'count': 10, ... }}
 ```
 
@@ -77,11 +98,8 @@ print(client.blocks.all(page=5, limit=10))
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
-
 print(client.delegates.all(page=5, limit=20))
-
 >> {'meta': {'count': 20, ... }}
 ```
 
@@ -89,11 +107,8 @@ print(client.delegates.all(page=5, limit=20))
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
-
 print(client.node.syncing())
-
 >> {'data': {'syncing': False, 'blocks': -22, 'height': 820355, 'id': '2134055295567604949'}}
 ```
 
@@ -101,11 +116,8 @@ print(client.node.syncing())
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
-
 print(client.peers.all())
-
 >> {'meta': {'count': 5, ...}}
 ```
 
@@ -113,11 +125,8 @@ print(client.peers.all())
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
-
 print(client.transactions.all(limit=5))
-
 >> {'meta': {'count': 5, ...}}
 ```
 
@@ -125,11 +134,8 @@ print(client.transactions.all(limit=5))
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
-
 print(client.votes.all(limit=5))
-
 >> {'meta': {'count': 5, ...}}
 ```
 
@@ -137,10 +143,7 @@ print(client.votes.all(limit=5))
 
 ```python
 from client import ArkClient
-
 client = ArkClient('http://127.0.0.1:4003/api')
-
 print(client.wallets.all(limit=5))
-
 >> {'meta': {'count': 5, ...}}
 ```

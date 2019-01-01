@@ -66,7 +66,7 @@ from client import ArkClient
 client = ArkClient('http://127.0.0.1:4003/api')
 ```
 
-## API V2.0 Endpoint Usage
+## API V2.0 Endpoint Usage Examples
 
 ### Blocks
 
@@ -88,10 +88,10 @@ print(client.blocks.transactions(block_id=1596548201794970158, limit=10))
 >> {'meta': {'count': 4, ... }}
 ```
 
-#### Search all blocks - DOES NOT WORK YET - CHECK CLIENT CODE
+#### Search all blocks - RECHECK CLIENT CODE
 ```python
-print(client.blocks.transactions({'previousBlock': '1337'}, page=5, limit=69))
->> {'meta': {'count': 10, ... }}
+print(client.blocks.search({'generatorPublicKey': '0232b96d57ac27f9a99242bc886e433baa89f596d435153c9dae47222c0d1cecc3'}))
+>> {'meta': {'count': 100, ... }}
 ```
 
 ### Delegates - V2

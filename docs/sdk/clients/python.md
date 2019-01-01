@@ -132,26 +132,25 @@ print(client.delegates.voter_balances(delegate_id="goose"))
 >> {'data': {'AZpoKsoqHAMWBNqeEf3WNfRCenxLR51pBt': 998386, ... }}
 ```
 
-
-
-
-
-
-
-
-
-
 ### Node
 
 #### Retrieve the configuration
 ```python
-print(client.node.syncing())
->> {'data': {'syncing': False, 'blocks': -22, 'height': 820355, 'id': '2134055295567604949'}}
+print(client.node.configuration())
+>> {'data': {'nethash': '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988', ... }}
 ```
 
 #### Retrieve the status
+```python
+print(client.node.status())
+>> {'data': {'synced': True, 'now': 6897158, 'blocksCount': -1}}
+```
 
 #### Retrieve the syncing status
+```python
+print(client.node.syncing())
+>> {'data': {'syncing': False, 'blocks': -1, 'height': 6897160, 'id': '12905037940821862953'}}
+```
 
 ### Peers
 

@@ -94,56 +94,51 @@ print(client.blocks.search({'generatorPublicKey': '0232b96d57ac27f9a99242bc886e4
 >> {'meta': {'count': 100, ... }}
 ```
 
-### Delegates - V2
+### Delegates
 
+#### List all delegates
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
 print(client.delegates.all(page=5, limit=20))
 >> {'meta': {'count': 20, ... }}
 ```
 
-### Node - V2
+#### Retrieve a delegate
+
+#### List all blocks fo a delegate
+
+#### List all voters of a delegate
+
+### Node
 
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
 print(client.node.syncing())
 >> {'data': {'syncing': False, 'blocks': -22, 'height': 820355, 'id': '2134055295567604949'}}
 ```
 
-### Peers - V2
+### Peers
 
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
 print(client.peers.all())
 >> {'meta': {'count': 5, ...}}
 ```
 
-### Transactions - V2
+### Transactions
 
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
 print(client.transactions.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```
 
-### Votes - V2
+### Votes
 
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
 print(client.votes.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```
 
-### Wallets - V2
+### Wallets
 
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
 print(client.wallets.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```

@@ -103,14 +103,43 @@ print(client.delegates.all(page=5, limit=20))
 ```
 
 #### Retrieve a delegate
+```python
+print(client.delegates.get(delegate_id="goose"))
+>> {'data': {'username': 'goose', ... }}
+```
 
-### Search delegates - UNDOCUMENTED V2.0 API
+### Search delegates - UNDOCUMENTED V2.0 API - CHECK TO SEE HOW IT WORKS
+```python
+print(client.delegates.search(page=5, limit=20))
+>> {'meta': {'count': 20, ... }}
+```
 
 #### List all blocks fo a delegate
+```python
+print(client.delegates.blocks(delegate_id="goose"))
+>> {'meta': {'count': 100, ... }}
+```
 
 #### List all voters of a delegate
+```python
+print(client.delegates.voters(delegate_id="goose"))
+>> {'meta': {'count': 100, ... }}
+```
 
 #### List voter balances for a delegate - UNDOCUMENTED V2.0 API
+```python
+print(client.delegates.voter_balances(delegate_id="goose"))
+>> {'data': {'AZpoKsoqHAMWBNqeEf3WNfRCenxLR51pBt': 998386, ... }}
+```
+
+
+
+
+
+
+
+
+
 
 ### Node
 

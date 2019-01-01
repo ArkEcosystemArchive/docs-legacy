@@ -85,7 +85,7 @@ print(client.blocks.get(block_id="11023286547481793189"))
 #### List all transactions of a block
 ```python
 print(client.blocks.transactions(block_id=1596548201794970158, limit=10))
->> {'meta': {'count': 10, ... }}
+>> {'meta': {'count': 4, ... }}
 ```
 
 #### Search all blocks - DOES NOT WORK YET - CHECK CLIENT CODE

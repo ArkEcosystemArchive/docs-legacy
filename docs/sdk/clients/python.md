@@ -88,7 +88,7 @@ print(client.blocks.transactions(block_id=1596548201794970158, limit=10))
 >> {'meta': {'count': 4, ... }}
 ```
 
-#### Search all blocks - RECHECK CLIENT CODE
+#### Search all blocks
 ```python
 print(client.blocks.search({'generatorPublicKey': '0232b96d57ac27f9a99242bc886e433baa89f596d435153c9dae47222c0d1cecc3'}))
 >> {'meta': {'count': 100, ... }}

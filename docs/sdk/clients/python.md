@@ -157,10 +157,14 @@ print(client.node.syncing())
 #### List all peers
 ```python
 print(client.peers.all())
->> {'meta': {'count': 5, ...}}
+>> {'meta': {'count': 100, ...}}
 ```
 
 #### Retrieve a peer
+```python
+print(client.peers.get(ip='51.255.105.52'))
+>> {'data': {'ip': '51.255.105.52', ...}}
+```
 
 ### Transactions
 

@@ -110,35 +110,67 @@ print(client.delegates.all(page=5, limit=20))
 
 ### Node
 
+#### Retrieve the configuration
 ```python
 print(client.node.syncing())
 >> {'data': {'syncing': False, 'blocks': -22, 'height': 820355, 'id': '2134055295567604949'}}
 ```
 
+#### Retrieve the status
+
+#### Retrieve the syncing status
+
 ### Peers
 
+#### List all peers
 ```python
 print(client.peers.all())
 >> {'meta': {'count': 5, ...}}
 ```
 
+#### Retrieve a peer
+
 ### Transactions
 
+#### Create a transaction
 ```python
 print(client.transactions.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```
 
+#### Retrieve a transaction
+
+#### List all transactions
+
+#### List all unconfirmed transactions
+
 ### Votes
+
+#### List all votes
 
 ```python
 print(client.votes.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```
 
+#### Retrieve a vote
+
 ### Wallets
 
+#### Retrieve a wallet
 ```python
 print(client.wallets.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```
+
+#### List all transactions of a wallet
+
+#### List all received transactions of a wallet
+
+#### List all sent transactions of a wallet
+
+#### List all votes of a wallet
+
+#### List all top wallets
+
+#### Search all wallets

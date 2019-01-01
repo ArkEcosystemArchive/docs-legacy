@@ -104,9 +104,13 @@ print(client.delegates.all(page=5, limit=20))
 
 #### Retrieve a delegate
 
+### Search delegates - UNDOCUMENTED V2.0 API
+
 #### List all blocks fo a delegate
 
 #### List all voters of a delegate
+
+#### List voter balances for a delegate - UNDOCUMENTED V2.0 API
 
 ### Node
 

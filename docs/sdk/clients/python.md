@@ -108,7 +108,7 @@ print(client.delegates.get(delegate_id="goose"))
 >> {'data': {'username': 'goose', ... }}
 ```
 
-#### Search delegates - UNDOCUMENTED V2.0 API
+#### Search delegates
 ```python
 print(client.delegates.search(username='goose'))
 >> {'meta': {'count': 1, ... }}
@@ -126,7 +126,7 @@ print(client.delegates.voters(delegate_id="goose"))
 >> {'meta': {'count': 100, ... }}
 ```
 
-#### List voter balances for a delegate - UNDOCUMENTED V2.0 API
+#### List voter balances for a delegate
 ```python
 print(client.delegates.voter_balances(delegate_id="goose"))
 >> {'data': {'AZpoKsoqHAMWBNqeEf3WNfRCenxLR51pBt': 998386, ... }}
@@ -166,7 +166,7 @@ print(client.peers.get(ip='51.255.105.52'))
 
 ### Transactions
 
-#### Create a transaction - GET EXAMPLE ON DEVNET
+#### Create a transaction
 ```python
 print(client.transactions.create([signed_transaction]))
 >> {'meta': {'count': 5, ...}}
@@ -187,28 +187,28 @@ print(client.transactions.all(limit=5))
 #### List all unconfirmed transactions
 ```python
 print(client.transactions.all_unconfirmed(limit=5))
->> {'meta': {'count': 0, ...}}
-```
-
-#### Get unconfirmed transaction - UNDOCUMENTED API - GET EXAMPLE ON DEVNET
-```python
-print(client.transactions.get_unconfirmed(transactions_id=''))
 >> {'meta': {'count': 5, ...}}
 ```
 
-#### Search transactions - UNDOCUMENTED API
+#### Get unconfirmed transaction
+```python
+print(client.transactions.get_unconfirmed(transaction_id='18bd569d26047a3379f04dfa6df16fc72387ed7a20a477dd681d980cd794add2'))
+>> {'data': {'id': '18bd569d26047a3379f04dfa6df16fc72387ed7a20a477dd681d980cd794add2' ...}}
+```
+
+#### Search transactions
 ```python
 print(client.transactions.search({'senderId':'AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'},limit=5))
 >> {'meta': {'count': 3, ...}}
 ```
 
-#### List transaction types - UNDOCUMENTED API
+#### List transaction types
 ```python
 print(client.transactions.types())
 >> {'data': {'TRANSFER': 0, ...}}
 ```
 
-#### List transaction fees (Non-dynamic) - UNDOCUMENTED API
+#### List transaction fees (Non-dynamic)
 ```python
 print(client.transactions.fees())
 >> {'data': {'transfer': 10000000, ...}}

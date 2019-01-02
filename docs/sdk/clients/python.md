@@ -59,7 +59,9 @@ $ pytest
 ...
 ```
 
-## Import Client
+## Usage
+
+### Initialization
 
 ```python
 from client import ArkClient

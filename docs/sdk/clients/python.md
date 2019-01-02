@@ -208,7 +208,7 @@ print(client.transactions.types())
 >> {'data': {'TRANSFER': 0, ...}}
 ```
 
-#### List transaction fees - UNDOCUMENTED API
+#### List transaction fees (Non-dynamic) - UNDOCUMENTED API
 ```python
 print(client.transactions.fees())
 >> {'data': {'transfer': 10000000, ...}}

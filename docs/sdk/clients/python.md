@@ -68,7 +68,7 @@ from client import ArkClient
 client = ArkClient('http://127.0.0.1:4003/api')
 ```
 
-## API v2.0 Endpoints
+### API v2.0 Endpoints
 
 ### Blocks
 #### List all blocks

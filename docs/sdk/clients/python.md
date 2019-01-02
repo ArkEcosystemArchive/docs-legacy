@@ -110,11 +110,11 @@ print(client.delegates.get(delegate_id="goose"))
 
 #### Search delegates - UNDOCUMENTED V2.0 API - CHECK TO SEE HOW IT WORKS
 ```python
-print(client.delegates.search(page=5, limit=20))
+print(client.delegates.search({'username':'goose'}))
 >> {'meta': {'count': 20, ... }}
 ```
 
-#### List all blocks fo a delegate
+#### List all blocks of a delegate
 ```python
 print(client.delegates.blocks(delegate_id="goose"))
 >> {'meta': {'count': 100, ... }}

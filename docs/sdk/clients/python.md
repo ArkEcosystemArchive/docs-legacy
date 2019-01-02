@@ -192,21 +192,50 @@ print(client.votes.get(vote_id='49a6bdffef623e83087a6fff3f4e7dd6929a6df9abf9f7d0
 ```
 
 ### Wallets
+#### Retrieve all wallets
+```python
+print(client.wallets.all(limit=10))
+>> {'meta': {'count': 10, ...}}
+```
 
 #### Retrieve a wallet
 ```python
-print(client.wallets.all(limit=5))
->> {'meta': {'count': 5, ...}}
+print(client.wallets.get(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'))
+>> {'data': {'address': 'AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN', ...}}
 ```
 
 #### List all transactions of a wallet
+```python
+print(client.wallets.transactions(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'))
+>> {'meta': {'count': 100, ...}}
+```
 
 #### List all received transactions of a wallet
+```python
+print(client.wallets.transactions_received(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'))
+>> {'meta': {'count': 100, ...}}
+```
 
 #### List all sent transactions of a wallet
+```python
+print(client.wallets.transactions_sent(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'))
+>> {'meta': {'count': 3, ...}}
+```
 
 #### List all votes of a wallet
+```python
+print(client.wallets.votes(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'))
+>> {'meta': {'count': 3, ...}}
+```
 
 #### List all top wallets
+```python
+print(client.wallets.top(limit=10))
+>> {'meta': {'count': 10, ...}}
+```
 
 #### Search all wallets
+```python
+print(client.wallets.search({'publicKey':'03a3cd9d5095147d7820b39fd697bd6c6831b1d474125e97d38f2f131eede5fa19'},limit=5))
+>> {'meta': {'count': 1, ...}}
+```

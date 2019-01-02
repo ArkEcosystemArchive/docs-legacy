@@ -175,19 +175,19 @@ print(client.transactions.create([signed_transaction]))
 #### Retrieve a transaction
 ```python
 print(client.transactions.get(transaction_id='e5f5de5716bffb2fa924d26fcfebaff58c8bfd50d8eac1487b0e981113b482fc'))
->> {'meta': {'count': 5, ...}}
+>> {'data': {'id': 'e5f5de5716bffb2fa924d26fcfebaff58c8bfd50d8eac1487b0e981113b482fc', ...}}
 ```
 
 #### List all transactions
 ```python
 print(client.transactions.all(limit=5))
->> {'meta': {'count': 5, ...}}
+>>{'meta': {'count': 5, ...}}
 ```
 
 #### List all unconfirmed transactions
 ```python
 print(client.transactions.all_unconfirmed(limit=5))
->> {'meta': {'count': 5, ...}}
+>> {'meta': {'count': 0, ...}}
 ```
 
 #### Get unconfirmed transaction - UNDOCUMENTED API - GET EXAMPLE ON DEVNET
@@ -199,19 +199,19 @@ print(client.transactions.get_unconfirmed(transactions_id=''))
 #### Search transactions - UNDOCUMENTED API
 ```python
 print(client.transactions.search({'senderId':'AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN'},limit=5))
->> {'meta': {'count': 1, ...}}
+>> {'meta': {'count': 3, ...}}
 ```
 
 #### List transaction types - UNDOCUMENTED API
 ```python
 print(client.transactions.types())
->> {'meta': {'count': 5, ...}}
+>> {'data': {'TRANSFER': 0, ...}}
 ```
 
 #### List transaction fees - UNDOCUMENTED API
 ```python
 print(client.transactions.fees())
->> {'meta': {'count': 5, ...}}
+>> {'data': {'transfer': 10000000, ...}}
 ```
 
 ### Votes

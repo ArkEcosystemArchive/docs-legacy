@@ -55,6 +55,11 @@ GET /api/delegates
             "production": {
                 "approval": "0.08",
                 "productivity": "0.00"
+            },
+            "forged": {
+                "fees:" 387586557812,
+                "rewards": 19779600000000,
+                "total": 20167186557812
             }
         }
     ]
@@ -100,6 +105,11 @@ GET /api/delegates/{id}
         "production": {
             "approval": "0.10",
             "productivity": "0.00"
+        },
+        "forged": {
+            "fees:" 387586557812,
+            "rewards": 19779600000000,
+            "total": 20167186557812
         }
     }
 }
@@ -149,7 +159,8 @@ GET /api/delegates/{id}/blocks
             "forged": {
                 "reward": 200000000,
                 "fee": 0,
-                "total": 200000000
+                "total": 200000000,
+                "amount": 0
             },
             "payload": {
                 "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -211,6 +222,8 @@ GET /api/delegates/{id}/voters
         {
             "address": "D5mbS6mpP5UheuciNscpDLgC127kYjRtkK",
             "publicKey": "03f7e0b1ab14985990416f72ed0b206c20b9efa35156e4528c8ff749fa0eea5d5a",
+            "username": null,
+            "secondPublicKey": null,
             "balance": 400000000,
             "isDelegate": false
         }

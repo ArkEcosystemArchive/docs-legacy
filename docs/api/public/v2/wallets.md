@@ -37,6 +37,8 @@ GET /api/wallets
         {
             "address": "D59NTfV92ca9QevUydvMiFMFdubbCaAVCV",
             "publicKey": "037d035f08b3bad0d5bb605232c7aa41555693c480044dbeb797270a44c339da5a",
+            "username": null,
+            "secondPublicKey": null,
             "balance": 1023145260990,
             "isDelegate": false
         }
@@ -63,8 +65,10 @@ GET /api/wallets/{id}
 ```json
 {
     "data": {
-        "address": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-        "publicKey": "022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d",
+        "address": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+        "publicKey": "0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7",
+        "username": "bongoninja",
+        "secondPublicKey": null,
         "balance": 12534670000000,
         "isDelegate": true
     }
@@ -108,19 +112,22 @@ GET /api/wallets/{id}/transactions
     },
     "data": [
         {
-            "id": "5c6ce775447a5acd22050d72e2615392494953bb1fb6287e9ffb3c33eaeb79aa",
-            "blockId": "4271682877946294396",
+            "id": "261ec03a90e8c287fb2dcbb35bb8a842fe5ef1c7a6425319da7aa123c48dd929",
+            "blockId": "15006101391552623930",
+            "version": 1,
             "type": 0,
-            "amount": 32106400000,
+            "amount": 100000000,
             "fee": 10000000,
-            "sender": "DDiTHZ4RETZhGxcyAi1VruCXZKxBFqXMeh",
-            "recipient": "DQnQNoJuNCvpjYhxL7fsnGepHBqrumgsyP",
-            "signature": "3044022047c39f6f45a46a87f91ca867f9551dbebf0035adcfcbdc1370222c7a1517fc0002206fb5ecc10460e0352a8b626a508e2fcc76e39e490b0a2581dd772ebc8079696e",
-            "confirmations": 1683,
+            "sender": "DHWBaG44rstymZjWFU4b7BiuTZjiKxfJpL",
+            "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+            "signature": "3045022100d7b59289b9576978fc0cbfea2f7f490409ef9455f2c4d28cc49f155c9ed69d6002206a32c4b668050f81b789b49fe5c29164872f9f1db63d7ba8604a6296f183a18a",
+            "signSignature": "3045022100dae0598ff7dcab0184d36e3d8313da17401893b2b6b476276412f2682e66c34402205df085dae213c561e5db293cd5bc8930f6343783a99ce48c349e92abfd2e2fa1",
+            "vendorField": ":bongocrazy"
+            "confirmations": 347019,
             "timestamp": {
-                "epoch": 32794053,
-                "unix": 1522895253,
-                "human": "2018-04-05T02:27:33Z"
+                "epoch": 51704908,
+                "unix": 1541806108,
+                "human": "2018-11-09T23:28:28.000Z"
             }
         }
     ]
@@ -164,20 +171,22 @@ GET /api/wallets/{id}/transactions/received
     },
     "data": [
         {
-            "id": "c46a6a83f7a358f269691c16f050beeab669767643634086bc12ad1182d54413",
-            "blockId": "17271524574301696572",
+            "id": "261ec03a90e8c287fb2dcbb35bb8a842fe5ef1c7a6425319da7aa123c48dd929",
+            "blockId": "15006101391552623930",
+            "version": 1,
             "type": 0,
-            "amount": 5000000000,
+            "amount": 100000000,
             "fee": 10000000,
-            "sender": "DK6Q1Lufhb939H9EshLViYbaaKUkswMiUz",
-            "recipient": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "signature": "304402204b81411e507273f2a27e6135510abda5bff00a0d3121977df09363227c8fd2360220503cab4484a7db785d91a7adcfad681811e3d73f2d00b4dab7e4190ecd41cb34",
-            "vendorField": "More monopoly money for EVERYONE!!",
-            "confirmations": 1482069,
+            "sender": "DHWBaG44rstymZjWFU4b7BiuTZjiKxfJpL",
+            "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+            "signature": "3045022100d7b59289b9576978fc0cbfea2f7f490409ef9455f2c4d28cc49f155c9ed69d6002206a32c4b668050f81b789b49fe5c29164872f9f1db63d7ba8604a6296f183a18a",
+            "signSignature": "3045022100dae0598ff7dcab0184d36e3d8313da17401893b2b6b476276412f2682e66c34402205df085dae213c561e5db293cd5bc8930f6343783a99ce48c349e92abfd2e2fa1",
+            "vendorField": ":bongocrazy"
+            "confirmations": 347019,
             "timestamp": {
-                "epoch": 18382414,
-                "unix": 1508483614,
-                "human": "2017-10-20T07:13:34Z"
+                "epoch": 51704908,
+                "unix": 1541806108,
+                "human": "2018-11-09T23:28:28.000Z"
             }
         }
     ]
@@ -221,24 +230,26 @@ GET /api/wallets/{id}/transactions/sent
     },
     "data": [
         {
-            "id": "08c6b23f9edd97b613f17153fb97a316a4fb83136e9842655dafc8262f363e0e",
-            "blockId": "14847399772737279404",
+            "id": "686b989f56ede8141289691d166b8158f0b2c3b272112fdf77198e394fa4b59a",
+            "blockId": "16409699706603010399",
+            "version": 1,
             "type": 3,
             "amount": 0,
             "fee": 100000000,
-            "sender": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "recipient": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "signature": "304402207ba0e8aaee93695360081b7ce713f13d62b544038ac440bd46357398af86cae6022059ac74586738be1ef622e0baba992d0e417d9aed7ab980f374eb0c9d53e25f8e",
+            "sender": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+            "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+            "signature": "304402202ad26e82b6b9c96babfb7fba4389d17e868cc802ada3a7d263848a8b7baa144402205e5571afdba7b1c0cad698620c5306e320f3dadcb9a82df6ebbd3af7df757904",
+            "signSignature": null,
             "asset": {
                 "votes": [
-                    "+0257b7724e97cd832e0c28533a86da5220656f9b5122141daab20e8526decce01f"
+                    "+0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7"
                 ]
             },
-            "confirmations": 1636232,
+            "confirmations": 526006,
             "timestamp": {
-                "epoch": 17094358,
-                "unix": 1507195558,
-                "human": "2017-10-05T09:25:58Z"
+                "epoch": 49663543,
+                "unix": 1539764743,
+                "human": "2018-10-17T08:25:43.000Z"
             }
         }
     ]
@@ -283,6 +294,7 @@ GET /api/wallets/{id}/votes
         {
             "id": "08c6b23f9edd97b613f17153fb97a316a4fb83136e9842655dafc8262f363e0e",
             "blockId": "14847399772737279404",
+            "version": 1,
             "type": 3,
             "amount": 0,
             "fee": 100000000,
@@ -338,12 +350,16 @@ GET /api/wallets/top
         {
             "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
             "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
+            "username": null,
+            "secondPublicKey": null,
             "balance": 11499593462120632,
             "isDelegate": false
         },
         {
             "address": "DRac35wghMcmUSe5jDMLBDLWkVVjyKZFxK",
             "publicKey": "0374e9a97611540a9ce4812b0980e62d3c5141ea964c2cab051f14a78284570dcd",
+            "username": null,
+            "secondPublicKey": null,
             "balance": 554107676293547,
             "isDelegate": false
         },
@@ -399,25 +415,12 @@ POST /api/wallets/search
     },
     "data": [
         {
-            "id": "08c6b23f9edd97b613f17153fb97a316a4fb83136e9842655dafc8262f363e0e",
-            "blockId": "14847399772737279404",
-            "type": 3,
-            "amount": 0,
-            "fee": 100000000,
-            "sender": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "recipient": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "signature": "304402207ba0e8aaee93695360081b7ce713f13d62b544038ac440bd46357398af86cae6022059ac74586738be1ef622e0baba992d0e417d9aed7ab980f374eb0c9d53e25f8e",
-            "asset": {
-                "votes": [
-                    "+0257b7724e97cd832e0c28533a86da5220656f9b5122141daab20e8526decce01f"
-                ]
-            },
-            "confirmations": 1636029,
-            "timestamp": {
-                "epoch": 17094358,
-                "unix": 1507195558,
-                "human": "2017-10-05T09:25:58Z"
-            }
+            "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
+            "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
+            "username": null,
+            "secondPublicKey": null,
+            "balance": 351774803773,
+            "isDelegate": false
         }
     ]
 }

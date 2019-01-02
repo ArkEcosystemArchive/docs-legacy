@@ -265,14 +265,18 @@ import (
 )
 
 func main() {
+    // Initiate the client
     connection := arkClient.NewClient(nil)
     url, _ := url.Parse("http://my.ark.node.ip:port/api/")
     connection.BaseURL = url
 
+    
+    // Find a block at height 939627
     responseStructBlock, _, _ := connection.Blocks.Get(context.Background(), 939627)
 
     spew.Dump(responseStructBlock)
 
+    // Create a transfer transaction
     transaction := arkCrypto.BuildTransfer("arkAddress", 100000, "Hello World", "mysupersecretppassphrase", "mysupersecretsecondppassphrase")
 
     body := &arkClient.CreateTransactionRequest{
@@ -280,6 +284,8 @@ func main() {
             *transaction,
         },
     }
+    
+    // Send the transaction
     connection.Transactions.Create(context.Background(), body)
 }
 ```

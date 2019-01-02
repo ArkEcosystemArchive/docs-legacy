@@ -71,7 +71,6 @@ client = ArkClient('http://127.0.0.1:4003/api')
 ## API V2.0 Endpoints
 
 ### Blocks
-
 #### List all blocks
 ```python
 print(client.blocks.all(page=5, limit=10))
@@ -80,13 +79,13 @@ print(client.blocks.all(page=5, limit=10))
 
 #### Retrieve a block
 ```python
-print(client.blocks.get(block_id="11023286547481793189"))
+print(client.blocks.get(block_id='1102328654748179318'))
 >> {'data': {'id': '11023286547481793189' ... }}
 ```
 
 #### List all transactions of a block
 ```python
-print(client.blocks.transactions(block_id=1596548201794970158, limit=10))
+print(client.blocks.transactions(block_id='1596548201794970158', limit=10))
 >> {'meta': {'count': 4, ... }}
 ```
 
@@ -97,7 +96,6 @@ print(client.blocks.search({'generatorPublicKey': '0232b96d57ac27f9a99242bc886e4
 ```
 
 ### Delegates
-
 #### List all delegates
 ```python
 print(client.delegates.all(page=5, limit=20))
@@ -135,7 +133,6 @@ print(client.delegates.voter_balances(delegate_id="goose"))
 ```
 
 ### Node
-
 #### Retrieve the configuration
 ```python
 print(client.node.configuration())
@@ -155,7 +152,6 @@ print(client.node.syncing())
 ```
 
 ### Peers
-
 #### List all peers
 ```python
 print(client.peers.all())
@@ -183,15 +179,17 @@ print(client.transactions.all(limit=5))
 #### List all unconfirmed transactions
 
 ### Votes
-
 #### List all votes
-
 ```python
 print(client.votes.all(limit=5))
 >> {'meta': {'count': 5, ...}}
 ```
 
 #### Retrieve a vote
+```python
+print(client.votes.get(vote_id='49a6bdffef623e83087a6fff3f4e7dd6929a6df9abf9f7d0b08a36fcba9512f7'))
+>> {'data': {'id': '49a6bdffef623e83087a6fff3f4e7dd6929a6df9abf9f7d0b08a36fcba9512f7', ...}}
+```
 
 ### Wallets
 

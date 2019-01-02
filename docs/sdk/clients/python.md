@@ -169,7 +169,7 @@ print(client.peers.get(ip='51.255.105.52'))
 #### Create a transaction
 ```python
 print(client.transactions.create([signed_transaction]))
->> {'meta': {'count': 5, ...}}
+>> {'data': {'accept': ['0bdb41e8fb98a27db2d24ffc33f775e856f9fc9b2e50cabceecb1072eb469cef', ...}}
 ```
 
 #### Retrieve a transaction

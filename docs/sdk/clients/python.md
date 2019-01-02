@@ -110,7 +110,7 @@ print(client.delegates.get(delegate_id="goose"))
 
 #### Search delegates - UNDOCUMENTED V2.0 API - CHECK TO SEE HOW IT WORKS
 ```python
-print(client.delegates.search({'username':'goose'}))
+print(client.delegates.search(username='goose'))
 >> {'meta': {'count': 20, ... }}
 ```
 

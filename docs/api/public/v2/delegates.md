@@ -236,12 +236,12 @@ GET /api/delegates/{id}/voters/balances
 
 ```json
 {
-    'data': 
+    "data": 
         {
-            'DKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Z': 830302556723, 
-            'DG92jj4vUW7SyxzM1VzkmQWMmgBGZVhrjb': 546053124588,
-            'DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK': 35723441610, 
-            'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3': 3223337074367
+            "DKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Z": 830302556723, 
+            "DG92jj4vUW7SyxzM1VzkmQWMmgBGZVhrjb": 546053124588,
+            "DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK": 35723441610, 
+            "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3": 3223337074367
         }
 }
 ```
@@ -251,14 +251,14 @@ GET /api/delegates/{id}/voters/balances
 ### Endpoint
 
 ```
-GET /api/delegates/{id}/voters
+POST /api/delegates/search
 ```
 
 ### Path Parameters
 
-| Name | Type   | Description                                     | Required           |
-|------|:------:|-------------------------------------------------|:------------------:|
-| id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
+| Name     | Type   | Description                                     | Required           |
+| -------  |:------:|-------------------------------------------------|:------------------:|
+| username | string | The username of the delegate to be retrieved.   | :white_check_mark: |
 
 ### Query Parameters
 
@@ -271,22 +271,45 @@ GET /api/delegates/{id}/voters
 
 ```json
 {
-    "meta": {
-        "count": 2,
-        "pageCount": 10,
-        "totalCount": 19,
-        "next": "/v2/delegates/boldninja/voters?page=2",
-        "previous": null,
-        "self": "/v2/delegates/boldninja/voters?page=1",
-        "first": "/v2/delegates/boldninja/voters?page=1",
-        "last": "/v2/delegates/boldninja/voters?page=10"
-    },
-    "data": [
+    'meta': {
+        'count': 1, 
+        'pageCount': 1, 
+        'totalCount': 1, 
+        'next': None, 
+        'previous': None, 
+        'self': '/api/v2/delegates/search?limit=100&page=1', 
+        'first': '/api/v2/delegates/search?limit=100&page=1', 
+        'last': '/api/v2/delegates/search?limit=100&page=1'
+   }, 
+   'data': [
         {
-            "address": "D5mbS6mpP5UheuciNscpDLgC127kYjRtkK",
-            "publicKey": "03f7e0b1ab14985990416f72ed0b206c20b9efa35156e4528c8ff749fa0eea5d5a",
-            "balance": 400000000,
-            "isDelegate": false
+            'username': 'darkgalp', 
+            'address': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+            'publicKey': '037997a6553ea8073eb199e9f5ff23b8f0892e79433ef35e13966e0a12849d02e3', 
+            'votes': 4635816197288, 
+            'rank': 24, 
+            'blocks': {
+                'produced': 20903, 
+                'missed': 297, 
+                'last': {
+                    'id': '13446764355635039339', 
+                    'height': 1087121, 
+                    'timestamp': {
+                        'epoch': 56387658, 
+                        'unix': 1546488858, 
+                        'human': '2019-01-03T04:14:18.000Z'
+                        }
+                 }
+            }, 
+            'production': {
+                'approval': 0.04, 
+                'productivity': 98.6
+            }, 
+            'forged': {
+                'fees': 246004413320, 
+                'rewards': 4142200000000, 
+                'total': 4388204413320
+            }
         }
     ]
 }

@@ -176,71 +176,71 @@ GET /api/transactions/unconfirmed/
                  }
             }, 
             {
-                 “id”: “db2e54211c352217eee0313a01f6258ac1634e201f04f89b0561d34f7d598066”, 
-                 “version”: 1, 
-                 “type”: 0,
-                 “amount”: 17130719, 
-                 “fee”: 344000, 
-                 “sender”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-                 “recipient”: “DKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Z”, 
-                 “signature”: “30440220069f25d555157f3216b6725e1f66f37b126dcc039f2a4eb12fe74d9e93595d7b02202980215c9375d43f24ebd26a32d6db49f260ad55199c3a137b7dce61e324c970”,          
-                 “vendorField”: “Yooooooloooooo”, 
-                 “confirmations”: 0, 
-                 “timestamp” : {
-                     “epoch”: 56388424, 
-                     “unix”: 1546489624, 
-                     “human”: “2019-01-03T04:27:04.000Z”
+                 â€œidâ€: â€œdb2e54211c352217eee0313a01f6258ac1634e201f04f89b0561d34f7d598066â€, 
+                 â€œversionâ€: 1, 
+                 â€œtypeâ€: 0,
+                 â€œamountâ€: 17130719, 
+                 â€œfeeâ€: 344000, 
+                 â€œsenderâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+                 â€œrecipientâ€: â€œDKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Zâ€, 
+                 â€œsignatureâ€: â€œ30440220069f25d555157f3216b6725e1f66f37b126dcc039f2a4eb12fe74d9e93595d7b02202980215c9375d43f24ebd26a32d6db49f260ad55199c3a137b7dce61e324c970â€,          
+                 â€œvendorFieldâ€: â€œYoooooolooooooâ€, 
+                 â€œconfirmationsâ€: 0, 
+                 â€œtimestampâ€ : {
+                     â€œepochâ€: 56388424, 
+                     â€œunixâ€: 1546489624, 
+                     â€œhumanâ€: â€œ2019-01-03T04:27:04.000Zâ€
                  }
             }, 
             {
-                “id”: “825ab53b50fa99d339486ab780c6a187c7f4fbccfa1098f38be7f57226b144bd”, 
-                “version”: 1, 
-                “type”: 0, 
-                “amount”: 11266113, 
-                “fee”: 344000, 
-                “sender”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-                “recipient”: “DG92jj4vUW7SyxzM1VzkmQWMmgBGZVhrjb”, 
-                “signature”: “3045022100918864cc6e5ae22010820f1d2a3d4677472d20d7a151597f3f6c705028f28dcf02203518b755fb860b40edfcde5107909d043e7a2cc38d66f5ca52710a0be7e6d710”,       
-                “vendorField”: “Yooooooloooooo”, 
-                “confirmations”: 0, 
-                “timestamp”: {
-                    “epoch”: 56388425, 
-                    “unix”: 1546489625, 
-                    “human”: “2019-01-03T04:27:05.000Z”
+                â€œidâ€: â€œ825ab53b50fa99d339486ab780c6a187c7f4fbccfa1098f38be7f57226b144bdâ€, 
+                â€œversionâ€: 1, 
+                â€œtypeâ€: 0, 
+                â€œamountâ€: 11266113, 
+                â€œfeeâ€: 344000, 
+                â€œsenderâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+                â€œrecipientâ€: â€œDG92jj4vUW7SyxzM1VzkmQWMmgBGZVhrjbâ€, 
+                â€œsignatureâ€: â€œ3045022100918864cc6e5ae22010820f1d2a3d4677472d20d7a151597f3f6c705028f28dcf02203518b755fb860b40edfcde5107909d043e7a2cc38d66f5ca52710a0be7e6d710â€,       
+                â€œvendorFieldâ€: â€œYoooooolooooooâ€, 
+                â€œconfirmationsâ€: 0, 
+                â€œtimestampâ€: {
+                    â€œepochâ€: 56388425, 
+                    â€œunixâ€: 1546489625, 
+                    â€œhumanâ€: â€œ2019-01-03T04:27:05.000Zâ€
                  }
             }, 
             {
-                 “id”: “26146b25cde21ab72ecd49a0ac582372314625d854154cfd705dc841a4765ac8”, 
-                 “version”: 1, 
-                 “type”: 0, 
-                 “amount”: 737042, 
-                 “fee”: 344000, 
-                 “sender”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-                 “recipient”: “DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK”, 
-                 “signature”: “3044022067abb680cd6699cf5dac9194c576949dce4b29fe3e4d108724829e8aa34d8a3c02205a3bb91bb46a0182c1dc393c05538e0b673702c75ff39ad0acbf6b879082d911”,          
-                 “vendorField”: “Yooooooloooooo”, 
-                 “confirmations”: 0, 
-                 “timestamp”: {
-                     “epoch”: 56388425, 
-                     “unix”: 1546489625, 
-                     “human”: “2019-01-03T04:27:05.000Z”
+                 â€œidâ€: â€œ26146b25cde21ab72ecd49a0ac582372314625d854154cfd705dc841a4765ac8â€, 
+                 â€œversionâ€: 1, 
+                 â€œtypeâ€: 0, 
+                 â€œamountâ€: 737042, 
+                 â€œfeeâ€: 344000, 
+                 â€œsenderâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+                 â€œrecipientâ€: â€œDN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWKâ€, 
+                 â€œsignatureâ€: â€œ3044022067abb680cd6699cf5dac9194c576949dce4b29fe3e4d108724829e8aa34d8a3c02205a3bb91bb46a0182c1dc393c05538e0b673702c75ff39ad0acbf6b879082d911â€,          
+                 â€œvendorFieldâ€: â€œYoooooolooooooâ€, 
+                 â€œconfirmationsâ€: 0, 
+                 â€œtimestampâ€: {
+                     â€œepochâ€: 56388425, 
+                     â€œunixâ€: 1546489625, 
+                     â€œhumanâ€: â€œ2019-01-03T04:27:05.000Zâ€
                  }
             }, 
             {
-                 “id”: “7f54d415750361b3f15bdd4c85d73cbc6ea43efbee6e7725048c223cadd9a4b2”, 
-                 “version”: 1, 
-                 “type”: 0, 
-                 “amount”: 70866123, 
-                 “fee”: 344000, 
-                 “sender”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-                 “recipient”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-                 “signature”: “304402207a2f0ce904148dfa1aa0ffc685bdf0614b2e98de98f32b108dd205174d6b767102201566d703296801057e8f94c396fc5be208e6bddde20f5d70be3f46fbcf640bbd”,          
-                 “vendorField”: “Yooooooloooooo”, 
-                 “confirmations”: 0, 
-                 “timestamp”: {
-                     “epoch”: 56388425, 
-                     “unix”: 1546489625, 
-                     “human”: “2019-01-03T04:27:05.000Z”
+                 â€œidâ€: â€œ7f54d415750361b3f15bdd4c85d73cbc6ea43efbee6e7725048c223cadd9a4b2â€, 
+                 â€œversionâ€: 1, 
+                 â€œtypeâ€: 0, 
+                 â€œamountâ€: 70866123, 
+                 â€œfeeâ€: 344000, 
+                 â€œsenderâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+                 â€œrecipientâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+                 â€œsignatureâ€: â€œ304402207a2f0ce904148dfa1aa0ffc685bdf0614b2e98de98f32b108dd205174d6b767102201566d703296801057e8f94c396fc5be208e6bddde20f5d70be3f46fbcf640bbdâ€,          
+                 â€œvendorFieldâ€: â€œYoooooolooooooâ€, 
+                 â€œconfirmationsâ€: 0, 
+                 â€œtimestampâ€: {
+                     â€œepochâ€: 56388425, 
+                     â€œunixâ€: 1546489625, 
+                     â€œhumanâ€: â€œ2019-01-03T04:27:05.000Zâ€
                   }
             }
      ]
@@ -273,21 +273,21 @@ GET /api/transactions/unconfirmed/{id}
 
 ```json
 {
-     “data”: {
-          “id”: “c94504293d23e3be535a049fdfacba95147f2a87a4ef6682c56801da96befce0”, 
-          “version”: 1, 
-          “type”: 0, 
-          “amount”: 70866123, 
-          “fee”: 344000, 
-          “sender”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-          “recipient”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-          “signature”: “30450221008adeff8eb2a780168704d9e210368d81edff79b81aa7b995e43486f3b1e0096502205caef345584319a6294b1f5283c0d17b478b8a9bcdc10570e5a58681b0eae332”, 
-          “vendorField”: “Yooooooloooooo”, 
-          “confirmations”: 0, 
-          “timestamp”: {
-               “epoch”: 56388424, 
-               “unix”: 1546489624, 
-               “human”: “2019-01-03T04:27:04.000Z”
+     â€œdataâ€: {
+          â€œidâ€: â€œc94504293d23e3be535a049fdfacba95147f2a87a4ef6682c56801da96befce0â€, 
+          â€œversionâ€: 1, 
+          â€œtypeâ€: 0, 
+          â€œamountâ€: 70866123, 
+          â€œfeeâ€: 344000, 
+          â€œsenderâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+          â€œrecipientâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+          â€œsignatureâ€: â€œ30450221008adeff8eb2a780168704d9e210368d81edff79b81aa7b995e43486f3b1e0096502205caef345584319a6294b1f5283c0d17b478b8a9bcdc10570e5a58681b0eae332â€, 
+          â€œvendorFieldâ€: â€œYoooooolooooooâ€, 
+          â€œconfirmationsâ€: 0, 
+          â€œtimestampâ€: {
+               â€œepochâ€: 56388424, 
+               â€œunixâ€: 1546489624, 
+               â€œhumanâ€: â€œ2019-01-03T04:27:04.000Zâ€
           }
      }
 }
@@ -314,65 +314,58 @@ POST /api/transactions/search
 
 | Name                      | Type   | Description  | Required |
 |---------------------------|:------:|--------------|:--------:|
+| orderBy                   | string | ...          | :x:      |
 | id                        | string | ...          | :x:      |
+| blockId                   | string | ...          | :x:      |
+| type                      | int    | ...          | :x:      |
 | version                   | int    | ...          | :x:      |
-| previousBlock             | int    | ...          | :x:      |
-| payloadHash               | string | ...          | :x:      |
-| generatorPublicKey        | string | ...          | :x:      |
-| blockSignature            | string | ...          | :x:      |
+| senderPublicKey           | string | ...          | :x:      |
+| senderId                  | string | ...          | :x:      |
+| recipientId               | string | ...          | :x:      |
+| ownerId                   | string | ...          | :x:      |
+| vendorFieldHex            | string | ...          | :x:      |
 | timestamp                 | object | ...          | :x:      |
 | timestamp.from            | int    | ...          | :x:      |
 | timestamp.to              | int    | ...          | :x:      |
-| height                    | object | ...          | :x:      |
-| height.from               | int    | ...          | :x:      |
-| height.to                 | int    | ...          | :x:      |
-| numberOfTransactions      | object | ...          | :x:      |
-| numberOfTransactions.from | int    | ...          | :x:      |
-| numberOfTransactions.to   | int    | ...          | :x:      |
-| totalAmount               | object | ...          | :x:      |
-| totalAmount.from          | int    | ...          | :x:      |
-| totalAmount.to            | int    | ...          | :x:      |
-| totalFee                  | object | ...          | :x:      |
-| totalFee.from             | int    | ...          | :x:      |
-| totalFee.to               | int    | ...          | :x:      |
-| reward                    | object | ...          | :x:      |
-| reward.from               | int    | ...          | :x:      |
-| reward.to                 | int    | ...          | :x:      |
-| payloadLength             | object | ...          | :x:      |
-| payloadLength.from        | int    | ...          | :x:      |
-| payloadLength.to          | int    | ...          | :x:      |
+| amount                    | object | ...          | :x:      |
+| amount.from               | int    | ...          | :x:      |
+| amount.to                 | int    | ...          | :x:      |
+| fee                       | object | ...          | :x:      |
+| fee.from                  | int    | ...          | :x:      |
+| fee.to                    | int    | ...          | :x:      |
+
 
 ### Response
 
 ```json
 {
-     “meta”: {
-          “count”: 1, 
-          “pageCount”: 79382, 
-          “totalCount”: 79382, 
-          “next”: “/api/v2/transactions/search?limit=1&page=2”, 
-          “previous”: None, 
-          “self”: “/api/v2/transactions/search?limit=1&page=1”, 
-          “first”: “/api/v2/transactions/search?limit=1&page=1”, 
-          “last”: “/api/v2/transactions/search?limit=1&page=79382”
+     â€œmetaâ€: {
+          â€œcountâ€: 1, 
+          â€œpageCountâ€: 79382, 
+          â€œtotalCountâ€: 79382, 
+          â€œnextâ€: â€œ/api/v2/transactions/search?limit=1&page=2â€, 
+          â€œpreviousâ€: None, 
+          â€œselfâ€: â€œ/api/v2/transactions/search?limit=1&page=1â€, 
+          â€œfirstâ€: â€œ/api/v2/transactions/search?limit=1&page=1â€, 
+          â€œlastâ€: â€œ/api/v2/transactions/search?limit=1&page=79382â€
      }, 
-     “data”: [
+     â€œdataâ€: [
           {
-               “id”: “026fbc15cf630e8fc2a3e963d2c436c744d880611a468b34b85145e181b80dc0”, 
-               “blockId”: “14085724014999449555”, 
-               “version”: 1, 
-               “type”: 0, 
-               “amount”: 737042, 
-               “fee”: 344000, 
-               “sender”: “DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3”, 
-               “recipient”: “DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK”, 
-               “signature”: “3045022100cb2c2d9086188f4b09c97b99374da91579d15c99206bbb04512053922cb0209f022026a4676483d1162eaafd64d2acfa43413e02f587922cf55f3205bbf509bd118b”, 
-               “vendorField”: “Yooooooloooooo”, 
-               “confirmations”: 103, 
-               “timestamp”: {
-                    “epoch”: 56388434, 
-                    “unix”: 1546489634, 
-                    “human”: “2019-01-03T04:27:14.000Z”
+               â€œidâ€: â€œ026fbc15cf630e8fc2a3e963d2c436c744d880611a468b34b85145e181b80dc0â€, 
+               â€œblockIdâ€: â€œ14085724014999449555â€, 
+               â€œversionâ€: 1, 
+               â€œtypeâ€: 0, 
+               â€œamountâ€: 737042, 
+               â€œfeeâ€: 344000, 
+               â€œsenderâ€: â€œDMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3â€, 
+               â€œrecipientâ€: â€œDN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWKâ€, 
+               â€œsignatureâ€: â€œ3045022100cb2c2d9086188f4b09c97b99374da91579d15c99206bbb04512053922cb0209f022026a4676483d1162eaafd64d2acfa43413e02f587922cf55f3205bbf509bd118bâ€, 
+               â€œvendorFieldâ€: â€œYoooooolooooooâ€, 
+               â€œconfirmationsâ€: 103, 
+               â€œtimestampâ€: {
+                    â€œepochâ€: 56388434, 
+                    â€œunixâ€: 1546489634, 
+                    â€œhumanâ€: â€œ2019-01-03T04:27:14.000Zâ€
                }
           }
      ]
@@ -392,9 +385,9 @@ GET /api/transactions/types
 
 ```json
 {
-     “data”: {
+     â€œdataâ€: {
           "Transfer": 0, 
-          "SecondSignature”: 1, 
+          "SecondSignatureâ€: 1, 
           "DelegateRegistration": 2, 
           "Vote": 3, 
           "MultiSignature": 4, 

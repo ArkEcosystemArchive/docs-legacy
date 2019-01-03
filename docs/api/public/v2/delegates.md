@@ -290,7 +290,7 @@ POST /api/delegates/search
             "rank": 24, 
             "blocks": {
                 "produced": 20903, 
-                "misse"': 297, 
+                "missed": 297, 
                 "last": {
                     "id": "13446764355635039339", 
                     "height": 1087121, 

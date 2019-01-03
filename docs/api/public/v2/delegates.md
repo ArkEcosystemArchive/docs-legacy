@@ -275,8 +275,8 @@ POST /api/delegates/search
         "count": 1, 
         "pageCount": 1, 
         "totalCount": 1, 
-        "next": None, 
-        "previous": None, 
+        "next": null, 
+        "previous": null, 
         "self": "/api/v2/delegates/search?limit=100&page=1", 
         "first": "/api/v2/delegates/search?limit=100&page=1", 
         "last": "/api/v2/delegates/search?limit=100&page=1"

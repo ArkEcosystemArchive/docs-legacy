@@ -318,28 +318,27 @@ POST /api/transactions/search
           'first': '/api/v2/transactions/search?limit=1&page=1', 
           'last': '/api/v2/transactions/search?limit=1&page=79382'
      }, 
-          'data': [
-               {
-                    'id': '026fbc15cf630e8fc2a3e963d2c436c744d880611a468b34b85145e181b80dc0', 
-                    'blockId': '14085724014999449555', 
-                    'version': 1, 
-                    'type': 0, 
-                    'amount': 737042, 
-                    'fee': 344000, 
-                    'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
-                    'recipient': 'DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK', 
-                    'signature': '3045022100cb2c2d9086188f4b09c97b99374da91579d15c99206bbb04512053922cb0209f022026a4676483d1162eaafd64d2acfa43413e02f587922cf55f3205bbf509bd118b', 
-                    'vendorField': 'Yooooooloooooo', 
-                    'confirmations': 103, 
-                    'timestamp': {
-                         'epoch': 56388434, 
-                         'unix': 1546489634, 
-                         'human': '2019-01-03T04:27:14.000Z'
-                    }
+     'data': [
+          {
+               'id': '026fbc15cf630e8fc2a3e963d2c436c744d880611a468b34b85145e181b80dc0', 
+               'blockId': '14085724014999449555', 
+               'version': 1, 
+               'type': 0, 
+               'amount': 737042, 
+               'fee': 344000, 
+               'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+               'recipient': 'DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK', 
+               'signature': '3045022100cb2c2d9086188f4b09c97b99374da91579d15c99206bbb04512053922cb0209f022026a4676483d1162eaafd64d2acfa43413e02f587922cf55f3205bbf509bd118b', 
+               'vendorField': 'Yooooooloooooo', 
+               'confirmations': 103, 
+               'timestamp': {
+                    'epoch': 56388434, 
+                    'unix': 1546489634, 
+                    'human': '2019-01-03T04:27:14.000Z'
                }
-          ]
+          }
+     ]
 }
-
 ```
 
 

@@ -338,7 +338,7 @@ POST /api/transactions/search
           "PageCount": 79382, 
           "totalCount": 79382, 
           "next": "/api/v2/transactions/search?limit=1&page=2", 
-          "previous":None, 
+          "previous": None, 
           "self": "/api/v2/transactions/search?limit=1&page=1", 
           "first": "/api/v2/transactions/search?limit=1&page=1", 
           "last": "/api/v2/transactions/search?limit=1&page=79382"

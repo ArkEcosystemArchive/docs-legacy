@@ -271,7 +271,7 @@ POST /api/delegates/search
 
 ```json
 {
-    "meta': {
+    "meta": {
         "count": 1, 
         "pageCount": 1, 
         "totalCount": 1, 

@@ -352,7 +352,7 @@ POST /api/transactions/search
      "data" [
           {
                "id": "026fbc15cf630e8fc2a3e963d2c436c744d880611a468b34b85145e181b80dc0", 
-               "blockId": “14085724014999449555”, 
+               "blockId": "14085724014999449555", 
                "version": 1, 
                "type": 0, 
                "amount": 737042, 

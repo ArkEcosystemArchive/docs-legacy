@@ -363,9 +363,9 @@ POST /api/transactions/search
                “vendorField”: “Yooooooloooooo”, 
                “confirmations”: 103, 
                “timestamp”: {
-                    “epoch”: 56388434, 
-                    “unix”: 1546489634, 
-                    “human”: “2019-01-03T04:27:14.000Z”
+                    "epoch": 56388434, 
+                    "unix": 1546489634, 
+                    "human": "2019-01-03T04:27:14.000Z"
                }
           }
      ]

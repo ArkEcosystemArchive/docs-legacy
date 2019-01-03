@@ -382,17 +382,22 @@ POST /api/transactions/search
 GET /api/transactions/types
 ```
 
-### Query Parameters
-
-| Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
-
 ### Response
 
 ```json
-{}
+{
+     'data': {
+          'Transfer': 0, 
+          'SecondSignature': 1, 
+          'DelegateRegistration': 2, 
+          'Vote': 3, 
+          'MultiSignature': 4, 
+          'Ipfs': 5, 
+          'TimelockTransfer': 6, 
+          'MultiPayment': 7, 
+          'DelegateResignation': 8
+     }
+}
 ```
 
 
@@ -404,15 +409,20 @@ GET /api/transactions/types
 GET /api/transactions/fees
 ```
 
-### Query Parameters
-
-| Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
-
 ### Response
 
 ```json
-{}
+{
+     'data': {
+          'transfer': 10000000, 
+          'secondSignature': 500000000, 
+          'delegateRegistration': 2500000000, 
+          'vote': 100000000, 
+          'multiSignature': 500000000, 
+          'ipfs': 0, 'timelockTransfer': 0, 
+          'multiPayment': 0, 
+          'delegateResignation': 0
+     }
+}
+
 ```

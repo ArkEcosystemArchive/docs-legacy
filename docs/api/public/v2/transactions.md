@@ -256,6 +256,12 @@ GET /api/transactions/unconfirmed/
 GET /api/transactions/unconfirmed/{id}
 ```
 
+### Path Parameters
+
+| Name | Type   | Description                                        | Required           |
+|------|:------:|----------------------------------------------------|:------------------:|
+| id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
+
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
@@ -413,15 +419,16 @@ GET /api/transactions/fees
 
 ```json
 {
-     'data': {
-          'transfer': 10000000, 
-          'secondSignature': 500000000, 
-          'delegateRegistration': 2500000000, 
-          'vote': 100000000, 
-          'multiSignature': 500000000, 
-          'ipfs': 0, 'timelockTransfer': 0, 
-          'multiPayment': 0, 
-          'delegateResignation': 0
+     "data": {
+          "transfer": 10000000, 
+          "secondSignature": 500000000, 
+          "delegateRegistration": 2500000000, 
+          "vote": 100000000, 
+          "multiSignature": 500000000, 
+          "ipfs": 0, 
+          "timelockTransfer": 0, 
+          "multiPayment": 0, 
+          "delegateResignatio": 0
      }
 }
 

@@ -262,12 +262,6 @@ GET /api/transactions/unconfirmed/{id}
 |------|:------:|----------------------------------------------------|:------------------:|
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
 
-### Query Parameters
-
-| Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
 
 ### Response
 

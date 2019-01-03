@@ -133,7 +133,189 @@ GET /api/transactions
 ### Endpoint
 
 ```
-GET /api/transactions/unconfirmed
+GET /api/transactions/unconfirmed/
+```
+
+### Query Parameters
+
+| Name  | Type | Description                                   | Required |
+|-------|:----:|-----------------------------------------------|:--------:|
+| page  | int  | The number of the page that will be returned. | :x:      |
+| limit | int  | The number of resources per page.             | :x:      |
+
+### Response
+
+```json
+{
+    'meta': {
+        'count': 5, 
+        'pageCount': 8, 
+        'totalCount': 40, 
+        'next': '/api/v2/transactions/unconfirmed?limit=5&page=2', 
+        'previous': None, 
+        'self': '/api/v2/transactions/unconfirmed?limit=5&page=1', 
+        'first': '/api/v2/transactions/unconfirmed?limit=5&page=1', 
+        'last': '/api/v2/transactions/unconfirmed?limit=5&page=8'
+    }, 
+        'data': [
+            {
+                'id': 'c94504293d23e3be535a049fdfacba95147f2a87a4ef6682c56801da96befce0', 
+                'version': 1, 
+                'type': 0, 
+                'amount': 70866123, 
+                'fee': 344000, 
+                'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                'recipient': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                'signature': '30450221008adeff8eb2a780168704d9e210368d81edff79b81aa7b995e43486f3b1e0096502205caef345584319a6294b1f5283c0d17b478b8a9bcdc10570e5a58681b0eae332',       'vendorField': 'Yooooooloooooo', 
+                'confirmations': 0, 
+                'timestamp': {
+                    'epoch': 56388424, 
+                    'unix': 1546489624, 
+                    'human': '2019-01-03T04:27:04.000Z'
+                 }
+            }, 
+            {
+                 'id': 'db2e54211c352217eee0313a01f6258ac1634e201f04f89b0561d34f7d598066', 
+                 'version': 1, 
+                 'type': 0,
+                 'amount': 17130719, 
+                 'fee': 344000, 
+                 'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                 'recipient': 'DKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Z', 
+                 'signature': '30440220069f25d555157f3216b6725e1f66f37b126dcc039f2a4eb12fe74d9e93595d7b02202980215c9375d43f24ebd26a32d6db49f260ad55199c3a137b7dce61e324c970',          'vendorField': 'Yooooooloooooo', 
+                 'confirmations': 0, 
+                 'timestamp' : {
+                     'epoch': 56388424, 
+                     'unix': 1546489624, 
+                     'human': '2019-01-03T04:27:04.000Z'
+                 }
+            }, 
+            {
+                'id': '825ab53b50fa99d339486ab780c6a187c7f4fbccfa1098f38be7f57226b144bd', 
+                'version': 1, 
+                'type': 0, 
+                'amount': 11266113, 
+                'fee': 344000, 
+                'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                'recipient': 'DG92jj4vUW7SyxzM1VzkmQWMmgBGZVhrjb', 
+                'signature': '3045022100918864cc6e5ae22010820f1d2a3d4677472d20d7a151597f3f6c705028f28dcf02203518b755fb860b40edfcde5107909d043e7a2cc38d66f5ca52710a0be7e6d710',       'vendorField': 'Yooooooloooooo', 
+                'confirmations': 0, 
+                'timestamp': {
+                    'epoch': 56388425, 
+                    'unix': 1546489625, 
+                    'human': '2019-01-03T04:27:05.000Z'
+                 }
+            }, 
+            {
+                 'id': '26146b25cde21ab72ecd49a0ac582372314625d854154cfd705dc841a4765ac8', 
+                 'version': 1, 
+                 'type': 0, 
+                 'amount': 737042, 
+                 'fee': 344000, 
+                 'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                 'recipient': 'DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK', 
+                 'signature': '3044022067abb680cd6699cf5dac9194c576949dce4b29fe3e4d108724829e8aa34d8a3c02205a3bb91bb46a0182c1dc393c05538e0b673702c75ff39ad0acbf6b879082d911',          'vendorField': 'Yooooooloooooo', 
+                 'confirmations': 0, 
+                 'timestamp': {
+                     'epoch': 56388425, 
+                     'unix': 1546489625, 
+                     'human': '2019-01-03T04:27:05.000Z'
+                 }
+            }, 
+            {
+                 'id': '7f54d415750361b3f15bdd4c85d73cbc6ea43efbee6e7725048c223cadd9a4b2', 
+                 'version': 1, 
+                 'type': 0, 
+                 'amount': 70866123, 
+                 'fee': 344000, 
+                 'sender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                 'recipient': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
+                 'signature': '304402207a2f0ce904148dfa1aa0ffc685bdf0614b2e98de98f32b108dd205174d6b767102201566d703296801057e8f94c396fc5be208e6bddde20f5d70be3f46fbcf640bbd',          'vendorField': 'Yooooooloooooo', 
+                 'confirmations': 0, 
+                 'timestamp': {
+                     'epoch': 56388425, 
+                     'unix': 1546489625, 
+                     'human': '2019-01-03T04:27:05.000Z'
+                  }
+            }
+     ]
+}
+```
+
+
+## Get an unconfirmed transaction
+
+### Endpoint
+
+```
+GET /api/transactions/unconfirmed/{id}
+```
+
+### Query Parameters
+
+| Name  | Type | Description                                   | Required |
+|-------|:----:|-----------------------------------------------|:--------:|
+| page  | int  | The number of the page that will be returned. | :x:      |
+| limit | int  | The number of resources per page.             | :x:      |
+
+### Response
+
+```json
+{'data': {'id': 'c94504293d23e3be535a049fdfacba95147f2a87a4ef6682c56801da96befce0', 'version': 1, 'type': 0, 'amount': 70866123, 'fee': 344000, 's                              ender': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 'recipient': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 'signature': '30450221008adeff8eb2a780168704d9e21                              0368d81edff79b81aa7b995e43486f3b1e0096502205caef345584319a6294b1f5283c0d17b478b8a9bcdc10570e5a58681b0eae332', 'vendorField': 'Yooooooloooooo', 'co                              nfirmations': 0, 'timestamp': {'epoch': 56388424, 'unix': 1546489624, 'human': '2019-01-03T04:27:04.000Z'}}}
+
+```
+
+
+## Search for transactions
+
+### Endpoint
+
+```
+POST /api/transactions/search
+```
+
+### Query Parameters
+
+| Name  | Type | Description                                   | Required |
+|-------|:----:|-----------------------------------------------|:--------:|
+| page  | int  | The number of the page that will be returned. | :x:      |
+| limit | int  | The number of resources per page.             | :x:      |
+
+### Response
+
+```json
+{}
+```
+
+
+## Get transaction types
+
+### Endpoint
+
+```
+GET /api/transactions/types
+```
+
+### Query Parameters
+
+| Name  | Type | Description                                   | Required |
+|-------|:----:|-----------------------------------------------|:--------:|
+| page  | int  | The number of the page that will be returned. | :x:      |
+| limit | int  | The number of resources per page.             | :x:      |
+
+### Response
+
+```json
+{}
+```
+
+
+## Get transaction fees (non-dynamic)
+
+### Endpoint
+
+```
+GET /api/transactions/fees
 ```
 
 ### Query Parameters

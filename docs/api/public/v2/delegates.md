@@ -271,44 +271,44 @@ POST /api/delegates/search
 
 ```json
 {
-    'meta': {
-        'count': 1, 
-        'pageCount': 1, 
-        'totalCount': 1, 
-        'next': None, 
-        'previous': None, 
-        'self': '/api/v2/delegates/search?limit=100&page=1', 
-        'first': '/api/v2/delegates/search?limit=100&page=1', 
-        'last': '/api/v2/delegates/search?limit=100&page=1'
+    "meta': {
+        "count": 1, 
+        "pageCount": 1, 
+        "totalCount": 1, 
+        "next": None, 
+        "previous": None, 
+        "self": "/api/v2/delegates/search?limit=100&page=1", 
+        "first": "/api/v2/delegates/search?limit=100&page=1", 
+        "last": "/api/v2/delegates/search?limit=100&page=1"
    }, 
-   'data': [
+   "data': [
         {
-            'username': 'darkgalp', 
-            'address': 'DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3', 
-            'publicKey': '037997a6553ea8073eb199e9f5ff23b8f0892e79433ef35e13966e0a12849d02e3', 
-            'votes': 4635816197288, 
-            'rank': 24, 
-            'blocks': {
-                'produced': 20903, 
-                'missed': 297, 
-                'last': {
-                    'id': '13446764355635039339', 
-                    'height': 1087121, 
-                    'timestamp': {
-                        'epoch': 56387658, 
-                        'unix': 1546488858, 
-                        'human': '2019-01-03T04:14:18.000Z'
+            "username": "darkgalp", 
+            "address": "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3", 
+            "publicKey": "037997a6553ea8073eb199e9f5ff23b8f0892e79433ef35e13966e0a12849d02e3", 
+            "votes": 4635816197288, 
+            "rank": 24, 
+            "blocks": {
+                "produced": 20903, 
+                "misse"': 297, 
+                "last": {
+                    "id": "13446764355635039339", 
+                    "height": 1087121, 
+                    "timestamp": {
+                        "epoch": 56387658, 
+                        "unix": 1546488858, 
+                        "human": "2019-01-03T04:14:18.000Z"
                         }
                  }
             }, 
-            'production': {
-                'approval': 0.04, 
-                'productivity': 98.6
+            "production": {
+                "approval": 0.04, 
+                "productivity": 98.6
             }, 
-            'forged': {
-                'fees': 246004413320, 
-                'rewards': 4142200000000, 
-                'total': 4388204413320
+            "forged": {
+                "fees": 246004413320, 
+                "rewards": 4142200000000, 
+                "totat": 4388204413320
             }
         }
     ]

@@ -152,7 +152,7 @@ GET /api/transactions/unconfirmed/
         "pageCount": 8, 
         "totalCount": 40, 
         "next": "/api/v2/transactions/unconfirmed?limit=5&page=2", 
-        "previous": None, 
+        "previous": null, 
         "self": "/api/v2/transactions/unconfirmed?limit=5&page=1", 
         "first": "/api/v2/transactions/unconfirmed?limit=5&page=1", 
         "last": "/api/v2/transactions/unconfirmed?limit=5&page=8"
@@ -338,7 +338,7 @@ POST /api/transactions/search
           "PageCount": 79382, 
           "totalCount": 79382, 
           "next": "/api/v2/transactions/search?limit=1&page=2", 
-          "previous": None, 
+          "previous": null, 
           "self": "/api/v2/transactions/search?limit=1&page=1", 
           "first": "/api/v2/transactions/search?limit=1&page=1", 
           "last": "/api/v2/transactions/search?limit=1&page=79382"

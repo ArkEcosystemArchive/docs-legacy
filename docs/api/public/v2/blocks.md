@@ -44,7 +44,8 @@ GET /api/blocks
             "forged": {
                 "reward": 200000000,
                 "fee": 0,
-                "total": 200000000
+                "total": 200000000,
+                "amount": 0
             },
             "payload": {
                 "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -93,7 +94,8 @@ GET /api/blocks/{id|height}
         "forged": {
             "reward": 200000000,
             "fee": 0,
-            "total": 200000000
+            "total": 200000000,
+            "amount": 0
         },
         "payload": {
             "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",

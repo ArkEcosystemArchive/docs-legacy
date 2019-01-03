@@ -14,10 +14,10 @@ GET /api/votes
 
 ### Query Parameters
 
-| Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| Name    | Type | Description                                   | Required |
+|---------|:----:|-----------------------------------------------|:--------:|
+| page    | int  | The number of the page that will be returned. | :x:      |
+| limit   | int  | The number of resources per page.             | :x:      |
 
 ### Response
 
@@ -37,6 +37,7 @@ GET /api/votes
         {
             "id": "560959e435cbf8eec60691890f3dd55d141e76077e1fe803f65d137c91099240",
             "blockId": "12872155462883631430",
+            "version": 1,
             "type": 3,
             "amount": 0,
             "fee": 100000000,
@@ -80,6 +81,7 @@ GET /api/votes/{id}
     "data": {
         "id": "beb8dd43c640f562704090159154b2742afba7eacada9e8edee447e34e7675c6",
         "blockId": "13661015019049808045",
+        "version": 1,
         "type": 3,
         "amount": 0,
         "fee": 100000000,

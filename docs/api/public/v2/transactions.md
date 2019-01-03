@@ -385,9 +385,9 @@ GET /api/transactions/types
 
 ```json
 {
-     “data”: {
+     "data": {
           "Transfer": 0, 
-          "SecondSignature”: 1, 
+          "SecondSignature": 1, 
           "DelegateRegistration": 2, 
           "Vote": 3, 
           "MultiSignature": 4, 

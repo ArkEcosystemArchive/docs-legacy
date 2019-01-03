@@ -343,7 +343,7 @@ POST /api/transactions/search
           "first": "/api/v2/transactions/search?limit=1&page=1", 
           "last": "/api/v2/transactions/search?limit=1&page=79382"
      }, 
-     "data" [
+     "data" : [
           {
                "id": "026fbc15cf630e8fc2a3e963d2c436c744d880611a468b34b85145e181b80dc0", 
                "blockId": "14085724014999449555", 

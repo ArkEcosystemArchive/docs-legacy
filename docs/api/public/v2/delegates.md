@@ -281,7 +281,7 @@ POST /api/delegates/search
         "first": "/api/v2/delegates/search?limit=100&page=1", 
         "last": "/api/v2/delegates/search?limit=100&page=1"
    }, 
-   "data': [
+   "data": [
         {
             "username": "darkgalp", 
             "address": "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3", 

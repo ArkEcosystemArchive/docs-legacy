@@ -304,6 +304,38 @@ POST /api/transactions/search
 | page  | int  | The number of the page that will be returned. | :x:      |
 | limit | int  | The number of resources per page.             | :x:      |
 
+### Body Parameters
+
+| Name                      | Type   | Description  | Required |
+|---------------------------|:------:|--------------|:--------:|
+| id                        | string | ...          | :x:      |
+| version                   | int    | ...          | :x:      |
+| previousBlock             | int    | ...          | :x:      |
+| payloadHash               | string | ...          | :x:      |
+| generatorPublicKey        | string | ...          | :x:      |
+| blockSignature            | string | ...          | :x:      |
+| timestamp                 | object | ...          | :x:      |
+| timestamp.from            | int    | ...          | :x:      |
+| timestamp.to              | int    | ...          | :x:      |
+| height                    | object | ...          | :x:      |
+| height.from               | int    | ...          | :x:      |
+| height.to                 | int    | ...          | :x:      |
+| numberOfTransactions      | object | ...          | :x:      |
+| numberOfTransactions.from | int    | ...          | :x:      |
+| numberOfTransactions.to   | int    | ...          | :x:      |
+| totalAmount               | object | ...          | :x:      |
+| totalAmount.from          | int    | ...          | :x:      |
+| totalAmount.to            | int    | ...          | :x:      |
+| totalFee                  | object | ...          | :x:      |
+| totalFee.from             | int    | ...          | :x:      |
+| totalFee.to               | int    | ...          | :x:      |
+| reward                    | object | ...          | :x:      |
+| reward.from               | int    | ...          | :x:      |
+| reward.to                 | int    | ...          | :x:      |
+| payloadLength             | object | ...          | :x:      |
+| payloadLength.from        | int    | ...          | :x:      |
+| payloadLength.to          | int    | ...          | :x:      |
+
 ### Response
 
 ```json

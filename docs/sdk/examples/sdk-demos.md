@@ -14,7 +14,7 @@ The code represents minimal example of `client` and `crypto` libraries usage for
 
 Please refer to the code comments or check more detailed documentation for specific SDK in the left menu.
 
-:::: tabs 
+:::: tabs
 ::: tab java
 ```java
 import com.google.gson.internal.LinkedTreeMap;
@@ -228,7 +228,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Initiate the client
         let conn = Connection(host: "https://dexplorer.ark.io:8443/api")
 
@@ -248,6 +248,45 @@ class ViewController: UIViewController {
             print(response)
         }
     }
+}
+```
+:::
+
+::: tab go
+```go
+package main
+
+import (
+    "context"
+    arkClient "github.com/arkecosystem/go-client/client"
+    arkCrypto "github.com/arkecosystem/go-crypto/crypto"
+    "github.com/davecgh/go-spew/spew"
+    "net/url"
+)
+
+func main() {
+    // Initiate the client
+    connection := arkClient.NewClient(nil)
+    url, _ := url.Parse("http://my.ark.node.ip:port/api/")
+    connection.BaseURL = url
+
+    
+    // Find a block at height 939627
+    responseStructBlock, _, _ := connection.Blocks.Get(context.Background(), 939627)
+
+    spew.Dump(responseStructBlock)
+
+    // Create a transfer transaction
+    transaction := arkCrypto.BuildTransfer("arkAddress", 100000, "Hello World", "mysupersecretppassphrase", "mysupersecretsecondppassphrase")
+
+    body := &arkClient.CreateTransactionRequest{
+        Transactions: []interface{}{
+            *transaction,
+        },
+    }
+    
+    // Send the transaction
+    connection.Transactions.Create(context.Background(), body)
 }
 ```
 :::

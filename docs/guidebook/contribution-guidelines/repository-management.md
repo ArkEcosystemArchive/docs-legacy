@@ -36,84 +36,158 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 ## How to organize GitHub Issues & Pull Requests
 
-**Status**
-- ![#000000](https://placehold.it/15/#000000/000000?text=+) `Status: Abandoned`
-- ![#000000](https://placehold.it/15/#000000/000000?text=+) `Status: Won't Fix`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Status: Resolved`
-- ![#043a96](https://placehold.it/15/#043a96/000000?text=+) `Status: Accepted`
-- ![#043a96](https://placehold.it/15/#043a96/000000?text=+) `Status: Available`
-- ![#d2dae1](https://placehold.it/15/#d2dae1/000000?text=+) `Status: In Progress`
-- ![#d2dae1](https://placehold.it/15/#d2dae1/000000?text=+) `Status: On Hold`
-- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Status: Blocked`
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Status: Cannot Reproduce`
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Status: Do Not Merge`
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Status: Reverted`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Help Wanted`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Feedback`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Investigation`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Review`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Testcase`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Changes`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Discussion`
+**Status:**
+- ![#000000](https://placehold.it/15/000000/000000?text=+) `Status: Abandoned`
+  - The issue or pull request has been abandoned.
+- ![#000000](https://placehold.it/15/000000/000000?text=+) `Status: Won't Fix`
+  - The issue is legitimate, but it is not something the team is currently able or willing to fix or implement.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Status: Resolved`
+  - The issue has been resolved.
+- ![#043a96](https://placehold.it/15/043a96/000000?text=+) `Status: Accepted`
+  - The proposed solution has been accepted.
+- ![#66dd66](https://placehold.it/15/66dd66/000000?text=+) `Status: Available`
+  - The issue is available to be worked on.
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: In Progress`
+  - The issue is being worked on.
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: On Hold`
+  - The issue or pull request is not being worked on for the time being.
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Status: Blocked`
+  - The pull request is blocked from being merged for the time being.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Cannot Reproduce`
+  - The issue cannot be reproduced by an engineer of the team.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Do Not Merge`
+  - The pull request is not allowed to be merged yet, usually WIP.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Reverted`
+  - The pull request was reverted after an initial merge.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Good First Contribution`
+  - The issue appears to have a simple solution.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Feedback`
+  - The issue needs more information before it can be verified and resolved.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Investigation`
+  - The issue needs more investigation before it can be verified and resolved.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Review`
+  - The issue or pull request needs a review by an engineer of the team.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Testcase`
+  - The issue or pull request relates to a feature that needs test coverage.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Changes`
+  - The pull request needs additional changes before it can be merged.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Discussion`
+  - The issue or pull request needs more discussion before it can be closed or merged.
 
-**Bounty**
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Bounty: Tier 0`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Bounty: Tier 1`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Bounty: Tier 2`
-- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Bounty: Tier 3`
-- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Bounty: Tier 4`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Bounty: Tier 5`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Bounty: Tier 6`
+**Bounty:**
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bounty: Tier 0`
+  - The pull request has been assigned a T0 reward.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 1`
+  - The pull request has been assigned a T1 reward.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 2`
+  - The pull request has been assigned a T2 reward.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 3`
+  - The pull request has been assigned a T3 reward.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 4`
+  - The pull request has been assigned a T4 reward.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Bounty: Tier 5`
+  - The pull request has been assigned a T5 reward.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Bounty: Tier 6`
+  - The pull request has been assigned a T6 reward.
 
-**Severity**
-- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Severity: Blocker`
-- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Severity: High`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Severity: Medium`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Severity: Low`
+**Severity:**
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Severity: Blocker`
+  - The issue is blocking an upcoming release.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Severity: High`
+  - The issue causes data loss, crashes or hangs salt processes, makes the system unresponsive, etc.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Severity: Medium`
+  - The issue reports incorrect functionality, bad functionality, a confusing user experience, etc.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Severity: Low`
+  - The issue reports cosmetic items, formatting, spelling, colors, etc.
 
-**Platform**
-- ![#dddddd](https://placehold.it/15/#dddddd/000000?text=+) `Platform: Windows`
-- ![#dddddd](https://placehold.it/15/#dddddd/000000?text=+) `Platform: Linux`
-- ![#dddddd](https://placehold.it/15/#dddddd/000000?text=+) `Platform: macOS`
+**Platform:**
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Windows`
+  - The issue reports incorrect functionality on windows.
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Linux`
+  - The issue reports incorrect functionality on linux.
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: macOS`
+  - The issue reports incorrect functionality on macOS.
 
-**Type**
-- ![#1144ff](https://placehold.it/15/#1144ff/000000?text=+) `Type: Feature`
-- ![#1144ff](https://placehold.it/15/#1144ff/000000?text=+) `Type: Release`
-- ![#44bbff](https://placehold.it/15/#44bbff/000000?text=+) `Type: Maintenance`
-- ![#44bbff](https://placehold.it/15/#44bbff/000000?text=+) `Type: Performance`
-- ![#44bbff](https://placehold.it/15/#44bbff/000000?text=+) `Type: Refactor`
-- ![#c7def8](https://placehold.it/15/#c7def8/000000?text=+) `Type: Duplicate`
-- ![#c7def8](https://placehold.it/15/#c7def8/000000?text=+) `Type: Expected Behavior`
-- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Type: Breaking Change`
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Type: Bug`
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Type: Regression`
-- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Type: Security`
-- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Discussion`
-- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Documentation`
-- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Information`
-- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Question`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Type: Standards`
+**Type:**
+- ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Feature`
+  - The issue is a request for new functionality including changes, enhancements, refactors, etc.
+- ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Release`
+  - The issue or pull request is related to an upcoming release.
+- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Maintenance`
+  - The pull request updates dependencies or updates configuration files.
+- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Performance`
+  - The pull requests improves the performance of an existing implementation.
+- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Refactor`
+  - The pull requests improves an existing implementation.
+- ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Duplicate`
+  - The issue is a duplicate of another feature request or bug report.
+- ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Expected Behavior`
+  - The issue is a bug report of intended functionality.
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Type: Breaking Change`
+  - The issue or pull request documents or introduces a breaking change.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bug`
+  - The issue documents broken, incorrect, or confusing behavior.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Regression`
+  - The issue is a bug that breaks functionality known to work in previous releases.
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Type: Security`
+  - The issue documents broken functionality that could expose private data or cause harm otherwise.
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Discussion`
+  - The issue is a discussion about a generic topic.
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Documentation`
+  - The issue or pull request relates to documentation.
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Information`
+  - The issue is a blob of information for users by an engineer of the team.
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Question`
+  - The issue is more of a question than a request for new features or a report of broken features, but can sometimes lead to further discussion or changes of confusing or incongruous behavior or documentation.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Standards`
+  - The issue reports problems with the compliance of contribution guidelines or code standards.
 
-**Difficulty**
-- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Difficulty: Challenging`
-- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Difficulty: Advanced`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Difficulty: Intermediate`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Difficulty: Beginner`
+**Difficulty:**
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Difficulty: Challenging`
+  - The issue requires extensive understanding of the code base.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Difficulty: Advanced`
+  - The issue requires advanced understanding of the code base.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Difficulty: Intermediate`
+  - The issue requires minimal understanding of the code base.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Difficulty: Beginner`
+  - The issue doesn't require any specific knowledge about the code base.
 
-**Priority**
-- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Priority: Critical`
-- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Priority: High`
-- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Priority: Medium`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Priority: Low`
+**Priority:**
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Priority: Critical`
+  - The issue will be seen by all users.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Priority: High`
+  - The issue will be seen by most users.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Priority: Medium`
+  - The issue will be seen by about half of users.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Priority: Low`
+  - The issue will not be seen by most users.
 
-**Test**
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: General`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: Functional`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: Integration`
-- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: Unit`
+**Test:**
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: General`
+  - The issue or pull request is related to tests.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: Functional`
+  - The issue or pull request is related to functional tests.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: Integration`
+  - The issue or pull request is related to integration tests.
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: Unit`
+  - The issue or pull request is related to unit tests.
 
-**Environment**
-- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Development`
-- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Production`
-- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Test`
-- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Continuous Integration`
+**Complexity:**
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Complexity: Undetermined`
+  - Needs specialized, in-depth review.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Complexity: High`
+  - More than 256 lines changed
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Complexity: Medium`
+  - Less than 256 lines changed
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Complexity: Low`
+  - Less than 64 lines changed
+
+**Environment:**
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Development`
+  - The issue reports incorrect functionality in the development environment.
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Production`
+  - The issue reports incorrect functionality in the production environment.
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Test`
+  - The issue reports incorrect functionality in the test environment.
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Continuous Integration`
+  - The issue reports incorrect functionality in the CI environment.

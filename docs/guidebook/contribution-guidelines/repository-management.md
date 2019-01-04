@@ -45,23 +45,19 @@ Another benefit of squashing is to have a clean & flat git history which allows 
   - The issue has been resolved.
 - ![#043a96](https://placehold.it/15/043a96/000000?text=+) `Status: Accepted`
   - The proposed solution has been accepted.
-- ![#66dd66](https://placehold.it/15/66dd66/000000?text=+) `Status: Available`
-  - The issue is available to be worked on.
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: Available`
+  - The issue is not assigned to anyone and available to be worked on.
 - ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: In Progress`
-  - The issue is being worked on.
+  - The issue or pull request is being worked on.
 - ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: On Hold`
   - The issue or pull request is not being worked on for the time being.
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Status: Blocked`
   - The pull request is blocked from being merged for the time being.
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Cannot Reproduce`
   - The issue cannot be reproduced by an engineer of the team.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Do Not Merge`
-  - The pull request is not allowed to be merged yet, usually WIP.
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Reverted`
   - The pull request was reverted after an initial merge.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Good First Contribution`
-  - The issue appears to have a simple solution.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Feedback`
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Information`
   - The issue needs more information before it can be verified and resolved.
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Investigation`
   - The issue needs more investigation before it can be verified and resolved.
@@ -76,14 +72,14 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 **Bounty:**
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bounty: Tier 0`
-  - The pull request has been assigned a T0 reward.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 1`
+  - The pull request has been assigned a T0 reward. Needs specialized, in-depth review.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 1`
   - The pull request has been assigned a T1 reward.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 2`
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 2`
   - The pull request has been assigned a T2 reward.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 3`
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 3`
   - The pull request has been assigned a T3 reward.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 4`
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 4`
   - The pull request has been assigned a T4 reward.
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Bounty: Tier 5`
   - The pull request has been assigned a T5 reward.
@@ -91,20 +87,20 @@ Another benefit of squashing is to have a clean & flat git history which allows 
   - The pull request has been assigned a T6 reward.
 
 **Severity:**
-- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Severity: Blocker`
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Severity: Critical`
   - The issue is blocking an upcoming release.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Severity: High`
-  - The issue causes data loss, crashes or hangs salt processes, makes the system unresponsive, etc.
+  - The issue causes data loss, crashes or hangs processes, makes the system unresponsive, etc.
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Severity: Medium`
-  - The issue reports incorrect functionality, bad functionality, a confusing user experience, etc.
+  - The issue reports bad or incorrect functionality, a confusing user experience, etc.
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Severity: Low`
   - The issue reports cosmetic items, formatting, spelling, colors, etc.
 
 **Platform:**
 - ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Windows`
-  - The issue reports incorrect functionality on windows.
+  - The issue reports incorrect functionality on Windows.
 - ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Linux`
-  - The issue reports incorrect functionality on linux.
+  - The issue reports incorrect functionality on Linux.
 - ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: macOS`
   - The issue reports incorrect functionality on macOS.
 
@@ -114,15 +110,15 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Release`
   - The issue or pull request is related to an upcoming release.
 - ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Maintenance`
-  - The pull request updates dependencies or updates configuration files.
+  - The pull request updates dependencies or configuration files.
 - ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Performance`
-  - The pull requests improves the performance of an existing implementation.
+  - The pull requests improves performance.
 - ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Refactor`
   - The pull requests improves an existing implementation.
 - ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Duplicate`
   - The issue is a duplicate of another feature request or bug report.
 - ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Expected Behavior`
-  - The issue is a bug report of intended functionality.
+  - The issue is a bug report but the behaviour is intended.
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Type: Breaking Change`
   - The issue or pull request documents or introduces a breaking change.
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bug`
@@ -139,6 +135,8 @@ Another benefit of squashing is to have a clean & flat git history which allows 
   - The issue is a blob of information for users by an engineer of the team.
 - ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Question`
   - The issue is more of a question than a request for new features or a report of broken features, but can sometimes lead to further discussion or changes of confusing or incongruous behavior or documentation.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Good First Contribution`
+  - The issue appears to have a simple solution.
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Standards`
   - The issue reports problems with the compliance of contribution guidelines or code standards.
 
@@ -163,24 +161,24 @@ Another benefit of squashing is to have a clean & flat git history which allows 
   - The issue will not be seen by most users.
 
 **Test:**
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: General`
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: General`
   - The issue or pull request is related to tests.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: Functional`
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Functional`
   - The issue or pull request is related to functional tests.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: Integration`
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Integration`
   - The issue or pull request is related to integration tests.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Test: Unit`
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Unit`
   - The issue or pull request is related to unit tests.
 
 **Complexity:**
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Complexity: Undetermined`
   - Needs specialized, in-depth review.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Complexity: High`
-  - More than 256 lines changed
+  - More than 256 lines changed.
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Complexity: Medium`
-  - Less than 256 lines changed
+  - Less than 256 lines changed.
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Complexity: Low`
-  - Less than 64 lines changed
+  - Less than 64 lines changed.
 
 **Environment:**
 - ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Development`

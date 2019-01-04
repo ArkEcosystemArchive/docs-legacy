@@ -36,50 +36,84 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 ## How to organize GitHub Issues & Pull Requests
 
-**Platform:** `#bfd4f2`
-- ![#bfd4f2](https://placehold.it/15/bfd4f2/000000?text=+) `angular`
-- ![#bfd4f2](https://placehold.it/15/bfd4f2/000000?text=+) `bash`
-- ![#bfd4f2](https://placehold.it/15/bfd4f2/000000?text=+) `browser`
-- ![#bfd4f2](https://placehold.it/15/bfd4f2/000000?text=+) `ionic`
-- ![#bfd4f2](https://placehold.it/15/bfd4f2/000000?text=+) `nodejs`
-- ![#bfd4f2](https://placehold.it/15/bfd4f2/000000?text=+) `vue`
+**Status**
+- ![#000000](https://placehold.it/15/#000000/000000?text=+) `Status: Abandoned`
+- ![#000000](https://placehold.it/15/#000000/000000?text=+) `Status: Won't Fix`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Status: Resolved`
+- ![#043a96](https://placehold.it/15/#043a96/000000?text=+) `Status: Accepted`
+- ![#043a96](https://placehold.it/15/#043a96/000000?text=+) `Status: Available`
+- ![#d2dae1](https://placehold.it/15/#d2dae1/000000?text=+) `Status: In Progress`
+- ![#d2dae1](https://placehold.it/15/#d2dae1/000000?text=+) `Status: On Hold`
+- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Status: Blocked`
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Status: Cannot Reproduce`
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Status: Do Not Merge`
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Status: Reverted`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Help Wanted`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Feedback`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Investigation`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Review`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Testcase`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Changes`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Status: Needs Discussion`
 
-**Problems:** `#ee3f46`
-- ![#ee3f46](https://placehold.it/15/ee3f46/000000?text=+) `bug`
-- ![#ee3f46](https://placehold.it/15/ee3f46/000000?text=+) `security`
+**Bounty**
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Bounty: Tier 0`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Bounty: Tier 1`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Bounty: Tier 2`
+- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Bounty: Tier 3`
+- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Bounty: Tier 4`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Bounty: Tier 5`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Bounty: Tier 6`
 
-**Experience:** `#ffc274`
-- ![#ffc274](https://placehold.it/15/ffc274/000000?text=+) `ux`
-- ![#ffc274](https://placehold.it/15/ffc274/000000?text=+) `ui`
+**Severity**
+- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Severity: Blocker`
+- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Severity: High`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Severity: Medium`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Severity: Low`
 
-**Environment:** `#fad8c7`
-- ![#fad8c7](https://placehold.it/15/fad8c7/000000?text=+) `development`
-- ![#fad8c7](https://placehold.it/15/fad8c7/000000?text=+) `production`
-- ![#fad8c7](https://placehold.it/15/fad8c7/000000?text=+) `test`
+**Platform**
+- ![#dddddd](https://placehold.it/15/#dddddd/000000?text=+) `Platform: Windows`
+- ![#dddddd](https://placehold.it/15/#dddddd/000000?text=+) `Platform: Linux`
+- ![#dddddd](https://placehold.it/15/#dddddd/000000?text=+) `Platform: macOS`
 
-**Feedback:** `#cc317c`
-- ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) `discussion`
-- ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) `question`
-- ![#cc317c](https://placehold.it/15/cc317c/000000?text=+) `help wanted`
+**Type**
+- ![#1144ff](https://placehold.it/15/#1144ff/000000?text=+) `Type: Feature`
+- ![#1144ff](https://placehold.it/15/#1144ff/000000?text=+) `Type: Release`
+- ![#44bbff](https://placehold.it/15/#44bbff/000000?text=+) `Type: Maintenance`
+- ![#44bbff](https://placehold.it/15/#44bbff/000000?text=+) `Type: Performance`
+- ![#44bbff](https://placehold.it/15/#44bbff/000000?text=+) `Type: Refactor`
+- ![#c7def8](https://placehold.it/15/#c7def8/000000?text=+) `Type: Duplicate`
+- ![#c7def8](https://placehold.it/15/#c7def8/000000?text=+) `Type: Expected Behavior`
+- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Type: Breaking Change`
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Type: Bug`
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Type: Regression`
+- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Type: Security`
+- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Discussion`
+- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Documentation`
+- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Information`
+- ![#fef2c0](https://placehold.it/15/#fef2c0/000000?text=+) `Type: Question`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Type: Standards`
 
-**Improvements:** `#5ebeff`
-- ![#5ebeff](https://placehold.it/15/5ebeff/000000?text=+) `enhancement`
-- ![#5ebeff](https://placehold.it/15/5ebeff/000000?text=+) `optimization`
-- ![#5ebeff](https://placehold.it/15/5ebeff/000000?text=+) `refactor`
+**Difficulty**
+- ![#e11d21](https://placehold.it/15/#e11d21/000000?text=+) `Difficulty: Challenging`
+- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Difficulty: Advanced`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Difficulty: Intermediate`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Difficulty: Beginner`
 
-**Additions:** `#91ca55`
-- ![#91ca55](https://placehold.it/15/91ca55/000000?text=+) `feature`
+**Priority**
+- ![#b60205](https://placehold.it/15/#b60205/000000?text=+) `Priority: Critical`
+- ![#ff9900](https://placehold.it/15/#ff9900/000000?text=+) `Priority: High`
+- ![#ffdd44](https://placehold.it/15/#ffdd44/000000?text=+) `Priority: Medium`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Priority: Low`
 
-**Pending:** `#fbca04`
-- ![#fbca04](https://placehold.it/15/fbca04/000000?text=+) `backlog`
-- ![#fbca04](https://placehold.it/15/fbca04/000000?text=+) `in progress`
+**Test**
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: General`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: Functional`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: Integration`
+- ![#007700](https://placehold.it/15/#007700/000000?text=+) `Test: Unit`
 
-**Inactive:** `#d2dae1`
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `duplicate`
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `invalid`
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `wontfix`
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `on hold`
-
-**Miscellaneous:** `#fef2c0`
-- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `chore`
-- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `good first issue`
+**Environment**
+- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Development`
+- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Production`
+- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Test`
+- ![#f9d0c4](https://placehold.it/15/#f9d0c4/000000?text=+) `Environment: Continuous Integration`

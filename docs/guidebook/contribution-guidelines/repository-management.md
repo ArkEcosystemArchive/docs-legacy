@@ -36,11 +36,11 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 ## How to organize GitHub Issues & Pull Requests
 
-**Status:**
+**Status**
 - ![#000000](https://placehold.it/15/000000/000000?text=+) `Status: Abandoned`
   - The issue or pull request has been abandoned.
 - ![#000000](https://placehold.it/15/000000/000000?text=+) `Status: Won't Fix`
-  - The issue is legitimate, but it is not something the team is currently able or willing to fix or implement.
+  - The issue is legitimate, but it is not something the team is currently able or willing to work on.
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Status: Resolved`
   - The issue has been resolved.
 - ![#043a96](https://placehold.it/15/043a96/000000?text=+) `Status: Accepted`
@@ -70,7 +70,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Discussion`
   - The issue or pull request needs more discussion before it can be closed or merged.
 
-**Bounty:**
+**Bounty**
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bounty: Tier 0`
   - The pull request has been assigned a T0 reward. Needs specialized, in-depth review.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 1`
@@ -86,7 +86,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Bounty: Tier 6`
   - The pull request has been assigned a T6 reward.
 
-**Severity:**
+**Severity**
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Severity: Critical`
   - The issue is blocking an upcoming release.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Severity: High`
@@ -96,7 +96,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Severity: Low`
   - The issue reports cosmetic items, formatting, spelling, colors, etc.
 
-**Platform:**
+**Platform**
 - ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Windows`
   - The issue reports incorrect functionality on Windows.
 - ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Linux`
@@ -104,7 +104,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: macOS`
   - The issue reports incorrect functionality on macOS.
 
-**Type:**
+**Type**
 - ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Feature`
   - The issue is a request for new functionality including changes, enhancements, refactors, etc.
 - ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Release`
@@ -112,7 +112,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Maintenance`
   - The pull request updates dependencies or configuration files.
 - ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Performance`
-  - The pull requests improves performance.
+  - The issue or pull requests relates to performance issues.
 - ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Refactor`
   - The pull requests improves an existing implementation.
 - ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Duplicate`
@@ -121,6 +121,10 @@ Another benefit of squashing is to have a clean & flat git history which allows 
   - The issue is a bug report but the behaviour is intended.
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Type: Breaking Change`
   - The issue or pull request documents or introduces a breaking change.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bug`
+  - The issue documents broken, incorrect, or confusing behavior.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bugfix`
+  - The pull request fixes an incorrect functionality or behaviour.
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bug`
   - The issue documents broken, incorrect, or confusing behavior.
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Regression`
@@ -134,13 +138,13 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Information`
   - The issue is a blob of information for users by an engineer of the team.
 - ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Question`
-  - The issue is more of a question than a request for new features or a report of broken features, but can sometimes lead to further discussion or changes of confusing or incongruous behavior or documentation.
+  - The issue is more of a question than a request for new features or a report of broken features.
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Good First Contribution`
   - The issue appears to have a simple solution.
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Standards`
   - The issue reports problems with the compliance of contribution guidelines or code standards.
 
-**Difficulty:**
+**Difficulty**
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Difficulty: Challenging`
   - The issue requires extensive understanding of the code base.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Difficulty: Advanced`
@@ -150,7 +154,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Difficulty: Beginner`
   - The issue doesn't require any specific knowledge about the code base.
 
-**Priority:**
+**Priority**
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Priority: Critical`
   - The issue will be seen by all users.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Priority: High`
@@ -160,7 +164,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Priority: Low`
   - The issue will not be seen by most users.
 
-**Test:**
+**Test**
 - ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: General`
   - The issue or pull request is related to tests.
 - ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Functional`
@@ -170,7 +174,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Unit`
   - The issue or pull request is related to unit tests.
 
-**Complexity:**
+**Complexity**
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Complexity: Undetermined`
   - Needs specialized, in-depth review.
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Complexity: High`
@@ -180,7 +184,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Complexity: Low`
   - Less than 64 lines changed.
 
-**Environment:**
+**Environment**
 - ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Development`
   - The issue reports incorrect functionality in the development environment.
 - ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Production`
@@ -189,3 +193,49 @@ Another benefit of squashing is to have a clean & flat git history which allows 
   - The issue reports incorrect functionality in the test environment.
 - ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Continuous Integration`
   - The issue reports incorrect functionality in the CI environment.
+
+## Assigning Bounty Tiers after merging a Pull Request
+
+After a developer merges a PR it is *required* to assign one of the 7 bounty labels. Those labels will be used by the ArkEcosystem Bot to calculate bounty rewards and inform the contributors about those.
+
+**Tier 1 - $100**
+
+Tier 1 pull requests cover large code changes that usually bring new functionality and have a higher impact on the codebase.
+
+Examples of this include a new API endpoint, resolving structural issues that cause circular dependencies, or adding a new bigger features to our codebase (an example would be settings page to the explorer, adding new identicons package to the desktop wallet or a new small non-essential plugin in the Core).
+
+**Tier 2 - $50**
+
+This tier covers medium features and improvements to the codebase that bring in new functionality, have a big impact on the performance of the product or biggest optimizations and refactors of the code.
+
+An example would be optimizing some parts of the Core for improved performance of a specific function, implementing a medium, non-critical new feature in the desktop wallet or writing large documentation files that require understanding of the ARK code.
+
+**Tier 3 - $25**
+
+These pull requests cover smaller refactors or optimizations of the code or small non-essential features.
+
+An example of this would be reducing complexity or improving performance of existing code, improving the readability of the code or writing new documentation files, full translations of the projects aka desktop wallet or mobile wallet.
+
+**Tier 4 - $10**
+
+Normal small tier pull requests that fix small bugs or add a new test.
+
+Examples of this include adding more test coverage for existing functionality or resolving small bugs that usually get reported by users.
+
+**Tier 5 - $5**
+
+Small documentation updates or improvements that don’t have much code or smaller refactors of the code.
+
+**Tier 6 - $1**
+
+The lowest tier is for items that don’t usually have much to do with the code, but rather, are considered cosmetics.
+
+An example would be a typo, language corrections, grammar corrections, dependency update, link updates or broken links.
+
+**Tier 0 - Custom**
+
+If you want to work on much bigger changes or custom projects that you don’t think fit any of the above tiers contact us at bounty@ark.io.
+
+Some examples of what a custom tier 0 could cover — developing new modules for core that bring in new functionalities (PoW module instead of DPoS), different voting systems, proxy voting, implementing AIPs …
+
+Some issues will also have labels with custom (usually higher) values that you can take on. Labels on those issues will have a defined monetary value, so if you see these available you can request to take point on resolving them. Upon completion and review you will receive payment in ARK.

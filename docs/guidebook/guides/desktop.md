@@ -83,10 +83,12 @@ Making changes to Vue Components will hot-reload that component only; getting fe
 * Join to our [gitter](https://gitter.im/ark-developers/Lobby)
 
 ## Authors
- - Oleg Shcherbyna <Oleg@ark.io>
+ - Alex Barnsley <Alex@ARK.io>
+ - ItsANameToo <itsanametoo@protonmail.com>
  - Juan Martín <Juan@ARK.io>
  - Lúcio Rubens <Lucio@ARK.io>
- - Alex Barnsley <Alex@ARK.io>
+ - Oleg Shcherbyna <Oleg@ark.io>
+ - Mario Vega <Mario@ark.io>
  - [Various Community Contributors](https://github.com/ArkEcosystem/desktop-wallet/graphs/contributors)
 
 ## License

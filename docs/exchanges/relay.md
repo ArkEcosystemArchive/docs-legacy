@@ -1,10 +1,11 @@
 ---
 title: "Installing and configuring a Relay Node"
 ---
+# Installing a Relay Node
 
+## Introduction
 A Relay Node is a full node in the Ark Network; it maintains a complete copy of the ledger (blockchain). These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
 
-# Installing a Relay Node
 Ark offers an easy to setup solution for running a v2 node using [core-commander](https://github.com/ArkEcosystem/core-commander). The experience is similar to the deprecated v1 [Ark Commander](https://github.com/ArkEcosystem/ARKcommander) and best suited for bare-metal deployments.
 
 `core-commander` only supports Ubuntu (16.04, 18.04) and depends on [PostgreSQL](https://postgresql.org) as the persistent store.

@@ -2,18 +2,30 @@
 title: "Installing and configuring a Relay Node"
 ---
 
-A Relay Node is a full node in the Ark Network; it maintains a complete copy of the ledger. These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
+A Relay Node is a full node in the Ark Network; it maintains a complete copy of the ledger (blockchain). These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
 
 # Installing a Relay Node
 Ark offers an easy to setup solution for running a v2 node using [core-commander](https://github.com/ArkEcosystem/core-commander). The experience is similar to the deprecated v1 [Ark Commander](https://github.com/ArkEcosystem/ARKcommander) and best suited for bare-metal deployments.
 
-`core-commander` only supports Ubuntu (16.04, 18.04) and depends on [PostgreSQL](https://postgresql.org) as the the persistent store.
+`core-commander` only supports Ubuntu (16.04, 18.04) and depends on [PostgreSQL](https://postgresql.org) as the persistent store.
 
 ## Hardware Requirements
  - 4GB RAM
  - 40GB SSD
  - 2 Cores
 
+## Configuration Requirements
+ - Stable internet connection
+ - Access to multiple open ports (actual ports may be configured)
+ <!-- TODO add links to the documenting tables -->
+    | service    | port | required | enabled by default | documentation |
+    |------------|------|----------|--------------------|---------------|
+    | p2p        | 4001 | yes      | yes                | link          |
+    | public API | 4003 | no       | yes                | link          |
+    | webhook    | 4004 | no       | no                 | link          |
+    | graphQL    | 4005 | no       | no                 | link          |
+    | JSON RPC   | 8080 | no       | no                 | link          |
+<!-- https://www.tablesgenerator.com/markdown_tables -->
 ## Using the official `core-commander` tool
 On a fresh Ubuntu installation, follow these commands
 
@@ -317,7 +329,7 @@ pm2 start all --update-env
 ::: warning
 Please note that API will be available when the node has synced with the network. This can take up to 15 hours depending on your network speed.
 :::
-Now that the relay node has been configured,  you should head over to the [JSON-RPC installation guide](/exchanges/json-rpc.html) or look at relevant [Public API endpoints](/exchanges/public-api.html) related to blockchain functionality to manage your wallets and transactions. 
+Now that the relay node has been configured, you should head over to the [JSON-RPC installation guide](/exchanges/json-rpc.html) or look at relevant [Public API endpoints](/exchanges/public-api.html) related to blockchain functionality to manage your wallets and transactions. 
 
 
 ## Notes

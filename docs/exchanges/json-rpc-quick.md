@@ -9,7 +9,7 @@ Remote Procedure Call (RPC) is a protocol that allows one program to request a s
 By replacing dedicated protocols and communication methods with a standardized interface, RPC is designed to facilitate communication between client and server processes. The functions contained within RPC are accessible by any program that must communicate using a client/server methodology.
 
 ::: tip
-The majority of platforms utilising bitcoin use this RPC procedure. To accommodate these services and make the integration of Ark as user friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The Ark RPC will minimise headaches and streamline the addition process for all.
+The majority of platforms utilizing Bitcoin use the Bitcoind-RPC server. To accommodate these services and make the integration of Ark as user-friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The Ark RPC will minimize headaches and streamlines the addition process of ARK to existing architectures.
 :::
 
 # JSON-RPC Quick Actions
@@ -18,18 +18,18 @@ The majority of platforms utilising bitcoin use this RPC procedure. To accommoda
 
 All JSON-RPC implementations should be built using the tools of your programming language of choice. A working code implementation is provided below in NodeJS, but the same principles can be applied to the language of your choice 
 
-By default, the JSON-API listens on port 8080 for requests. This means that all JSON-RPC interactions should be POST requests to the URL `http://YOUR.NODE.IP:8080`, with the IP address of your node combined with the JSON-RPC port number.
+By default, the JSON-API listens on port 8080 for requests. This means that all JSON-RPC interactions should be POST requests to the URL `http://{NODE_IP}:{JSON-RPC_PORT}`, with the IP address of your node combined with the JSON-RPC port number.
 
 If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `ARK_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory. 
 
-Your config directory is located at `~/.ark` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
+Your config directory is located at `~/.ark/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
 In addition, all request should include the HTTP header `Content-Type: application/json`. This tells the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
 
 Each quick action will interact with the JSON-RPC in the same way - unless noted otherwise, any of these actions can be accessed with the following code:
 ```js
-const axios = require('axios') // install from npm with `npm install axios`
-const url = "http://YOUR.NODE.IP:8080" // http://${NODE_ID}:${JSON-RPC-PORT}
+const axios = require('axios') // install using npm: `npm install axios`
+const url = "http://0.0.0.0:8080" // http://${NODE_IP}:${JSON-RPC_PORT}
 const headers = {
   "Content-Type": "application/json"
 }
@@ -41,11 +41,9 @@ axios.post(url, body, headers)
     console.log(response.result)
   }
   .catch(error => {
-    console.log(error)	
+    console.log(error)    
   })
 ```
-Note that the `url` variable should be replaced with the location and port number of your Ark Core node. 
-
 To complete the template, replace the empty `body` object with the objects provided in each quick action. The `blocks.latest` method, for example, can be accessed by the following script:
 ```js
 const axios = require('axios') // install from npm with `npm install axios`
@@ -55,9 +53,9 @@ const headers = {
 }
 
 const body = {
-  jsonrpc: "2.0",
-  method: "blocks.latest", 
-  id: 31 // internal ID to track responses
+  jsonrpc: "2.0",           // JSON-RPC API version.
+  method: "blocks.latest",  // RPC method.
+  id: 31                    // internal ID to track responses.
 } 
 
 axios.post(url, body, headers)
@@ -65,7 +63,7 @@ axios.post(url, body, headers)
     console.log(response.data)
   }
   .catch(error => {
-    console.log(error)	
+    console.log(error)    
   })
 ```
 ## Check Wallet Balance
@@ -77,7 +75,7 @@ const body = {
   method: "wallets.info", 
   id: 31 // internal ID to track responses
   params: {
-    address: "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT" // the address you want to query
+    address: "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT" // the address of the wallet being queried.
   }
 }
 ```
@@ -226,4 +224,4 @@ If successful, you'll receive a response similar to the following:
   "version": 1
 }
 ```
-This particular transaction has 27 confirmations, meaning you can be confident that this transaction has been irreversibly included in the blockc
+This particular transaction has 27 confirmations, meaning you can be confident that this transaction has been irreversibly included in the blockchain. Most exchanges use a minimum of 51 confirmations, which is one complete round.

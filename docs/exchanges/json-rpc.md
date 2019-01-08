@@ -137,7 +137,7 @@ An example transaction from `ARAibxGqLQJTo1bWMJfu5fCc88rdWWjqgv` to `AMv3iLrvyvp
 
 ### Create a wallet
 ```
-`wallets.create`
+wallets.create
 ```
 #### Description
 Derives a public key and address from a given passphrase.
@@ -150,7 +150,7 @@ Derives a public key and address from a given passphrase.
 
 ### Wallet info
 ```
-`wallets.info`
+wallets.info
 ```
 #### Description
 Returns metadata for a given account.
@@ -176,7 +176,7 @@ An example response for one of the genesis addresses.
 
 ### List wallet transactions
 ```
-`wallets.transactions`
+wallets.transactions
 ```
 #### Description
 Returns an array of all transactions associated with a given account.

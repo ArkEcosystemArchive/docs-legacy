@@ -44,10 +44,10 @@ Alternatively, you can enable access from all remote hosts by enabling the `allo
 Once whitelisted, access the JSON-RPC by sending a POST request to your node's endpoint containing a JSON object with the following parameters:
 ```json
 {
-    "jsonrpc": "2.0",               // JSON-RPC API version
-    "method": "transaction.create", // or any method listed below
-    "id": "",                       // ID to be used as internal identifier, returned by the JSON-RPC 
-    "params": {},                   // the parameters for the specific request
+    "jsonrpc": "2.0",                   // JSON-RPC API version
+    "method": "transactions.create",    // or any method listed below
+    "id": "",                           // ID to be used as internal identifier, returned by the JSON-RPC 
+    "params": {},                       // the parameters for the specific request
 }
 ```
 
@@ -71,6 +71,21 @@ Creates a transaction object for submission to the blockchain. Combine with `tra
 | amount        | int    | The amount of ARK to transfer, in arktoshis.     | :x:      |
 | recipientId   | string | The receivers address                            | :x:      |
 | passphrase    | string | The passphrase of the signing wallet.            | :x:      |
+
+#### Response
+An example transaction from `038082dad560a22ea003022015e3136b21ef1ffd9f2fd50049026cbe8e2258ca17` to `AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT`.
+```json
+{
+  "amount": "200000000",
+  "fee": 10000000,
+  "id": "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86",
+  "recipientId": "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
+  "senderPublicKey": "038082dad560a22ea003022015e3136b21ef1ffd9f2fd50049026cbe8e2258ca17",
+  "signature": "304402204236a59a19266b5969e18f87d6d4b178180277c79beb5d4b42f272ee03fba0b702200c6c97ed5ab2e6231f3dce5cdfe740e72261b460f896fb4c5be0ca7ce6244c67",
+  "timestamp": 54903765,
+  "type": 0
+}
+```
 
 ### Broadcast transaction
 ```
@@ -124,6 +139,19 @@ Returns metadata for a given account.
 |---------------|:----------------:|----------------------------------------------------------------|:--------:|
 | address       | string           | The address of the account to return transactions for.         | :x:      |
 
+#### Response
+An example response for one of the genesis addresses.
+```json
+{
+  "address": "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
+  "balance": 245098210000000,
+  "isDelegate": true,
+  "publicKey": "02532c68cd0842fb86b2202c1027eafc741bdd581517047d9d19319e6741c54883",
+  "secondPublicKey": nil,
+  "username": "genesis_30"
+}
+```
+
 ### List wallet transactions
 ```
 `wallets.transactions`
@@ -160,6 +188,39 @@ Returns the most recently forged block.
 
 #### Parameters
 No required nor optional parameters.
+
+#### Response
+An example response for block number 20582.
+```json
+{
+  "forged": {
+    "amount": 0, 
+    "fee": 0, 
+    "reward": 0, 
+    "total": 0
+  },
+  "generator": {
+    "address": "AdWRsk7Lbo97jxGBKzLAFwevVHbqVbW1Cj",
+    "publicKey": "03691178f8610d0a295e650201b62345056c788d7f9ac7e8570b69c6c90091b564",
+    "username": "genesis_8"
+  },
+  "height": 20582,
+  "id": "5897025410627682852",
+  "payload": {
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "length": 0
+  },
+  "previous": "9643009166535029717",
+  "signature": "30440220772362881112eb0ce65d2a91b92cbb6b404f83165edfc95aa2cfb19a02026a3a022010bec681e7b9abfca61a4961f0e29db6730e8d3f9c649b5ab4b7eee1b919897e",
+  "timestamp": {
+    "epoch": 54902770,
+    "human": "2018-12-16T23:46:10.000Z",
+    "unix": 1545003970
+  },
+  "transactions": 0,
+  "version": 0
+}
+```
 
 ### List block transactions
 ```

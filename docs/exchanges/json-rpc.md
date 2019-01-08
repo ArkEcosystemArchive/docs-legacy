@@ -113,6 +113,28 @@ Returns metadata for a given transaction.
 |------|:----------:|-----------------------------------|:--------:|
 | id   | string     | The ID of the transaction object. | :x:      |
 
+#### Response
+An example transaction from `ARAibxGqLQJTo1bWMJfu5fCc88rdWWjqgv` to `AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT`. Note that instead of the `senderPublicKey`, the corresponding address is returned as `sender`.
+```json
+{
+  "amount": 200000000,
+  "blockId": "16888082711050311577",
+  "confirmations": 27,
+  "fee": 10000000,
+  "id": "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86",
+  "recipient": "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
+  "sender": "ARAibxGqLQJTo1bWMJfu5fCc88rdWWjqgv",
+  "signature": "304402204236a59a19266b5969e18f87d6d4b178180277c79beb5d4b42f272ee03fba0b702200c6c97ed5ab2e6231f3dce5cdfe740e72261b460f896fb4c5be0ca7ce6244c67",
+  "timestamp": {
+    "epoch": 54903765,
+    "human": "2018-12-17T00:02:45.000Z",
+    "unix": 1545004965
+  },
+  "type": 0,
+  "version": 1
+}
+```
+
 ### Create a wallet
 ```
 `wallets.create`

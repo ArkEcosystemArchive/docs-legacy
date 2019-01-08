@@ -3,7 +3,7 @@ title: "Public API Quick Actions"
 ---
 # Public API Quick Actions
 
-Connecting to the API is done via the Crypto and Client SDKs. Many informational queries can be done using the Client SDK alone, while any actions requiring cryptographic functionality (ie. signing transactions) require the use of the Crypto SDK.
+Connecting to the API is done via the Crypto and Client SDKs. Many informational queries can be done using the Client SDK alone, while any actions requiring cryptographic functionality (i.e. signing transactions) are performed by the Crypto SDK.
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
@@ -13,8 +13,6 @@ At a surface level, the two SDKs are separated by their functions and intended u
 Put another way, the Crypto SDK structures your data in a format that all Ark nodes can understand, while the Client SDK handles the actual communication between your application and an Ark node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
 
 ![A diagram showing the differences between Client and Crypto APIs](./assets/public-api/client-crypto.png)
-
-While the below examples are written using Node, there are SDKs available for a wide variety of popular languages, all of which follow the conventions outlined here.
 
 ## Setup
 
@@ -38,15 +36,28 @@ map.put("API-Version", 2);
 Connection<Two> connection = new Connection(map);
 ```
 :::
+::: tab go
+```go
+package main
+import (
+  ark "github.com/ArkEcosystem/go-client/client"
+  "net/url"
+  )
+
+func main() {
+  client := ark.NewClient(nil)
+  client.BaseURL, _ = url.Parse("http://{NODE_IP}:{NODE_HOST}/api")
+```
+:::
 
 ::::
 ## Check Wallet Balance
 
-Checking a wallet balance involves using the `wallets` resource to `get` the wallet corresponding to a given Ark address.
+Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given Ark address.
 :::: tabs
 ::: tab javascript
 ```js
-const walletAddress = 'ARKADDRESS' // get address from user 
+const walletAddress = '{ARK_ADDRESS}' // get address from user 
 let wallet 
 
 exchangeClient
@@ -65,7 +76,7 @@ console.log(wallet.balance)
 ::::
 ## Find Block Information
 
-If you know the ID of the block you are looking for, you can use the `get` method on the `blocks` resource to return information on that block.
+If you know the ID of the block you are looking for, you can use the `GET` method on the `blocks` resource to return information on that block.
 ```js
 let block 
 
@@ -236,7 +247,7 @@ exchangeClient
     console.log(response.data)
   })
 ```
-By running this code, you'd see output in your console resembling the following object:
+By running this code, you'd see the output in your console resembling the following object:
 ```js
 { 
   data: { 

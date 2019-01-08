@@ -19,13 +19,13 @@ Ark offers an easy to setup solution for running a v2 node using [core-commander
  - Stable internet connection
  - Access to multiple open ports (actual ports may be configured)
  <!-- TODO add links to the documenting tables -->
-    | service    | port | required | enabled by default | documentation |
-    |------------|------|----------|--------------------|---------------|
-    | p2p        | 4001 | yes      | yes                | link          |
-    | public API | 4003 | no       | yes                | link          |
-    | webhook    | 4004 | no       | no                 | link          |
-    | graphQL    | 4005 | no       | no                 | link          |
-    | JSON-RPC   | 8080 | no       | no                 | [link](/exchanges/json-rpc.html)          |
+    | service    | port | required | enabled by default | documentation                             |
+    |------------|------|----------|--------------------|-------------------------------------------|
+    | p2p        | 4001 | yes      | yes                | reference                                 |
+    | public API | 4003 | no       | yes                | [reference](/exchanges/public-api.html)   |
+    | webhook    | 4004 | no       | no                 | [reference](/api/webhooks/)               |
+    | graphQL    | 4005 | no       | no                 | reference                                 |
+    | JSON-RPC   | 8080 | no       | no                 | [reference](/exchanges/json-rpc.html)     |
 <!-- https://www.tablesgenerator.com/markdown_tables -->
 ## Using the official `core-commander` tool
 On a fresh Ubuntu installation, follow these commands

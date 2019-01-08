@@ -6,36 +6,37 @@ title: "How To Setup Your Ark Node"
 
 [[toc]]
 
-Welcome, the purpose of this document is to help you setup a full Ark relay or delegate
-node. This will guide you step by step and get you up and running relaying transactions
+## Introduction
+Welcome, the purpose of this document is to help you set up an Ark Relay node, relaying transactions
 and securing the Ark Network.
 
-## Minimum Requirements
+## Bare-metal
+
+### Minimum Requirements
 **NOT SUITABLE FOR USE AS A DELEGATE NODE**
 - 1 Dedicated CPU Core
 - 4GB Ram
 - Linux
 - 20GB Free HD Space
 
-## Recommended Specifications
+### Recommended Specifications
 - 2 CPU Cores+
 - 8GB Ram+
 - Ubuntu 16.04
 - 40GB+ SSD
 
-## Prerequisite Setup
-### Create a Linux Server
+### Prerequisite Setup
+#### Provision a Linux Server
 We recommend using the cloud provider you are most comfortable with. Running an Ark Node
 is not like Bitcoin mining and thus there are more options to choose from.
 AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few
 recommended choices.
 
-When choosing the size of VM please consider using a higher quality
-server when running a delegate nodes. These nodes are the security of our network
-and their uptime is of most importance in making sure the network runs smoothly.
+Delegate nodes have a higher minimum requirement on the hardware specifications. These nodes are the security of our network
+and their uptime is of most importance in making sure the network runs smoothly. 
 
 The recommended specifications are what we would consider the minimum specifications
-for delegate nodes. Smaller nodes are fine for relays or development purposes. We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides will use debian flavored Linux variants though.
+for delegate nodes. Smaller nodes are fine for relays or development purposes. We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides will use Debian flavored Linux variants though.
 
 With each provider, the setup process for creating a new virtual server is going to
 be different. If choosing one of the listed providers, we have created quick
@@ -48,26 +49,26 @@ links below to quickly get started.
 - [Microsoft Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/overview)
 - [OVH](https://support.ovhcloud.com/hc/en-us/articles/115001520890-Getting-Started-with-Servers)
 
-### Connect to Your Server
+#### Connect to Your Server
 After creating a server we need to connect to it. Your provider should have given you an
-`ip address`, `username`, and `password` to connect to your new server.
+`IP address`, `username`, and `password` to connect to your new server.
 
-This information can usually be found somewhere in your providers dashboard for your
+This information can usually be found somewhere in your provider's dashboard for your
 new server.
 
 ![ssh information](./assets/setup/ssh_information.png)
 
 Depending on your operating system you will connect to your server in different ways.
-Window users will want to use something like [PuTTy](https://putty.org/).
+Windows users will want to use something like [PuTTy](https://putty.org/) or the newer [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). When using the WSL, the Linux part of this guide should be relevant.
 
-#### Windows Users
-Open PuTTy and place the `ip address` given to you by your provider in the
+##### Windows
+Open PuTTy and place the `IP address` given to you by your provider in the
 `Host Name` field as shown below. You should probably save this host so you don't
 have to enter it every time.
 
 ![PuTTy Login](./assets/setup/puTTy_login.jpeg)
 
-#### MacOS / Linux
+##### MacOS / Linux
 Open up a new terminal window and type in the following to connect to your new
 server via `SSH`
 
@@ -76,157 +77,203 @@ ssh user@ipaddress
 ```
 
 When first connecting to your new server you will be asked to cache the servers
-host key and validate the rsa fingerprint, say or click yes.
+host key and validate the RSA fingerprint, click yes. If this message appears after you have already configured your server, take precautions, it might have been compromised.
 
-![ssh information](./assets/setup/ssh_fingerprint.png)
+```bash
+The authenticity of host '{SERVER_IP}' can't be stablished. 
+ECDSA key fingerprint is SHA256:kgjgjfihut985ht984754643354+hrQ. 
+Are you sure you want to continue connecting (yes/no)?
+```
 
-When prompted use the password given to you by your cloud provider. Some providers
-will require you to setup a a root password when creating the VM, while others may
+When prompted, use the password given to you by your cloud provider. Some providers
+will require you to set up a root password when creating the VM, while others may
 give you a temporary password.
 
-![root_login](./assets/setup/root_login.png)
+#### Create a user
+Executing this guide as the root user is not advised. Instead create a new, dedicated user to manage Ark-related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
 
-### Setup a User
-Loging into our node and leaving root access open is not good security so we're going
-to take care of that now.
-
-On your server type the following into the command line and press enter. Where `username` is the name you want to login with:
-
-```
+```bash
 adduser username
 ```
 
 You will be prompted to enter in the users `full name` and some other information.
 Feel free to just leave them all blank as they are optional. When prompted type `Y` and press enter.
 
-![add_user](./assets/setup/add_user.png)
+```bash
+Adding user 'ark' ...
+Adding new group 'ark' (1000) ...
+Adding new user 'ark' (1000) with group 'ark' ...
+Creating home directory '/home/ark' ...
+Copying files from '/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for ark
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] Y
+```
 
-### Giving our User Sudo Privileges
+#### Granting sudo privileges
 
-Next we need to make sure that our user can do all the things it needs to do. Type
+Next, we need to make sure that our user can do all the things it needs to do. Type
 the command below into your command line and press enter. Where `username` is the
 name of the new account you created. This will give our user `sudo` privileges.
 
 This will allow you to run programs with the security privileges of another user.
-By default this is a `superuser`.
+By default, this is a `superuser`.
 
-```
+```bash
 usermod -a -G sudo username
 ```
 
-## Installing your Ark Node
-We're now ready to begin installing Ark. The initial install may take awhile
+### Installing Ark Core
+We're now ready to begin installing Ark. The initial install may take a while
 and at times appear to not be doing anything. Please have patience and let the process
 finish.
 
-### Switch to the Ark user
-While installing Ark, we should use the Ark user that we created above. To switch to it, run
+#### Switch to the Ark user
+While installing Ark Core, we should use the Ark user that we created above. To switch to it, run
 
+```bash
+sudo su - username
 ```
-sudo su - ark
-```
-### Download Ark Commander
+#### Download Ark Commander
+[Git](https://git-scm.com/) is pre-bundled with Linux and a required dependency for Ark Core.
 
-```
-wget https://ark.io/ARKcommander.sh
-```
-
-### Make Ark Commander Executable
-Next we need to make the file we just downloaded executable by our user.
-```
-chmod +x ARKcommander.sh
+```bash
+git clone https://github.com/ArkEcosystem/core-commander
 ```
 
-### Run Ark Commander
-Now we'll run the file we just downloaded and begin our Ark Node installation.
+#### Run `core-commander`
+```bash
+bash core-commander/commander.sh
 ```
-./ARKcommander.sh
-```
-#### Sudo Password
-Ark Commander is then going to ask you for your `sudo` password. This is
+
+##### Optional
+`core-commander` may ask you for your `sudo` password depending on the version. This is
 the password you used to login to the user account with. Enter your password
 and press enter.
 
-![ark_commander_login](./assets/setup/ark_commander_login.png)
-
-#### System Updates and Prerequisites
+##### System Updates and Prerequisites
 The first time you run Ark Commander it is going to update your system and make sure
 you have the latest updates to required dependencies.
 
-![ark_commander_login](./assets/setup/update_ark_commander.png)
+```bash
+    ___    ____  __ __    ______                   ___    ____
+   /   |  / __ \/ //_/   / ____/___  ________     |__ \  / __ \
+  / /| | / /_/ / ,<     / /   / __ \/ ___/ _ \    __/ / / / / /
+ / ___ |/ _, _/ /| |   / /___/ /_/ / /  /  __/   / __/_/ /_/ /
+/_/  |_/_/ |_/_/ |_|   \____/\____/_/   \___/   /____(_)____/
 
-![prerequisites](./assets/setup/prerequisites.png)
+   ______                                          __
+  / ____/___  ____ ___  ____ ___  ____ _____  ____/ /__  _____
+ / /   / __ \/ __ `__ \/ __ `__ \/ __ `/ __ \/ __  / _ \/ ___/
+/ /___/ /_/ / / / / / / / / / / / /_/ / / / / /_/ /  __/ /
+\____/\____/_/ /_/ /_/_/ /_/ /_/\__,_/_/ /_/\__,_/\___/_/
 
-#### Reboot System
-Once updates and prerequisites installation has finished reboot your system by
-typing the following command and pressing enter.
-
-![reboot warning](./assets/setup/reboot_warning.png)
+===============================================================
+==> Checking for system updates...
 
 ```
+
+#### Rebooting your system
+`core-commander` might request for you to reboot your system. Restart your system, and afterward, rerun `commander.sh`.
+```bash
 sudo reboot
 ```
 
-You will be disconnected from your server once again. Let's go ahead and reconnect
-using our user we created.
+#### Install Ark Core
+Select option `A. Manage Ark Core`, then `I. Install Ark Core` to install the required dependencies for Ark Core. Again, don't interrupt this process as it
+will take a few minutes to install the required packages. Afterward, you will be prompted to select a network.
 
+```bash
+===============================================================
+==> Which network would you like to configure?
+1) mainnet
+2) devnet
+3) testnet
+#? 
 ```
-ssh ark@ipaddress
+If you are tinkering with Ark for the first time, select `devnet` and request DARK coins in our public slack. 
+
+Now you should be prompted for database connection parameters. If you did not create a database, `core-commander` will attempt to create a new one using the provided parameters. Info is the preferred default log level.
+
+```bash
+...
+Enter the database host, or press ENTER for the default [localhost]: 
+Enter the database port, or press ENTER for the default [5432]: 
+Enter the database username, or press ENTER for the default [$USER]: 
+Enter the database name, or press ENTER for the default [ark_mainnet]: 
+...
+
+==> Which log level would you like to configure?
+1) debug
+2) info
+3) warning
+4) error
 ```
 
+Afterward `lerna` will tidy unused dependencies. If you receive the following prompt, confirm to start the node.
 
-### Run Ark Commander
-After reconnecting to the server go ahead and run Ark Commander
+```bash
+Ark Core has been configured, would you like to start the relay? [Y/n] : 
 ```
-./ARKcommander.sh
+
+If you correctly executed all steps, you are returned at the main console, where `Relay` is displaying the status `On`.
+```bash
+===============================================================
+Core: a71f007f             NodeJS: 10.15.0             PG: 10.6
+===============================================================
+Relay:  On         Forger: Off         NTP:  On         PG:  On
+===============================================================
 ```
 
-### Install Ark Node
-Select option `1` to install Ark Node. Again, don't interrupt this process as it
-will take a few minutes to install the required packages.
+#### Setting up a Delegate Node
+If you wish to configure your node as a Delegate Node, enter `F. Manage Forger` and then `C. Configure Forger`. You will be presented with the following prompts:
 
-![ark node installation](./assets/setup/install_ark_node.png)
+```bash
+Would you like to use secure bip38 encryption? [Y/n] : 
+Please enter your delegate secret: 
+Please enter your bip38 password: 
+```
 
-### Setting up a Delegate Node
-After Ark Node installs you will be asked if you want to setup your secret key.
-If you're just setting up a relay node, or not ready to setup your delegate node
-at this time select `N`. Otherwise select `Y` and enter your delegate node secret
-key now.
+Ensure you use encryption if you are running a Delegate Node. Next, you are asked if you want to start the forging process. Reenter your password after confirming.
 
-![setup secret](./assets/setup/setup_secret.png)
+```bash
+The forger has been configured, would you like to start the forger? [Y/n] : 
+Please enter your bip38 password: 
+```
 
-### Restoring your Database from a Snapshot
-Letting the Ark blockchain download from peers can take a long time. We have
-the ability to download a snapshot of the blockchain and import it right into our
-database. Let's go ahead and do that now.
+::: warning
+Incorrectly entering your BIP38 password will result in a forging process using an invalid private/public key pair, resulting in it possible data corruption.
+:::
 
-Select option `4` from the menu and press enter. When asked if you would like to
-download the latest snapshot select `Y` and press enter.
+#### Creating and Restoring your Database from a Snapshot
+You might want to regularly create a snapshot of the database, or restore from a snapshot to avoid longer synchronization times. 
+Documentation on this feature may be found [here](/guidebook/core/plugins/core-snapshots.html).
 
-![snapshot](./assets/setup/snapshot.png)
 
-Once the download finishes you will be asked if you would like to restore from
-this snapshot. Select `Y` and press enter. If everything goes as planned you should
-see the following once the restoration is complete. Press enter and return to the main menu.
+#### Checking to See if Everything is Working
+Finally, go back to the main console and check the Delegate Node status. You should see the following.
 
-![snapshot restored](./assets/setup/snapshot_restored.png)
+```bash
+===============================================================
+Core: a71f007f             NodeJS: 10.15.0             PG: 10.6
+===============================================================
+Relay:  On         Forger: On         NTP:  On         PG:  On
+===============================================================
+```
 
-### Checking to See if Everything is Working
-If everything went as planned we should now be able to choose the `L` option
-from the menu and see the transmission of block data across our node.
-
-If you see `New block received` in your log congratulations, you now have a working
-Ark node. If not, you may need to wait a couple minutes as the last few blocks sync that
-were not in the latest snapshot.
-
-If you need to go back and setup your delegate node you can do so by using option
-`5` in the Main Menu.
-
-## What's Next?
+### What's Next?
 Great! you have a working node, but now you should really think about securing it.
-It is especially important if you plan on using this as your delegate node.
+It is especially important if you plan on using this as your Delegate Node.
 
-In our next section we'll discuss making sure your Ark node is as secure as possible.
+In our next section, we'll discuss making sure your Ark node is as secure as possible.
 As the Ark network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.

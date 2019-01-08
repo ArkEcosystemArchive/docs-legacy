@@ -24,7 +24,7 @@ Ark offers an easy to setup solution for running a v2 node using [core-commander
     | public API | 4003 | no       | yes                | link          |
     | webhook    | 4004 | no       | no                 | link          |
     | graphQL    | 4005 | no       | no                 | link          |
-    | JSON RPC   | 8080 | no       | no                 | link          |
+    | JSON-RPC   | 8080 | no       | no                 | link          |
 <!-- https://www.tablesgenerator.com/markdown_tables -->
 ## Using the official `core-commander` tool
 On a fresh Ubuntu installation, follow these commands

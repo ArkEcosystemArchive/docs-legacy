@@ -1,7 +1,6 @@
 ---
 title: "Migrating your Tools from Ark Node to Ark Core"
 ---
-
 # Migrating your Tools from Ark Node to Ark Core
 
 ## Introduction
@@ -31,3 +30,14 @@ Ark Core currently supports both the 1.0 API from Ark Node which will be removed
 If you interact with the 2.0 API and wish to paginate data you can simply append `?page=4&limit=25` to the URL. The response will contain a `meta` field that will contain the total count of records available, where you currently are and URLs to the next, previous, first and last page of items available.
 
 Having those meta fields available will allow you to easily loop over all available pages without doing some wonky client side calculations to figure out how many pages there are. Simply send requests until `meta.nextPage` is `null`.
+
+## Client libraries
+The older SDKs consisted of unique implementations per programming languages. Ark v2 also included a migration to a brand new SDK with a more consistent design across programming languages. 
+
+Each SDK consist of two libraries: 
+
+1. `{LANG}-client` library used to send and receive payloads to the public API, webhooks or JSON-RPC. (e.g [python-client](https://github.com/ArkEcosystem/python-client))
+
+2. `{LANG}-crypto` library, which can create, sign and verify transactions. It also includes cryptographic functions to validate blocks.
+
+When migrating to the newer SDKs, you will need to use both client and crypto libraries to sign and transmit transactions.

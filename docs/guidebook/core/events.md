@@ -53,9 +53,7 @@ Emitted when a block is applied to the Node and all including transactions are a
 
 #### payload
 
-```json
-{}
-```
+[Block](/guidebook/core/data-models.html#block)
 
 ### block.forged
 
@@ -71,9 +69,8 @@ When a Delegate Node has created a new block, the newly created block is emitted
 
 #### payload
 
-```json
-{}
-```
+[Block](/guidebook/core/data-models.html#block)
+
 
 ### block.reverted
 
@@ -89,9 +86,8 @@ Due to data corruption or other reasons, a Node might revert its state until it 
 
 #### payload
 
-```json
-{}
-```
+[Block](/guidebook/core/data-models.html#block)
+
 
 ### delegate.registered
 
@@ -107,9 +103,7 @@ When a transaction has been processed and a wallet registers itself as a Delegat
 
 #### payload
 
-```json
-{}
-```
+[Delegate](/guidebook/core/data-models.html#delegate)
 
 ### delegate.resigned
 
@@ -125,9 +119,8 @@ This event will be emitted when a wallet resigns as a Delegate and the transacti
 
 #### payload
 
-```json
-{}
-```
+[Delegate](/guidebook/core/data-models.html#delegate)
+
 
 ### forger.failed
 
@@ -143,9 +136,7 @@ Emitted when the `forger` module fails to forge a new block.
 
 #### payload
 
-```json
-{}
-```
+The `error` message causing the failure.
 
 ### forger.missing
 
@@ -157,15 +148,17 @@ Emitted when the `forger` module fails to forge a new block.
 
 #### description
 
-This event will be emitted when the forger is missing a block.
+This event will be emitted when the `forger` is missing a block.
 
 #### payload
 
-```json
-{}
-```
+The `error` message causing the failure.
 
 ### forger.started
+
+::: warning
+This event is currently [disabled](https://github.com/ArkEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-forger/lib/manager.js#L197-L203) to due to a bug in the implementation.
+:::
 
 #### event
 
@@ -179,9 +172,7 @@ When the `forger` module has started, this event is emitted.
 
 #### payload
 
-```json
-{}
-```
+The `publicKey` of the forging Delegate.
 
 ### peer.added
 
@@ -197,9 +188,7 @@ This event will be emitted when a peer is added to the list of accepted peers.
 
 #### payload
 
-```json
-{}
-```
+[Peer](/guidebook/core/data-models.html#peer)
 
 ### peer.removed
 
@@ -215,9 +204,8 @@ Fired after a peer has been removed from the accepted peers.
 
 #### payload
 
-```json
-{}
-```
+[Peer](/guidebook/core/data-models.html#peer)
+
 
 ### transaction.applied
 
@@ -233,9 +221,8 @@ This event will be emitted when a transaction is applied to a wallet.
 
 #### payload
 
-```json
-{}
-```
+[Transaction](/guidebook/core/data-models.html#transaction)
+
 
 ### transaction.expired
 
@@ -251,9 +238,8 @@ After a transaction has expired and is removed from the transaction pool, the `t
 
 #### payload
 
-```json
-{}
-```
+[Transaction](/guidebook/core/data-models.html#transaction)
+
 
 ### transaction.forged
 
@@ -269,9 +255,7 @@ This event will be emitted when a transaction is included in a block and thus ha
 
 #### payload
 
-```json
-{}
-```
+[Transaction](/guidebook/core/data-models.html#transaction)
 
 ### transaction.reverted
 
@@ -287,9 +271,8 @@ This event will be emitted when a transaction is reverted from a wallet. Fired i
 
 #### payload
 
-```json
-{}
-```
+[Transaction](/guidebook/core/data-models.html#transaction)
+
 
 ### wallet.vote
 
@@ -305,9 +288,8 @@ This event will be emitted when a wallet casts a vote in on a delegate.
 
 #### payload
 
-```json
-{}
-```
+[Wallet](/guidebook/core/data-models.html#wallet)
+
 
 ### wallet.unvote
 
@@ -323,6 +305,4 @@ This event will be emitted when a wallet removes the vote for their current dele
 
 #### payload
 
-```json
-{}
-```
+[Wallet](/guidebook/core/data-models.html#wallet)

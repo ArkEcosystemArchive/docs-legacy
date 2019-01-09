@@ -34,7 +34,7 @@ Conceptually, this feature is similar to the [Hooks implementation in WordPress]
 
 Another way to think of the Event API is in the context of a [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In this pattern, Ark Core packages can act both as publishers and subscribers of events. 
 
-The list of events published by Ark Core packages can be found in `core-blockchain`'s `getEvents` [method](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/blockchain.js#L638):
+The list of events published by Ark Core packages can be found in `core-blockchain`'s `getEvents` [method](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/blockchain.ts#L664-L689):
 
 ```js
 getEvents() {

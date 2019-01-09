@@ -12,7 +12,7 @@ No node will accept a transaction without a valid signature from a private key. 
 
 ## Submit to Ark Core Node
 
-End users most commonly submit transactions to Ark Core nodes using Client SDK's `transactions/store` function. This function will send a POST request withtransaction data to the Ark Core node specified as the connection URL parameter when creating a Client instance.
+End users most commonly submit transactions to Ark Core nodes using Client SDK's `transactions/store` function. This function will send a POST request with transaction data to the Ark Core node specified as the connection URL parameter when creating a Client instance.
 
 ## Receive and Validate at Node
 
@@ -54,7 +54,7 @@ Before a transaction is added to the pool, a "pool charge" is made against the s
 
 All nodes broadcast the transactions they receive to their peers through the P2P API. Thus, as your transaction awaits forging, it will be joined in the pool by other uncommitted transactions from across the network.
 
-When deciding on which transactions to include in the block, the transaction pool takes two factors into consideration: fee value and pool insertion time. The pool prefers transactions with higher fees, and decides between transactions with equivalent fees by comparing their insertion sequence numbers. These considerations may be configured as described in [dynamic fees](/cookbook/node/dynamic-fees.html).
+When deciding on which transactions to include in the block, the transaction pool takes two factors into consideration: fee value and pool insertion time. The pool prefers transactions with higher fees and decides between transactions with equivalent fees by comparing their insertion sequence numbers. These considerations may be configured as described in [dynamic fees](/cookbook/node/dynamic-fees.html).
 
 ## Enter the Forging Sequence
 
@@ -70,7 +70,7 @@ The `Block.create` method uses the following algorithm to create a new block:
 
 1. Derive the delegate's public key from the function's `keys` parameter.
 2. Create a payload hash by serializing the block data into a binary-encoded format.
-3. Create an SHA256 hash by using the payload hash as input.
+3. Create a SHA256 hash by using the payload hash as input.
 4. Sign the SHA256 hash with the delegate's private key.
 5. Create a block ID using the hashed block data.
 6. Cast the data into a Block model using the new transaction and block ID.
@@ -82,6 +82,6 @@ Here, the cryptographic functions used by Ark to generate hashes are identical t
 
 With the forged block successfully returned to the forger library, the only remaining responsibility is to let the network know about the new block.
 
-The forged block is relayed to peers through the P2P API, and the Event Emitter API broadcasts `n+1` events for each block of `n` transactions: one for each transaction and one for the block itself.
+The forged block is relayed to peers through the P2P API and the Event Emitter API broadcasts `n+1` events for each block of `n` transactions: one for each transaction and one for the block itself.
 
 Depending on the webhooks registered on a given node, this is also the point at which the forger node will inform all relevant webhook subscribers about the creation of a new block with new transactions.

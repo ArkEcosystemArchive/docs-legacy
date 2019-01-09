@@ -59,6 +59,18 @@ Successful requests will receive a response with the `jsonrpc`, `id`, and `resul
 
 You can access any of the following commands using the JSON-RPC interface. To specify which command you would like to utilize, include the command name in your request's `method` key.
 
+All JSON-RPC responses are formatted as follows:
+
+```json
+{
+  "jsonrpc": "",
+  "id": "",
+  "result": {}
+}
+```
+
+Result is an object defined per RPC method.
+
 ### Create transaction
 
 ```js
@@ -109,6 +121,21 @@ Broadcasts a transaction to the network for approval. Note that transaction obje
 |------|:----------:|-----------------------------------------------------------------------------------|:--------:|
 | id   | string     | The ID of the transaction object. Returned by the `transactions.create` endpoint. | :x:      |
 
+#### Response
+
+```json
+{
+  "id": "",
+  "signature": "",
+  "timestamp": 0,
+  "type": 0,
+  "fee": 0,
+  "senderPublicKey": "",
+  "amount": 0,
+  "recipientId": ""
+}
+```
+
 ### Transaction info
 
 ```js
@@ -125,6 +152,7 @@ Returns metadata for a given transaction.
 | id   | string     | The ID of the transaction object. | :x:      |
 
 #### Response
+
 An example transaction from `ARAibxGqLQJTo1bWMJfu5fCc88rdWWjqgv` to `AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT`. Note that instead of the `senderPublicKey`, the corresponding address is returned as `sender`.
 
 ```json
@@ -161,6 +189,15 @@ Derives a public key and address from a given passphrase.
 | Name          | Type          | Description                                                   | Required |
 |---------------|:-------------:|---------------------------------------------------------------|:--------:|
 | passphrase    | string        | The account passphrase used to derive the keys and address.   | :x:      |
+
+#### Response
+
+```json
+{
+  "publicKey": "",
+  "address": ""
+}
+```
 
 ### Wallet info
 
@@ -208,6 +245,32 @@ Returns an array of all transactions associated with a given account.
 | address       | string           | The address of the account to return transactions for.         | :x:      |
 | offset        | int              | The offset to use when fetching transactions.                  | :x:      |
 
+#### Response
+
+```json
+{
+  "count": 0,
+  "data": [
+    {
+      "id": "",
+      "blockId": "",
+      "type": 0,
+      "amount": 0,
+      "fee": 0,
+      "sender": "",
+      "recipient": "",
+      "signature": "",
+      "confirmations": 0,
+      "timestamp": {
+        "epoch": 0,
+        "unix": 0,
+        "human": "0001-01-01T00:00:00Z"
+      }
+    }
+  ]
+}
+```
+
 ### Get block info
 
 ```js
@@ -215,6 +278,7 @@ blocks.info
 ```
 
 #### Description
+
 Returns metadata for a given block.
 
 #### Parameters
@@ -222,6 +286,38 @@ Returns metadata for a given block.
 | Name          | Type             | Description          | Required |
 |---------------|:----------------:|----------------------|:--------:|
 | id            | string           | The block ID.        | :x:      |
+
+#### Response
+
+```json
+{
+  "id": "",
+  "version": 0,
+  "height": 0,
+  "previous": "",
+  "forged": {
+    "reward": 0,
+    "fee": 0,
+    "total": 0
+  },
+  "payload": {
+    "hash": "",
+    "length": 0
+  },
+  "generator": {
+    "username": "",
+    "address": "",
+    "publicKey": ""
+  },
+  "signature": "",
+  "transactions": 0,
+  "timestamp": {
+    "epoch": 0,
+    "unix": 0,
+    "human": "0001-01-01T00:00:00Z"
+  }
+}
+```
 
 ### Get latest block
 
@@ -287,6 +383,36 @@ Returns an array of the transactions of a given block.
 | id            | string           | The block ID.                                                                  | :x:      |
 | offset        | int              | Amount of transactions that will be offset in the returned transaction list.   | :x:      |
 
+#### Response
+
+```json
+{
+  "jsonrpc": "",
+  "id": "",
+  "result": {
+    "count": 0,
+    "data": [
+      {
+        "id": "",
+        "blockId": "",
+        "type": 0,
+        "amount": 0,
+        "fee": 0,
+        "sender": "",
+        "recipient": "",
+        "signature": "",
+        "confirmations": 0,
+        "timestamp": {
+          "epoch": 0,
+          "unix": 0,
+          "human": "0001-01-01T00:00:00Z"
+        }
+      }
+    ]
+  }
+}
+```
+
 ### Create BIP38 wallet
 
 ```js
@@ -305,6 +431,16 @@ Returns account `publicKey`, `address` and decrypted `WIF` of created account.
 | bip38         | string           | The password that should be used to create the BIP38 wallet.                   | :x:      |
 | userId        | any              | The user ID that should be combined with the `bip38` to create a secure password. Can be any value, exchanges typically use internal user IDs or something similar.   | :x:      |
 
+#### Response 
+
+```json
+{
+  "publicKey": "03691178f8610d0a295e650201b62345056c788d7f9ac7e8570b69c6c90091b564",
+  "address": "AdWRsk7Lbo97jxGBKzLAFwevVHbqVbW1Cj",
+  "wif": "5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ"
+}
+```
+
 ### BIP38 wallet info
 
 ```js
@@ -320,6 +456,14 @@ Retrieves saved BIP38 wallet from the server. Wallet must be stored in JSON-RPC 
 |---------------|:----------------:|--------------------------------------------------------------------------------|:--------:|
 | bip38         | string           | The password that should be used to create the BIP38 wallet.                   | :x:      |
 | userId        | any              | The user ID associated with the BIP38 wallet.                                  | :x:      |
+
+#### Response
+
+```json
+{
+  "wif": "5HueCGU8rMjxEXxiPuD5BDku4MkFqeZyd4dZ1jvhTVqvbTLvyTJ"
+}
+```
 
 ### Create transaction using BIP38
 
@@ -339,6 +483,21 @@ Creates a transaction using a saved BIP38 wallet. As with `transactions.create`,
 | recipientId   | string | The receiver's address.                                   | :x:      |
 | passphrase    | string | The bip38 password used to create the sender account.    | :x:      |
 | userId        | string | The userID associated with the BIP38 wallet.             | :x:      |
+
+#### Response
+
+```json
+{
+  "id": "",
+  "signature": "",
+  "timestamp": 0,
+  "type": 0,
+  "fee": 0,
+  "senderPublicKey": "",
+  "amount": 0,
+  "recipientId": ""
+}
+```
 
 ## Default Values
 

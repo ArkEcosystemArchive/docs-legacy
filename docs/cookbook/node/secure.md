@@ -43,7 +43,7 @@ Edit your `sshd_config` by running the following command.
 sudo nano /etc/ssh/sshd_config
 ```
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ``` 
 # What ports, IPs and protocols we listen for
 Port 22
@@ -53,7 +53,7 @@ Change the `22` to a port of your choosing between `49152` and `65535`. This is 
 
 From now on port 22 is not usable for SSH connections.
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ```
 # What ports, IPs and protocols we listen for
 Port 55555
@@ -63,7 +63,7 @@ Port 55555
 In the previous section, we had you create a new account for security purposes.
 You should never log in as root to your server after it has been set up. Our first security measure is going to be to disable root access altogether.
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ```
 # Authentication:
 LoginGraceTime 120
@@ -73,7 +73,7 @@ StrictModes yes
 
 Change `LoginGraceTime` to `60` and set `PermitRootLogin` to `no`
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ```
 # Authentication:
 LoginGraceTime 60
@@ -84,7 +84,7 @@ StrictModes yes
 #### Disable X11 Forwarding
 Set `X11Forwarding` to `no`.
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ```
 X11Forwarding yes
 X11DisplayOffset 10
@@ -94,7 +94,7 @@ TCPKeepAlive yes
 #UseLogin no
 ```
 
-##### /etc/ssh/sshd_config
+##### /file: etc/ssh/sshd_config
 ```
 X11Forwarding no
 ```
@@ -102,15 +102,16 @@ X11Forwarding no
 #### Limit Max Concurrent Connections
 Scroll down until you see the following line and uncomment `MaxStartups`. Then set MaxStartups to `2`.
 
-##### /etc/ssh/sshd_config
+##### /file: etc/ssh/sshd_config
 ```
 #MaxStartups 10:30:60
 #Banner /etc/issue.net
 ```
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ```
 MaxStartups 2
+#Banner /etc/issue.net
 ```
 #### Save your config file
 Press `CTRL+X` to exit the file, `Y` to save the file and then `Enter` to write to the file and return to the command line.
@@ -130,7 +131,11 @@ If everything was setup successfully you should be reconnected to your Ark Node.
 
 ### Install Fail2Ban
 #### What is Fail2Ban
-The basic idea behind fail2ban is to monitor the logs of common services to spot patterns in authentication failures.
+The basic idea behind fail2ban is to monitor the logs of common services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits. 
+
+::: warning
+[Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) is able to reduce the rate of incorrect authentications attempts however it cannot eliminate the risk that weak authentication presents. Configure services to use only two factor or public/private authentication mechanisms if you really want to protect services.
+:::
 
 #### Installation
 Install Fail2Ban and create local configuration file.
@@ -146,7 +151,7 @@ Find all the references that specify port = SSH (typically in the SSH header sec
 ```bash
 sudo nano /etc/fail2ban/jail.local
 ```
-##### /etc/fail2ban/jail.local
+##### file: /etc/fail2ban/jail.local
 ```
 #
 # SSH servers
@@ -223,7 +228,7 @@ sudo nano /etc/default/knockd
 
 We need to change `START_KNOCKD=0` to `START_KNOCKD=1`
 
-##### /etc/default/knockd
+##### file: /etc/default/knockd
 ```
 ################################################
 #
@@ -242,7 +247,7 @@ START_KNOCKD=0
 #KNOCKD_OPTS="-i eth1"
 ```
 
-##### /etc/default/knockd
+##### file: /etc/default/knockd
 ```
 ...
 START_KNOCKD=1
@@ -263,7 +268,7 @@ Modify your config file to match the one below with your own ports. We do not re
 
 Also, don't forget to replace `55555` with the port you chose for `SSH`.
 
-##### /etc/knockd.conf
+##### file: /etc/knockd.conf
 ```
 [options]
         UseSyslog
@@ -322,7 +327,7 @@ tail -f /var/log/syslog
 
 Let us test our knocking! We set our SSH port, and we've enabled knocking. Now we need to test to make sure that when we send the correct knock that we open and close the port properly.
 
-##### Open SSH Port
+#### Open SSH Port
 From your personal computer or mobile phone use the client you installed above or if you are running Linux install `knockd` by running `sudo apt-get install knockd` and use the following command to knock
 
 ```bash
@@ -338,7 +343,7 @@ Apr 17 04:02:18 node1 knockd: nodeip: openSSH: OPEN SESAME
 Apr 17 04:02:18 node1 knockd: openSSH: running command: ufw allow 55555/tcp
 ```
 
-Running `sudo ufw status`  should list your SSH port as enabled.
+Running `sudo ufw status` should list your SSH port as enabled.
 
 ```bash
 arkoar@node1:~$ sudo ufw status
@@ -354,7 +359,7 @@ To                         Action      From
 55555/tcp (v6)             ALLOW       Anywhere (v6)
 ```
 
-##### Close SSH Port
+#### Close SSH Port
 ```bash
 knock -v nodeip 9000 8000 7000
 ```
@@ -417,7 +422,7 @@ sudo nano /etc/ssh/sshd_config
 This file should look familiar to you as we edited it earlier in this process. This time we're going to disable password authentication. Set
 `PasswordAuthentication` to `no` and make sure that `PubkeyAuthentication` is set to `yes` and `ChallengeResponseAuthentication` is set to `no`
 
-##### /etc/ssh/sshd_config
+##### file: /etc/ssh/sshd_config
 ```
 PasswordAuthentication no
 PubkeyAuthentication yes
@@ -450,7 +455,7 @@ sudo nano /etc/nginx/enabled-sites/default
 Paste in the following config, making sure you edit the `server_name` and `proxy_pass`. You may need to change `ssl_certificate` and `ssl_certificate_key`
 if you name your files something different.
 
-##### /etc/nginx/enabled-sites/default
+##### file: /etc/nginx/enabled-sites/default
 ```
 # HTTPS
 server {

@@ -4,7 +4,7 @@ All valid Ark transactions begin as user-submitted data and end as immutable his
 
 ## Serialize
 
-All transactions are serialized on client applications prior to submission to Ark Core nodes. Every Crypto SDK includes functionality for serializing transactions from raw data into the binary transaction format supported across the Ark blockchain topology. Look for a `builder` module within your chosen SDK that contains methods to chain data onto the transaction type of your choice. 
+All transactions are serialized on client applications prior to submission to Ark Core nodes. Every Crypto SDK includes functionality for serializing transactions from raw data into the binary transaction format supported across the Ark blockchain topology. Look for a `builder` module within your chosen SDK that contains methods to chain data onto the transaction type of your choice.
 
 Every `builder` module will have a method similar to the JavaScript SDK's `getStruct`, which will return a formatted transaction for submission to the ARK blockchain. Use this object, or an array of such objects, to invoke the `transactions.store()` method in your Client SDK.
 

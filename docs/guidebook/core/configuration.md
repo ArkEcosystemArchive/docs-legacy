@@ -4,10 +4,11 @@ title: "Configuration"
 
 # Configuration
 
-In order to operate a node in any Ark network you need to provide configuration to it one way or another.
+In order to operate a node in any Ark network, you need to provide configuration to it one way or another.
 
 ## Environment Configuration
-Ark Core allows you to use a [.env](https://github.com/bevry/envfile) file to provide configuration that is environment specific without having to touch the `~/.ark/config/plugins.js` file. The `.env` file needs to be stored at `~/.ark/.env`.
+
+Ark Core allows you to use a [.env](https://github.com/bevry/envfile) file to provide a configuration that is environment specific without having to touch the `~/.ark/config/plugins.js` file. The `.env` file needs to be stored at `~/.ark/.env`.
 
 **ARK_LOG_FILE** specifies which file `@arkecosystem/core-logger-winston` will use to create logfiles. The default is `${process.env.ARK_PATH_DATA}/logs/core/${process.env.ARK_NETWORK_NAME}/%DATE%.log`.
 

@@ -16,11 +16,11 @@ The majority of platforms utilizing Bitcoin use the Bitcoind-RPC server. To acco
 
 ## Setup
 
-All JSON-RPC implementations should be built using the tools of your programming language of choice. A working code implementation is provided below in NodeJS, but the same principles can be applied to the language of your choice 
+All JSON-RPC implementations should be built using the tools of your programming language of choice. A working code implementation is provided below in NodeJS, but the same principles can be applied to the language of your choice.
 
 By default, the JSON-API listens on port 8080 for requests. This means that all JSON-RPC interactions should be POST requests to the URL `http://{NODE_IP}:{JSON-RPC_PORT}`, with the IP address of your node combined with the JSON-RPC port number.
 
-If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `ARK_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory. 
+If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `ARK_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory.
 
 Your config directory is located at `~/.ark/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
@@ -77,7 +77,7 @@ This method can be used to check the account balance associated with a particula
 ```js
 const body = {
   jsonrpc: "2.0",
-  method: "wallets.info", 
+  method: "wallets.info",
   id: 31 // internal ID to track responses
   params: {
     address: "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT" // the address of the wallet being queried.
@@ -105,7 +105,7 @@ If you want to retrieve the latest block on the blockchain, call the `blocks.lat
 ```js
 const body = {
   jsonrpc: "2.0",
-  method: "blocks.latest", 
+  method: "blocks.latest",
   id: 31 // internal ID to track responses
 }
 ```
@@ -161,7 +161,7 @@ An example transaction creation payload could look like this:
 ```js
 const body = {
   jsonrpc: "2.0",
-  method: "transactions.create", 
+  method: "transactions.create",
   id: 31
   params: {
     recipientId: "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT" // the address you want to query,

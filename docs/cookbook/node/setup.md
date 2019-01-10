@@ -305,7 +305,7 @@ important in securing the network.
 
 ## Docker
 
-An easier way to run an Ark Node is by using a Docker container to manage each service. Currently, the Ark team does not provide production images. However, Ark Core is bundled with Dockerfiles ready and the community also offers public images. Due to security concerns, we recommend you only use the official images or your own for production usage.
+An easier way to run an Ark Node is by using a Docker container to manage each service. Currently, the Ark team does not provide production images, however, Ark Core has Dockerfiles ready, and the community also offers public images. Due to security concerns, we recommend you only use the official images or your own for production usage.
 
 ::: warning
 Only run container images that you have verified yourself. A malicious actor could have added a passphrase logger to his self-made image in an attempt to compromise your wallet.
@@ -324,36 +324,33 @@ You can create your own Dockerfile to build an Ark Core image. Below we provide 
 ```Dockerfile
 FROM node:9
 
-# Normally you would use a seperate docker container for the database
-# and redis server. This image is intended for maximum hacking
-# purposes, so we simply put everything in it.
+# normally you would use a separate docker container for the database and Redis server.
+# this image is however intended for maximum hacking purposes, so we simply put everything in it.
 RUN apt update
 RUN apt install postgresql postgresql-contrib -y
 
-# redis is used for the transaction pool. We build it ourselves, as that
-# is the recommended way to run redis
+# Redis is used for the transaction pool. We build it ourselves, as that is the recommended way to obtain Redis.
 RUN apt install redis-server -y
 
 
-# Lerna grabs our dependencies for us.
-# (it seems this one randomly fails sometimes when building the image)
+# Lerna grabs our dependencies for us. (it seems this one randomly fails sometimes when building the image)
 RUN npm install --global lerna --loglevel verbose
 RUN git clone -b master https://github.com/ArkEcosystem/core.git
 RUN (cd core && lerna bootstrap)
 
-# Public API, this one is for developers
+# public API, this one is for developers
 EXPOSE 4003
 
-# Webhook port
+# webhook port
 EXPOSE 4004
 
 # JSON-RPC
 EXPOSE 8080
 
-# Public graphql API, including graphiQL explorer
+# public GraphQL API, including GraphiQL explorer
 EXPOSE 4005
 
-# Internal API, for nodes to communicate
+# internal API, for nodes to communicate
 EXPOSE 4000
 
 # PostgreSQL port, if you want to directly query the DB
@@ -365,7 +362,8 @@ RUN echo "listen_addresses = '*'" >> /etc/postgresql/9.4/main/postgresql.conf
 RUN echo "host all all 0.0.0.0/0 trust" >> /etc/postgresql/9.4/main/pg_hba.conf
 RUN mkdir .ark
 
-# This will start an entire test network, including genesis block.
+# this will start an entire test network, including genesis block. To find the secrets, check out:
+# https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/testnet/delegates.json
 ENTRYPOINT ./entrypoint.sh
 ```
 

@@ -30,6 +30,10 @@ Now that we know how the token is structured and what it is used for we can cont
 
 A webhook handler is just a simple POST endpoint that you need to implement at the URL you specified when creating a webhook.
 
+:::: tabs
+
+::: tab javascript
+
 ```js
 const webhookToken = 'fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66'
 
@@ -61,6 +65,59 @@ server.post('/blocks', jsonParser, (req, res) => {
     return res.status(200).send('Hello Webhook!')
 })
 ```
+
+:::
+
+::: tab golang
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+const (
+	webhookToken = "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
+	verification = "0c8e74e1cbfe36404386d33a5bbd8b66"
+)
+
+func validateOrigin(next http.Handler) http.Handler {
+	return func(w http.ResponseWriter, r *http.Request) {
+		if r.Header.Get("authorization")+verification != webhookToken {
+			w.WriteHeader(http.StatusUnauthorized)
+			w.Write([]byte("Unauthorized!"))
+			return
+		}
+		return next(w, r)
+	}
+}
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+
+	var resp Response // some defined DTO
+	err := decoder.Decode(&resp)
+	if err != nil {
+		handle(w, err)
+	}
+
+	// do something with the received block/transaction/wallet
+
+}
+
+func main() {
+	http.HandleFunc("/blocks", validateOrigin(handler))
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+
+```
+
+:::
+
+::::
 
 Let's break down the steps we took here:
 

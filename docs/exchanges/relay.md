@@ -17,6 +17,8 @@ Ark offers an easy to setup solution for running a v2 node using [core-commander
 - 40GB SSD
 - 2 Cores
 
+Ark Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Cache performance is improved by increasing the total RAM.
+
 ## Configuration Requirements
 
 - Stable internet connection
@@ -308,7 +310,7 @@ The following scripts assume that NodeJs and `PostgreSQL` are already installed 
 
 ### Installation script
 
-The script bellow is an ARK Core install script. You can adjust it to your own needs and system requirements. 
+The script below is an ARK Core install script. You can adjust it to your own needs and system requirements. 
 
 ```bash
 sudo yarn global add pm2 lerna

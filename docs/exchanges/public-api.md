@@ -3,7 +3,7 @@ title: "Public API Quick Actions"
 ---
 # Public API Quick Actions
 
-Connecting to the API is done via the Crypto and Client SDKs. Many informational queries can be done using the Client SDK alone, while any actions requiring cryptographic functionality (i.e. signing transactions) are performed by the Crypto SDK.
+Connecting to the API is done via the Crypto and Client SDKs. Many  queries can be performed using the Client SDK alone, while any actions requiring cryptographic functionality (i.e. signing transactions) are performed by the Crypto SDK.
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
@@ -18,7 +18,11 @@ Put another way, the Crypto SDK structures your data in a format that all Ark no
 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.
 
-In JavaScript, this is:
+::: tip
+
+Ark Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes, however no current clients require you to specify the API Version (defaults to v2).
+:::
+
 :::: tabs
 
 ::: tab javascript
@@ -29,6 +33,7 @@ const exchangeClient = new Client('YOUR.NODE.IP', 2)
 ```
 
 :::
+
 ::: tab java
 
 ```java
@@ -40,10 +45,12 @@ Connection<Two> connection = new Connection(map);
 ```
 
 :::
+
 ::: tab go
 
 ```go
 package main
+
 import (
   ark "github.com/ArkEcosystem/go-client/client"
   "net/url"
@@ -56,16 +63,26 @@ func main() {
 
 :::
 
+::: tab python
+
+```python
+from client import ArkClient
+client = ArkClient('http://127.0.0.1:4003/api')
+```
+
+:::
+
 ::::
 
 ## Check Wallet Balance
 
 Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given Ark address.
+
 :::: tabs
 ::: tab javascript
 
 ```js
-const walletAddress = '{ARK_ADDRESS}' // get address from user
+const walletAddress = "ARyNwFj7nQUCip5gYt4gSWG6F8evL93eBL"
 let wallet
 
 exchangeClient
@@ -82,13 +99,48 @@ console.log(wallet.balance)
 ```
 
 :::
+
+::: tab golang
+
+```go
+
+...
+import "github.com/davecgh/go-spew/spew"
+
+func main() {
+  ...
+  responseStruct, _, err := client.Wallets.Get(context.TODO(), "ARyNwFj7nQUCip5gYt4gSWG6F8evL93eBL")
+  if err != nil {
+    log.Panic(err)
+  }
+  spew.Dump(responseStruct)
+}
+```
+
+:::
+
+::: tab python
+
+```python
+from pprint import pprint
+
+pprint(client.wallets.get(wallet_id='ARyNwFj7nQUCip5gYt4gSWG6F8evL93eBL'))
+```
+
+:::
+
 ::::
 
 ## Find Block Information
 
 If you know the ID of the block you are looking for, you can use the `GET` method on the `blocks` resource to return information on that block.
 
+:::: tabs
+
+::: tab javascript
+
 ```js
+const blockId = 4439278960598580069
 let block
 
 exchangeClient
@@ -103,6 +155,33 @@ exchangeClient
 
 console.log(block)
 ```
+
+:::
+
+::: tab golang
+
+```go
+func main() {
+  ...
+  responseStruct, _, err := client.Blocks.Get(context.TODO(), 4439278960598580069)
+  if err != nil {
+    log.Panic(err)
+  }
+  spew.Dump(responseStruct)
+}
+```
+
+:::
+
+::: tab python
+
+```python
+pprint(client.blocks.get(block_id='4439278960598580069'))
+```
+
+:::
+
+::::
 
 Alternatively, if you are not sure of the block ID, or if you want to find all wallets in a range, you can make use of the `wallets.search` method. This endpoint accepts a JSON object representing the search parameters to use when narrowing down a list of blocks.
 
@@ -119,6 +198,10 @@ The following block qualities can be used to create your range:
 To use any of these qualities as a range, include the relevant key in your request as an object containing `from` and `to` properties.
 
 For example, this code can be used to search all blocks between blockchain heights 720 and 735 with total fees between 0 and 2000 arktoshi:
+
+:::: tabs
+
+::: tab javascript
 
 ```js
 exchangeClient
@@ -138,13 +221,71 @@ exchangeClient
   })
 ```
 
+:::
+
+::: tab golang
+
+```go
+func main() {
+  ...
+  responseStruct, _, err := client.Blocks.Search(context.TODO(), ark.BlocksSearchRequest{
+    Height: ark.FromTo{From: 720, To: 735},
+    TotalFee: ark.FromTo{From: 0, To: 2000},
+  })
+  if err != nil {
+    log.Panic(err)
+  }
+  spew.Dump(responseStruct)
+}
+```
+
+:::
+
+::: tab python
+
+```python
+pprint(client.blocks.search({
+  "height": {"from": 720, "to": 735},
+  "totalFee": {"from": 0, "to": 2000},
+  }))
+
+```
+
+:::
+
+::::
+
 ## Create and Broadcast Transactions
 
-To create transactions, make use of the **transactionBuilder** module of `@arkecosystem/crypto`. First, install the package from npm:
+To create transactions, make use of the **transactionBuilder** module of `@arkecosystem/crypto`. First, install the package from npm or your languages equivalent:
+
+:::: tabs
+
+::: tab npm
 
 ```bash
 yarn add @arkecosystem/crypto
 ```
+
+:::
+
+::: tab "go get"
+
+```bash
+go get -u github.com/arkecosystem/go-crypto/crypto
+```
+
+:::
+
+::: tab pip
+
+```bash
+pip install arkecosystem-crypto
+```
+
+:::
+
+::::
 
 The `crypto` package functionality we'll use here is the transactionBuilder, which provides a series of "chainable" methods that can be called, one after another, to produce a transaction object. These methods create and define your transaction: its type, its amount in arktoshis, its signature, and more.
 
@@ -153,6 +294,10 @@ Regardless of which SDK you use, every transactionBuilder contains a similar fun
 After making one or more of these transaction objects, you can combine them into an array to use as the `transactions` key in your request.
 
 With all the steps together, here is an example of how to send a transaction for approval:
+
+:::: tabs
+
+::: tab javascript
 
 ```js
 const crypto = require('@arkecosystem/crypto')
@@ -183,6 +328,51 @@ exchangeClient
     console.log(error)
   })
 ```
+
+:::
+
+::: tab golang
+
+```go
+...
+import ark_crypto "github.com/arkecosystem/go-crypto/crypto"
+
+func main() {
+  ...
+  transaction := ark_crypto.BuildTransfer(
+    recipientId,
+    uint64(amount),
+    "Hello World",
+    passphrase,
+  )
+
+  // cast is a fictitious helper function which alters ark_crypto.Transaction 
+  // into an ark_client.CreateTransactionRequest.
+  responseStruct, _, err := client.Transaction.Create(context.TODO(), cast(transaction))
+  if err != nil {
+    log.Panic(err)
+  }
+  spew.Dump(responseStruct)
+}
+```
+
+:::
+
+::: tab python
+
+```python
+...
+
+from crypto.transactions.builder.transfer import Transfer
+
+tx = Transfer(recipientId=recipientId, amount=1000)
+tx.sign(passphrase)
+pprint(client.transactions.create([tx]))
+```
+
+:::
+
+::::
 
 There are a few things worth noticing about the above code. Firstly, the code assumes that you have declared two variables in your code already:
 
@@ -224,7 +414,13 @@ The diagram below offers a top-level overview of the transaction submission proc
 
 Once a transaction has been created and added to the blockchain, you can access the number of confirmations it has by using the `transactions` resource to `get` the value matching the transaction ID.
 
+:::: tabs
+
+::: tab javascript
+
 ```js
+const transactionId = "9085b309dd0c20c12c1a00c40e1c71cdadaa74476b669e9f8a632db337fb6915"
+
 exchangeClient
   .resource('transactions')
   .get(transactionId)
@@ -233,7 +429,38 @@ exchangeClient
   })
 ```
 
-If the transaction has been added to the blockchain, you'll receive the following output in your console:
+:::
+
+::: tab golang
+
+```go
+...
+
+func main() {
+  ...
+  txID := "9085b309dd0c20c12c1a00c40e1c71cdadaa74476b669e9f8a632db337fb6915"
+  responseStruct, _, err := client.Transactions.Get(context.TODO(), txID)
+  if err != nil {
+    log.Panic(err)
+  }
+  spew.Dump(responseStruct)
+}
+```
+
+:::
+
+::: tab python
+
+```python
+txID = "9085b309dd0c20c12c1a00c40e1c71cdadaa74476b669e9f8a632db337fb6915"
+pprint(client.transactions.get(transaction_id=txID))
+```
+
+:::
+
+::::
+
+If the transaction has been added to the blockchain, you'll receive the following data structure in your console:
 
 ```js
 {
@@ -263,6 +490,10 @@ You can see that the `confirmations` key holds the number of confirmations this 
 
 Checking node status can be done by using the `node` resource's `status` method:
 
+:::: tabs
+
+::: tab javascript
+
 ```js
 exchangeClient
   .resource('node')
@@ -271,6 +502,35 @@ exchangeClient
     console.log(response.data)
   })
 ```
+
+:::
+
+::: tab golang
+
+```go
+...
+
+func main() {
+  ...
+  responseStruct, _, err := client.Node.Status(context.TODO())
+  if err != nil {
+    log.Panic(err)
+  }
+  spew.Dump(responseStruct)
+}
+```
+
+:::
+
+::: tab python
+
+```python
+pprint(client.node.status())
+```
+
+:::
+
+::::
 
 By running this code, you'd see the output in your console resembling the following object:
 

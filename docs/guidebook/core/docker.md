@@ -83,5 +83,5 @@ docker exec -it ark-$NETWORK-core bash
 *Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script.*
 
 ::: warning
-**Current files/preset are not Production ready. Official Production Ark-Core Docker images will be released soon after Ark-Core v2 goes live**.
+**Current files/presets are not Production ready. Official Production Ark-Core Docker images will be released soon after Ark-Core v2 goes live**.
 :::

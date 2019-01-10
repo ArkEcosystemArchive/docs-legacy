@@ -7,26 +7,32 @@ title: "How To Setup Your Ark Node"
 [[toc]]
 
 ## Introduction
+
 Welcome, the purpose of this document is to help you set up an Ark Relay node, relaying transactions
 and securing the Ark Network.
 
 ## Bare-metal
 
 ### Minimum Requirements
-**NOT SUITABLE FOR USE AS A DELEGATE NODE**
+
+Thi setup is not suitable as a Delegate Node, but can function as a Relay Node.
+
 - 1 Dedicated CPU Core
 - 4GB Ram
 - Linux
 - 20GB Free HD Space
 
 ### Recommended Specifications
+
 - 2 CPU Cores+
 - 8GB Ram+
 - Ubuntu 16.04
 - 40GB+ SSD
 
 ### Prerequisite Setup
+
 #### Provision a Linux Server
+
 We recommend using the cloud provider you are most comfortable with. Running an Ark Node
 is not like Bitcoin mining and thus there are more options to choose from.
 AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few
@@ -50,6 +56,7 @@ links below to quickly get started.
 - [OVH](https://support.ovhcloud.com/hc/en-us/articles/115001520890-Getting-Started-with-Servers)
 
 #### Connect to Your Server
+
 After creating a server we need to connect to it. Your provider should have given you an
 `IP address`, `username`, and `password` to connect to your new server.
 
@@ -62,6 +69,7 @@ Depending on your operating system you will connect to your server in different 
 Windows users will want to use something like [PuTTy](https://putty.org/) or the newer [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). When using the WSL, the Linux part of this guide should be relevant.
 
 ##### Windows
+
 Open PuTTy and place the `IP address` given to you by your provider in the
 `Host Name` field as shown below. You should probably save this host so you don't
 have to enter it every time.
@@ -69,6 +77,7 @@ have to enter it every time.
 ![PuTTy Login](./assets/setup/puTTy_login.jpeg)
 
 ##### MacOS / Linux
+
 Open up a new terminal window and type in the following to connect to your new
 server via `SSH`
 
@@ -90,6 +99,7 @@ will require you to set up a root password when creating the VM, while others ma
 give you a temporary password.
 
 #### Create a user
+
 Executing this guide as the root user is not advised. Instead create a new, dedicated user to manage Ark-related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
 
 ```bash
@@ -110,11 +120,11 @@ Retype new UNIX password:
 passwd: password updated successfully
 Changing the user information for ark
 Enter the new value, or press ENTER for the default
-	Full Name []: 
-	Room Number []: 
-	Work Phone []: 
-	Home Phone []: 
-	Other []: 
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
 Is the information correct? [Y/n] Y
 ```
 
@@ -132,17 +142,21 @@ usermod -a -G sudo username
 ```
 
 ### Installing Ark Core
+
 We're now ready to begin installing Ark. The initial install may take a while
 and at times appear to not be doing anything. Please have patience and let the process
 finish.
 
 #### Switch to the Ark user
+
 While installing Ark Core, we should use the Ark user that we created above. To switch to it, run
 
 ```bash
 sudo su - username
 ```
+
 #### Download Ark Commander
+
 [Git](https://git-scm.com/) is pre-bundled with Linux and a required dependency for Ark Core.
 
 ```bash
@@ -150,16 +164,19 @@ git clone https://github.com/ArkEcosystem/core-commander
 ```
 
 #### Run `core-commander`
+
 ```bash
 bash core-commander/commander.sh
 ```
 
 ##### Optional
+
 `core-commander` may ask you for your `sudo` password depending on the version. This is
 the password you used to login to the user account with. Enter your password
 and press enter.
 
 ##### System Updates and Prerequisites
+
 The first time you run Ark Commander it is going to update your system and make sure
 you have the latest updates to required dependencies.
 
@@ -182,12 +199,14 @@ you have the latest updates to required dependencies.
 ```
 
 #### Rebooting your system
+
 `core-commander` might request for you to reboot your system. Restart your system, and afterward, rerun `commander.sh`.
 ```bash
 sudo reboot
 ```
 
 #### Install Ark Core
+
 Select option `A. Manage Ark Core`, then `I. Install Ark Core` to install the required dependencies for Ark Core. Again, don't interrupt this process as it
 will take a few minutes to install the required packages. Afterward, you will be prompted to select a network.
 
@@ -197,8 +216,9 @@ will take a few minutes to install the required packages. Afterward, you will be
 1) mainnet
 2) devnet
 3) testnet
-#? 
+#?
 ```
+
 If you are tinkering with Ark for the first time, select `devnet` and request DARK coins in our public slack. 
 
 Now you should be prompted for database connection parameters. If you did not create a database, `core-commander` will attempt to create a new one using the provided parameters. Info is the preferred default log level.
@@ -234,6 +254,7 @@ Relay:  On         Forger: Off         NTP:  On         PG:  On
 ```
 
 #### Setting up a Delegate Node
+
 If you wish to configure your node as a Delegate Node, enter `F. Manage Forger` and then `C. Configure Forger`. You will be presented with the following prompts:
 
 ```bash
@@ -254,11 +275,12 @@ Incorrectly entering your BIP38 password will result in a forging process using 
 :::
 
 #### Creating and Restoring your Database from a Snapshot
+
 You might want to regularly create a snapshot of the database, or restore from a snapshot to avoid longer synchronization times. 
 Documentation on this feature may be found [here](/guidebook/core/plugins/core-snapshots.html).
 
-
 #### Checking to See if Everything is Working
+
 Finally, go back to the main console and check the Delegate Node status. You should see the following.
 
 ```bash
@@ -270,6 +292,7 @@ Relay:  On         Forger: On         NTP:  On         PG:  On
 ```
 
 ### What's Next?
+
 Great! you have a working node, but now you should really think about securing it.
 It is especially important if you plan on using this as your Delegate Node.
 

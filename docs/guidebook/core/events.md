@@ -71,7 +71,6 @@ When a Delegate Node has created a new block, the newly created block is emitted
 
 [Block](/guidebook/core/data-models.html#block)
 
-
 ### block.reverted
 
 #### event
@@ -87,7 +86,6 @@ Due to data corruption or other reasons, a Node might revert its state until it 
 #### payload
 
 [Block](/guidebook/core/data-models.html#block)
-
 
 ### delegate.registered
 
@@ -120,7 +118,6 @@ This event will be emitted when a wallet resigns as a Delegate and the transacti
 #### payload
 
 [Delegate](/guidebook/core/data-models.html#delegate)
-
 
 ### forger.failed
 
@@ -223,7 +220,6 @@ This event will be emitted when a transaction is applied to a wallet.
 
 [Transaction](/guidebook/core/data-models.html#transaction)
 
-
 ### transaction.expired
 
 #### event
@@ -239,7 +235,6 @@ After a transaction has expired and is removed from the transaction pool, the `t
 #### payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
-
 
 ### transaction.forged
 
@@ -272,7 +267,6 @@ This event will be emitted when a transaction is reverted from a wallet. Fired i
 #### payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
-
 
 ### wallet.vote
 

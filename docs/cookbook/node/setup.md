@@ -15,7 +15,7 @@ and securing the Ark Network.
 
 ### Minimum Requirements
 
-Thi setup is not suitable as a Delegate Node, but can function as a Relay Node.
+The setup is not suitable as a Delegate Node but can function as a Relay Node.
 
 - 1 Dedicated CPU Core
 - 4GB Ram
@@ -39,7 +39,7 @@ AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few
 recommended choices.
 
 Delegate Nodes have a higher minimum requirement on the hardware specifications. These nodes are the security of our network
-and their uptime is of most importance in making sure the network runs smoothly. 
+and their uptime is of most importance in making sure the network runs smoothly.
 
 The recommended specifications are what we would consider the minimum specifications
 for Delegate Nodes. Smaller nodes are fine for relays or development purposes. We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides will use Debian flavored Linux variants though.
@@ -89,8 +89,8 @@ When first connecting to your new server you will be asked to cache the servers
 host key and validate the RSA fingerprint, click yes. If this message appears after you have already configured your server, take precautions, it might have been compromised.
 
 ```bash
-The authenticity of host '{SERVER_IP}' can't be stablished. 
-ECDSA key fingerprint is SHA256:kgjgjfihut985ht984754643354+hrQ. 
+The authenticity of host '{SERVER_IP}' can't be established.
+ECDSA key fingerprint is SHA256:kgjgjfihut985ht984754643354+hrQ.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
@@ -115,8 +115,8 @@ Adding new group 'ark' (1000) ...
 Adding new user 'ark' (1000) with group 'ark' ...
 Creating home directory '/home/ark' ...
 Copying files from '/etc/skel' ...
-Enter new UNIX password: 
-Retype new UNIX password: 
+Enter new UNIX password:
+Retype new UNIX password:
 passwd: password updated successfully
 Changing the user information for ark
 Enter the new value, or press ENTER for the default
@@ -201,6 +201,7 @@ you have the latest updates to required dependencies.
 #### Rebooting your system
 
 `core-commander` might request for you to reboot your system. Restart your system, and afterward, rerun `commander.sh`.
+
 ```bash
 sudo reboot
 ```
@@ -219,16 +220,16 @@ will take a few minutes to install the required packages. Afterward, you will be
 #?
 ```
 
-If you are tinkering with Ark for the first time, select `devnet` and request DARK coins in our public slack. 
+If you are tinkering with Ark for the first time, select `devnet` and request DARK coins in our public slack.
 
 Now you should be prompted for database connection parameters. If you did not create a database, `core-commander` will attempt to create a new one using the provided parameters. Info is the preferred default log level.
 
 ```bash
 ...
-Enter the database host, or press ENTER for the default [localhost]: 
-Enter the database port, or press ENTER for the default [5432]: 
-Enter the database username, or press ENTER for the default [$USER]: 
-Enter the database name, or press ENTER for the default [ark_mainnet]: 
+Enter the database host, or press ENTER for the default [localhost]:
+Enter the database port, or press ENTER for the default [5432]:
+Enter the database username, or press ENTER for the default [$USER]:
+Enter the database name, or press ENTER for the default [ark_mainnet]:
 ...
 
 ==> Which log level would you like to configure?
@@ -241,10 +242,11 @@ Enter the database name, or press ENTER for the default [ark_mainnet]:
 Afterward `lerna` will tidy unused dependencies. If you receive the following prompt, confirm to start the node.
 
 ```bash
-Ark Core has been configured, would you like to start the relay? [Y/n] : 
+Ark Core has been configured, would you like to start the relay? [Y/n] :
 ```
 
 If you correctly executed all steps, you are returned at the main console, where `Relay` is displaying the status `On`.
+
 ```bash
 ===============================================================
 Core: a71f007f             NodeJS: 10.15.0             PG: 10.6
@@ -258,16 +260,16 @@ Relay:  On         Forger: Off         NTP:  On         PG:  On
 If you wish to configure your node as a Delegate Node, enter `F. Manage Forger` and then `C. Configure Forger`. You will be presented with the following prompts:
 
 ```bash
-Would you like to use secure bip38 encryption? [Y/n] : 
-Please enter your delegate secret: 
-Please enter your bip38 password: 
+Would you like to use secure bip38 encryption? [Y/n] :
+Please enter your delegate secret:
+Please enter your bip38 password:
 ```
 
 Ensure you use encryption if you are running a Delegate Node. Next, you are asked if you want to start the forging process. Reenter your password after confirming.
 
 ```bash
-The forger has been configured, would you like to start the forger? [Y/n] : 
-Please enter your bip38 password: 
+The forger has been configured, would you like to start the forger? [Y/n] :
+Please enter your bip38 password:
 ```
 
 ::: warning
@@ -276,7 +278,7 @@ Incorrectly entering your BIP38 password will result in a forging process using 
 
 #### Creating and Restoring your Database from a Snapshot
 
-You might want to regularly create a snapshot of the database, or restore from a snapshot to avoid longer synchronization times. 
+You might want to regularly create a snapshot of the database, or restore from a snapshot to avoid longer synchronization times.
 Documentation on this feature may be found [here](/guidebook/core/plugins/core-snapshots.html).
 
 #### Checking to See if Everything is Working
@@ -300,3 +302,99 @@ In our next section, we'll discuss making sure your Ark node is as secure as pos
 As the Ark network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.
+
+## Docker
+
+An easier way to run an Ark Node is by using a Docker container to manage each service. Currently, the Ark team does not provide production images. However, Ark Core is bundled with Dockerfiles ready and the community also offers public images. Due to security concerns, we recommend you only use the official images or your own for production usage.
+
+::: warning
+Only run container images that you have verified yourself. A malicious actor could have added a passphrase logger to his self-made image in an attempt to compromise your wallet.
+:::
+
+### Official Dockerfiles
+
+Documentation on the Ark Core Dockerfiles may be found [here](guidebook/core/docker.html)
+
+### Example Dockerfile
+
+You can create your own Dockerfile to build an Ark Core image. Below we provide an example Dockerfile.
+
+#### Dockerfile
+
+```Dockerfile
+FROM node:9
+
+# Normally you would use a seperate docker container for the database
+# and redis server. This image is intended for maximum hacking
+# purposes, so we simply put everything in it.
+RUN apt update
+RUN apt install postgresql postgresql-contrib -y
+
+# redis is used for the transaction pool. We build it ourselves, as that
+# is the recommended way to run redis
+RUN apt install redis-server -y
+
+
+# Lerna grabs our dependencies for us.
+# (it seems this one randomly fails sometimes when building the image)
+RUN npm install --global lerna --loglevel verbose
+RUN git clone -b master https://github.com/ArkEcosystem/core.git
+RUN (cd core && lerna bootstrap)
+
+# Public API, this one is for developers
+EXPOSE 4003
+
+# Webhook port
+EXPOSE 4004
+
+# JSON-RPC
+EXPOSE 8080
+
+# Public graphql API, including graphiQL explorer
+EXPOSE 4005
+
+# Internal API, for nodes to communicate
+EXPOSE 4000
+
+# PostgreSQL port, if you want to directly query the DB
+EXPOSE 5432
+
+COPY entrypoint.sh /
+
+RUN echo "listen_addresses = '*'" >> /etc/postgresql/9.4/main/postgresql.conf
+RUN echo "host all all 0.0.0.0/0 trust" >> /etc/postgresql/9.4/main/pg_hba.conf
+RUN mkdir .ark
+
+# This will start an entire test network, including genesis block.
+ENTRYPOINT ./entrypoint.sh
+```
+
+You can build this Dockerfile using the command `docker build -t mycontainer:tag .`, and push it to your personal repository by calling `docker push mycontainer:tag`. The entrypoint.sh script is called when you activate the container using `docker run mycontainer:tag`.
+
+You pass your .env file to the container by providing the following flag:
+
+```bash
+docker run -v host/path/to/.env:/.ark/.env mycontainer:tag
+```
+
+#### entrypoint.sh
+
+```bash
+#!/usr/bin/env bash
+redis-server &
+service postgresql start
+
+# Waiting for postgres to start. This usually takes a few seconds.
+while ! pg_isready -h 0.0.0.0 -p 5432 > /dev/null 2> /dev/null; do
+        sleep 1
+done
+
+# creating a postgresql user. See https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/testnet/plugins.js
+# for the origin of the username and password.
+su -c "psql -c \"CREATE USER ark WITH PASSWORD 'password' \"" postgres
+su -c "psql -c \"CREATE DATABASE ark_testnet WITH OWNER ark \"" postgres
+
+(cd core/packages/core && yarn full:testnet)
+```
+
+This configuration is not optimal for production usage. The images itself becomes quite heavy, and you should never combine multiple services inside a single Docker container. However, resulting container is very convenient for testing purposes.

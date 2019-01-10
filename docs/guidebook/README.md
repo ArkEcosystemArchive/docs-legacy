@@ -9,5 +9,6 @@ This is the Ark Ecosystem Developer Guidebook. After reading this, you'll be rea
 Use the sidebar to navigate this section, or follow the links below:
 
 * [ARK Core](/guidebook/core/)
+* [ARK Core - Plugins](/guidebook/core/plugins/)
 * [Contribution Guidelines](/guidebook/contribution-guidelines/)
 * [Developer Guides](/guidebook/guides/)

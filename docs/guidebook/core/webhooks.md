@@ -86,7 +86,7 @@ const (
 
 func validateOrigin(next http.Handler) http.Handler {
 	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Header.Get("authorization")+verification != webhookToken {
+		if r.Header.Get("authorization") + verification != webhookToken {
 			w.WriteHeader(http.StatusUnauthorized)
 			w.Write([]byte("Unauthorized!"))
 			return
@@ -113,6 +113,39 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
+```
+
+:::
+
+::: tab python
+
+```python
+from flask import Flask, request
+from werkzeug.exceptions import Unauthorized
+from functools import wraps
+
+app = Flask(__name__)
+
+verification = "0c8e74e1cbfe36404386d33a5bbd8b66"
+token = "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
+
+# This should be middleware if this app is dedicated to webhooks    
+def token_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if request.headers.get("authorization") + verification != token:
+            raise Unauthorized("Unauthorized!")
+        return f(*args, **kwargs)
+    return decorated_function
+
+@app.route("/blocks")
+@token_required
+def handle_block():
+    block = request.get_json()
+    # do something with the block
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
 ```
 
 :::

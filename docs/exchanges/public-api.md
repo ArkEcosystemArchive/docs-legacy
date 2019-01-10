@@ -248,7 +248,6 @@ pprint(client.blocks.search({
   "height": {"from": 720, "to": 735},
   "totalFee": {"from": 0, "to": 2000},
   }))
-
 ```
 
 :::

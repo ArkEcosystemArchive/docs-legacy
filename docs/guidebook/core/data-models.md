@@ -57,7 +57,7 @@ Wallets are individual accounts on the ARK ledger. Each wallet has a balance tha
 
 Note in particular that private keys and passphrases are not included on this model, as they are never stored in memory at any point during the operation of Ark Core nodes.
 
-- **address** *the wallet's address, derived from private key*
+- **address** *the wallet's address, derived from public key*
 - **publicKey** *the wallet's public key, derived from private key*
 - **secondPublicKey** *if the wallet has enabled a second key, that second key is stored here*
 - **vote** *the delegate username of this wallet's vote recipient*

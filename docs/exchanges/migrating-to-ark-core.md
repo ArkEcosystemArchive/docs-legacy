@@ -14,6 +14,7 @@ In Ark Node you would post your signed transactions to the P2P API at `http://12
 This endpoint is still available in Ark Core. However, you are now advised to use `http://127.0.0.1:4003/api/v2/transactions` to post your transactions. It behaves the same way as the P2P API but has no risk of being deprecated in the near future as it is integrated into the new Public API.
 
 **This new endpoint will return you 3 lists of transaction IDs:**
+
 - Transactions that have been accepted to be processed.
 - Transactions that have exceeded the throttle limit.
 - Transactions that have been deemed as invalid.
@@ -32,9 +33,10 @@ If you interact with the 2.0 API and wish to paginate data you can simply append
 Having those meta fields available will allow you to easily loop over all available pages without doing some wonky client-side calculations to figure out how many pages there are. Simply send requests until `meta.nextPage` is `null`.
 
 ## Client libraries
-The older SDKs consisted of unique implementations per programming languages. Ark v2 also included a migration to a brand new SDK with a more consistent design across programming languages. 
 
-Each SDK consist of two libraries: 
+The older SDKs consisted of unique implementations per programming languages. Ark v2 also included a migration to a brand new SDK with a more consistent design across programming languages.
+
+Each SDK consist of two libraries:
 
 1. `{LANG}-client` library used to send and receive payloads to the public API, webhooks or JSON-RPC. (e.g [python-client](https://github.com/ArkEcosystem/python-client))
 

@@ -194,7 +194,7 @@ H. Show Help
 ===============================================================
 X. Exit
 ===============================================================
-Please enter your choice: 
+Please enter your choice:
 ```
 
 ### 8. Database configuration
@@ -229,7 +229,7 @@ You will be presented with a selection of networks. `mainnet` is the actual Ark 
 #?
 ```
 
-You will be requested to enter different settings by a series of prompts. 
+You will be requested to enter different settings by a series of prompts.
 
 ::: warning
 Credentials are not censored in the console, ensure they are not observed nor logged.
@@ -237,10 +237,10 @@ Credentials are not censored in the console, ensure they are not observed nor lo
 
 ```bash
 ...
-Enter the database host, or press ENTER for the default [localhost]: 
-Enter the database port, or press ENTER for the default [5432]: 
-Enter the database username, or press ENTER for the default [$USER]: 
-Enter the database name, or press ENTER for the default [ark_mainnet]: 
+Enter the database host, or press ENTER for the default [localhost]:
+Enter the database port, or press ENTER for the default [5432]:
+Enter the database username, or press ENTER for the default [$USER]:
+Enter the database name, or press ENTER for the default [ark_mainnet]:
 ...
 
 ==> Which log level would you like to configure?
@@ -253,6 +253,7 @@ Enter the database name, or press ENTER for the default [ark_mainnet]:
 ### 9. Creating a database
 
 `core-commander` will attempt to create the specified user and database. You may be prompted if the user or database already exists. Decline to overwrite existing users or databases.
+
 ```bash
 ==> Creating Database...
 The database user $USER already exists, do you want to overwrite it? [y/N] : N
@@ -271,7 +272,7 @@ lerna info clean removing /home/$USER/ark-core/packages/core-API/node_modules
 lerna info clean removing /home/$USER/ark-core/packages/core-blockchain/node_mod
 ...
 
-Ark Core has been configured, would you like to start the relay? [Y/n] : 
+Ark Core has been configured, would you like to start the relay? [Y/n] :
 ```
 
 ### 11. Verify status using the main console
@@ -305,12 +306,12 @@ A single round consists of 51 delegates each forging a single block. Sometimes a
 If your organization policy doesn't allow the use of other installation tools - meaning requirements clearly state that a standalone installation is needed, then the following scripts will help you with the installation of the Ark blockchain. The script assumes you have configured the other services such as `PostgreSQL` and is not idempotent.
 
 ::: tip
-The following scripts assume that NodeJs and `PostgreSQL` are already installed on your system. For minimum versions, please use `NodeJs >10` and `Postgres database >9.5`. Install them according to your operating system instructions. 
+The following scripts assume that NodeJs and `PostgreSQL` are already installed on your system. For minimum versions, please use `NodeJs >10` and `Postgres database >9.5`. Install them according to your operating system instructions.
 :::
 
 ### Installation script
 
-The script below is an ARK Core install script. You can adjust it to your own needs and system requirements. 
+The script below is an ARK Core install script. You can adjust it to your own needs and system requirements.
 
 ```bash
 sudo yarn global add pm2 lerna

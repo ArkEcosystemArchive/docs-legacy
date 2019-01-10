@@ -23,6 +23,7 @@ module.exports = [
     collapsable: false,
     children: [
       "/exchanges/json-rpc",
+      "/exchanges/rate-limiting.md"
     ]
   },
 ];

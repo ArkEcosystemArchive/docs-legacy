@@ -327,11 +327,17 @@ pm2 start all --update-env
 ```
 
 ## Next steps
+
 ::: warning
 Please note that API will be available when the node has synced with the network. This can take up to 15 hours depending on your network speed.
 :::
-Now that the relay node has been configured, you should head over to the [JSON-RPC installation guide](/exchanges/json-rpc.html) or look at relevant [Public API endpoints](/exchanges/public-api.html) related to blockchain functionality to manage your wallets and transactions. 
 
+Now that the relay node has been configured, you should head over to the [JSON-RPC installation guide](/exchanges/json-rpc.html) or look at relevant [Public API endpoints](/exchanges/public-api.html) related to blockchain functionality to manage your wallets and transactions.
+
+If you need to further configure your node, go to:
+
+- [Rate Limiting](/exchanges/rate-limiting.html)
+- [JSON-RPC](/exchanges/json-rpc.html)
 
 ## Notes
 Please read the documentation pages for all of our [Ark API clients and cryptography libraries](/sdk/) (offered in many programming languages).

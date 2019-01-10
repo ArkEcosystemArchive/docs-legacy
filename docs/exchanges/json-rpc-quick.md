@@ -27,6 +27,7 @@ Your config directory is located at `~/.ark/.env` by default. If the .env file d
 In addition, all request should include the HTTP header `Content-Type: application/json`. This tells the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
 
 Each quick action will interact with the JSON-RPC in the same way - unless noted otherwise, any of these actions can be accessed with the following code:
+
 ```js
 const axios = require('axios') // install using npm: `npm install axios`
 const url = "http://0.0.0.0:8080" // http://${NODE_IP}:${JSON-RPC_PORT}
@@ -41,10 +42,12 @@ axios.post(url, body, headers)
     console.log(response.result)
   }
   .catch(error => {
-    console.log(error)    
+    console.log(error)
   })
 ```
+
 To complete the template, replace the empty `body` object with the objects provided in each quick action. The `blocks.latest` method, for example, can be accessed by the following script:
+
 ```js
 const axios = require('axios') // install from npm with `npm install axios`
 const url = "http://YOUR.NODE.IP:8080" // http://${NODE_ID}:${JSON-RPC-PORT}
@@ -56,19 +59,21 @@ const body = {
   jsonrpc: "2.0",           // JSON-RPC API version.
   method: "blocks.latest",  // RPC method.
   id: 31                    // internal ID to track responses.
-} 
+}
 
 axios.post(url, body, headers)
   .then(response => {
     console.log(response.data)
   }
   .catch(error => {
-    console.log(error)    
+    console.log(error)
   })
 ```
+
 ## Check Wallet Balance
 
 This method can be used to check the account balance associated with a particular Ark address. To utilize it, use the following body payload:
+
 ```js
 const body = {
   jsonrpc: "2.0",
@@ -79,20 +84,24 @@ const body = {
   }
 }
 ```
+
 The response will contain the `jsonrpc` and `id` you used to call the request, along with a payload containing the following data:
-```js
+
+```json
 {
   "address": "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
   "balance": 245098210000000,
   "isDelegate": true,
   "publicKey": "02532c68cd0842fb86b2202c1027eafc741bdd581517047d9d19319e6741c54883",
-  "secondPublicKey": nil,
+  "secondPublicKey": null,
   "username": "genesis_30"
 }
 ```
+
 ## Find Block Information
 
 If you want to retrieve the latest block on the blockchain, call the `blocks.latest` method with no parameters:
+
 ```js
 const body = {
   jsonrpc: "2.0",
@@ -100,13 +109,15 @@ const body = {
   id: 31 // internal ID to track responses
 }
 ```
+
 This returns a response similar to the following:
-```js
+
+```json
 {
   "forged": {
-    "amount": 0, 
-    "fee": 0, 
-    "reward": 0, 
+    "amount": 0,
+    "fee": 0,
+    "reward": 0,
     "total": 0
   },
   "generator": {
@@ -131,6 +142,7 @@ This returns a response similar to the following:
   "version": 0
 }
 ```
+
 ## Create and Broadcast Transactions
 
 Creating a transaction using the JSON-RPC is a two-step process:
@@ -145,6 +157,7 @@ The `transactions.create` endpoint accepts three parameters:
 - Passphrase
 
 An example transaction creation payload could look like this:
+
 ```js
 const body = {
   jsonrpc: "2.0",
@@ -157,8 +170,10 @@ const body = {
   }
 }
 ```
+
 This endpoint will return a transaction object similar to the following:
-```js
+
+```json
 {
   "amount": "200000000",
   "fee": 10000000,
@@ -170,21 +185,24 @@ This endpoint will return a transaction object similar to the following:
   "type": 0
 }
 ```
-Importantly, this does **not** mean your transaction has been added to the blockchain! To do so, we'll need to submit a second request to `transactions.broadcast`. 
+
+Importantly, this does **not** mean your transaction has been added to the blockchain! To do so, we'll need to submit a second request to `transactions.broadcast`.
 
 This request should have a `params` object with a single key: the `id` key returned by `transactions.create`.
 
 Using the returned ID, our second request body looks like this:
+
 ```js
 const body = {
   jsonrpc: "2.0",
-  method: "transactions.broadcast", 
+  method: "transactions.broadcast",
   id: 31
   params: {
     id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86"
   }
 }
 ```
+
 If we receive the same transaction object as the call to `transactions.create`, our transaction was successful. Within your application, one way to confirm the result is to check that `result.id` matches the transaction ID you provided to the endpoint.
 
 Otherwise, the `errors` key will contain more information on what went wrong.
@@ -194,8 +212,9 @@ Otherwise, the `errors` key will contain more information on what went wrong.
 Checking the number of confirmations a transaction has can be done via JSON-RPC by the `transactions.info` method.
 
 The command accepts one parameter: the `id` of the transaction to query. A sample request could look like:
+
 ```js
-{
+const body = {
   jsonrpc: "2.0",
   method: "transactions.info",
   id: 9,
@@ -204,8 +223,10 @@ The command accepts one parameter: the `id` of the transaction to query. A sampl
   }
 }
 ```
+
 If successful, you'll receive a response similar to the following:
-```js
+
+```json
 {
   "amount": 200000000,
   "blockId": "16888082711050311577",
@@ -224,4 +245,5 @@ If successful, you'll receive a response similar to the following:
   "version": 1
 }
 ```
+
 This particular transaction has 27 confirmations, meaning you can be confident that this transaction has been irreversibly included in the blockchain. Most exchanges use a minimum of 51 confirmations, which is one complete round.

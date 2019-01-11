@@ -1,10 +1,10 @@
 # Examining the Node Lifecycle
 
-Let's take a look inside Ark Core to better understand what's happening behind the scenes when we install and start our relays and forgers. From the moment Core Commander pings our node awake to the moment our node is brought offline, we'll look at the behavior that all Ark nodes share and examine differences and commonalities between relays and forgers.
+Let's take a look inside Ark Core to understand better what's happening behind the scenes when we install and start our relays and forgers. From the moment Core Commander pings our node awake to the moment our node is brought offline, we'll look at the behavior that all Ark nodes share and examine differences and commonalities between relays and forgers.
 
 ## Starting Our Node
 
-Whether you're installing your node using Core Commander or pulling the source code directly from GitHub, at some point all startup processes run through the `core` package. To better understand what this process looks like, let's take a look at some of the scripts available in the `core` package's `package.json`:
+Whether you're installing your node using Core Commander or pulling the source code directly from GitHub, at some point, all startup processes run through the `core` package. To better understand what this process looks like, let's take a look at some of the scripts available in the `core` package's `package.json`:
 
 ```json
 "scripts": {
@@ -40,12 +40,12 @@ There are quite a few scripts here, but a closer look reveals considerable overl
 
 We can see from the script name (the part before the colon) that this is a script designed to start a relay node on ARK devnet. The actual body of the command (the part after the colon) begins with the segment `./bin/ark relay`. This segment essentially tells our node, or whichever process is running this script, to look inside the `bin` directory and launch the `relay` command located in the `ark` file.
 
-The rest of this command specifies a pair of arguments to be passed to the `relay` command:
+The rest of this command specifies a pair of arguments to pass to the `relay` command:
 
 - config: `./lib/config/devnet`. This specifies a folder in which the configuration files for our node can be found.
 - network: `devnet`. This specifies that we want to run a `devnet` node, and not a `mainnet` or `testnet` node.
 
-If you look again at the scripts posted above, you'll notice that all of them contain this same basic formula, with only minor differences from script to script. Some scripts start relays, some start forgers, some start both (the `start` commands), some start nodes on `testnet`, some start nodes on `mainnet`, and so on.
+If you look again at the scripts posted above, you'll notice that all of them contain this same basic formula, with only minor differences from script to script. Scripts may start `relays`,  `forgers`,  `testnet` nodes or `mainnet` nodes.
 
 Let's look at segments of the `bin/ark` file in greater detail:
 
@@ -77,16 +77,16 @@ Breaking down what's happening here:
 - After describing this command's functionality, we specify options that can be passed into the command at runtime, and we define default values to fall back upon should these options not be provided.
 - Recall from our `npm` script that we passed in two values: `config` and `network`. In the case of `config`, this means that the value defined in our `npm` script will override the default, which in the code above is `~/.ark/config`.
 - Because we did not pass in any other arguments, our command will assume the defaults in each case. Notably, this means that `~/.ark/` will be used as our data directory, and `ark` will be used as our token name.
-- Other configurable options here include `bip38`, primarily intended for forgers to pass in their delegate information, and `network-start`, which is used only when spinning up a network for the first time.
+- Other configurable options here include `bip38`, primarily intended for forgers to pass in their delegate information, and `network-start`, which is used when spinning up a network for the first time.
 - Finally, we compile all of the options into a single JavaScript object, load the JS file located at `../lib/start-relay-and-forger`, and run the command inside with our options.
 
 ## Bootstrapping Our Container
 
 ::: tip
-The container in this context does not refer to packaged software such as [Docker](https://www.docker.com/resources/what-container) or [rkt](https://coreos.com/rkt/). Ark Core may be deployed any number of ways, we do however provide production ready Docker images.
+The container in this context does not refer to packaged software such as [Docker](https://www.docker.com/resources/what-container) or [rkt](https://coreos.com/rkt/). Ark Core may be deployed any number of ways.
 :::
 
-We see from the analysis above that ultimately, what we've done so far is define a bundle of options and pass them into the function exported by `start-relay-and-forger.js`. But what does this function do exactly?
+We see from the analysis above that ultimately, what we've done so far is define a bundle of options and pass them into the function exported by `start-relay-and-forger.js`. However, what does this function do exactly?
 
 Let's take a look:
 
@@ -157,7 +157,7 @@ The forger setup contains an `include` key, which tells the container to **only*
 
 By contrast, the relay setup contains an `exclude` key, which tells the container not to run the `forger` package but to include everything else.
 
-An immediate takeaway from this review is that, while functionality might differ considerably between relays and forgers, the process used to initiate them is nearly identical. This also means that, for BridgeChains looking to implement custom node types, the setup process for doing so is reasonably streamlined: just specify a different set of included or excluded plugins in your `container.setUp` function.
+An immediate takeaway from this review is that, while functionality might differ considerably between relays and forgers, the process used to initiate them is nearly identical. For BridgeChains looking to implement custom node types, the setup process for doing so is reasonably streamlined: specify a different set of included or excluded plugins in your `container.setUp` function.
 
 ## Using the Container to Initialize Our Node
 
@@ -185,7 +185,7 @@ async setUp (variables, options = {}) {
 }
 ```
 
-The `setUp` method takes two parameters, both covered above: the `variables` parameter represents the options we defined in our CLI command, and the `options` parameter represents the node-specific setup outlined in the previous section.
+The `setUp` method takes two parameters; both covered above: the `variables` parameter represents the options we defined in our CLI command, and the `options` parameter represents the node-specific setup outlined in the previous section.
 
 Our CLI options are passed into an `Environment` object and loaded using another `setUp` function. Let's take a brief look at this object:
 
@@ -286,7 +286,7 @@ This method effectively checks for the presence of a `plugins` file in our confi
 
 In the `PluginRegistrar.setUp` method, we loop through this plugins property and register each plugin into our container according to the settings defined in the previous steps.
 
-This is the step in our node's lifecycle where all of the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself, all plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the file that's returned by the `__loadPlugins` method. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/devnet/plugins.js), but here's a snippet:
+This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the file that's returned by the `__loadPlugins` method. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/devnet/plugins.js), but here's a snippet:
 
 ```js
 module.exports = {
@@ -334,11 +334,11 @@ module.exports = {
 }
 ```
 
-Note that the order in which the plugins appear in this file is the order in which they're loaded. The most essential plugins are included at the top, such as our event emitter and our database, and that the plugins which depend on the essentials are loaded afterwards.
+Note that the order in which the plugins appear in this file is the order in which they're loaded. The essential plugins are included at the top, such as our event emitter and our database, and that the plugins which depend on the essentials are loaded afterward.
 
-For this reason, if you're writing your own custom plugins, be sure to add them in this file below any other plugins that must be loaded for yours to function as intended.
+For this reason, if you're writing custom plugins, be sure to add them in this file below any other plugins that must be loaded for yours to function as intended.
 
-Typically, you should try to add your plugin to the bottom of this file, with one notable exception: replacing default plugins with your own implementations. In this special case, including your config as close as possible to that of the plugin you're replacing will ensure that subsequent plugins will work without a hitch.
+Typically, you should try to add your plugin to the bottom of this file, with one notable exception: replacing default plugins with your implementations. In this particular case, including your config as close as possible to that of the plugin you're overriding will ensure that subsequent plugins will work without a hitch.
 
 ## Shutting Down Our Node
 

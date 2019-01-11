@@ -14,9 +14,8 @@ Go can be installed by following [this guide](https://golang.org/doc/install)
 
 The package can be installed by using the following commands in your terminal :
 
-If you are using the v2 API
 ```
-go get github.com/ArkEcosystem/go-client/client/two
+go get github.com/ArkEcosystem/go-client/client
 ```
 
 ## Development setup
@@ -41,7 +40,7 @@ $ cd go-client
 
 ```bash
 # -t will also fetch dependencies related to tests
-$ go get -t ./... 
+$ go get -t ./...
 ```
 
 5) Dependencies are now installed, you can now run the tests to see if everything is running like it should
@@ -58,15 +57,14 @@ package main
 
 import (
 	"context"
-	// For V2
-	"github.com/ArkEcosystem/go-client/client/two"
+	arkClient "github.com/ArkEcosystem/go-client/client"
 	"github.com/davecgh/go-spew/spew"
 	"net/url"
 )
 
 func main() {
     // For V2
-    client := two.NewClient(nil)
+    client := arkClient.NewClient(nil)
 
     // You can specify the URL of your choice otherwise a default one is provided
     url, _ := url.Parse("http://my.node.ip:port/api/")
@@ -76,12 +74,12 @@ func main() {
 }
 ```
 
-### Blocks V2
+### Blocks
 
 ```go
 func main() {
 	// ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Blocks.List(context.Background(), query)
 
 	spew.Dump(responseStruct)
@@ -93,12 +91,12 @@ func main() {
 ... > }})
 ```
 
-### Delegates V2
+### Delegates
 
 ```go
 func main() {
 	// ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Delegates.List(context.Background(), query)
 
 	spew.Dump(responseStruct)
@@ -110,12 +108,12 @@ func main() {
 ... > }})
 ```
 
-### Node - V2
+### Node
 
 ```go
 func main() {
 	// ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Node.Status(context.Background())
 
 	spew.Dump(responseStruct)
@@ -127,12 +125,12 @@ func main() {
 ... > }})
 ```
 
-### Peers - V2
+### Peers
 
 ```go
 func main() {
 	// ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Peers.List(context.Background(), query)
 
 	spew.Dump(responseStruct)
@@ -144,12 +142,12 @@ func main() {
 ... > }})
 ```
 
-### Transactions - V2
+### Transactions
 
 ```go
 func main() {
 	// ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Transactions.List(context.Background(), query)
 
 	spew.Dump(responseStruct)
@@ -161,12 +159,12 @@ func main() {
 ... > }})
 ```
 
-### Votes - V2
+### Votes
 
 ```go
 func main() {
     // ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Votes.List(context.Background(), query)
 
 	spew.Dump(responseStruct)
@@ -178,12 +176,12 @@ func main() {
 ... > }})
 ```
 
-### Wallets - V2
+### Wallets
 
 ```go
 func main() {
     // ...
-	query := &two.Pagination{Limit: 10}
+	query := &arkClient.Pagination{Limit: 10}
 	responseStruct, _, _ := client.Wallets.List(context.Background(), query)
 
 	spew.Dump(responseStruct)

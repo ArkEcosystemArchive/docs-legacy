@@ -185,7 +185,7 @@ pprint(client.blocks.get(block_id='4439278960598580069'))
 
 Alternatively, if you are not sure of the block ID, or if you want to find all wallets in a range, you can make use of the `wallets.search` method. This endpoint accepts a JSON object representing the search parameters to use when narrowing down a list of blocks.
 
-The following block qualities can be used to create your range:
+The following block properties can be used to create your range:
 
 - timestamp
 - height
@@ -195,7 +195,7 @@ The following block qualities can be used to create your range:
 - reward
 - payloadLength
 
-To use any of these qualities as a range, include the relevant key in your request as an object containing `from` and `to` properties.
+To use any of these properties as a range, include the relevant key in your request as an object containing `from` and `to` specifiers.
 
 For example, this code can be used to search all blocks between blockchain heights 720 and 735 with total fees between 0 and 2000 arktoshi:
 
@@ -345,7 +345,7 @@ func main() {
     passphrase,
   )
 
-  // cast is a fictitious helper function which alters ark_crypto.Transaction 
+  // cast is a fictitious helper function which alters ark_crypto.Transaction
   // into an ark_client.CreateTransactionRequest.
   responseStruct, _, err := client.Transaction.Create(context.TODO(), cast(transaction))
   if err != nil {

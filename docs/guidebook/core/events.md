@@ -5,7 +5,7 @@ title: "Events"
 
 # Events
 
-In order to create efficient integrations on your server, similar to how webhooks work, an event emitter will inform you about any events that could require actions to be performed like missing a block.
+Effective integrations in your backend can be achieved using events, similar to how webhooks work. An event emitter will inform you about any events that could require actions to be performed like missing a block, saving you from repeatedly querying the API.
 
 ## Emitting Events
 
@@ -81,7 +81,7 @@ When a Delegate Node has created a new block, the newly created block is emitted
 
 #### description
 
-Due to data corruption or other reasons, a Node might revert its state until it reaches a valid state, blocks including their transactions are reverted from wallets.
+Due to data corruption or other reasons, a Node might revert its state until it reaches a valid state. Blocks -including their transactions- are reverted from wallets.
 
 #### payload
 
@@ -97,7 +97,7 @@ Due to data corruption or other reasons, a Node might revert its state until it 
 
 #### description
 
-When a transaction has been processed and a wallet registers itself as a Delegate, the registered wallet is emitted.
+When a transaction has been processed, and a wallet registers itself as a Delegate, the registered wallet is emitted.
 
 #### payload
 
@@ -113,7 +113,7 @@ When a transaction has been processed and a wallet registers itself as a Delegat
 
 #### description
 
-This event will be emitted when a wallet resigns as a Delegate and the transaction has been processed.
+This event will be emitted when a wallet resigns as a Delegate, and the transaction has been processed.
 
 #### payload
 
@@ -262,7 +262,7 @@ This event will be emitted when a transaction is included in a block and thus ha
 
 #### description
 
-This event will be emitted when a transaction is reverted from a wallet. Fired in conjunction with `block.reverted`.
+This event will be emitted when a transaction is reverted from a wallet. Often fired in conjunction with `block.reverted`.
 
 #### payload
 

@@ -10,10 +10,10 @@ title: "JSON-RPC configuration"
 
 > A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the Ark blockchain.
 
-`core-json-rpc` offers a JSON-RPC interface to interact with the ARK blockchain. This functionality is primarily useful for exchange developers, as it offers functionality mirroring that of the popular Bitcoin JSON-RPC API.
+`core-json-rpc` offers a JSON-RPC interface to interact with the ARK blockchain. This functionality is primarily useful for exchange developers, as it provides functionality mirroring that of the popular Bitcoin JSON-RPC API.
 
 ::: warning
-If you are looking to just broadcast transactions you should take a look at how to [create a transaction](/api/public/v2/transactions.html#create-a-transaction) for the public API instead.
+If you are looking to just broadcast transactions, you should take a look at how to [create a transaction](/api/public/v2/transactions.html#create-a-transaction) for the public API instead.
 :::
 
 ## Usage
@@ -69,7 +69,7 @@ All JSON-RPC responses are formatted as follows:
 }
 ```
 
-Result is an object defined per RPC method.
+A result is an object defined per RPC method.
 
 ### Create transaction
 
@@ -132,7 +132,7 @@ transactions.broadcast
 ```
 
 #### Description
-Broadcasts a transaction to the network for approval. Note that transaction objects must be created using the `transactions.create` endpoint prior to using this method.
+Broadcasts a transaction to the network for approval. Note that transaction objects must be created using the `transactions.create` endpoint before using this method.
 
 #### Parameters
 
@@ -202,7 +202,7 @@ Returns metadata for a given transaction.
 
 #### Response
 
-An example transaction from `ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo` to `ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo`. Note that instead of the `senderPublicKey`, the corresponding address is returned as `sender`. Confirmations should be used as a measure of finality of the transaction. Most exchanges use 51 confirmations, which is incredibly secure.
+An example transaction from `ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo` to `ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo`. Note that instead of the `senderPublicKey`, the corresponding address is returned as `sender`. Confirmations should be used as a measure of the finality of the transaction. Most exchanges use 51 confirmations, which is incredibly secure.
 
 ```json
 {
@@ -299,7 +299,7 @@ Returns metadata for a given account.
 
 #### Response
 
-An example response for one of the genesis addresses.
+An example response for one of the genesis addresses:
 
 ```json
 {
@@ -561,7 +561,7 @@ wallets.bip38.create
 ```
 
 #### Description
-Creates a wallet using the BIP38 standard. This combines a BIP38 password with a userId provided by an external application to create a private key that can only be unlocked with the password + userId combination.
+Creates a wallet using the BIP38 standard. Combines a BIP38 password with a userId provided by an external application to create a private key that can only be unlocked with the password + userId combination.
 
 Returns account `publicKey`, `address` and decrypted `WIF` of created account.
 
@@ -607,7 +607,7 @@ wallets.bip38.info
 ```
 
 #### Description
-Retrieves saved BIP38 wallet from the server. Wallet must be stored in JSON-RPC DB with `wallets.bip38.create` before this endpoint will work.
+Retrieves saved BIP38 wallet from the server. The wallet must be stored in JSON-RPC DB with `wallets.bip38.create` before this endpoint will work.
 
 #### Parameters
 

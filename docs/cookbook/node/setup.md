@@ -8,7 +8,7 @@ title: "How To Setup Your Ark Node"
 
 ## Introduction
 
-Welcome, the purpose of this document is to help you set up an Ark Relay node, which relays transactions and secures the Ark Network.
+Here we will help you set up an Ark Relay node, which relays transactions and secures the Ark Network.
 
 ## Bare-metal
 

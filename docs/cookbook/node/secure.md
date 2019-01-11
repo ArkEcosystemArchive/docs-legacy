@@ -544,21 +544,19 @@ Press `CTRL+X` to exit the file, `Y` to save the file, and `ENTER` to write to t
 
 #### Cloudflare / SSL Setup
 
-##### Login to your Cloudflare dashboard and click on the `DNS` button.
+Login to your Cloudflare dashboard and click on the `DNS` button.
 
 ![cloudflare dns](./assets/secure/cloudflare_dns.png)
 
-##### Click Crypto
+Then go to `Crypto`.
 
 ![cloudflare crypto](./assets/secure/cloudflare_crypto.png)
-
-##### Create Origin Certificate
 
 Scroll down to `Origin Certificates` and click the `Create Certificate` button. Keep this window open after Cloudflare generates your two keys.
 
 ![cloudflare origin certificate](./assets/secure/cloudflare_certificate.png)
 
-##### Open Terminal on your Ark Node Server
+Open Terminal on your Ark Node Server
 
 We need to create a new folder and copy our keys to our server.
 

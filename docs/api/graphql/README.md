@@ -15,5 +15,3 @@ By default (if enabled) an Ark Core node serves a GrapQL endpoint at `{NODE_IP}:
 ## GraphiQL
 
 Ark Core is bundled with GraphiQL; an IDE made specifically to explore GraphQL endpoints against live data. At this moment there is no public GraphQL endpoint accessible.
-
-<iframe width="750" height="800" src="http://api.arknet.cloud:8443/graphql"></iframe>

@@ -24,7 +24,7 @@ If you're having trouble connecting, your JSON-RPC may be disabled. To enable it
 
 Your config directory is located at `~/.ark/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
-In addition, all request should include the HTTP header `Content-Type: application/json`. This tells the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
+All request should include the HTTP header `Content-Type: application/json` to inform the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
 
 Each quick action will interact with the JSON-RPC in the same way - unless noted otherwise, any of these actions can be accessed with the following code:
 
@@ -58,32 +58,32 @@ axios.post(url, body, headers)
 package main
 
 import (
-	"bytes"
-	"encoding/json"
-	"net/http"
+    "bytes"
+    "encoding/json"
+    "net/http"
 )
 
 func post(URL string, body interface{}) (*http.Response, error) {
-	b := new(bytes.Buffer)
-	err := json.NewEncoder(b).Encode(u)
-	if err != nil {
-		return nil, err
-	}
-	return http.Post(URL, "application/json", b)
+    b := new(bytes.Buffer)
+    err := json.NewEncoder(b).Encode(u)
+    if err != nil {
+        return nil, err
+    }
+    return http.Post(URL, "application/json", b)
 }
 
 type request struct {
-	Jsonrpc string      `json:"jsonrpc"`
-	Method  string      `json:"method"`
-	ID      int         `json:"id"`
-	Params  interface{} `json:"params"`
+    Jsonrpc string      `json:"jsonrpc"`
+    Method  string      `json:"method"`
+    ID      int         `json:"id"`
+    Params  interface{} `json:"params"`
 }
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{},
-	)
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{},
+    )
 }
 ```
 
@@ -138,37 +138,37 @@ axios.post(url, body, headers)
 package main
 
 import (
-	"bytes"
-	"encoding/json"
-	"net/http"
+    "bytes"
+    "encoding/json"
+    "net/http"
 )
 
 func post(URL string, body interface{}) (*http.Response, error) {
-	b := new(bytes.Buffer)
-	err := json.NewEncoder(b).Encode(u)
-	if err != nil {
-		return nil, err
-	}
-	return http.Post(URL, "application/json; charset=utf-8", b)
+    b := new(bytes.Buffer)
+    err := json.NewEncoder(b).Encode(u)
+    if err != nil {
+        return nil, err
+    }
+    return http.Post(URL, "application/json; charset=utf-8", b)
 }
 
 type request struct {
-	Jsonrpc string      `json:"jsonrpc"`
-	Method  string      `json:"method"`
-	ID      int         `json:"id"`
-	Params  interface{} `json:"params"`
+    Jsonrpc string      `json:"jsonrpc"`
+    Method  string      `json:"method"`
+    ID      int         `json:"id"`
+    Params  interface{} `json:"params"`
 }
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{
-			Jsonrpc: "2.0",
-			Method:  "blocks.latest",
-			ID:      31,
-			Params:  nil,
-		},
-	)
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{
+            Jsonrpc: "2.0",
+            Method:  "blocks.latest",
+            ID:      31,
+            Params:  nil,
+        },
+    )
 }
 ```
 
@@ -222,17 +222,17 @@ type walletInfoParams struct {
 }
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{
-			Jsonrpc: "2.0",
-			Method:  "wallets.info",
-			ID:      31,
-			Params:  walletInfoParams{
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{
+            Jsonrpc: "2.0",
+            Method:  "wallets.info",
+            ID:      31,
+            Params:  walletInfoParams{
         Address: "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
       },
-		},
-	)
+        },
+    )
 }
 ```
 
@@ -294,15 +294,15 @@ package main
 ...
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{
-			Jsonrpc: "2.0",
-			Method:  "blocks.latest",
-			ID:      31,
-			Params:  nil,
-		},
-	)
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{
+            Jsonrpc: "2.0",
+            Method:  "blocks.latest",
+            ID:      31,
+            Params:  nil,
+        },
+    )
 }
 ```
 
@@ -396,25 +396,25 @@ package main
 ...
 
 type transaction struct {
-	RecipientId string `json:"recipientId"`
-	Amount      string `json:"amount"`
-	Passphrase  string `json:"passphrase"`
+    RecipientId string `json:"recipientId"`
+    Amount      string `json:"amount"`
+    Passphrase  string `json:"passphrase"`
 }
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{
-			Jsonrpc: "2.0",
-			Method:  "transactions.create",
-			ID:      31,
-			Params: transaction{
-				Address:    "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
-				Amount:     "200000000", // 2 ARK * 100,000,000 arktoshi/ARK
-				Passphrase: "craft imitate step mixture patch forest volcano business charge around girl confirm",
-			},
-		},
-	)
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{
+            Jsonrpc: "2.0",
+            Method:  "transactions.create",
+            ID:      31,
+            Params: transaction{
+                Address:    "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
+                Amount:     "200000000", // 2 ARK * 100,000,000 arktoshi/ARK
+                Passphrase: "craft imitate step mixture patch forest volcano business charge around girl confirm",
+            },
+        },
+    )
 }
 ```
 
@@ -458,7 +458,7 @@ Importantly, this does **not** mean your transaction has been added to the block
 
 This request should have a `params` object with a single key: the `id` key returned by `transactions.create`.
 
-Using the returned ID, our second request body looks like this:
+With the returned ID, our second request body looks like this:
 
 :::: tabs
 
@@ -485,21 +485,21 @@ package main
 ...
 
 type broadcast struct {
-	Id string `json:"id"`
+    Id string `json:"id"`
 }
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{
-			Jsonrpc: "2.0",
-			Method:  "transactions.broadcast",
-			ID:      31,
-			Params: broadcast{
-				Id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86",
-			},
-		},
-	)
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{
+            Jsonrpc: "2.0",
+            Method:  "transactions.broadcast",
+            ID:      31,
+            Params: broadcast{
+                Id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86",
+            },
+        },
+    )
 }
 
 ```
@@ -529,7 +529,7 @@ Otherwise, the `errors` key will contain more information on what went wrong.
 
 ## Check Transaction Confirmations
 
-Checking the number of confirmations a transaction has can be done via JSON-RPC by the `transactions.info` method.
+Checking the number of confirmations a transaction can be done via JSON-RPC by the `transactions.info` method.
 
 The command accepts one parameter: the `id` of the transaction to query. A sample request could look like:
 
@@ -558,21 +558,21 @@ package main
 ...
 
 type transactionInfo struct {
-	Id string `json:"id"`
+    Id string `json:"id"`
 }
 
 func main() {
-	resp, err := post(
-		"http://0.0.0.0:8080",
-		request{
-			Jsonrpc: "2.0",
-			Method:  "transactions.info",
-			ID:      31,
-			Params: transactionInfo{
-				id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86",
-			},
-		},
-	)
+    resp, err := post(
+        "http://0.0.0.0:8080",
+        request{
+            Jsonrpc: "2.0",
+            Method:  "transactions.info",
+            ID:      31,
+            Params: transactionInfo{
+                id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86",
+            },
+        },
+    )
 }
 
 ```

@@ -63,7 +63,7 @@ docker-compose up -d
 
 **Run a PostgreSQL container, build and run Ark-Core using a mounted volume.**
 
-Normally when a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing Ark Core itself, as you do not need to rebuild the container to test your changes.
+When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing Ark Core itself, as you do not need to rebuild the container to test your changes.
 
 ::: tip
 Along with PostgreSQL container, now you also have a NodeJS container which mounts your local ark-core git folder inside the container and installs all NPM prerequisites.

@@ -16,12 +16,12 @@ During this guide, we will configure network and SSH parameters, which if improp
 
 ## Security through Obscurity
 
-By outlining how to secure a node we're breaking a fundamental property of network security. We're telling people how we're securing our network. This breaks the security through obscurity([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)) rule. 
-If all nodes were secured in exactly the same way, a single exploit might compromise the entire network. It is therefore important that you consider other sources as well to secure your node.
+By outlining how to secure a node we're breaking a fundamental property of network security. We are telling people how we are defending our network. This breaks the security through obscurity([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)) rule. 
+If all nodes were secured in the same way, a single exploit might compromise the entire network. It is therefore vital that you consider other sources as well to secure your node.
 
 ## Making Sure Our Server is Updated
 
-The first thing we're going to do is make sure we have the latest security updates for Ubuntu. Once everything installs you'll need to reboot to make sure all the upgrades applied properly.
+The first thing we're going to do is make sure we have the latest security updates for Ubuntu. Once everything installs, you will need to reboot to make sure all the upgrades applied adequately.
 
 ```bash
 sudo apt-get update -y
@@ -55,7 +55,7 @@ sudo nano /etc/ssh/sshd_config
 Port 22
 ```
 
-Change the `22` to a port of your choosing between `49152` and `65535`. This is the new SSH port we will connect on. Since we are not using the default SSH port, it is important you do not forget what you choose or you will not be able to access your server.
+Change the `22` to a port of your choosing between `49152` and `65535`. This is the new SSH port we will connect on. Since we are not using the default SSH port, it is crucial you do not forget what you choose, or you will not be able to access your server.
 
 From now on port 22 is not usable for SSH connections.
 
@@ -147,16 +147,16 @@ exit
 ssh user@yournode -p 55555
 ```
 
-If everything was setup successfully you should be reconnected to your Ark Node. Replace `55555` with the port you chose when setting up your `sshd_config`
+If everything was setup successfully, you should be reconnected to your Ark Node. Replace `55555` with the port you chose when setting up your `sshd_config`.
 
 ### Install Fail2Ban
 
 #### What is Fail2Ban
 
-The basic idea behind fail2ban is to monitor the logs of common services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits. 
+The basic idea behind fail2ban is to monitor the logs of standard services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits. 
 
 ::: warning
-[Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) is able to reduce the rate of incorrect authentications attempts however it cannot eliminate the risk that weak authentication presents. Configure services to use only two factor or public/private authentication mechanisms if you really want to protect services.
+[Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) can reduce the rate of incorrect authentications attempts however it cannot eliminate the risk that weak authentication presents. Configure services to use only two factor or public/private authentication mechanisms if you want to protect services.
 :::
 
 #### Installation
@@ -220,11 +220,11 @@ exit
 
 #### What is Port Knocking?
 
-Port knocking is a technique used which obscures the port you're actually connecting on to prevent port scanning by opening and closing it when you need it. We will use a series of ports to essentially "knock" and your server will open your configured port for you to connect on by listening for connection attempts on those ports in a specific order.
+Port knocking is a technique used which obscures the port you're connecting on to prevent port scanning by opening and closing it when you need it. We will use a series of ports to essentially "knock" and your server will open your configured port for you to connect on by listening for connection attempts on those ports in a specific order.
 
 #### Disable UFW
 
-By default, UFW comes enabled with Ubuntu 16.04. If you get `ufw command not found` then run
+By default, UFW comes enabled with Ubuntu 16.04. If you get `ufw command not found` then run.
 
 ```bash
 sudo apt-get install ufw
@@ -372,11 +372,11 @@ Run the following command on your Ark Node server.
 tail -f /var/log/syslog
 ```
 
-Let us test our knocking! We set our SSH port, and we've enabled knocking. Now we need to test to make sure that when we send the correct knock that we open and close the port properly.
+Let us test our knocking! We set our SSH port, and we've enabled knocking. Now we need to check to make sure that when we send the correct knock that we open and close the port correctly.
 
 #### Open SSH Port
 
-From your personal computer or mobile phone use the client you installed above or if you are running Linux install `knockd` by running `sudo apt-get install knockd` and use the following command to knock
+From your personal computer or mobile phone use the client you installed above or if you are running Linux install `knockd` by running `sudo apt-get install knockd` and use the following command to knock.
 
 ```bash
 knock -v nodeip 7000 8000 9000
@@ -425,10 +425,10 @@ Apr 17 04:23:37 node1 knockd: closeSSH: running command: ufw delete allow 55555/
 ### SSH connection using your keypair
 
 ::: warning
-If you do not copy the correct key to your server, in the correct location, you will be unable to authenticate.
+If you do not copy the correct key to your server, in the right location, you will be unable to authenticate.
 :::
 
-If you are not comfortable with this you can continue logging in via a password, but it is less secure.
+If you are not comfortable managing SSH keys, you can continue logging in via a password, but it is less secure.
 
 SSH keys should be generated on the computer you wish to log in from. Just press enter and accept all the defaults.
 
@@ -474,7 +474,7 @@ sudo nano /etc/ssh/sshd_config
 ```
 
 This file should look familiar to you as we edited it earlier in this process. This time we're going to disable password authentication. Set
-`PasswordAuthentication` to `no` and make sure that `PubkeyAuthentication` is set to `yes` and `ChallengeResponseAuthentication` is set to `no`
+`PasswordAuthentication` to `no` and make sure that `PubkeyAuthentication` is set to `yes` and `ChallengeResponseAuthentication` is set to `no`.
 
 ##### file: /etc/ssh/sshd_config
 
@@ -492,7 +492,7 @@ Save your changes by pressing `CTRL+X`, then respond with `Y`, and finally press
 sudo service ssh restart
 ```
 
-The next time you log in you should just log right in without a password prompt.
+The next time you log in you should log right in without a password prompt.
 
 ### DDOS Protection with Cloudflare
 
@@ -576,8 +576,8 @@ Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
 sudo service nginx start
 ```
 
-If everything started fine you should be able to now access your Ark node API's
-behind SSL. Giving you the added bonus of Cloudflare DDOS protection.
+If everything started fine, you should be able to access your Ark node API's
+behind SSL. Giving you the bonus of Cloudflare DDOS protection.
 
 Otherwise, if you get any errors run the following command to troubleshoot nginx.
 

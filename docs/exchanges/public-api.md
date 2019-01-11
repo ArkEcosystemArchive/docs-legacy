@@ -3,7 +3,7 @@ title: "Public API Quick Actions"
 ---
 # Public API Quick Actions
 
-Connecting to the API is done via the Crypto and Client SDKs. Many  queries can be performed using the Client SDK alone, while any actions requiring cryptographic functionality (i.e. signing transactions) are performed by the Crypto SDK.
+Connecting to the API is done via the Crypto and Client SDKs. Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality (i.e., signing transactions).
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
@@ -20,7 +20,7 @@ These quick actions will all assume you've loaded a Client instance with the IP 
 
 ::: tip
 
-Ark Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes, however no current clients require you to specify the API Version (defaults to v2).
+Ark Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version (defaults to v2).
 :::
 
 :::: tabs
@@ -256,7 +256,7 @@ pprint(client.blocks.search({
 
 ## Create and Broadcast Transactions
 
-To create transactions, make use of the **transactionBuilder** module of `@arkecosystem/crypto`. First, install the package from npm or your languages equivalent:
+To create transactions, make use of the **transactionBuilder** module of `@arkecosystem/crypto`. First, install the package from npm or your language's equivalent:
 
 :::: tabs
 
@@ -373,10 +373,10 @@ pprint(client.transactions.create([tx]))
 
 ::::
 
-There are a few things worth noticing about the above code. Firstly, the code assumes that you have declared two variables in your code already:
+There are a few things worth noticing about the above code. Firstly, the code assumes that you have declared two variables already:
 
 1. `passphrase` - the passphrase of the sending account, used to sign the transaction. This should come from somewhere secure, such as a `.env` file.
-2. `recipientId` - the Ark address of the receiving account. This should be provided by the exchange user when submitting withdrawal requests.
+2. `recipientId` - the Ark address of the receiving account. Should be provided by the exchange user when submitting withdrawal requests.
 
 Second, when sending your request using the `exchangeClient`, ensure that the value of `transactions` is an array, even if you have only one transaction object.
 
@@ -401,7 +401,7 @@ Let us look at the returned `data` object in more depth. It is composed of four 
 3. `excess` - if the node's transaction pool is full, this lists all excess transactions
 4. `invalid` - a list of all transactions deemed invalid by the node
 
-Our sample code above submitted one transaction, which the node accepted and broadcasted. This is why the `accept` and `broadcast` arrays contain exactly one item each: the ID of the transaction we submitted.
+Our sample code above submitted one transaction, which the node accepted and broadcasted and thus the `accept` and `broadcast` arrays contain precisely one item each: the ID of the transaction we submitted.
 
 If we had submitted any invalid transactions, the `invalid` list would have contained their IDs, and the `errors` key would have been populated with one error per invalid transaction.
 
@@ -536,7 +536,7 @@ By running this code, you'd see the output in your console resembling the follow
 ```js
 {
   data: {
-    synced: true,     // whether this node is fully synced with the network
+    synced: true,     // whether this node is fully synchronized with the network
     now: 14468,       // the current network height of this node's blockchain
     blocksCount: 0    // if not synced, the number of blocks yet to be synced
   }

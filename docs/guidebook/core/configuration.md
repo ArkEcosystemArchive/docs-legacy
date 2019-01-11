@@ -4,7 +4,7 @@ title: "Configuration"
 
 # Configuration
 
-In order to operate a node in any Ark network, you need to provide configuration to it one way or another.
+To operate a node in any Ark network, you need to provide configuration to it one way or another.
 
 ## Environment Configuration
 

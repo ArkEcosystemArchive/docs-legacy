@@ -309,7 +309,7 @@ Only run container images that you have verified yourself. A malicious actor cou
 
 ### Official Dockerfiles
 
-Documentation on the Ark Core Dockerfiles may be found [here](guidebook/core/docker.html)
+Documentation on the Ark Core Dockerfiles may be found [here](/guidebook/core/docker.html)
 
 ### Example Dockerfile
 
@@ -317,7 +317,7 @@ You can create your Dockerfile to build an Ark Core image. Below we provide an e
 
 #### Dockerfile
 
-```Dockerfile
+```docker
 FROM node:9
 
 # you usually would use a separate docker container for the database and Redis server.

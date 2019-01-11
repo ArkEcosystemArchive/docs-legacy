@@ -40,7 +40,7 @@ So let us look at `/packages/core-blockchain` as an example. It has two main dir
 
 `lib` is the actual code while `__tests__` contains the tests for the code.
 
-Now that we have a global idea of how the code is organized, we can actually go inside the `__tests__` folder and see how the tests are structured.
+Now that we have a global idea of how the code is organized, we can go inside the `__tests__` folder and see how the tests are structured.
 
 ## Tests structure
 
@@ -64,7 +64,7 @@ Important thing to note: except for `__support__`, the directory structure **mat
 
 ### Container setup and common initialization in `__support__/setup.js`
 
-In most packages, to test the code you will want to actually launch an Ark Node or at least parts of it. This is why you will often access the `setup.js` file, which is used to launch the parts of the node needed for our tests.
+In most packages, to test the code you will want to launch an Ark Node or at least parts of it. This is why you will often access the `setup.js` file, which is used to start the components of the node needed for our tests.
 
 Let's have a look at this file in our `core-blockchain` package :
 
@@ -115,13 +115,13 @@ afterAll(async () => {
 
 ### Use `core-test-utils` for common stuff
 
-For testing, we are doing a lot of common things across the packages, like container set up as we have seen before. Let us try to use `core-test-utils` as a common library to avoid duplication.
+For testing, we are doing a lot of common things across the packages, like container set up as we have seen before. Let us try to use `core-test-utils` as a shared library to avoid duplication.
 
 Here are some things that are available on `core-test-utils`:
 
 - Container set up.
 - Testnet configuration files (the container setup uses testnet config).
-- Testnet fixtures (blocks, delegates public keys and secrets, ...).
+- Testnet fixtures (blocks, delegates public keys and secrets).
 - Custom matchers: for example `expect(tx).toBeTransaction()`. Don't hesitate to use / update / create custom matchers for common things.
 - Generators: generate objects such as transactions.
 
@@ -129,9 +129,9 @@ There is still a lot to improve in `core-test-utils`, some things might also be 
 
 ### Do more than "basic" tests
 
-When we write some new tests, generally we start by checking that the feature is working as expected in the general case. This is perfectly fine. But don't stop there, it is the edge cases we are worried about.
+When we write some new tests, generally we start by checking that the feature is working as expected in the general case, which is perfectly fine. However, please do not stop there, it is the edge cases we are worried about.
 
-Go deeper and test it with different parameters. Ask yourself: in which case this could very well fail, which parameters could make it tricky? If I were to refactor the feature, what would I like to be tested then?
+Go deeper and test it with different parameters. Ask yourself: in which case this could very well fail, such as a particular set of parameters? If I were to refactor the feature, what would I like to be tested then?
 
 ### Contact us
 

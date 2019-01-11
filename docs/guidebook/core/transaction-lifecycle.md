@@ -20,7 +20,7 @@ Transactions are received at the POST `transactions` endpoint of the Public API 
 
 Before interacting with Ark Core internals in any way, all requests are first validated by the API endpoint schema. Each endpoint schema defines the structure that requests to that endpoint should conform to. All Client SDKs create API requests to conform to this standard, so following the SDK guidelines will typically result in your transaction passing validation.
 
-Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation simply ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the TransactionGuard.
+Notably, no blockchain-level validation occurs at this earliest stage in the transaction lifecycle. Request validation ensures that your POST request can be understood by the network, not that the data it contains represents a valid transaction. This task falls to the next class to handle transaction requests: the TransactionGuard.
 
 ## Add to Transaction Guard
 
@@ -45,16 +45,16 @@ At this point, Ark Core has a list of incoming transactions to add to the transa
 
 ## Add to Transaction Pool
 
-The transaction pool is an in-memory data store that holds transactions prior to forging. All transactions are saved in this pool alongside the following metadata:
+The transaction pool is an in-memory data store that holds transactions before forging. All transactions are saved in this pool alongside the following metadata:
 
 - the insertion sequence, or when the transaction was added relative to the others in the pool
 - the pingCount, or the count of how many times this Ark Core node has received this transaction from its peers
 
-Before a transaction is added to the pool, a "pool charge" is made against the sending account. This transaction is not applied in full until the transaction is included in a block, and is reverted should the transaction drop out of the pool for any reason. The point of the "pool charge" is to preemptively apply the transaction's effects to the account in question so that that value cannot be spent by another transaction. This minimizes the possibility of a double spend, as transactions that spend the same value twice will be rejected by the transaction pool.
+Before a transaction is added to the pool, a "pool charge" is made against the sending account. This transaction is not applied in full until the transaction is included in a block, and is reverted should the transaction drop out of the pool for any reason. The point of the "pool charge" is to preemptively apply the transaction's effects to the account in question so that another transaction can not spend that value. This minimizes the possibility of a double spend, as the transaction pool will reject transactions that spend the same value twice.
 
 All nodes broadcast the transactions they receive to their peers through the P2P API. Thus, as your transaction awaits forging, it will be joined in the pool by other uncommitted transactions from across the network.
 
-When deciding on which transactions to include in the block, the transaction pool takes two factors into consideration: fee value and pool insertion time. The pool prefers transactions with higher fees and decides between transactions with equivalent fees by comparing their insertion sequence numbers. These considerations may be configured as described in [dynamic fees](/cookbook/node/dynamic-fees.html).
+When deciding on which transactions to include in the block, the transaction pool considers two factors: fee value and pool insertion time. The pool prefers transactions with higher fees and decides between transactions with similar fees by comparing their insertion sequence numbers. These considerations may be configured as described in [dynamic fees](/cookbook/node/dynamic-fees.html).
 
 ## Enter the Forging Sequence
 

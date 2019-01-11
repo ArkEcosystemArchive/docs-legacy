@@ -17,7 +17,7 @@ Ark offers an easy to setup solution for running a v2 node using [core-commander
 - 40GB SSD
 - 2 Cores
 
-Ark Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Cache performance is improved by increasing the total RAM.
+Ark Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
 ## Configuration Requirements
 
@@ -34,7 +34,7 @@ Ark Nodes execute many query intensive operations. The most cost-effective appro
 
 ## Using the official `core-commander` tool
 
-On a fresh Ubuntu installation, follow these commands
+On a fresh Ubuntu installation, follow these commands.
 
 ### 1. Update and Upgrade
 
@@ -263,7 +263,7 @@ createdb: database creation failed: ERROR:  database "ark_mainnet" already exist
 
 ### 10. Final check
 
-`Lerna` will perform a check on older dependencies and remove outdated/unused packages. Afterward, it will prompt you to start the relay node, enter `Y`.
+`Lerna` will perform a check on old dependencies and remove outdated/unused packages. Afterward, it will prompt you to start the relay node, enter `Y`.
 
 ```bash
 lerna notice cli v3.5.0
@@ -363,12 +363,12 @@ pm2 start all --update-env
 ## Next steps
 
 ::: warning
-Please note that API will be available when the node has synced with the network. This can take up to 15 hours depending on your network speed.
+Please note that API will be available when the node has synced with the network, which can take up to 15 hours depending on your network speed.
 :::
 
 Now that the relay node has been configured, you should head over to the [JSON-RPC installation guide](/exchanges/json-rpc.html) or look at relevant [Public API endpoints](/exchanges/public-api.html) related to blockchain functionality to manage your wallets and transactions.
 
-If you need to further configure your node, go to:
+If you need to configure your node further, go to:
 
 - [Rate Limiting](/exchanges/rate-limiting.html)
 - [JSON-RPC](/exchanges/json-rpc.html)

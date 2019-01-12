@@ -35,7 +35,6 @@ $ git clone https://github.com/<githubusername>/javascript-client
 
 3) Next, move into the fresh cloned directory
 
-<<<<<<< HEAD:docs/api/sdk/clients/javascript.md
 ```js
 ...
 async function init() {
@@ -46,11 +45,9 @@ async function init() {
     console.log(e);
   }
 }
-=======
 ```bash
 $ cd javascript-client
 ```
->>>>>>> master:docs/sdk/clients/javascript.md
 
 4) Once the previous point done, you can proceed to install the dependencies
 
@@ -63,7 +60,6 @@ $ yarn install
 ```bash
 $ yarn test
 ...
-<<<<<<< HEAD:docs/api/sdk/clients/javascript.md
 async function init() {
   try {
     const response = await client.blocks.all({'limit': 1});
@@ -72,9 +68,7 @@ async function init() {
     console.log(e);
   }
 }
-=======
 ```
->>>>>>> master:docs/sdk/clients/javascript.md
 
 ## Usage
 
@@ -115,7 +109,6 @@ init().then(json => {
 ... >}
 ```
 
-<<<<<<< HEAD:docs/api/sdk/clients/javascript.md
 ### Delegates V1 and V2
 
 ```js
@@ -139,9 +132,7 @@ init().then(json => {
 ... > }]
 ... >}
 ```
-=======
 ### Delegates V2
->>>>>>> master:docs/sdk/clients/javascript.md
 
 ```js
 ...
@@ -165,7 +156,6 @@ init().then(json => {
 ... >}
 ```
 
-<<<<<<< HEAD:docs/api/sdk/clients/javascript.md
 ### Loader - V1
 
 ```js
@@ -186,8 +176,6 @@ init().then(json => {
 ... >{ loaded: ... }
 ```
 
-=======
->>>>>>> master:docs/sdk/clients/javascript.md
 ### Node - V2
 
 ```js
@@ -208,7 +196,6 @@ init().then(json => {
 ... >{ data: {...} }
 ```
 
-<<<<<<< HEAD:docs/api/sdk/clients/javascript.md
 ### Peers - V1 and V2
 
 ```js
@@ -232,9 +219,7 @@ init().then(json => {
 ... > }]
 ... >}
 ```
-=======
 ### Peers - V2
->>>>>>> master:docs/sdk/clients/javascript.md
 
 ```js
 ...
@@ -258,7 +243,6 @@ init().then(json => {
 ... >}
 ```
 
-<<<<<<< HEAD:docs/api/sdk/clients/javascript.md
 ### Signatures - V1
 
 ```js
@@ -302,9 +286,7 @@ init().then(json => {
 ... > }]
 ... >}
 ```
-=======
 ### Transactions - V2
->>>>>>> master:docs/sdk/clients/javascript.md
 
 ```js
 ...

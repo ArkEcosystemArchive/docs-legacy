@@ -8,6 +8,7 @@ const DOCSPATH = "docs";
 const config = {
   title: "Ark Ecosystem Documentation",
   description: "The central knowledge hub for all things Ark Ecosystem",
+  plugins: [ 'tabs' ],
   head: [
     [
       "link",
@@ -18,7 +19,7 @@ const config = {
     ]
   ],
   themeConfig: {
-    logo: "https://ark.io/images/media-kit/red-no-text.png",
+    logo: "https://ark.io/images/media-kit/red-corners.png",
     repo: "ArkEcosystem/docs",
     repoLabel: "Contribute!",
     editLinks: true,
@@ -29,24 +30,25 @@ const config = {
       text: 'Home',
       link: '/'
     }, {
-      text: 'P2P API',
-      link: '/api/p2p/'
+      text: 'Exchanges',
+      link: '/exchanges/'
     }, {
-      text: 'Public API 1.0',
-      link: '/api/public/v1/'
-    }, {
-      text: 'Public API 2.0',
+      text: 'Public API',
       link: '/api/public/v2/'
+    },{
+      text: 'SDK Overview',
+      link: '/SDK/'
     }],
     sidebar: {
-      "/api/sdk/": require("./sidebars/api/sdk"),
       "/api/json-rpc/": require("./sidebars/api/json-rpc"),
       "/api/public/": require("./sidebars/api/public"),
       "/api/": require("./sidebars/api"),
+      "/sdk/": require("./sidebars/sdk"),
       "/faq/": require("./sidebars/faq"),
       "/introduction/": require("./sidebars/introduction"),
       "/cookbook/": require('./sidebars/cookbook'),
       "/guidebook/": require('./sidebars/guidebook'),
+      "/exchanges/": require('./sidebars/exchanges'),
       "/": require('./sidebars/main'),
     },
     //algolia: {

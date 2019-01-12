@@ -1,12 +1,12 @@
 # Data Models
 
-These are the data models you will encounter throughout Ark Core and their representation in data as returned in the `core-api`. 
+These are the data models you will encounter throughout Ark Core and their representations as returned in the `core-api`.
 
-Keep in mind that this data structure is kept consistent as much as possible for the sake of backwards and forwards compatibility. As such, these data hierarchies are not necessarily the same as the object's internal representation. 
+Keep in mind that the data structures are kept consistent as much as possible for the sake of backward and forwards compatibility. As such, these data hierarchies are not necessarily the same as the object's internal representation.
 
-This is something to keep in mind when accessing these models through the Event API, for example, as the correct way to access information might be different than following the structure listed here. 
+This is something to keep in mind when accessing these models through the Event API, for example, as the correct way to obtain information might be different from following the structure listed here.
 
-Where possible, these discrepancies are noted below. The `transformers` directories in the `core-api` module help to paint a more complete picture; they can be found in their respective [v1](https://github.com/ArkEcosystem/core/tree/develop/packages/core-api/lib/versions/1/transformers) and [v2](https://github.com/ArkEcosystem/core/tree/develop/packages/core-api/lib/versions/2/transformers) repositories.
+Where possible, these discrepancies are noted below. The `transformers` directories in the `core-api` module help to paint a complete picture; they can be found in their respective [v1](https://github.com/ArkEcosystem/core/tree/develop/packages/core-api/lib/versions/1/transformers) and [v2](https://github.com/ArkEcosystem/core/tree/develop/packages/core-api/lib/versions/2/transformers) repositories.
 
 ## Block
 
@@ -17,16 +17,16 @@ Blocks are the core unit of any given blockchain. In ARK, blocks contain a group
 - **height** *the height of the block*
 - **previous** *the ID of the previous block in the chain*
 - **forged**:
-    - **reward** *total reward for mining block*
-    - **fee** total *fee paid by users for this block*
-    - **total** *total reward + total fee*
+  - **reward** *total reward for mining block*
+  - **fee** total *fee paid by users for this block*
+  - **total** *total reward + total fee*
 - **payload** fields holding metadata on the block's transactions:
-    - **hash** *The SHA256 hash of the block's content*
-    - **length** *the length of the payload hash in bytes*
+  - **hash** *The SHA256 hash of the block's content*
+  - **length** *the length of the payload hash in bytes*
 - **generator** *the delegate who generated the block*:
-    - *username*
-    - *address*
-    - *publicKey*
+  - *username*
+  - *address*
+  - *publicKey*
 - **signature** *the signature of the delegate who forged the block*
 - **confirmations** *the amount of times the network has declared this block as valid*
 - **transactions** *the amount of transactions in the block*
@@ -57,14 +57,14 @@ Wallets are individual accounts on the ARK ledger. Each wallet has a balance tha
 
 Note in particular that private keys and passphrases are not included on this model, as they are never stored in memory at any point during the operation of Ark Core nodes.
 
-- **address** *the wallet's address, derived from private key*
+- **address** *the wallet's address, derived from public key*
 - **publicKey** *the wallet's public key, derived from private key*
 - **secondPublicKey** *if the wallet has enabled a second key, that second key is stored here*
 - **vote** *the delegate username of this wallet's vote recipient*
 
 ## Delegate
 
-Though delegates are treated as their own data type in the ARK Public API, in their implementation delegates are nothing more than wallets whose owners have registered a delegate username. 
+Though delegates are treated as their own data type in the ARK Public API, in their implementation delegates are nothing more than wallets whose owners have registered a delegate username.
 
 They share all fields in common with the Wallet data structure, with a few extra fields:
 

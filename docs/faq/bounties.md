@@ -45,6 +45,7 @@ Please ensure that the tests are passing when submitting a pull request. If you'
 - [ark-js](https://github.com/ArkEcosystem/ark-js)
 - [ark-lite-wallet](https://github.com/ArkEcosystem/ark-lite-wallet)
 - [ark-node](https://github.com/ArkEcosystem/ark-node)
+- [ark-pay](https://github.com/ArkEcosystem/pay)
 - [ark-ts](https://github.com/ArkEcosystem/ark-ts)
 - [core](https://github.com/ArkEcosystem/core)
 - [core-commander](https://github.com/ArkEcosystem/core-commander)

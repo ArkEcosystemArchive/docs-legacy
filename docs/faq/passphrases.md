@@ -6,7 +6,7 @@ title: "Passphrases"
 
 ## What do I do with the passphrase ?
 
-The passphrase is the master password(key) for your ARK tokens. Every Ark address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
+The passphrase is the master password (key) for your ARK tokens. Every Ark address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
 
 Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. We CANNOT recover any lost passphrases.
 
@@ -20,15 +20,15 @@ You can’t do anything without the correct passphrase. Please be aware that eve
 
 ## What kind of words are used to generate 12 word default passphrase?
 
-Ark follows the BIP39 proposal standards. You can find all of the English words used to randomly generate the passphrase here: https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt
+Ark follows the BIP39 proposal standards. You can find all of the English words used to randomly generate the passphrase [here](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt).
 
 ## Is the 12 word mnemonic passphrase really secure? Can it be brute forced?
 
-Yes it is secure. The 12 word passphrases are much more secure than your usual passwords. Read more on mnemonic generation here : https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Generating_the_mnemonic. In other words, this means it would currently take all the computing power available on the planet Earth thousands of years to brute force your passphrase.
+Yes it is secure. The 12 word passphrases are much more secure than your usual passwords. It would currently take all the computing power available on Earth  for thousands of years to brute force your passphrase. [Click here](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Generating_the_mnemonic) to read more on mnemonic generation.
 
 ## What is a 2nd passphrase?
 
-The second passphrases improves security by adding another 12 words that will be added to your address, making for 24 words total. Make sure you save this 2nd passphrase, as you will now need both passphrases to sign transactions — note that there is currently a 5 ARK transaction fee to create a second passphrase.
+The second passphrases improves security by adding another 12 words that will be added to your address, making for 24 words total. Make sure you save this second passphrase, as you will now need both passphrases to sign transactions — note that it will cost a fee to create a second passphrase. This fee set dynamically when you use the Ark Desktop Wallet, or set to 5 ARK when you use the Ark Client.
 
 ## I lost / deleted my 2nd passphrase can I still use my Ark account?
 

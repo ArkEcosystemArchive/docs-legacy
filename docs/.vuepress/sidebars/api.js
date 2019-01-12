@@ -4,5 +4,6 @@ module.exports = [
   ['/api/public/', 'Public API'],
   ['/api/json-rpc/', 'JSON RPC'],
   ['/api/p2p/', 'P2P'],
+  '/api/graphql/',
   '/api/webhooks/',
 ];

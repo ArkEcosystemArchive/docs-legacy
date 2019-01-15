@@ -11,7 +11,7 @@ title: "Laravel"
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-$ composer require arkecosystem/laravel php-http/guzzle6-adapter
+composer require arkecosystem/laravel php-http/guzzle6-adapter
 ```
 
 ## Configuration
@@ -19,7 +19,7 @@ $ composer require arkecosystem/laravel php-http/guzzle6-adapter
 Ark Laravel requires connection configuration. To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="ArkEcosystem\Ark\ArkServiceProvider"
+php artisan vendor:publish --provider="ArkEcosystem\Ark\ArkServiceProvider"
 ```
 
 This will create a `config/ark.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
@@ -30,13 +30,13 @@ This option `default` is where you may specify which of the connections below yo
 
 #### Ark Connections
 
-This option `connections` is where each of the connections are setup for your application. Example configuration has been included, but you may add as many connections as you would like.
+This option `connections` is where each of the connections is set up for your application. Example configuration has been included, but you may add as many connections as you would like.
 
 ## Usage
 
 #### ArkManager
 
-This is the class of most interest. It is bound to the ioc container as `ark` and can be accessed using the `Facades\Ark` facade. This class implements the ManagerInterface by extending AbstractManager. The interface and abstract class are both part of [Graham Campbell's](https://github.com/GrahamCampbell) [Laravel Manager](https://github.com/GrahamCampbell/Laravel-Manager) package, so you may want to go and checkout the docs for how to use the manager class over at that repository. Note that the connection class returned will always be an instance of `Ark\Ark`.
+This is the class of most interest. It is bound to the ioc container as `ark` and can be accessed using the `Facades\Ark` facade. This class implements the ManagerInterface by extending AbstractManager. The interface and abstract class are both part of [Graham Campbell's](https://github.com/GrahamCampbell) [Laravel Manager](https://github.com/GrahamCampbell/Laravel-Manager) package, so you may want to go and check out the docs for how to use the manager class over at that repository. Note that the connection class returned will always be an instance of `Ark\Ark`.
 
 #### Facades\Ark
 
@@ -44,7 +44,7 @@ This facade will dynamically pass static method calls to the `ark` object in the
 
 #### ArkServiceProvider
 
-This class contains no public methods of interest. This class should be added to the providers array in `config/app.php`. This class will setup ioc bindings.
+*This class contains no public methods of interest, it should be added to the providers array in `config/app.php` as it sets up ioc bindings.*
 
 ### Examples
 
@@ -58,7 +58,7 @@ Ark::api('Account')->accounts();
 // We're done here - how easy was that, it just works!
 ```
 
-The Ark manager will behave like it is a `ArkEcosystem\Ark\Client`. If you want to call specific connections, you can do that with the connection method:
+The Ark manager will behave like it is an `ArkEcosystem\Ark\Client`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
 use ArkEcosystem\Ark\Facades\Ark;

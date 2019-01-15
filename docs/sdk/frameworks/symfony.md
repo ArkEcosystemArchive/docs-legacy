@@ -11,7 +11,7 @@ title: "Symfony"
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-$ composer require arkecosystem/bundle php-http/guzzle6-adapter
+composer require arkecosystem/bundle php-http/guzzle6-adapter
 ```
 
 Go to `config/packages/ark.yml` and fill out your configuration similar to this.

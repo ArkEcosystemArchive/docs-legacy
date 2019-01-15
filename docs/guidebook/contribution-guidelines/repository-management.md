@@ -34,169 +34,290 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 **We only care about the net effect of the pull-requests, i.e. "feat: wallet integration". We don't care about the 30 commits of "bugfix, added, removed, refactored". We want a clear and concise history without any noise.**
 
-## How to organize GitHub Issues & Pull Requests
+## How to label and organise GitHub Issues & Pull Requests
 
-**Status**
-- ![#000000](https://placehold.it/15/000000/000000?text=+) `Status: Abandoned`
-  - The issue or pull request has been abandoned.
-- ![#000000](https://placehold.it/15/000000/000000?text=+) `Status: Won't Fix`
-  - The issue is legitimate, but it is not something the team is currently able or willing to work on.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Status: Resolved`
-  - The issue has been resolved.
-- ![#043a96](https://placehold.it/15/043a96/000000?text=+) `Status: Accepted`
-  - The proposed solution has been accepted.
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: Available`
-  - The issue is not assigned to anyone and available to be worked on.
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: In Progress`
-  - The issue or pull request is being worked on.
-- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Status: On Hold`
-  - The issue or pull request is not being worked on for the time being.
-- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Status: Blocked`
-  - The pull request is blocked from being merged for the time being.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Cannot Reproduce`
-  - The issue cannot be reproduced by an engineer of the team.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Status: Reverted`
-  - The pull request was reverted after an initial merge.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Information`
-  - The issue needs more information before it can be verified and resolved.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Investigation`
-  - The issue needs more investigation before it can be verified and resolved.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Review`
-  - The issue or pull request needs a review by an engineer of the team.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Testcase`
-  - The issue or pull request relates to a feature that needs test coverage.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Changes`
-  - The pull request needs additional changes before it can be merged.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Status: Needs Discussion`
-  - The issue or pull request needs more discussion before it can be closed or merged.
+In order to make everyones life easier when looking for issues or pull requests of specific types, priority or severity it is important to make proper use of labels so it is possible to identify the status and importance without having to look into it.
+
+**Notes**
+
+- The `Type: Bug` label always has to be combined with a `Priority: *` and `Severity: *`  label to indicate how severe the problem caused by the bug is and how many users are affected by it. _The combination of those determines how fast the bug needs to be fixed._
+- Bounty tiers need to be assigned _before_ a pull request is merged. If no tier is assigned or is assigned to a team member the ArkEcosystem Bot will comment in the affected issue.
+- For issues that are tasks a `Difficulty: *` label should be assigned to provide developers a sense of how much work it will be.
+- The `Complexity: *` labels should never be assigned manually as the ArkEcosystem Bot will evaluate the complexity of a pull request and assign a label.
 
 **Bounty**
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bounty: Tier 0`
-  - The pull request has been assigned a T0 reward. Needs specialized, in-depth review.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 1`
-  - The pull request has been assigned a T1 reward.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Bounty: Tier 2`
-  - The pull request has been assigned a T2 reward.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 3`
-  - The pull request has been assigned a T3 reward.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Bounty: Tier 4`
-  - The pull request has been assigned a T4 reward.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Bounty: Tier 5`
-  - The pull request has been assigned a T5 reward.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Bounty: Tier 6`
-  - The pull request has been assigned a T6 reward.
 
-**Severity**
-- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Severity: Critical`
-  - The issue is blocking an upcoming release.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Severity: High`
-  - The issue causes data loss, crashes or hangs processes, makes the system unresponsive, etc.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Severity: Medium`
-  - The issue reports bad or incorrect functionality, a confusing user experience, etc.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Severity: Low`
-  - The issue reports cosmetic items, formatting, spelling, colors, etc.
 
-**Platform**
-- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Windows`
-  - The issue reports incorrect functionality on Windows.
-- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: Linux`
-  - The issue reports incorrect functionality on Linux.
-- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Platform: macOS`
-  - The issue reports incorrect functionality on macOS.
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Tier 0`
+    - Custom reward at the discretion of the team, for large projects or changes.
 
-**Type**
-- ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Feature`
-  - The issue is a request for new functionality including changes, enhancements, refactors, etc.
-- ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Type: Release`
-  - The issue or pull request is related to an upcoming release.
-- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Maintenance`
-  - The pull request updates dependencies or configuration files.
-- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Performance`
-  - The issue or pull requests relates to performance issues.
-- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Type: Refactor`
-  - The pull requests improves an existing implementation.
-- ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Duplicate`
-  - The issue is a duplicate of another feature request or bug report.
-- ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Type: Expected Behavior`
-  - The issue is a bug report but the behaviour is intended.
-- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Type: Breaking Change`
-  - The issue or pull request documents or introduces a breaking change.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bug`
-  - The issue documents broken, incorrect, or confusing behavior.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bugfix`
-  - The pull request fixes an incorrect functionality or behaviour.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Bug`
-  - The issue documents broken, incorrect, or confusing behavior.
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Type: Regression`
-  - The issue is a bug that breaks functionality known to work in previous releases.
-- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Type: Security`
-  - The issue documents broken functionality that could expose private data or cause harm otherwise.
-- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Discussion`
-  - The issue is a discussion about a generic topic.
-- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Documentation`
-  - The issue or pull request relates to documentation.
-- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Information`
-  - The issue is a blob of information for users by an engineer of the team.
-- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Type: Question`
-  - The issue is more of a question than a request for new features or a report of broken features.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Good First Contribution`
-  - The issue appears to have a simple solution.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Type: Standards`
-  - The issue reports problems with the compliance of contribution guidelines or code standards.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Tier 1`
+    - Awarded for big features, important fixes or great improvements. This is valued at 100 USD.
 
-**Difficulty**
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Difficulty: Challenging`
-  - The issue requires extensive understanding of the code base.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Difficulty: Advanced`
-  - The issue requires advanced understanding of the code base.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Difficulty: Intermediate`
-  - The issue requires minimal understanding of the code base.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Difficulty: Beginner`
-  - The issue doesn't require any specific knowledge about the code base.
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Tier 2`
+    - Awarded for performance, minor features or large documentation changes. This is valued at 50 USD.
 
-**Priority**
-- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Priority: Critical`
-  - The issue will be seen by all users.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Priority: High`
-  - The issue will be seen by most users.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Priority: Medium`
-  - The issue will be seen by about half of users.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Priority: Low`
-  - The issue will not be seen by most users.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Tier 3`
+    - Awarded for code refactoring, moderate docs changes or full translations. This is valued at 25 USD.
 
-**Test**
-- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: General`
-  - The issue or pull request is related to tests.
-- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Functional`
-  - The issue or pull request is related to functional tests.
-- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Integration`
-  - The issue or pull request is related to integration tests.
-- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Test: Unit`
-  - The issue or pull request is related to unit tests.
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Tier 4`
+    - Awarded for adding test coverage or resolving small bugs. This is valued at 10 USD.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Tier 5`
+    - Awarded for small documentation updates or minor code refactoring. This is valued a 5 USD.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Tier 6`
+    - Awarded for typos, text corrections, dependency updates, etc. This is valued a 1 USD.
 
 **Complexity**
-- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Complexity: Undetermined`
-  - Needs specialized, in-depth review.
-- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Complexity: High`
-  - More than 256 lines changed.
-- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Complexity: Medium`
-  - Less than 256 lines changed.
-- ![#007700](https://placehold.it/15/007700/000000?text=+) `Complexity: Low`
-  - Less than 64 lines changed.
+
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Undetermined`
+    - Needs specialized, in-depth review.
+
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `High`
+    - More than 256 lines changed.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Medium`
+    - Less than 256 lines changed.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Low`
+    - Less than 64 lines changed.
+
+**Difficulty**
+
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Challenging`
+    - The issue requires extensive understanding of the code base.
+
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Advanced`
+    - The issue requires advanced understanding of the code base.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Intermediate`
+    - The issue requires basic understanding of the code base.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Beginner`
+    - The issue doesn't require any specific knowledge about the code base.
 
 **Environment**
-- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Development`
-  - The issue reports incorrect functionality in the development environment.
-- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Production`
-  - The issue reports incorrect functionality in the production environment.
-- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Test`
-  - The issue reports incorrect functionality in the test environment.
-- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Environment: Continuous Integration`
-  - The issue reports incorrect functionality in the CI environment.
 
-## Assigning Bounty Tiers after merging a Pull Request
 
-After a developer merges a PR it is *required* to assign one of the 7 bounty labels. Those labels will be used by the ArkEcosystem Bot to calculate bounty rewards and inform the contributors about those.
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Development`
+    - The issue or pull request affects the development environment.
+
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Production`
+    - The issue or pull request affects the production environment.
+
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Test`
+    - The issue or pull request affects the test environment.
+
+- ![#f9d0c4](https://placehold.it/15/f9d0c4/000000?text=+) `Continuous Integration`
+    - The issue or pull request affects the continuous integration environment.
+
+**Platform**
+
+
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Windows`
+    - The issue or pull request affects users on Windows.
+
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Linux`
+    - The issue or pull request affects users on Linux.
+
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `Android`
+    - The issue or pull request affects users on Android.
+
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `macOS`
+    - The issue or pull request affects users on macOS.
+
+- ![#dddddd](https://placehold.it/15/dddddd/000000?text=+) `iOS`
+    - The issue or pull request affects users on iOS.
+
+**Priority**
+
+
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Critical`
+    - The issue or pull request will affect all users.
+
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `High`
+    - The issue or pull request will affect most users.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Medium`
+    - The issue or pull request will affect roughly half of users.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Low`
+    - The issue or pull request will not affect most users.
+
+**Severity**
+
+
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Critical`
+    - The issue is blocking an upcoming release.
+
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `High`
+    - The issue causes data loss, crashes or hangs processes, makes the system unresponsive, etc.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Medium`
+    - The issue reports incorrect functionality, a confusing user experience, etc.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Low`
+    - The issue reports cosmetic items such as formatting, spelling, colors, etc.
+
+**Status**
+
+
+- ![#000000](https://placehold.it/15/000000/000000?text=+) `Abandoned`
+    - The pull request could not be merged because it did not get any updates in a timely fashion.
+
+- ![#000000](https://placehold.it/15/000000/000000?text=+) `Won't Fix`
+    - The issue is legitimate, but it is not something the team is currently able or willing to work on.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Resolved`
+    - The issue has been resolved.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Owner Approved`
+    - The pull request has been approved by a code owner.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Member Approved`
+    - The pull request has been approved by a member.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Collaborator Approved`
+    - The pull request has been approved by a collaborator.
+
+- ![#007700](https://placehold.it/15/007700/000000?text=+) `Contributor Approved`
+    - The pull request has been approved by a contributor.
+
+- ![#043a96](https://placehold.it/15/043a96/000000?text=+) `Accepted`
+    - The proposed solution has been accepted.
+
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Available`
+    - The issue is not assigned to anyone and available to be worked on.
+
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `In Progress`
+    - The issue or pull request is being worked on.
+
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `On Hold`
+    - The issue or pull request is not being worked on for the time being.
+
+- ![#d2dae1](https://placehold.it/15/d2dae1/000000?text=+) `Stale`
+    - The pull request is in need of updates but there has not been a sufficient response.
+
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Blocked`
+    - The pull request is blocked from being merged for the time being.
+
+- ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Cannot Reproduce`
+    - The issue cannot be reproduced by a developer of the team.
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Reverted`
+    - The pull request was reverted after an initial merge.
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Has Merge Conflicts`
+    - The pull request cannot be merged because it has a merge conflict.
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Tests Failing`
+    - The Circle CI build failed when running for this pull request.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Information`
+    - The issue needs more information before it can be verified and resolved.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Investigation`
+    - The issue needs more investigation before it can be verified and resolved.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Review`
+    - The issue or pull request needs a review by a developer of the team.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Testcase`
+    - The issue or pull request relates to a feature that needs test coverage.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Changes`
+    - The pull request needs additional changes before it can be merged.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Discussion`
+    - The issue or pull request needs more discussion before it can be closed or merged.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Needs Documentation`
+    - The pull request needs additional documentation before it can be merged.
+
+**Test**
+
+
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `General`
+    - The issue or pull request is related to the test config, platform or setup.
+
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Functional`
+    - The issue or pull request is related to functional tests such as end-to-end or browser testing.
+
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Integration`
+    - The issue or pull request is related to integration tests between internal or external elements.
+
+- ![#7936a5](https://placehold.it/15/7936a5/000000?text=+) `Unit`
+    - The issue or pull request is related to unit tests for testing individual elements.
+
+**Type**
+
+
+- ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Feature`
+    - The issue is a request for new functionality.
+
+- ![#1144ff](https://placehold.it/15/1144ff/000000?text=+) `Release`
+    - The issue or pull request is related to an upcoming release.
+
+- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Maintenance`
+    - The pull request updates dependencies or configuration files.
+
+- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Performance`
+    - The issue or pull request relates to performance.
+
+- ![#44bbff](https://placehold.it/15/44bbff/000000?text=+) `Refactor`
+    - The pull request improves or enhances an existing implementation.
+
+- ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Duplicate`
+    - The issue or pull request is a duplicate of another feature request or bug report.
+
+- ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Expected Behaviour`
+    - The issue is a bug report but the behaviour is intended.
+
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Breaking Change`
+    - The issue or pull request documents or introduces a breaking change.
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bug`
+    - The issue relates to broken or incorrect behaviour.
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bugfix`
+    - The pull request fixes an incorrect functionality or behaviour.
+
+- ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Regression`
+    - The issue is a bug that relates to functionality known to work in previous releases.
+
+- ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Security`
+    - The issue documents functionality that could expose private data or cause harm otherwise.
+
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Discussion`
+    - The issue is a discussion about a generic topic.
+
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Documentation`
+    - The issue or pull request relates to documentation.
+
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Information`
+    - The issue contains information for users by a develop of the team.
+
+- ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Question`
+    - The issue is more of a question than a request for new features or a report of broken features.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Task`
+    - The issue is a request to setup third-party integrations or any general non-code related tasks.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Good First Contribution`
+    - The issue appears to have a simple solution.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Standards`
+    - The issue reports problems with the compliance of contribution guidelines or code standards.
+
+- ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Weekly Digest`
+    - The issue is a weekly report of the latest activities.
+
+## Assigning Bounty Tiers before merging a Pull Request
+
+Before a developer merges a PR it is *required* to assign one of the 7 bounty labels. Those labels will be used by the _ArkEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
 
 **Tier 1 - $100**
 

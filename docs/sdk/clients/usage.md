@@ -245,7 +245,7 @@ Rust can be installed by following [this guide](https://www.rust-lang.org/instal
 
 Add the following to your Cargo.toml:
 
-```toml
+```
 [dependencies]
 arkecosystem-client = {git = "https://github.com/ArkEcosystem/rust-client", branch = "master" }
 ```

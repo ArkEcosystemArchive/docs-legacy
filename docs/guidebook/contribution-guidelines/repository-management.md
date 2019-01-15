@@ -36,6 +36,15 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 ## How to label and organise GitHub Issues & Pull Requests
 
+In order to make everyones life easier when looking for issues or pull requests of specific types, priority or severity it is important to make proper use of labels so it is possible to identify the status and importance without having to look into it.
+
+**Notes**
+
+- The `Type: Bug` label always has to be combined with a `Priority: *` and `Severity: *`  label to indicate how severe the problem caused by the bug is and how many users are affected by it. _The combination of those determines how fast the bug needs to be fixed._
+- Bounty tiers need to be assigned _before_ a pull request is merged. If no tier is assigned or is assigned to a team member the ArkEcosystem Bot will comment in the affected issue.
+- For issues that are tasks a `Difficulty: *` label should be assigned to provide developers a sense of how much work it will be.
+- The `Complexity: *` labels should never be assigned manually as the ArkEcosystem Bot will evaluate the complexity of a pull request and assign a label.
+
 **Bounty**
 
 
@@ -306,9 +315,9 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Weekly Digest`
     - The issue is a weekly report of the latest activities.
 
-## Assigning Bounty Tiers after merging a Pull Request
+## Assigning Bounty Tiers before merging a Pull Request
 
-After a developer merges a PR it is *required* to assign one of the 7 bounty labels. Those labels will be used by the ArkEcosystem Bot to calculate bounty rewards and inform the contributors about those.
+Before a developer merges a PR it is *required* to assign one of the 7 bounty labels. Those labels will be used by the _ArkEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
 
 **Tier 1 - $100**
 

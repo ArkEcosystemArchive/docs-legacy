@@ -1,56 +1,63 @@
 # How to write an Ark Core Plugin
 
-In this guide, you will find the information which can enable you to write a proper Ark Core plugin, for use in your own Ark deployments; both in the case of Ark Core nodes and your own BridgeChain nodes.
+In this guide, you will find information to enable you to write a proper Ark Core plugin, for use in your own Ark deployments; both in the case of Ark Core nodes a `BridgeChain` nodes.
 
 ## Setup
+
 Many components are required to have a proper environment setup for the development of your Ark Core plugin.
 
-You can view instructions on how to setup your development environment in the [cookbook for dev environment](./setup-dev-environment.md).
+You can view instructions on how to setup your development environment in the [here](./setup-dev-environment.md).
 
 ### Plugin Skeleton
-Make sure you are in the Ark Core folder cloned from the official [GitHub repo](https://github.com/ArkEcosystem/core).
 
-Add a submodule for the plugin skeleton
+Make sure you are in the Ark Core folder cloned from the official [repo](https://github.com/ArkEcosystem/core).
+
+Add a submodule for the plugin skeleton.
+
 ```bash
 cd plugins/
 git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
 cd core-plugin-skeleton
 ```
 
-## Configure
-This is when you make changes to the plugin skeleton.
+## Configuration
 
-Make sure to modify the default names for the files:
- - **core-plugin-skeleton/** (folder name)
- - **README.md** (header)
- - **package.json** (many fields)
- - **lib/index.js** (alias)
- - **lib/defaults.js** (exports)
+We need to make some changes to the skeleton first. Make sure to modify the default names for the files:
+
+- **core-plugin-skeleton/** (folder name)
+- **README.md** (header)
+- **package.json** (many fields)
+- **lib/index.js** (alias)
+- **lib/defaults.js** (exports)
 
 The name of our plugin is **demo-plugin**. Make sure to change the name in your package.json accordingly. It is recommended to scope your packages with a prefix like `@your-vendor/` to distinguish it from other npm packages. Check [https://docs.npmjs.com/misc/scope](https://docs.npmjs.com/misc/scope) for more information.
 
-We're also going to require ***BigNumber*** to demonstrate how to properly add dependencies to the plugin.
+We're also going to require ***BigNumber*** to demonstrate how to add dependencies to the plugin correctly.
 
-After having changed the name of the plugin, make sure to run `lerna bootstrap` to expose the package name for scoped package installation
+After having changed the name of the plugin, make sure to run `lerna bootstrap` to expose the package name for scoped package installation.
+
 ```bash
 lerna bootstrap
 ```
-:::danger
-`lerna bootstrap` takes a long time! Don't get worried if it's doing its thing for a long time; that's normal.
+
+::: warning
+`lerna bootstrap` takes a long time, just let it finish obtaining all dependencies before continuing.
 :::
 
-Add your dependencies **only to the specific plugin package**
+Add your dependencies *only to the specific plugin package*
+
 ```bash
 lerna add --scope=@arkecosystem/demo-plugin big-number --dev
 ```
 
-## Develop
-Once everything is setup and configured, we can move on to developing the plugin.
+Once everything is set up and configured, we can move on to developing the plugin.
+
+## Implementation
 
 The file we'll be writing our vendor code in is called `demo.js` and it's located in the `lib/` folder of the plugin skeleton.
 
-### Coding
 The sample code we will use for this demo is
+
 ```js
 let logger
 
@@ -74,7 +81,7 @@ module.exports = async (container) => {
 }
 ```
 
-Before writing tests, it is important to properly setup the registration and deregistration of our plugin in the `index.js` file of the `lib/` folder.
+Before writing tests, it is essential to correctly set up the registration and deregistration of our plugin in the `index.js` file of the `lib/` folder.
 
 ```js
 'use strict'
@@ -99,9 +106,10 @@ exports.plugin = {
 ```
 
 ### Testing
+
 Testing is streamlined by the `test-utils` Ark Core package.
 
-Before writing our ***jest*** testing suite, we will first setup the test environment in a file called `setup.js` under the existing `__tests__` folder.
+Before writing our `jest` testing suite, we will first set up the test environment in a file called `setup.js` under the existing `__tests__` folder.
 
 ```js
 const container = require('@arkecosystem/core-container')
@@ -125,7 +133,7 @@ exports.tearDown = async () => {
 }
 ```
 
-In the `__tests__` folder, we then write our ***jest*** testing suite in a file called `demo.test.js`.
+In the `__tests__` folder, we then write our `jest` testing suite in a file called `demo.test.js`.
 
 ```js
 const BigNumber = require('big-number')
@@ -153,7 +161,8 @@ Lastly, before running our tests, we need to include `@arkecosystem/demo-plugin`
 
 This is done by changing the file `packages/core-test-utils/config/testnet/plugins.js` in the root of the `core` repository.
 
-The plugin must be added to the end, as follows
+The plugin must be added to the end, as follows.
+
 ```js
 module.exports = {
 ...,
@@ -163,7 +172,8 @@ module.exports = {
 }
 ```
 
-Finally, we are able to verify that our plugin functions correctly by invoking `yarn test` under the plugin's folder and monitoring the output generated by ***jest***.
+Finally, we can verify that our plugin functions correctly by invoking `yarn test` under the plugin's folder and monitoring the output generated by `jest`.
 
 ## Conclusion
-In the end, you should be able to write your own plugin for Ark Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.
+
+In the end, you should be able to write your plugin for Ark Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.

@@ -30,7 +30,7 @@ return [
 
 Go to `config/packages/ark.yml` and fill out your configuration similar to this.
 
-```yml
+```yaml
 ark:
   protocol: 'http'
   ip: 'your-node-ip'

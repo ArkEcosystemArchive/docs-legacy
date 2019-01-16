@@ -10,7 +10,7 @@ title: "Testing"
 
 Before all, let's see and understand how the code is organized. When you open the ark repository, you should see the following directory structure:
 
-```console
+```
 /docker
 /packages
 /plugins
@@ -19,7 +19,7 @@ Before all, let's see and understand how the code is organized. When you open th
 
 For developing and testing, we are mainly interested in the `packages` directory, as it contains the whole core code. It is divided into a set of packages:
 
-```console
+```
 /packages/client
 /packages/core
 /packages/core-api
@@ -33,7 +33,7 @@ We will now dig into the typical structure of a package, but please note the `co
 
 So let us look at `/packages/core-blockchain` as an example. It has two main directories:
 
-```console
+```
 /packages/core-blockchain/__tests__
 /packages/core-blockchain/lib
 ```
@@ -46,7 +46,7 @@ Now that we have a global idea of how the code is organized, we can go inside th
 
 We'll keep `packages/core-blockchain/__tests__` as an example. Open the folder and you'll see something like this:
 
-```console
+```
 /__support__
     setup.js
 

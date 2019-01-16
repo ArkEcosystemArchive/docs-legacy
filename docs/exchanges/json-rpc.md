@@ -22,7 +22,7 @@ Using `core-json-rpc` requires an Ark Core relay node to connect to. For exchang
 
 By default, Ark Core sets up the JSON-RPC node to run on port 8080. As all JSON-RPC requests are handled from a single endpoint, this means that your endpoint should be:
 
-```IP
+```
 `{NODE_IP}:8080/`
 ```
 

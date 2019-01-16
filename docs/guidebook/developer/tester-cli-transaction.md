@@ -6,7 +6,7 @@ Ensure you have a working copy of the most recent [GitHub repo for Ark Core](htt
 
 The commands shown in the next examples are all run in the `~/ark-core/packages/core-tester-cli/` folder.
 
-### Basics
+## Basics
 
 The executable to use for sending transactions is located at `./bin/tester`. You can add it to PATH by running `PATH=$PATH:$(pwd)/bin`. If you choose to omit this last step, please use `./bin/tester` instead of `tester` for the following examples.
 
@@ -49,7 +49,7 @@ The basic premise is the following:
 
 Accounts randomly generated are available in the `./test-wallets` file.
 
-### Transfer
+## Transfer
 
 For the command
 
@@ -86,7 +86,7 @@ In my case, three transfers were made: one from my original wallet, and two to t
 
 [More details](https://dexplorer.ark.io/wallets/D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk).
 
-### Delegate Registration
+## Delegate Registration
 
 Very similar to a standard transfer transaction
 
@@ -120,7 +120,7 @@ The new delegate's credentials are saved in `./test-wallets`.
 
 You can view the delegate this transaction registered on the [dexplorer.ark.io](https://dexplorer.ark.io/wallets/DEPu5PezAvSZ5DhMHTNjBFq7n5KfaLSQVE).
 
-### Vote
+## Vote
 
 Again, the format is almost identical.
 
@@ -152,7 +152,7 @@ Again, this will first send a transfer to a random address and save it to the `.
 
 Here's [a link to the specific voting transaction in question](https://dexplorer.ark.io/transaction/48b423b8afd31b7e0bfaa92d2c5430f6e892463679fcc6cf33a5783fd16258f0), on the dexplorer.
 
-### Second Signature Registration
+## Second Signature Registration
 
 The command issued for this transaction was
 
@@ -179,7 +179,7 @@ And the associated output:
 
 [For your convenience](https://dexplorer.ark.io/wallets/DHS2SvNtdzyvcPccQKV8h17azuREW8pUHB), a link to the new address which has a second signature registration transaction.
 
-### Multisignature Registration
+## Multisignature Registration
 
 Example CLI input
 
@@ -229,7 +229,7 @@ For all transactions, you can set `--transfer-fee <number || number-number>` to 
 
 Additionally, types other than transfer have the extra `--<type>-fee <number || number-number>` parameter to specify a similar fee catered to that transaction type.
 
-### Other Transaction Types
+## Other Transaction Types
 
 The simple demo
 

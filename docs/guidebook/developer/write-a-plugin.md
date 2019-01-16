@@ -20,7 +20,7 @@ git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
 cd core-plugin-skeleton
 ```
 
-## Configure
+## Configuration
 
 We need to make some changes to the skeleton first. Make sure to modify the default names for the files:
 
@@ -52,7 +52,7 @@ lerna add --scope=@arkecosystem/demo-plugin big-number --dev
 
 Once everything is set up and configured, we can move on to developing the plugin.
 
-### Coding
+## Implementation
 
 The file we'll be writing our vendor code in is called `demo.js` and it's located in the `lib/` folder of the plugin skeleton.
 

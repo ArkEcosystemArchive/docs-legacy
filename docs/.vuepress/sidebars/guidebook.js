@@ -2,7 +2,7 @@ module.exports = [
   ["/", "Back to Table of Contents"],
   ["/guidebook/", "Guidebook Home"],
   {
-    title: "Developer Guides",
+    title: "Getting Started",
     collapsable: true,
     children: [
       "/guidebook/developer/setup-dev-environment.md",

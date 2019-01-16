@@ -354,6 +354,8 @@ To do so, import the `configManager` package from `crypto`, then tell it to use 
 
 :::: tabs
 
+::: tab javascript
+
 ```js
 const Client = require('@arkecosystem/client')
 const { configManager } = require('@arkecosystem/crypto')

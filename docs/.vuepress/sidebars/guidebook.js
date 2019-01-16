@@ -2,8 +2,19 @@ module.exports = [
   ["/", "Back to Table of Contents"],
   ["/guidebook/", "Guidebook Home"],
   {
+    title: "Getting Started",
+    collapsable: true,
+    children: [
+      "/guidebook/developer/setup-dev-environment.md",
+      "/guidebook/developer/monitor-blockchain.md",
+      "/guidebook/developer/send-transaction.md",
+      "/guidebook/developer/write-a-plugin.md",
+      "/guidebook/developer/tester-cli-transaction.md"
+    ]
+  },
+  {
     title: "Ark Core",
-    collapsable: false,
+    collapsable: true,
     children: [
       "/guidebook/core/",
       "/guidebook/core/node-lifecycle",
@@ -20,7 +31,7 @@ module.exports = [
   },
   {
     title: "Ark Core - Plugins",
-    collapsable: false,
+    collapsable: true,
     children: [
       "/guidebook/core/plugins/",
       "/guidebook/core/plugins/core",
@@ -52,8 +63,18 @@ module.exports = [
     ]
   },
   {
+    title: "Other Products",
+    collapsable: true,
+    children: [
+      "/guidebook/guides/mobile",
+      "/guidebook/guides/desktop",
+      "/guidebook/guides/explorer",
+      "/guidebook/guides/core-commander",
+    ]
+  },
+  {
     title: "Contribution Guidelines",
-    collapsable: false,
+    collapsable: true,
     children: [
       "/guidebook/contribution-guidelines/",
       "/guidebook/contribution-guidelines/clean-code-and-tests",
@@ -64,17 +85,6 @@ module.exports = [
       "/guidebook/contribution-guidelines/project-structuring",
       "/guidebook/contribution-guidelines/releases-and-versioning",
       "/guidebook/contribution-guidelines/repository-management"
-    ]
-  },
-  {
-    title: "Developer Guides",
-    collapsable: false,
-    children: [
-      "/guidebook/guides/",
-      "/guidebook/guides/mobile",
-      "/guidebook/guides/desktop",
-      "/guidebook/guides/explorer",
-      "/guidebook/guides/core-commander"
     ]
   }
 ];

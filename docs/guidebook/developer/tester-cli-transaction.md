@@ -1,26 +1,24 @@
----
-title: Sending Transactions with the Core Tester CLI
----
-
 # How to Send Transactions using the Ark Core Tester CLI
 
 ## Prerequisites
+
 Ensure you have a working copy of the most recent [GitHub repo for Ark Core](https://github.com/arkecosystem/core). If you're using Ark Core Commander, it will be installed at `~/ark-core`.
 
 The commands shown in the next examples are all run in the `~/ark-core/packages/core-tester-cli/` folder.
 
 ### Basics
+
 The executable to use for sending transactions is located at `./bin/tester`. You can add it to PATH by running `PATH=$PATH:$(pwd)/bin`. If you choose to omit this last step, please use `./bin/tester` instead of `tester` for the following examples.
 
-Only 5 possibilities are currently available for the `tester` command, which enables us to send transactions of a specified type with relevant parameters:
+Only five options are currently available for the `tester` command, which enables us to send transactions of a specified type with relevant parameters:
 
- - **`transfer`**: send multiple transactions
- - **`second-signature`**: create wallets with second signature
- - **`delegate-registration`**: create multiple delegates
- - **`vote`**: create multiple votes for a delegate
- - **`multi-signature`**: create multiple multisig wallets
+- `transfer`: send multiple transactions
+- `second-signature`: create wallets with two signatures
+- `delegate-registration`: create multiple delegates
+- `vote`: create multiple votes for a delegate
+- `multi-signature`: create multiple multisig wallets
 
-To view which parameters each transaction type requires and offers, use `tester [type] help`
+To view which parameters each transaction type requires and offers, use `tester [type] help`.
 
 Some parameters are common to all transaction types:
 
@@ -38,15 +36,16 @@ Some parameters are common to all transaction types:
 ```
 
 :::tip
-**`--base-url`** is the node IP to which you'll be broadcasting (replace that with **your own node’s IP**, **localhost** or **any other relay node's IP**).
+`--base-url` is the node IP to which you'll be broadcasting (replace that with your own node’s IP, localhost or any other relay node's IP).
 
-**`--passphrase`** is the **secret** for the wallet you wish to send transactions from.
+`--passphrase` is the secret for the wallet you wish to send transactions from.
 :::
 
 The basic premise is the following:
+
  1. Fill in a command with the passphrase to a wallet with enough DARK
  2. A transfer will be issued to a randomly generated address
- 3. After a moment the type-specific transaction will be issued other randomly generated addresses
+ 3. After a moment the type-specific transaction will be issued to other randomly generated addresses
 
 Accounts randomly generated are available in the `./test-wallets` file.
 
@@ -58,8 +57,9 @@ For the command
 tester transfer \
 --number 1 \
 --base-url http://localhost \
---passphrase "your 12 word passphrase"
+--passphrase "your 12-word passphrase"
 ```
+
 the output should be similar to
 
 ```bash
@@ -79,9 +79,10 @@ the output should be similar to
 [INFO]: Waiting 20 seconds to apply transactions
 [ERROR]: Transaction 'fcb6ac6b3b220b23dbaf64753864c4561ac3c8857c184ec793ec8d064728f8d8' should not have vendorField value 'Transaction 1'
 ```
+
 (Give or take a few ERROR messages).
 
-In my case, 3 transfers were made: one from my original wallet, and two to the randomly picked recipient (sending to itself). 
+In my case, three transfers were made: one from my original wallet, and two to the randomly picked recipient (sending to itself).
 
 [More details](https://dexplorer.ark.io/wallets/D97JHmrxQ4Q4SzKRKq89pGDwJ4JaokPcmk).
 
@@ -93,7 +94,7 @@ Very similar to a standard transfer transaction
 tester delegate-registration \
 --number 1 \
 --base-url http://localhost \
---passphrase "your 12 word passphrase"
+--passphrase "your 12-word passphrase"
 ```
 
 For the output of
@@ -112,7 +113,8 @@ For the output of
 [INFO]: Waiting 20 seconds to apply delegate transactions
 [INFO]: All transactions have been sent! Total delegates: 120
 ```
-Which actually sent a transaction to a random address which registered itself as a delegate subsequently.
+
+Which sent a transaction to a random address which registered itself as a delegate subsequently.
 
 The new delegate's credentials are saved in `./test-wallets`.
 
@@ -120,7 +122,7 @@ You can view the delegate this transaction registered on the [dexplorer.ark.io](
 
 ### Vote
 
-Again, the format is almost identical
+Again, the format is almost identical.
 
 ```bash
 tester vote \
@@ -158,10 +160,10 @@ The command issued for this transaction was
 tester second-signature \
 --number 1 \
 --base-url http://localhost \
---passphrase "your 12 word passphrase"
+--passphrase "your 12-word passphrase"
 ```
 
-And the associated output
+And the associated output:
 
 ```bash
 [INFO]: Sending 1 transfer transactions
@@ -185,10 +187,10 @@ Example CLI input
 tester multi-signature \
 --number 1 \
 --base-url http://localhost \
---passphrase "your 12 word passphrase"
+--passphrase "your 12-word passphrase"
 ```
 
-Finally, we receive as a response
+Finally, we receive as a response.
 
 ```bash
 [INFO]: Sending 1 transfer transactions
@@ -227,7 +229,7 @@ For all transactions, you can set `--transfer-fee <number || number-number>` to 
 
 Additionally, types other than transfer have the extra `--<type>-fee <number || number-number>` parameter to specify a similar fee catered to that transaction type.
 
-### Transfer
+### Other Transaction Types
 
 The simple demo
 
@@ -239,7 +241,8 @@ tester transfer \
 --transfer-fee 30000-100000 \
 --recipient D9mwARuRihGV8hNyEFvrsTttBKnrmewfHM
 ```
-will produce output showing 2 transactions with different fees
+
+will produce output showing two transactions with different fees
 
 ```bash
 0 ==> 9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b, D9mwARuRihGV8hNyEFvrsTttBKnrmewfHM (fee: 38056)
@@ -248,11 +251,9 @@ will produce output showing 2 transactions with different fees
 
 the 0th transaction can be viewed on the [dexplorer.ark.io](https://dexplorer.ark.io/transaction/9ac41285c42573913e4a78a81b251e8c1d99515b4864db038a78ae58ccdd354b).
 
-### Other types
+As with the transfer transaction type, other types also follow the same model. When specifying a dynamic fee or range of fees for a given transaction to the tester-cli, the transaction will only be accepted if a delegate has set a minimum fee for its type equal to or lower than the specified value/range.
 
-As with the transfer transaction type, other types also follow the same model. When specifying a dynamic fee or range of fees for a given transaction to the tester-cli, the transaction will only be accepted if a delegate has a minimum fee for its type equal to or lower than the specified value/range.
-
-The syntax and output follows the same model as the transfer transaction, with the added type-specific parameter.
+The syntax and output follow the same model as the transfer transaction, with the added type-specific parameter.
 
 Here is an example
 
@@ -282,9 +283,8 @@ For the output
 [ERROR]: Delegate count incorrect. '120' but should be '121'
 ```
 
-Now, despite the error, the new registered delegate can still be found [there](https://dexplorer.ark.io/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 arktoshi (1 ARK only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the Ark Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not. 
+Now, despite the error, the newly registered delegate can still be found [here](https://dexplorer.ark.io/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 arktoshi (1 ARK only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the Ark Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not. 
 
 ## Conclusion
 
 You should now be able to properly manage your test transactions with the help of the tester cli utility! If you have any questions or signals to present, please do so either on [Slack](https://arkecosystem.slack.com) with a message or [GitHub](https://github.com/ArkEcosystem/docs) with an issue.
-

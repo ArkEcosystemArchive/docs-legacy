@@ -33,7 +33,7 @@ You can play with the data using the [GraphQL Playground](https://github.com/pri
 
 > Get first blocks
 
-```gql
+```
 {
   blocks(orderBy: { field: "height", direction: ASC }) {
     id
@@ -46,7 +46,7 @@ You can play with the data using the [GraphQL Playground](https://github.com/pri
 
 > Get the list of transactions from a specific block
 
-```gql
+```
 {
   block(id: "13114381566690093367") {
     timestamp
@@ -62,7 +62,7 @@ You can play with the data using the [GraphQL Playground](https://github.com/pri
 
 > Get the recipient info of each transaction
 
-```gql
+```
 {
   block(id: "13114381566690093367") {
     generatorPublicKey

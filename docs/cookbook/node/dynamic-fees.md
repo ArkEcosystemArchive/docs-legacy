@@ -90,7 +90,7 @@ By default, the max transaction pool size is set to 100000. To change this value
 
 ##### file: ~/.ark/.env
 
-```env
+```
 ARK_MAX_TRANSACTIONS_IN_POOL=100000
 ```
 

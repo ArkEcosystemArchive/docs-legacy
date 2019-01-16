@@ -50,7 +50,7 @@ sudo nano /etc/ssh/sshd_config
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 # What ports, IPs and protocols we listen for
 Port 22
 ```
@@ -61,7 +61,7 @@ From now on port 22 is not usable for SSH connections.
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 # What ports, IPs and protocols we listen for
 Port 55555
 ```
@@ -73,7 +73,7 @@ You should never log in as root to your server after it has been set up. Our fir
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 # Authentication:
 LoginGraceTime 120
 PermitRootLogin yes
@@ -84,7 +84,7 @@ Change `LoginGraceTime` to `60` and set `PermitRootLogin` to `no`
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 # Authentication:
 LoginGraceTime 60
 PermitRootLogin no
@@ -97,7 +97,7 @@ Set `X11Forwarding` to `no`.
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 X11Forwarding yes
 X11DisplayOffset 10
 PrintMotd no
@@ -108,7 +108,7 @@ TCPKeepAlive yes
 
 ##### /file: etc/ssh/sshd_config
 
-```file
+```
 X11Forwarding no
 ```
 
@@ -118,14 +118,14 @@ Scroll down until you see the following line and uncomment `MaxStartups`. Then s
 
 ##### /file: etc/ssh/sshd_config
 
-```file
+```
 #MaxStartups 10:30:60
 #Banner /etc/issue.net
 ```
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 MaxStartups 2
 #Banner /etc/issue.net
 ```
@@ -178,7 +178,7 @@ sudo nano /etc/fail2ban/jail.local
 
 ##### file: /etc/fail2ban/jail.local
 
-```file
+```
 #
 # SSH servers
 #
@@ -265,7 +265,7 @@ We need to change `START_KNOCKD=0` to `START_KNOCKD=1`
 
 ##### file: /etc/default/knockd
 
-```file
+```
 ################################################
 #
 # knockd's default file, for generic sys config
@@ -285,7 +285,7 @@ START_KNOCKD=0
 
 ##### file: /etc/default/knockd
 
-```file
+```
 ...
 START_KNOCKD=1
 ...
@@ -309,7 +309,7 @@ Also, don't forget to replace `55555` with the port you chose for `SSH`.
 
 ##### file: /etc/knockd.conf
 
-```file
+```
 [options]
         UseSyslog
 
@@ -478,7 +478,7 @@ This file should look familiar to you as we edited it earlier in this process. T
 
 ##### file: /etc/ssh/sshd_config
 
-```file
+```
 PasswordAuthentication no
 PubkeyAuthentication yes
 ChallengeResponseAuthentication no

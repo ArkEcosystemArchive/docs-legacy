@@ -6,7 +6,7 @@ module.exports = [
     children: [
       '/introduction/',
       '/guidebook/',
-      '/cookbook/',
+      '/tutorials/',
       '/exchanges/',
       '/api/',
       '/sdk/',

@@ -1195,7 +1195,7 @@ iex> ArkEcosystem.Client.API.Two.Node.status(client)
 
 Each node is connected to a set of peers, which are Relay or Delegate Nodes as well. The [peers resource](/api/public/v2/peers.html) provides access to all peers connected to our node.
 
-Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control. We provide a guide to setting up a Relay Node [here](/cookbook/node/setup.html).
+Peers have made their Public API available for use; however for mission-critical queries and transaction posting you should use a node which is under your control. We provide a guide to setting up a Relay Node [here](/tutorials/node/setup.html).
 
 You may query for:
 

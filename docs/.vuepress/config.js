@@ -46,7 +46,7 @@ const config = {
       "/sdk/": require("./sidebars/sdk"),
       "/faq/": require("./sidebars/faq"),
       "/introduction/": require("./sidebars/introduction"),
-      "/cookbook/": require('./sidebars/cookbook'),
+      "/tutorials/": require('./sidebars/tutorials'),
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
       "/": require('./sidebars/main'),

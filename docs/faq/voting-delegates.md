@@ -23,7 +23,7 @@ No. All you can “lose” is the 1 ARK voting fee. All other ARK tokens will st
 
 You can remove the vote registration from a delegate (unvote). Then it’s best to restart the desktop client and vote for the new delegate of your choice.
 
-Follow our [unvoting guide](/cookbook/usage-guides/how-to-use-ark-desktop-wallet.html#wallet-interface).
+Follow our [unvoting guide](/tutorials/usage-guides/how-to-use-ark-desktop-wallet.html#wallet-interface).
 
 ## Can I vote for multiple delegates?
 

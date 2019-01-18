@@ -14,6 +14,12 @@ Put another way, the Crypto SDK structures your data in a format that all Ark no
 
 ![A diagram showing the differences between Client and Crypto APIs](./assets/public-api/client-crypto.png)
 
+::: warning
+
+Note that the [Public API](/api/public) is only available after a node has fully synced. This ensures your data on the blockchain is up to date.
+
+:::
+
 ## Setup
 
 These quick actions will all assume you've loaded a Client instance with the IP address of your node and the API version you're requesting.

@@ -13,7 +13,7 @@ module.exports = [
     ]
   },
   {
-    title: "Ark Core",
+    title: "Core",
     collapsable: true,
     children: [
       "/guidebook/core/",
@@ -30,7 +30,7 @@ module.exports = [
     ]
   },
   {
-    title: "Ark Core - Plugins",
+    title: "Core Plugins",
     collapsable: true,
     children: [
       "/guidebook/core/plugins/",

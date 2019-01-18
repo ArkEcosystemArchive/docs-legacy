@@ -1,5 +1,5 @@
 ---
-title: "Ark Core: Rate Limit"
+title: "Configuring Rate Limits"
 ---
 
 # Rate Limit

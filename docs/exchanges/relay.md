@@ -360,6 +360,16 @@ cp -f /home/node/ark-core/packages/crypto/lib/networks/ark/mainnet.json /home/no
 pm2 start all --update-env
 ```
 
+::: danger
+
+Ensure you properly restart the node process when editing your .env file. Use the `--update-env` flag, for example:
+
+```bash
+pm2 restart all --update-env
+```
+
+:::
+
 ## Next steps
 
 ::: warning

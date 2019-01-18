@@ -13,4 +13,4 @@ Use the sidebar to navigate this section, or follow the links below:
 - [Deployer](/tutorials/deployer/)
 - [Pay](/tutorials/pay)
 
-Tutorials might become outdated over time. If you find any incorrect information, please [open an issue](https://github.com/ArkEcosystem/docs).
+Tutorials might become outdated over time. If you find any incorrect information, please [open an issue](https://github.com/ArkEcosystem/docs/issues).

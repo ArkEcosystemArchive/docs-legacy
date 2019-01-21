@@ -20,4 +20,11 @@ Do not contact any individual Ark team member, Delegate or community member if y
 
 1. An in-depth explanation of the vulnerability.
 2. A guide to reproduce the hack.
-3. **OPTIONAL**: A proposed patch to fix the issue.
+
+**OPTIONAL**
+
+3. A proposed patch to fix the issue. (allows for a 50% bonus)
+
+## Useful Links
+
+1. [bounty.ark.io](https://bounty.ark.io)

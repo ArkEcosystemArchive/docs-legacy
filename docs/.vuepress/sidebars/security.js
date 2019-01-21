@@ -10,4 +10,11 @@ module.exports = [
         '/security/discovering/public-disclosure',
       ]
     },
+    {
+      title: "Contributing",
+      collapsable: false,
+      children: [
+        '/security/contributing/',
+      ]
+    },
   ]

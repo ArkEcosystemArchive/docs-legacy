@@ -52,6 +52,10 @@ Including a patch with your findings will also make you eligible for an addition
 
 1. Never publicly disclose any exploit or vulnerability.
 2. Never maliciously initiate an exploit on ARK Public Network, if you need to validate your setup use your own local Ark Network.
-3. To receive the bounty, you must send an in-depth explanation in an email to [mailto:security@ark.io](security@ark.io) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
+3. To receive the bounty, you must send an in-depth explanation in an email to [security@ark.io](mailto:security@ark.io) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
 
 *Security vulnerabilities are paid in ARK based on the daily average rate before the payout as the terms are agreed upon by both parties.*
+
+## Disclaimer
+
+The Ark team may decide to deviate from the rewards program and security procedure without disclosing the underlying reasons.

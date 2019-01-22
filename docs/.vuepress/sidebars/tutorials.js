@@ -17,6 +17,7 @@ module.exports = [
     children: [
       "/tutorials/node/setup",
       "/tutorials/node/secure",
+      "/tutorials/node/snapshots",
       "/tutorials/node/dynamic-fees"
     ]
   },

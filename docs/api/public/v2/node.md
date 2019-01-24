@@ -4,7 +4,15 @@ title: Public Node API
 
 # Public Node API
 
+The `node` resource is useful for service discovery, health checks, and obtaining network configurations, such as fees, API, and token information.
+
+::: warning
+Note that these parameters are returned by the specific Node and that other nodes might adhere to a different set of parameters.
+:::
+
 ## Retrieve the configuration
+
+Used to access a Node's configuration and the network it is attached to (identified by the `nethash`).
 
 ### Endpoint
 
@@ -68,7 +76,7 @@ GET /api/node/configuration
               "delegateResignation": 0 
             }
           }
-        }
+        },
         "feeStatistics": [
         {
           "type": 0,
@@ -109,6 +117,8 @@ GET /api/node/configuration
 
 ## Retrieve the status
 
+The status allows for health checking, showing if the node is in sync with the network.
+
 ### Endpoint
 
 ```
@@ -128,6 +138,8 @@ GET /api/node/status
 ```
 
 ## Retrieve the syncing status
+
+The `syncing` resource is very much alike `node/status`, providing information on the syncing progress. If a node is not syncing but significantly behind in blocks, it might be time to perform a check.
 
 ### Endpoint
 

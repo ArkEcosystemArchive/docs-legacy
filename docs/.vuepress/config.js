@@ -49,6 +49,7 @@ const config = {
       "/tutorials/": require('./sidebars/tutorials'),
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
+      "/security/": require('./sidebars/security'),
       "/": require('./sidebars/main'),
     },
     //algolia: {

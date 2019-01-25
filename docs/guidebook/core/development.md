@@ -41,7 +41,7 @@ The next important required dependency is a global installation of yarn through 
 npm i -g yarn
 ```
 
-[Yarn](https://yarnpkg.com) is the package manager used by Ark Core, it replaces npm from here on out.
+[Yarn](https://yarnpkg.com) is the package manager used by Ark Core; it replaces npm from here on out.
 
 With yarn installed globally, we can proceed to set up the Ark Core repository.
 
@@ -123,4 +123,4 @@ Additionally, we provide a variant (`yarn test:debug`) that enables the [Node de
 
 In order to make everyone life easier to work with the code and guarantee a certain style guide we use [Prettier](https://github.com/prettier/prettier) in combination with [TSLint](https://palantir.github.io/tslint/).
 
-Before sending any PRs or pushing to GitHub please make sure to run `yarn lint` to enforce the rules described in `tslint.json`.
+Before sending any PRs or pushing to GitHub, please make sure to run `yarn lint` to enforce the rules described in `tslint.json`.

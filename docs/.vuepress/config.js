@@ -50,6 +50,7 @@ const config = {
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
       "/security/": require('./sidebars/security'),
+      "/archive/": require('./sidebars/archive'),
       "/": require('./sidebars/main'),
     },
     //algolia: {

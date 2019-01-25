@@ -275,6 +275,7 @@ Incorrectly entering your BIP38 password will result in a forging process using 
 #### Creating and Restoring your Database from a Snapshot
 
 You might want to regularly create a snapshot of the database, or restore from a snapshot to avoid longer synchronization times.
+
 Documentation on this feature may be found [here](/tutorials/node/snapshots.md).
 
 #### Checking to See if Everything is Working

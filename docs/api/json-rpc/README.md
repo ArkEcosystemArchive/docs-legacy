@@ -5,35 +5,9 @@ title: "JSON-RPC"
 # Introduction
 
 ::: warning
-All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present, it will result in malformed responses or request rejections.
 :::
 
-```js
-const axios = require('axios')
+The JSON-RPC was created to aid organizations with the integration of Ark in their existing RPC based infrastructure. If you do not have anay restrictions in your IT architecture, we recommend using the [Public API](/api/public/v2) over the JSON-RPC. All operations provided by the JSON-RPC can be performed using the public API.
 
-const init = async () => {
-  try {
-    const response = await axios.post('http://localhost:8080', {
-      jsonrpc: '2.0',
-      id: +new Date(),
-      method: 'wallets.bip38.create',
-      params: {
-        userId: require('crypto').randomBytes(32).toString('hex'),
-        bip38: 'this is a top secret passphrase'
-      }
-    }, {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    })
-
-    console.log(response.data.result.address)
-    console.log(response.data.result.publicKey)
-    console.log(response.data.result.wif)
-  } catch(error) {
-    console.error(error)
-  }
-}
-
-init()
-```
+The formal specification for the JSON-RPC API is found here. For [examples](/exchanges/json-rpc.md) and [recommendations](/exchanges/json-rpc-quick.md) follow the links.

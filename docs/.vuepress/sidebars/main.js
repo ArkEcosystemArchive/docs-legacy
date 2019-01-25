@@ -13,6 +13,7 @@ module.exports = [
       '/security/',
       '/faq/',
       '/glossary/',
+      '/archive/',
     ]
   }
 ]

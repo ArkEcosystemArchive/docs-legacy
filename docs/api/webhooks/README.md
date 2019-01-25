@@ -4,13 +4,15 @@ title: "Webhooks"
 
 # Webhooks
 
+The webhooks API allows you to register a webhook in a specific node, which will send a payload to a predefined target when certain conditions are met. Webhooks ensure that you do not need to poll the public API periodically and are a robust way to stay up-to-date with the blockchain state.
+
 ::: warning
-All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present it will result in malformed responses or request rejections.
+All HTTP requests have to be sent with the `Content-Type: application/json` header. If the header is not present, it will result in malformed responses or request rejections.
 :::
 
 ## Authentication
 
-In order to communicate with the Webhooks API you will need to provide the token you configured on your node through the `Authorization` header. Authenticating with an invalid token will return `401 Unauthorized`.
+To communicate with the Webhooks API, you will need to provide the token you configured on your node through the `Authorization` header. Authenticating with an invalid token will return `401 Unauthorized`.
 
 ### Headers
 
@@ -18,8 +20,9 @@ In order to communicate with the Webhooks API you will need to provide the token
 |---------------|:------:|------------------------------------------------------|:------------------:|
 | Authorization | string | The webhook token defined in the node configuration. | :white_check_mark: |
 
-
 ## List all webhooks
+
+The webhooks resource returns all enabled and disabled webhooks. There is thus no need to store all active webhooks client side; as the node maintains a register for you.
 
 ### Endpoint
 
@@ -68,6 +71,8 @@ GET /api/webhooks
 
 ## Retrieve a webhook
 
+It is possible to query for a specific webhook by ID, which has to be saved client-side or obtained from another API call.
+
 ### Endpoint
 
 ```
@@ -100,20 +105,24 @@ GET /api/webhooks/{id}
 }
 ```
 
-
 ## Create a webhook
+
+Before creating a webhook, ensure you have a backend service running which exposes the target. Some example setups are listed [here](/guidebook/core/webhooks.md). A webhook may be triggered by multiple conditions; as long as one of the conditions evaluates to `true`, the webhook will fire.
+
+The returned `token` should be saved and used to validate the webhook origin. It is a secret value which should not be shared. For extra security, whitelist the IP of the node with your target service, ensuring other parties are not able to post webhook payloads.
 
 ### Endpoint
 
 ```
 POST /api/webhooks
 ```
+
 ### Body Parameters
 
 | Name       | Type   | Description                                             | Required           |
 |------------|:------:|---------------------------------------------------------|:------------------:|
 | event      | string | The name of the event to be listened for.               | :white_check_mark: |
-| target     | string | The target url for the HTTP payload.                    | :white_check_mark: |
+| target     | string | The target URL for the HTTP payload.                    | :white_check_mark: |
 | enabled    | string | The value to enable or disable the webhook.             | :x:                |
 | conditions | array  | The list of conditions required to trigger the webhook. | :white_check_mark: |
 
@@ -180,6 +189,8 @@ POST /api/webhooks
 
 ## Update a webhook
 
+Existing webhooks may be updated. *Note that this is the equivalent of deleting and creating a webhook; but retaining the same token*. If you are often updating and creating webhooks; consider deleting and creating new webhooks instead of updating to rotate your validation token often.
+
 ### Endpoint
 
 ```
@@ -197,7 +208,7 @@ PUT /api/webhooks/{id}
 | Name       | Type   | Description                                             | Required |
 |------------|:------:|---------------------------------------------------------|:--------:|
 | event      | string | The name of the event to be listened for.               | :x:      |
-| target     | string | The target url for the HTTP payload.                    | :x:      |
+| target     | string | The target URL for the HTTP payload.                    | :x:      |
 | enabled    | string | The value to enable or disable the webhook.             | :x:      |
 | conditions | array  | The list of conditions required to trigger the webhook. | :x:      |
 
@@ -208,6 +219,8 @@ PUT /api/webhooks/{id}
 ```
 
 ## Delete a webhook
+
+A webhook may be deleted by ID. Delete unused webhooks to save machine resources.
 
 ### Endpoint
 

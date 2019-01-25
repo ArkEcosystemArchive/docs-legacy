@@ -4,7 +4,11 @@ title: Public Wallets API
 
 # Public Wallets API
 
+Wallets are addresses containing, or previously having contained ARK. A wallet's public key may be unknown to the network, in that case, it is referred to as a `cold wallet`.
+
 ## List all wallets
+
+A paginated API is provided to obtain all wallets, including empty ones.
 
 ### Endpoint
 
@@ -48,6 +52,8 @@ GET /api/wallets
 
 ## Retrieve a wallet
 
+Specific wallets can be obtained either by their `publicKey` or `address`.
+
 ### Endpoint
 
 ```
@@ -76,6 +82,8 @@ GET /api/wallets/{id}
 ```
 
 ## List all transactions of a wallet
+
+All transactions belonging to a wallet can be obtained using this API. Equivalent to `transactions/search` with parameters `senderId` and `recipientId`.
 
 ### Endpoint
 
@@ -136,6 +144,8 @@ GET /api/wallets/{id}/transactions
 
 ## List all received transactions of a wallet
 
+Incoming transactions can be obtained as well, Equivalent to `transactions/search` with parameter `recipientId` set.
+
 ### Endpoint
 
 ```
@@ -194,6 +204,14 @@ GET /api/wallets/{id}/transactions/received
 ```
 
 ## List all sent transactions of a wallet
+
+The inverse of `transactions/received`.
+
+::: warning
+
+Note that the balance of a wallet does not equal `totalIncoming - totalOutgoing` if the wallet is a Delegate. You must then also add the total reward from transaction fees and forged blocks to their balance.
+
+:::
 
 ### Endpoint
 
@@ -255,7 +273,10 @@ GET /api/wallets/{id}/transactions/sent
     ]
 }
 ```
+
 ## List all votes of a wallet
+
+Returns all votes made by the wallet. Often users create a new wallet instead of recasting their vote, as the former was historically cheaper.
 
 ### Endpoint
 
@@ -319,6 +340,8 @@ GET /api/wallets/{id}/votes
 
 ## List all top wallets
 
+Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the Ark ICO.
+
 ### Endpoint
 
 ```
@@ -363,12 +386,14 @@ GET /api/wallets/top
             "balance": 554107676293547,
             "isDelegate": false
         },
-        ...
+        //... 98 more wallets
     ]
 }
 ```
 
 ## Search all wallets
+
+Searching for specific wallets is possible as well. A direct database query usually is more performant when the query expression becomes complicated.
 
 ### Endpoint
 

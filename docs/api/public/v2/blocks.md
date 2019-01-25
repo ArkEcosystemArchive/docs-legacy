@@ -4,7 +4,13 @@ title: Public Blocks API
 
 # Public Blocks API
 
+Blocks are added every eight seconds to the blockchain by a Delegate Node. Due to network/technical errors, a Delegate might miss a block. The time between two blocks is then 16 seconds, as the round continues to the next Delegate.
+
+All state changes to the blockchain are in the form of blocks; they contain a set of transactions and metadata. A block is rejected if one or more of the transactions is invalid; or if the metadata is invalid. Thus a block returned from the Public API is always valid.
+
 ## List all blocks
+
+The Public API may be used to query for blocks. This dataset contains billions of blocks; thus for analytical purposes, we recommend you use the [Elasticsearch](/guidebook/core/plugins/elasticsearch.md) plugin or query the database directly.
 
 ### Endpoint
 
@@ -70,6 +76,10 @@ GET /api/blocks
 
 ## Retrieve a block
 
+Blocks may be retrieved by ID (height). The height is an incremental integer.
+
+*When comparing the order of transactions and blocks, prefer using the `block.height` over transaction timestamps, as the height is guaranteed to be correctly ordered.*
+
 ### Endpoint
 
 ```
@@ -116,7 +126,10 @@ GET /api/blocks/{id|height}
     }
 }
 ```
+
 ## List all transactions of a block
+
+Instead of deserializing the block's payload; you can also obtain the transactions of each block as proper transaction objects directly.
 
 ### Endpoint
 
@@ -174,6 +187,8 @@ GET /api/blocks/{id}/transactions
 ```
 
 ## Search all blocks
+
+It is possible to filter for specifics blocks using the search resource. Filtering for blocks Node side is a lot more efficient than requesting a large payload and filtering client side.
 
 ### Endpoint
 

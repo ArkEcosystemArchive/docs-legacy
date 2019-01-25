@@ -4,7 +4,15 @@ title: Public Delegates API
 
 # Public Delegates API
 
+Delegates are regular wallets which have registered themselves eligible to become a Delegate by a [registration transaction](/introduction/ark/understanding-transactions-and-block-propagation.html#delegate-registration). If a Delegate is amongst the top 51 highest voted (by staked ARK), it may run a forging Node, which produces a block once every 6.8 minutes, awarding the Delegate two ARK + the transaction fees.
+
+Genesis Delegates are the initial, virtualized Delegates. They were not registered nor voted in, and in the Ark `mainnet` have been replaced by actual Delegates a long time ago.
+
 ## List all delegates
+
+You can obtain all Delegates through this paginated API. Note that all registered Delegates are returned in this response, not just the top 51 forging Delegates.
+
+If a Delegate Node is offline, it is still returned through this API; as the `delegate` resource is not concerned with the actual nodes, only with the on-chain registrations and wallets.
 
 ### Endpoint
 
@@ -57,7 +65,7 @@ GET /api/delegates
                 "productivity": "0.00"
             },
             "forged": {
-                "fees:" 387586557812,
+                "fees": 387586557812,
                 "rewards": 19779600000000,
                 "total": 20167186557812
             }
@@ -67,6 +75,32 @@ GET /api/delegates
 ```
 
 ## Retrieve a delegate
+
+You can query for a specific delegate by username, address, and public key; thus the following queries will result in an identical response. Note that public keys are always known for delegates, as they have previously transmitted a registration transaction. This is not the case for regular wallets.
+
+#### Query by username
+
+```bash
+curl \
+    -H "API-Version: 2" \
+    https://explorer.ark.io:8443/api/delegates/boldninja
+```
+
+#### Query by address
+
+```bash
+curl \
+    -H "API-Version: 2" \
+    https://explorer.ark.io:8443/api/delegates/DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN
+```
+
+#### Query by public key
+
+```bash
+curl \
+    -H "API-Version: 2" \
+    https://explorer.ark.io:8443/api/delegates/022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d
+```
 
 ### Endpoint
 
@@ -107,7 +141,7 @@ GET /api/delegates/{id}
             "productivity": "0.00"
         },
         "forged": {
-            "fees:" 387586557812,
+            "fees": 387586557812,
             "rewards": 19779600000000,
             "total": 20167186557812
         }
@@ -116,6 +150,9 @@ GET /api/delegates/{id}
 ```
 
 ## List all blocks of a delegate
+
+The `delegate` resource allows you to obtain blocks from a specific Delegate. This is the equivalent of [searching for blocks](/api/public/v2/blocks.html#search-all-blocks) using the `generatorPublicKey`.
+
 
 ### Endpoint
 
@@ -183,7 +220,9 @@ GET /api/delegates/{id}/blocks
 }
 ```
 
-## List all voters of a delegate
+## List all Voters of a Delegate
+
+Obtaining the voters of a Delegate is trivial as well. This endpoint returns **active** voters. To acquire historical voters, it is better to query the database directly.
 
 ### Endpoint
 
@@ -233,6 +272,8 @@ GET /api/delegates/{id}/voters
 
 ## List all voter balances of a delegate
 
+If you only require the balance of each voter; this endpoint requires fewer resources and is thus more performant.
+
 ### Endpoint
 
 ```
@@ -251,15 +292,17 @@ GET /api/delegates/{id}/voters/balances
 {
     "data": 
         {
-            "DKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Z": 830302556723, 
+            "DKahhVFVJfqCcCmaQHuYzAVFKcWjBu5i6Z": 830302556723,
             "DG92jj4vUW7SyxzM1VzkmQWMmgBGZVhrjb": 546053124588,
-            "DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK": 35723441610, 
+            "DN8nGwcNbE3YcnZYFp8uvvc9z4WWDbytWK": 35723441610,
             "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3": 3223337074367
         }
 }
 ```
 
-## Search for a delegate
+## Search for a Delegate
+
+Searching for a Delegate is currently only possible by username; for analytical purposes, direct database queries allow for more fine-grained control.
 
 ### Endpoint
 
@@ -267,7 +310,7 @@ GET /api/delegates/{id}/voters/balances
 POST /api/delegates/search
 ```
 
-### Path Parameters
+### Query Parameters
 
 | Name     | Type   | Description                                     | Required           |
 | -------  |:------:|-------------------------------------------------|:------------------:|
@@ -296,31 +339,31 @@ POST /api/delegates/search
    }, 
    "data": [
         {
-            "username": "darkgalp", 
+            "username": "darkgalp",
             "address": "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3", 
             "publicKey": "037997a6553ea8073eb199e9f5ff23b8f0892e79433ef35e13966e0a12849d02e3", 
-            "votes": 4635816197288, 
-            "rank": 24, 
+            "votes": 4635816197288,
+            "rank": 24,
             "blocks": {
-                "produced": 20903, 
-                "missed": 297, 
+                "produced": 20903,
+                "missed": 297,
                 "last": {
-                    "id": "13446764355635039339", 
-                    "height": 1087121, 
+                    "id": "13446764355635039339",
+                    "height": 1087121,
                     "timestamp": {
-                        "epoch": 56387658, 
-                        "unix": 1546488858, 
+                        "epoch": 56387658,
+                        "unix": 1546488858,
                         "human": "2019-01-03T04:14:18.000Z"
                         }
                  }
-            }, 
+            },
             "production": {
-                "approval": 0.04, 
+                "approval": 0.04,
                 "productivity": 98.6
-            }, 
+            },
             "forged": {
-                "fees": 246004413320, 
-                "rewards": 4142200000000, 
+                "fees": 246004413320,
+                "rewards": 4142200000000,
                 "totat": 4388204413320
             }
         }

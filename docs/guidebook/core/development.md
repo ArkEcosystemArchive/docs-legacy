@@ -10,7 +10,7 @@ title: "Development"
 
 Ark Core is now written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages.
 
-These tools make it easy for us to setup the development environment, everything is handled by scripts provided in the Core's `package.json` file.
+These tools make it easy for us to set up the development environment, everything is handled by scripts provided in the Core's `package.json` file.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ cd core
 
 For example, the `.nvmrc` file located at `core/.nvmrc` will tell us which version of node we should use for development.
 
-If you don't have NodeJS and npm installed, the simplest way to manage both is through following instructions on [how to setup nvm for your platform](https://github.com/creationix/nvm).
+If you don't have NodeJS and npm installed, the simplest way to manage both is through following instructions on [how to set up nvm for your platform](https://github.com/creationix/nvm).
 
 Note that the command to install the appropriate version of NodeJS and npm through nvm is:
 
@@ -43,7 +43,7 @@ npm i -g yarn
 
 [Yarn](https://yarnpkg.com) is the package manager used by Ark Core, it replaces npm from here on out.
 
-With yarn installed globally, we can proceed to setup the Ark Core repository.
+With yarn installed globally, we can proceed to set up the Ark Core repository.
 
 Before we install all the JavaScript and TypeScript packages, we need to make sure we are on the develop branch.
 
@@ -55,7 +55,7 @@ git checkout develop
 ```
 This will ensure that your local files reflect those of the Core's development branch.
 
-Finally, we can setup the entire repository with one command:
+Finally, we can set up the entire repository with one command:
 ```bash
 yarn setup
 ```

@@ -8,7 +8,8 @@ This is the Ark Ecosystem Developer Guidebook. After reading this, you'll be rea
 
 Use the sidebar to navigate this section, or follow the links below:
 
-* [ARK Core](/guidebook/core/)
-* [ARK Core - Plugins](/guidebook/core/plugins/)
+* [Getting Started](/guidebook/developer/setup-dev-environment.html)
+* [Core](/guidebook/core/)
+* [Core - Plugins](/guidebook/core/plugins/)
+* [Other Products](/guidebook/guides/mobile.html)
 * [Contribution Guidelines](/guidebook/contribution-guidelines/)
-* [Developer Guides](/guidebook/guides/)

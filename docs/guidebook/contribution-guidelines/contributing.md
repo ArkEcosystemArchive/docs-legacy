@@ -36,7 +36,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 - **Do** send pull requests that improve code readability.
 
-- **Don't** send pull requests that improve code readability to your liking. _Following the standards that are specified in the project. Should you have questions, refer to the [contribution guides](/guidebook/guides/)._
+- **Don't** send pull requests that improve code readability to your liking. *Following the standards that are specified in the project. Should you have questions, refer to the currently existing codebases, or contact us on [slack](https://ark.io/slack).*
 
 - **Do** send pull requests that improve stability.
 

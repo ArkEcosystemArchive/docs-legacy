@@ -13,4 +13,4 @@ The functionality of Ark API is split into two SDKs: Client and Cryptography.
 
 If your application doesn't involve sending transactions, you can most likely build your application using the Client SDK alone. Otherwise, applications looking to leverage the full spectrum of Ark APIs should make use of both Client and Cryptography SDKs.
 
-Usage guides are included for each supported language, and examples of how to use these libraries can be found in the [Cookbook](/cookbook/).
+Usage guides are included for each supported language, and examples of how to use these libraries can be found in the [tutorials](/tutorials/).

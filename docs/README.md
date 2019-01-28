@@ -29,21 +29,21 @@ In this section we describe the software components of the Ark Ecosystem. We foc
 [*Contribution Guidelines*](/guidebook/contribution-guidelines/) details the process for contributing to Ark Ecosystem software. Reading this section also helps to understand the coding styles and practices that inform development across the Ecosystem.
 [*Guides*](/guidebook/guides/) offers software-specific information on how to develop for Ark Ecosystem. From running your first test suite to submitting pull requests for your code's inclusion into Ark itself, this is the section to read if you're a developer looking to get involved.
 
-### [The Ark Ecosystem Cookbook](/cookbook/)
+### [The Ark Ecosystem tutorials](/tutorials/)
 
-The counterpart to the Guidebook, the Cookbook contains practical code snippets and "recipes" (tutorials) to help developers write productive code with the Ark Ecosystem as quickly as possible. We'll always provide context for the code we post here, so you'll have the convenience of copy-and-paste and the knowledge to strike your own path when necessary.
+The counterpart to the Guidebook, the tutorials contains practical code snippets and guides to help developers write productive code with the Ark Ecosystem as quickly as possible. We'll always provide context for the code we post here, so you'll have the convenience of copy-and-paste and the knowledge to strike your own path when necessary.
 
-[*Usage Guides*](/cookbook/usage-guides/) describe how to use the various Ark packages, including:
-1. [Desktop Wallet](/cookbook/usage-guides/how-to-use-ark-desktop-wallet.html)
-2. [Mobile Wallet](/cookbook/usage-guides/how-to-use-ark-mobile-wallet.html)
-3. [Explorer](/cookbook/usage-guides/how-to-use-ark-explorer.html)
+[*Usage Guides*](/tutorials/usage-guides/) describe how to use the various Ark packages, including:
+1. [Desktop Wallet](/tutorials/usage-guides/how-to-use-ark-desktop-wallet.html)
+2. [Mobile Wallet](/tutorials/usage-guides/how-to-use-ark-mobile-wallet.html)
+3. [Explorer](/tutorials/usage-guides/how-to-use-ark-explorer.html)
 
-[*Deployer*](/cookbook/deployer/) is the place to go for code snippets and tutorials related to building your own blockchain. We cover setting up your blockchain and deploying it to major cloud hosting service providers.
+[*Deployer*](/tutorials/deployer/) is the place to go for code snippets and tutorials related to building your own blockchain. We cover setting up your blockchain and deploying it to major cloud hosting service providers.
 [*Exchanges*](/exchanges/) is where developers for cryptocurrency exchanges can find information on how to integrate the ARK coin into their platforms. Though we cannot make any guarantees about the codebases of any projects besides the ARK coin, this recipe should serve as a good starting point for integrating Ark BridgeChain coins as well.
 
 ### [Ark API](/api/)
 
-This section describes the structure of all Ark APIs, as well as usage examples. After you've read the Guidebook and Cookbook, this section should be the first place you turn to find out how to interact with the Ark Ecosystem software.
+This section describes the structure of all Ark APIs, as well as usage examples. After you've read the Guidebook and tutorials, this section should be the first place you turn to find out how to interact with the Ark Ecosystem software.
 
 [*Public API*](/api/public/) describes the API that's accessible through any Ark node. API references for Ark v1 and v2 are included.
 The [*SDK*](/sdk/) section includes information on how to use any of the Ark API wrappers we've written for supercharged development in your language of choice. Currently, the following SDKs are available:

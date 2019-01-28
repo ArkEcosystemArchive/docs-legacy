@@ -10,20 +10,6 @@ module.exports = [
     ]
   },
   {
-    title: "API 1.0",
-    collapsable: false,
-    children: [
-      ['/api/public/v1/', 'Getting Started'],
-      ['/api/public/v1/accounts', 'Accounts'],
-      ['/api/public/v1/blocks', 'Blocks'],
-      ['/api/public/v1/delegates', 'Delegates'],
-      ['/api/public/v1/loader', 'Loader'],
-      ['/api/public/v1/peers', 'Peers'],
-      ['/api/public/v1/signatures', 'Signatures'],
-      ['/api/public/v1/transactions', 'Transactions'],
-    ]
-  },
-  {
     title: "API 2.0",
     collapsable: false,
     children: [

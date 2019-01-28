@@ -8,7 +8,9 @@ On this page, you will find all the details necessary for writing compliant docu
 
 ## Style Guide
 
-As Ark originates from an online community, different writing styles have been used in official and community writings. It is important to have a uniform style across our documentation to avoid misunderstandings and provide consistency to developers.
+As Ark originates from an online community, different writing styles have been used in formal and community writings. It is important to have a uniform style across our documentation to avoid misunderstandings and provide consistency to developers.
+
+Writing documentation is quite simple, often the last 10% of a project. Regardless the last 10% can consume 90% of the effort. Proper documentation requires fluency in English and a well thought out objective. Ark's documentation is written for the semi-knowledgeable. However, beginners should be able to follow most of the tutorials and learn from the docs. Well documented, average software is more usable than poorly documented, fantastic software.
 
 ### Language
 
@@ -21,7 +23,12 @@ Use a clear, semi-formal tone in writing. There is no need to go as far as acade
 - Long sentences without an objective are confusing. There is no need to use extra adjectives to increase sentence length or illustrate a concept. Remember that just as with code; documentation comes with a burden of maintenance.
 - Reuse definitions. In fintech and blockchain, we often use words such as *blocks*, *transactions*, *crypto*. While writing documentation, the use of these definitions might seem repetitive; however, these are familiar concepts and leave little room for interpretation to the reader.
 - Grammar is important. It reflects the professionalism of the entire project.
-- Code examples should be correct. If you provide a code snippet, showing how to use a function, ensure that the reader knows what has been omitted. Start a tutorial with the setup code, imports, and installations before the main body. Ensure the code uses correct namespaces. When documenting a library, use the library as if you were an end-user:
+- Use proper punctuation, in tables, captions, and citations. Titles should use [title casing](https://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html).
+- Avoid using abbreviations.
+
+## Code snippets
+
+In tutorials and descriptions, we often have code snippets present to illustrate SDK functionalities. If you provide a code snippet, showing how to use a function, ensure that the reader knows what has been omitted. Start a tutorial with the setup code, imports, and installations before the main body. Ensure the code uses correct namespaces. When documenting a library, use the library as if you were an end-user:
 
 Do not use the following:
 
@@ -29,7 +36,7 @@ Do not use the following:
 client := New()
 ```
 
-But instead:
+However, instead:
 
 ```go
 package main
@@ -43,10 +50,103 @@ func main() {
 
 In following snippets, the package and import declarations may be omitted. Avoid using `...` to indicate an omitted fragment; it should be apparent to the reader without such indicators.
 
-- Use proper punctuation, in tables, captions, and citations. Titles should use [title casing](https://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html).
-- Avoid using abbreviations.
-  
-Although it is sometimes better not to document something than to poorly document it, do not let the guidelines intimidate you. These rules are advisory.
+If a code snippet is relevant in multiple languages, create tabs for all languages, even if you do not intend to write the code snippet in the other languages. This makes it very obvious to the reader and us that the documentation needs to be improved/updated. Tabs should be ordered as follows:
+
+:::: tabs
+
+::: tab javascript
+
+Javascript is placed in the front, as it is widely used, and the primary language used in Ark.
+
+:::
+
+::: tab java
+
+Java is often used by exchanges and institutions and remains one of our most widely used SDKs.
+
+:::
+
+::: tab .NET
+
+Bittrex is built on top of the .NET stack, and just as with Java, C# is also used within companies.
+
+:::
+
+::: tab php
+
+PHP is a conventional programming language. We also support two dedicated PHP frameworks.
+
+:::
+
+::: tab python
+
+Python is an academic language. Ark aims to collaborate with Universities and researchers.
+
+:::
+
+::: tab golang
+
+Go is the language of the distributed stack, and many blockchain developers are familiar with it.
+
+:::
+
+::: tab C++
+
+The Bitcoin protocol was written using C++, need I say more?
+
+:::
+
+::: tab ruby
+
+Ruby, powered by Rails, is a great tool for developing backends.
+
+:::
+
+::: tab swift
+
+Apple's official language. Currently not used in the Ark mobile wallet.
+
+:::
+
+::: tab rust
+
+Just a great language, if only I managed to compile my `tokio` server.
+
+:::
+
+::: tab elixir
+
+Functional languages are gaining popularity and might model the blockchain state transitions quite well.s
+
+:::
+
+::::
+
+A tab may contain a code snippet, but also language-specific explanations. Attempt to keep each tab the same size, to avoid screen jumps when the user switches between tabs.
+
+When using a bash command, prepend the command with `$` only if the output is shown as well. The terminal output should be put inside a code block, not added as a screenshot. In general, text should remain text.
+
+This example is correct:
+
+```bash
+$ echo output
+
+output
+```
+
+This variant is acceptable too:
+
+```bash
+echo hello
+```
+
+However, this is incorrect:
+
+```bash
+$ echo hello
+```
+
+Most markdown linters will warn you of these common issues.
 
 ## Terminology
 
@@ -64,41 +164,23 @@ For example, the most basic form of this is writing "Ark Ecosystem"; this can be
 
 Both are acceptable.
 
-Here is a list of officially recognized terms and the proper way to use each of them:
-
- - CONCEPTS
-   - **Ark Ecosystem**:  *"Writing documentation for the Ark Ecosystem"*
-   - **Ark Community**: *"Ark Community members offer advice on the Slack channel"*
-   - **Ark Team**: *"Being a member of the Ark Team"*
-   - **BridgeChain**: *"I launched a cool BridgeChain with Ark Deployer on Azure"*
-   - **SmartBridge**: *"It's time to read data from the SmartBridge field of the freshly gathered transaction"*
- - PROJECTS
-   - **Ark Core**: *"Ark Core is dubbed v2"*
-   - **Ark Node**: *"The Ark blockchain software Ark Node is being deprecated"*
-   - **Ark Explorer**: *"View your Ark address' transaction history with the help of the Ark Explorer"*
-   - **Ark Mobile Wallet**: *"Ark Mobile is available for both Android and iOS"*
-   - **Ark Desktop Wallet**: *"Use the Ark Desktop client if using Windows, MacOS or Linux"*
-   - **AIPs, Ark Improvement Proposals**: *"I'm rolling in all these AIPs (Ark Improvement Proposals)"*
-   - **Ark (LANG) Crypto**: *"The Ark JS Crypto documentation needs some love!"*
-   - **Ark (LANG) Client**: *"I'm using the Ark PHP Client as my API client"*
-   - **Ark Deployer**: *"You can use Ark Deployer to launch your BrideChain"*
-
-The specific terms above SHOULD be capitalized to prevent reader confusion.
+A complete list of definitions is found in the [glossary](/glossary/).
 
 For certain cases (docs, website, forum), it is acceptable to use the actual URL subdomain.domain.tld format if it's intuitive:
 
- - *"Find all relevant information on the [docs.ark.io](https://docs.ark.io)"*
- - *"Blog, Forums, Roadmap and more can be found at the [ark.io](https://ark.io) website"*
- - *"I love the community over at the [forum.ark.io](https://forum.ark.io)"*
+- *"Find all relevant information on the [docs.ark.io](https://docs.ark.io)"*
+- *"Blog, Forums, Roadmap and more can be found at the [ark.io](https://ark.io) website"*
+- *"I love the community over at the [forum.ark.io](https://forum.ark.io)"*
 
 :::danger
 When talking about Ark's native currency, you MUST refer to it as ARK - it is commonly used as the currency ticker on exchanges and within Ark Ecosystem projects like the Ark Desktop Wallet and Ark Explorer. The currency symbol for ARK is "Ѧ". It can be represented with the decimal Unicode 1126 or "\&#1126;" in HTML.
 :::
+
 Generic terms like "address", "wallet", "transaction", "delegate", "vote", "blockchain", "currency" SHOULD NOT be capitalized, alongside the three above terms which mainly refer to concepts and not necessarily rigid implementations.
 
 The scopes of each category might change to include or exclude new or old concepts at any given time, due to the continually evolving Ark (Ecosystem) landscape.
 
-Although it would be ideal, not all documents can afford to only mention Ark's projects and concepts.
+Although it would be ideal, not all documents can afford only to mention Ark's projects and concepts.
 
 We encourage you always to follow other projects' standards for writing about them when you mention them in a document:
 
@@ -135,23 +217,29 @@ If writing a document for an Ark project, like the Ark Mobile Wallet, you MUST u
 
 When needing to use official Ark imagery, you may find suitable media assets at [ark.io/mediakit](https://ark.io/mediakit). Otherwise, you are encouraged to design your images, use external images with proper attribution in as references or outsource the graphical design task to someone else.
 
+When writing technical guides; do not take screenshots of the console. Add the textual output from commands as code snippets, either using the `bash` tag or omitting the tag altogether. Screenshots are difficult to update, requiring the maintainers to go through the guide step-by-step.
+
 ## References
 
 Here you can find an example list of references.
 
 Please use this template for every document which has any reference at all:
 
-> - **Ark Core**: [https://github.com/arkecosystem/core](https://github.com/arkecosystem/core)
-> - **Ark Node**: [https://github.com/arkecosystem/ark-node](https://github.com/arkecosystem/ark-node)
-> - **Ark Explorer**: [https://github.com/arkecosystem/explorer](https://github.com/arkecosystem/explorer)
-> - **Ark Mobile Wallet**: [https://github.com/arkecosystem/mobile-wallet](https://github.com/arkecosystem/mobile-wallet)
-> - **Ark Desktop Wallet**: [https://github.com/arkecosystem/desktop-wallet](https://github.com/arkecosystem/desktop-wallet)
-> - **AIPs, Ark Improvement Proposals**: [https://github.com/arkecosystem/aips](https://github.com/arkecosystem/aips)
-> - **Ark (LANG) Client**: [https://github.com/arkecosystem/php-client](https://github.com/arkecosystem/php-client) There are many implementations, all named with the same convention. Replace the programming language for a different implementation
-> - **Ark (LANG) Crypto**: [https://github.com/arkecosystem/php-crypto](https://github.com/arkecosystem/php-crypto) Same as clients, every client implementation has a related crypto implementation
-> - **Ark Deployer**: [https://github.com/arkecosystem/ark-deployer](https://github.com/arkecosystem/deployer)
-> - **Ark website**: [https://ark.io](https://ark.io)
-> - **Ark documentation**: [https://docs.ark.io](https://docs.ark.io)
-> - **Ark forum**: [https://forum.ark.io](https://forum.ark.io)
-> - **Ark mediakit**: [https://ark.io/mediakit](https://ark.io/mediakit)
-> - **Ark blog**: [https://blog.ark.io](https://blog.ark.io)
+<!-- Generated using https://www.tablesgenerator.com/markdown_tables. It looks bad in .md files, but good ones rendered. -->
+
+| Project                         | Repository                                                                                       | Description                                                                                                              |
+|---------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| Ark Core                        | [https://github.com/arkecosystem/core ](https://github.com/arkecosystem/core )                   | The reference implementation of the Ark Blockchain, also refered to as Ark v2                                            |
+| Ark Node                        | [https://github.com/arkecosystem/ark-node ](https://github.com/arkecosystem/ark-node )           | Deprecated implementation of Ark v1                                                                                      |
+| Ark Mobile Wallet               | [https://github.com/arkecosystem/mobile-wallet ](https://github.com/arkecosystem/mobile-wallet ) | Cross platform mobile wallet built using ionic.                                                                          |
+| Ark Explorer                    | [https://github.com/arkecosystem/explorer ](https://github.com/arkecosystem/explorer )           | Official blockchain explorer, hosted at explorer.ark.io.                                                                 |
+| Ark Desktop Wallet              | [https://github.com/arkecosystem/desktop-wallet](https://github.com/arkecosystem/desktop-wallet) | Cross platform desktop wallet.                                                                                           |
+| AIPs, Ark Improvement Proposals | [https://github.com/arkecosystem/aips](https://github.com/arkecosystem/aips)                     | Proposals related to altering/upgrading Ark. AIP set standards for best practices, implementations and breaking changes. |
+| Ark (LANG) Client               | [https://github.com/arkecosystem/php-client](https://github.com/arkecosystem/php-client)         | Each SDK has its own client repository, used for all API interactions.                                                   |
+| Ark (LANG) Crypto               | [https://github.com/arkecosystem/php-crypto ](https://github.com/arkecosystem/php-crypto )       | As with the client SDKs, there are many crypto SDKs, providing signing and serialization functionalities.                |
+| Ark Deployer                    | [https://github.com/arkecosystem/ark-deployer](https://github.com/arkecosystem/deployer)         | Deployment scripts based on Docker and Vagrant.                                                                          |
+| Ark website                     | [https://ark.io](https://ark.io)                                                                 | The official website hosted at ark.io                                                                                    |
+| Ark documentation               | [https://docs.ark.io ](https://docs.ark.io )                                                     | A complete set of technical documentation on Ark and blockchain.                                                         |
+| Ark forum                       | [https://forum.ark.io ](https://forum.ark.io )                                                   | A self hosted forum.                                                                                                     |
+| Ark mediakit                    | [https://ark.io/mediakit ](https://ark.io/mediakit )                                             | A collection of reusable media assets.                                                                                   |
+| Ark blog                        | [https://blog.ark.io ](https://blog.ark.io )                                                     | One of the official channels of communication between the Ark team and the community.                                    |

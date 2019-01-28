@@ -24,7 +24,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 - **Do** send pull requests that have an issue attached to them. In the body of your request, use `Resolves [link-to-issue]` to indicate the issue you're resolving with your request.
 
-- **Don't** send pull requests without an issue. First open an issue, then send a pull request.
+- **Don't** send pull requests without an issue. First, open an issue, then send a pull request.
 
 - **Do** send pull requests that come from `feat/*` or `bug/*` branches.
 
@@ -36,7 +36,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 - **Do** send pull requests that improve code readability.
 
-- **Don't** send pull requests that improve code readability to your own liking. _Following the standards that are specified in the project. Should you have questions, refer to the [contribution guides](/guidebook/guides/)._
+- **Don't** send pull requests that improve code readability to your liking. *Follow the standards that are specified in the project. Should you have questions, refer to our existing codebases, or contact us on [slack](https://ark.io/slack).*
 
 - **Do** send pull requests that improve stability.
 
@@ -48,9 +48,9 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 ## Issues & Pull Requests
 
-When you think your contribution is ready and you would like to submit a pull-request, remember to first open an issue and then send a pull-request that mentions the issue by making use of https://help.github.com/articles/closing-issues-using-keywords/.
+When you think your contribution is ready and you would like to submit a pull-request, remember first to open an issue and then send a pull request that mentions the issue by making use of [closing-issues-using-keywords](https://help.github.com/articles/closing-issues-using-keywords/).
 
-When your pull-request gets merged the issue will be automatically closed and a connection be made between those two which makes it easier to figure out which issues and pull-requests are related to each other.
+When your pull request gets merged the issue will be automatically closed, and a connection be made between those two which makes it easier to figure out which issues and pull requests are related to each other.
 
 ## Things we DO NOT accept as additions to any applications or packages
 

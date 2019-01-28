@@ -8,14 +8,14 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 ## Structure
 
-Repositories across an organisation should have a consistent basic structure to make it easy to find everything across different repositories.
+Repositories across an organization should have a consistent basic structure to make it easy to find everything across different repositories.
 
 **At a bare minimum a repository should contain the following:**
 
 1. **README.md** - Should contain at least a description, installation instructions and a contact address for security issues.
 2. **LICENSE** - Should contain the software license of the project, commonly the MIT License for open-source projects.
-3. **.editorconfig** - Should contain a configuration that is enforced by everyones editor if an appropriate plugin is installed.
-4. **.gitignore** - Should contain a list of files and directories that should not be commited with `git push`.
+3. **.editorconfig** - Should contain a configuration that is enforced by everyone's editor if an appropriate plugin is installed.
+4. **.gitignore** - Should contain a list of files and directories that should not be committed with `git push`.
 5. **.travis.yml** - Should contain a configuration for TravisCI to run tests.
 
 ## Development
@@ -28,15 +28,15 @@ Once the initial implementation is done and merged, only squash merging should b
 
 **When working on any project all pull-requests must be squashed.**
 
-The goal of doing so first and foremost is to keep PRs small and focused on a single issue. If you think to yourself `all my hard work and organized commits are going to be lost` then your PR is most likely out of scope and trying to solve more then one issue at a time which means you should split it up into multiple PRs that are meaningful even after being squashed.
+The goal of doing so first and foremost is to keep PRs small and focused on a single issue. If you think to yourself: *"all my hard work and organized commits are going to be lost"*, then your PR is most likely out of scope and trying to solve more then one issue at a time which means you should split it up into multiple PRs that are meaningful even after being squashed.
 
 Another benefit of squashing is to have a clean & flat git history which allows to easily blame changes without having to go through 100 commits to finally reach what you were looking for.
 
 **We only care about the net effect of the pull-requests, i.e. "feat: wallet integration". We don't care about the 30 commits of "bugfix, added, removed, refactored". We want a clear and concise history without any noise.**
 
-## How to label and organise GitHub Issues & Pull Requests
+## How to label and organize GitHub Issues & Pull Requests
 
-In order to make everyones life easier when looking for issues or pull requests of specific types, priority or severity it is important to make proper use of labels so it is possible to identify the status and importance without having to look into it.
+To make everyone's life easier when looking for issues or pull requests of specific types, priority or severity it is important to make proper use of labels so it is possible to identify the status and importance without having to look into it.
 
 **Notes**
 
@@ -52,10 +52,10 @@ In order to make everyones life easier when looking for issues or pull requests 
     - Custom reward at the discretion of the team, for large projects or changes.
 
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Tier 1`
-    - Awarded for big features, important fixes or great improvements. This is valued at 100 USD.
+    - Awarded for big features, important fixes or significant improvements. This is valued at 100 USD.
 
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Tier 2`
-    - Awarded for performance, minor features or large documentation changes. This is valued at 50 USD.
+    - Awarded for performance, minor features or substantial documentation changes. This is valued at 50 USD.
 
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Tier 3`
     - Awarded for code refactoring, moderate docs changes or full translations. This is valued at 25 USD.
@@ -88,13 +88,13 @@ In order to make everyones life easier when looking for issues or pull requests 
 
 
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Challenging`
-    - The issue requires extensive understanding of the code base.
+    - The issue requires an extensive understanding of the code base.
 
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Advanced`
-    - The issue requires advanced understanding of the code base.
+    - The issue requires an advanced understanding of the code base.
 
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Intermediate`
-    - The issue requires basic understanding of the code base.
+    - The issue requires a basic understanding of the code base.
 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Beginner`
     - The issue doesn't require any specific knowledge about the code base.
@@ -175,16 +175,16 @@ In order to make everyones life easier when looking for issues or pull requests 
     - The issue has been resolved.
 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Owner Approved`
-    - The pull request has been approved by a code owner.
+    - A code owner has approved the pull request.
 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Member Approved`
-    - The pull request has been approved by a member.
+    - A member has approved the pull request.
 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Collaborator Approved`
-    - The pull request has been approved by a collaborator.
+    - A collaborator has approved the pull request.
 
 - ![#007700](https://placehold.it/15/007700/000000?text=+) `Contributor Approved`
-    - The pull request has been approved by a contributor.
+    - A contributor has approved the pull request.
 
 - ![#043a96](https://placehold.it/15/043a96/000000?text=+) `Accepted`
     - The proposed solution has been accepted.
@@ -205,7 +205,7 @@ In order to make everyones life easier when looking for issues or pull requests 
     - The pull request is blocked from being merged for the time being.
 
 - ![#ff9900](https://placehold.it/15/ff9900/000000?text=+) `Cannot Reproduce`
-    - The issue cannot be reproduced by a developer of the team.
+    - A developer of the team cannot reproduce the issue.
 
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Reverted`
     - The pull request was reverted after an initial merge.
@@ -274,16 +274,16 @@ In order to make everyones life easier when looking for issues or pull requests 
     - The issue or pull request is a duplicate of another feature request or bug report.
 
 - ![#c7def8](https://placehold.it/15/c7def8/000000?text=+) `Expected Behaviour`
-    - The issue is a bug report but the behaviour is intended.
+    - The issue is a bug report, but the behavior is intended.
 
 - ![#b60205](https://placehold.it/15/b60205/000000?text=+) `Breaking Change`
     - The issue or pull request documents or introduces a breaking change.
 
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bug`
-    - The issue relates to broken or incorrect behaviour.
+    - The issue relates to broken or incorrect behavior.
 
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Bugfix`
-    - The pull request fixes an incorrect functionality or behaviour.
+    - The pull request fixes an incorrect functionality or behavior.
 
 - ![#e11d21](https://placehold.it/15/e11d21/000000?text=+) `Regression`
     - The issue is a bug that relates to functionality known to work in previous releases.
@@ -298,13 +298,13 @@ In order to make everyones life easier when looking for issues or pull requests 
     - The issue or pull request relates to documentation.
 
 - ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Information`
-    - The issue contains information for users by a develop of the team.
+    - The issue contains information for users by a developer of the team.
 
 - ![#fef2c0](https://placehold.it/15/fef2c0/000000?text=+) `Question`
     - The issue is more of a question than a request for new features or a report of broken features.
 
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Task`
-    - The issue is a request to setup third-party integrations or any general non-code related tasks.
+    - The issue is a request to set up third-party integrations or any general non-code related tasks.
 
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Good First Contribution`
     - The issue appears to have a simple solution.
@@ -317,29 +317,29 @@ In order to make everyones life easier when looking for issues or pull requests 
 
 ## Assigning Bounty Tiers before merging a Pull Request
 
-Before a developer merges a PR it is *required* to assign one of the 7 bounty labels. Those labels will be used by the _ArkEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
+Before a developer merges a PR, it is *required* to assign one of the seven bounty labels. Those labels will be used by the _ArkEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
 
 **Tier 1 - $100**
 
-Tier 1 pull requests cover large code changes that usually bring new functionality and have a higher impact on the codebase.
+Tier 1 pull requests cover substantial code changes that usually bring new functionality and have a higher impact on the codebase.
 
-Examples of this include a new API endpoint, resolving structural issues that cause circular dependencies, or adding a new bigger features to our codebase (an example would be settings page to the explorer, adding new identicons package to the desktop wallet or a new small non-essential plugin in the Core).
+Examples of this include a new API endpoint, resolving structural issues that cause circular dependencies, or adding new bigger features to our codebase (an example would be settings page to the explorer, adding new indenticon package to the desktop wallet or a new small non-essential plugin in the Core).
 
 **Tier 2 - $50**
 
-This tier covers medium features and improvements to the codebase that bring in new functionality, have a big impact on the performance of the product or biggest optimizations and refactors of the code.
+This tier covers medium features and improvements to the codebase that bring in new functionality, have a big impact on the performance of the product or significant optimizations and refactors of the code.
 
-An example would be optimizing some parts of the Core for improved performance of a specific function, implementing a medium, non-critical new feature in the desktop wallet or writing large documentation files that require understanding of the ARK code.
+An example would be optimizing some parts of the Core for improved performance of a specific function, implementing a medium, non-critical new feature in the desktop wallet or writing large documentation files that require an understanding of the ARK code.
 
 **Tier 3 - $25**
 
 These pull requests cover smaller refactors or optimizations of the code or small non-essential features.
 
-An example of this would be reducing complexity or improving performance of existing code, improving the readability of the code or writing new documentation files, full translations of the projects aka desktop wallet or mobile wallet.
+An example of this would be reducing complexity or improving the performance of existing code, improving the readability of the code or writing new documentation files, full translations of the projects aka desktop wallet or mobile wallet.
 
 **Tier 4 - $10**
 
-Normal small tier pull requests that fix small bugs or add a new test.
+Standard small tier pull requests that fix minor bugs or add a new test.
 
 Examples of this include adding more test coverage for existing functionality or resolving small bugs that usually get reported by users.
 
@@ -355,8 +355,8 @@ An example would be a typo, language corrections, grammar corrections, dependenc
 
 **Tier 0 - Custom**
 
-If you want to work on much bigger changes or custom projects that you don’t think fit any of the above tiers contact us at bounty@ark.io.
+If you want to work on much more significant changes or custom projects that you don’t think fit any of the above tiers contact us at bounty@ark.io.
 
-Some examples of what a custom tier 0 could cover — developing new modules for core that bring in new functionalities (PoW module instead of DPoS), different voting systems, proxy voting, implementing AIPs …
+Some examples of what a custom tier 0 could cover — developing new modules for `core` that bring in new functionalities (PoW module instead of DPoS), different voting systems, proxy voting, implementing AIPs …
 
 Some issues will also have labels with custom (usually higher) values that you can take on. Labels on those issues will have a defined monetary value, so if you see these available you can request to take point on resolving them. Upon completion and review you will receive payment in ARK.

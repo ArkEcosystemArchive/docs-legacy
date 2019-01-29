@@ -36,16 +36,10 @@ Ark Core include several `Dockerfile` and `docker-compose.yml` templates to ease
 For instance, you could use this command:
 
 ```bash
-yarn docker ''
-# or
-yarn docker mytoken
+yarn docker ark
 ```
 
 This command creates a new directory (`docker`) that contains 1 folder per network.
-
-::: tip
-As a security precaution, we recommend you build the containers yourself.
-:::
 
 ## Containerize the Persistent Store
 

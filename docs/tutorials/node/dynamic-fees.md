@@ -96,4 +96,4 @@ ARK_MAX_TRANSACTIONS_IN_POOL=100000
 
 ## Restart Your Node
 
-With a node restart, your dynamic fees should be working as intended. Feel free to test this using the utilities in `core-tester-cli` following the process in the [tester cli](https://docs.ark.io/cookbook/developer/tester-cli-transaction.html) recipe.
+With a node restart, your dynamic fees should be working as intended. Feel free to test this using the utilities in `core-tester-cli` following the process in the [tester cli](https://docs.ark.io/tutorials/developer/tester-cli-transaction.html) recipe.

@@ -54,7 +54,7 @@ Before a transaction is added to the pool, a "pool charge" is made against the s
 
 All nodes broadcast the transactions they receive to their peers through the P2P API. Thus, as your transaction awaits forging, it will be joined in the pool by other uncommitted transactions from across the network.
 
-When deciding on which transactions to include in the block, the transaction pool considers two factors: fee value and pool insertion time. The pool prefers transactions with higher fees and decides between transactions with similar fees by comparing their insertion sequence numbers. These considerations may be configured as described in [dynamic fees](/cookbook/node/dynamic-fees.html).
+When deciding on which transactions to include in the block, the transaction pool considers two factors: fee value and pool insertion time. The pool prefers transactions with higher fees and decides between transactions with similar fees by comparing their insertion sequence numbers. These considerations may be configured as described in [dynamic fees](/tutorials/node/dynamic-fees.html).
 
 ## Enter the Forging Sequence
 

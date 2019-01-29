@@ -46,10 +46,11 @@ const config = {
       "/sdk/": require("./sidebars/sdk"),
       "/faq/": require("./sidebars/faq"),
       "/introduction/": require("./sidebars/introduction"),
-      "/cookbook/": require('./sidebars/cookbook'),
+      "/tutorials/": require('./sidebars/tutorials'),
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
       "/security/": require('./sidebars/security'),
+      "/archive/": require('./sidebars/archive'),
       "/": require('./sidebars/main'),
     },
     //algolia: {

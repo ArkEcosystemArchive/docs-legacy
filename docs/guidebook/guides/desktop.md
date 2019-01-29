@@ -15,7 +15,7 @@ title: "Ark Desktop Wallet v2.x.x"
 Collaborate with other translators on [our Transifex project](https://www.transifex.com/ark-ecosystem/ark-desktop-wallet/) and help us get wallet translated in other languages.
 
 ### More information
-[Detailed overview of the Desktop Wallet](/cookbook/usage-guides/how-to-use-ark-desktop-wallet.md)
+[Detailed overview of the Desktop Wallet](/tutorials/usage-guides/how-to-use-ark-desktop-wallet.md)
 
 ## Build
 

@@ -18,7 +18,7 @@ The `master` branch should be looked at as the `stable` branch. This branch shou
 
 ### develop
 
-The `develop` branch should be looked at as the `beta` branch. This branch should periodically be merged into `master` after thorough testing. **All pull-requests must be send to this branch.**
+The `develop` branch should be looked at as the `beta` branch. This branch should periodically be merged into `master` after thorough testing. **All pull-requests must be sent to this branch.**
 
 ### staging
 
@@ -36,7 +36,7 @@ The `master` branch should be looked at as the `stable` branch. This branch shou
 
 ### develop
 
-The `develop` branch should be looked at as the `beta` branch. This branch should periodically be merged into `master` after thorough testing. **All pull-requests must be send to this branch.**
+The `develop` branch should be looked at as the `beta` branch. It is periodically merged into `master` after thorough testing. **All pull-requests must be sent to this branch.**
 
 ### versioned (x.x.x)
 

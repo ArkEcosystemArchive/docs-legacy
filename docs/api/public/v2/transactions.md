@@ -4,7 +4,11 @@ title: Public Transactions API
 
 # Public Transactions API
 
+Transactions are signed, serialized payloads; batched together to form a [block](/api/public/v2/blocks.md).
+
 ## Create a transaction
+
+Creating the correct payload for a transaction is non-trivial, as it requires cryptographic functions and a specific serialization protocol. Our [crypto SDKs](/sdk/cryptography/usage.html) provide the functionality needed in most major programming languages.
 
 ### Endpoint
 
@@ -43,6 +47,8 @@ POST /api/transactions
 
 ## Retrieve a transaction
 
+Obtaining a transaction by ID does not require advanced logic; as the API does not return a serialized transaction, but a nicer [DTO](https://en.wikipedia.org/wiki/Data_transfer_object).
+
 ### Endpoint
 
 ```
@@ -79,6 +85,8 @@ GET /api/transactions/{id}
 ```
 
 ## List all transactions
+
+The paginated API is used to query for multiple transactions. You can apply *filters* through the query parameter to search for specific transactions.
 
 ### Endpoint
 
@@ -135,6 +143,8 @@ GET /api/transactions
 ```
 
 ## List all unconfirmed transaction
+
+Unconfirmed transactions have not been incorporated in the blockchain, but reside in the mempool. Although usually the mempool is cleared within minutes, during high network load a transaction with a low fee will live here for a considerable time. If you have set the transaction with a fee of near zero, it might not be picked up by a Delegate and will time out.
 
 ### Endpoint
 
@@ -253,8 +263,9 @@ GET /api/transactions/unconfirmed/
 }
 ```
 
-
 ## Get an unconfirmed transaction
+
+As with confirmed transactions, you may query for unconfirmed transactions directly.
 
 ### Endpoint
 
@@ -294,8 +305,9 @@ GET /api/transactions/unconfirmed/{id}
 
 ```
 
-
 ## Search for transactions
+
+For fine-grained searches, use the `search` endpoint. Note that unless you use specific body parameters, the response might contain a large number of transactions (hundreds of thousands). It is best to filter as many transactions node side, instead of dissecting the response client side.
 
 ### Endpoint
 
@@ -375,6 +387,8 @@ POST /api/transactions/search
 
 ## Get transaction types
 
+The transaction types are network specific. Ark currently supports eight different types, but BridgeChains may define more or less if needed for their business purpose.
+
 ### Endpoint
 
 ```
@@ -399,8 +413,9 @@ GET /api/transactions/types
 }
 ```
 
-
 ## Get transaction fees (non-dynamic)
+
+The static transaction fees are significantly higher than the dynamic transaction fees. Use the [node resource](/api/public/v2/node.html#retrieve-the-configuration) to find dynamic fees, and prefer using these.
 
 ### Endpoint
 

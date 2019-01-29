@@ -4,7 +4,17 @@ title: Public Votes API
 
 # Public Votes API
 
+A vote is a specific type of transaction (type 3). A wallet votes on a different wallet, which has registered itself eligible to become a Delegate. Wallets may vote for themselves.
+
+::: tip
+
+Users are often confused by the voting mechanism and the fee associated with a vote. A Delegate does **not** receive ARK from their voters, nor is the number of blocks they produce proportional to their voting weight.
+
+:::
+
 ## List all votes
+
+All voting transactions may be obtained through this API. This is the equivalent of `transactions/search` with the body parameter `type: 3`.
 
 ### Endpoint
 
@@ -62,6 +72,8 @@ GET /api/votes
 
 ## Retrieve a vote
 
+Votes may be retrieved using their transaction ID. Note the `asset` field, which contains the `votes` object. The first character of each item in the array indicates if it was a vote: `+`, or unvote: `-`, followed by the public key of the Delegate.
+
 ### Endpoint
 
 ```
@@ -102,4 +114,3 @@ GET /api/votes/{id}
     }
 }
 ```
-

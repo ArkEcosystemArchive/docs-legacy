@@ -48,7 +48,7 @@ Security vulnerabilities that usually have no impact on the whole blockchain inf
 
 Examples:
 
-- Things that only affect a subset of nodes (e.g. hardware differences).
+- Things that only affect a subset of nodes (e.g. hardware differences) or inconveniences caused by an active delegate.
 
 Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: https://docs.ark.io/security/contributing/#procedure-for-a-patch
 The size of the bonus is determined at the sole discretion of the Core Developers.
@@ -60,7 +60,7 @@ The size of the bonus is determined at the sole discretion of the Core Developer
 2. Never maliciously initiate an exploit on ARK Public Network, if you need to validate your setup use your own local Ark Network or use Ark Developer Network
 3. To receive the bounty, you must send an in-depth explanation in an email to [security@ark.io](mailto:security@ark.io) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
 
-*Security bounty can fall in higher or lower tier than you anticipated, all our decisions are final. Exploits which make indirect use of already known issues are not eligible for a bounty. Do not take every word literal and examples serve as a basis on what you can expect, but it also depends a lot on circumstances of how you can exploit it. Security vulnerabilities are paid in ARK based on the daily average rate before the payout.*
+*Security bounty can fall in higher or lower tier than you anticipated, all our decisions are final. Exploits which make indirect use of already known issues might not be eligible for a security bounty. Do not take every word literal and examples serve as a basis on what you can expect (it also depends a lot on circumstances of how you can exploit it, what’s the impact and every security vulnerability is evaluated on a case by case basis). Security vulnerabilities are paid in ARK based on the daily average rate before the payout.*
 
 ## Disclaimer
 

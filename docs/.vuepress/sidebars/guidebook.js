@@ -66,6 +66,7 @@ module.exports = [
     collapsable: true,
     children: [
       "/guidebook/bridgechains/",
+      "/guidebook/bridgechains/migrating",
     ]
   },
   {

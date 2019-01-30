@@ -29,7 +29,6 @@ Examples:
 
 - Stopping the network for extended periods of time.
 - Bringing the majority or all delegates offline.
-- Corrupting the nodes' internal state machines
 - Get into the blockchain database - inserting invalid data (transaction, blocks).
 
 ### Medium: $500-$1,500

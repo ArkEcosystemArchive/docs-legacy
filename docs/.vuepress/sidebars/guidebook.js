@@ -62,6 +62,13 @@ module.exports = [
     ]
   },
   {
+    title: "BridgeChains",
+    collapsable: true,
+    children: [
+      "/guidebook/bridgechains/",
+    ]
+  },
+  {
     title: "Other Products",
     collapsable: true,
     children: [

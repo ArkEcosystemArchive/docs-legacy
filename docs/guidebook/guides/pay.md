@@ -1,8 +1,6 @@
----
-title: "Installation"
----
-
 # Pay
+
+This is the reference implementation for Ark Pay, a simple open-source library that provides merchants with the ability to readily accept ARK as a means of payment in online stores.
 
 [[toc]]
 
@@ -15,7 +13,7 @@ yarn add @arkecosystem/pay
 ## Usage with Browsers
 
 ::: warning
-When using this module from a website that requires secure connections via HTTPS (SSL) you will need to specify peers that use HTTPS as browsers will not allow connections from HTTPS to HTTP (Peers). The default for Ark Core is to run the public API on HTTP connections without SSL.
+When using this module from a website that requires secure connections via HTTPS (SSL), you will need to specify peers that use HTTPS as browsers will not allow connections from HTTPS to HTTP (Peers). The default for Ark Core is to run the public API on HTTP connections without SSL.
 :::
 
 Below you can find two of our secure HTTPS (SSL) nodes. If you wish to use them call the below snippets before `gateway.start()`.
@@ -78,7 +76,7 @@ gateway.on('error', data => {
     // React to the error, note that errors are not always critical, etc.
 })
 
-// The "start" method will initialise the transaction listener.
+// The "start" method will initialize the transaction listener.
 await gateway.start()
 ```
 
@@ -108,7 +106,7 @@ await gateway.start()
 .currency('USD')
 ```
 
-### Set the crypto currency of the transfer.
+### Set the cryptocurrency of the transfer.
 
 ```js
 .coin('ARK')

@@ -33,11 +33,4 @@ module.exports = [
       "/tutorials/deployer/faq"
     ]
   },
-  {
-    title: "Pay",
-    collapsable: false,
-    children: [
-      "/tutorials/pay/installation",
-    ]
-  }
 ];

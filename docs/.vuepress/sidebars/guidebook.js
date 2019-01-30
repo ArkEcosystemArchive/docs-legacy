@@ -73,6 +73,7 @@ module.exports = [
     title: "Other Products",
     collapsable: true,
     children: [
+      "/guidebook/guides/",
       "/guidebook/guides/mobile",
       "/guidebook/guides/desktop",
       "/guidebook/guides/explorer",

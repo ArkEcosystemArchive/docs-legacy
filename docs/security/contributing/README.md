@@ -23,7 +23,7 @@ However, over time such patches become cumbersome, difficult to maintain or are 
 
 ## Procedure for a Patch
 
-To be eligible for the [rewards program](/security/discovering/public-disclosure.md) and the 50% bonus, ensure your patch satisfies the following conditions:
+To be eligible for the [rewards program](/security/discovering/public-disclosure.md) and a bonus of up to 50%, ensure your patch satisfies the following conditions:
 
 1. It describes the vulnerability in depth, including the cause and possible solutions. Do not forget to support your choice of a particular solution.
 2. Complies with all Ark coding standards.

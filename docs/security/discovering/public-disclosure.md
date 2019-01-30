@@ -18,7 +18,7 @@ Examples:
 - Replaying the same transaction multiple times without the need of private keys.
 - Exposing private keys via public methods.
 - Taking control of the entire network.
-- Permanently forking the network or a way to permanently destroy the integrity of the ARK blockchain without requiring an active delegate participation. 
+- Permanently forking the network or a way to permanently destroy the integrity of the ARK blockchain without requiring a malicious delegate. 
 
 
 ### High: $2,000-$3,000
@@ -48,9 +48,9 @@ Security vulnerabilities that usually have no impact on the whole blockchain inf
 
 Examples:
 
-- Things that only affect a subset of nodes (e.g. hardware differences) or inconveniences caused by an active delegate.
+- Things that only affect a subset of nodes (e.g. hardware differences) or inconveniences caused by a malicious delegate.
 
-Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: https://docs.ark.io/security/contributing/#procedure-for-a-patch
+Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: https://docs.ark.io/security/contributing/#procedure-for-a-pach
 The size of the bonus is determined at the sole discretion of the Core Developers.
 
 

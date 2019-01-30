@@ -10,13 +10,16 @@ We know that software will always have flaws that are hard to notice initially. 
 
 ### Critical: $5,000-$10,000
 
-Encompasses critical vulnerabilities related to network control and chain integrity.
+The worst of the worst security vulnerabilities related to funds or taking control of the network that need to be addressed and fixed ASAP.
 
-Examples:
+Examples: 
+- Making ARK out of thin air.
+- Spending someone else’s ARK without the need of their private keys
+- Replaying the same transaction multiple times without the need of private keys.
+- Exposing private keys via public methods.
+- Taking control of the entire network.
+- Permanently forking the network or a way to permanently destroy the integrity of the ARK blockchain without requiring an active delegate participation. 
 
-- Creation of ARK outside of the scheduled forged inflation.
-- Replay attacks on spent transactions
-- Attacking node consensus and forking the network semi-permanently.
 
 ### High: $2,000-$3,000
 
@@ -26,7 +29,8 @@ Examples:
 
 - Stopping the network for extended periods of time.
 - Bringing the majority or all delegates offline.
-- Corrupting the nodes' internal state machines.
+- Corrupting the nodes' internal state machines
+- Get into the blockchain database - inserting invalid data (transaction, blocks).
 
 ### Medium: $500-$1,500
 
@@ -44,17 +48,19 @@ Security vulnerabilities that usually have no impact on the whole blockchain inf
 
 Examples:
 
-- Attacks which only affect single nodes and cannot harm the whole network.
+- Things that only affect a subset of nodes (e.g. hardware differences).
 
-Including a patch with your findings will also make you eligible for an additional 50% increase in reward.
+Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: https://docs.ark.io/security/contributing/#procedure-for-a-patch
+The size of the bonus is determined at the sole discretion of the Core Developers.
+
 
 ## Eligibility
 
 1. Never publicly disclose any exploit or vulnerability.
-2. Never maliciously initiate an exploit on ARK Public Network, if you need to validate your setup use your own local Ark Network.
+2. Never maliciously initiate an exploit on ARK Public Network, if you need to validate your setup use your own local Ark Network or use Ark Developer Network
 3. To receive the bounty, you must send an in-depth explanation in an email to [security@ark.io](mailto:security@ark.io) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
 
-*Security vulnerabilities are paid in ARK based on the daily average rate before the payout as the terms are agreed upon by both parties.*
+*Security bounty can fall in higher or lower tier than you anticipated, all our decisions are final. Exploits which make indirect use of already known issues are not eligible for a bounty. Do not take every word literal and examples serve as a basis on what you can expect, but it also depends a lot on circumstances of how you can exploit it. Security vulnerabilities are paid in ARK based on the daily average rate before the payout.*
 
 ## Disclaimer
 

@@ -298,7 +298,7 @@ Import the snapshot up to the cutoff block:
 (cd packages/core-snapshot-cli && yarn import:devnet -b 0-$CUTOFF_BLOCK_HEIGHT)
 ```
 
-Your blockchain will now be up to the cutoff point. Restart the nodes, either using `start:mainnet` or `relay:mainnet`. The forging process should restart, and your network has been upgraded to `v2`. Pop a bottle of champagne and wipe the sweat of your brow.
+Your blockchain will now be up to the cutoff point. Restart the nodes, either using `start:MyNet` or `relay:MyNet`. The forging process should restart, and your network has been upgraded to `v2`. Pop a bottle of champagne and wipe the sweat of your brow.
 
 ## Considerations
 

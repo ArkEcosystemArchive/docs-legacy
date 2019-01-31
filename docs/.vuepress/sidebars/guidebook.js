@@ -70,6 +70,7 @@ module.exports = [
       "/guidebook/guides/desktop",
       "/guidebook/guides/explorer",
       "/guidebook/guides/core-commander",
+      "/guidebook/guides/pay",
     ]
   },
   {

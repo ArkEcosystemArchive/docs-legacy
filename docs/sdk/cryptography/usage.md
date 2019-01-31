@@ -29,7 +29,7 @@ Yarn can be downloaded [here](https://yarnpkg.com/lang/en/docs/install/#windows-
 #### Installation
 
 ```bash
-$ yarn add @arkecosystem/client
+$ yarn add @arkecosystem/crypto
 ```
 
 :::
@@ -43,7 +43,7 @@ Java may be installed from [Oracle](https://www.java.com/en/download/help/downlo
 #### Gradle
 
 ```bash
-compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.2'
+compile group: 'org.arkecosystem.crypto', name: 'crypto', version: '0.1.2'
 ```
 
 #### Maven
@@ -51,7 +51,7 @@ compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.2'
 ```xml
 <dependency>
   <groupId>org.arkecosystem</groupId>
-  <artifactId>client</artifactId>
+  <artifactId>crypto</artifactId>
   <version>0.1.2</version>
 </dependency>
 ```
@@ -67,19 +67,19 @@ To get started with `C#` and the `.NET` framework, follow the [official guide](h
 #### Package Manager
 
 ```bash
-Install-Package ArkEcosystem.Client -Version 0.2.1
+Install-Package ArkEcosystem.Crypto -Version 0.2.1
 ```
 
 #### .NET CLI
 
 ```bash
-dotnet add package ArkEcosystem.Client --version 0.2.1
+dotnet add package ArkEcosystem.Crypto --version 0.2.1
 ```
 
 #### Paket CLI
 
 ```bash
-paket add ArkEcosystem.Client --version 0.2.1
+paket add ArkEcosystem.Crypto --version 0.2.1
 ```
 
 :::
@@ -95,7 +95,7 @@ Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/ho
 #### Composer
 
 ```bash
-composer require arkecosystem/client
+composer require arkecosystem/crypto
 ```
 
 :::
@@ -117,7 +117,7 @@ For further information on how to install Python on your operating system:
 #### PIP
 
 ```bash
-pip install arkecosystem-client
+pip install arkecosystem-crypto
 ```
 
 :::
@@ -133,7 +133,7 @@ The package can be installed by using the following commands in your terminal:
 #### go get
 
 ```bash
-go get github.com/ArkEcosystem/go-client/client
+go get github.com/ArkEcosystem/go-crypto/crypto
 ```
 
 :::
@@ -147,8 +147,8 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 #### Make
 
 ```bash
-git clone https://github.com/ArkEcosystem/cpp-client
-cd cpp-client
+git clone https://github.com/ArkEcosystem/cpp-crypto
+cd cpp-crypto
 # init & update micro-ecc submodule
 git submodule init
 git submodule update
@@ -198,13 +198,13 @@ Unix & Linux: [rbenv](https://github.com/rbenv/rbenv) and [rvm](http://rvm.io/)
 Add this line to your application's Gemfile and then execute `bundle`.
 
 ```bash
-gem 'arkecosystem-client'
+gem 'arkecosystem-crypto'
 ```
 
 Alternatively, install it from the command line.
 
 ```bash
-gem install arkecosystem-client
+gem install arkecosystem-crypto
 ```
 
 :::
@@ -224,14 +224,14 @@ Swift is the alternative to Object-C by Apple. To get started, head over to the 
 #### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Swift (and Objective-C) Cocoa Projects.
-You can use it to integrate the Ark Swift Client in your project, by adding it to your `Podfile` as follows:
+You can use it to integrate the Ark Swift Crypto in your project, by adding it to your `Podfile` as follows:
 
 ```
-pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '1.0.1'
+pod 'SwiftCrypto', :git => 'https://github.com/ArkEcosystem/swift-crypto.git', :tag => '1.0.1'
 ```
 
 Afterward, install it by running `pod install`.
-You are then able to use it in your project by using `import SwiftClient`.
+You are then able to use it in your project by using `import SwiftCrypto`.
 
 :::
 
@@ -247,7 +247,7 @@ Add the following to your Cargo.toml:
 
 ```
 [dependencies]
-arkecosystem-client = {git = "https://github.com/ArkEcosystem/rust-client", branch = "master" }
+arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", branch = "master" }
 ```
 
 :::
@@ -260,11 +260,11 @@ Elixir can be installed by following [this guide](https://elixir-lang.org/instal
 
 #### Installation
 
-The package can be installed by adding `arkecosystem_client` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `arkecosystem_crypto to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  {:arkecosystem_client, "~> 0.1.0"}
+  {:arkecosystem_crypto, "~> 0.1.0"}
 end
 ```
 

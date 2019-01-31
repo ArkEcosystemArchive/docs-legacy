@@ -1,9 +1,7 @@
 # Migrating from v1 to v2.0
 
 ::: danger
-
 This is an archived guide. `v2.0.X` has been deprecated.
-
 :::
 
 Initially, you might have created your BridgeChain using [Ark Node](https://github.com/ArkEcosystem/ark-node), the official v1 implementation. Now that [Ark Core](https://github.com/arkecosystem/core) (v2) has reached a stable, production-ready release, you will want to upgrade your network.

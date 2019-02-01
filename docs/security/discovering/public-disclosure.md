@@ -45,9 +45,9 @@ Examples:
 
 Security vulnerabilities that usually have no impact on the whole blockchain infrastructure, but can still pose problems for some specific things.
 
-Examples:
-
-- Things that only affect a subset of nodes (e.g. hardware differences) or inconveniences caused by a malicious delegate.
+Examples: 
+- Things that only affect a subset of nodes (e.g. hardware failures caused by an attack when the server satisfies the minimum requirements)
+- Inconveniences caused by a malicious delegate).
 
 Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: https://docs.ark.io/security/contributing/#procedure-for-a-pach
 The size of the bonus is determined at the sole discretion of the Core Developers.

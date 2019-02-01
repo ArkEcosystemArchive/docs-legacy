@@ -49,17 +49,17 @@ The following options are available to all commands:
 
 ## Create A Snapshot
 
-Calling the `create` CLI command prompts your node to create a backup and save it in the data directory specified at runtime. The folder name will follow the format `{data}/snapshots/{network}/{startblock}-{endblock}` and contains `transactions.lite`, `blocks.lite` and `meta.json`.
+Calling the `dump` CLI command prompts your node to create a backup and save it in the data directory specified at runtime. The folder name will follow the format `{data}/snapshots/{network}/{startblock}-{endblock}` and contains `transactions.lite`, `blocks.lite` and `meta.json`.
 
 ### Creating a new snapshot
 
 To create a snapshot, navigate to the `core-snapshots-cli` package and run the following command:
 
 ```bash
-yarn create:devnet
+yarn dump:devnet
 ```
 
-The command will generate snapshot files in your configured folder. By default, this folder will be in `~./ark/snapshots/NETWORK_NAME`. Files names follow the pattern: `{TABLE}.{CODEC}` For example, running `yarn create:devnet` will create the following files in the folder `~./ark/snapshots/devnet/0-331985/`:
+The command will generate snapshot files in your configured folder. By default, this folder will be in `~/.local/share/ark-core/NETWORK_NAME/snapshots`. Files names follow the pattern: `{TABLE}.{CODEC}` For example, running `yarn dump:devnet` will create the following files in the folder `~/.local/share/ark-core/devnet/snapshots/0-331985/`:
 
 - blocks.lite
 - transactions.lite
@@ -67,77 +67,90 @@ The command will generate snapshot files in your configured folder. By default, 
 The codec used can be specified using the `—codec` flag, for example:
 
 ```bash
-yarn create:devnet --codec ark
+yarn dump:devnet --codec ark
 ```
 
 The folder `0-331985` indicates that the snapshot includes data between block 0 and block 331985.
 
 Using the optional `—start` and `—end` flags will specify a lower and uppers bounds for the snapshot, allowing you to customize your backups to your specific needs.
 
-The following options are available when using the `create` command:
+The following options (`--help`) are available when using the `dump` command:
 
-| Alias | Option          | Default | Description                                                |
-|-------|-----------------|---------|------------------------------------------------------------|
-| -s    | —start          |         | Starting network height from which to create the snapshot. |
-| -e    | —end            |         | Ending network height for the snapshot.                    |
-|       | —codec {STRING} |         | Specify a codec by replacing {STRING}.                     |
-| -b    | —blocks         |         | Append to an existing snapshot.                            |
+| Alias | Option            | Default | Description                                     |           
+|-------|-------------------|---------|-------------------------------------------------|
+|       | --blocks=blocks   |         | blocks to append to, correlates to folder name  |
+|       | --codec=codec     |         | codec name, default is msg-lite binary          |
+|       | --config=config   |         | network config                                  |
+|       | --data=data       |         | data directory                                  |
+|       | --end=end         | -1      | end network height to export                    |
+|       | --network=network |         | token network                                   |
+|       | --skipCompression |         | skip gzip compression                           |
+|       | --start=start     | -1      | start network height to export                  |
+|       | --token=token     | ark     | token name                                      |
+|       | --trace           |         | dumps generated queries and settings to console |
+|       | --help            |         | show all available options                      |
 
 ### Append Data to an Existing Snapshot
 
-Appending data to existing snapshots can help manage snapshot size and improve snapshot import speeds. The command is the same as creating a snapshot with an additional parameter for `-b` or `--blocks`. This flag allows you to specify the existing snapshot blocks/folder you want to append to.
+Appending data to existing snapshots can help manage snapshot size and improve snapshot import speeds. The command is the same as creating a snapshot with an additional parameter for `--blocks`. This flag allows you to specify the existing snapshot blocks/folder you want to append to.
 
 To use the `--blocks` flag, provide the `0-331985` blocks number or folder name as an argument:
 
 ```bash
-yarn create:devnet --blocks 0-331985
+yarn dump:devnet --blocks 0-331985
 ```
 
 Note that all appends create new backup folders and leave the original snapshot intact. To preserve hard disk space, remove old backups if you are sure your appended snapshot is valid.
 
-## Importing a snapshot
+## Restoring a snapshot
 
-The `import` command allows you to restore your Ark Core node with data from a backup you previously created.
+The `restore` command allows you to restore your Ark Core node with data from a backup you previously created.
 
-Importing new snapshots **should not be done while your node is still running**, as running a blockchain node without blockchain data can lead to unexpected behavior.
+Restoring new snapshots **should not be done while your node is still running**, as running a blockchain node without blockchain data can lead to unexpected behavior.
 
 Snapshot filename must be specified:
 
 ```bash
-yarn import:devnet -b 0-331985
+yarn restore:devnet --blocks 0-331985
 ```
 
-If you want to import from block 1, e.g., empty database first, you should run the yarn truncate:NETWORK_NAME command.
+If you want to restore from block 1, e.g., empty database first, you should run the yarn truncate:NETWORK_NAME command.
 
 ```bash
 yarn truncate:devnet
 ```
 
-Alternatively, add the `—truncate` flag to the `import` command to truncate and import with one command:
+Alternatively, add the `—truncate` flag to the `restore` command to truncate and restore with one command:
 
 ```bash
-yarn import:devnet -b 0-331985 --truncate
+yarn restore:devnet --blocks 0-331985 --truncate
 ```
 
-By default, the block height is set to last finished round (blocks are deleted at the end). If you have more snapshots files following each other, then you can disable this behavior with the `--skip-revert-round` flag. If this flag is present, block height will not be reverted at the end of import to last completed round.
+By default, the block height is set to last finished round (blocks are deleted at the end). If you have more snapshots files following each other, then you can disable this behavior with the `--skip-revert-round` flag. If this flag is present, block height will not be reverted at the end of restore to last completed round.
 
-If you want to do additional `crypto.verify` check for each block and transaction a flag `--signature-verify` can be added to the import command
+If you want to do additional `crypto.verify` check for each block and transaction a flag `--signature-verify` can be added to the restore command
 
 ```bash
-yarn import:devnet --blocks 0-331985 --truncate --signature-verify
+yarn restore:devnet --blocks 0-331985 --truncate --signature-verify
 ```
 
-Please note that this will increase the import time drastically.
+Please note that this will increase the restore time drastically.
 
-The following options can be added to the `import` command at runtime:
+The following options (`--help`) can be added to the `restore` command at runtime:
 
-| Alias | Option              | Default | Description                                                        |
-|-------|---------------------|---------|--------------------------------------------------------------------|
-| -b    | —blocks             |         | The snapshot to import from.                                       |
-|       | —codec {STRING}     |         | Specify a codec by replacing {STRING}.                             |
-|       | —truncate           |         | Whether the database should be cleared before starting the import. |
-|       | —skip-restart-round | false   | Append to an existing snapshot.                                    |
-|       | —signature-verify   | false   | Verify signatures during import.                                   |
+| Alias | Option              | Default | Description                                                   |
+|-------|---------------------|---------|---------------------------------------------------------------|
+|       | --blocks=blocks     |         | (required) blocks to import, corelates to folder name         |
+|       | --codec=codec       |         | codec name, default is msg-lite binary                        |
+|       | --config=config     |         | network config                                                |
+|       | --data=data         |         | data directory                                                |
+|       | --network=network   |         | token network                                                 |
+|       | --signatureVerify   |         | signature verification                                        |
+|       | --skipCompression   |         | skip gzip compression                                         |
+|       | --skipRestartRound  |         | skip revert to current round                                  |
+|       | --token=token       | ark     | token name                                                    |
+|       | --trace             |         | dumps generated queries and settings to console               |
+|       | --truncate          |         | empty all tables before running import                        |
 
 ## Verify Existing Snapshot
 
@@ -164,12 +177,12 @@ The `rollback` command can be used to roll your blockchain database back to a sp
 The following command will rollback the chain to block height of 350000:
 
 ```bash
-yarn rollback:devnet -b 350000
+yarn rollback:devnet --height 350000
 ```
 
-If the `-b` or `--block-height` argument is not set, the command will rollback the chain to the last completed round.
+If the `--height` argument is not set, the command will rollback the chain to the last completed round.
 
-Rollback command also makes a backup of forged transactions, ensuring that no local history is accidentally deleted in a rollback. Transactions are stored next to the snapshot files (in `./ark/snapshots/NETWORK_NAME`). The file is named `rollbackTransactionBackup.startBlockHeight.endBlockHeight.json`.
+Rollback command also makes a backup of forged transactions, ensuring that no local history is accidentally deleted in a rollback. Transactions are stored next to the snapshot files (in `~/.local/share/ark-core/NETWORK_NAME/snapshots/`). The file is named `rollbackTransactionBackup.startBlockHeight.endBlockHeight.json`.
 
 For example: `rollbackTransactionBackup.53001.54978.json` contains transactions from block 53001 to block 54978.
 

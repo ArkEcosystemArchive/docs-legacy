@@ -181,7 +181,7 @@ We are interested in the following section:
     minimumVersion: ">=2.1.0",
 ```
 
-`minimumVersion` specifies the minimum acceptable version of other peers in our network. Since the network is currently at `v1`, change it to `">=1.0.0"`. We will later set `minimumVersion` back to `">=2.1.0"` to force  
+`minimumVersion` specifies the minimum acceptable version of other peers in our network. Since the network is currently at `v1`, change it to `">=1.0.0"`. We will later set `minimumVersion` back to `">=2.1.0"` to force
 
 Open `packages/core/package.json`. Here the common startup scripts are defined. You can read more on how these work in the [node lifecycle](/guidebook/core/node-lifecycle.md) section. We are interested in the `scripts` key.
 

@@ -10,6 +10,7 @@ module.exports = [
       '/exchanges/',
       '/api/',
       '/sdk/',
+      '/bridgechains/',
       '/security/',
       '/faq/',
       '/glossary/',

@@ -122,7 +122,7 @@ yarn run upgrade
 cd ~/core-commander
 git reset --hard
 git pull
-git checkout develop
+git checkout master
 bash commander.sh
 ```
 

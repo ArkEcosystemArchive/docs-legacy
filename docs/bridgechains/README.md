@@ -1,4 +1,4 @@
-# Introduction
+# Bridgechains
 
 BridgeChains are code forks of the Ark blockchains, aimed at being interoperable with Ark mainnet through `smartbridges`. It provides a scalable solution to projects seeking their own, customized token without being impeded by network congestions.
 

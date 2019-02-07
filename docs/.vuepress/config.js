@@ -49,7 +49,7 @@ const config = {
       "/tutorials/": require('./sidebars/tutorials'),
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
-      "/bridgechains/": require('./sidebars/bridgechains'),
+      "/releases/": require('./sidebars/releases'),
       "/security/": require('./sidebars/security'),
       "/archive/": require('./sidebars/archive'),
       "/": require('./sidebars/main'),

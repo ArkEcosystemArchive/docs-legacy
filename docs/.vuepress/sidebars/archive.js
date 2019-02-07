@@ -15,13 +15,5 @@ module.exports = [
             ["/archive/api/public-v1/transactions", "Transactions"],
         ]
     },
-    {
-        title: "BridgeChains",
-        collapsable: true,
-        children: [
-            "/archive/bridgechains/",
-            "/archive/bridgechains/migrations/migrating_1.0_2.0.md",
-          ]
-      },
   ]
 

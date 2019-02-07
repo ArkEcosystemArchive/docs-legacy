@@ -74,7 +74,7 @@ Script will create a new folder named `enc`, containing set of encrypted public 
 Folder `enc` is needed during core container startup. After making sure your `forger` is up and running it is preferably to delete it. The disadvantage of this would be that if you your server gets rebooted or simply core container restarted, you will have repeat step 2.
 :::
 
->Now let's run the forger:
+> Now let's run the forger:
 
 ```bash
 docker-compose up -d
@@ -88,7 +88,7 @@ This will fire up two separate containers. One for Core itself and another one f
 If you prefer to use custom DB Name, DB User and DB Password simply adjust variables `POSTGRES_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB` `(file=docker-compose.yml)` and `CORE_DB_PASSWORD`, `CORE_DB_USERNAME` and `CORE_DB_DATABASE` `(file=$NETWORK.env)` correspondingly.
 :::
 
-**In case you want to use a remote PostgreSQL server simply adjust variable `CORE_DB_HOST` in your `$NETWORK.env` and run only Core container:
+**In case you want to use a remote PostgreSQL server simply adjust variable `CORE_DB_HOST` in your `$NETWORK.env` and run only Core container:**
 
 ```bash
 cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
@@ -222,5 +222,5 @@ docker exec -it ark-$NETWORK-core bash
 *Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script.*
 
 ::: warning
-**Development files/presets are not Production ready. Official Production Ark-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core) **.
+Development files/presets are not Production ready. Official Production Ark-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
 :::

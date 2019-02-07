@@ -9,7 +9,7 @@ Prerequisites to be installed:
 
 - [Docker Engine](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 - [Docker Compose](https://docs.docker.com/compose/)
-  
+
 :::
 
 ## Introduction
@@ -37,12 +37,12 @@ Orchestrators with Docker as a first class citizen:
 By default for both `relay` and `forger` modes, PostgreSQL is run in a separate container. It's port gets mapped to your `localhost`, so you should not have PostgreSQL running locally.
 :::
 
-### Run Relay only 
+### Run Relay only
 
 ```bash
 cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 docker-compose up -d
-```  
+```
 
 This will run two separate containers. One for Core itself and another one for PostgreSQL.
 
@@ -50,7 +50,7 @@ This will run two separate containers. One for Core itself and another one for P
 
 ::: tip
 Prerequisites to be installed:
-- [OpenSSL](https://www.openssl.org/)  
+- [OpenSSL](https://www.openssl.org/)
 :::
 
 Two additional steps are needed to be able to run a forger:
@@ -62,7 +62,7 @@ cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 sed -i 's/^MODE=relay/MODE=forger/g $NETWORK.env
 ```
 
-2. Configure your delegate secret and password. *Just use the additional script **enc.sh**.*  
+2. Configure your delegate secret and password. *Just use the additional script **enc.sh**.*
 
 ```bash
 bash enc.sh
@@ -95,41 +95,56 @@ cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 docker-compose up -d core
 ```
 
-### FAQ 
+### FAQ
 
-- How do i start with empty DB?
- * Just execute the following code:
-   ```bash
-   docker-compose down -v
-   docker-compose up -d
-   ```
-- Where are the config files and logs located?
- * ARK Core container mounts by default the following local paths as volumes:
-   ```bash
-   ~/.config/ark-core
-   ~/.local/share/ark-core
-   ~/.local/state/ark-core
-   ```
-   Having that said, your config files are locally accessible under:
-   ```bash
-   ~/.config/ark-core/$NETWORK/
-   ```
-   Pool database as well as db snapshots are locally accessible under:
-   ```bash
-   ~/.local/share/ark-core/$NETWORK/
-   ```
-   Log files are locally accessible under:
-   ```bash
-   ~/.local/state/ark-core/$NETWORK/
-   ```
-   Alternative way of following the logs would be, by using the command:
-   ```bash
-   docker exec -it core-$NETWORK pm2 logs
-   ```
-- How do i start everything from scratch?
- * Just use the **`purge_all.sh`** script. 
- 
-### Building your own ARK Core Docker image 
+#### How do i start with empty DB?
+
+Just execute the following code:
+
+```bash
+docker-compose down -v
+docker-compose up -d
+```
+
+#### Where are the config files and logs located?
+
+ARK Core container mounts by default the following local paths as volumes:
+
+```bash
+~/.config/ark-core
+~/.local/share/ark-core
+~/.local/state/ark-core
+```
+
+Having that said, your config files are locally accessible under:
+
+```bash
+~/.config/ark-core/$NETWORK/
+```
+
+Pool database as well as db snapshots are locally accessible under:
+
+```bash
+~/.local/share/ark-core/$NETWORK/
+```
+
+Log files are locally accessible under:
+
+```bash
+~/.local/state/ark-core/$NETWORK/
+```
+
+Alternative way of following the logs would be, by using the command:
+
+```bash
+docker exec -it core-$NETWORK pm2 logs
+```
+
+#### How do i start everything from scratch?
+
+Just use the **`purge_all.sh`** script.
+
+### Building your own ARK Core Docker image
 
 Custom Docker image builds of ARK Core are possible by using the file `docker-compose-build.yml`.
 Make your own modifications of ARK Core source code and run your custom container by executing:
@@ -137,7 +152,7 @@ Make your own modifications of ARK Core source code and run your custom containe
 ```bash
 cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 docker-compose -f docker-compose-build.yml up -d
-``` 
+```
 
 This will build your ARK Core Docker image and run two separate containers. One for Core itself and another one for PostgreSQL.
 

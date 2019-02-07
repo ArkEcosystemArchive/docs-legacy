@@ -1,4 +1,4 @@
-# v1.0 to v2.1
+# Migrating from v1.0 to v2.1
 
 Shortly after the release of `v2.0`, Ark Core was rewritten in [TypeScript](https://www.typescriptlang.org/), a typed superset of JavaScript, well suited for large projects as it prevents an entire class of runtime bugs. If you are on `v1`, we recommend upgrading to `v2.1` and skipping `v2.0`.
 

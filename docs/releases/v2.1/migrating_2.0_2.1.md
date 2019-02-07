@@ -1,4 +1,4 @@
-# v2.0 to v2.1
+# Migrating from v2.0 to v2.1
 
 Upgrading from `v2.0` to `v2.1` is a bit simpler since we are not introducing any breaking API changes. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 

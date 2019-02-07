@@ -105,6 +105,8 @@ _Also make sure that you are no longer passing in the `--data` and `--config` fl
 
 ## Upgrade Script
 
+You can either run `bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/upgrade/2.1.0/normal.sh)` or run below commands manually.
+
 ### Relay Runners & Delegates
 
 ```bash
@@ -128,6 +130,8 @@ bash commander.sh
 
 ### Exchanges
 
+You can either run `bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/upgrade/2.1.0/exchange.sh)` or run below commands manually.
+
 ```bash
 #!/usr/bin/env bash
 
@@ -140,5 +144,5 @@ git checkout master
 yarn run bootstrap
 yarn run upgrade
 
-pm2 start ~/ark-core/packages/core/dist/index.js relay -- --network mainnet
+pm2 --name 'ark-core-relay' start ~/ark-core/packages/core/dist/index.js -- relay --network mainnet
 ```

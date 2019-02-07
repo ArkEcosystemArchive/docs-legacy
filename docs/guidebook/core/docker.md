@@ -29,7 +29,17 @@ Orchestrators with Docker as a first class citizen:
 - [Nomad](https://www.nomadproject.io/)
 - [Mesos](http://mesos.apache.org/)
 
-Ark Core provides Dockerfiles to ease development. We recommend you build the containers yourself as a security precaution.
+## Generate the Configurations
+
+Ark Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
+
+For instance, you could use this command:
+
+```bash
+yarn docker ark
+```
+
+This command creates a new directory (`docker`) that contains 1 folder per network.
 
 ## Containerize the Persistent Store
 

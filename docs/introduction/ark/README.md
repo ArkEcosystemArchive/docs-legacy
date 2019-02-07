@@ -1,6 +1,3 @@
----
-title: Introduction to Ark
----
 # Introduction to Ark
 
-Now that you've learned a bit about blockchains, it's time to dive into how Ark enters the picture. We'll go over the architecture of the Ark blockchain and detail some of our answers to the pressing challenges blockchain developers face in the sector's earliest days.
+Now that you've learned a bit about blockchains, it's time to see how Ark has implemented these concepts. We will go over the architecture of the Ark blockchain and some more background concepts.

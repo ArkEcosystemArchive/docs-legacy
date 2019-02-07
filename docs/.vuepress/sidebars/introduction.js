@@ -19,6 +19,7 @@ module.exports = [
     collapsable: false,
     children:  [
       ["/introduction/ark/", "Intro to Ark"],
+      "/introduction/ark/ark-network-topology",
       "/introduction/ark/understanding-transactions-and-block-propagation",
       "/introduction/ark/what-is-an-ark-address",
       "/introduction/ark/interoperability-and-ark",

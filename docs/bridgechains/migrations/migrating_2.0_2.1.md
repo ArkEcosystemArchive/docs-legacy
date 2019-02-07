@@ -144,5 +144,5 @@ git checkout master
 yarn run bootstrap
 yarn run upgrade
 
-pm2 --name 'ark-core-relay' relay ~/ark-core/packages/core/dist/index.js -- start --network mainnet
+pm2 --name 'ark-core-relay' start ~/ark-core/packages/core/dist/index.js -- relay --network mainnet
 ```

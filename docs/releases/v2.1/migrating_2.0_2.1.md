@@ -7,7 +7,7 @@ running `git pull && yarn setup` inside the installation directory. In a big app
 be more things to consider, which are explained in the following.
 
 ::: tip
-This guide assumes you have Core installed inside the `~/ark-core` directory with your configuration being located at `~/.config/ark-core/<network>`. If you are using different locations, you will need to adjust those inside the examples which can be found below.
+This guide assumes you have Core installed inside the `~/ark-core` directory with your configuration being located at `~/.ark`. If you are using different locations, you will need to adjust those inside the examples which can be found below.
 
 Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
 :::
@@ -70,7 +70,7 @@ pm2 --name 'ark-core-relay' start ~/ark-core/packages/core/dist/index.js -- rela
 
 ### Changes
 
-#### Configuration Changes
+#### Configuration
 
 - If you have been using custom dynamic fees, open the `~/.config/ark-core/<network>/plugins.js` file and locate the `@arkecosystem/core-transaction-pool` plugin. Add below code to it and enter your desired values.
 
@@ -93,7 +93,7 @@ dynamicFees: {
 },
 ```
 
-#### Path Changes
+#### Path
 
 From version 2.1 onwards Core will make use of system specific paths to support as many platforms as possible in the long-term.
 

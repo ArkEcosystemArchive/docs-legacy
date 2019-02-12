@@ -19,6 +19,7 @@ module.exports = [
       "/guidebook/core/",
       "/guidebook/core/node-lifecycle",
       "/guidebook/core/transaction-lifecycle",
+      "/guidebook/core/cli",
       "/guidebook/core/configuration",
       "/guidebook/core/development",
       "/guidebook/core/docker",

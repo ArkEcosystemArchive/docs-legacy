@@ -57,8 +57,6 @@ app.version(require('../package.json').version)
 app
   .command('start')
   .description('start a relay node and the forger')
-  .option('-d, --data <data>', 'data directory', '~/.ark')
-  .option('-c, --config <config>', 'core config', '~/.ark/config')
   .option('-t, --token <token>', 'token name', 'ark')
   .option('-n, --network <network>', 'token network')
   .option('-b, --bip38 <bip38>', 'forger bip38')
@@ -75,8 +73,8 @@ Breaking down what's happening here:
 - We define `version` is defined to ensure all nodes are on the same page, have the same dependencies, and so on.
 - Next, we begin registering CLI commands into our `app` variable. Our first one is `start`, which starts a single node with both forger and relay capacities.
 - After describing this command's functionality, we specify options that can be passed into the command at runtime, and we define default values to fall back upon should these options not be provided.
-- Recall from our `npm` script that we passed in two values: `config` and `network`. In the case of `config`, this means that the value defined in our `npm` script will override the default, which in the code above is `~/.ark/config`.
-- Because we did not pass in any other arguments, our command will assume the defaults in each case. Notably, this means that `~/.ark/` will be used as our data directory, and `ark` will be used as our token name.
+- Recall from our `npm` script that we passed in two values: `config` and `network`. In the case of `config`, this means that the value defined in our `npm` script will override the default, which in the code above is `~/.config/ark-core/{network}`.
+- Because we did not pass in any other arguments, our command will assume the defaults in each case. Notably, this means that `~/.local/share/ark-core/{network/` will be used as our data directory, and `ark` will be used as our token name.
 - Other configurable options here include `bip38`, primarily intended for forgers to pass in their delegate information, and `network-start`, which is used when spinning up a network for the first time.
 - Finally, we compile all of the options into a single JavaScript object, load the JS file located at `../lib/start-relay-and-forger`, and run the command inside with our options.
 
@@ -215,7 +213,7 @@ module.exports = class Environment {
 Without going too much into the implementation details, the `setUp` function here effectively takes care of binding values into our `process.env` object, which is a global object used throughout our Node application. You can read more about the `process.env` object [here](https://nodejs.org/api/process.html#process_process_env), but the SparkNotes is that the `Environment.setUp` method defines the following variables for use throughout our node:
 
 - ARK_PATH_CONFIG: the path to our configuration directory, pulled in from our NPM script and dependent on the network our node is running on
-- ARK_PATH_DATA: the path to our data directory, which defaults to `~/.ark`
+- ARK_PATH_DATA: the path to our data directory, which defaults to `~/.local/share/ark-core/{network}`
 - ARK_NETWORK: a stringified version of the `network.json` file in our ARK_PATH_CONFIG directory
 - ARK_NETWORK_NAME: the `name` property from our `network.json` file
 

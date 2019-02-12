@@ -7,13 +7,13 @@ The best means of getting started with Ark development is to spin up your local 
 The following development tools need to be installed on your machine to develop an application using Ark Core:
 
 - [NodeJS.](https://nodejs.org/en/) As Ark Core is written exclusively in NodeJS, the server-side framework for JavaScript, installing Node is a necessity for core development.
-  
+
 - [Git](https://git-scm.com/). As the most popular version control software in existence, Git is a staple of many developer workflows, and Ark is no exception. Downloading Git will allow you to download the latest version of Ark Core, as well as update your local copy of Core to incorporate the latest code changes as they are released.
-  
+
 - [Docker](https://www.docker.com/). Docker is a container management tool that's rapidly becoming the industry standard. If you are unfamiliar with containers or why managing them is important, fear not: when you install Ark Core, a robust Docker setup is provided for you out of the box. However, to use that setup, you are going to need a Docker installation on your machine already.
-  
+
 - [Lerna](https://lernajs.io/). In Greek mythology, Lerna was the home of the hydra, a fearsome beast with many heads. In JavaScript land, Lerna is a library used to tackle JavaScript projects with many packages. With Lerna installed as a **global** dependency, you are empowered to be fearless in the face of large JavaScript projects with many moving parts — including Ark Core.
-  
+
 - [Yarn](https://yarnpkg.com/en/). Yarn is a package manager that seeks to build upon the foundation of Node's npm. Although yarn is not a strict requirement, in many cases it works faster and more elegantly than npm. Most Ark developers use yarn, and as such, you will see `yarn` commands often used throughout our documentation.
 
 ## Spinning Up Your First Testnet
@@ -54,8 +54,6 @@ This last command, `yarn full:testnet`, is where the magic happens. Let us do a 
 app
   .command('start')
   .description('start a relay node and the forger')
-  .option('-d, --data <data>', 'data directory', '~/.ark')
-  .option('-c, --config <config>', 'core config', '~/.ark/config')
   .option('-t, --token <token>', 'token name', 'ark')
   .option('-n, --network <network>', 'token network')
   .option('-b, --bip38 <bip38>', 'forger bip38')

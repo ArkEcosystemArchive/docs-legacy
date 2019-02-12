@@ -10,7 +10,7 @@ Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/M
 
 ## Find Your Config Directory
 
-First things first, you need to find your config directory. If you installed Ark Core using the `core-commander`, you can typically find this folder at `~/.ark/config/`.
+First things first, you need to find your config directory. If you installed Ark Core using the `core-commander`, you can typically find this folder at `~/.config/ark-core/{network}/`.
 
 The file we'll access from this folder is `network.json`. If you see it, you're in the right place.
 
@@ -19,14 +19,14 @@ The file we'll access from this folder is `network.json`. If you see it, you're 
 Your node needs to signal to the network that it accepts dynamic fees. For this, open up your `network.json` file:
 
 ```bash
-nano ~/.ark/config/network.json
+nano ~/.config/ark-core/{network}/network.json
 ```
 
 There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `constants` key, and the dynamic fees themselves.
 
 You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Ark Core node. The `fees` config key in your constants section should look like this:
 
-##### file: ~/.ark/config/network.json
+##### file: ~/.config/ark-core/{network}/network.json
 
 ```json
 {
@@ -65,7 +65,7 @@ const calculatedFee = (addonBytesValue + transactionSizeInBytes) * arktoshiPerBy
 
 If you're interested in changing your dynamic fees, the configuration you want to edit is near the bottom of your `network.json` file. It has two keys, `height` and `fees`, which look like this:
 
-##### file: ~/.ark/config/network.json
+##### file: ~/.config/ark-core/{network}/network.json
 
 ```json
 {
@@ -88,7 +88,7 @@ Note that, as fee transactions are only executed upon block creation, removing a
 
 By default, the max transaction pool size is set to 100000. To change this value, edit your `.env` file:
 
-##### file: ~/.ark/.env
+##### file: ~/.config/ark-core/{network}/.env
 
 ```
 ARK_MAX_TRANSACTIONS_IN_POOL=100000

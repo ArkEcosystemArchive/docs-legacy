@@ -8,13 +8,13 @@ Ark Core is mainly used in the context of public services, providing desktop wal
 
 ## Exceeding the Rate Limit
 
-By default, rate limits are enabled on Ark Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.  
+By default, rate limits are enabled on Ark Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
 
 ## Configuring the Rate Limit
 
-The default way to configure the node's rate limit is by editing the .env file found at `~/.ark/.env`. Two keys interest us here:
+The default way to configure the node's rate limit is by editing the .env file found at `~/.config/ark-core/{network}/.env`. Two keys interest us here:
 
-#### file: ~/.ark/.env
+#### file: ~/.config/ark-core/{network}/.env
 
 ```json
 API_RATE_LIMIT=true
@@ -25,7 +25,7 @@ Setting `API_RATE_LIMIT` to false will globally disable all rate limits. For int
 
 ## Configuration through a Plugin
 
-Lower access to the rate limiting can be obtained by writing a plugin at `~/.ark/config/plugin.js`. We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the Ark Core rate limiter.
+Lower access to the rate limiting can be obtained by writing a plugin at `~/.config/ark-core/{network}/plugin.js`. We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the Ark Core rate limiter.
 
 ```js
 @arkecosystem/core-api: {
@@ -57,6 +57,6 @@ rateLimit: {
     },
     ipWhitelist: ['127.0.0.1', '::ffff:127.0.0.1'],
   },
-```  
+```
 
 Here, `pathLimit` can be used to limit the total requests per path per given period, or set it to `false` to disable it. By default `pathLimits` are disabled.

@@ -38,14 +38,14 @@ The `core-snapshots-cli` is a command-line interface designed to help developers
 
 The following options are available to all commands:
 
-| Alias | Option            | Default       | Description                                    |
-|-------|-------------------|---------------|------------------------------------------------|
-| -d    | —data             | `~/.ark`      | Destination directory.                         |
-| -c    | —config           | ~/.ark/config | Location of network configuration file.        |
-| -t    | —token            | ark           | Specifies which token data should be exported. |
-| -n    | —network          |               | Network to export.                             |
-|       | —skip-compression | false         | Compress the output using gzip.                |
-|       | —trace            | false         | Log the snapshot process.                      |
+| Alias | Option            | Default                            | Description                                    |
+|-------|-------------------|------------------------------------|------------------------------------------------|
+| -d    | —data             | `~/.local/share/ark-core/{network` | Destination directory.                         |
+| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+| -t    | —token            | ark                                | Specifies which token data should be exported. |
+| -n    | —network          |                                    | Network to export.                             |
+|       | —skip-compression | false                              | Compress the output using gzip.                |
+|       | —trace            | false                              | Log the snapshot process.                      |
 
 ## Create A Snapshot
 
@@ -76,7 +76,7 @@ Using the optional `—start` and `—end` flags will specify a lower and uppers
 
 The following options (`--help`) are available when using the `dump` command:
 
-| Alias | Option            | Default | Description                                     |           
+| Alias | Option            | Default | Description                                     |
 |-------|-------------------|---------|-------------------------------------------------|
 |       | --blocks=blocks   |         | blocks to append to, correlates to folder name  |
 |       | --codec=codec     |         | codec name, default is msg-lite binary          |

@@ -48,7 +48,7 @@ Once whitelisted, access the JSON-RPC by sending a POST request to your node's e
 {
     "jsonrpc": "2.0",                   // JSON-RPC API version
     "method": "transactions.create",    // or any method listed below
-    "id": "",                           // ID to be used as internal identifier, returned by the JSON-RPC 
+    "id": "",                           // ID to be used as internal identifier, returned by the JSON-RPC
     "params": {},                       // the parameters for the specific request
 }
 ```
@@ -586,7 +586,7 @@ Returns account `publicKey`, `address` and decrypted `WIF` of created account.
 }
 ```
 
-#### Response 
+#### Response
 
 ```json
 {
@@ -615,7 +615,7 @@ Retrieves saved BIP38 wallet from the server. The wallet must be stored in JSON-
 |---------------|:----------------:|--------------------------------------------------------------------------------|:--------:|
 | bip38         | string           | The password that should be used to create the BIP38 wallet.                   | :x:      |
 | userId        | any              | The user ID associated with the BIP38 wallet.                                  | :x:      |
-#### Request 
+#### Request
 
 ```json
 {
@@ -696,7 +696,7 @@ Creates a transaction using a saved BIP38 wallet. As with `transactions.create`,
 
 ## Default Values
 
-The node uses variables defined in `~/.ark/.env` for configuration. All required variables have defaults set as well.
+The node uses variables defined in `~/.config/ark-core/{network}/.env` for configuration. All required variables have defaults set as well.
 
 ```js
 {

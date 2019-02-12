@@ -8,7 +8,7 @@ To operate a node in any Ark network, you need to provide configuration to it on
 
 ## Environment Configuration
 
-Ark Core allows you to use a [.env](https://github.com/bevry/envfile) file to provide a configuration that is environment specific without having to touch the `~/.ark/config/plugins.js` file. The `.env` file needs to be stored at `~/.ark/.env`.
+Ark Core allows you to use a [.env](https://github.com/bevry/envfile) file to provide a configuration that is environment specific without having to touch the `~/.config/ark-core/{network}/plugins.js` file. The `.env` file needs to be stored at `~/.config/ark-core/{network}/.env`.
 
 | Variable          | Plugin                               | Default                                               |
 |-------------------|--------------------------------------|-------------------------------------------------------|

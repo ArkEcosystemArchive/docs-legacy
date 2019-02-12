@@ -317,8 +317,8 @@ The script below is an ARK Core install script. You can adjust it to your own ne
 sudo yarn global add pm2 lerna
 sudo -u postgres psql -c "create user ark with password 'password';"
 sudo -u postgres psql -c "create database ark_mainnet with owner 'ark';"
-mkdir -p ~/.ark/config
-cat > ~/.ark/.env <<EOL
+mkdir -p ~/.config/ark-core/{network}
+cat > ~/.config/ark-core/{network}/.env <<EOL
 ARK_LOG_LEVEL=debug
 ARK_DB_HOST=localhost
 ARK_DB_PORT=5432
@@ -338,12 +338,12 @@ ARK_JSON_RPC_PORT=8080
 EOL
 cd ~/
 git clone https://github.com/ArkEcosystem/core.git ark-core
-cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.ark/config/
-cp -f ~/ark-core/packages/crypto/lib/networks/ark/mainnet.json  ~/.ark/config/network.json
+cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.config/ark-core/{network}/
+cp -f ~/ark-core/packages/crypto/lib/networks/ark/mainnet.json  ~/.config/ark-core/{network}/network.json
 cd ark-core
 lerna bootstrap
 cd packages/core
-pm2 --name 'ark-core-relay' start -l ~/ark-core.log --merge-logs ./bin/ark -- relay --config ~/.ark/config --network mainnet
+pm2 --name 'ark-core-relay' start -l ~/ark-core.log --merge-logs ./bin/ark -- relay --config ~/.config/ark-core/{network} --network mainnet
 ```
 
 ### Update script
@@ -354,8 +354,8 @@ cd ark-core
 git reset --hard
 git pull
 lerna bootstrap
-rm -f ~/.ark/config/peers_backup.*
-cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.ark/config/.
+rm -f ~/.config/ark-core/{network}/peers_backup.*
+cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.config/ark-core/{network}/.
 cp -f /home/node/ark-core/packages/crypto/lib/networks/ark/mainnet.json /home/node/.ark/config/network.json
 pm2 start all --update-env
 ```

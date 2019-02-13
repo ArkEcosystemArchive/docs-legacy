@@ -167,7 +167,7 @@ Your directory `MyNet` should now contain `peers.json` and `plugins.js`. If you 
 
 ### Crypto
 
-We also need to move our initial block definition, the genesisBlock, to the correct location. In previous versions it was stored alongside our other files, however, crypto related files now reside in `crypto/src/networks/{NETWORK}`. This directory contains the following four files:
+We also need to move our initial block definition, the genesisBlock, to the correct location. In previous versions it was stored alongside our other files, however, crypto related files now reside in `packages/crypto/src/networks/{NETWORK}`. This directory contains the following four files:
 
 - **exceptions.json:** lists blocks and transactions which are exempt from validation rules, usually because of historic forks and vulnerabilities.
 - **genesisBlock.json:** defines the very first block of your network, and from it, your `networkhash` is derived, as it is the header of the first block.

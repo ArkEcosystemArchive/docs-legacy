@@ -7,6 +7,7 @@ module.exports = [
     children:  [
       ["/releases/v2.1/", "Summary"],
       "/releases/v2.1/changelog.md",
+      "/releases/v2.1/changes.md",
       "/releases/v2.1/migrating_1.0_2.1.md",
       "/releases/v2.1/migrating_2.0_2.1.md",
     ]

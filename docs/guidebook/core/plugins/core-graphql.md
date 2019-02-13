@@ -1,5 +1,5 @@
 ---
-title: "GrahpQL"
+title: "GraphQL"
 ---
 
 # GraphQL

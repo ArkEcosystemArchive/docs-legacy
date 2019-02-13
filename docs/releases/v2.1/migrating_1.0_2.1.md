@@ -45,14 +45,13 @@ cd packages/core/src/config
 mdkir MyNet
 ```
 
-To configure `v2.1`, we will edit `core-p2p/src/defaults.ts` and add configuration files in our `MyNet` directory. If you look at a different network, `core/src/config/devnet` for example, you should see four files:
+To configure `v2.1`, we will edit `core-p2p/src/defaults.ts` and add configuration files in our `MyNet` directory. If you look at a different network, `core/src/config/devnet` for example, you should see three files:
 
-- **genesisBlock.json:** defines the very first block of your network, and from it, your `networkhash` is derived, as it is the header of the first block.
 - **peers.json:** used by the node to find other existing nodes.
 - **plugins.js:** contains constructor arguments for the different core plugins.
 - **delegates.json:** holds the secrets for the initial virtualized delegates.
 
-To us, only `genesisBlock.json` and `peers.json` are relevant. The latter should look something like this:
+To us, `peers.json` is most relevant. The latter should look something like this:
 
 ```json
 {
@@ -164,11 +163,84 @@ module.exports = {
 };
 ```
 
-Your directory `MyNet` should now contain `genesisBlock.json`, `peers.json`, and a `plugins.js`. If you use the terms `mainnet`, `devnet` and `testnet` in your BridgeChain, you should create configuration directories for each of these networks, overriding the existing directories.
+Your directory `MyNet` should now contain `peers.json` and `plugins.js`. If you use the terms `mainnet`, `devnet` and `testnet` in your BridgeChain, you should create configuration directories for each of these networks, overriding the existing directories.
+
+### Crypto
+
+We also need to move our initial block definition, the genesisBlock, to the correct location. In previous versions it was stored alongside our other files, however, crypto related files now reside in `crypto/src/networks/{NETWORK}`. This directory contains the following four files:
+
+- **exceptions.json:** lists blocks and transactions which are exempt from validation rules, usually because of historic forks and vulnerabilities.
+- **genesisBlock.json:** defines the very first block of your network, and from it, your `networkhash` is derived, as it is the header of the first block.
+- **index.ts:** exports these crypto definitions as a module.
+- **milestones.json:** defines networkwide configuration changes based on certain milestones; i.e. a global reward reduction when block 1000000 has been forged.
+- **network.json:** contains your network specific variables. (some may also be set from your env.process).
 
 ::: warning
 Ensure that your `genesisBlock.json` is exactly the same. Your `v2.1` node only connects with nodes that have the same `genesisBlock.json`.
 :::
+
+You can copy the `index.ts` and `network.json` from an existing directory (i.e., mainnet) and edit them appropriately. The `genesisBlock.json` must be copied from your original configurations to correctly derive a network hash and initial state. If you do not require an `exceptions.json`, copy the file anyway, and empty the keys:
+
+#### exceptions.json
+
+```json
+{
+    "blocks": [],
+    "transactions": [
+    ],
+    "outlookTable": {
+    },
+    "transactionIdFixTable": {
+    }
+}
+```
+
+If your BridgeChain was created during `v1.0.X`, you most likely copied Ark's milestones. If not, edit this file according to your own milestones.
+
+#### milestones.json
+
+```json
+[
+    {
+        "height": 1,
+        "reward": 0,
+        "activeDelegates": 51,
+        "blocktime": 8,
+        "block": {
+            "version": 0,
+            "maxTransactions": 50,
+            "maxPayload": 2097152
+        },
+        "epoch": "2017-03-21T13:00:00.000Z",
+        "fees": {
+            "staticFees": {
+                "transfer": 10000000,
+                "secondSignature": 500000000,
+                "delegateRegistration": 2500000000,
+                "vote": 100000000,
+                "multiSignature": 500000000,
+                "ipfs": 0,
+                "timelockTransfer": 0,
+                "multiPayment": 0,
+                "delegateResignation": 0
+            }
+        }
+    },
+    {
+        "height": 75600,
+        "reward": 200000000
+    },
+    {
+        "height": 6600000,
+        "block": {
+            "maxTransactions": 150,
+            "maxPayload": 6300000
+        }
+    }
+]
+```
+
+### p2p
 
 The final file of interest to us is `packages/core-p2p/src/defaults.ts`, which contains the default parameters our node will use for the internal [p2p API](/api/p2p/).
 
@@ -181,7 +253,7 @@ We are interested in the following section:
     minimumVersion: ">=2.1.0",
 ```
 
-`minimumVersion` specifies the minimum acceptable version of other peers in our network. Since the network is currently at `v1`, change it to `">=1.0.0"`. We will later set `minimumVersion` back to `">=2.1.0"` to force
+`minimumVersion` specifies the minimum acceptable version of other peers in our network. Since the network is currently at `v1`, change it to `">=1.0.0"`. We will later set `minimumVersion` back to `">=2.1.0"` to force older peers to exit the network.
 
 Open `packages/core/package.json`. Here the common startup scripts are defined. You can read more on how these work in the [node lifecycle](/guidebook/core/node-lifecycle.md) section. We are interested in the `scripts` key.
 

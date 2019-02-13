@@ -15,5 +15,13 @@ module.exports = [
             ["/archive/api/public-v1/transactions", "Transactions"],
         ]
     },
+    {
+        title: "Exchanges",
+        collapsable: true,
+        children: [
+              ["/archive/exchanges/", "Introduction"],
+              ["/archive/exchanges/rate-limiting.md", "v2.0: Rate Limits"]
+          ]
+      },
   ]
 

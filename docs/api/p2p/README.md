@@ -8,7 +8,7 @@ This describes the resources that make up the internal P2P. If you have any prob
 
 ### Public Testing Relay
 
-If you are not running a relay yourself you can use [https://node1.arknet.cloud/peer/](https://node1.arknet.cloud/peer/) to test API calls. Happy developing!
+If you are not running a relay yourself you can use [https://api.ark.io/peer/](https://api.ark.io/peer/) to test API calls. Happy developing!
 
 ## Authentication
 

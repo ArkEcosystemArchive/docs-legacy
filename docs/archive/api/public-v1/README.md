@@ -20,4 +20,4 @@ Requests that return multiple items will be paginated to 50 items by default. Yo
 
 ## Public Testing Relay
 
-If you are not running a relay yourself you can use [https://node1.arknet.cloud/api/](https://node1.arknet.cloud/api/) to test API calls. Happy developing!
+If you are not running a relay yourself you can use [https://api.ark.io/api/](https://api.ark.io/api/) to test API calls. Happy developing!

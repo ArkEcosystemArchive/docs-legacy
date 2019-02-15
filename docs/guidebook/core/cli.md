@@ -1,18 +1,22 @@
 ---
-title: "Command Line Interface"
+title: "Command Line Interface (Beta)"
 ---
 
 # Command Line Interface
+
+::: danger
+Release 2.2.0 is currently in beta.
+:::
 
 ## Installation
 
 Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, that provides a built-in CLI.
 
 ```sh
-yarn global add @arkecosystem/core
+yarn global add @arkecosystem/core@beta
 ```
 
-You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` when a notification pops up on your server.
+You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
 
 ## Configuration
 
@@ -24,9 +28,7 @@ ark config:publish
 
 This will bring up an interative UI which will ask a few questions to help you with the setup process.
 
-### Note
-
-If you are an advanced user and don't need an interactive UI you can simply pass in `--network={network}` to skip it.
+> Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
 
 ## Available Commands
 
@@ -40,7 +42,7 @@ Configure the forging delegate
 ark config:forger
 ```
 
-#### OPTIONS
+#### Flags
 
 ```sh
 --bip38=bip38                             the encrypted bip38
@@ -51,18 +53,74 @@ ark config:forger
 --token=token                             (required) [default: ark] the name of the token that should be used
 ```
 
-#### EXAMPLES
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --bip39    | the plain text bip39 passphrase             | :white_check_mark: |
+| --password | the password for the encrypted bip38        | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
+
+#### Examples
 
 ##### Configure a delegate using an encrypted BIP38
 
 ```sh
-ark config:forger --method=bip38
+ark config:forger --method=bip38 --bip38="..." --password="..."
 ```
 
 ##### Configure a delegate using a BIP39 passphrase
 
 ```sh
-ark config:forger --method=bip39
+ark config:forger --method=bip39 --bip39="..."
+```
+
+### config:forger:bip38
+
+Configure a delegate using an encrypted BIP38
+
+#### Usage
+
+```sh
+ark config:forger:bip38
+```
+
+#### Flags
+
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --bip39    | the plain text bip39 passphrase             | :white_check_mark: |
+| --password | the password for the encrypted bip38        | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
+
+#### Examples
+
+```sh
+ark config:forger:bip38 --bip38="..." --password="..."
+```
+
+### config:forger:bip39
+
+Configure a delegate using a BIP39 passphrase
+
+#### Usage
+
+```sh
+ark config:forger:bip39
+```
+
+#### Flags
+
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --bip39    | the plain text bip39 passphrase             | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
+
+#### Examples
+
+```sh
+ark config:forger:bip39 --bip39="..."
 ```
 
 ### config:publish
@@ -75,20 +133,20 @@ Publish the configuration
 ark config:publish
 ```
 
-#### OPTIONS
+#### Flags
+
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --force    | force the configuration to be overwritten   | :x:                |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
+
+#### Examples
+
+##### Publish the configuration
 
 ```sh
---force                                   force the configuration to be overwritten
---network=devnet|mainnet|testnet|unitnet  (required) the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
-
-#### EXAMPLES
-
-##### Publish the configuration for the mainnet network
-
-```sh
-ark config:publish --network=mainnet
+ark config:publish
 ```
 
 ### config:reset
@@ -101,15 +159,15 @@ Reset the configuration
 ark config:reset
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---force                                   force the configuration to be reset
---network=devnet|mainnet|testnet|unitnet  (required) the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --force    | force the configuration to be reset         | :x:                |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Reset the configuration for the mainnet network
 
@@ -127,15 +185,15 @@ Show the core log
 ark core:log
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---error                                   only show error output
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --error    | only show error output                      | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ```sh
 ark core:log
@@ -151,14 +209,14 @@ Restart the core
 ark core:restart
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Restart the core
 
@@ -176,23 +234,24 @@ Start the core
 ark core:start
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---bip38=bip38                             the encrypted bip38
---bip39=bip39                             the plain text bip39 passphrase
---[no-]daemon                             start the process as a daemon
---disableDiscovery                        permanently disable any peer discovery
---ignoreMinimumNetworkReach               ignore the minimum network reach on start
---launchMode=launchMode                   the mode the relay will be launched in (seed only at the moment)
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---networkStart                            indicate that this is the first start of seeds
---password=password                       the password for the encrypted bip38
---skipDiscovery                           skip the initial peer discovery
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name                        | Description                                                      | Required           |
+| --------------------------- | ---------------------------------------------------------------- |:------------------:|
+| --bip39                     | the plain text bip39 passphrase                                  | :x:                |
+| --bip38                     | the encrypted bip38                                              | :x:                |
+| --password                  | the password for the encrypted bip38                             | :x:                |
+| --[no-]daemon               | start the process as a pm2 daemon                                | :x:                |
+| --disableDiscovery          | permanently disable any peer discovery                           | :x:                |
+| --ignoreMinimumNetworkReach | ignore the minimum network reach on start                        | :x:                |
+| --launchMode                | the mode the relay will be launched in (seed only at the moment) | :x:                |
+| --networkStart              | indicate that this is the first start of seeds                   | :x:                |
+| --skipDiscovery             | skip the initial peer discovery                                  | :x:                |
+| --network                   | the name of the network that should be used                      | :x:                |
+| --token                     | the name of the token that should be used                        | :x:                |
 
-#### EXAMPLES
+
+#### Examples
 
 ##### Run core with a daemon
 
@@ -246,15 +305,15 @@ Stop the core
 ark core:stop
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---daemon                                  stop the process or daemon
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --daemon   | stop the process or pm2 daemon              | :x:                |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Stop the core
 
@@ -278,14 +337,14 @@ Get the value of an environment variable
 ark env:get KEY
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Get the log level
 
@@ -303,14 +362,14 @@ List all environment variables
 ark env:list
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### List all environment variables
 
@@ -328,14 +387,14 @@ Get all of the environment paths
 ark env:paths
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### List all environment paths
 
@@ -353,15 +412,15 @@ Set the value of an environment variable
 ark env:set KEY VALUE
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---force                                   force the setting to be overwritten
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --force    | force the setting to be overwritten         | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Set the log level
 
@@ -379,15 +438,15 @@ Show the forger log
 ark forger:log
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---error                                   only show error output
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --error    | only show error output                      | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ```sh
 ark forger:log
@@ -403,14 +462,14 @@ Restart the forger
 ark forger:restart
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Restart the forger
 
@@ -428,18 +487,18 @@ Start the forger
 ark forger:start
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---bip38=bip38                             the encrypted bip38
---bip39=bip39                             the plain text bip39 passphrase
---[no-]daemon                             start the process as a daemon
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---password=password                       the password for the encrypted bip38
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name          | Description                                 | Required           |
+| ------------- | ------------------------------------------- |:------------------:|
+| --bip39       | the plain text bip39 passphrase             | :x:                |
+| --bip38       | the encrypted bip38                         | :x:                |
+| --password    | the password for the encrypted bip38        | :x:                |
+| --[no-]daemon | start the process as a pm2 daemon           | :x:                |
+| --network     | the name of the network that should be used | :x:                |
+| --token       | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Run a forger with a bip39 passphrase
 
@@ -468,15 +527,15 @@ Stop the forger
 ark forger:stop
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---daemon                                  stop the process or daemon
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --daemon   | stop the process or pm2 daemon              | :x:                |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Stop the forger
 
@@ -500,15 +559,15 @@ Show the relay log
 ark relay:log
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---error                                   only show error output
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --error    | only show error output                      | :white_check_mark: |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ```sh
 ark relay:log
@@ -524,14 +583,14 @@ Restart the relay
 ark relay:restart
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Restart the relay
 
@@ -549,23 +608,20 @@ Start the relay
 ark relay:start
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---bip38=bip38                             the encrypted bip38
---bip39=bip39                             the plain text bip39 passphrase
---[no-]daemon                             start the process as a daemon
---disableDiscovery                        permanently disable any peer discovery
---ignoreMinimumNetworkReach               ignore the minimum network reach on start
---launchMode=launchMode                   the mode the relay will be launched in (seed only at the moment)
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---networkStart                            indicate that this is the first start of seeds
---password=password                       the password for the encrypted bip38
---skipDiscovery                           skip the initial peer discovery
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name                        | Description                                                      | Required           |
+| --------------------------- | ---------------------------------------------------------------- |:------------------:|
+| --[no-]daemon               | start the process as a pm2 daemon                                | :x:                |
+| --disableDiscovery          | permanently disable any peer discovery                           | :x:                |
+| --ignoreMinimumNetworkReach | ignore the minimum network reach on start                        | :x:                |
+| --launchMode=launchMode     | the mode the relay will be launched in (seed only at the moment) | :x:                |
+| --networkStart              | indicate that this is the first start of seeds                   | :x:                |
+| --skipDiscovery             | skip the initial peer discovery                                  | :x:                |
+| --network                   | the name of the network that should be used                      | :x:                |
+| --token                     | the name of the token that should be used                        | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Run a relay with a pm2 daemon
 
@@ -619,15 +675,15 @@ Stop the relay
 ark relay:stop
 ```
 
-#### OPTIONS
+#### Flags
 
-```sh
---daemon                                  stop the process or daemon
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --daemon   | stop the process or pm2 daemon              | :x:                |
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
 
-#### EXAMPLES
+#### Examples
 
 ##### Stop the relay
 ```sh
@@ -650,14 +706,7 @@ List all core daemons
 ark top
 ```
 
-#### OPTIONS
-
-```sh
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---token=token                             (required) [default: ark] the name of the token that should be used
-```
-
-#### EXAMPLES
+#### Examples
 
 ##### List all core daemons
 

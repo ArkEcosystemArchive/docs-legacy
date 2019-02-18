@@ -12,8 +12,20 @@ Release 2.2.0 is currently in beta.
 
 Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, that provides a built-in CLI.
 
-```sh
+### Existing Installation
+
+```bash
 yarn global add @arkecosystem/core@beta
+```
+
+### Fresh Installation
+
+```bash
+adduser ark
+usermod -aG sudo ark
+su ark
+cd ~
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh)
 ```
 
 You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
@@ -22,7 +34,7 @@ You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npm
 
 Before you can start using Ark Core you will need to publish the configuration of the network you wish to operate on.
 
-```sh
+```bash
 ark config:publish
 ```
 
@@ -38,13 +50,13 @@ Configure the forging delegate
 
 #### Usage
 
-```sh
+```bash
 ark config:forger
 ```
 
 #### Flags
 
-```sh
+```bash
 --bip38=bip38                             the encrypted bip38
 --bip39=bip39                             the plain text bip39 passphrase
 --method=method                           the configuration method to use (bip38 or bip39)
@@ -64,13 +76,13 @@ ark config:forger
 
 ##### Configure a delegate using an encrypted BIP38
 
-```sh
-ark config:forger --method=bip38 --bip38="..." --password="..."
+```bash
+ark config:forger --method=bip38 --bip39="..." --password="..."
 ```
 
 ##### Configure a delegate using a BIP39 passphrase
 
-```sh
+```bash
 ark config:forger --method=bip39 --bip39="..."
 ```
 
@@ -80,7 +92,7 @@ Configure a delegate using an encrypted BIP38
 
 #### Usage
 
-```sh
+```bash
 ark config:forger:bip38
 ```
 
@@ -95,7 +107,7 @@ ark config:forger:bip38
 
 #### Examples
 
-```sh
+```bash
 ark config:forger:bip38 --bip38="..." --password="..."
 ```
 
@@ -105,7 +117,7 @@ Configure a delegate using a BIP39 passphrase
 
 #### Usage
 
-```sh
+```bash
 ark config:forger:bip39
 ```
 
@@ -119,7 +131,7 @@ ark config:forger:bip39
 
 #### Examples
 
-```sh
+```bash
 ark config:forger:bip39 --bip39="..."
 ```
 
@@ -129,7 +141,7 @@ Publish the configuration
 
 #### Usage
 
-```sh
+```bash
 ark config:publish
 ```
 
@@ -137,7 +149,6 @@ ark config:publish
 
 | Name       | Description                                 | Required           |
 | ---------- | ------------------------------------------- |:------------------:|
-| --force    | force the configuration to be overwritten   | :x:                |
 | --network  | the name of the network that should be used | :x:                |
 | --token    | the name of the token that should be used   | :x:                |
 
@@ -145,7 +156,7 @@ ark config:publish
 
 ##### Publish the configuration
 
-```sh
+```bash
 ark config:publish
 ```
 
@@ -155,7 +166,7 @@ Reset the configuration
 
 #### Usage
 
-```sh
+```bash
 ark config:reset
 ```
 
@@ -163,7 +174,6 @@ ark config:reset
 
 | Name       | Description                                 | Required           |
 | ---------- | ------------------------------------------- |:------------------:|
-| --force    | force the configuration to be reset         | :x:                |
 | --network  | the name of the network that should be used | :x:                |
 | --token    | the name of the token that should be used   | :x:                |
 
@@ -171,7 +181,7 @@ ark config:reset
 
 ##### Reset the configuration for the mainnet network
 
-```sh
+```bash
 ark config:reset --network=mainnet
 ```
 
@@ -181,7 +191,7 @@ Show the core log
 
 #### Usage
 
-```sh
+```bash
 ark core:log
 ```
 
@@ -195,7 +205,7 @@ ark core:log
 
 #### Examples
 
-```sh
+```bash
 ark core:log
 ```
 
@@ -205,7 +215,7 @@ Restart the core
 
 #### Usage
 
-```sh
+```bash
 ark core:restart
 ```
 
@@ -220,7 +230,7 @@ ark core:restart
 
 ##### Restart the core
 
-```sh
+```bash
 ark core:restart
 ```
 
@@ -230,7 +240,7 @@ Start the core
 
 #### Usage
 
-```sh
+```bash
 ark core:start
 ```
 
@@ -255,43 +265,43 @@ ark core:start
 
 ##### Run core with a daemon
 
-```sh
+```bash
 ark core:start
 ```
 
 ##### Run core as genesis
 
-```sh
+```bash
 ark core:start --networkStart
 ```
 
 ##### Disable any discovery by other peers
 
-```sh
+```bash
 ark core:start --disableDiscovery
 ```
 
 ##### Skip the initial discovery
 
-```sh
+```bash
 ark core:start --skipDiscovery
 ```
 
 ##### Ignore the minimum network reach
 
-```sh
+```bash
 ark core:start --ignoreMinimumNetworkReach
 ```
 
 ##### Start a seed
 
-```sh
+```bash
 ark core:start --launchMode=seed
 ```
 
 ##### Run core without a daemon
 
-```sh
+```bash
 ark core:start --no-daemon
 ```
 
@@ -301,7 +311,7 @@ Stop the core
 
 #### Usage
 
-```sh
+```bash
 ark core:stop
 ```
 
@@ -317,13 +327,13 @@ ark core:stop
 
 ##### Stop the core
 
-```sh
+```bash
 ark core:stop
 ```
 
 ##### Stop the core daemon
 
-```sh
+```bash
 ark core:stop --daemon
 ```
 
@@ -333,7 +343,7 @@ Get the value of an environment variable
 
 #### Usage
 
-```sh
+```bash
 ark env:get KEY
 ```
 
@@ -348,7 +358,7 @@ ark env:get KEY
 
 ##### Get the log level
 
-```sh
+```bash
 ark env:get CORE_LOG_LEVEL
 ```
 
@@ -358,7 +368,7 @@ List all environment variables
 
 #### Usage
 
-```sh
+```bash
 ark env:list
 ```
 
@@ -373,7 +383,7 @@ ark env:list
 
 ##### List all environment variables
 
-```sh
+```bash
 ark env:list
 ```
 
@@ -383,7 +393,7 @@ Get all of the environment paths
 
 #### Usage
 
-```sh
+```bash
 ark env:paths
 ```
 
@@ -398,7 +408,7 @@ ark env:paths
 
 ##### List all environment paths
 
-```sh
+```bash
 ark env:paths
 ```
 
@@ -408,7 +418,7 @@ Set the value of an environment variable
 
 #### Usage
 
-```sh
+```bash
 ark env:set KEY VALUE
 ```
 
@@ -416,7 +426,6 @@ ark env:set KEY VALUE
 
 | Name       | Description                                 | Required           |
 | ---------- | ------------------------------------------- |:------------------:|
-| --force    | force the setting to be overwritten         | :white_check_mark: |
 | --network  | the name of the network that should be used | :x:                |
 | --token    | the name of the token that should be used   | :x:                |
 
@@ -424,7 +433,7 @@ ark env:set KEY VALUE
 
 ##### Set the log level
 
-```sh
+```bash
 ark env:set CORE_LOG_LEVEL info
 ```
 
@@ -434,7 +443,7 @@ Show the forger log
 
 #### Usage
 
-```sh
+```bash
 ark forger:log
 ```
 
@@ -448,7 +457,7 @@ ark forger:log
 
 #### Examples
 
-```sh
+```bash
 ark forger:log
 ```
 
@@ -458,7 +467,7 @@ Restart the forger
 
 #### Usage
 
-```sh
+```bash
 ark forger:restart
 ```
 
@@ -473,7 +482,7 @@ ark forger:restart
 
 ##### Restart the forger
 
-```sh
+```bash
 ark forger:restart
 ```
 
@@ -483,7 +492,7 @@ Start the forger
 
 #### Usage
 
-```sh
+```bash
 ark forger:start
 ```
 
@@ -502,18 +511,18 @@ ark forger:start
 
 ##### Run a forger with a bip39 passphrase
 
-```sh
+```bash
 ark forger:start --bip39="..."
 ```
 
 ##### Run a forger with an encrypted bip38
 
-```sh
+```bash
 ark forger:start --bip38="..." --password="..."
 ```
 
 ##### Run a forger without a daemon
-```sh
+```bash
 ark forger:start --no-daemon
 ```
 
@@ -523,7 +532,7 @@ Stop the forger
 
 #### Usage
 
-```sh
+```bash
 ark forger:stop
 ```
 
@@ -539,13 +548,13 @@ ark forger:stop
 
 ##### Stop the forger
 
-```sh
+```bash
 ark forger:stop
 ```
 
 ##### Stop the forger daemon
 
-```sh
+```bash
 ark forger:stop --daemon
 ```
 
@@ -555,7 +564,7 @@ Show the relay log
 
 #### Usage
 
-```sh
+```bash
 ark relay:log
 ```
 
@@ -569,7 +578,7 @@ ark relay:log
 
 #### Examples
 
-```sh
+```bash
 ark relay:log
 ```
 
@@ -579,7 +588,7 @@ Restart the relay
 
 #### Usage
 
-```sh
+```bash
 ark relay:restart
 ```
 
@@ -594,7 +603,7 @@ ark relay:restart
 
 ##### Restart the relay
 
-```sh
+```bash
 ark relay:restart
 ```
 
@@ -604,7 +613,7 @@ Start the relay
 
 #### Usage
 
-```sh
+```bash
 ark relay:start
 ```
 
@@ -625,43 +634,43 @@ ark relay:start
 
 ##### Run a relay with a pm2 daemon
 
-```sh
+```bash
 ark relay:start --network=mainnet
 ```
 
 ##### Run a genesis relay
 
-```sh
+```bash
 ark relay:start --networkStart
 ```
 
 ##### Disable any discovery by other peers
 
-```sh
+```bash
 ark relay:start --disableDiscovery
 ```
 
 ##### Skip the initial discovery
 
-```sh
+```bash
 ark relay:start --skipDiscovery
 ```
 
 ##### Ignore the minimum network reach
 
-```sh
+```bash
 ark relay:start --ignoreMinimumNetworkReach
 ```
 
 ##### Start a seed
 
-```sh
+```bash
 ark relay:start --launchMode=seed
 ```
 
 ##### Run a relay without a daemon
 
-```sh
+```bash
 ark relay:start --no-daemon
 ```
 
@@ -671,7 +680,7 @@ Stop the relay
 
 #### Usage
 
-```sh
+```bash
 ark relay:stop
 ```
 
@@ -686,13 +695,13 @@ ark relay:stop
 #### Examples
 
 ##### Stop the relay
-```sh
+```bash
 ark relay:stop
 ```
 
 ##### Stop the relay daemon
 
-```sh
+```bash
 ark relay:stop --daemon
 ```
 
@@ -702,7 +711,7 @@ List all core daemons
 
 #### Usage
 
-```sh
+```bash
 ark top
 ```
 
@@ -710,7 +719,7 @@ ark top
 
 ##### List all core daemons
 
-```sh
+```bash
 ark top
 ```
 

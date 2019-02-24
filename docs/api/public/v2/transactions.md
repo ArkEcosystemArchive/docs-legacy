@@ -436,7 +436,7 @@ GET /api/transactions/fees
           "ipfs": 0, 
           "timelockTransfer": 0, 
           "multiPayment": 0, 
-          "delegateResignatio": 0
+          "delegateResignation": 0
      }
 }
 

@@ -12,46 +12,51 @@ Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/M
 
 First things first, you need to find your config directory. If you installed Ark Core using the `core-commander`, you can typically find this folder at `~/.config/ark-core/{network}/`.
 
-The file we'll access from this folder is `network.json`. If you see it, you're in the right place.
+The file we'll access from this folder is `plugins.js`. If you see it, you're in the right place.
 
-## Edit Your Dynamic Fee Constants
+## Edit Your Dynamic Fees Constants
 
-Your node needs to signal to the network that it accepts dynamic fees. For this, open up your `network.json` file:
+Your node needs to signal to the network that it accepts dynamic fees. For this, open up your `plugins.js` file:
 
 ```bash
-nano ~/.config/ark-core/{network}/network.json
+nano ~/.config/ark-core/{network}/plugins.js
 ```
 
-There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `constants` key, and the dynamic fees themselves.
+There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@arkecosystem/core-transaction-pool` key, and the dynamic fees themselves.
 
-You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Ark Core node. The `fees` config key in your constants section should look like this:
+You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Ark Core node. The `dynamicFees` config key in your `@arkecosystem/core-transaction-pool` section should look like this:
 
-##### file: ~/.config/ark-core/{network}/network.json
+##### file: ~/.config/ark-core/{network}/plugins.js
 
-```json
+```js
 {
-    "fees": {
-        "dynamic": false,
-        "dynamicFees": {
-          "minFeePool": 1000,
-          "minFeeBroadcast": 1000,
-          "addonBytes": {
-            "transfer": 100,
-            "secondSignature": 250,
-            "delegateRegistration": 500,
-            "vote": 100,
-            "multiSignature": 500,
-            "ipfs": 250,
-            "timelockTransfer": 500,
-            "multiPayment": 500,
-            "delegateResignation": 500
-          }
+    // packages...
+    "@arkecosystem/core-transaction-pool": {
+        // ...
+        dynamicFees: {
+            enabled: true,
+            minFeePool: 1000,
+            minFeeBroadcast: 1000,
+            addonBytes: {
+              transfer: 100,
+                secondSignature: 250,
+                delegateRegistration: 400000,
+                vote: 100,
+                multiSignature: 500,
+                ipfs: 250,
+                timelockTransfer: 500,
+                multiPayment: 500,
+                delegateResignation: 400000,
+            },
         },
-    }
+    },
+    // packages...
 }
 ```
 
-Notice the first two keys in the `dynamicFees` object: `minFeePool` and `minFeeBroadcast`.
+Notice the first three keys in the `dynamicFees` object: `enable`, `minFeePool` and `minFeeBroadcast`.
+
+The `dynamic` keys in `fees` tells us whether or not dynamic fees should be enabled. The default configuration, as shown above, **enables** dynamic fees. If we were to change `enabled` to false, the node would instead disable dynamic fees.
 
 The `minFeePool` value represents the minimum fee in Arktoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Arktoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
 
@@ -60,23 +65,6 @@ Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte val
 ```js
 const calculatedFee = (addonBytesValue + transactionSizeInBytes) * arktoshiPerByte
 ```
-
-## Edit Your Dynamic Fees
-
-If you're interested in changing your dynamic fees, the configuration you want to edit is near the bottom of your `network.json` file. It has two keys, `height` and `fees`, which look like this:
-
-##### file: ~/.config/ark-core/{network}/network.json
-
-```json
-{
-    "height": 10,
-    "fees": {
-        "dynamic": true
-    }
-}
-```
-
-The `dynamic` keys in `fees` tells us whether or not dynamic fees should be enabled, and the `height` key tells the node at which network height the policy should take effect. The default configuration, as shown above, **enables** dynamic fees from height ten onwards. If we were to change `dynamic` to false, the node would instead disable dynamic fees from height ten onwards.
 
 ## Changing the Transaction Pool Size
 

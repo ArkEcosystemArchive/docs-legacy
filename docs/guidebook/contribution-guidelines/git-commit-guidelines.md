@@ -8,7 +8,7 @@ title: "Git Commit Guidelines"
 
 ## Introduction
 
-These guidelines are based on [AngularJS's commit message convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) and should be followed as closely as possible, or your pull-request is subject to rejection.
+These guidelines are based on [Conventional Commits](https://www.conventionalcommits.org/) and should be followed as closely as possible, or your pull-request is subject to rejection.
 
 ## Types
 
@@ -20,4 +20,6 @@ These guidelines are based on [AngularJS's commit message convention](https://gi
 - `perf` A code change that improves performance
 - `test` Adding missing or correcting existing tests
 - `chore` Changes to the build process or auxiliary tools and libraries such as documentation generation
+- `deps` Adding, updating or removing dependencies
+- `release` A new release, including changelog and version bump
 - `misc` Any changes that do not fit any of the above types

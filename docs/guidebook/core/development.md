@@ -122,4 +122,4 @@ Additionally, we provide a variant (`yarn test:debug`) that enables the [Node de
 
 In order to make everyone life easier to work with the code and guarantee a certain style guide we use [Prettier](https://github.com/prettier/prettier) in combination with [TSLint](https://palantir.github.io/tslint/).
 
-Before sending any PRs or pushing to GitHub, please make sure to run `yarn lint` to enforce the rules described in `tslint.json`.
+Before sending any PRs or pushing to GitHub, please make sure to run `yarn format` to enforce the rules described in `tslint.json` and `.prettierrc.json`.

@@ -16,7 +16,7 @@ Repositories across an organization should have a consistent basic structure to 
 2. **LICENSE** - Should contain the software license of the project, commonly the MIT License for open-source projects.
 3. **.editorconfig** - Should contain a configuration that is enforced by everyone's editor if an appropriate plugin is installed.
 4. **.gitignore** - Should contain a list of files and directories that should not be committed with `git push`.
-5. **.travis.yml** - Should contain a configuration for TravisCI to run tests.
+5. **.circleci/config.yml** - Should contain a configuration for CircleCI to run tests.
 
 ## Development
 

@@ -14,7 +14,7 @@ First things first, you need to find your config directory. If you installed Ark
 
 The file we'll access from this folder is `plugins.js`. If you see it, you're in the right place.
 
-## Edit Your Dynamic Fees Constants
+## Edit Your Dynamic Fee Constants
 
 Your node needs to signal to the network that it accepts dynamic fees. For this, open up your `plugins.js` file:
 
@@ -32,7 +32,6 @@ You can use dynamic fee constants to alter how the dynamic fee formula is applie
 {
     // packages...
     "@arkecosystem/core-transaction-pool": {
-        // ...
         dynamicFees: {
             enabled: true,
             minFeePool: 1000,

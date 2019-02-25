@@ -2,7 +2,7 @@
 title: "Database"
 ---
 
-# Database 
+# Database
 
 ::: tip
 You can find the source code of this package at [packages/core-database](https://github.com/ArkEcosystem/core/tree/develop/packages/core-database).
@@ -32,7 +32,7 @@ yarn add @arkecosystem/core-database
 
 The database package is the primary interaction layer between the raw blockchain data and the various other packages who need to access that layer.
 
-The current database implementation is built upon [PostgresQL](https://www.postgresql.org/), a high-performance relational database that facilitates the SQL read queries necessary to ensure the full range of API and webhook functionality. 
+The current database implementation is built upon [PostgresQL](https://www.postgresql.org/), a high-performance relational database that facilitates the SQL read queries necessary to ensure the full range of API and webhook functionality.
 
 ## Usage
 
@@ -117,7 +117,7 @@ These are the functions outlined in the database interface:
 - saveRound
 - deleteRound
 
-Rewriting the `core-database` layer should be done with caution. Although the Postgres database implementation might require more computational resources than a lower-level datastore, this complexity brings with it a streamlining of developer experience through the use of well-known SQL queries. This is particularly important given the many ways in which Ark Core data can be accessed by external applications — from the Public API to webhooks to GraphQL. 
+Rewriting the `core-database` layer should be done with caution. Although the Postgres database implementation might require more computational resources than a lower-level datastore, this complexity brings with it a streamlining of developer experience through the use of well-known SQL queries. This is particularly important given the many ways in which Ark Core data can be accessed by external applications — from the Public API to webhooks.
 
 **Postgres Database Defaults**
 ```js

@@ -8,41 +8,31 @@ Whether you're installing your node using Core Commander or pulling the source c
 
 ```json
 "scripts": {
-    "start": "./bin/ark start",
-    "start:mainnet": "./bin/ark start --config ./lib/config/mainnet --network mainnet",
-    "start:devnet": "./bin/ark start --config ./lib/config/devnet --network devnet",
-    "start:testnet": "cross-env ARK_ENV=test ./bin/ark start --config ./lib/config/testnet --network testnet",
-    "start:testnet:live": "./bin/ark start --config ./lib/config/testnet.live --network testnet",
-    "relay": "./bin/ark relay",
-    "relay:mainnet": "./bin/ark relay --config ./lib/config/mainnet --network mainnet",
-    "relay:devnet": "./bin/ark relay --config ./lib/config/devnet --network devnet",
-    "relay:testnet": "cross-env ARK_ENV=test ./bin/ark relay --config ./lib/config/testnet --network testnet",
-    "relay:testnet:live": "./bin/ark relay --config ./lib/config/testnet.live --network testnet",
-    "forger": "./bin/ark forger",
-    "forger:mainnet": "./bin/ark forger --config ./lib/config/mainnet --network mainnet",
-    "forger:devnet": "./bin/ark forger --config ./lib/config/devnet --network devnet",
-    "forger:testnet": "cross-env ARK_ENV=test ./bin/ark forger --config ./lib/config/testnet --network testnet",
-    "forger:testnet:live": "./bin/ark forger --config ./lib/config/testnet.live --network testnet",
-    "snapshot": "./bin/ark snapshot",
-    "snapshot:mainnet": "./bin/ark snapshot --config ./lib/config/mainnet --network mainnet",
-    "snapshot:devnet": "./bin/ark snapshot --config ./lib/config/devnet --network devnet",
-    "snapshot:testnet": "./bin/ark snapshot --config ./lib/config/testnet --network testnet",
-    "snapshot:testnet:live": "./bin/ark snapshot --config ./lib/config/testnet.live --network testnet",
-    "full:testnet": "cross-env ARK_ENV=test ./bin/ark start --config ./lib/config/testnet --network testnet --network-start",
+    "ark": "./bin/run",
+    "start:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark core:run",
+    "start:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark core:run",
+    "start:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark core:run",
+    "relay:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark relay:run",
+    "relay:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark relay:run",
+    "relay:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark relay:run",
+    "forger:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark forger:run",
+    "forger:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark forger:run",
+    "forger:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark forger:run",
+    "full:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark core:run --networkStart",
 }
 ```
 
 There are quite a few scripts here, but a closer look reveals considerable overlap in their functionality. Let's take a look at one of the commands in more detail:
 
 ```json
-"relay:devnet": "./bin/ark relay --config ./lib/config/devnet --network devnet",
+"relay:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark relay:run",
 ```
 
 We can see from the script name (the part before the colon) that this is a script designed to start a relay node on ARK devnet. The actual body of the command (the part after the colon) begins with the segment `./bin/ark relay`. This segment essentially tells our node, or whichever process is running this script, to look inside the `bin` directory and launch the `relay` command located in the `ark` file.
 
 The rest of this command specifies a pair of arguments to pass to the `relay` command:
 
-- config: `./lib/config/devnet`. This specifies a folder in which the configuration files for our node can be found.
+- config: `./bin/config/devnet`. This specifies a folder in which the configuration files for our node can be found.
 - network: `devnet`. This specifies that we want to run a `devnet` node, and not a `mainnet` or `testnet` node.
 
 If you look again at the scripts posted above, you'll notice that all of them contain this same basic formula, with only minor differences from script to script. Scripts may start `relays`,  `forgers`,  `testnet` nodes or `mainnet` nodes.
@@ -126,7 +116,6 @@ To understand how this setup differs between forgers and relays, let's look at t
 await container.setUp(options, {
     include: [
       '@arkecosystem/core-event-emitter',
-      '@arkecosystem/core-config',
       '@arkecosystem/core-logger',
       '@arkecosystem/core-logger-winston',
       '@arkecosystem/core-forger'
@@ -284,12 +273,11 @@ This method effectively checks for the presence of a `plugins` file in our confi
 
 In the `PluginRegistrar.setUp` method, we loop through this plugins property and register each plugin into our container according to the settings defined in the previous steps.
 
-This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the file that's returned by the `__loadPlugins` method. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/devnet/plugins.js), but here's a snippet:
+This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the file that's returned by the `__loadPlugins` method. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
 
 ```js
 module.exports = {
   '@arkecosystem/core-event-emitter': {},
-  '@arkecosystem/core-config': {},
   '@arkecosystem/core-logger-winston': {
     transports: {
       console: {

@@ -33,7 +33,6 @@ GET /api/node/configuration
         "ports": {
           "@arkecosystem/core-p2p": 4000,
           "@arkecosystem/core-api": 4003,
-          "@arkecosystem/core-graphql": 4005,
           "@arkecosystem/core-json-rpc": 8080
         },
         "constants": {
@@ -73,7 +72,7 @@ GET /api/node/configuration
               "ipfs": 0,
               "timelockTransfer": 0,
               "multiPayment":0,
-              "delegateResignation": 0 
+              "delegateResignation": 0
             }
           }
         },

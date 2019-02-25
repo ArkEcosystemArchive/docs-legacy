@@ -30,14 +30,6 @@ bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/insta
 
 You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
 
-## Troubleshooting
-
-If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registred. Execute the following command to resolve the issue.
-
-`echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc`
-
-> If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
-
 ## Configuration
 
 Before you can start using Ark Core you will need to publish the configuration of the network you wish to operate on.
@@ -49,6 +41,14 @@ ark config:publish
 This will bring up an interative UI which will ask a few questions to help you with the setup process.
 
 > Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
+
+## Troubleshooting
+
+If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registred. Execute the following command to resolve the issue.
+
+`echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc`
+
+> If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
 
 ## Available Commands
 

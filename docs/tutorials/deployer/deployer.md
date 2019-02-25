@@ -110,7 +110,7 @@ First, install a node using the official [core-commander](/exchanges/relay.html)
 
 in `core-commander/ecosystem.config.js` we can see what parameters are passed to the startup command when running the `relay`, `forger` or `explorer`.
 
-The `--config` flag is of particular interest to us, as it passed the config files we wish to use. You can find real-world configurations in the [core repository](https://github.com/ArkEcosystem/core/tree/master/packages/core/lib/config). Each of the directories contains a full set of configuration files needed to run a node.
+The `--config` flag is of particular interest to us, as it passed the config files we wish to use. You can find real-world configurations in the [core repository](https://github.com/ArkEcosystem/core/tree/master/packages/core/bin/config). Each of the directories contains a full set of configuration files needed to run a node.
 
 Edit/copy the `peers.json` and add the IP and port of your first node.
 

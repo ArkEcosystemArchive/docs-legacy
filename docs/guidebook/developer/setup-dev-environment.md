@@ -46,7 +46,7 @@ git clone git@github.com:ArkEcosystem/core.git
 
 This last command, `yarn full:testnet`, is where the magic happens. Let us do a quick walkthrough of what happens when this command is run:
 
-1. The `full:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env ARK_ENV=test ./bin/ark start --config ./lib/config/testnet --network testnet --network-start`
+1. The `full:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env ARK_ENV=test ./bin/ark start --config ./bin/config/testnet --network testnet --networkStart`
 
 2. As seen in the previous step, the `./bin/ark` file is called with the `start` command. That command looks like this:
 
@@ -62,7 +62,7 @@ app
   .action(async (options) => require('../lib/start-relay-and-forger')(options))
 ```
 
-3. Based on this command config and the options passed by the `full:testnet` command, we can see that the network sets the `config` directory to `lib/config/testnet`, the `network` option to `testnet`, and the `network-start` option to `true`, which starts our testnet from scratch with a new genesis block.
+3. Based on this command config and the options passed by the `full:testnet` command, we can see that the network sets the `config` directory to `bin/config/testnet`, the `network` option to `testnet`, and the `network-start` option to `true`, which starts our testnet from scratch with a new genesis block.
 
 4. The exported function from `lib/start-relay-and-forger` is loaded and called with the above options to start the network. Let us look at the function exported by `start-relay-and-forger.js`:
 
@@ -115,7 +115,7 @@ async setUp (variables, options = {}) {
 }
 ```
 
-1. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key of the second argument to `container.setUp`. You can find the installed plugins in the `plugins.js` file located in the `core` package at `lib/config/testnet`.
+1. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key of the second argument to `container.setUp`. You can find the installed plugins in the `plugins.js` file located in the `core` package at `bin/config/testnet`.
 
 This last step is where the meat-and-potatoes of ARK Core is loaded. During this step, the Postgres database is set up, all ARK-specific tables and fields are migrated, the genesis block is created, 51 forging delegates are created and set up to forge blocks — all the blockchain goodness you would expect from of a fully-formed testnet.
 

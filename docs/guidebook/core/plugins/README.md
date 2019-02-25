@@ -65,21 +65,15 @@ In order to make sure that your plugin is registered you need to modify the **pl
 ```js
 module.exports = {
   '@arkecosystem/core-event-emitter': {},
-  '@arkecosystem/core-config': {},
-  '@arkecosystem/core-config-json': {},
   '@arkecosystem/core-logger': {},
   '@arkecosystem/core-logger-winston': {},
   '@arkecosystem/core-database': {},
-  '@arkecosystem/core-database-sequelize': {},
+  '@arkecosystem/core-database-postgres': {},
   '@arkecosystem/core-transaction-pool': {},
-  '@arkecosystem/core-transaction-pool-redis': {},
   '@arkecosystem/core-p2p': {},
   '@arkecosystem/core-blockchain': {},
   '@arkecosystem/core-api': {},
   '@arkecosystem/core-webhooks': {},
-  '@arkecosystem/core-webhooks-api': {},
-  '@arkecosystem/core-graphql': {},
-  '@arkecosystem/core-graphql-api': {},
   '@arkecosystem/core-forger': {},
   '@arkecosystem/core-json-rpc': {}
 }

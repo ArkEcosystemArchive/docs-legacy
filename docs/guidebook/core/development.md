@@ -53,14 +53,16 @@ If the output of `git branch` doesn't show 'develop' as the current branch, but 
 git fetch https://github.com/arkecosystem/core develop:develop
 git checkout develop
 ```
+
 This will ensure that your local files reflect those of the Core's development branch.
 
 Finally, we can set up the entire repository with one command:
+
 ```bash
 yarn setup
 ```
 
-If you wish to run tests from this point, follow the instructions in the [docker](./docker.html) guide (use case #1). Then, you may run tests on the whole repository or individual packages with `yarn test`.  
+If you wish to run tests from this point, follow the instructions in the [docker](./docker.html) guide (use case #1). Then, you may run tests on the whole repository or individual packages with `yarn test`.
 
 Just follow those steps and you are ready to get started. Happy Hacking!
 
@@ -75,27 +77,25 @@ For development, you could use our ready-to-use [Docker Compose](https://docs.do
 If you want to start a node which consists of a `relay` and `forger` you can use any of the following commands (inside `packages/core`).
 
 - `yarn start` => `~/.ark`
-- `yarn start:mainnet` => `packages/core/lib/config/networks/mainnet`
-- `yarn start:devnet` => `packages/core/lib/config/networks/devnet`
-- `yarn start:testnet` => `packages/core/lib/config/networks/testnet`
+- `yarn start:mainnet` => `packages/core/bin/config/networks/mainnet`
+- `yarn start:devnet` => `packages/core/bin/config/networks/devnet`
+- `yarn start:testnet` => `packages/core/bin/config/networks/testnet`
 
 ## Starting a relay
 
 If you want to start a `relay`, you can use any of the following commands (inside `packages/core`).
 
-- `yarn relay` => `~/.ark`
-- `yarn relay:mainnet` => `packages/core/lib/config/networks/mainnet`
-- `yarn relay:devnet` => `packages/core/lib/config/networks/devnet`
-- `yarn relay:testnet` => `packages/core/lib/config/networks/testnet`
+- `yarn relay:mainnet` => `packages/core/bin/config/networks/mainnet`
+- `yarn relay:devnet` => `packages/core/bin/config/networks/devnet`
+- `yarn relay:testnet` => `packages/core/bin/config/networks/testnet`
 
 ## Starting a forger
 
 If you want to start a `forger`, you can use any of the following commands (inside `packages/core`).
 
-- `yarn forger` => `~/.ark`
-- `yarn forger:mainnet` => `packages/core/lib/config/networks/mainnet`
-- `yarn forger:devnet` => `packages/core/lib/config/networks/devnet`
-- `yarn forger:testnet` => `packages/core/lib/config/networks/testnet`
+- `yarn forger:mainnet` => `packages/core/bin/config/networks/mainnet`
+- `yarn forger:devnet` => `packages/core/bin/config/networks/devnet`
+- `yarn forger:testnet` => `packages/core/bin/config/networks/testnet`
 
 ## Debugging
 
@@ -104,7 +104,6 @@ It is possible to run a variation of these commands that enables the [Node debug
 - `yarn debug:start`
 - `yarn debug:relay`
 - `yarn debug:forger`
-- `yarn debug:snapshot`
 
 A good introduction about how to use the debugger is the [guide to debugging of Node.js](https://nodejs.org/en/docs/guides/debugging-getting-started/).
 

@@ -360,7 +360,7 @@ RUN echo "host all all 0.0.0.0/0 trust" >> /etc/postgresql/9.4/main/pg_hba.conf
 RUN mkdir .ark
 
 # this will start an entire test network, including genesis block. To find the secrets, check out:
-# https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/testnet/delegates.json
+# https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/testnet/delegates.json
 ENTRYPOINT ./entrypoint.sh
 ```
 
@@ -384,7 +384,7 @@ while ! pg_isready -h 0.0.0.0 -p 5432 > /dev/null 2> /dev/null; do
         sleep 1
 done
 
-# creating a postgresql user. See https://github.com/ArkEcosystem/core/blob/develop/packages/core/lib/config/testnet/plugins.js
+# creating a postgresql user. See https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/testnet/plugins.js
 # for the origin of the username and password.
 su -c "psql -c \"CREATE USER ark WITH PASSWORD 'password' \"" postgres
 su -c "psql -c \"CREATE DATABASE ark_testnet WITH OWNER ark \"" postgres

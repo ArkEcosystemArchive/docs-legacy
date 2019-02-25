@@ -72,7 +72,6 @@ The following files are required to make `v2` compatible with your custom networ
 ```js
 module.exports = {
   '@arkecosystem/core-event-emitter': {},
-  '@arkecosystem/core-config': {},
   '@arkecosystem/core-logger-winston': {
     transports: {
       console: {

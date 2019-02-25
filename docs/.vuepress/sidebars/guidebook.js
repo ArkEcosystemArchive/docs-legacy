@@ -38,7 +38,6 @@ module.exports = [
       "/guidebook/core/plugins/core",
       "/guidebook/core/plugins/core-api",
       "/guidebook/core/plugins/core-blockchain",
-      "/guidebook/core/plugins/core-config",
       "/guidebook/core/plugins/core-container",
       "/guidebook/core/plugins/core-database",
       "/guidebook/core/plugins/core-debugger-cli",

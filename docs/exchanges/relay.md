@@ -338,7 +338,7 @@ ARK_JSON_RPC_PORT=8080
 EOL
 cd ~/
 git clone https://github.com/ArkEcosystem/core.git ark-core
-cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.config/ark-core/{network}/
+cp -f ~/ark-core/packages/core/bin/config/mainnet/* ~/.config/ark-core/{network}/
 cp -f ~/ark-core/packages/crypto/lib/networks/ark/mainnet.json  ~/.config/ark-core/{network}/network.json
 cd ark-core
 lerna bootstrap
@@ -355,7 +355,7 @@ git reset --hard
 git pull
 lerna bootstrap
 rm -f ~/.config/ark-core/{network}/peers_backup.*
-cp -f ~/ark-core/packages/core/lib/config/mainnet/* ~/.config/ark-core/{network}/.
+cp -f ~/ark-core/packages/core/bin/config/mainnet/* ~/.config/ark-core/{network}/.
 cp -f /home/node/ark-core/packages/crypto/lib/networks/ark/mainnet.json /home/node/.ark/config/network.json
 pm2 start all --update-env
 ```

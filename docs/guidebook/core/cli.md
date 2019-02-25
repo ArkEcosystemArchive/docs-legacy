@@ -320,27 +320,38 @@ ark core:start --skipDiscovery
 
 ##### Ignore the minimum network reach
 
-```bash
-ark core:start --ignoreMinimumNetworkReach
+```bash| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
+ark cor| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
 ```
 
-##### Start a seed
+##### S| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
 
-```bash
-ark core:start --launchMode=seed
+
+```bash| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
+ark cor| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
 ```
 
-##### Run core without a daemon
+##### R| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
 
-```bash
-ark core:start --no-daemon
+
+```bash| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
+ark cor| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
 ```
 
-### core:stop
+### cor| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
 
-Stop the core
 
-#### Usage
+Stop th| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
+
+#### Us| -c    | —config           | `~/.config/ark-core/{network}`     | Location of network configuration file.        |
+
 
 ```bash
 ark core:stop

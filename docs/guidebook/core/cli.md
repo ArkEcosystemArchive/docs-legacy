@@ -10,13 +10,15 @@ Release 2.2.0 is currently in beta.
 
 ## Installation
 
-Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, that provides a built-in CLI.
+Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, which provides a built-in CLI.
 
 ### Existing Installation
 
 ```bash
 yarn global add @arkecosystem/core@beta
 ```
+
+This command might take a while since all packages and dependencies need to be installed as well.
 
 ### Fresh Installation
 
@@ -38,19 +40,27 @@ Before you can start using Ark Core you will need to publish the configuration o
 ark config:publish
 ```
 
-This will bring up an interative UI which will ask a few questions to help you with the setup process.
-
-> Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
+This will bring up an interactive UI which will ask a few questions to help you with the setup process. Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
 
 ## Troubleshooting
 
-If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registred. Execute the following command to resolve the issue.
+If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.
 
 `echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc`
 
-> If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
+If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
 
 ## Available Commands
+
+### autocomplete
+
+You might be used to tab completion, which the Ark CLI does support. Using this command does not configure autocompletion, but does show you instructions.
+
+#### Usage
+
+```bash
+ark autocomplete
+```
 
 ### config:cli
 
@@ -336,6 +346,12 @@ ark core:start --launchMode=seed
 ark core:start --no-daemon
 ```
 
+or use the following command, which supports the same set of flags.:
+
+```bash
+ark core:run
+```
+
 ### core:stop
 
 Stop the core
@@ -527,6 +543,12 @@ Start the forger
 ark forger:start
 ```
 
+or the equivalent, without invoking pm2:
+
+```bash
+ark forger:run
+```
+
 #### Flags
 
 | Name          | Description                                 | Required           |
@@ -589,6 +611,29 @@ ark forger:stop
 ark forger:stop --daemon
 ```
 
+### forger:status
+
+Show the forger status.
+
+#### Usage
+
+```bash
+ark forger:status
+```
+
+#### Flags
+
+| Name       | Description                                 | Required           |
+| ---------- | ------------------------------------------- |:------------------:|
+| --network  | the name of the network that should be used | :x:                |
+| --token    | the name of the token that should be used   | :x:                |
+
+#### Example
+
+```bash
+ark forger:status
+```
+
 ### relay:log
 
 Show the relay log
@@ -646,6 +691,12 @@ Start the relay
 
 ```bash
 ark relay:start
+```
+
+or the equivalent without using pm2:
+
+```bash
+ark relay:run
 ```
 
 #### Flags

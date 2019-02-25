@@ -723,10 +723,103 @@ ark top
 ark top
 ```
 
-### help
+### snapshot:dump
 
-TBD
+Create a dump of the database
 
-### update
+#### Usage
 
-TBD
+```bash
+ark snapshot:dump
+```
+
+#### Flags
+
+| Name              | Description                                     | Required           |
+| ----------------- | ----------------------------------------------- |:------------------:|
+| --blocks          | blocks to append to, correlates to folder name  | :x:                |
+| --codec           | codec name, default is msg-lite binary          | :x:                |
+| --start           | [default: -1] start network height to export    | :x:                |
+| --end             | [default: -1] end network height to export      | :x:                |
+| --skipCompression | skip gzip compression                           | :x:                |
+| --trace           | dumps generated queries and settings to console | :x:                |
+| --network         | the name of the network that should be used     | :x:                |
+| --token           | the name of the token that should be used       | :x:                |
+
+### snapshot:restore
+
+Restore the database from a dump
+
+#### Usage
+
+```bash
+ark snapshot:restore
+```
+
+#### Flags
+
+| Name               | Description                                     | Required           |
+| ------------------ | ----------------------------------------------- |:------------------:|
+| --signatureVerify  | signature verification                          | :x:                |
+| --skipRestartRound | skip revert to current round                    | :x:                |
+| --blocks           | blocks to append to, correlates to folder name  | :x:                |
+| --codec            | codec name, default is msg-lite binary          | :x:                |
+| --start            | [default: -1] start network height to export    | :x:                |
+| --end              | [default: -1] end network height to export      | :x:                |
+| --skipCompression  | skip gzip compression                           | :x:                |
+| --trace            | dumps generated queries and settings to console | :x:                |
+| --network          | the name of the network that should be used     | :x:                |
+| --token            | the name of the token that should be used       | :x:                |
+
+### snapshot:rollback
+
+Rollback the database to a specific height
+
+#### Usage
+
+```bash
+ark snapshot:rollback
+```
+
+#### Flags
+
+| Name              | Description                                           | Required           |
+| ----------------- | ----------------------------------------------------- |:------------------:|
+| --height          | [default: -1] block network height number to rollback | :x:                |
+| --trace           | dumps generated queries and settings to console       | :x:                |
+| --network         | the name of the network that should be used           | :x:                |
+| --token           | the name of the token that should be used             | :x:                |
+
+### snapshot:truncate
+
+Truncate the database
+
+#### Usage
+
+```bash
+ark snapshot:truncate
+```
+
+### snapshot:verify
+
+Create a new snapshot
+
+#### Usage
+
+```bash
+ark snapshot:verify
+```
+
+#### Flags
+
+| Name               | Description                                     | Required           |
+| ------------------ | ----------------------------------------------- |:------------------:|
+| --signatureVerify  | signature verification                          | :x:                |
+| --blocks           | blocks to append to, correlates to folder name  | :x:                |
+| --codec            | codec name, default is msg-lite binary          | :x:                |
+| --start            | [default: -1] start network height to export    | :x:                |
+| --end              | [default: -1] end network height to export      | :x:                |
+| --skipCompression  | skip gzip compression                           | :x:                |
+| --trace            | dumps generated queries and settings to console | :x:                |
+| --network          | the name of the network that should be used     | :x:                |
+| --token            | the name of the token that should be used       | :x:                |

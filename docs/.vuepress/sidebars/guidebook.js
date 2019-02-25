@@ -48,7 +48,6 @@ module.exports = [
       "/guidebook/core/plugins/core-error-tracker-sentry",
       "/guidebook/core/plugins/core-event-emitter",
       "/guidebook/core/plugins/core-forger",
-      "/guidebook/core/plugins/core-graphql",
       "/guidebook/core/plugins/core-http-utils",
       "/guidebook/core/plugins/core-logger",
       "/guidebook/core/plugins/core-logger-winston",

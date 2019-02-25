@@ -52,6 +52,37 @@ This will bring up an interative UI which will ask a few questions to help you w
 
 ## Available Commands
 
+### config:cli
+
+Configure the CLI
+
+#### Usage
+
+```bash
+ark config:cli
+```
+
+#### Flags
+
+| Name      | Description                                  | Required           |
+| --------- | -------------------------------------------- |:------------------:|
+| --token   | the name of the token that should be used    | :x:                |
+| --channel | the npm registry channel that should be used | :x:                |
+
+#### Examples
+
+##### Use the "mine" token for configuration
+
+```bash
+ark config:cli --token="mine"
+```
+
+##### Switch to the beta channel
+
+```bash
+ark config:cli --channel="beta"
+```
+
 ### config:forger
 
 Configure the forging delegate
@@ -64,21 +95,13 @@ ark config:forger
 
 #### Flags
 
-```bash
---bip38=bip38                             the encrypted bip38
---bip39=bip39                             the plain text bip39 passphrase
---method=method                           the configuration method to use (bip38 or bip39)
---network=devnet|mainnet|testnet|unitnet  the name of the network that should be used
---password=password                       the password for the encrypted bip38
---token=token                             (required) [default: ark] the name of the token that should be used
-```
-
-| Name       | Description                                 | Required           |
-| ---------- | ------------------------------------------- |:------------------:|
-| --bip39    | the plain text bip39 passphrase             | :white_check_mark: |
-| --password | the password for the encrypted bip38        | :white_check_mark: |
-| --network  | the name of the network that should be used | :x:                |
-| --token    | the name of the token that should be used   | :x:                |
+| Name       | Description                                      | Required           |
+| ---------- | ------------------------------------------------ |:------------------:|
+| --bip39    | the plain text bip39 passphrase                  | :x:                |
+| --password | the password for the encrypted bip38             | :x:                |
+| --method   | the configuration method to use (bip38 or bip39) | :x:                |
+| --network  | the name of the network that should be used      | :x:                |
+| --token    | the name of the token that should be used        | :x:                |
 
 #### Examples
 

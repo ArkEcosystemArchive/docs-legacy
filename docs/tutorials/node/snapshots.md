@@ -47,7 +47,7 @@ The folder `0-331985` indicates that the snapshot includes data between block 
 
 Using the optional `—start` and `—end` flags will specify a lower and uppers bounds for the snapshot, allowing you to customize your backups to your specific needs.
 
-> Click [here](/docs/guidebook/core/cli.md#snapshot-dump) to see the flags that can be added to the `ark snapshot:dump` command at runtime or type `ark snapshot:dump --help`.
+> Click [here](/guidebook/core/cli.md#snapshot-dump) to see the flags that can be added to the `ark snapshot:dump` command at runtime or type `ark snapshot:dump --help`.
 
 ### Append Data to an Existing Snapshot
 
@@ -95,7 +95,7 @@ ark snapshot:restore --blocks 0-331985 --truncate --signatureVerify
 
 Please note that this will increase the restore time drastically.
 
-> Click [here](/docs/guidebook/core/cli.md#snapshot-restore) to see the flags that can be added to the `ark snapshot:restore` command at runtime or type `ark snapshot:restore --help`.
+> Click [here](/guidebook/core/cli.md#snapshot-restore) to see the flags that can be added to the `ark snapshot:restore` command at runtime or type `ark snapshot:restore --help`.
 
 ## Verify Existing Snapshot
 
@@ -115,7 +115,7 @@ ark snapshot:verify --blocks 0-331985 --skip-sign-verify
 
 Note that database verification is run by default whenever a node boots up. Although this procedure ensures network consistency, importing an invalid snapshot will increase the amount of time it takes your node to sync with the network. Trust, but verify — even with your snapshots.
 
-> Click [here](/docs/guidebook/core/cli.md#snapshot-verify) to see the flags that can be added to the `ark snapshot:verify` command at runtime or type `ark snapshot:verify --help`.
+> Click [here](/guidebook/core/cli.md#snapshot-verify) to see the flags that can be added to the `ark snapshot:verify` command at runtime or type `ark snapshot:verify --help`.
 
 ## Performing a Rollback
 
@@ -133,7 +133,7 @@ Rollback command also makes a backup of forged transactions, ensuring that no lo
 
 For example: `rollbackTransactionBackup.53001.54978.json` contains transactions from block 53001 to block 54978.
 
-> Click [here](/docs/guidebook/core/cli.md#snapshot-rollback) to see the flags that can be added to the `ark snapshot:rollback` command at runtime or type `ark snapshot:rollback --help`.
+> Click [here](/guidebook/core/cli.md#snapshot-rollback) to see the flags that can be added to the `ark snapshot:rollback` command at runtime or type `ark snapshot:rollback --help`.
 
 ## Implementation
 

@@ -44,11 +44,19 @@ This will bring up an interative UI which will ask a few questions to help you w
 
 ## Troubleshooting
 
+### Command not found
+
 If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registred. Execute the following command to resolve the issue.
 
 `echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc`
 
 > If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
+
+### Process fails to start after update
+
+If the processes fail to start or restart after an update it is most likely an issue with pm2. Running `pm2 update` should usually resolve the issue.
+
+If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a delegate.
 
 ## Available Commands
 

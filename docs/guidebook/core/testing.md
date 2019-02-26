@@ -12,6 +12,16 @@ Core is built with testing in mind. In fact, support for testing with `jest` is 
 
 By default, Core's `__tests__` directory contains two directories: `integration` and `unit`. Unit tests are tests that focus on a very small, isolated portion of your code. In fact, most unit tests probably focus on a single method. Integration tests may test a larger portion of your code, including how several objects interact with each other or even a full HTTP request to a JSON endpoint.
 
+## Benefits
+
+### Integration Tests
+
+Integration tests generally are rather slow compared to unit tests as they test the behaviour of larger parts of an application. While that could be seen as a negative, those tests will ensure that the application is tested from the end-users perspective.
+
+### Unit Tests
+
+Unit tests generally are the fastest tests in your suite. The speed at which they are executed is great but they give you no guarantee that all components work once they are stitched together, which is why need the previously mentioned `integration` tests.
+
 ## Code organization
 
 Before all, let's see and understand how the code is organized. When you open the ark repository, you should see the following directory structure:

@@ -6,6 +6,12 @@ title: "Testing"
 
 [[toc]]
 
+## Introduction
+
+Core is built with testing in mind. In fact, support for testing with `jest` is included out of the box and a `jest-preset.json` file is already set up.
+
+By default, Core's `__tests__` directory contains two directories: `integration` and `unit`. Unit tests are tests that focus on a very small, isolated portion of your code. In fact, most unit tests probably focus on a single method. Integration tests may test a larger portion of your code, including how several objects interact with each other or even a full HTTP request to a JSON endpoint.
+
 ## Code organization
 
 Before all, let's see and understand how the code is organized. When you open the ark repository, you should see the following directory structure:
@@ -17,7 +23,7 @@ Before all, let's see and understand how the code is organized. When you open th
 /scripts
 ```
 
-For developing and testing, we are mainly interested in the `packages` directory, as it contains the whole core code. It is divided into a set of packages:
+For developing and testing, we are mainly interested in the `packages` and `__tests__` directories, as it contains the whole core code. It is divided into a set of packages:
 
 ```
 /packages/client
@@ -31,20 +37,21 @@ For developing and testing, we are mainly interested in the `packages` directory
 
 We will now dig into the typical structure of a package, but please note the `core-test-utils` package which will be useful to us for testing.
 
-So let us look at `/packages/core-blockchain` as an example. It has two main directories:
+So let us look at `/packages/core-blockchain` as an example. There are 2 directories that are of interest:
 
-```
-/packages/core-blockchain/__tests__
-/packages/core-blockchain/lib
-```
+**/packages/core-blockchain/src**
 
-`lib` is the actual code while `__tests__` contains the tests for the code.
+This folder contains the TypeScript code before it gets compiled to JavaScript via `tsc`.
 
-Now that we have a global idea of how the code is organized, we can go inside the `__tests__` folder and see how the tests are structured.
+**/__tests__/unit/core-blockchain**
+
+This folder contains the unit tests that test behaviou specific to the functionality of this package.
+
+Now that we have an idea of how the code is organized, we can go inside the `/__tests__/unit/core-blockchain` folder and see how the tests are structured.
 
 ## Tests structure
 
-We'll keep `packages/core-blockchain/__tests__` as an example. Open the folder and you'll see something like this:
+We'll keep `/__tests__/unit/core-blockchain` as an example. Open the folder and you'll see something like this:
 
 ```
 /__support__
@@ -58,9 +65,9 @@ state-machine.test.js
 state-storage.test.js
 ```
 
-### Matching the `/lib` folder
+### Matching the `/src` folder
 
-Important thing to note: except for `__support__`, the directory structure **matches** the `/lib` structure. We want to keep it this way as much as possible to make it easy to identify what is being tested. If you have worked with Go this [practice](https://golang.org/pkg/testing/) should be familiar.
+Important thing to note: except for `__support__`, the directory structure **matches** the `/src` structure. We want to keep it this way as much as possible to make it easy to identify what is being tested. If you have worked with Go this [practice](https://golang.org/pkg/testing/) should be familiar.
 
 ### Container setup and common initialization in `__support__/setup.js`
 
@@ -69,21 +76,21 @@ In most packages, to test the code you will want to launch an Ark Node or at lea
 Let's have a look at this file in our `core-blockchain` package :
 
 ```js
-const  container  =  require('@arkecosystem/core-container')
-const  containerHelper  =  require('@arkecosystem/core-test-utils/lib/helpers/container')
+const container = require('@arkecosystem/core-container')
+const containerHelper = require('@arkecosystem/core-test-utils/lib/helpers/container')
 
 jest.setTimeout(60000)
 
-exports.setUp  =  async () => {
-  await  containerHelper.setUp({
+exports.setUp = async () => {
+  await containerHelper.setUp({
     exit: '@arkecosystem/core-p2p',
     exclude: ['@arkecosystem/core-blockchain']
   })
 
-  return  container
+  return container
 }
 
-exports.tearDown  =  async () =>  container.tearDown()
+exports.tearDown = async () => container.tearDown()
 ```
 
 A couple of things to see here:

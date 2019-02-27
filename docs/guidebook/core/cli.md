@@ -12,13 +12,25 @@ Release 2.2.0 is currently in beta.
 
 Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, that provides a built-in CLI.
 
+### Prerequisites
+
+In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh) to see what dependencies need to be installed and configured.
+
+**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/process-manager.ts) to see how it works under the hood.**
+
 ### Existing Installation
+
+If you are already owning a server that runs Core 2.1.0 or newer you can simply execute the following command.
 
 ```bash
 yarn global add @arkecosystem/core@beta
 ```
 
+Once this command has finished you should stop all your existing core processes with `pm2 delete all` and start new ones with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
+
 ### Fresh Installation
+
+If you are planning to setup a new server you can execute the following steps.
 
 ```bash
 adduser ark
@@ -28,7 +40,9 @@ cd ~
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh)
 ```
 
-You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
+Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
+
+> You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
 
 ## Configuration
 

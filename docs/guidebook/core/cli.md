@@ -1,11 +1,11 @@
 ---
-title: "Command Line Interface (Beta)"
+title: "Command Line Interface (Release Candidate)"
 ---
 
 # Command Line Interface
 
 ::: danger
-Release 2.2.0 is currently in beta.
+Release 2.2.0 is currently a release candidate.
 :::
 
 # Table of Contents

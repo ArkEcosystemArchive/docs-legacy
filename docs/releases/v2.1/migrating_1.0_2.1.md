@@ -381,7 +381,7 @@ git push
 We are going to start a relay node, which is the equivalent of a standard `v1` node without entering your delegate's passphrase. First bootstrap all dependencies.
 
 ```bash
-lerna bootstrap
+yarn setup
 ```
 
 This might take a while, as lerna obtains all dependencies required for `Ark Core`. Once the process is done, run the following command to start the synchronization process:

@@ -1,12 +1,8 @@
 ---
-title: "Command Line Interface (Release Candidate)"
+title: "Command Line Interface"
 ---
 
 # Command Line Interface
-
-::: danger
-Release 2.2.0 is currently a release candidate.
-:::
 
 # Table of Contents
 

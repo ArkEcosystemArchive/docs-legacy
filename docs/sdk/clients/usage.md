@@ -447,27 +447,44 @@ go test ./...
 ```
 :::
 
-::: tab C++
+1) Fork the [package](https://github.com/ArkEcosystem/cpp-client).
+
+2) Clone the newly forked repository.
 
 ```bash
-./test/Ark-Cpp-Crypto-tests
+git clone https://github.com/<githubusername>/cpp-client
 ```
 
-#### ESP8266
+3) Next, we move into the cloned directory.
 
 ```bash
-cd cpp-client/test
+cd cpp-client
+```
+
+4) Build the package using CMake.
+
+```bash
+cmake
+cmake --build .
+```
+
+5) Now we can run the tests to see if everything is running as it should.
+
+```bash
+./test/Ark-Cpp-Client-tests
+```
+
+#### ESP8266 (PlatformIO)
+
+```bash
 pio run -e esp8266 -t upload
 ```
 
-#### ESP32
+#### ESP32 (PlatformIO)
 
 ```bash
-cd cpp-client/test
 pio run -e esp32 -t upload
 ```
-
-:::
 
 ::: tab ruby
 

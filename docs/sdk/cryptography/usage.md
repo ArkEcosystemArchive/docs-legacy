@@ -449,6 +449,29 @@ $ go test ./...
 
 ::: tab C++
 
+1) Fork the [package](https://github.com/ArkEcosystem/cpp-crypto).
+
+2) Clone the newly forked repository.
+
+```bash
+git clone https://github.com/<githubusername>/cpp-crypto
+```
+
+3) Next, we move into the cloned directory.
+
+```bash
+cd cpp-crypto
+```
+
+4) Build the package using CMake.
+
+```bash
+cmake
+cmake --build .
+```
+
+5) Now we can run the tests to see if everything is running as it should.
+
 ```bash
 ./test/Ark-Cpp-Crypto-tests
 ```
@@ -456,14 +479,12 @@ $ go test ./...
 #### ESP8266 (PlatformIO)
 
 ```bash
-cd cpp-client/test
 pio run -e esp8266 -t upload
 ```
 
 #### ESP32 (PlatformIO)
 
 ```bash
-cd cpp-client/test
 pio run -e esp32 -t upload
 ```
 
@@ -782,9 +803,30 @@ transaction := crypto.BuildTransfer(
 
 :::
 
-::: tab cpp
+::: tab C++
+
+Using the Transaction builder class.
 
 ```cpp
+Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    "recipientID",
+    1000000000,
+    "vendorfield",
+    "passphrase",
+    "secondPassphrase");
+```
+
+We can also do this manually.
+
+```cpp
+  Ark::Crypto::Transactions::Transaction transaction;
+  transaction.type = Ark::Crypto::Enums::Types::TRANSFER;
+  transaction.fee = Ark::Crypto::Configuration::Fee().get(Ark::Crypto::Enums::Types::TRANSFER);
+  transaction.recipientId = "recipientId";
+  transaction.amount = 1000000000;
+  transaction.vendorField = "vendorfield";
+
+  std::string signature = sign(transaction, "passphrase", "secondPassphrase");
 ```
 
 :::
@@ -919,9 +961,18 @@ serialized := crypto.SerializeTransaction(transaction)
 
 :::
 
-::: tab cpp
+::: tab C++
 
 ```cpp
+Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    "recipientID",
+    1000000000,
+    "vendorfield",
+    "passphrase",
+    "secondPassphrase");
+
+Ark::Crypto::Transactions::Serializer serializer(transfer);
+std::string serializedTransaction = serializer.serialize();
 ```
 
 :::

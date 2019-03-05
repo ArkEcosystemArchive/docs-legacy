@@ -1,12 +1,8 @@
 # Changelog
 
 ::: tip
-
-The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ArkEcosystem/core/blob/develop/CHANGELOG.md#changelog).
-
+The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md).
 :::
-
-## [v2.1.0] - TBA
 
 ### Added
 

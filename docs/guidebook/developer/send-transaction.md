@@ -156,7 +156,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-Ark::Client::Connection<Ark::Client::API::Two> connection("167.114.29.54", 4003);
+Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::
@@ -288,7 +288,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-const auto blocks = connection.api.blocks.list()
+const auto blocks = connection.api.blocks.all()
 ```
 
 :::
@@ -529,6 +529,16 @@ func main() {
 :::
 
 ::: tab C++
+
+```cpp
+auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    "recipientID",
+    1000000000,
+    "vendorfield",
+    "passphrase",
+    "secondPassphrase");
+```
+
 :::
 
 ::: tab ruby
@@ -597,6 +607,14 @@ response, _, err := client.Transactions.Create(context.Background(), body)
 :::
 
 ::: tab C++
+
+```cpp
+char transactionsBuffer[600];
+snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transaction.toJson().c_str());
+
+std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
+```
+
 :::
 
 ::: tab ruby

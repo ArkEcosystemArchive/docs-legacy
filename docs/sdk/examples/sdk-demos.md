@@ -197,6 +197,210 @@ if __name__ == '__main__':
 ```
 :::
 
+::: tab C++
+
+#### Arduino (Adafruit ESP32 Feather)
+
+```cpp
+#include <Arduino.h>
+
+//  include the 'arkClient.h' and 'arkCrypto.h' headers.
+#include <arkClient.h>
+#include <arkCrypto.h>
+
+#include <stdio.h>  //  included for the 'snprintf' method.
+#include <string>
+
+//  'WiFi.h' and 'HTTPClient.h' are ESP32-specific headers.
+#include <WiFi.h>
+#include <HTTPClient.h>
+
+#include "time.h"   //  for configuring the ESP32's time.
+
+const char* ssid = "yourWiFiSSID";
+const char* password = "yourWiFiPassword";
+
+
+void doExample() {
+    //  create the connection.
+    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
+
+    //  retrieve a specific block.
+    std::string blockResponse = connection.api.blocks.get("58328125061111756");
+
+    //  create transaction payload.
+    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+        "recipientID",
+        1000000000,
+        "vendorfield",
+        "passphrase",
+        "secondPassphrase");
+
+    //  post transaction payload to an ark-node(peer).
+    char transactionsBuffer[600];
+    snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
+
+    std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
+
+    //  handle response data from API.
+    Serial.println(sendResponse.c_str());
+};
+
+void setup() {
+    //  start your serial connection.
+    Serial.begin(115200);
+
+    //  connect your board to WiFi.
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+
+    //  Configure your boards time server.
+    configTime(0, 0, "pool.ntp.org");
+
+    doExample();
+};
+
+void loop() { };
+
+```
+
+#### PlatformIO (Adafruit ESP32 Feather)
+
+##### platformio.ini
+
+```asciidoc
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:featheresp32]
+platform = espressif32
+board = featheresp32
+framework = arduino
+lib_deps = Ark-Cpp-Client, Ark-Cpp-Crypto
+upload_speed = 921600
+monitor_speed = 115200
+
+```
+
+##### main.cpp
+
+```cpp
+#include <Arduino.h>
+
+//  include the 'arkClient.h' and 'arkCrypto.h' headers.
+#include <arkClient.h>
+#include <arkCrypto.h>
+
+#include <stdio.h>  //  included for the 'snprintf' method.
+#include <string>
+
+//  'WiFi.h' and 'HTTPClient.h' are ESP32-specific headers.
+#include <WiFi.h>
+#include <HTTPClient.h>
+
+#include "time.h"   //  for configuring the ESP32's time.
+
+const char* ssid = "yourWiFiSSID";
+const char* password = "yourWiFiPassword";
+
+
+void doExample() {
+    //  create the connection.
+    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
+
+    //  retrieve a specific block.
+    std::string blockResponse = connection.api.blocks.get("58328125061111756");
+
+    //  create transaction payload.
+    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+        "recipientID",
+        1000000000,
+        "vendorfield",
+        "passphrase",
+        "secondPassphrase");
+
+    //  post transaction payload to an ark-node(peer).
+    char transactionsBuffer[600];
+    snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
+
+    std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
+
+    //  handle response data from API.
+    Serial.println(sendResponse.c_str());
+};
+
+void setup() {
+    //  start your serial connection.
+    Serial.begin(115200);
+
+    //  connect your board to WiFi.
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+
+    //  Configure your boards time server.
+    configTime(0, 0, "pool.ntp.org");
+
+    doExample();
+};
+
+void loop() { };
+
+```
+
+#### Desktop/Server
+
+```cpp
+//  include the 'arkClient.h' and 'arkCrypto.h' headers.
+#include <arkClient.h>
+#include <arkCrypto.h>
+
+#include <iostream> //  used to print transaction response to the console.
+#include <stdio.h>  //  included for the 'snprintf' method.
+#include <string>
+
+
+int main() {
+    //  create the connection.
+    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
+
+    //  retrieve a specific block.
+    std::string blockResponse = connection.api.blocks.get("58328125061111756");
+
+    //  create transaction payload.
+    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+        "recipientID",
+        1000000000,
+        "vendorfield",
+        "passphrase",
+        "secondPassphrase");
+
+    //  post transaction payload to an ark-node(peer).
+    char transactionsBuffer[600];
+    snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
+
+    std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
+
+    //  handle response data from API.
+    std::cout << sendResponse;
+}
+
+```
+
+:::
+
 ::: tab ruby
 ```ruby
 require 'arkecosystem/client'

@@ -1,12 +1,8 @@
 ---
-title: "Command Line Interface (Beta)"
+title: "Command Line Interface"
 ---
 
 # Command Line Interface
-
-::: danger
-Release 2.2.0 is currently in beta.
-:::
 
 # Table of Contents
 

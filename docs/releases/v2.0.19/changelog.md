@@ -1,6 +1,6 @@
 # Changelog
 
-Ark Core (`v2.0.X`) is a complete redesign, deprecating all APIs and internal structure. The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ArkEcosystem/core/blob/develop/CHANGELOG.md#changelog).
+Ark Core (`v2.0.X`) is a complete redesign, deprecating all APIs and internal structure. The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md).
 
 ## [2.0.19] - 2019-01-31
 

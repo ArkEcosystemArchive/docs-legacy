@@ -302,7 +302,7 @@ GET /api/delegates/{id}/voters/balances
 
 ## Search for a Delegate
 
-Searching for a Delegate is currently only possible by username; for analytical purposes, direct database queries allow for more fine-grained control.
+For fine-grained searches, use the `search` endpoint.
 
 ### Endpoint
 
@@ -312,16 +312,44 @@ POST /api/delegates/search
 
 ### Query Parameters
 
-| Name     | Type   | Description                                     | Required           |
-| -------  |:------:|-------------------------------------------------|:------------------:|
-| username | string | The username of the delegate to be retrieved.   | :white_check_mark: |
-
-### Query Parameters
-
 | Name  | Type | Description                                   | Required |
 |-------|:----:|-----------------------------------------------|:--------:|
 | page  | int  | The number of the page that will be returned. | :x:      |
 | limit | int  | The number of resources per page.             | :x:      |
+
+### Body Parameters
+
+| Name                      | Type   | Description  | Required |
+|---------------------------|:------:|--------------|:--------:|
+| orderBy                   | string | ...          | :x:      |
+| address                   | string | ...          | :x:      |
+| publicKey                 | string | ...          | :x:      |
+| username                  | string | ...          | :x:      |
+| usernames                 | array  | ...          | :x:      |
+| approval                  | object | ...          | :x:      |
+| approval.from             | float  | ...          | :x:      |
+| approval.to               | float  | ...          | :x:      |
+| forgedFees                | object | ...          | :x:      |
+| forgedFees.from           | int    | ...          | :x:      |
+| forgedFees.to             | int    | ...          | :x:      |
+| forgedRewards             | object | ...          | :x:      |
+| forgedRewards.from        | int    | ...          | :x:      |
+| forgedRewards.to          | int    | ...          | :x:      |
+| forgedTotal               | object | ...          | :x:      |
+| forgedTotal.from          | int    | ...          | :x:      |
+| forgedTotal.to            | int    | ...          | :x:      |
+| missedBlocks              | object | ...          | :x:      |
+| missedBlocks.from         | int    | ...          | :x:      |
+| missedBlocks.to           | int    | ...          | :x:      |
+| producedBlocks            | object | ...          | :x:      |
+| producedBlocks.from       | int    | ...          | :x:      |
+| producedBlocks.to         | int    | ...          | :x:      |
+| productivity              | object | ...          | :x:      |
+| productivity.from         | float  | ...          | :x:      |
+| productivity.to           | float  | ...          | :x:      |
+| voteBalance               | object | ...          | :x:      |
+| voteBalance.from          | int    | ...          | :x:      |
+| voteBalance.to            | int    | ...          | :x:      |
 
 ### Response
 

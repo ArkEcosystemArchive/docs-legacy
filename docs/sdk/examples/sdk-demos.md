@@ -474,7 +474,7 @@ func main() {
     url, _ := url.Parse("http://my.ark.node.ip:port/api/")
     connection.BaseURL = url
 
-    
+
     // Find a block at height 939627
     responseStructBlock, _, _ := connection.Blocks.Get(context.Background(), 939627)
 
@@ -488,7 +488,7 @@ func main() {
             *transaction,
         },
     }
-    
+
     // Send the transaction
     connection.Transactions.Create(context.Background(), body)
 }

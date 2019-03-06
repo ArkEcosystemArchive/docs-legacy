@@ -58,9 +58,9 @@ class CoolStuffController extends Controller
      */
     public function index()
     {
-        $peers = $this->container->get('ark.client')->api('Peer')->peers();
+        $wallets = $this->container->get('ark.client')->api('Wallets')->all();
 
-        return new Response($peers['peers']);
+        return new Response($wallets);
     }
 }
 ```

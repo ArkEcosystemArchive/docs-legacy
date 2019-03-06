@@ -319,37 +319,37 @@ POST /api/delegates/search
 
 ### Body Parameters
 
-| Name                      | Type   | Description  | Required |
-|---------------------------|:------:|--------------|:--------:|
-| orderBy                   | string | ...          | :x:      |
-| address                   | string | ...          | :x:      |
-| publicKey                 | string | ...          | :x:      |
-| username                  | string | ...          | :x:      |
-| usernames                 | array  | ...          | :x:      |
-| approval                  | object | ...          | :x:      |
-| approval.from             | float  | ...          | :x:      |
-| approval.to               | float  | ...          | :x:      |
-| forgedFees                | object | ...          | :x:      |
-| forgedFees.from           | int    | ...          | :x:      |
-| forgedFees.to             | int    | ...          | :x:      |
-| forgedRewards             | object | ...          | :x:      |
-| forgedRewards.from        | int    | ...          | :x:      |
-| forgedRewards.to          | int    | ...          | :x:      |
-| forgedTotal               | object | ...          | :x:      |
-| forgedTotal.from          | int    | ...          | :x:      |
-| forgedTotal.to            | int    | ...          | :x:      |
-| missedBlocks              | object | ...          | :x:      |
-| missedBlocks.from         | int    | ...          | :x:      |
-| missedBlocks.to           | int    | ...          | :x:      |
-| producedBlocks            | object | ...          | :x:      |
-| producedBlocks.from       | int    | ...          | :x:      |
-| producedBlocks.to         | int    | ...          | :x:      |
-| productivity              | object | ...          | :x:      |
-| productivity.from         | float  | ...          | :x:      |
-| productivity.to           | float  | ...          | :x:      |
-| voteBalance               | object | ...          | :x:      |
-| voteBalance.from          | int    | ...          | :x:      |
-| voteBalance.to            | int    | ...          | :x:      |
+| Name                | Type   | Description                                                 | Required |
+|---------------------|:------:|-------------------------------------------------------------|:--------:|
+| orderBy             | string | The column by which the delegates will be sorted.           | :x:      |
+| address             | string | The address of the delegate to be retrieved.                | :x:      |
+| publicKey           | string | The public key of the delegate to be retrieved.             | :x:      |
+| username            | string | The username of the delegate to be retrieved.               | :x:      |
+| usernames           | array  | The usernames of the delegates to be retrieved.             | :x:      |
+| approval            | object | The approval rate of the delegates to be retrieved.         | :x:      |
+| approval.from       | float  | The lower limit of the approval rate.                       | :x:      |
+| approval.to         | float  | The upper limit of the approval rate.                       | :x:      |
+| forgedFees          | object | The forged fees of the delegates to be retrieved.           | :x:      |
+| forgedFees.from     | int    | The lower limit of the forged fees.                         | :x:      |
+| forgedFees.to       | int    | The upper limit of the forged fees.                         | :x:      |
+| forgedRewards       | object | The forged rewards of the delegates to be retrieved.        | :x:      |
+| forgedRewards.from  | int    | The lower limit of the forged rewards.                      | :x:      |
+| forgedRewards.to    | int    | The upper limit of the forged rewards.                      | :x:      |
+| forgedTotal         | object | The forged total of the delegates to be retrieved.          | :x:      |
+| forgedTotal.from    | int    | The lower limit of the forged total.                        | :x:      |
+| forgedTotal.to      | int    | The upper limit of the forged total.                        | :x:      |
+| missedBlocks        | object | The missed blocks count of the delegates to be retrieved.   | :x:      |
+| missedBlocks.from   | int    | The lower limit of the missed blocks count.                 | :x:      |
+| missedBlocks.to     | int    | The upper limit of the missed blocks count.                 | :x:      |
+| producedBlocks      | object | The produced blocks count of the delegates to be retrieved. | :x:      |
+| producedBlocks.from | int    | The lower limit of the produced blocks count.               | :x:      |
+| producedBlocks.to   | int    | The upper limit of the produced blocks count.               | :x:      |
+| productivity        | object | The productivity rate of the delegates to be retrieved.     | :x:      |
+| productivity.from   | float  | The lower limit of the productivity rate.                   | :x:      |
+| productivity.to     | float  | The upper limit of the productivity rate.                   | :x:      |
+| voteBalance         | object | The vote balance of the delegates to be retrieved.          | :x:      |
+| voteBalance.from    | int    | The lower limit of the vote balance.                        | :x:      |
+| voteBalance.to      | int    | The upper limit of the vote balance.                        | :x:      |
 
 ### Response
 

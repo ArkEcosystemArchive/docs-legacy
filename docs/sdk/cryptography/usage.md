@@ -38,7 +38,7 @@ $ yarn add @arkecosystem/crypto
 
 #### Java Installation
 
-Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.  
+Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.
 
 #### Gradle
 
@@ -88,7 +88,7 @@ paket add ArkEcosystem.Crypto --version 0.2.1
 
 #### PHP Installation
 
-Documentation can be found [here](http://php.net/manual/fr/install.php).
+Documentation can be found [here](http://php.net/manual/en/install.php).
 
 Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available.
 
@@ -160,7 +160,7 @@ cmake --build .
 
 Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
-Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Crypto library.  
+Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Crypto library.
 Be sure to install the "-arduino" version of Cpp-Crypto.
 
 ##### Dependencies

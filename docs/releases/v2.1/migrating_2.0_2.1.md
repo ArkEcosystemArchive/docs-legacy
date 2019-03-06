@@ -18,7 +18,7 @@ It is recommended to start your relay and forger through the [Core Commander](ht
 
 After upgrading you should check whether your application still works as expected and no plugins are broken. See the following notes on which changes to consider when upgrading from one version to another.
 
-## Instructions
+## Upgrade Steps
 
 ### Upgrade Script
 

@@ -11,7 +11,7 @@ title: "Laravel"
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require arkecosystem/laravel php-http/guzzle6-adapter
+composer require arkecosystem/laravel
 ```
 
 ## Configuration
@@ -54,7 +54,7 @@ Here you can see an example of just how simple this package is to use. Out of th
 // You can alias this in config/app.php.
 use ArkEcosystem\Ark\Facades\Ark;
 
-Ark::api('Account')->accounts();
+Ark::api('Wallets')->wallets();
 // We're done here - how easy was that, it just works!
 ```
 
@@ -64,13 +64,13 @@ The Ark manager will behave like it is an `ArkEcosystem\Ark\Client`. If you want
 use ArkEcosystem\Ark\Facades\Ark;
 
 // Writing this…
-Ark::connection('main')->api('Account')->accounts()->create($params);
+Ark::connection('main')->api('Wallets')->all();
 
 // …is identical to writing this
-Ark::api('Account')->accounts()->create($params);
+Ark::api('Wallets')->all();
 
 // and is also identical to writing this.
-Ark::connection()->api('Account')->accounts()->create($params);
+Ark::connection()->api('Wallets')->all();
 
 // This is because the main connection is configured to be the default.
 Ark::getDefaultConnection(); // This will return main.
@@ -95,7 +95,7 @@ class Foo
 
     public function bar($params)
     {
-        $this->ark->api('Account')->accounts();
+        $this->ark->api('Wallets')->all();
     }
 }
 

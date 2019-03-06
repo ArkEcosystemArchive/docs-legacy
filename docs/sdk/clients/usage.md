@@ -38,7 +38,7 @@ $ yarn add @arkecosystem/client
 
 #### Java Installation
 
-Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.  
+Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.
 
 #### Gradle
 
@@ -88,9 +88,9 @@ paket add ArkEcosystem.Client --version 0.2.1
 
 #### PHP Installation
 
-Documentation can be found [here](http://php.net/manual/fr/install.php).
+Documentation can be found [here](http://php.net/manual/en/install.php).
 
-Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available
+Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available.
 
 #### Composer
 
@@ -106,7 +106,7 @@ composer require arkecosystem/client
 
 Python can be downloaded [here](https://www.python.org/downloads/).
 
-For further information on how to install Python on your operating system : 
+For further information on how to install Python on your operating system :
 
 [Windows guide](https://docs.python.org/3/using/windows.html)
 
@@ -160,7 +160,7 @@ cmake --build .
 
 Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
-Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Client library.  
+Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Client library.
 Be sure to install the "-arduino" version of Cpp-Client.
 
 #### Using with the Arduino IDE
@@ -370,7 +370,7 @@ $ composer install
 5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
-$ phpunit tests/
+$ phpunit
 ```
 
 :::
@@ -736,7 +736,7 @@ An example `Connection` that connects to a node, would be created as follows:
 
 ```swift
 // Mind the '/api' after the URL, no trailing '/'!
-let conn = Connection(host: "http://0.0.0.0:4003/api") 
+let conn = Connection(host: "http://0.0.0.0:4003/api")
 ```
 
 :::
@@ -1241,7 +1241,7 @@ You may query for:
 
 - All peers through the paginated API.
 - Obtain a specific peer by IP address.
-  
+
 :::: tabs
 
 ::: tab javascript
@@ -1640,12 +1640,12 @@ iex> ArkEcosystem.Client.API.Two.Votes.list(client)
 
 ## Wallets
 
-The [wallet resource](/api/public/v2/wallets.html#list-all-wallets) provides access to: 
+The [wallet resource](/api/public/v2/wallets.html#list-all-wallets) provides access to:
 
-- Accounts.
-- Incoming and outgoing transactions per account.
-- Each account's votes.
-  
+- Wallets.
+- Incoming and outgoing transactions per wallet.
+- Each wallet's votes.
+
 :::: tabs
 
 ::: tab javascript

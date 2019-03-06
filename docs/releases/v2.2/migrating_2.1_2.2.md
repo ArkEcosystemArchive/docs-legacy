@@ -10,7 +10,25 @@ Upgrading a complex software project always comes at the risk of breaking someth
 
 After upgrading you should check whether your application still works as expected and no plugins are broken. See the following notes on which changes to consider when upgrading from one version to another.
 
-## Instructions
+## Prerequisites
+
+### Configuration
+
+- Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file, locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
+
+```js
+{
+    "@arkecosystem/core-graphql": {
+        // ...
+    }
+}
+```
+
+## Upgrade Steps
+
+::: warning
+Be sure to complete all of the mentioned changes in the `Prerequisites` section before you continue to upgrade to the latest version.
+:::
 
 ### Removing v2.1
 
@@ -32,18 +50,4 @@ ark relay:start
 
 ```bash
 ark forger:start
-```
-
-### Changes
-
-#### Configuration
-
-- Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file, locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
-
-```js
-{
-    "@arkecosystem/core-graphql": {
-        // ...
-    }
-}
 ```

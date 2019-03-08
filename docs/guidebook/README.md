@@ -10,4 +10,4 @@ The guidebook contains technical references and in coding tutorials that might o
 * [Other Products](/guidebook/guides/mobile.html)
 * [Contribution Guidelines](/guidebook/contribution-guidelines/)
 
-If you intend to contribute to Ark, make sure you read the guidelines on proper [git](/guidebook/contribution-guidelines/git-commit-guidelines.md) usage and ask in advance if the Ark Team is working on a particular feature. In open-source projects, it is quite standard to first create an issue on GitHub before submitting a PR.
+If you intend to contribute to Ark, make sure you read the guidelines on proper [git](/guidebook/contribution-guidelines/git-commit-guidelines.md) usage and [ask](https://ark.io/slack) in advance if the Ark Team is working on a particular feature. It is better to first discuss a non-trivial change before jumping into coding it.

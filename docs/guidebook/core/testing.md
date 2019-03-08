@@ -154,6 +154,8 @@ Go deeper and test it with different parameters. Ask yourself: in which case thi
 
 Core provides a variety of custom matchers for [Jest](https://jestjs.io/) that can be used in combination with `expect()`.
 
+If you plan to use them simply run `yarn add @arkecosystem/core-jest-matchers --dev` and include them with `import "@arkecosystem/core-jest-matchers";` on top of your tests.
+
 #### Transactions
 
 ##### toBeTransferType()

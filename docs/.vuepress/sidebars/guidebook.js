@@ -27,7 +27,8 @@ module.exports = [
       "/guidebook/core/logging",
       "/guidebook/core/testing",
       "/guidebook/core/webhooks",
-      "/guidebook/core/data-models"
+      "/guidebook/core/data-models",
+      "/guidebook/core/source-code"
     ]
   },
   {

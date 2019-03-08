@@ -150,6 +150,309 @@ When we write some new tests, generally we start by checking that the feature is
 
 Go deeper and test it with different parameters. Ask yourself: in which case this could very well fail, such as a particular set of parameters? If I were to refactor the feature, what would I like to be tested then?
 
+### Custom Jest Matchers
+
+Core provides a variety of custom matchers for [Jest](https://jestjs.io/) that can be used in combination with `expect()`.
+
+If you plan to use them simply run `yarn add @arkecosystem/core-jest-matchers --dev` and include them with `import "@arkecosystem/core-jest-matchers";` on top of your tests.
+
+#### Transactions
+
+##### toBeTransferType()
+
+Assert that the given value is a transfer transaction.
+
+```ts
+expect({ type: 0 }).toBeTransferType();
+```
+
+##### toBeSecondSignatureType()
+
+Assert that the given value is a second signature registration transaction.
+
+```ts
+expect({ type: 1 }).toBeSecondSignatureType();
+```
+
+##### toBeDelegateType()
+
+Assert that the given value is a delegate registration transaction.
+
+```ts
+expect({ type: 2 }).toBeDelegateType();
+```
+
+##### toBeVoteType()
+
+Assert that the given value is a vote transaction.
+
+```ts
+expect({ type: 3 }).toBeVoteType();
+```
+
+##### toBeMultiSignatureType()
+
+Assert that the given value is a multi signature registration transaction.
+
+```ts
+expect({ type: 4 }).toBeMultiSignatureType();
+```
+
+##### toBeIpfsType()
+
+Assert that the given value is an IPFS transaction.
+
+```ts
+expect({ type: 5 }).toBeIpfsType();
+```
+
+##### toBeTimelockTransferType()
+
+Assert that the given value is a timelock transfer transaction.
+
+```ts
+expect({ type: 6 }).toBeTimelockTransferType();
+```
+
+##### toBeMultiPaymentType()
+
+Assert that the given value is a multi payment transaction.
+
+```ts
+expect({ type: 7 }).toBeMultiPaymentType();
+```
+
+##### toBeDelegateResignationType()
+
+Assert that the given value is a delegate resignation transaction.
+
+```ts
+expect({ type: 8 }).toBeDelegateResignationType();
+```
+
+##### toBeTransaction()
+
+Assert that the given value is a transaction.
+
+```ts
+expect({
+    version: 1,
+    network: 23,
+    type: 0,
+    timestamp: 35672738,
+    senderPublicKey: "03d7dfe44e771039334f4712fb95ad355254f674c8f5d286503199157b7bf7c357",
+    fee: 10000000,
+    vendorFieldHex: "5449443a2030",
+    amount: 200000000,
+    expiration: 0,
+    recipientId: "AFzQCx5YpGg5vKMBg4xbuYbqkhvMkKfKe5",
+    signature:
+        "304502210096ec6e27176fa694638d6fff35d7a551b2ed8c479a7e03264026eea41a05edd702206c071c97d1c6cc3bfec64dfff808cb0d5dfe857803428efb80bf7717b85cb619",
+    vendorField: "TID: 0",
+    id: "a5e9e6039675563959a783fa672c0ffe65369168a1ecffa3c89bf82961d8dbad",
+}).toBeTransaction();
+```
+
+##### toBeValidTransaction()
+
+Assert that the given value is a valid transaction.
+
+```ts
+expect({
+    version: 1,
+    network: 23,
+    type: 0,
+    timestamp: 35672738,
+    senderPublicKey: "03d7dfe44e771039334f4712fb95ad355254f674c8f5d286503199157b7bf7c357",
+    fee: 10000000,
+    vendorFieldHex: "5449443a2030",
+    amount: 200000000,
+    expiration: 0,
+    recipientId: "AFzQCx5YpGg5vKMBg4xbuYbqkhvMkKfKe5",
+    signature:
+        "304502210096ec6e27176fa694638d6fff35d7a551b2ed8c479a7e03264026eea41a05edd702206c071c97d1c6cc3bfec64dfff808cb0d5dfe857803428efb80bf7717b85cb619",
+    vendorField: "TID: 0",
+    id: "a5e9e6039675563959a783fa672c0ffe65369168a1ecffa3c89bf82961d8dbad",
+}).toBeValidTransaction();
+```
+
+#### Wallets
+
+##### toBeAddress()
+
+Assert that the given value is an address.
+
+```ts
+expect("DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN").toBeAddress();
+```
+
+##### toBePublicKey()
+
+Assert that the given value is a public key.
+
+```ts
+expect("022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d").toBePublicKey();
+```
+
+##### toBeWallet()
+
+Assert that the given value is a wallet.
+
+```ts
+expect({
+    address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
+    publicKey: "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0",
+}).toBeWallet();
+```
+
+##### toBeDelegate()
+
+Assert that the given value is a delegate wallet.
+
+```ts
+expect({
+    username: "arkxdev",
+    address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
+    publicKey: "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0",
+}).toBeDelegate();
+```
+
+#### Blocks
+
+##### toBeValidArrayOfBlocks()
+
+Assert that the given value is an array containing blocks.
+
+```ts
+expect([{
+    blockSignature: "",
+    createdAt: "",
+    generatorPublicKey: "",
+    height: "",
+    id: "",
+    numberOfTransactions: "",
+    payloadHash: "",
+    payloadLength: "",
+    previousBlock: "",
+    reward: "",
+    timestamp: "",
+    totalAmount: "",
+    totalFee: "",
+    transactions: "",
+    updatedAt: "",
+    version: "",
+}]).toBeValidArrayOfBlocks();
+```
+
+#### toBeValidBlock()
+
+Assert that the given value is a transfer transaction.
+
+```ts
+expect({
+    blockSignature: "",
+    createdAt: "",
+    generatorPublicKey: "",
+    height: "",
+    id: "",
+    numberOfTransactions: "",
+    payloadHash: "",
+    payloadLength: "",
+    previousBlock: "",
+    reward: "",
+    timestamp: "",
+    totalAmount: "",
+    totalFee: "",
+    transactions: "",
+    updatedAt: "",
+    version: "",
+}).toBeValidBlock();
+```
+
+#### Core _(generally not useful outside of core itself)_
+
+##### toBeApiTransaction()
+
+Assert that the given value is a transaction from an API response.
+
+```ts
+expect({
+    id: "",
+    blockid: "",
+    type: "",
+    timestamp: "",
+    amount: "",
+    fee: "",
+    senderId: "",
+    senderPublicKey: "",
+    signature: "",
+    asset: "",
+    confirmations: "",
+}).toBeApiTransaction();
+```
+
+##### toBePaginated()
+
+Assert that the given value is a paginated API response.
+
+```ts
+expect({
+    status: 200,
+    headers: {},
+    data: {
+        meta: {
+            pageCount: "",
+            totalCount: "",
+            next: "",
+            previous: "",
+            self: "",
+            first: "",
+            last: "",
+        },
+    },
+}).toBePaginated();
+```
+
+##### toBeSuccessfulResponse()
+
+Assert that the given value is a successful API response.
+
+```ts
+expect({
+    status: 200,
+    headers: {},
+    data: {
+        meta: {
+            pageCount: "",
+            totalCount: "",
+            next: "",
+            previous: "",
+            self: "",
+            first: "",
+            last: "",
+        },
+    },
+}).toBeSuccessfulResponse();
+```
+
+#### Peers
+
+##### toBeValidArrayOfPeers()
+
+Assert that the given value is an array containing peers.
+
+```ts
+expect([{ ip: "", port: "" }]).toBeValidArrayOfPeers();
+```
+
+##### toBeValidPeer()
+
+Assert that the given value is a valid peer.
+
+```ts
+expect({ ip: "", port: "" }).toBeValidPeer();
+```
+
 ### Contact us
 
 If you have anything to ask, suggest or want to have any talk about testing, don't hesitate to reach out to the team.

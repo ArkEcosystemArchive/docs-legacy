@@ -115,7 +115,7 @@ public async setUp(version: string, variables: any, options: any = {}) {
     // Setup the configuration
     this.config = await configManager.setUp(variables);
 
-    // TODO: Move this out eventually - not really the responsibility of the container
+    // Setup the plugins
     this.plugins = new PluginRegistrar(this, options);
     await this.plugins.setUp();
 

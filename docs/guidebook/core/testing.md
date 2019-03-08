@@ -128,37 +128,15 @@ afterAll(async () => {
 })
 ```
 
-## Guidelines for writing tests
+## Jest Matchers
 
-### Use `core-test-utils` for common stuff
-
-For testing, we are doing a lot of common things across the packages, like container set up as we have seen before. Let us try to use `core-test-utils` as a shared library to avoid duplication.
-
-Here are some things that are available on `core-test-utils`:
-
-- Container set up.
-- Testnet configuration files (the container setup uses testnet config).
-- Testnet fixtures (blocks, delegates public keys and secrets).
-- Custom matchers: for example `expect(tx).toBeTransaction()`. Don't hesitate to use / update / create custom matchers for common things.
-- Generators: generate objects such as transactions.
-
-There is still a lot to improve in `core-test-utils`, some things might also be outdated. *Don't hesitate to make changes to improve it*.
-
-### Do more than "basic" tests
-
-When we write some new tests, generally we start by checking that the feature is working as expected in the general case, which is perfectly fine. However, please do not stop there, it is the edge cases we are worried about.
-
-Go deeper and test it with different parameters. Ask yourself: in which case this could very well fail, such as a particular set of parameters? If I were to refactor the feature, what would I like to be tested then?
-
-### Custom Jest Matchers
-
-Core provides a variety of custom matchers for [Jest](https://jestjs.io/) that can be used in combination with `expect()`.
+Core provides a variety of matchers for [Jest](https://jestjs.io/) that can be used in combination with `expect()`.
 
 If you plan to use them simply run `yarn add @arkecosystem/core-jest-matchers --dev` and include them with `import "@arkecosystem/core-jest-matchers";` on top of your tests.
 
-#### Transactions
+### Transactions
 
-##### toBeTransferType()
+#### toBeTransferType()
 
 Assert that the given value is a transfer transaction.
 
@@ -166,7 +144,7 @@ Assert that the given value is a transfer transaction.
 expect({ type: 0 }).toBeTransferType();
 ```
 
-##### toBeSecondSignatureType()
+#### toBeSecondSignatureType()
 
 Assert that the given value is a second signature registration transaction.
 
@@ -174,7 +152,7 @@ Assert that the given value is a second signature registration transaction.
 expect({ type: 1 }).toBeSecondSignatureType();
 ```
 
-##### toBeDelegateType()
+#### toBeDelegateType()
 
 Assert that the given value is a delegate registration transaction.
 
@@ -182,7 +160,7 @@ Assert that the given value is a delegate registration transaction.
 expect({ type: 2 }).toBeDelegateType();
 ```
 
-##### toBeVoteType()
+#### toBeVoteType()
 
 Assert that the given value is a vote transaction.
 
@@ -190,7 +168,7 @@ Assert that the given value is a vote transaction.
 expect({ type: 3 }).toBeVoteType();
 ```
 
-##### toBeMultiSignatureType()
+#### toBeMultiSignatureType()
 
 Assert that the given value is a multi signature registration transaction.
 
@@ -198,7 +176,7 @@ Assert that the given value is a multi signature registration transaction.
 expect({ type: 4 }).toBeMultiSignatureType();
 ```
 
-##### toBeIpfsType()
+#### toBeIpfsType()
 
 Assert that the given value is an IPFS transaction.
 
@@ -206,7 +184,7 @@ Assert that the given value is an IPFS transaction.
 expect({ type: 5 }).toBeIpfsType();
 ```
 
-##### toBeTimelockTransferType()
+#### toBeTimelockTransferType()
 
 Assert that the given value is a timelock transfer transaction.
 
@@ -214,7 +192,7 @@ Assert that the given value is a timelock transfer transaction.
 expect({ type: 6 }).toBeTimelockTransferType();
 ```
 
-##### toBeMultiPaymentType()
+#### toBeMultiPaymentType()
 
 Assert that the given value is a multi payment transaction.
 
@@ -222,7 +200,7 @@ Assert that the given value is a multi payment transaction.
 expect({ type: 7 }).toBeMultiPaymentType();
 ```
 
-##### toBeDelegateResignationType()
+#### toBeDelegateResignationType()
 
 Assert that the given value is a delegate resignation transaction.
 
@@ -230,7 +208,7 @@ Assert that the given value is a delegate resignation transaction.
 expect({ type: 8 }).toBeDelegateResignationType();
 ```
 
-##### toBeTransaction()
+#### toBeTransaction()
 
 Assert that the given value is a transaction.
 
@@ -253,7 +231,7 @@ expect({
 }).toBeTransaction();
 ```
 
-##### toBeValidTransaction()
+#### toBeValidTransaction()
 
 Assert that the given value is a valid transaction.
 
@@ -276,9 +254,9 @@ expect({
 }).toBeValidTransaction();
 ```
 
-#### Wallets
+### Wallets
 
-##### toBeAddress()
+#### toBeAddress()
 
 Assert that the given value is an address.
 
@@ -286,7 +264,7 @@ Assert that the given value is an address.
 expect("DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN").toBeAddress();
 ```
 
-##### toBePublicKey()
+#### toBePublicKey()
 
 Assert that the given value is a public key.
 
@@ -294,7 +272,7 @@ Assert that the given value is a public key.
 expect("022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d").toBePublicKey();
 ```
 
-##### toBeWallet()
+#### toBeWallet()
 
 Assert that the given value is a wallet.
 
@@ -305,7 +283,7 @@ expect({
 }).toBeWallet();
 ```
 
-##### toBeDelegate()
+#### toBeDelegate()
 
 Assert that the given value is a delegate wallet.
 
@@ -317,9 +295,9 @@ expect({
 }).toBeDelegate();
 ```
 
-#### Blocks
+### Blocks
 
-##### toBeValidArrayOfBlocks()
+#### toBeValidArrayOfBlocks()
 
 Assert that the given value is an array containing blocks.
 
@@ -369,9 +347,9 @@ expect({
 }).toBeValidBlock();
 ```
 
-#### Peers
+### Peers
 
-##### toBeValidArrayOfPeers()
+#### toBeValidArrayOfPeers()
 
 Assert that the given value is an array containing peers.
 
@@ -379,7 +357,7 @@ Assert that the given value is an array containing peers.
 expect([{ ip: "", port: "" }]).toBeValidArrayOfPeers();
 ```
 
-##### toBeValidPeer()
+#### toBeValidPeer()
 
 Assert that the given value is a valid peer.
 
@@ -387,9 +365,9 @@ Assert that the given value is a valid peer.
 expect({ ip: "", port: "" }).toBeValidPeer();
 ```
 
-#### Core API
+### Core API
 
-##### toBeApiTransaction()
+#### toBeApiTransaction()
 
 Assert that the given value is a transaction from an API response.
 
@@ -409,7 +387,7 @@ expect({
 }).toBeApiTransaction();
 ```
 
-##### toBePaginated()
+#### toBePaginated()
 
 Assert that the given value is a paginated API response.
 
@@ -431,7 +409,7 @@ expect({
 }).toBePaginated();
 ```
 
-##### toBeSuccessfulResponse()
+#### toBeSuccessfulResponse()
 
 Assert that the given value is a successful API response.
 
@@ -452,6 +430,28 @@ expect({
     },
 }).toBeSuccessfulResponse();
 ```
+
+## Guidelines for writing tests
+
+### Use `core-test-utils` for common stuff
+
+For testing, we are doing a lot of common things across the packages, like container set up as we have seen before. Let us try to use `core-test-utils` as a shared library to avoid duplication.
+
+Here are some things that are available on `core-test-utils`:
+
+- Container set up.
+- Testnet configuration files (the container setup uses testnet config).
+- Testnet fixtures (blocks, delegates public keys and secrets).
+- Custom matchers: for example `expect(tx).toBeTransaction()`. Don't hesitate to use / update / create custom matchers for common things.
+- Generators: generate objects such as transactions.
+
+There is still a lot to improve in `core-test-utils`, some things might also be outdated. *Don't hesitate to make changes to improve it*.
+
+### Do more than "basic" tests
+
+When we write some new tests, generally we start by checking that the feature is working as expected in the general case, which is perfectly fine. However, please do not stop there, it is the edge cases we are worried about.
+
+Go deeper and test it with different parameters. Ask yourself: in which case this could very well fail, such as a particular set of parameters? If I were to refactor the feature, what would I like to be tested then?
 
 ### Contact us
 

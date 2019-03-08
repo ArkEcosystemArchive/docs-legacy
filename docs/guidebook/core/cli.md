@@ -72,6 +72,10 @@ If the processes fail to start or restart after an update it is most likely an i
 
 If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a delegate.
 
+### Process has entered an unknown state
+
+If you are receiving a message to the effect of `The "..." process has entered an unknown state.` your pm2 instance is not responding properly. This is usually resolved by a simple `pm2 update`, if that doesn't help try `pm2 kill` to destroy the pm2 daemon so it gets restarted the next time an application tries to access it.
+
 ## Available Commands
 
 ### autocomplete

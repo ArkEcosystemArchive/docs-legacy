@@ -38,7 +38,7 @@ $ yarn add @arkecosystem/client
 
 #### Java Installation
 
-Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.  
+Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.
 
 #### Gradle
 
@@ -88,9 +88,9 @@ paket add ArkEcosystem.Client --version 0.2.1
 
 #### PHP Installation
 
-Documentation can be found [here](http://php.net/manual/fr/install.php).
+Documentation can be found [here](http://php.net/manual/en/install.php).
 
-Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available
+Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available.
 
 #### Composer
 
@@ -106,7 +106,7 @@ composer require arkecosystem/client
 
 Python can be downloaded [here](https://www.python.org/downloads/).
 
-For further information on how to install Python on your operating system : 
+For further information on how to install Python on your operating system :
 
 [Windows guide](https://docs.python.org/3/using/windows.html)
 
@@ -144,7 +144,7 @@ go get github.com/ArkEcosystem/go-client/client
 
 If you are using CMake head over to [cmake.org](https://www.cmake.org/download/) or install it via Homebrew `brew install cmake`.
 
-#### Make
+#### CMake
 
 ```bash
 git clone https://github.com/ArkEcosystem/cpp-client
@@ -160,24 +160,48 @@ cmake --build .
 
 Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
-##### Dependencies
-
-Using the Arduino IDE's built-in Library Manager, install the following Libraries:
-
-- micro-ecc
-- AUnit
+Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Client library.
+Be sure to install the "-arduino" version of Cpp-Client.
 
 #### Using with the Arduino IDE
 
 Include the following header in your Arduino Sketch:
 
 ```cpp
-#include <arkCrypto.h>
+#include <arkClient.h>
 ```
 
 #### PlatformIO
 
 Python is required to run PlatformIO, so grab an installer package from [python.org](https://www.python.org/downloads/).
+
+Add the following line to your `platformio.ini` configuration file:
+
+```asciidoc
+lib_deps = Ark-Cpp-Client
+```
+
+This is an example of a fully configured `platformio.ini file for the Adafruit ESP32 Feather:
+
+```asciidoc
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:featheresp32]platform = espressif32
+board = featheresp32
+framework = arduino
+lib_deps = Ark-Cpp-Client
+upload_speed = 921600
+monitor_speed = 115200
+
+```
 
 :::
 
@@ -346,7 +370,7 @@ $ composer install
 5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
-$ phpunit tests/
+$ phpunit
 ```
 
 :::
@@ -423,27 +447,44 @@ go test ./...
 ```
 :::
 
-::: tab C++
+1) Fork the [package](https://github.com/ArkEcosystem/cpp-client).
+
+2) Clone the newly forked repository.
 
 ```bash
-./bin/Ark-Cpp-Crypto-tests
+git clone https://github.com/<githubusername>/cpp-client
 ```
 
-#### ESP8266
+3) Next, we move into the cloned directory.
 
 ```bash
-cd cpp-client/test
+cd cpp-client
+```
+
+4) Build the package using CMake.
+
+```bash
+cmake
+cmake --build .
+```
+
+5) Now we can run the tests to see if everything is running as it should.
+
+```bash
+./test/Ark-Cpp-Client-tests
+```
+
+#### ESP8266 (PlatformIO)
+
+```bash
 pio run -e esp8266 -t upload
 ```
 
-#### ESP32
+#### ESP32 (PlatformIO)
 
 ```bash
-cd cpp-client/test
 pio run -e esp32 -t upload
 ```
-
-:::
 
 ::: tab ruby
 
@@ -663,12 +704,11 @@ func main() {
 ::: tab C++
 
 Before making a request, you should create a `Connection`.
-A `Connection` expects a `host`, which is an URL on which the API can be reached,
-and a network `version`, which specifies whether we are using v1 or v2.
-An example `Connection` that connects to a v2 API of a node, would be created as follows:
+A `Connection` expects an IP Address and Port by which the API can be reached.
+An example Connection, that interfaces with the API of an Ark Node, would be created as follows:
 
 ```cpp
-Ark::Client::Connection<Ark::Client::API::Two> connection("167.114.29.54", 4003);
+Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::
@@ -696,7 +736,7 @@ An example `Connection` that connects to a node, would be created as follows:
 
 ```swift
 // Mind the '/api' after the URL, no trailing '/'!
-let conn = Connection(host: "http://0.0.0.0:4003/api") 
+let conn = Connection(host: "http://0.0.0.0:4003/api")
 ```
 
 :::
@@ -842,7 +882,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-const auto blocks = connection.api.blocks.list()
+const auto blocks = connection.api.blocks.all()
 ```
 
 :::
@@ -1017,7 +1057,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-const auto delegateResponse = connection.api.delegates.list();
+const auto delegateResponse = connection.api.delegates.all();
 ```
 
 :::
@@ -1201,7 +1241,7 @@ You may query for:
 
 - All peers through the paginated API.
 - Obtain a specific peer by IP address.
-  
+
 :::: tabs
 
 ::: tab javascript
@@ -1600,12 +1640,12 @@ iex> ArkEcosystem.Client.API.Two.Votes.list(client)
 
 ## Wallets
 
-The [wallet resource](/api/public/v2/wallets.html#list-all-wallets) provides access to: 
+The [wallet resource](/api/public/v2/wallets.html#list-all-wallets) provides access to:
 
-- Accounts.
-- Incoming and outgoing transactions per account.
-- Each account's votes.
-  
+- Wallets.
+- Incoming and outgoing transactions per wallet.
+- Each wallet's votes.
+
 :::: tabs
 
 ::: tab javascript
@@ -1716,7 +1756,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-const auto wallet = connection.api.wallets.search({"username", "boldninja"});
+const auto wallet = connection.api.wallets.search( {{"username", "boldninja"}} );
 ```
 
 :::

@@ -29,7 +29,6 @@ Ark Nodes execute many query intensive operations. The most cost-effective appro
     | p2p        | 4001 | yes      | yes                | [reference](/api/p2p/)                    |
     | public API | 4003 | no       | yes                | [reference](/exchanges/public-api.html)   |
     | webhook    | 4004 | no       | no                 | [reference](/api/webhooks/)               |
-    | graphQL    | 4005 | no       | no                 | [reference](/api/graphql/)                |
     | JSON-RPC   | 8080 | no       | no                 | [reference](/exchanges/json-rpc.html)     |
 
 ## Using the official `core-commander` tool

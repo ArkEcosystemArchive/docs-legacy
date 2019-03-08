@@ -20,7 +20,14 @@ module.exports = [
         collapsable: true,
         children: [
               ["/archive/exchanges/", "Introduction"],
-              ["/archive/exchanges/rate-limiting.md", "v2.0: Rate Limits"]
+              ["/archive/exchanges/rate-limiting.md", "v2.0: Rate Limits"],
+          ]
+      },
+      {
+        title: "Tutorials",
+        collapsable: true,
+        children: [
+              "/archive/tutorials/dynamic-fees.md",
           ]
       },
   ]

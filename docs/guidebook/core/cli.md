@@ -1,18 +1,26 @@
 ---
-title: "Command Line Interface (Beta)"
+title: "Command Line Interface"
 ---
 
 # Command Line Interface
 
-::: danger
-Release 2.2.0 is currently in beta.
-:::
+# Table of Contents
+
+[[toc]]
 
 ## Installation
 
 Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, which provides a built-in CLI.
 
+### Prerequisites
+
+In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh) to see what dependencies need to be installed and configured.
+
+**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/process-manager.ts) to see how it works under the hood.**
+
 ### Existing Installation
+
+If you are already owning a server that runs Core 2.1.0 or newer you can simply execute the following command.
 
 ```bash
 yarn global add @arkecosystem/core@beta
@@ -20,7 +28,11 @@ yarn global add @arkecosystem/core@beta
 
 This command might take a while since all packages and dependencies need to be installed as well.
 
+Once this command has finished you should stop all your existing core processes with `pm2 delete all` and start new ones with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
+
 ### Fresh Installation
+
+If you are planning to setup a new server you can execute the following steps.
 
 ```bash
 adduser ark
@@ -30,7 +42,9 @@ cd ~
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh)
 ```
 
-You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
+Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
+
+> You can check [https://www.npmjs.com/package/@arkecosystem/core](https://www.npmjs.com/package/@arkecosystem/core) for new releases or use `ark update` to check for updates.
 
 ## Configuration
 
@@ -44,11 +58,19 @@ This will bring up an interactive UI which will ask a few questions to help you 
 
 ## Troubleshooting
 
+### Command not found
+
 If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.
 
 `echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc && source ~/.bashrc`
 
 If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
+
+### Process fails to start after update
+
+If the processes fail to start or restart after an update it is most likely an issue with pm2. Running `pm2 update` should usually resolve the issue.
+
+If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a delegate.
 
 ## Available Commands
 
@@ -905,3 +927,38 @@ ark snapshot:verify
 | --trace            | dumps generated queries and settings to console | :x:                |
 | --network          | the name of the network that should be used     | :x:                |
 | --token            | the name of the token that should be used       | :x:                |
+
+## Plugins
+
+Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the Ark Blockchain but any developer can create their own plugins and publish them.
+
+### Publishment
+
+The first step to make your plugin available to the world after completing development is to publish it to the npm regsitry. We recommend to use `yarn` for this, check the [official step-by-step guide](https://yarnpkg.com/lang/en/docs/publishing-a-package/) by the yarn team.
+
+### Integration
+
+Once your plugin is published it will be available to everyone via `yarn add`. Let's use the official, but optional, package `@arkecosystem/core-vote-report` as an example of how to install and configure a plugin.
+
+#### Installation
+
+First we will need to install the package using `yarn global add`. Since Release `2.2.0` Core is a global package that exposes a CLI, this is why we need to use `yarn global add` instead of `yarn add`, which is meant to be used during development.
+
+```
+yarn global add @arkecosystem/core-vote-report
+```
+
+Give it a second to download and install the plugin, once finished you can continue to the registration and configuration.
+
+#### Configuration
+
+Now that the plugin is downloaded and installed we can go ahead and register it in our `~/.config/ark-core/{NETWORK}/plugins.js` file. Open the file in your editor of choice, append the following contents and save the changes.
+
+```js
+{
+    // some plugins...
+    "@arkecosystem/core-vote-report": {},
+}
+```
+
+Now run `ark relay:restart` and visit `http://ip:4006/` and you should see a vote report, that's it.

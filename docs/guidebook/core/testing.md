@@ -369,7 +369,25 @@ expect({
 }).toBeValidBlock();
 ```
 
-#### Core _(generally not useful outside of core itself)_
+#### Peers
+
+##### toBeValidArrayOfPeers()
+
+Assert that the given value is an array containing peers.
+
+```ts
+expect([{ ip: "", port: "" }]).toBeValidArrayOfPeers();
+```
+
+##### toBeValidPeer()
+
+Assert that the given value is a valid peer.
+
+```ts
+expect({ ip: "", port: "" }).toBeValidPeer();
+```
+
+#### Core API
 
 ##### toBeApiTransaction()
 
@@ -433,24 +451,6 @@ expect({
         },
     },
 }).toBeSuccessfulResponse();
-```
-
-#### Peers
-
-##### toBeValidArrayOfPeers()
-
-Assert that the given value is an array containing peers.
-
-```ts
-expect([{ ip: "", port: "" }]).toBeValidArrayOfPeers();
-```
-
-##### toBeValidPeer()
-
-Assert that the given value is a valid peer.
-
-```ts
-expect({ ip: "", port: "" }).toBeValidPeer();
 ```
 
 ### Contact us

@@ -413,7 +413,7 @@ expect({
 
 ##### toBeSuccessfulResponse()
 
-Assert that the given value is a paginated API response.
+Assert that the given value is a successful API response.
 
 ```ts
 expect({

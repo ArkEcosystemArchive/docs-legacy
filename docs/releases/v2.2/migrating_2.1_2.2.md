@@ -28,7 +28,7 @@ Be sure to complete all of the following changes before you continue to upgrade 
 }
 ```
 
-> If you are using the plugin and want to continue using it, run `yarn global add @arkecosystem/core-graphql` and leave your configuration unchanged.
+> If you are using the plugin and want to continue using it you need to run `yarn global add @arkecosystem/core-graphql` and leave your configuration unchanged.
 
 ## Upgrade Steps
 

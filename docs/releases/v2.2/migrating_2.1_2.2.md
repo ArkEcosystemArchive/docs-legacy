@@ -21,11 +21,11 @@ Be sure to complete all of the following changes before you continue to upgrade 
 - Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
 
 ```js
-{
-    "@arkecosystem/core-graphql": {
-        // ...
-    }
-}
+"@arkecosystem/core-graphql": {
+    enabled: process.env.CORE_GRAPHQL_ENABLED,
+    host: process.env.CORE_GRAPHQL_HOST || "0.0.0.0",
+    port: process.env.CORE_GRAPHQL_PORT || 4005,
+},
 ```
 
 > If you are using the plugin and want to continue using it you need to run `yarn global add @arkecosystem/core-graphql` and leave your configuration unchanged.

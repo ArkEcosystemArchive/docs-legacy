@@ -18,7 +18,7 @@ Be sure to complete all of the following changes before you continue to upgrade 
 
 ### Configuration
 
-- Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file, locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
+- Since 2.2 we no longer ship `@arkecosystem/core-graphql` by default, open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-graphql` plugin and remove the whole block.
 
 ```js
 {

@@ -45,6 +45,10 @@ echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc
 export PATH=$(yarn global bin):$PATH
 ```
 
+::: tip
+If you experience any issues with `yarn` after this or see a message like `Command 'ark' not found` simply log out from your server and back in.
+:::
+
 ### Start Relay
 
 ```bash

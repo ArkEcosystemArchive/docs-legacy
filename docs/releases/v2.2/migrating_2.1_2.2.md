@@ -36,12 +36,10 @@ Be sure to complete all of the following changes before you continue to upgrade 
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 :::
 
-### Removing v2.1
+### Installing 2.2.0
 
 ```bash
 pm2 delete all
-rm -rf ~/core
-rm -rf ~/ark-core
 echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc
 yarn global add @arkecosystem/core
 ```
@@ -56,6 +54,14 @@ ark relay:start
 
 ```bash
 ark forger:start
+```
+
+### Removing 2.1.0
+
+```bash
+rm -rf ~/core
+rm -rf ~/ark-core
+rm -rf ~/core-commander
 ```
 
 ## Reporting Problems

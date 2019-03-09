@@ -46,7 +46,7 @@ export PATH=$(yarn global bin):$PATH
 ```
 
 ::: tip
-If you experience any issues with `yarn` after this or see a message like `Command 'ark' not found` simply log out from your server and back in.
+If you experience any issues with `yarn` after this or see a message like `Command 'ark' not found` a simple log out and log in should help.
 :::
 
 ### Start Relay
@@ -73,4 +73,4 @@ rm -rf ~/core-commander
 
 Due to 2.2 being distributed and managed in a completely different way then 2.1 there might be cases where unexpected issues show up.
 
-If you happen to experience any issues you should [open an issue](https://github.com/ArkEcosystem/core/issues/new?template=Bug_report.md) will a detailed description of the problem you've encountered and steps to reproduce your environment.
+If you happen to experience any issues please [open an issue](https://github.com/ArkEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.

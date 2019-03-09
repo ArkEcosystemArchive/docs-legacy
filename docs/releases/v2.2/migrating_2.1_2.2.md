@@ -1,5 +1,9 @@
 # Migrating from v2.1 to v2.2
 
+::: warning
+Do not run any of the mentioned commands with `sudo` unless explicitly stated.
+:::
+
 Upgrading from `v2.1` to `v2.2` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 ::: warning
@@ -23,6 +27,8 @@ After upgrading you should check whether your application still works as expecte
     }
 }
 ```
+
+> If you are using the plugin and want to continue using it, run `yarn global add @arkecosystem/core-graphql` and leave your configuration unchanged.
 
 ## Upgrade Steps
 

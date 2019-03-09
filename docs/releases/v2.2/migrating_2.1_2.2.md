@@ -41,6 +41,7 @@ Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 ```bash
 pm2 delete all
 echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc
+source ~/.bashrc
 yarn global add @arkecosystem/core
 ```
 

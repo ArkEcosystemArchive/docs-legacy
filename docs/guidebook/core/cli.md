@@ -16,7 +16,7 @@ Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to b
 
 In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh) to see what dependencies need to be installed and configured.
 
-**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/process-manager.ts) to see how it works under the hood.**
+**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/ArkEcosystem/core/blob/master/packages/core/src/process-manager.ts) to see how it works under the hood.**
 
 ### Existing Installation
 
@@ -39,7 +39,7 @@ adduser ark
 usermod -aG sudo ark
 su ark
 cd ~
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
 
 Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.

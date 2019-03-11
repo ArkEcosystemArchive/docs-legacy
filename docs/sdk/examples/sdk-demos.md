@@ -240,7 +240,10 @@ void doExample() {
     char transactionsBuffer[600];
     snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
 
-    std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
+    // Let's save the transactionsBuffer to a 'string' object for passing to Cpp-Client.
+    std::string jsonStr = transactionsBuffer;
+    
+    std::string sendResponse = connection.api.transactions.send(jsonStr);
 
     //  handle response data from API.
     Serial.println(sendResponse.c_str());
@@ -333,7 +336,10 @@ void doExample() {
     char transactionsBuffer[600];
     snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
 
-    std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
+    // Let's save the transactionsBuffer to a 'string' object for passing to Cpp-Client.
+    std::string jsonStr = transactionsBuffer;
+    
+    std::string sendResponse = connection.api.transactions.send(jsonStr);
 
     //  handle response data from API.
     Serial.println(sendResponse.c_str());

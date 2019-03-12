@@ -10,7 +10,7 @@ All state changes to the blockchain are in the form of blocks; they contain a se
 
 ## List all blocks
 
-The Public API may be used to query for blocks. This dataset contains billions of blocks; thus for analytical purposes, we recommend you use the [Elasticsearch](/guidebook/core/plugins/elasticsearch.md) plugin or query the database directly.
+The Public API may be used to query for blocks. This dataset contains billions of blocks; thus for analytical purposes, we recommend you use the [Elasticsearch](/guidebook/core/plugins/core-elasticsearch.md) plugin or query the database directly.
 
 ### Endpoint
 

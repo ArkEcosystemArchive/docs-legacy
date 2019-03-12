@@ -18,10 +18,10 @@ Ark's official language is American English, which is used in nearly all writing
 
 ### Keep in Mind
 
-Use a clear, semi-formal tone in writing. There is no need to go as far as academic writing, but keep the following in  mind:
+Use a clear, semi-formal tone in writing. There is no need to go as far as academic writing, but keep the following in mind:
 
 - Long sentences without an objective are confusing. There is no need to use extra adjectives to increase sentence length or illustrate a concept. Remember that just as with code; documentation comes with a burden of maintenance.
-- Reuse definitions. In fintech and blockchain, we often use words such as *blocks*, *transactions*, *crypto*. While writing documentation, the use of these definitions might seem repetitive; however, these are familiar concepts and leave little room for interpretation to the reader.
+- Reuse definitions. In fintech and blockchain, we often use words such as _blocks_, _transactions_, _crypto_. While writing documentation, the use of these definitions might seem repetitive; however, these are familiar concepts and leave little room for interpretation to the reader.
 - Grammar is important. It reflects the professionalism of the entire project.
 - Use proper punctuation, in tables, captions, and citations. Titles should use [title casing](https://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html).
 - Avoid using abbreviations.
@@ -158,9 +158,9 @@ Firstly, the term "Ark" refers to an entire umbrella of concepts and is mainly u
 
 For example, the most basic form of this is writing "Ark Ecosystem"; this can be used interchangeably with "Ark".
 
- > Writing documentation for Ark
+> Writing documentation for Ark
 
- > Writing documentation for the Ark Ecosystem
+> Writing documentation for the Ark Ecosystem
 
 Both are acceptable.
 
@@ -168,9 +168,9 @@ A complete list of definitions is found in the [glossary](/glossary/).
 
 For certain cases (docs, website, forum), it is acceptable to use the actual URL subdomain.domain.tld format if it's intuitive:
 
-- *"Find all relevant information on the [docs.ark.io](https://docs.ark.io)"*
-- *"Blog, Forums, Roadmap and more can be found at the [ark.io](https://ark.io) website"*
-- *"I love the community over at the [forum.ark.io](https://forum.ark.io)"*
+- _"Find all relevant information on the [docs.ark.io](https://docs.ark.io)"_
+- _"Blog, Forums, Roadmap and more can be found at the [ark.io](https://ark.io) website"_
+- _"I love the community over at the [forum.ark.io](https://forum.ark.io)"_
 
 :::danger
 When talking about Ark's native currency, you MUST refer to it as ARK - it is commonly used as the currency ticker on exchanges and within Ark Ecosystem projects like the Ark Desktop Wallet and Ark Explorer. The currency symbol for ARK is "Ѧ". It can be represented with the decimal Unicode 1126 or "\&#1126;" in HTML.
@@ -184,7 +184,7 @@ Although it would be ideal, not all documents can afford only to mention Ark's p
 
 We encourage you always to follow other projects' standards for writing about them when you mention them in a document:
 
- > The Ark blockchain was created later than the Bitcoin blockchain
+> The Ark blockchain was created later than the Bitcoin blockchain
 
 In addition, please refrain from capitalizing terms like "blockchain", as it would imply some unencouraged buzz-wordiness.
 
@@ -228,18 +228,18 @@ Please use this template for every document which has any reference at all:
 <!-- Generated using https://www.tablesgenerator.com/markdown_tables. It looks bad in .md files, but good ones rendered. -->
 
 | Project                         | Repository                                                                                       | Description                                                                                                              |
-|---------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Ark Core                        | [https://github.com/arkecosystem/core ](https://github.com/arkecosystem/core )                   | The reference implementation of the Ark Blockchain, also refered to as Ark v2                                            |
-| Ark Node                        | [https://github.com/arkecosystem/ark-node ](https://github.com/arkecosystem/ark-node )           | Deprecated implementation of Ark v1                                                                                      |
-| Ark Mobile Wallet               | [https://github.com/arkecosystem/mobile-wallet ](https://github.com/arkecosystem/mobile-wallet ) | Cross platform mobile wallet built using ionic.                                                                          |
-| Ark Explorer                    | [https://github.com/arkecosystem/explorer ](https://github.com/arkecosystem/explorer )           | Official blockchain explorer, hosted at explorer.ark.io.                                                                 |
+| ------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Ark Core                        | [https://github.com/arkecosystem/core ](https://github.com/arkecosystem/core)                    | The reference implementation of the Ark Blockchain, also refered to as Ark v2                                            |
+| Ark Node                        | [https://github.com/arkecosystem/ark-node ](https://github.com/arkecosystem/ark-node)            | Deprecated implementation of Ark v1                                                                                      |
+| Ark Mobile Wallet               | [https://github.com/arkecosystem/mobile-wallet ](https://github.com/arkecosystem/mobile-wallet)  | Cross platform mobile wallet built using ionic.                                                                          |
+| Ark Explorer                    | [https://github.com/arkecosystem/explorer ](https://github.com/arkecosystem/explorer)            | Official blockchain explorer, hosted at explorer.ark.io.                                                                 |
 | Ark Desktop Wallet              | [https://github.com/arkecosystem/desktop-wallet](https://github.com/arkecosystem/desktop-wallet) | Cross platform desktop wallet.                                                                                           |
 | AIPs, Ark Improvement Proposals | [https://github.com/arkecosystem/aips](https://github.com/arkecosystem/aips)                     | Proposals related to altering/upgrading Ark. AIP set standards for best practices, implementations and breaking changes. |
 | Ark (LANG) Client               | [https://github.com/arkecosystem/php-client](https://github.com/arkecosystem/php-client)         | Each SDK has its own client repository, used for all API interactions.                                                   |
-| Ark (LANG) Crypto               | [https://github.com/arkecosystem/php-crypto ](https://github.com/arkecosystem/php-crypto )       | As with the client SDKs, there are many crypto SDKs, providing signing and serialization functionalities.                |
+| Ark (LANG) Crypto               | [https://github.com/arkecosystem/php-crypto ](https://github.com/arkecosystem/php-crypto)        | As with the client SDKs, there are many crypto SDKs, providing signing and serialization functionalities.                |
 | Ark Deployer                    | [https://github.com/arkecosystem/ark-deployer](https://github.com/arkecosystem/deployer)         | Deployment scripts based on Docker and Vagrant.                                                                          |
 | Ark website                     | [https://ark.io](https://ark.io)                                                                 | The official website hosted at ark.io                                                                                    |
-| Ark documentation               | [https://docs.ark.io ](https://docs.ark.io )                                                     | A complete set of technical documentation on Ark and blockchain.                                                         |
-| Ark forum                       | [https://forum.ark.io ](https://forum.ark.io )                                                   | A self hosted forum.                                                                                                     |
-| Ark mediakit                    | [https://ark.io/mediakit ](https://ark.io/mediakit )                                             | A collection of reusable media assets.                                                                                   |
-| Ark blog                        | [https://blog.ark.io ](https://blog.ark.io )                                                     | One of the official channels of communication between the Ark team and the community.                                    |
+| Ark documentation               | [https://docs.ark.io ](https://docs.ark.io)                                                      | A complete set of technical documentation on Ark and blockchain.                                                         |
+| Ark forum                       | [https://forum.ark.io ](https://forum.ark.io)                                                    | A self hosted forum.                                                                                                     |
+| Ark mediakit                    | [https://ark.io/mediakit ](https://ark.io/mediakit)                                              | A collection of reusable media assets.                                                                                   |
+| Ark blog                        | [https://blog.ark.io ](https://blog.ark.io)                                                      | One of the official channels of communication between the Ark team and the community.                                    |

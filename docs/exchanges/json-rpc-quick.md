@@ -22,7 +22,7 @@ By default, the JSON-API listens on port 8080 for requests. This means that all 
 
 If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `ARK_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory.
 
-Your config directory is located at `~/.ark/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
+Your config directory is located at `~/.config/ark-core/{network}/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
 All request should include the HTTP header `Content-Type: application/json` to inform the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
 
@@ -179,7 +179,7 @@ func main() {
 ```python
 import requests
 r = requests.post(
-  "http://0.0.0.0:8080", 
+  "http://0.0.0.0:8080",
   json={"jsonrpc": "2.0", "method": "blocks.latest", "id": 31}
   )
 print(r)
@@ -242,8 +242,8 @@ func main() {
 
 ```python
 r = requests.post(
-  "http://0.0.0.0:8080", 
-  json={"jsonrpc": "2.0", "method": "wallets.info", "id": 31, 
+  "http://0.0.0.0:8080",
+  json={"jsonrpc": "2.0", "method": "wallets.info", "id": 31,
         "params": {
             "address": "AMv3iLrvyvpi6d4wEfLqX8kzMxaRvxAcHT",
       },

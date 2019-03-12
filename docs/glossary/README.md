@@ -45,7 +45,7 @@ Delegated block production is an advantage for a Blockchain. It allows for seaml
 
 ### Peer
 
-Every Ark node maintains a registry of other full nodes, referred to as *peers*. At a minimum, a peer must expose its p2p API, but most also expose a Public API.
+Every Ark node maintains a registry of other full nodes, referred to as _peers_. At a minimum, a peer must expose its p2p API, but most also expose a Public API.
 
 ### Node
 
@@ -135,7 +135,7 @@ Code forks of the Ark blockchain aiming to be interoperable with Ark.
 
 ### SmartBridge
 
-A metadata field embedded in each transaction used in cross-chain communication. In older documentation, this may be referred to as  `vendorField`.
+A metadata field embedded in each transaction used in cross-chain communication. In older documentation, this may be referred to as `vendorField`.
 
 ## Official Ark Projects
 
@@ -155,7 +155,7 @@ A frontend used to query the blockchain. Explorers use a Relay Node to perform q
 
 A mobile app to manage wallets, Ark Mobile is available for both Android and iOS.
 
-### Ark Desktop Wallet*
+### Ark Desktop Wallet\*
 
 A desktop client to manage wallets.
 

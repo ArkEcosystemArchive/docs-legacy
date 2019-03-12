@@ -1,4 +1,4 @@
-# v1.0 to v2.1
+# Migrating from v1.0 to v2.1
 
 Shortly after the release of `v2.0`, Ark Core was rewritten in [TypeScript](https://www.typescriptlang.org/), a typed superset of JavaScript, well suited for large projects as it prevents an entire class of runtime bugs. If you are on `v1`, we recommend upgrading to `v2.1` and skipping `v2.0`.
 
@@ -15,7 +15,7 @@ Ensure you have correctly mapped all participants in your network. You should be
 
 During the migrations, third-party providers and exchanges should ensure they stop accepting transactions, as there is a gap where the blockchain is possibly rolled back a few hundred blocks. Once the migration is completed, these services must ensure they are not on a forked network; it is best to wait a few hours to a day until everyone is sure a network consensus has been reached.
 
-All node operators must cooperate in the migration. (Technicallhttp://0.0.0.0:8080y only > 50% of the delegates need to migrate. However, you should avoid a community split). We recommend having a dedicated slack channel, monitored by your team during the entire migration process, so that you may provide assistance.
+All node operators must cooperate in the migration. (Technically only > 50% of the delegates need to migrate. However, you should avoid a community split). We recommend having a dedicated slack channel, monitored by your team during the entire migration process, so that you may provide assistance.
 
 Together with your node operators, it would be best if you decided on a cutoff block `height`, after this height, `v1` will no longer be supported in your BridgeChain, and services relying on `v1` nodes may break and should be considered unreliable. `v2.0` nodes, however, are still compatible with your network, and thus you may choose to keep support for these nodes.
 
@@ -45,28 +45,29 @@ cd packages/core/src/config
 mdkir MyNet
 ```
 
-To configure `v2.1`, we will edit `core-p2p/src/defaults.ts` and add configuration files in our `MyNet` directory. If you look at a different network, `core/src/config/devnet` for example, you should see four files:
+To configure `v2.1`, we will edit `core-p2p/src/defaults.ts` and add configuration files in our `MyNet` directory. If you look at a different network, `core/src/config/devnet` for example, you should see three files:
 
-- **genesisBlock.json:** defines the very first block of your network, and from it, your `networkhash` is derived, as it is the header of the first block.
 - **peers.json:** used by the node to find other existing nodes.
 - **plugins.js:** contains constructor arguments for the different core plugins.
 - **delegates.json:** holds the secrets for the initial virtualized delegates.
 
-To us, only `genesisBlock.json` and `peers.json` are relevant. The latter should look something like this:
+To us, `peers.json` is most relevant. The latter should look something like this:
 
 ```json
 {
-    "list": [
-        {
-            "ip": "167.114.29.51",
-            "port": 4002
-        },
-        {
-            "ip": "167.114.29.52",
-            "port": 4002
-        },
-    ],
-    "sources": ["https://raw.githubusercontent.com/ArkEcosystem/peers/master/devnet.json"]
+  "list": [
+    {
+      "ip": "167.114.29.51",
+      "port": 4002
+    },
+    {
+      "ip": "167.114.29.52",
+      "port": 4002
+    }
+  ],
+  "sources": [
+    "https://raw.githubusercontent.com/ArkEcosystem/peers/master/devnet.json"
+  ]
 }
 ```
 
@@ -76,99 +77,178 @@ The `list` specifies initial peers, which our node will use to [discover](https:
 
 ```js
 module.exports = {
-    "@arkecosystem/core-event-emitter": {},
-    "@arkecosystem/core-logger-winston": {
-        transports: {
-            console: {
-                options: {
-                    level: process.env.CORE_LOG_LEVEL || "debug",
-                },
-            },
-            dailyRotate: {
-                options: {
-                    level: process.env.CORE_LOG_LEVEL || "debug",
-                },
-            },
-        },
-    },
-    "@arkecosystem/core-database-postgres": {
-        connection: {
-            host: process.env.CORE_DB_HOST || "localhost",
-            port: process.env.CORE_DB_PORT || 5432,
-            database: process.env.CORE_DB_DATABASE || `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
-            user: process.env.CORE_DB_USERNAME || process.env.CORE_TOKEN,
-            password: process.env.CORE_DB_PASSWORD || "password",
-        },
-    },
-    "@arkecosystem/core-transaction-pool": {
-        enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
-        maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
-        allowedSenders: [],
-        dynamicFees: {
-            enabled: true,
-            minFeePool: 1000,
-            minFeeBroadcast: 1000,
-            addonBytes: {
-                transfer: 100,
-                secondSignature: 250,
-                delegateRegistration: 400000,
-                vote: 100,
-                multiSignature: 500,
-                ipfs: 250,
-                timelockTransfer: 500,
-                multiPayment: 500,
-                delegateResignation: 400000,
-            },
-        },
-    },
-    "@arkecosystem/core-p2p": {
-        host: process.env.CORE_P2P_HOST || "0.0.0.0",
-        port: process.env.CORE_P2P_PORT || 4002,
-        minimumNetworkReach: 5,
-        coldStart: 5,
-    },
-    "@arkecosystem/core-blockchain": {
-        fastRebuild: false,
-    },
-    "@arkecosystem/core-api": {
-        enabled: !process.env.CORE_API_DISABLED,
-        host: process.env.CORE_API_HOST || "0.0.0.0",
-        port: process.env.CORE_API_PORT || 4003,
-        whitelist: ["*"],
-    },
-    "@arkecosystem/core-webhooks": {
-        enabled: process.env.CORE_WEBHOOKS_ENABLED,
-        server: {
-            enabled: process.env.CORE_WEBHOOKS_API_ENABLED,
-            host: process.env.CORE_WEBHOOKS_HOST || "0.0.0.0",
-            port: process.env.CORE_WEBHOOKS_PORT || 4004,
-            whitelist: ["127.0.0.1", "::ffff:127.0.0.1"],
-        },
-    },
-    "@arkecosystem/core-graphql": {
-        enabled: process.env.CORE_GRAPHQL_ENABLED,
-        host: process.env.CORE_GRAPHQL_HOST || "0.0.0.0",
-        port: process.env.CORE_GRAPHQL_PORT || 4005,
-    },
-    "@arkecosystem/core-forger": {
-        hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`],
-    },
-    "@arkecosystem/core-json-rpc": {
-        enabled: process.env.CORE_JSON_RPC_ENABLED,
-        host: process.env.CORE_JSON_RPC_HOST || "0.0.0.0",
-        port: process.env.CORE_JSON_RPC_PORT || 8080,
-        allowRemote: false,
-        whitelist: ["127.0.0.1", "::ffff:127.0.0.1"],
-    },
-    "@arkecosystem/core-snapshots": {},
+  "@arkecosystem/core-event-emitter": {},
+  "@arkecosystem/core-logger-winston": {
+    transports: {
+      console: {
+        options: {
+          level: process.env.CORE_LOG_LEVEL || "debug"
+        }
+      },
+      dailyRotate: {
+        options: {
+          level: process.env.CORE_LOG_LEVEL || "debug"
+        }
+      }
+    }
+  },
+  "@arkecosystem/core-database-postgres": {
+    connection: {
+      host: process.env.CORE_DB_HOST || "localhost",
+      port: process.env.CORE_DB_PORT || 5432,
+      database:
+        process.env.CORE_DB_DATABASE ||
+        `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
+      user: process.env.CORE_DB_USERNAME || process.env.CORE_TOKEN,
+      password: process.env.CORE_DB_PASSWORD || "password"
+    }
+  },
+  "@arkecosystem/core-transaction-pool": {
+    enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
+    maxTransactionsPerSender:
+      process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
+    allowedSenders: [],
+    dynamicFees: {
+      enabled: true,
+      minFeePool: 1000,
+      minFeeBroadcast: 1000,
+      addonBytes: {
+        transfer: 100,
+        secondSignature: 250,
+        delegateRegistration: 400000,
+        vote: 100,
+        multiSignature: 500,
+        ipfs: 250,
+        timelockTransfer: 500,
+        multiPayment: 500,
+        delegateResignation: 400000
+      }
+    }
+  },
+  "@arkecosystem/core-p2p": {
+    host: process.env.CORE_P2P_HOST || "0.0.0.0",
+    port: process.env.CORE_P2P_PORT || 4002,
+    minimumNetworkReach: 5,
+    coldStart: 5
+  },
+  "@arkecosystem/core-blockchain": {
+    fastRebuild: false
+  },
+  "@arkecosystem/core-api": {
+    enabled: !process.env.CORE_API_DISABLED,
+    host: process.env.CORE_API_HOST || "0.0.0.0",
+    port: process.env.CORE_API_PORT || 4003,
+    whitelist: ["*"]
+  },
+  "@arkecosystem/core-webhooks": {
+    enabled: process.env.CORE_WEBHOOKS_ENABLED,
+    server: {
+      enabled: process.env.CORE_WEBHOOKS_API_ENABLED,
+      host: process.env.CORE_WEBHOOKS_HOST || "0.0.0.0",
+      port: process.env.CORE_WEBHOOKS_PORT || 4004,
+      whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
+    }
+  },
+  "@arkecosystem/core-graphql": {
+    enabled: process.env.CORE_GRAPHQL_ENABLED,
+    host: process.env.CORE_GRAPHQL_HOST || "0.0.0.0",
+    port: process.env.CORE_GRAPHQL_PORT || 4005
+  },
+  "@arkecosystem/core-forger": {
+    hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`]
+  },
+  "@arkecosystem/core-json-rpc": {
+    enabled: process.env.CORE_JSON_RPC_ENABLED,
+    host: process.env.CORE_JSON_RPC_HOST || "0.0.0.0",
+    port: process.env.CORE_JSON_RPC_PORT || 8080,
+    allowRemote: false,
+    whitelist: ["127.0.0.1", "::ffff:127.0.0.1"]
+  },
+  "@arkecosystem/core-snapshots": {}
 };
 ```
 
-Your directory `MyNet` should now contain `genesisBlock.json`, `peers.json`, and a `plugins.js`. If you use the terms `mainnet`, `devnet` and `testnet` in your BridgeChain, you should create configuration directories for each of these networks, overriding the existing directories.
+Your directory `MyNet` should now contain `peers.json` and `plugins.js`. If you use the terms `mainnet`, `devnet` and `testnet` in your BridgeChain, you should create configuration directories for each of these networks, overriding the existing directories.
+
+### Crypto
+
+::: tip
+
+If you run your own network and have a custom token, these next steps are especially relevant.
+
+:::
+
+We also need to move our initial block definition, the genesisBlock, to the correct location. In previous versions it was stored alongside our other files, however, crypto related files now reside in `packages/crypto/src/networks/{NETWORK}`. This directory contains the following four files:
+
+- **exceptions.json:** lists blocks and transactions which are exempt from validation rules, usually because of historic forks and vulnerabilities.
+- **genesisBlock.json:** defines the very first block of your network, and from it, your `networkhash` is derived, as it is the header of the first block.
+- **index.ts:** exports these crypto definitions as a module.
+- **milestones.json:** defines networkwide configuration changes based on certain milestones; i.e. a global reward reduction when block 1000000 has been forged.
+- **network.json:** contains your network specific variables. (some may also be set from your env.process).
 
 ::: warning
 Ensure that your `genesisBlock.json` is exactly the same. Your `v2.1` node only connects with nodes that have the same `genesisBlock.json`.
 :::
+
+You can copy the `index.ts` and `network.json` from an existing directory (i.e., mainnet) and edit them appropriately. The `genesisBlock.json` must be copied from your original configurations to correctly derive a network hash and initial state. If you do not require an `exceptions.json`, copy the file anyway, and empty the keys:
+
+#### exceptions.json
+
+```json
+{
+  "blocks": [],
+  "transactions": [],
+  "outlookTable": {},
+  "transactionIdFixTable": {}
+}
+```
+
+If your BridgeChain was created during `v1.0.X`, you most likely copied Ark's milestones. If not, edit this file according to your own milestones.
+
+#### milestones.json
+
+```json
+[
+  {
+    "height": 1,
+    "reward": 0,
+    "activeDelegates": 51,
+    "blocktime": 8,
+    "block": {
+      "version": 0,
+      "maxTransactions": 50,
+      "maxPayload": 2097152
+    },
+    "epoch": "2017-03-21T13:00:00.000Z",
+    "fees": {
+      "staticFees": {
+        "transfer": 10000000,
+        "secondSignature": 500000000,
+        "delegateRegistration": 2500000000,
+        "vote": 100000000,
+        "multiSignature": 500000000,
+        "ipfs": 0,
+        "timelockTransfer": 0,
+        "multiPayment": 0,
+        "delegateResignation": 0
+      }
+    }
+  },
+  {
+    "height": 75600,
+    "reward": 200000000
+  },
+  {
+    "height": 6600000,
+    "block": {
+      "maxTransactions": 150,
+      "maxPayload": 6300000
+    }
+  }
+]
+```
+
+### p2p
 
 The final file of interest to us is `packages/core-p2p/src/defaults.ts`, which contains the default parameters our node will use for the internal [p2p API](/api/p2p/).
 
@@ -181,7 +261,7 @@ We are interested in the following section:
     minimumVersion: ">=2.1.0",
 ```
 
-`minimumVersion` specifies the minimum acceptable version of other peers in our network. Since the network is currently at `v1`, change it to `">=1.0.0"`. We will later set `minimumVersion` back to `">=2.1.0"` to force
+`minimumVersion` specifies the minimum acceptable version of other peers in our network. Since the network is currently at `v1`, change it to `">=1.0.0"`. We will later set `minimumVersion` back to `">=2.1.0"` to force older peers to exit the network.
 
 Open `packages/core/package.json`. Here the common startup scripts are defined. You can read more on how these work in the [node lifecycle](/guidebook/core/node-lifecycle.md) section. We are interested in the `scripts` key.
 
@@ -303,7 +383,7 @@ git push
 We are going to start a relay node, which is the equivalent of a standard `v1` node without entering your delegate's passphrase. First bootstrap all dependencies.
 
 ```bash
-lerna bootstrap
+yarn setup
 ```
 
 This might take a while, as lerna obtains all dependencies required for `Ark Core`. Once the process is done, run the following command to start the synchronization process:

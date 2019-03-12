@@ -38,7 +38,7 @@ $ yarn add @arkecosystem/crypto
 
 #### Java Installation
 
-Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.  
+Java may be installed from [Oracle](https://www.java.com/en/download/help/download_options.xml) or from [OpenJDK](https://openjdk.java.net/). Recently licensing on Oracle's hosted Java installation changed, so we recommend using OpenJDK.
 
 #### Gradle
 
@@ -88,7 +88,7 @@ paket add ArkEcosystem.Crypto --version 0.2.1
 
 #### PHP Installation
 
-Documentation can be found [here](http://php.net/manual/fr/install.php).
+Documentation can be found [here](http://php.net/manual/en/install.php).
 
 Others solutions like [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04), [WAMP](http://www.wampserver.com/) or [MAMP](https://www.mamp.info/en/) are available.
 
@@ -158,14 +158,17 @@ cmake --build .
 
 #### Arduino
 
-Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software).
+Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
+
+Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Crypto library.
+Be sure to install the "-arduino" version of Cpp-Crypto.
 
 ##### Dependencies
 
-Using the Arduino IDE's built-in Library Manager, install the following Libraries:
+Using the Arduino IDE's built-in Library Manager, also install the following libraries:
 
 - micro-ecc
-- AUnit
+- ArduinoJson@5.13.5
 
 #### Using with the Arduino IDE
 
@@ -178,6 +181,34 @@ Include the following header in your Arduino Sketch:
 #### PlatformIO
 
 Python is required to run PlatformIO, so grab an installer package from [python.org](https://www.python.org/downloads/).
+
+Add the following line to your `platformio.ini` configuration file:
+
+```asciidoc
+lib_deps = Ark-Cpp-Crypto
+```
+
+This is an example of a fully configured `platformio.ini file for the Adafruit ESP32 Feather:
+
+```asciidoc
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:featheresp32]platform = espressif32
+board = featheresp32
+framework = arduino
+lib_deps = Ark-Cpp-Crypto
+upload_speed = 921600
+monitor_speed = 115200
+
+```
 
 :::
 
@@ -260,7 +291,7 @@ Elixir can be installed by following [this guide](https://elixir-lang.org/instal
 
 #### Installation
 
-The package can be installed by adding `arkecosystem_crypto to your list of dependencies in `mix.exs`:
+The package can be installed by adding `arkecosystem_crypto to your list of dependencies in`mix.exs`:
 
 ```elixir
 def deps do
@@ -286,27 +317,27 @@ If you want to contribute to the code of this SDK, execute the following command
 
 ::: tab javascript
 
-1) Fork the [package](https://github.com/ArkEcosystem/javascript-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/javascript-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/javascript-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 cd javascript-crypto
 ```
 
-4) Proceed to install the dependencies.
+4. Proceed to install the dependencies.
 
 ```bash
 yarn install
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 yarn test
@@ -324,27 +355,27 @@ yarn test
 
 ::: tab php
 
-1) Fork the [package](https://github.com/ArkEcosystem/php-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/php-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 $ git clone https://github.com/<githubusername>/php-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 $ cd php-crypto
 ```
 
-4) Install the dependencies with composer.
+4. Install the dependencies with composer.
 
 ```bash
 $ composer install
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 $ phpunit
@@ -355,29 +386,29 @@ $ phpunit
 
 ::: tab python
 
-1) Fork the [package](https://github.com/ArkEcosystem/python-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/python-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/python-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 cd python-crypto
 ```
 
-4) The next step would be to create something like a [virtual environment](https://virtualenv.pypa.io/en/latest/) and install the dependencies of this package inside it.
+4. The next step would be to create something like a [virtual environment](https://virtualenv.pypa.io/en/latest/) and install the dependencies of this package inside it.
 
-5) Proceed to install the dependencies. These are listed inside the setup.py file.
+5. Proceed to install the dependencies. These are listed inside the setup.py file.
 
 ```bash
 pip install flake8 flake8-import-order flake8-print flake8-quotes pytest pytest-cov
 ```
 
-6) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+6. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 pytest
@@ -387,28 +418,28 @@ pytest
 
 ::: tab golang
 
-1) Fork the [package](https://github.com/ArkEcosystem/go-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/go-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/go-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 cd go-crypto
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 # -t will also fetch dependencies related to tests
 go get -t ./...
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 $ go test ./...
@@ -418,21 +449,42 @@ $ go test ./...
 
 ::: tab C++
 
+1. Fork the [package](https://github.com/ArkEcosystem/cpp-crypto).
+
+2. Clone the newly forked repository.
+
 ```bash
-./bin/Ark-Cpp-Crypto-tests
+git clone https://github.com/<githubusername>/cpp-crypto
 ```
 
-#### ESP8266
+3. Next, we move into the cloned directory.
 
 ```bash
-cd cpp-client/test
+cd cpp-crypto
+```
+
+4. Build the package using CMake.
+
+```bash
+cmake
+cmake --build .
+```
+
+5. Now we can run the tests to see if everything is running as it should.
+
+```bash
+./test/Ark-Cpp-Crypto-tests
+```
+
+#### ESP8266 (PlatformIO)
+
+```bash
 pio run -e esp8266 -t upload
 ```
 
-#### ESP32
+#### ESP32 (PlatformIO)
 
 ```bash
-cd cpp-client/test
 pio run -e esp32 -t upload
 ```
 
@@ -444,21 +496,21 @@ pio run -e esp32 -t upload
 
 ::: tab swift
 
-1) Fork the [package](https://github.com/ArkEcosystem/swift-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/swift-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/swift-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 cd swift-crypto/Crypto
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 pod install
@@ -471,33 +523,33 @@ Don't be alarmed when it looks like the installation got stuck. It's just the un
 You will also need to install [Swiftlint](https://github.com/realm/SwiftLint) as an additional step, as that is used to lint our code.
 The easiest way to install this is by using Homebrew: `brew install swiftlint`.
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running like it should be opening the `Crypto.xcworkspace` in Xcode.
+5. Dependencies are now installed, you can now run the tests to see if everything is running like it should be opening the `Crypto.xcworkspace` in Xcode.
 
 :::
 
 ::: tab rust
 
-1) Fork the [package](https://github.com/ArkEcosystem/rust-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/rust-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/rust-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 cd rust-crypto
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 cargo build
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 cargo test
@@ -507,27 +559,27 @@ cargo test
 
 ::: tab elixir
 
-1) Fork the [package](https://github.com/ArkEcosystem/elixir-crypto).
+1. Fork the [package](https://github.com/ArkEcosystem/elixir-crypto).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/elixir-crypto
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 cd elixir-crypto
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 mix deps.get
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 mix test
@@ -548,13 +600,13 @@ Depending on the library, you must import and initialize it in a specific way.
 To perform cryptographic functions with the Ark JavaScript Crypto library, you must first require it:
 
 ```js
-const { crypto } = require('@arkecosystem/crypto')
+const { crypto } = require("@arkecosystem/crypto");
 ```
 
 Throughout this document, the keys object used is:
 
 ```js
-const keys = crypto.getKeys('this is a top-secret passphrase')
+const keys = crypto.getKeys("this is a top-secret passphrase");
 ```
 
 :::
@@ -607,6 +659,7 @@ import (
 ::: tab C++
 
 ```cpp
+#include <arkCrypto.h>
 ```
 
 :::
@@ -660,22 +713,21 @@ const transaction = {
   type: 0,
   amount: 1000,
   fee: 2000,
-  recipientId: 'DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP',
+  recipientId: "DM7UiH4b2rW2Nv11Wu6ToiZi8MJhGCEWhP",
   timestamp: 121212,
   asset: {},
-  senderPublicKey: '034151a3ec46b5670a682b0a63394f863587d1bc97483b1b'
-}
+  senderPublicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b"
+};
 ```
 
 For serializing and deserializing, we must require the Transaction model:
 
 ```js
-const { Transaction } = require('@arkecosystem/crypto').models
+const { Transaction } = require("@arkecosystem/crypto").models;
 ```
 
-
 ```js
-crypto.sign(transaction, keys)
+crypto.sign(transaction, keys);
 ```
 
 :::
@@ -750,9 +802,30 @@ transaction := crypto.BuildTransfer(
 
 :::
 
-::: tab cpp
+::: tab C++
+
+Using the Transaction builder class.
 
 ```cpp
+Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    "recipientID",
+    1000000000,
+    "vendorfield",
+    "passphrase",
+    "secondPassphrase");
+```
+
+We can also do this manually.
+
+```cpp
+  Ark::Crypto::Transactions::Transaction transaction;
+  transaction.type = Ark::Crypto::Enums::Types::TRANSFER;
+  transaction.fee = Ark::Crypto::Configuration::Fee().get(Ark::Crypto::Enums::Types::TRANSFER);
+  transaction.recipientId = "recipientId";
+  transaction.amount = 1000000000;
+  transaction.vendorField = "vendorfield";
+
+  std::string signature = sign(transaction, "passphrase", "secondPassphrase");
 ```
 
 :::
@@ -833,7 +906,7 @@ Serialization of a transaction object ensures it is compact and properly formatt
 ::: tab javascript
 
 ```js
-const serialized = Transaction.serialize(transaction).toString('hex')
+const serialized = Transaction.serialize(transaction).toString("hex");
 ```
 
 :::
@@ -887,9 +960,18 @@ serialized := crypto.SerializeTransaction(transaction)
 
 :::
 
-::: tab cpp
+::: tab C++
 
 ```cpp
+Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    "recipientID",
+    1000000000,
+    "vendorfield",
+    "passphrase",
+    "secondPassphrase");
+
+Ark::Crypto::Transactions::Serializer serializer(transfer);
+std::string serializedTransaction = serializer.serialize();
 ```
 
 :::
@@ -947,7 +1029,7 @@ A serialized transaction may be deserialized for inspection purposes. The public
 ::: tab javascript
 
 ```js
-const deserialized = Transaction.deserialize(serialized)
+const deserialized = Transaction.deserialize(serialized);
 ```
 
 :::
@@ -1003,6 +1085,8 @@ transaction := crypto.DeserializeTransaction(serialized)
 ::: tab C++
 
 ```cpp
+Ark::Crypto::Transactions::Deserializer deserializer("serialized_transaction");
+auto actual = deserializer.deserialize();
 ```
 
 :::
@@ -1060,13 +1144,15 @@ Signing a string works much like signing a transaction: in most implementations,
 ::: tab javascript
 
 ```js
-const message = "Arbitrary entry of data"
-const hash = utils.sha256(message)
-const signature = crypto.signHash(hash, keys)
+const message = "Arbitrary entry of data";
+const hash = utils.sha256(message);
+const signature = crypto.signHash(hash, keys);
 
 const signed = {
-  message, hash, signature
-}
+  message,
+  hash,
+  signature
+};
 ```
 
 :::
@@ -1179,7 +1265,11 @@ A message's signature can easily be verified by hash, without the private key th
 ::: tab javascript
 
 ```js
-crypto.verifyHash(signed.hash, signed.signature, '034151a3ec46b5670a682b0a63394f863587d1bc97483b1b')
+crypto.verifyHash(
+  signed.hash,
+  signed.signature,
+  "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b"
+);
 ```
 
 :::
@@ -1250,7 +1340,7 @@ ok, err := message.Verify()
 
 ```cpp
 const auto text = "Computer science is no more about computers than astronomy is about telescopes.";
-PublicKey publicKey = PublicKey::fromHex("0275776018638e5c40f1b922901e96cac2caa734585ef302b4a2801ee9a338a456");
+Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromHex("0275776018638e5c40f1b922901e96cac2caa734585ef302b4a2801ee9a338a456");
 std::vector<uint8_t> signature = HexToBytes("3044022021704f2adb2e4a10a3ddc1d7d64552b8061c05f6d12a168c69091c75581d611402200edf37689d2786fc690af9f0f6fa1f629c95695039f648a6d455484302402e93");
 
 Ark::Crypto::Utils::Message message(
@@ -1259,7 +1349,7 @@ Ark::Crypto::Utils::Message message(
     signature
 );
 
-message.verify();
+bool isValid = message.verify();
 ```
 
 :::
@@ -1336,11 +1426,11 @@ The identities class allows for the creation and inspection of keypairs from `pa
 To use identities in your project, first, require the module.
 
 ```js
-const { identities } = require('@arkecosystem/crypto')
+const { identities } = require("@arkecosystem/crypto");
 ```
 
 ```js
-identities.address.fromPassphrase('this is a top secret passphrase')
+identities.address.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -1396,7 +1486,7 @@ address, _ := crypto.AddressFromPassphrase("this is a top secret passphrase")
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
 const uint8_t networkVersion = 0x1E;
-Address address = Address::fromPassphrase(passphrase, networkVersion);
+Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPassphrase(passphrase, networkVersion);
 ```
 
 :::
@@ -1443,7 +1533,9 @@ ArkEcosystem.Crypto.Identities.Address.from_passphrase('this is a top secret pas
 ::: tab javascript
 
 ```js
-identities.address.fromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b')
+identities.address.fromPublicKey(
+  "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b"
+);
 ```
 
 :::
@@ -1498,9 +1590,9 @@ address := publicKey.ToAddress()
 ::: tab C++
 
 ```cpp
-PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+Ark::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
 const uint8_t networkVersion = 0x1E;
-Address address = Address::fromPublicKey(publicKey, networkVersion);
+Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPublicKey(publicKey, networkVersion);
 ```
 
 :::
@@ -1548,7 +1640,9 @@ ArkEcosystem.Crypto.Identities.Address.from_public_key('034151a3ec46b5670a682b0a
 ::: tab javascript
 
 ```js
-identities.address.fromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
+identities.address.fromPrivateKey(
+  "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712"
+);
 ```
 
 :::
@@ -1606,7 +1700,7 @@ fmt.Println(privateKey.ToAddress())
 ```cpp
 PrivateKey privateKey("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
 const uint8_t networkVersion = 0x1E;
-Address address = Address::fromPrivateKey(privateKey, networkVersion);
+Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPrivateKey(privateKey, networkVersion);
 ```
 
 :::
@@ -1654,7 +1748,7 @@ ArkEcosystem.Crypto.Identities.Address.from_private_key('d8839c2432bfd0a67ef10a8
 ::: tab javascript
 
 ```js
-identities.address.validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib')
+identities.address.validate("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 ```
 
 :::
@@ -1708,8 +1802,9 @@ fmt.Println(crypto.ValidateAddress("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"))
 ::: tab C++
 
 ```cpp
-Address address("DStZXkgpEjxbG355nQ26vnkp95p24U9tsV");
-bool isValidAddress = Address::validate(address, networkVersion);
+Ark::Crypto::Identities::Address address("DStZXkgpEjxbG355nQ26vnkp95p24U9tsV");
+const uint8_t networkVersion = 0x1E;
+bool isValid = Ark::Crypto::Identities::Address::validate(address, networkVersion);
 ```
 
 :::
@@ -1764,7 +1859,7 @@ As the name implies, private keys and passphrases are to remain private. Never s
 ::: tab javascript
 
 ```js
-identities.privateKey.fromPassphrase('this is a top secret passphrase')
+identities.privateKey.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -1819,7 +1914,7 @@ privateKey, _ := crypto.PrivateKeyFromPassphrase("this is a top secret passphras
 
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-PrivateKey privateKey = PrivateKey::fromPassphrase(passphrase);
+Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromPassphrase(passphrase);
 ```
 
 :::
@@ -1918,7 +2013,7 @@ privateKey, _ := crypto.PrivateKeyFromHex("d8839c2432bfd0a67ef10a804ba991eabba19
 ::: tab C++
 
 ```cpp
-PrivateKey privateKey = PrivateKey::fromHex("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
+Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromHex("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
 ```
 
 :::
@@ -1965,7 +2060,9 @@ ArkEcosystem.Crypto.Identities.PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba9
 ::: tab javascript
 
 ```js
-identities.privateKey.fromWIF('SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA')
+identities.privateKey.fromWIF(
+  "SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA"
+);
 ```
 
 :::
@@ -1995,7 +2092,12 @@ This function has not been implemented in this client library.
 :::
 
 ::: tab C++
-This function has not been implemented in this client library.
+
+```cpp
+const char* wifStr = "SEZuJZouNK8GLXNApjciH4QnSKiNr971exVcL2Y6XfrDF5o977zB";
+Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromWIFString(wifStr, wifByte);
+```
+
 :::
 
 ::: tab ruby
@@ -2031,7 +2133,7 @@ Public Keys may be freely shared, and are included in transaction objects to val
 ::: tab javascript
 
 ```js
-identities.publicKey.fromPassphrase('this is a top secret passphrase')
+identities.publicKey.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -2086,7 +2188,7 @@ publicKey, _ := crypto.PublicKeyFromPassphrase("this is a top secret passphrase"
 
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-PublicKey publicKey = PublicKey::fromPassphrase(passphrase);
+Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromPassphrase(passphrase);
 ```
 
 :::
@@ -2178,7 +2280,7 @@ publicKey, _ := crypto.PublicKeyFromHex("034151a3ec46b5670a682b0a63394f863587d1b
 ::: tab C++
 
 ```cpp
-PublicKey publicKey = PublicKey::fromHex("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromHex("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
 ```
 
 :::
@@ -2226,7 +2328,9 @@ ArkEcosystem.Crypto.Identities.PublicKey.from_hex('034151a3ec46b5670a682b0a63394
 ::: tab javascript
 
 ```js
-identities.publicKey.validate('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
+identities.publicKey.validate(
+  "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
+);
 ```
 
 :::
@@ -2256,7 +2360,12 @@ This function has not been implemented in this client library.
 :::
 
 ::: tab C++
-This function has not been implemented in this client library.
+
+```cpp
+Ark::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+bool isValid = Ark::Crypto::Identities::PublicKey::validate(publicKey);
+```
+
 :::
 
 ::: tab ruby
@@ -2292,7 +2401,7 @@ The WIF should remain secret, just like your `passphrase` and `private key`.
 ::: tab javascript
 
 ```js
-identities.wif.fromPassphrase('this is a top secret passphrase')
+identities.wif.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -2348,7 +2457,7 @@ privateKey, _ := crypto.PrivateKeyFromPassphrase("this is a top secret passphras
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
 const uint8_t wifByte = 0xaa;
-WIF wif = WIF::fromPassphrase(passphrase, wifByte);
+Ark::Crypto::Identities::WIF wif = Ark::Crypto::Identities::WIF::fromPassphrase(passphrase, wifByte);
 ```
 
 :::

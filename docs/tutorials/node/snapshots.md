@@ -2,25 +2,9 @@
 
 Node operators are most likely familiar with creating snapshots of their database and restoring their nodes using a snapshot to lower downtime. In Ark V1, Postgres' native SQL dump was used to create snapshots. Ark V2 has packages to optimize snapshots and increase the ease of use.
 
-## Installation
-
-```bash
-yarn add @arkecosystem/core-snapshots
-```
-
-## Alias
-
-`snapshots`
-
-`snapshots-cli`
-
-## Notable Dependencies
-
-- [msgpack](https://www.notion.so/ceibaweb/Snapshots-6c04269e26bf48e0b16af21e0b37e52c)
-
 ## Summary
 
-The `core-snapshots` and `core-snapshots-cli` packages facilitate the process of creating, verifying, and applying blockchain backups. This suite of packages can be used to create regular database backups in a serialization format understood by all Ark Core nodes.
+The `core-snapshots` package facilitates the process of creating, verifying, and applying blockchain backups. This suite of packages can be used to create regular database backups in a serialization format understood by all Ark Core nodes.
 
 To ensure that snapshots are usable across the network, it is often helpful to establish a common standard of data serialization. If all nodes agree on a single ruleset governing how blockchain data maps into a database representation, it becomes much easier to compare, validate, and verify snapshots created by different nodes. `core-snapshots` offers three such standards, also known as codecs, covering a wide range of use cases:
 
@@ -34,18 +18,7 @@ If you're unsure of which to choose, use the `lite` codec. Generally speaking, i
 
 ## Usage
 
-The `core-snapshots-cli` is a command-line interface designed to help developers automate their backup creation workflow. While the commands themselves can be found in `core-snapshots-cli` [package.json](https://github.com/ArkEcosystem/core/blob/develop/packages/core-snapshots-cli/package.json) file, the source code behind these commands can be found in the `bin/snapshot` [file](https://github.com/ArkEcosystem/core/blob/develop/packages/core-snapshots-cli/bin/snapshot).
-
-The following options are available to all commands:
-
-| Alias | Option            | Default       | Description                                    |
-|-------|-------------------|---------------|------------------------------------------------|
-| -d    | —data             | `~/.ark`      | Destination directory.                         |
-| -c    | —config           | ~/.ark/config | Location of network configuration file.        |
-| -t    | —token            | ark           | Specifies which token data should be exported. |
-| -n    | —network          |               | Network to export.                             |
-|       | —skip-compression | false         | Compress the output using gzip.                |
-|       | —trace            | false         | Log the snapshot process.                      |
+The `@arkecosystem/core` is a command-line interface designed to help node operators and developers automate their backup creation workflow. While the commands themselves can be found with `ark snapshot --help`, the source code behind these commands can be found in the `packages/core/src/commands/snapshot` [file](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/snapshot).
 
 ## Create A Snapshot
 
@@ -53,10 +26,10 @@ Calling the `dump` CLI command prompts your node to create a backup and save it 
 
 ### Creating a new snapshot
 
-To create a snapshot, navigate to the `core-snapshots-cli` package and run the following command:
+To create a snapshot, run the following command:
 
 ```bash
-yarn dump:devnet
+ark snapshot:dump
 ```
 
 The command will generate snapshot files in your configured folder. By default, this folder will be in `~/.local/share/ark-core/NETWORK_NAME/snapshots`. Files names follow the pattern: `{TABLE}.{CODEC}` For example, running `yarn dump:devnet` will create the following files in the folder `~/.local/share/ark-core/devnet/snapshots/0-331985/`:
@@ -67,28 +40,14 @@ The command will generate snapshot files in your configured folder. By default, 
 The codec used can be specified using the `—codec` flag, for example:
 
 ```bash
-yarn dump:devnet --codec ark
+ark snapshot:dump --codec ark
 ```
 
 The folder `0-331985` indicates that the snapshot includes data between block 0 and block 331985.
 
 Using the optional `—start` and `—end` flags will specify a lower and uppers bounds for the snapshot, allowing you to customize your backups to your specific needs.
 
-The following options (`--help`) are available when using the `dump` command:
-
-| Alias | Option            | Default | Description                                     |           
-|-------|-------------------|---------|-------------------------------------------------|
-|       | --blocks=blocks   |         | blocks to append to, correlates to folder name  |
-|       | --codec=codec     |         | codec name, default is msg-lite binary          |
-|       | --config=config   |         | network config                                  |
-|       | --data=data       |         | data directory                                  |
-|       | --end=end         | -1      | end network height to export                    |
-|       | --network=network |         | token network                                   |
-|       | --skipCompression |         | skip gzip compression                           |
-|       | --start=start     | -1      | start network height to export                  |
-|       | --token=token     | ark     | token name                                      |
-|       | --trace           |         | dumps generated queries and settings to console |
-|       | --help            |         | show all available options                      |
+> Click [here](/guidebook/core/cli.md#snapshot-dump) to see the flags that can be added to the `ark snapshot:dump` command at runtime or type `ark snapshot:dump --help`.
 
 ### Append Data to an Existing Snapshot
 
@@ -97,7 +56,7 @@ Appending data to existing snapshots can help manage snapshot size and improve s
 To use the `--blocks` flag, provide the `0-331985` blocks number or folder name as an argument:
 
 ```bash
-yarn dump:devnet --blocks 0-331985
+ark snapshot:dump --blocks 0-331985
 ```
 
 Note that all appends create new backup folders and leave the original snapshot intact. To preserve hard disk space, remove old backups if you are sure your appended snapshot is valid.
@@ -111,46 +70,32 @@ Restoring new snapshots **should not be done while your node is still running**,
 Snapshot filename must be specified:
 
 ```bash
-yarn restore:devnet --blocks 0-331985
+ark snapshot:restore --blocks 0-331985
 ```
 
 If you want to restore from block 1, e.g., empty database first, you should run the yarn truncate:NETWORK_NAME command.
 
 ```bash
-yarn truncate:devnet
+ark snapshot:truncate
 ```
 
 Alternatively, add the `—truncate` flag to the `restore` command to truncate and restore with one command:
 
 ```bash
-yarn restore:devnet --blocks 0-331985 --truncate
+ark snapshot:restore --blocks 0-331985 --truncate
 ```
 
 By default, the block height is set to last finished round (blocks are deleted at the end). If you have more snapshots files following each other, then you can disable this behavior with the `--skip-revert-round` flag. If this flag is present, block height will not be reverted at the end of restore to last completed round.
 
-If you want to do additional `crypto.verify` check for each block and transaction a flag `--signature-verify` can be added to the restore command
+If you want to do additional `crypto.verify` check for each block and transaction a flag `--signatureVerify` can be added to the restore command
 
 ```bash
-yarn restore:devnet --blocks 0-331985 --truncate --signature-verify
+ark snapshot:restore --blocks 0-331985 --truncate --signatureVerify
 ```
 
 Please note that this will increase the restore time drastically.
 
-The following options (`--help`) can be added to the `restore` command at runtime:
-
-| Alias | Option              | Default | Description                                                   |
-|-------|---------------------|---------|---------------------------------------------------------------|
-|       | --blocks=blocks     |         | (required) blocks to import, corelates to folder name         |
-|       | --codec=codec       |         | codec name, default is msg-lite binary                        |
-|       | --config=config     |         | network config                                                |
-|       | --data=data         |         | data directory                                                |
-|       | --network=network   |         | token network                                                 |
-|       | --signatureVerify   |         | signature verification                                        |
-|       | --skipCompression   |         | skip gzip compression                                         |
-|       | --skipRestartRound  |         | skip revert to current round                                  |
-|       | --token=token       | ark     | token name                                                    |
-|       | --trace             |         | dumps generated queries and settings to console               |
-|       | --truncate          |         | empty all tables before running import                        |
+> Click [here](/guidebook/core/cli.md#snapshot-restore) to see the flags that can be added to the `ark snapshot:restore` command at runtime or type `ark snapshot:restore --help`.
 
 ## Verify Existing Snapshot
 
@@ -159,16 +104,18 @@ Verifying a snapshot with the `verify` command involves running checks on a snap
 Please note that the `verify` command does not interact with the database in any way. It is therefore safe, and a good idea, to verify all snapshots before importing them into your Ark Core node.
 
 ```bash
-yarn verify:devnet --blocks 0-331985
+ark snapshot:verify --blocks 0-331985
 ```
 
 You can also verify the chaining process and skip signature verification with `--skip-sign-verify` option.
 
 ```bash
-yarn verify:devnet --blocks 0-331985 --skip-sign-verify
+ark snapshot:verify --blocks 0-331985 --skip-sign-verify
 ```
 
 Note that database verification is run by default whenever a node boots up. Although this procedure ensures network consistency, importing an invalid snapshot will increase the amount of time it takes your node to sync with the network. Trust, but verify — even with your snapshots.
+
+> Click [here](/guidebook/core/cli.md#snapshot-verify) to see the flags that can be added to the `ark snapshot:verify` command at runtime or type `ark snapshot:verify --help`.
 
 ## Performing a Rollback
 
@@ -177,7 +124,7 @@ The `rollback` command can be used to roll your blockchain database back to a sp
 The following command will rollback the chain to block height of 350000:
 
 ```bash
-yarn rollback:devnet --height 350000
+ark snapshot:rollback --height 350000
 ```
 
 If the `--height` argument is not set, the command will rollback the chain to the last completed round.
@@ -185,6 +132,8 @@ If the `--height` argument is not set, the command will rollback the chain to 
 Rollback command also makes a backup of forged transactions, ensuring that no local history is accidentally deleted in a rollback. Transactions are stored next to the snapshot files (in `~/.local/share/ark-core/NETWORK_NAME/snapshots/`). The file is named `rollbackTransactionBackup.startBlockHeight.endBlockHeight.json`.
 
 For example: `rollbackTransactionBackup.53001.54978.json` contains transactions from block 53001 to block 54978.
+
+> Click [here](/guidebook/core/cli.md#snapshot-rollback) to see the flags that can be added to the `ark snapshot:rollback` command at runtime or type `ark snapshot:rollback --help`.
 
 ## Implementation
 

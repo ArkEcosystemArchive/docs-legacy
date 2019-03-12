@@ -32,11 +32,11 @@ Go to `config/packages/ark.yml` and fill out your configuration similar to this.
 
 ```yaml
 ark:
-  protocol: 'http'
-  ip: 'your-node-ip'
+  protocol: "http"
+  ip: "your-node-ip"
   port: 4001
-  nethash: '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988'
-  version: '1.0.1'
+  nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988"
+  version: "1.0.1"
   networkAddress: 0x17 // or 0x1E for devnet
 ```
 
@@ -58,9 +58,9 @@ class CoolStuffController extends Controller
      */
     public function index()
     {
-        $peers = $this->container->get('ark.client')->api('Peer')->peers();
+        $wallets = $this->container->get('ark.client')->api('Wallets')->all();
 
-        return new Response($peers['peers']);
+        return new Response($wallets);
     }
 }
 ```

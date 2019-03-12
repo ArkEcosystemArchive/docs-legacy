@@ -30,11 +30,9 @@
         "highlight.js": "^9.13.1",
         "nprogress": "^0.2.0",
         "sweetalert": "^2.1.0",
-        "vuepress": "^1.0.0-alpha.30"
-    },
-    "dependencies": {
         "vue": "^2.5.21",
         "vue-tabs-component": "^1.5.0",
+        "vuepress": "^1.0.0-alpha.44",
         "vuepress-plugin-tabs": "^0.2.0"
     }
 }

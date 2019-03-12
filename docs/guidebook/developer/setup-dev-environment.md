@@ -6,14 +6,14 @@ The best means of getting started with Ark development is to spin up your local 
 
 The following development tools need to be installed on your machine to develop an application using Ark Core:
 
-- [NodeJS.](https://nodejs.org/en/) As Ark Core is written exclusively in NodeJS, the server-side framework for JavaScript, installing Node is a necessity for core development.
-  
+- [NodeJS](https://nodejs.org/en/) As Ark Core is written exclusively in NodeJS, the server-side framework for JavaScript, installing Node is a necessity for core development.
+
 - [Git](https://git-scm.com/). As the most popular version control software in existence, Git is a staple of many developer workflows, and Ark is no exception. Downloading Git will allow you to download the latest version of Ark Core, as well as update your local copy of Core to incorporate the latest code changes as they are released.
-  
+
 - [Docker](https://www.docker.com/). Docker is a container management tool that's rapidly becoming the industry standard. If you are unfamiliar with containers or why managing them is important, fear not: when you install Ark Core, a robust Docker setup is provided for you out of the box. However, to use that setup, you are going to need a Docker installation on your machine already.
-  
+
 - [Lerna](https://lernajs.io/). In Greek mythology, Lerna was the home of the hydra, a fearsome beast with many heads. In JavaScript land, Lerna is a library used to tackle JavaScript projects with many packages. With Lerna installed as a **global** dependency, you are empowered to be fearless in the face of large JavaScript projects with many moving parts — including Ark Core.
-  
+
 - [Yarn](https://yarnpkg.com/en/). Yarn is a package manager that seeks to build upon the foundation of Node's npm. Although yarn is not a strict requirement, in many cases it works faster and more elegantly than npm. Most Ark developers use yarn, and as such, you will see `yarn` commands often used throughout our documentation.
 
 ## Spinning Up Your First Testnet
@@ -46,79 +46,85 @@ git clone git@github.com:ArkEcosystem/core.git
 
 This last command, `yarn full:testnet`, is where the magic happens. Let us do a quick walkthrough of what happens when this command is run:
 
-1. The `full:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env ARK_ENV=test ./bin/ark start --config ./lib/config/testnet --network testnet --network-start`
+1. The `full:testnet` command is run within `core`, which as of the time of writing executes the following command in `npm`: `cross-env CORE_PATH_CONFIG=./bin/config/testnet CORE_ENV=test yarn ark core:run --networkStart`
 
-2. As seen in the previous step, the `./bin/ark` file is called with the `start` command. That command looks like this:
+2. As seen in the previous step, the `./bin/run` file is called with the `core:run` command. That command looks like this:
 
-```js
-app
-  .command('start')
-  .description('start a relay node and the forger')
-  .option('-d, --data <data>', 'data directory', '~/.ark')
-  .option('-c, --config <config>', 'core config', '~/.ark/config')
-  .option('-t, --token <token>', 'token name', 'ark')
-  .option('-n, --network <network>', 'token network')
-  .option('-b, --bip38 <bip38>', 'forger bip38')
-  .option('-p, --password <password>', 'forger password')
-  .option('--network-start', 'force genesis network start', false)
-  .action(async (options) => require('../lib/start-relay-and-forger')(options))
-```
+::: tip
+Take a look at the following pieces of code to get a better understand of what commands are executed under the hood and what flags can be used to manipulate behaviour and pass in data.
 
-3. Based on this command config and the options passed by the `full:testnet` command, we can see that the network sets the `config` directory to `lib/config/testnet`, the `network` option to `testnet`, and the `network-start` option to `true`, which starts our testnet from scratch with a new genesis block.
+- [core:run](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/core/run.ts)
+- [BaseCommand](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/command.ts#L20-L61)
+:::
 
-4. The exported function from `lib/start-relay-and-forger` is loaded and called with the above options to start the network. Let us look at the function exported by `start-relay-and-forger.js`:
-
-const container = require('@arkecosystem/core-container')
+3. Based on the command config and the options passed by the `full:testnet` command as seen in the links above, we can see that the network sets the `config` directory to `bin/config/testnet` and the `networkStart` option to `true`, which starts our testnet from scratch with a new genesis block.
 
 ```js
-/**
-  * Start a node.
-  * @param  {Object} options
-  * @return {void}
-  */
-module.exports = async (options) => {
-  await container.setUp(options, {
-    options: {
-      '@arkecosystem/core-p2p': {
-        networkStart: options.networkStart
-      },
-      '@arkecosystem/core-blockchain': {
-        networkStart: options.networkStart
-      },
-      '@arkecosystem/core-forger': {
-        bip38: options.bip38,
-        address: options.address,
-        password: options.password
-      }
+import { app } from "@arkecosystem/core-container";
+import { CommandFlags } from "../../types";
+import { BaseCommand } from "../command";
+
+export class RunCommand extends BaseCommand {
+    public static description: string = "Run the core (without pm2)";
+
+    public static flags: CommandFlags = {
+        ...BaseCommand.flagsNetwork,
+        ...BaseCommand.flagsBehaviour,
+        ...BaseCommand.flagsForger,
+    };
+
+    public async run(): Promise<void> {
+        const { flags } = await this.parseWithNetwork(RunCommand);
+
+        await this.buildApplication(app, flags, {
+            options: {
+                "@arkecosystem/core-p2p": this.buildPeerOptions(flags),
+                "@arkecosystem/core-blockchain": {
+                    networkStart: flags.networkStart,
+                },
+                "@arkecosystem/core-forger": await this.buildBIP38(flags),
+            },
+        });
     }
-  })
 }
 ```
 
 5. We'll delve more into the inner mechanics of `core-container` [here](/guidebook/core/node-lifecycle.html#bootstrapping-our-container). For now, we are going to take a brief look at the `setUp` method, found in the `core-container` package:
 
 ```js
-/**
-  * Set up the container.
-  * @param  {Object} variables
-  * @param  {Object} options
-  * @return {void}
-  */
-async setUp (variables, options = {}) {
-  this.env = new Environment(variables)
-  this.env.setUp()
+public async setUp(version: string, variables: any, options: any = {}) {
+    // Register any exit signal handling
+    this.registerExitHandler(["SIGINT", "exit"]);
 
-  if (options.skipPlugins) {
-    return
-  }
+    // Set options and variables
+    this.options = options;
+    this.variables = variables;
 
-  this.plugins = new PluginRegistrar(this, options)
-  await this.plugins.setUp()
+    this.setVersion(version);
+
+    // Register the environment variables
+    const environment = new Environment(variables);
+    environment.setUp();
+
+    // Mainly used for testing environments!
+    if (options.skipPlugins) {
+        this.isReady = true;
+        return;
+    }
+
+    // Setup the configuration
+    this.config = await configManager.setUp(variables);
+
+    // Setup the plugins
+    this.plugins = new PluginRegistrar(this, options);
+    await this.plugins.setUp();
+
+    this.isReady = true;
 }
 ```
 
-1. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key of the second argument to `container.setUp`. You can find the installed plugins in the `plugins.js` file located in the `core` package at `lib/config/testnet`.
+1. After setting up environment variables based on the passed-in configuration, all Core plugins are loaded using the `options` key of the second argument to `container.setUp`. You can find the installed plugins in the `plugins.js` file located in the `core` package at `bin/config/testnet`.
 
-This last step is where the meat-and-potatoes of ARK Core is loaded. During this step, the Postgres database is set up, all ARK-specific tables and fields are migrated, the genesis block is created, 51 forging delegates are created and set up to forge blocks — all the blockchain goodness you would expect from of a fully-formed testnet.
+This last step is where the meat-and-potatoes of Ark Core is loaded. During this step, the Postgres database is set up, all Ark-specific tables and fields are migrated, the genesis block is created, 51 forging delegates are created and set up to forge blocks — all the blockchain goodness you would expect from of a fully-formed testnet.
 
 A full walkthrough of the node setUp process will be accessible in the Guidebook shortly, and further posts in the tutorials will guide you through some of the most common functions you will want to perform with your testnet. However, by following the steps above, you will be up and running with your very own network.

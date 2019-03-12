@@ -48,7 +48,7 @@ export default function curl(cmd) {
 
     let state = ''
 
-    args.forEach(function(arg) {
+    args.forEach(function (arg) {
         switch (true) {
             case isURL(arg):
                 result.url = arg

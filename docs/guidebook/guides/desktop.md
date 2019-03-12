@@ -6,95 +6,157 @@ title: "Ark Desktop Wallet v2.x.x"
 
 ![Ark Desktop](./assets/desktop/banner.png)
 
-[![Build Status](https://travis-ci.org/ArkEcosystem/desktop-wallet.svg?branch=master)](https://travis-ci.org/ArkEcosystem/desktop-wallet)
-[![Github Latest Release](https://img.shields.io/github/release/ArkEcosystem/desktop-wallet.svg)](https://github.com/ArkEcosystem/desktop-wallet/releases/latest)
-[![Github Downloads](https://img.shields.io/github/downloads/ArkEcosystem/desktop-wallet/latest/total.svg?logo=github)](https://github.com/ArkEcosystem/desktop-wallet/releases/latest)
-[![Gitter Room](https://img.shields.io/gitter/room/ark-developers/Lobby.svg?logo=gitter-white&colorB=e53467)](https://gitter.im/ark-developers/Lobby)
+[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/desktop-wallet)](https://circleci.com/gh/ArkEcosystem/desktop-wallet)
+[![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/desktop-wallet)](https://github.com/ArkEcosystem/desktop-wallet/releases)
+[![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-### Pinned: Help us with translations
-Collaborate with other translators on [our Transifex project](https://www.transifex.com/ark-ecosystem/ark-desktop-wallet/) and help us get wallet translated in other languages.
+## Download
+[Latest Release](https://github.com/ArkEcosystem/ark-desktop/releases)
 
-### More information
-[Detailed overview of the Desktop Wallet](/tutorials/usage-guides/how-to-use-ark-desktop-wallet.md)
+## Installing via Package Managers
 
-## Build
+### Arch Linux
 
-You will need to use
- - [Git](https://git-scm.org)
- - [NodeJS](https://nodejs.org) 9 LTS
- - [yarn](https://yarnpkg.com)
+Install via [AUR](https://aur.archlinux.org/packages/ark-desktop):
 
-If you have NodeJS installed, the best way to install yarn is by running
-```bash
-npm install --global yarn
-```
+> Manjaro
 
-### Requirements
-There are several tools required to successfully build the application. Installation details vary widely across different platforms.
-
-#### Linux Debian/Ubuntu
-```bash
-sudo apt-get install build-essential libudev-dev libusb-1.0-0-dev
+```shell
+pamac build ark-desktop
 ```
 
 ### Mac OS X
-```bash
-xcode-select --install
+
+Install via [Homebrew](https://brew.sh/):
+
+```shell
+brew cask install ark-desktop-wallet
 ```
 
-### Windows
-[Python 2.7](https://www.python.org/download/releases/2.7/)
+## Translations
 
-[Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) **Build Tools**
+Translations are part of our [ARK Development and Security Bounty Program](https://blog.ark.io/ark-development-and-security-bounty-program-a95122d06879).
 
-## Cloning, Installing and Running
-```bash
-git clone https://github.com/ArkEcosystem/desktop-wallet
-cd desktop-wallet
+Full translations are considered to be `Tier 3`, while grammar fixes, typos, etc. are considered to be `Tier 6`.
+
+<details><summary>Full translations should involve 5 tasks</summary>
+
+ - Create a pull request for the language you are going to translate. If you have doubts about something, use English to explain them.
+ - Translate the textual content of the application, using the [English language file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) as the reference. To do that, a new file, with the language locale code should be created. The name of the file should be a valid [RFC 5646](https://tools.ietf.org/html/rfc5646) and should be located at `src/renderer/i18n/locales/LANGUAGE.js`. Thanks to [vue-i18n-extract](https://github.com/pixari/vue-i18n-extract), it is possible to execute `yarn i18n src/renderer/i18n/locales/LANGUAGE.js` to find suggestions of missing translations.
+ - Add the language to the [English language file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) at the `LANGUAGES` key.
+ - Update the [date and time formats file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/date-time-formats.js) to include the short and long format that are used commonly by native speakers.
+ - Update the [number formats file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/number-formats.js) to include the preferred way of displaying currencies used commonly by native speakers.
+ - Add the language at the `I18N.enabledLocales` array at the [main configuration file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/config/index.js). This step is necessary to make the language would not be available.
+ - Execute the application. Go to the [ development section](https://github.com/ArkEcosystem/desktop-wallet#development) to learn how to install the requirements and execute it.
+
+</details>
+
+## Development
+
+### Requirements
+
+#### Ubuntu
+In Ubuntu the development files of `libudev` are necessary:
+```
+sudo apt-get install libudev-dev libusb-1.0-0-dev
+```
+
+#### Windows
+- Python 2.7
+- Visual Studio 2017
+
+#### Node 11
+To download, head over to [here](https://nodejs.org/en/) and download Node 11.
+
+If you already have npm installed, you can run
+```
+npm install -g n
+sudo n 11
+```
+
+#### Yarn
+Install the Yarn dependency manager
+```
+npm install -g yarn
+```
+
+### Commands
+
+<details><summary>List of commands</summary>
+
+``` bash
+# Install dependencies
 yarn install
+
+# Execute the application. Making changes in the code, updates the application (hot reloading).
 yarn dev
+
+# Lint all JS/Vue files in the `src` and `__tests__`
+yarn lint
+
+# Lint, and fix, all JS/Vue files in `src` and `__tests__`
+yarn lint:fix
+
+# Check that all dependencies are used
+yarn depcheck
+
+# Collect the code and produce a compressed file
+yarn pack
+
+# Build electron application for production (Current OS)
+yarn build
+
+# Build electron application for production (Windows)
+yarn build:win
+
+# Build electron application for production (Mac)
+yarn build:mac
+
+# Build electron application for production (Linux)
+yarn build:linux
+
+# Run unit and end-to-end tests
+yarn test
+
+# Run unit tests
+yarn test:unit
+
+# Run unit tests and generate and display the coverage report
+yarn test:unit:coverage
+
+# Run unit tests and watch for changes to re-run the tests
+yarn test:unit:watch
+
+# Run end-to-end tests, without building the application
+yarn test:e2e
+
+# Build the application and run end-to-end tests
+yarn test:e2e:full
+
+# List what translations are missing or unused on a specific language. It could capture suggestions that are not accurate
+yarn i18n 'src/renderer/i18n/locales/LANGUAGE.js'
+
+# List what English messages are missing or unused (English is the default language)
+yarn i18n:en-US
+
+# List what translations are missing or unused on every language
+yarn i18n:all
 ```
 
-If you change branch, rebase code, fail an install or otherwise destabilize a lot of the file structure abruptly, *especially when `yarn dev` is running*, you may have to `rm -rf node_modules && yarn install` before running `yarn dev` again.
-
-The above commands remove the `node_modules` installed with `yarn install`, then reinstalls the dependencies with `yarn install` and runs the development environment again with `yarn dev`.
-
-In case that there are still errors which you cannot fix with the above commands when installing/building the application, please [submit a bug report at the Ark Desktop Wallet Github repo](https://github.com/ArkEcosystem/desktop-wallet/issues/new?template=Bug_report.md).
-
-## Developing
-
-The Ark Desktop Wallet uses [Electron](https://electronjs.org/), [VueJS](https://vuejs.org/), [TailwindCSS](https://tailwindcss.com/).
-
-Making changes to Vue Components will hot-reload that component only; getting feedback on changes made is very fast.
-
-### Notes
- - Webpack configurations are found in `.electron-vue`
- - Global CSS colors and classes can be found in `src/renderer/styles`
- - Tailwind produces global classes for most CSS attributes in `tailwind.js`
- - PostCSS can be used directly in `<style lang="postcss"></style>`
- - Third party components are located in `src/renderer/components/utils`
- - Vuex is used to persist stored data with `this.$store.dispatch()` events
- - Vue Router is in charge of displaying `src/renderer/pages` when `this.$router.push({...}) occurs`
-
-## Contributing
-
-* Read [contributing](../contribution-guidelines/)
-* Engage with other users and developers on [Slack](https://ark.io/slack/) or [Discord](https://discord.gg/SUXMw8)
-* Join to our [gitter](https://gitter.im/ark-developers/Lobby)
-
-## Authors
- - Alex Barnsley <Alex@ARK.io>
- - ItsANameToo <itsanametoo@protonmail.com>
- - Juan Martín <Juan@ARK.io>
- - Lúcio Rubens <Lucio@ARK.io>
- - Oleg Shcherbyna <Oleg@ark.io>
- - Mario Vega <Mario@ark.io>
- - [Various Community Contributors](https://github.com/ArkEcosystem/desktop-wallet/graphs/contributors)
-
-## License
-
-The Ark Desktop Wallet is licensed under the MIT License - see the [LICENSE](/LICENSE.md) file for details.
+</details>
 
 ## Security
 
-If you discover a security vulnerability within this project, please send an e-mail to <security@ark.io>. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+
+## Credits
+
+- [Alex Barnsley](https://github.com/alexbarnsley)
+- [ItsANameToo](https://github.com/ItsANameToo)
+- [Juan A. Martín](https://github.com/j-a-m-l)
+- [Lúcio Rubens](https://github.com/luciorubeens)
+- [Mario Vega](https://github.com/mvega3)
+
+## License
+
+[MIT](LICENSE) © [ArkEcosystem](https://ark.io)

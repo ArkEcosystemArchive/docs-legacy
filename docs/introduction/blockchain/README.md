@@ -1,7 +1,3 @@
----
-title: Introduction to Blockchain
----
-
 # Introduction to Blockchain
 
-Many of the challenges blockchain technology faces in today's business landscape are not in technology, but in communication. In this section, we approach blockchain from the ground up, starting from core principles and outlining cases where your business needs could be well-serviced by a custom blockchain.
+Although blockchain technology is not particularly complicated or brand new, some people struggle to understand the core concepts. This is mainly due to the distributed nature, wide variety of different technologies and the lack of formal courses on the subject. In this chapter, we will provide a beginner-friendly introduction to many different blockchain-related subjects.

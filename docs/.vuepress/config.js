@@ -1,14 +1,7 @@
-//const buildSection = require('./utils/buildSidebar')
-
-const path = require("path");
-const fs = require("fs");
-const DOCSPATH = "docs";
-
-
 const config = {
   title: "Ark Ecosystem Documentation",
   description: "The central knowledge hub for all things Ark Ecosystem",
-  plugins: [ 'tabs' ],
+  plugins: ['tabs'],
   head: [
     [
       "link",
@@ -26,6 +19,7 @@ const config = {
     editLinkText: "Help us improve this page!",
     docsDir: "docs",
     lastUpdated: true,
+    activeHeaderLinks: true,
     nav: [{
       text: 'Home',
       link: '/'
@@ -35,7 +29,7 @@ const config = {
     }, {
       text: 'Public API',
       link: '/api/public/v2/'
-    },{
+    }, {
       text: 'SDK Overview',
       link: '/SDK/'
     }],
@@ -49,7 +43,7 @@ const config = {
       "/tutorials/": require('./sidebars/tutorials'),
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
-      "/bridgechains/": require('./sidebars/bridgechains'),
+      "/releases/": require('./sidebars/releases'),
       "/security/": require('./sidebars/security'),
       "/archive/": require('./sidebars/archive'),
       "/": require('./sidebars/main'),

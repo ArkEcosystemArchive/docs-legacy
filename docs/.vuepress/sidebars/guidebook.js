@@ -1,91 +1,106 @@
 module.exports = [
-  ["/", "Back to Table of Contents"],
-  ["/guidebook/", "Guidebook Home"],
-  {
-    title: "Getting Started",
-    collapsable: true,
-    children: [
-      "/guidebook/developer/setup-dev-environment.md",
-      "/guidebook/developer/monitor-blockchain.md",
-      "/guidebook/developer/send-transaction.md",
-      "/guidebook/developer/write-a-plugin.md",
-      "/guidebook/developer/tester-cli-transaction.md"
-    ]
-  },
-  {
-    title: "Core",
-    collapsable: true,
-    children: [
-      "/guidebook/core/",
-      "/guidebook/core/node-lifecycle",
-      "/guidebook/core/transaction-lifecycle",
-      "/guidebook/core/configuration",
-      "/guidebook/core/development",
-      "/guidebook/core/docker",
-      "/guidebook/core/events",
-      "/guidebook/core/logging",
-      "/guidebook/core/testing",
-      "/guidebook/core/webhooks",
-      "/guidebook/core/data-models"
-    ]
-  },
-  {
-    title: "Core Plugins",
-    collapsable: true,
-    children: [
-      "/guidebook/core/plugins/",
-      "/guidebook/core/plugins/core",
-      "/guidebook/core/plugins/core-api",
-      "/guidebook/core/plugins/core-blockchain",
-      "/guidebook/core/plugins/core-config",
-      "/guidebook/core/plugins/core-container",
-      "/guidebook/core/plugins/core-database",
-      "/guidebook/core/plugins/core-debugger-cli",
-      "/guidebook/core/plugins/core-deployer",
-      "/guidebook/core/plugins/core-elasticsearch",
-      "/guidebook/core/plugins/core-error-tracker-bugsnag",
-      "/guidebook/core/plugins/core-error-tracker-sentry",
-      "/guidebook/core/plugins/core-event-emitter",
-      "/guidebook/core/plugins/core-forger",
-      "/guidebook/core/plugins/core-graphql",
-      "/guidebook/core/plugins/core-http-utils",
-      "/guidebook/core/plugins/core-logger",
-      "/guidebook/core/plugins/core-logger-winston",
-      "/guidebook/core/plugins/core-p2p",
-      "/guidebook/core/plugins/core-test-utils",
-      "/guidebook/core/plugins/core-tester-cli",
-      "/guidebook/core/plugins/core-transaction-pool",
-      "/guidebook/core/plugins/core-utils",
-      "/guidebook/core/plugins/core-vote-report",
-      "/guidebook/core/plugins/core-webhooks",
-      "/guidebook/core/plugins/crypto"
-    ]
-  },
-  {
-    title: "Other Products",
-    collapsable: true,
-    children: [
-      "/guidebook/guides/",
-      "/guidebook/guides/mobile",
-      "/guidebook/guides/desktop",
-      "/guidebook/guides/explorer",
-      "/guidebook/guides/core-commander",
-      "/guidebook/guides/pay",
-    ]
-  },
-  {
-    title: "Contribution Guidelines",
-    collapsable: true,
-    children: [
-      "/guidebook/contribution-guidelines/",
-      "/guidebook/contribution-guidelines/clean-code-and-tests",
-      "/guidebook/contribution-guidelines/contributing",
-      "/guidebook/contribution-guidelines/writing-documentation",
-      "/guidebook/contribution-guidelines/git-branch-guidelines",
-      "/guidebook/contribution-guidelines/git-commit-guidelines",
-      "/guidebook/contribution-guidelines/project-structuring",
-      "/guidebook/contribution-guidelines/releases-and-versioning",
-      "/guidebook/contribution-guidelines/repository-management"
-    ]
-  }
+    ["/", "Back to Table of Contents"],
+    ["/guidebook/", "Guidebook Home"],
+    {
+        title: "Getting Started",
+        collapsable: true,
+        children: [
+            "/guidebook/developer/setup-dev-environment.md",
+            "/guidebook/developer/monitor-blockchain.md",
+            "/guidebook/developer/send-transaction.md",
+            "/guidebook/developer/write-a-plugin.md",
+            "/guidebook/developer/tester-cli-transaction.md"
+        ]
+    },
+    {
+        title: "Core",
+        collapsable: true,
+        children: [
+            "/guidebook/core/",
+            "/guidebook/core/node-lifecycle",
+            "/guidebook/core/transaction-lifecycle",
+            "/guidebook/core/cli",
+            "/guidebook/core/configuration",
+            "/guidebook/core/development",
+            "/guidebook/core/docker",
+            "/guidebook/core/events",
+            "/guidebook/core/logging",
+            "/guidebook/core/testing",
+            "/guidebook/core/webhooks",
+            "/guidebook/core/data-models",
+            "/guidebook/core/source-code"
+        ]
+    },
+    {
+        title: "Core Plugins",
+        collapsable: true,
+        children: [
+            '/guidebook/core/plugins/',
+            {
+                title: 'Required',
+                children: [
+                    '/guidebook/core/plugins/required/',
+                    '/guidebook/core/plugins/required/core.md',
+                    '/guidebook/core/plugins/required/core-blockchain.md',
+                    '/guidebook/core/plugins/required/core-container.md',
+                    '/guidebook/core/plugins/required/core-database.md',
+                    '/guidebook/core/plugins/required/core-event-emitter.md',
+                    '/guidebook/core/plugins/required/core-forger.md',
+                    '/guidebook/core/plugins/required/core-http-utils.md',
+                    '/guidebook/core/plugins/required/core-logger.md',
+                    '/guidebook/core/plugins/required/core-p2p.md',
+                    '/guidebook/core/plugins/required/core-transaction-pool.md',
+                    '/guidebook/core/plugins/required/core-utils.md',
+                    '/guidebook/core/plugins/required/crypto.md',
+                ]
+            }, {
+                title: 'Optional',
+                children: [
+                    '/guidebook/core/plugins/optional/',
+                    '/guidebook/core/plugins/optional/core-api.md',
+                    '/guidebook/core/plugins/optional/core-elasticsearch.md',
+                    '/guidebook/core/plugins/optional/core-error-tracker-bugsnag.md',
+                    '/guidebook/core/plugins/optional/core-error-tracker-sentry.md',
+                    '/guidebook/core/plugins/optional/core-json-rpc.md',
+                    '/guidebook/core/plugins/optional/core-tester-cli.md',
+                    '/guidebook/core/plugins/optional/core-vote-report.md',
+                    '/guidebook/core/plugins/optional/core-webhooks.md',
+                ]
+            }, {
+                title: 'Deprecated',
+                children: [
+                    '/guidebook/core/plugins/deprecated/',
+                    '/guidebook/core/plugins/deprecated/core-debugger-cli.md',
+                    '/guidebook/core/plugins/deprecated/core-graphql.md',
+                    '/guidebook/core/plugins/deprecated/core-logger-winston.md',
+                ]
+            }
+        ]
+    },
+    {
+        title: "Other Products",
+        collapsable: true,
+        children: [
+            "/guidebook/guides/",
+            "/guidebook/guides/mobile",
+            "/guidebook/guides/desktop",
+            "/guidebook/guides/explorer",
+            "/guidebook/guides/pay",
+        ]
+    },
+    {
+        title: "Contribution Guidelines",
+        collapsable: true,
+        children: [
+            "/guidebook/contribution-guidelines/",
+            "/guidebook/contribution-guidelines/clean-code-and-tests",
+            "/guidebook/contribution-guidelines/contributing",
+            "/guidebook/contribution-guidelines/writing-documentation",
+            "/guidebook/contribution-guidelines/git-branch-guidelines",
+            "/guidebook/contribution-guidelines/git-commit-guidelines",
+            "/guidebook/contribution-guidelines/project-structuring",
+            "/guidebook/contribution-guidelines/releases-and-versioning",
+            "/guidebook/contribution-guidelines/repository-management"
+        ]
+    }
 ];

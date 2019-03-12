@@ -49,6 +49,8 @@ Please ensure that the tests are passing when submitting a pull request. If you'
 - [ark-ts](https://github.com/ArkEcosystem/ark-ts)
 - [core](https://github.com/ArkEcosystem/core)
 - [core-commander](https://github.com/ArkEcosystem/core-commander)
+- [cpp-client](https://github.com/ArkEcosystem/cpp-client)
+- [cpp-crypto](https://github.com/ArkEcosystem/cpp-crypto)
 - [deployer](https://github.com/ArkEcosystem/deployer)
 - [desktop-wallet](https://github.com/ArkEcosystem/desktop-wallet)
 - [docs](https://github.com/ArkEcosystem/docs)

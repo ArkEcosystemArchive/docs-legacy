@@ -13,7 +13,7 @@ Where possible, these discrepancies are noted below. The `transformers` director
 Blocks are the core unit of any given blockchain. In ARK, blocks contain a group of transactions and are signed by a delegate to validate their authenticity.
 
 - **id**
-- **version** t*he version of ARK active on the network when the block was forged*
+- **version** *the version of ARK active on the network when the block was forged*
 - **height** *the height of the block*
 - **previous** *the ID of the previous block in the chain*
 - **forged**:

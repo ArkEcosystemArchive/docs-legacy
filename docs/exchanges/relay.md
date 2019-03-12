@@ -7,11 +7,8 @@ title: "Installing and configuring a Relay Node"
 
 A Relay Node is a full node in the Ark Network; it maintains a complete copy of the ledger (blockchain). These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
 
-Ark offers an easy to setup solution for running a v2 node using [core-commander](https://github.com/ArkEcosystem/core-commander). The experience is similar to the deprecated v1 [Ark Commander](https://github.com/ArkEcosystem/ARKcommander) and best suited for bare-metal deployments.
 
-`core-commander` only supports Ubuntu (16.04, 18.04) and depends on [PostgreSQL](https://postgresql.org) as the persistent store.
-
-## Hardware Requirements
+## Recommended Hardware Requirements
 
 - 4GB RAM
 - 40GB SSD
@@ -31,7 +28,7 @@ Ark Nodes execute many query intensive operations. The most cost-effective appro
     | webhook    | 4004 | no       | no                 | [reference](/api/webhooks/)               |
     | JSON-RPC   | 8080 | no       | no                 | [reference](/exchanges/json-rpc.html)     |
 
-## Using the official `core-commander` tool
+## Using the official `Installation Script`
 
 On a fresh Ubuntu installation, follow these commands.
 
@@ -52,252 +49,91 @@ sudo adduser username
 sudo usermod -aG sudo username
 ```
 
-### 3. Obtain the Installation Script
+### 3. Switch to the new user
 
-Switch to the new user account and use `git` to obtain the installation script. Git is a required dependency of `core-commander`, as it relies on git to check for updates.
+Switch to the new user account and go to the base directory.
 
 ```bash
 sudo su - username
-git clone https://github.com/ArkEcosystem/core-commander
+cd ~
 ```
 
-### 4. Execute commander.sh using bash
+### 4. Install dependencies and Ark Core
+
+We will use Ark installer script that will install all of the necessary dependencies, Ark Core onto your server and publish configuration files for it. To install essentials run this command.
 
 ```bash
-bash core-commander/commander.sh
+bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
+You will be asked to input your current users password for sudo privileges. Write or paste it and press enter to start installation process.
 
-### 5. Install dependencies
+Process might take a while, don't interrupt it and wait for it to finish.
 
-Let `core-commander` install and update software dependencies. It might request sudo privileges depending on which version of the script you are using.
+### 5. Selecting Ark Core network
+
+Once installation of dependencies and Ark Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+
+After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
+
+#### 6. Configuring Ark Core database
+
+Last step of the Ark Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
 ```bash
-    ___    ____  __ __    ______                   ___    ____
-   /   |  / __ \/ //_/   / ____/___  ________     |__ \  / __ \
-  / /| | / /_/ / ,<     / /   / __ \/ ___/ _ \    __/ / / / / /
- / ___ |/ _, _/ /| |   / /___/ /_/ / /  /  __/   / __/_/ /_/ /
-/_/  |_/_/ |_/_/ |_|   \____/\____/_/   \___/   /____(_)____/
-
-   ______                                          __
-  / ____/___  ____ ___  ____ ___  ____ _____  ____/ /__  _____
- / /   / __ \/ __ `__ \/ __ `__ \/ __ `/ __ \/ __  / _ \/ ___/
-/ /___/ /_/ / / / / / / / / / / / /_/ / / / / /_/ /  __/ /
-\____/\____/_/ /_/ /_/_/ /_/ /_/\__,_/_/ /_/\__,_/\___/_/
-
-===============================================================
-==> Installing system dependencies...
-...
-
-==> Installing node.js & npm...
-...
-
-==> Installed node.js & npm!
-==> Installing Yarn...
-...
-
-==> Installed Yarn!
-==> Installed system dependencies!
-==> Installing program dependencies...
-==> Dependencies [libcairo2-dev ] are not installed.
-==> Installing program dependencies...
-...
-
-==> Program dependencies Installed!
-==> Installing PostgreSQL...
-...
-
-==> Starting PostgreSQL...
-==> Started PostgreSQL!
-==> Installed PostgreSQL!
-==> Installing NTP...
-...
-
-==> Stopping NTP...
-==> Stopped NTP!
-...
-
-==> Starting NTP...
-==> Started NTP!
-==> Installed NTP!
-==> Installed program dependencies!
-==> Installing node.js dependencies...
-==> [pm2 lerna ] are not installed.
-==> Installing node.js dependencies...
-...
-
-==> Installed system updates!
-==> All system dependencies have been installed!
-Press any key to continue
+Would you like to configure the database? [y/N]:
 ```
 
-### 6. Reboot your system
+Press `y` and confirm with `enter`.
 
-Depending on the installed dependencies, a reboot might be required.
+You can input any custom database credentials you want to use or use the one provided below:
 
 ```bash
-...
-==> Checking for system updates...
-...
-
-==> All system dependencies have been installed!
-...
-
-==> A reboot is required to complete the system update. It is recommended to reboot now.
+Enter the database username: ark
+Enter the database password: password
+Enter the database name: ark_mainnet
 ```
 
-If a reboot was required, log back in and run Core Commander with bash again.
+This will create PostgreSQL role and database to be used for storing blockchain data.
+
+#### 7. Starting Ark Relay process
+
+To start Ark relay process and with it synchronization process with Ark blockchain we need to start relay process with our integrated CLI:
 
 ```bash
-bash core-commander/commander.sh
+ark relay:start
 ```
 
-If your repository is not at the current branch's `HEAD`, `core-commander` will inform you that an update is available.
+If the process has started you will get a message:
 
 ```bash
-An update is available for Ark Core, do you want to install it? [Y/n] :
+Starting ark-relay... done
 ```
 
-### 7. Inspect the main console
-
-Afterward, you will be told that your system is up to date and the command console is shown.
-The top two rows display:
-
-| Variable | Description                                                                         |
-|----------|-------------------------------------------------------------------------------------|
-| `core`   | the current `HEAD`                                                                    |
-| `NodeJS` | version of NodeJS uses by the relay node                                            |
-| `PG`     | version of the configured `PostgreSQL` database                                     |
-| `Relay`  | status of the relay service                                                         |
-| `Forger` | status of the forging service; indicates if this relay is configured as a delegate. |
-| `NTP`    | `Network Time Protocol`                                                             |
-| `PG`     | connection status with the `PostgreSQL`                                             |
-
-```bash
-===============================================================
-Core: a71f007f             NodeJS: 10.15.0             PG: 10.6
-===============================================================
-Relay: Off         Forger: Off         NTP:  On         PG:  On
-===============================================================
-A. Manage Ark Core
-R. Manage Relay
-F. Manage Forger
-E. Manage Explorer
-C. Manage Commander
-===============================================================
-M. Miscellaneous
-===============================================================
-L. Show Log
-P. Show Process Monitor
-===============================================================
-H. Show Help
-===============================================================
-X. Exit
-===============================================================
-Please enter your choice:
-```
-
-### 8. Database configuration
-
-Choose `A. Manage Ark Core` to configure the relay node, then `C. Configure Ark Core`. We will now configure the database connection parameters and logging level.
-
-```bash
-===============================================================
-U. Update Ark Core
-P. Uninstall Ark Core
-C. Configure Ark Core
-===============================================================
-L. Configure Log Level
-D. Configure Database
-A. Configure Hosts & Ports
-R. Reset Configuration
-===============================================================
-H. Show Help
-===============================================================
-X. Back to Main Menu
-===============================================================
-```
-
-You will be presented with a selection of networks. `mainnet` is the actual Ark network, `devnet` and `testnet` are used by the core developers and community to develop Ark and test surrounding infrastructure. Choose `1. mainnet` for production use.
-
-```bash
-...
-==> Which network would you like to configure?
-1) mainnet
-2) devnet
-3) testnet
-#?
-```
-
-You will be requested to enter different settings by a series of prompts.
-
-::: warning
-Credentials are not censored in the console, ensure they are not observed nor logged.
+::: tip
+All CLI commands with description can be viewed at [CLI Commands](https://docs.ark.io/guidebook/core/cli.html#available-commands) or by running `ark help` command.
 :::
 
-```bash
-...
-Enter the database host, or press ENTER for the default [localhost]:
-Enter the database port, or press ENTER for the default [5432]:
-Enter the database username, or press ENTER for the default [$USER]:
-Enter the database name, or press ENTER for the default [ark_mainnet]:
-...
+#### 8. Checking to see if everything is working
 
-==> Which log level would you like to configure?
-1) debug
-2) info
-3) warning
-4) error
-```
-
-### 9. Creating a database
-
-`core-commander` will attempt to create the specified user and database. You may be prompted if the user or database already exists. Decline to overwrite existing users or databases.
+Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands 
 
 ```bash
-==> Creating Database...
-The database user $USER already exists, do you want to overwrite it? [y/N] : N
-createdb: database creation failed: ERROR:  database "ark_mainnet" already exists
-==> Created Database!
+ark relay:log
 ```
-
-### 10. Final check
-
-`Lerna` will perform a check on old dependencies and remove outdated/unused packages. Afterward, it will prompt you to start the relay node, enter `Y`.
+or
 
 ```bash
-lerna notice cli v3.5.0
-lerna info versioning independent
-lerna info clean removing /home/$USER/ark-core/packages/core-API/node_modules
-lerna info clean removing /home/$USER/ark-core/packages/core-blockchain/node_mod
-...
-
-Ark Core has been configured, would you like to start the relay? [Y/n] :
+pm2 logs
 ```
 
-### 11. Verify status using the main console
-
-Check the node status. Back in the main console, Relay should be set to `On`.
+If the process has started you will see a lot of messages like this (with actual data)
 
 ```bash
-===============================================================
-Core: a71f007f             NodeJS: 10.15.0             PG: 10.6
-===============================================================
-Relay:  On         Forger: Off         NTP:  On         PG:  On
-===============================================================
+[YYYY-DD-MM hh:mm:ss][DEBUG]: Delegate <delegate name> (<public key>) allowed to forge block <#> 👍
 ```
 
-### 12. Monitoring the synchronization process
-
-Monitor the sync progress using the log stream. Enter `R. Manage Relay`, and then `L. Show Log`
-
-```bash
-1|ark-core-relay  | [2019-01-08 09:37:40][INFO]                       : Starting Round 898 🕊
-1|ark-core-relay  | [2019-01-08 09:37:40][INFO]                       : Saving round 898
-```
-
-Each round represents ~51 blocks synced.
 ::: info
-A single round consists of 51 delegates each forging a single block. Sometimes a delegate misses a block, and thus around contains < 51 blocks on average.
+Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 51 delegates each forging a single block.
 :::
 
 ## Generic Linux installation

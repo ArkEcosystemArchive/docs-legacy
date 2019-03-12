@@ -71,6 +71,6 @@ rm -rf ~/core-commander
 
 ## Reporting Problems
 
-Due to 2.2 being distributed and managed in a completely different way then 2.1 there might be cases where unexpected issues show up.
+Due to 2.2 being distributed and managed in a completely different way than 2.1 there might be cases where unexpected issues show up.
 
 If you happen to experience any issues please [open an issue](https://github.com/ArkEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.

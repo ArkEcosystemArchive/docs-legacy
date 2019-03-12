@@ -125,6 +125,10 @@ Members of the Ark community volunteer to provide assistance to new users, or wo
 
 The official team; funded by the ICO. Not all Ark founders are officially part of the team.
 
+### Arktoshi
+
+Arktoshi = 0.00000001 ARK
+
 ### BridgeChain
 
 Code forks of the Ark blockchain aiming to be interoperable with Ark.

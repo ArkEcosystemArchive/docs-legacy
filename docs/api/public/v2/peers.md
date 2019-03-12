@@ -18,10 +18,15 @@ GET /api/peers
 
 ### Query Parameters
 
-| Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| Name    | Type   | Description                                                   | Required    |
+|---------|:------:|---------------------------------------------------------------|:-----------:|
+| page    | int    | The number of the page that will be returned.                 | :x:      |
+| limit   | int    | The number of resources per page.                             | :x:      |
+| port    | int    | The port by which the resources will be filtered.             | :x:      |
+| status  | string | The status by which the resources will be filtered.           | :x:      |
+| os      | string | The operating system by which the resources will be filtered. | :x:      |
+| version | string | The node version by which the resources will be filtered.     | :x:      |
+| orderBy | string | The column by which the resources will be sorted.             | :x:      |
 
 ### Response
 

@@ -1,5 +1,5 @@
 ---
-title: "Debuggger CLI"
+title: "Debugger CLI"
 ---
 
 # Debugger CLI

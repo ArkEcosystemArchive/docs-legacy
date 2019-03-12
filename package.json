@@ -30,7 +30,7 @@
         "highlight.js": "^9.13.1",
         "nprogress": "^0.2.0",
         "sweetalert": "^2.1.0",
-        "vuepress": "^1.0.0-alpha.30"
+        "vuepress": "^1.0.0-alpha.44"
     },
     "dependencies": {
         "vue": "^2.5.21",

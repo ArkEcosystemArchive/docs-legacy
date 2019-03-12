@@ -75,7 +75,7 @@ Once installation of dependencies and Ark Core is finished you will need to sele
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 
-#### 6. Configuring Ark Core database
+### 6. Configuring Ark Core database
 
 Last step of the Ark Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
@@ -95,7 +95,7 @@ Enter the database name: ark_mainnet
 
 This will create PostgreSQL role and database to be used for storing blockchain data.
 
-#### 7. Starting Ark Relay process
+### 7. Starting Ark Relay process
 
 To start Ark relay process and with it synchronization process with Ark blockchain we need to start relay process with our integrated CLI:
 
@@ -113,7 +113,7 @@ Starting ark-relay... done
 All CLI commands with description can be viewed at [CLI Commands](https://docs.ark.io/guidebook/core/cli.html#available-commands) or by running `ark help` command.
 :::
 
-#### 8. Checking to see if everything is working
+### 8. Checking to see if everything is working
 
 Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands 
 
@@ -132,7 +132,8 @@ If the process has started you will see a lot of messages like this (with actual
 [YYYY-DD-MM hh:mm:ss][DEBUG]: Delegate <delegate name> (<public key>) allowed to forge block <#> 👍
 ```
 
-::: info
+
+::: tip
 Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 51 delegates each forging a single block.
 :::
 
@@ -143,7 +144,7 @@ Ensure you properly restart the node process when editing your .env file. Use th
 ```bash
 pm2 restart all --update-env
 ```
-
+:::
 
 ## Next steps
 

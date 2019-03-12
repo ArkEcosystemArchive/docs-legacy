@@ -75,7 +75,7 @@ Once installation of dependencies and Ark Core is finished you will need to sele
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 
-#### 6. Configuring Ark Core database
+### 6. Configuring Ark Core database
 
 Last step of the Ark Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
@@ -95,7 +95,7 @@ Enter the database name: ark_mainnet
 
 This will create PostgreSQL role and database to be used for storing blockchain data.
 
-#### 7. Starting Ark Relay process
+### 7. Starting Ark Relay process
 
 To start Ark relay process and with it synchronization process with Ark blockchain we need to start relay process with our integrated CLI:
 
@@ -113,7 +113,7 @@ Starting ark-relay... done
 All CLI commands with description can be viewed at [CLI Commands](https://docs.ark.io/guidebook/core/cli.html#available-commands) or by running `ark help` command.
 :::
 
-#### 8. Checking to see if everything is working
+### 8. Checking to see if everything is working
 
 Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands 
 
@@ -132,68 +132,10 @@ If the process has started you will see a lot of messages like this (with actual
 [YYYY-DD-MM hh:mm:ss][DEBUG]: Delegate <delegate name> (<public key>) allowed to forge block <#> 👍
 ```
 
-::: info
-Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 51 delegates each forging a single block.
-:::
-
-## Generic Linux installation
-
-If your organization policy doesn't allow the use of other installation tools - meaning requirements clearly state that a standalone installation is needed, then the following scripts will help you with the installation of the Ark blockchain. The script assumes you have configured the other services such as `PostgreSQL` and is not idempotent.
 
 ::: tip
-The following scripts assume that NodeJs and `PostgreSQL` are already installed on your system. For minimum versions, please use `NodeJs >10` and `Postgres database >9.5`. Install them according to your operating system instructions.
+Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 51 delegates each forging a single block.
 :::
-
-### Installation script
-
-The script below is an ARK Core install script. You can adjust it to your own needs and system requirements.
-
-```bash
-sudo yarn global add pm2 lerna
-sudo -u postgres psql -c "create user ark with password 'password';"
-sudo -u postgres psql -c "create database ark_mainnet with owner 'ark';"
-mkdir -p ~/.config/ark-core/{network}
-cat > ~/.config/ark-core/{network}/.env <<EOL
-ARK_LOG_LEVEL=debug
-ARK_DB_HOST=localhost
-ARK_DB_PORT=5432
-ARK_DB_USERNAME=ark
-ARK_P2P_HOST=0.0.0.0
-ARK_P2P_PORT=4001
-ARK_API_HOST=0.0.0.0
-ARK_API_PORT=4003
-ARK_API_RATE_LIMIT=false
-ARK_API_ENABLED=true
-ARK_WEBHOOKS_HOST=0.0.0.0
-ARK_WEBHOOKS_PORT=4004
-ARK_GRAPHQL_HOST=0.0.0.0
-ARK_GRAPHQL_PORT=4005
-ARK_JSON_RPC_HOST=0.0.0.0
-ARK_JSON_RPC_PORT=8080
-EOL
-cd ~/
-git clone https://github.com/ArkEcosystem/core.git ark-core
-cp -f ~/ark-core/packages/core/bin/config/mainnet/* ~/.config/ark-core/{network}/
-cp -f ~/ark-core/packages/crypto/lib/networks/ark/mainnet.json  ~/.config/ark-core/{network}/network.json
-cd ark-core
-lerna bootstrap
-cd packages/core
-pm2 --name 'ark-core-relay' start -l ~/ark-core.log --merge-logs ./bin/ark -- relay --config ~/.config/ark-core/{network} --network mainnet
-```
-
-### Update script
-
-```bash
-pm2 stop all
-cd ark-core
-git reset --hard
-git pull
-lerna bootstrap
-rm -f ~/.config/ark-core/{network}/peers_backup.*
-cp -f ~/ark-core/packages/core/bin/config/mainnet/* ~/.config/ark-core/{network}/.
-cp -f /home/node/ark-core/packages/crypto/lib/networks/ark/mainnet.json /home/node/.ark/config/network.json
-pm2 start all --update-env
-```
 
 ::: danger
 
@@ -202,7 +144,6 @@ Ensure you properly restart the node process when editing your .env file. Use th
 ```bash
 pm2 restart all --update-env
 ```
-
 :::
 
 ## Next steps

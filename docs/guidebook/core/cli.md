@@ -58,6 +58,14 @@ This will bring up an interactive UI which will ask a few questions to help you 
 
 ## Troubleshooting
 
+Most of the issues you will encounter are related to `pm2` not properly responding so the first thing you can try is to kill your pm2 daemon and refresh it.
+
+```sh
+pm2 kill && pm2 cleardump && pm2 reset
+```
+
+If this doesn't help, read the known issues below and see if any of those solve your issues.
+
 ### Command not found
 
 If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.

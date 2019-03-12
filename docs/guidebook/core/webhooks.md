@@ -35,35 +35,36 @@ A webhook handler is just a simple POST endpoint that you need to implement at t
 ::: tab javascript
 
 ```js
-const webhookToken = 'fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66'
+const webhookToken =
+  "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66";
 
-const verification = '0c8e74e1cbfe36404386d33a5bbd8b66'
+const verification = "0c8e74e1cbfe36404386d33a5bbd8b66";
 
-server.post('/blocks', jsonParser, (req, res) => {
-    // This will be fe944e318edb02b979d6bf0c87978b64
-    const authorization = req.headers['authorization']
+server.post("/blocks", jsonParser, (req, res) => {
+  // This will be fe944e318edb02b979d6bf0c87978b64
+  const authorization = req.headers["authorization"];
 
-    // This will be authorization + verification
-    const token = authorization + verification
+  // This will be authorization + verification
+  const token = authorization + verification;
 
-    // Make sure we block access if the token is invalid...
-    if (token !== webhookToken) {
-      return res.status(401).send('Unauthorized!')
-    }
+  // Make sure we block access if the token is invalid...
+  if (token !== webhookToken) {
+    return res.status(401).send("Unauthorized!");
+  }
 
-    // the datetime of when the webhook was sent
-    console.log(req.body.created)
+  // the datetime of when the webhook was sent
+  console.log(req.body.created);
 
-    // the data the webhook transfered, e.g. a block struct
-    console.log(req.body.data)
+  // the data the webhook transfered, e.g. a block struct
+  console.log(req.body.data);
 
-    // the type of event that was sent, e.g. block.forged
-    console.log(req.body.type)
+  // the type of event that was sent, e.g. block.forged
+  console.log(req.body.type);
 
-    // do something with the above req.body data
+  // do something with the above req.body data
 
-    return res.status(200).send('Hello Webhook!')
-})
+  return res.status(200).send("Hello Webhook!");
+});
 ```
 
 :::
@@ -129,7 +130,7 @@ app = Flask(__name__)
 verification = "0c8e74e1cbfe36404386d33a5bbd8b66"
 token = "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
 
-# This should be middleware if this app is dedicated to webhooks    
+# This should be middleware if this app is dedicated to webhooks
 def token_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):

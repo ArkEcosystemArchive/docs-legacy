@@ -2,7 +2,7 @@
 
 [[toc]]
 
-By now many people want to know the technical details of Ark’s SmartBridge but broken down into a less technical and everyday example. That’s what this article will focus  This article will also assume the case that most blockchains are already SmartBridge compatible.
+By now many people want to know the technical details of Ark’s SmartBridge but broken down into a less technical and everyday example. That’s what this article will focus This article will also assume the case that most blockchains are already SmartBridge compatible.
 
 SmartBridge is the ability to connect and communicate between blockchains. By connecting blockchains, we can solve the great question of the last few years in the altcoin community. Which coin will replace bitcoin? The answer is none of them, and all of them.
 

@@ -6,7 +6,7 @@ title: "How To Secure Your Ark Node"
 
 [[toc]]
 
-When running an Ark node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start. 
+When running an Ark node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start.
 
 We assume you completed all the steps as outlined in the previous guide: [Setup Your Ark Node]().
 
@@ -16,7 +16,7 @@ During this guide, we will configure network and SSH parameters, which if improp
 
 ## Security through Obscurity
 
-By outlining how to secure a node we're breaking a fundamental property of network security. We are telling people how we are defending our network. This breaks the security through obscurity([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)) rule. 
+By outlining how to secure a node we're breaking a fundamental property of network security. We are telling people how we are defending our network. This breaks the security through obscurity([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)) rule.
 If all nodes were secured in the same way, a single exploit might compromise the entire network. It is therefore vital that you consider other sources as well to secure your node.
 
 ## Making Sure Our Server is Updated
@@ -153,7 +153,7 @@ If everything was setup successfully, you should be reconnected to your Ark Node
 
 #### What is Fail2Ban
 
-The basic idea behind fail2ban is to monitor the logs of standard services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits. 
+The basic idea behind fail2ban is to monitor the logs of standard services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits.
 
 ::: warning
 [Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) can reduce the rate of incorrect authentications attempts however it cannot eliminate the risk that weak authentication presents. Configure services to use only two factor or public/private authentication mechanisms if you want to protect services.
@@ -301,6 +301,7 @@ sudo nano /etc/knockd.conf
 ```
 
 ##### Knock Ports
+
 Here we're going to pick our opening and closing knock sequence. Choose three ports between `7000` and `40000` for each opening and closing. Write these ports down. The sequences need to be different.
 
 Modify your config file to match the one below with your own ports. We do not recommend just copying and pasting this config. Replace `7000`, `8000`, `9000` with your own choices.
@@ -560,7 +561,7 @@ Open Terminal on your Ark Node Server
 
 We need to create a new folder and copy our keys to our server.
 
-```bash 
+```bash
 mkdir /etc/nginx/ssl
 cd /etc/nginx/ssl
 touch ark.crt ark.key

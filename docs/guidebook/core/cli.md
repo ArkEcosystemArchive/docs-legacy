@@ -4,8 +4,6 @@ title: "Command Line Interface"
 
 # Command Line Interface
 
-# Table of Contents
-
 [[toc]]
 
 ## Installation
@@ -60,7 +58,7 @@ This will bring up an interactive UI which will ask a few questions to help you 
 
 Most of the issues you will encounter are related to `pm2` not properly responding so the first thing you can try is to kill your pm2 daemon and refresh it.
 
-```sh
+```shell
 pm2 kill && pm2 cleardump && pm2 reset
 ```
 

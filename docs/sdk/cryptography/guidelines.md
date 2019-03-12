@@ -133,7 +133,7 @@ Following these guidelines is required to provide a streamlined experience acros
 - Do not assume what the developer is going to do with the output. **If you are working with a buffer, return the buffer instead of a hex encoded value.**
 - Add optional helper methods to easily convert identities between `binary` and `hex`. **An example of this would be to be able to do `privateKey.toHex()` instead of having to encode the private key bytes to hex manually.**
 - Do not add functionality outside of the required functionality. **An example would be to add helper methods for very niche use-cases just because they seem like a nice-to-have.**
-- Add optional helper methods to derive identities from multiple sources easily. **An example would be  methods like `AddressFromPassphrase`, `PublicKeyFromPassphrase` or `PublicKeyFromPrivateKey`.**
+- Add optional helper methods to derive identities from multiple sources easily. **An example would be methods like `AddressFromPassphrase`, `PublicKeyFromPassphrase` or `PublicKeyFromPrivateKey`.**
 
 ## Terminology & Phrasing
 
@@ -209,7 +209,7 @@ You can check [https://github.com/ArkEcosystem/php-crypto](https://github.com/Ar
 
 ## Implementation
 
-Depending on if you are working with an `Object Oriented Programming Language` or `Functional Programming Language`  the tools at your disposal for how to implement the required functionality will differ.
+Depending on if you are working with an `Object Oriented Programming Language` or `Functional Programming Language` the tools at your disposal for how to implement the required functionality will differ.
 
 If you for example work with an OOP language you will be able to isolate functionality into `Objects` whereas you won't be able to do that with a Functional language but instead need to think of everything as `Functions`.
 

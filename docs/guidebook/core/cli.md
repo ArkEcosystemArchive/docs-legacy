@@ -4,8 +4,6 @@ title: "Command Line Interface"
 
 # Command Line Interface
 
-# Table of Contents
-
 [[toc]]
 
 ## Installation
@@ -57,6 +55,14 @@ ark config:publish
 This will bring up an interactive UI which will ask a few questions to help you with the setup process. Once you have published the configuration you can start using the CLI. It will automatically detect which network you have configured.
 
 ## Troubleshooting
+
+Most of the issues you will encounter are related to `pm2` not properly responding so the first thing you can try is to kill your pm2 daemon and refresh it.
+
+```shell
+pm2 kill && pm2 cleardump && pm2 reset
+```
+
+If this doesn't help, read the known issues below and see if any of those solve your issues.
 
 ### Command not found
 

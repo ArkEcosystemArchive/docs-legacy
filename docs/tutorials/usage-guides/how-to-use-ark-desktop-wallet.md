@@ -28,22 +28,22 @@ After opening the Ark Desktop Wallet application for the first time, you will be
 
 Once you've read through the welcome instructions, you will be presented a page on which you can create your first profile. This is a multiple-stepped process in which you enter or select:
 
--  **Profile details**
-   - Your chosen profile name
-   - The application's language and currency settings
-   - Which language to use for [12-word BIP39 Passphrase](https://en.bitcoin.it/wiki/Seed_phrase)
-   - One of many amazing avatars
+- **Profile details**
+  - Your chosen profile name
+  - The application's language and currency settings
+  - Which language to use for [12-word BIP39 Passphrase](https://en.bitcoin.it/wiki/Seed_phrase)
+  - One of many amazing avatars
 
 ![Profile Details](./assets/how-to-use-the-desktop-wallet/new/NewProfile1.png)
 
--  **Network**
-   - Which network to operate on, either the regular Ark network or the Ark Devnet (for developers)
+- **Network**
+  - Which network to operate on, either the regular Ark network or the Ark Devnet (for developers)
 
 ![Network Selection](./assets/how-to-use-the-desktop-wallet/new/NewProfile2.png)
 
--  **Appearance**
-   - The Light or Dark theme
-   - Your favorite background design
+- **Appearance**
+  - The Light or Dark theme
+  - Your favorite background design
 
 ![Application Appearance](./assets/how-to-use-the-desktop-wallet/new/NewProfile3.png)
 
@@ -64,30 +64,30 @@ The Ark Desktop Wallet allows you to both create new wallets and import existing
 ### Creating a New Wallet
 
 - **Pick an address to claim**
-![Choose Address](./assets/how-to-use-the-desktop-wallet/new/ChooseAddress.png)
+  ![Choose Address](./assets/how-to-use-the-desktop-wallet/new/ChooseAddress.png)
 
 - **Save your 12-word BIP39 Passphrase**
-![Wallet Backup](./assets/how-to-use-the-desktop-wallet/new/WalletBackup.png)
+  ![Wallet Backup](./assets/how-to-use-the-desktop-wallet/new/WalletBackup.png)
 
 - **Prove that you have saved your Passphrase**
-![Passphrase Verification](./assets/how-to-use-the-desktop-wallet/new/PassphraseVerification.png)
+  ![Passphrase Verification](./assets/how-to-use-the-desktop-wallet/new/PassphraseVerification.png)
 
-- *(Optional)* **Require a password to decrypt the Passphrase for an added layer of security**
-![Password Encryption](./assets/how-to-use-the-desktop-wallet/new/PasswordEncryption.png)
+- _(Optional)_ **Require a password to decrypt the Passphrase for an added layer of security**
+  ![Password Encryption](./assets/how-to-use-the-desktop-wallet/new/PasswordEncryption.png)
 
-- *(Optional)* **Name the new wallet and copy its address**
-![Creation Confirmation](./assets/how-to-use-the-desktop-wallet/new/CreationConfirmation.png)
+- _(Optional)_ **Name the new wallet and copy its address**
+  ![Creation Confirmation](./assets/how-to-use-the-desktop-wallet/new/CreationConfirmation.png)
 
 ### Importing your Wallet
 
 - **Import your wallet by providing its address, passphrase, or both**
-![Import Wallet](./assets/how-to-use-the-desktop-wallet/new/ImportWallet.png)
+  ![Import Wallet](./assets/how-to-use-the-desktop-wallet/new/ImportWallet.png)
 
-- *(Optional)* **Require a password to decrypt the Passphrase for an added layer of security**
-![Password Encryption](./assets/how-to-use-the-desktop-wallet/new/PasswordEncryption2.png)
+- _(Optional)_ **Require a password to decrypt the Passphrase for an added layer of security**
+  ![Password Encryption](./assets/how-to-use-the-desktop-wallet/new/PasswordEncryption2.png)
 
-- *(Optional)* **Name the new wallet and copy its address**
-![Import Confirmation](./assets/how-to-use-the-desktop-wallet/new/ImportConfirmation.png)
+- _(Optional)_ **Name the new wallet and copy its address**
+  ![Import Confirmation](./assets/how-to-use-the-desktop-wallet/new/ImportConfirmation.png)
 
 ## Wallet Interface
 
@@ -113,11 +113,11 @@ On the wallet detail page, which is accessed by clicking on the wallet's name or
 
 Transferring ARK from your wallet is the most common type of transaction.
 
-You can quickly send a transfer by clicking on the ***Send*** button in the header of the wallet detail page. This will bring up a prompt, on which you can fill in the required information to create a transfer transaction.
+You can quickly send a transfer by clicking on the **_Send_** button in the header of the wallet detail page. This will bring up a prompt, on which you can fill in the required information to create a transfer transaction.
 
 ![Transfer Details](./assets/how-to-use-the-desktop-wallet/new/Transfer.png)
 
-Upon clicking ***Next***, you will have to review the transfer transaction's details and decide whether to submit it, then discard or save it by clicking ***Send***, ***Back*** or ***Save***.
+Upon clicking **_Next_**, you will have to review the transfer transaction's details and decide whether to submit it, then discard or save it by clicking **_Send_**, **_Back_** or **_Save_**.
 
 ![Submit Transfer](./assets/how-to-use-the-desktop-wallet/new/SubmitTransfer.png)
 
@@ -126,32 +126,33 @@ Upon clicking ***Next***, you will have to review the transfer transaction's det
 Delegated Proof of Stake, the consensus algorithm used by the Ark Core, requires network participants to vote for delegates with their funds. A vote is not like a transfer; it merely helps determine which delegates have the most support from network members. You may only vote for one delegate at a time, and your funds are not locked while you are voting.
 
 - **Browse the list of registered delegates**
-![Delegate List](./assets/how-to-use-the-desktop-wallet/new/Delegates.png)
+  ![Delegate List](./assets/how-to-use-the-desktop-wallet/new/Delegates.png)
 
-- **Choose the delegate you wish to vote for, review their statistics and click *Vote***
-![Delegate Stats](./assets/how-to-use-the-desktop-wallet/new/DelegateStats.png)
+- **Choose the delegate you wish to vote for, review their statistics and click _Vote_**
+  ![Delegate Stats](./assets/how-to-use-the-desktop-wallet/new/DelegateStats.png)
 
-- **Fill in the required vote transaction fields and click *Next***
-![Vote Fields](./assets/how-to-use-the-desktop-wallet/new/Vote.png)
+- **Fill in the required vote transaction fields and click _Next_**
+  ![Vote Fields](./assets/how-to-use-the-desktop-wallet/new/Vote.png)
 
-- **Submit, discard or save the vote transaction by pressing either *Send*, *Back* or *Save***
-![Submit Vote](./assets/how-to-use-the-desktop-wallet/new/SubmitVote.png)
+- **Submit, discard or save the vote transaction by pressing either _Send_, _Back_ or _Save_**
+  ![Submit Vote](./assets/how-to-use-the-desktop-wallet/new/SubmitVote.png)
 
-***Unvoting***
+**_Unvoting_**
+
 - **Open the list of registered delegates**
-![Delegate List Unvote](./assets/how-to-use-the-desktop-wallet/new/DelegateListUnvote.png)
+  ![Delegate List Unvote](./assets/how-to-use-the-desktop-wallet/new/DelegateListUnvote.png)
 
-- **Click on the *Unvote* button**
-![Click Unvote Button](./assets/how-to-use-the-desktop-wallet/new/ClickUnvoteButton.png)
+- **Click on the _Unvote_ button**
+  ![Click Unvote Button](./assets/how-to-use-the-desktop-wallet/new/ClickUnvoteButton.png)
 
-- **Review the delegate's stats and click the *Unvote* button**
-![Review Unvote](./assets/how-to-use-the-desktop-wallet/new/ReviewUnvote.png)
+- **Review the delegate's stats and click the _Unvote_ button**
+  ![Review Unvote](./assets/how-to-use-the-desktop-wallet/new/ReviewUnvote.png)
 
-- **Choose a transcation fee, enter your security details and click *Next***
-![Unvote Details](./assets/how-to-use-the-desktop-wallet/new/UnvoteDetails.png)
+- **Choose a transcation fee, enter your security details and click _Next_**
+  ![Unvote Details](./assets/how-to-use-the-desktop-wallet/new/UnvoteDetails.png)
 
-- **Submit the unvote transaction and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
-![Submit Unvote](./assets/how-to-use-the-desktop-wallet/new/SubmitUnvote.png)
+- **Submit the unvote transaction and Submit, Cancel or Save it by clicking either _Send_, _Back_ or _Save_**
+  ![Submit Unvote](./assets/how-to-use-the-desktop-wallet/new/SubmitUnvote.png)
 
 ### Signing and Verifying Messages
 
@@ -163,11 +164,11 @@ Message signing and verifying is all done under the **Sign** tab of the wallet d
 
 With a signed message, others can verify that a given message and signature combination originate from you.
 
-- **Input your security details and the message to sign, then click *Sign***
-![Sign Message](./assets/how-to-use-the-desktop-wallet/new/SignMessage.png)
+- **Input your security details and the message to sign, then click _Sign_**
+  ![Sign Message](./assets/how-to-use-the-desktop-wallet/new/SignMessage.png)
 
 - **Your signed message will appear under the Sign tab of the wallet detail page**
-![Signed Messages](./assets/how-to-use-the-desktop-wallet/new/SignedMessages.png)
+  ![Signed Messages](./assets/how-to-use-the-desktop-wallet/new/SignedMessages.png)
 
 #### Verifying a Message
 
@@ -181,46 +182,46 @@ The Ark Network will only know your public key once you have sent a transaction.
 
 For demonstration purposes, the images below are shown from the perspective of a second wallet, assuming the necessary details to verify the message were provided to the verifying user.
 
-- **Enter the message to verify, the public key of the wallet which was used to sign the message and the resulting signature, then click *Next***
-![Verify Message](./assets/how-to-use-the-desktop-wallet/new/VerifyMessage.png)
+- **Enter the message to verify, the public key of the wallet which was used to sign the message and the resulting signature, then click _Next_**
+  ![Verify Message](./assets/how-to-use-the-desktop-wallet/new/VerifyMessage.png)
 
 - **See whether the message was successfully verified or not**
-![Verified Message](./assets/how-to-use-the-desktop-wallet/new/VerifiedMessage.png)
+  ![Verified Message](./assets/how-to-use-the-desktop-wallet/new/VerifiedMessage.png)
 
 ### Register as a Delegate
 
 Registering as a delegate is a simple transaction. It provides network nodes with a record of the sending address opening itself to accept votes from other wallets. You can only vote for an address that was registered in this fashion.
 
 - **Expose more options in the wallet detail page by clicking the icon in the header**
-![More Icon](./assets/how-to-use-the-desktop-wallet/new/MoreIcon.png)
+  ![More Icon](./assets/how-to-use-the-desktop-wallet/new/MoreIcon.png)
 
-- **Click the *Register delegate* button**
-![Register Delegate Button](./assets/how-to-use-the-desktop-wallet/new/RegisterDelegateButton.png)
+- **Click the _Register delegate_ button**
+  ![Register Delegate Button](./assets/how-to-use-the-desktop-wallet/new/RegisterDelegateButton.png)
 
-- **Enter your desired Username, Transaction fee and security details; then click *Next***
-![Delegate Registration](./assets/how-to-use-the-desktop-wallet/new/DelegateRegistration.png)
+- **Enter your desired Username, Transaction fee and security details; then click _Next_**
+  ![Delegate Registration](./assets/how-to-use-the-desktop-wallet/new/DelegateRegistration.png)
 
-- **Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
-![Submit Delegate Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitDelegateRegistration.png)
+- **Verify the delegate registration transaction details and Submit, Cancel or Save it by clicking either _Send_, _Back_ or _Save_**
+  ![Submit Delegate Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitDelegateRegistration.png)
 
 ### Register a Second Passphrase
 
 Security is critical. By issuing a second signature transaction, you tell network nodes to verify that every transaction coming from your wallet is also signed by another Passphrase.
 
 - **Show more options in the wallet detail page by clicking the icon in the header**
-![More Icon](./assets/how-to-use-the-desktop-wallet/new/MoreIcon.png)
+  ![More Icon](./assets/how-to-use-the-desktop-wallet/new/MoreIcon.png)
 
-- **Click the *Second passphrase* button**
-![Second Signature Button](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureButton.png)
+- **Click the _Second passphrase_ button**
+  ![Second Signature Button](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureButton.png)
 
-- **Save your 12-word BIP39 second Passphrase and click *Next***
-![Second Signature Passphrase Generation](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureGeneration.png)
+- **Save your 12-word BIP39 second Passphrase and click _Next_**
+  ![Second Signature Passphrase Generation](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureGeneration.png)
 
-- **Prove that you have saved your second Passphrase, select your desired transaction fee, enter your security details and click *Next***
-![Second Signature Details](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureVerification.png)
+- **Prove that you have saved your second Passphrase, select your desired transaction fee, enter your security details and click _Next_**
+  ![Second Signature Details](./assets/how-to-use-the-desktop-wallet/new/SecondSignatureVerification.png)
 
-- **Verify the second signature transaction details and Submit, Cancel or Save it by clicking either *Send*, *Back* or *Save***
-![Submit Second Signature Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitSecondSignature.png)
+- **Verify the second signature transaction details and Submit, Cancel or Save it by clicking either _Send_, _Back_ or _Save_**
+  ![Submit Second Signature Registration](./assets/how-to-use-the-desktop-wallet/new/SubmitSecondSignature.png)
 
 ## Contact Interface
 
@@ -232,17 +233,17 @@ You can access the contact creation menu by first clicking on the contact icon i
 
 ![Contacts](./assets/how-to-use-the-desktop-wallet/new/Contacts.png)
 
-- **Enter the contact's address and click *Next***
-![Contact Details](./assets/how-to-use-the-desktop-wallet/new/ContactDetails.png)
+- **Enter the contact's address and click _Next_**
+  ![Contact Details](./assets/how-to-use-the-desktop-wallet/new/ContactDetails.png)
 
-- *(Optional)* **Enter a name for the contact and click *Done**
-![Contact Name](./assets/how-to-use-the-desktop-wallet/new/ContactConfirmation.png)
+- _(Optional)_ **Enter a name for the contact and click \*Done**
+  ![Contact Name](./assets/how-to-use-the-desktop-wallet/new/ContactConfirmation.png)
 
 - **You can now view that contact's activity**
-![Contact Activity](./assets/how-to-use-the-desktop-wallet/new/ContactActivity.png)
+  ![Contact Activity](./assets/how-to-use-the-desktop-wallet/new/ContactActivity.png)
 
 - **And have access to the contact's activity through the contact interface**
-![Contact Interface](./assets/how-to-use-the-desktop-wallet/new/ContactInterface.png)
+  ![Contact Interface](./assets/how-to-use-the-desktop-wallet/new/ContactInterface.png)
 
 ## Changing the Application's Settings
 

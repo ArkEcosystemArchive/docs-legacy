@@ -32,12 +32,12 @@ The following variables were renamed/added to the configuration of a network. Th
 
 Note:
 
-* If the second or third column is left empty, the configuration variable must be directly edited in the plugins.js configuration file, instead of being obtained from the `env.process`.
-* `core-transaction-pool-mem` was renamed to `core-transaction-pool`.
-* The `dynamicFees` key was added to `core-transaction-pool`, which must be configured in the plugins.js file.
+- If the second or third column is left empty, the configuration variable must be directly edited in the plugins.js configuration file, instead of being obtained from the `env.process`.
+- `core-transaction-pool-mem` was renamed to `core-transaction-pool`.
+- The `dynamicFees` key was added to `core-transaction-pool`, which must be configured in the plugins.js file.
 
 | Variable                                                 | v2.0.19                             | v2.1                                 | default                                                    |
-|----------------------------------------------------------|-------------------------------------|--------------------------------------|------------------------------------------------------------|
+| -------------------------------------------------------- | ----------------------------------- | ------------------------------------ | ---------------------------------------------------------- |
 | core-logger-winston.transports.console.options.level     | ARK_LOG_LEVEL                       | CORE_LOG_LEVEL                       | 'debug'                                                    |
 | core-logger-winston.transports.dailyRotate.options.level | ARK_LOG_LEVEL                       | CORE_LOG_LEVEL                       | 'debug'                                                    |
 | core-database-postgres.connection.host                   | ARK_DB_HOST                         | CORE_DB_HOST                         | 'localhost'                                                |

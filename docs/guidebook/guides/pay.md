@@ -21,63 +21,67 @@ Below you can find two of our secure HTTPS (SSL) nodes. If you wish to use them 
 ### Mainnet
 
 ```js
-gateway.peers([{
-    ip: 'explorer.ark.io',
+gateway.peers([
+  {
+    ip: "explorer.ark.io",
     port: 8443,
-    protocol: 'https',
-}])
+    protocol: "https"
+  }
+]);
 ```
 
 ### Devnet
 
 ```js
-gateway.peers([{
-    ip: 'dexplorer.ark.io',
+gateway.peers([
+  {
+    ip: "dexplorer.ark.io",
     port: 8443,
-    protocol: 'https',
-}])
+    protocol: "https"
+  }
+]);
 ```
 
 ## Example
 
 ```js
-const ArkPay = require('@arkecosystem/pay')
-const gateway = new ArkPay()
+const ArkPay = require("@arkecosystem/pay");
+const gateway = new ArkPay();
 
 gateway
-    .recipient('DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9')
-    .amount(1)
-    .vendorField('Hello World')
-    .currency('USD')
-    .coin('ARK')
-    .network('devnet')
+  .recipient("DNjuJEDQkhrJ7cA9FZ2iVXt5anYiM8Jtc9")
+  .amount(1)
+  .vendorField("Hello World")
+  .currency("USD")
+  .coin("ARK")
+  .network("devnet");
 
 // The "started" event is emitted when Ark Pay loaded all seeds, peers
 // and exchange rates to make sure we are requesting the correct amount.
-gateway.on('started', data => {
-    // Send the session data to your backend, render it to the UI, etc.
-})
+gateway.on("started", data => {
+  // Send the session data to your backend, render it to the UI, etc.
+});
 
 // The "completed" event is emitted when Ark Pay received the exact amount
 // with the correct vendor field within the specified time frame.
-gateway.on('completed', data => {
-    // Send a confirmation email, redirect the user, etc.
-})
+gateway.on("completed", data => {
+  // Send a confirmation email, redirect the user, etc.
+});
 
 // The "aborted" event is emitted when Ark Pay is unable to find any seeds,
 // peers or exchange rates for the active network within a reasonable time frame.
-gateway.on('aborted', data => {
-    // Restart the session, refresh the page or flush the shopping cart, etc.
-})
+gateway.on("aborted", data => {
+  // Restart the session, refresh the page or flush the shopping cart, etc.
+});
 
 // The "error" event is emitted when Ark Pay encounters any errors like an
 // invalid or malformed response to an HTTP request.
-gateway.on('error', data => {
-    // React to the error, note that errors are not always critical, etc.
-})
+gateway.on("error", data => {
+  // React to the error, note that errors are not always critical, etc.
+});
 
 // The "start" method will initialize the transaction listener.
-await gateway.start()
+await gateway.start();
 ```
 
 ## API

@@ -293,6 +293,7 @@ end
 ```
 
 Once installed, you should run the following command to install the dependencies :
+
 ```bash
 $ mix deps.get
 ```
@@ -309,27 +310,27 @@ If you want to contribute to the SDKs itself, follow this guide.
 
 ::: tab javascript
 
-1) Fork the [package](https://github.com/ArkEcosystem/javascript-client).
+1. Fork the [package](https://github.com/ArkEcosystem/javascript-client).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/javascript-client
 ```
 
-3) Next, move into the fresh cloned directory.
+3. Next, move into the fresh cloned directory.
 
 ```bash
 cd javascript-client
 ```
 
-4) Proceed to install the dependencies.
+4. Proceed to install the dependencies.
 
 ```bash
 yarn install
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 $ yarn test
@@ -347,27 +348,27 @@ $ yarn test
 
 ::: tab php
 
-1) Fork the [package](https://github.com/ArkEcosystem/php-client).
+1. Fork the [package](https://github.com/ArkEcosystem/php-client).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 $ git clone https://github.com/<githubusername>/php-client
 ```
 
-3) Next, move into the cloned directory.
+3. Next, move into the cloned directory.
 
 ```bash
 $ cd php-client
 ```
 
-4) Install the dependencies with composer.
+4. Install the dependencies with composer.
 
 ```bash
 $ composer install
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 $ phpunit
@@ -377,23 +378,23 @@ $ phpunit
 
 ::: tab python
 
-1) Fork the [package](https://github.com/ArkEcosystem/python-client).
+1. Fork the [package](https://github.com/ArkEcosystem/python-client).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/python-client
 ```
 
-3) Next, move into the fresh cloned directory.
+3. Next, move into the fresh cloned directory.
 
 ```bash
 cd python-client
 ```
 
-4) The next step would be to create something like a [virtual environment](https://virtualenv.pypa.io/en/latest/) to ensure no name clashes occur.
+4. The next step would be to create something like a [virtual environment](https://virtualenv.pypa.io/en/latest/) to ensure no name clashes occur.
 
-5) Once the virtualenv has finished initializing, you can proceed to install the dependencies. These are listed inside the setup.py file.
+5. Once the virtualenv has finished initializing, you can proceed to install the dependencies. These are listed inside the setup.py file.
 
 ```bash
 pip install \
@@ -409,7 +410,7 @@ pip install \
         pytest-cov
 ```
 
-6) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+6. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 pytest
@@ -419,56 +420,57 @@ pytest
 
 ::: tab golang
 
-1) Fork the [package](https://github.com/ArkEcosystem/go-client)
+1. Fork the [package](https://github.com/ArkEcosystem/go-client)
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/go-client
 ```
 
-3) Next, move into the fresh cloned directory.
+3. Next, move into the fresh cloned directory.
 
 ```bash
 cd go-client
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 # -t also fetches dependencies related to tests
 go get -t ./...
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 go test ./...
 ```
+
 :::
 
-1) Fork the [package](https://github.com/ArkEcosystem/cpp-client).
+1. Fork the [package](https://github.com/ArkEcosystem/cpp-client).
 
-2) Clone the newly forked repository.
+2. Clone the newly forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/cpp-client
 ```
 
-3) Next, we move into the cloned directory.
+3. Next, we move into the cloned directory.
 
 ```bash
 cd cpp-client
 ```
 
-4) Build the package using CMake.
+4. Build the package using CMake.
 
 ```bash
 cmake
 cmake --build .
 ```
 
-5) Now we can run the tests to see if everything is running as it should.
+5. Now we can run the tests to see if everything is running as it should.
 
 ```bash
 ./test/Ark-Cpp-Client-tests
@@ -492,21 +494,21 @@ pio run -e esp32 -t upload
 
 ::: tab swift
 
-1) Fork the [package](https://github.com/ArkEcosystem/swift-client).
+1. Fork the [package](https://github.com/ArkEcosystem/swift-client).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/swift-client
 ```
 
-3) Next, move into the fresh cloned directory.
+3. Next, move into the fresh cloned directory.
 
 ```bash
 cd swift-client/Client
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 For this you will first need to install [Carthage](https://github.com/Carthage/Carthage), which can be done quickly with Homebrew: `brew install carthage`
 
@@ -522,27 +524,27 @@ Dependencies are now installed, you can now run the tests to see if everything i
 
 ::: tab rust
 
-1) Fork the [package](https://github.com/ArkEcosystem/rust-client).
+1. Fork the [package](https://github.com/ArkEcosystem/rust-client).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/rust-client
 ```
 
-3) Next, move into the fresh cloned directory.
+3. Next, move into the fresh cloned directory.
 
 ```bash
 cd rust-client
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 cargo build
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 cargo test
@@ -559,27 +561,27 @@ An example of how this is done can be found by looking at the tests, e.g. those 
 
 ::: tab elixir
 
-1) Fork the [package](https://github.com/ArkEcosystem/elixir-client).
+1. Fork the [package](https://github.com/ArkEcosystem/elixir-client).
 
-2) Clone your forked repository.
+2. Clone your forked repository.
 
 ```bash
 git clone https://github.com/<githubusername>/elixir-client
 ```
 
-3) Next, move into the fresh cloned directory.
+3. Next, move into the fresh cloned directory.
 
 ```bash
 cd elixir-client
 ```
 
-4) Install the dependencies.
+4. Install the dependencies.
 
 ```bash
 mix deps.get
 ```
 
-5) Dependencies are now installed, you can now run the tests to see if everything is running as it should.
+5. Dependencies are now installed, you can now run the tests to see if everything is running as it should.
 
 ```bash
 mix test
@@ -600,9 +602,9 @@ Each SDK attempts to return a response in an idiomatic way (i.e., using structs 
 ::: tab javascript
 
 ```js
-const Client = require('@arkecosystem/client')
+const Client = require("@arkecosystem/client");
 
-const client = new Client('http://my.node.ip:port');
+const client = new Client("http://my.node.ip:port");
 client.setVersion(2);
 ```
 
@@ -957,7 +959,7 @@ You may query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource('delegates').all({"limit": 1});
+    const response = await client.resource("delegates").all({ limit: 1 });
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1113,7 +1115,7 @@ You may query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource('node').status();
+    const response = await client.resource("node").status();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1249,7 +1251,7 @@ You may query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource('peers').all({"limit": 1});
+    const response = await client.resource("peers").all({ limit: 1 });
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1376,7 +1378,12 @@ Through this API you can:
 ```js
 async function init() {
   try {
-    const response = await client.resource('transactions').all({"senderId": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv", "orderBy": "timestamp.epoch"});
+    const response = await client
+      .resource("transactions")
+      .all({
+        senderId: "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+        orderBy: "timestamp.epoch"
+      });
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1534,7 +1541,7 @@ Through the votes resource, you can query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource('votes').all();
+    const response = await client.resource("votes").all();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1653,7 +1660,9 @@ The [wallet resource](/api/public/v2/wallets.html#list-all-wallets) provides acc
 ```js
 async function init() {
   try {
-    const response = await client.resource('wallets').get('AFrPtEmzu6wdVpa2CnRDEKGQQMWgq8nE9V');
+    const response = await client
+      .resource("wallets")
+      .get("AFrPtEmzu6wdVpa2CnRDEKGQQMWgq8nE9V");
     return response.data;
   } catch (e) {
     console.log(e);

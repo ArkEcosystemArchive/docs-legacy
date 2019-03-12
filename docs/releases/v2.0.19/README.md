@@ -1,6 +1,6 @@
 # Summary
 
-Ark `v2.0.X` is a major update, entirely deprecating existing APIs and fully redesigning the internal structure of Ark Node. 
+Ark `v2.0.X` is a major update, entirely deprecating existing APIs and fully redesigning the internal structure of Ark Node.
 
 ::: warning
 
@@ -8,9 +8,9 @@ Note that `v2.0` is currently not the latest node version.
 
 :::
 
-* **Upgrade time**: medium/high - upgrading to `v2.0` breaks APIs and cannot be performed incrementally in the network.
-* **Complexity**: medium - the internal blockchain representation is altered and thus state corruption is possible.
-* **Risk**: medium - `v2.0` is not backward compatible with `v1.0`; thus a downgrade is not possible.
+- **Upgrade time**: medium/high - upgrading to `v2.0` breaks APIs and cannot be performed incrementally in the network.
+- **Complexity**: medium - the internal blockchain representation is altered and thus state corruption is possible.
+- **Risk**: medium - `v2.0` is not backward compatible with `v1.0`; thus a downgrade is not possible.
 
 [[toc]]
 
@@ -34,7 +34,7 @@ A much more powerful API provides additional endpoints, is much more stable and 
 
 ### Webhook Support 
 
- Webhooks allow applications to provide other applications with real-time information. A Webhook delivers data immediately as it happens as opposed to a typical API where polling must occur very frequently and inefficiently to get real-time data.
+Webhooks allow applications to provide other applications with real-time information. A Webhook delivers data immediately as it happens as opposed to a typical API where polling must occur very frequently and inefficiently to get real-time data.
 
 ### Improved transaction pool management 
 
@@ -63,7 +63,7 @@ The old code was very dependent on the ARK team for snapshots when building or r
 All SDKs have been updated to reflect the change to `v2`. The structure of each SDK has been standardized, by splitting the cryptography and API client into separate libraries.
 
 | Language | Client                                                         | Crypto                                                         |
-|----------|----------------------------------------------------------------|----------------------------------------------------------------|
+| -------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
 | Java     | [java-client](https://github.com/ArkEcosystem/java-client)     | [java-crypto](https://github.com/ArkEcosystem/java-crypto)     |
 | .NET     | [dotnet-client](https://github.com/ArkEcosystem/dotnet-client) | [dotnet-crypto](https://github.com/ArkEcosystem/dotnet-crypto) |
 | PHP      | [php-client](https://github.com/ArkEcosystem/php-client)       | [php-crypto](https://github.com/ArkEcosystem/php-crypto)       |

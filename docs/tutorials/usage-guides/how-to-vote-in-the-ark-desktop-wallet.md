@@ -6,9 +6,9 @@ You can use your ARK to vote or un-vote a delegate. In this guide, we’ll show 
 
 Some basic voting info :
 
-- *1 ARK address can vote for only  one delegate at a time.* If you wish to vote for more than one delegate you can create multiple wallets, split your ARK among those wallets and vote for a different delegate with each wallet. For example, if you have 1000 ARK, you can vote for one delegate with all of your ARK in one wallet, or you can divide your ARK into two wallets of 500 ARK each and vote for two different delegates. You can create as many wallets as you want and divide your ARK among them in any proportion you choose.
-- *1 ARK equals a voting weight of 1.* The more ARK you hold, the more voting weight you possess. If you split your ARK into multiple wallets, your voting power divides proportionally among those wallets. For example, if you have 1,000 ARK your voting power is equal to 1,000 ARK. If you split your ARK into two wallets, each will have a voting power of 500 ARK.
-- *Each vote or un-vote comes with a fee.* Each transaction in the ARK network costs a certain amount of ARK. With the implementation of dynamic fees, this cost will become adjustable. You can choose how much you want to spend for each specific transaction, even for voting and for un-voting.
+- _1 ARK address can vote for only one delegate at a time._ If you wish to vote for more than one delegate you can create multiple wallets, split your ARK among those wallets and vote for a different delegate with each wallet. For example, if you have 1000 ARK, you can vote for one delegate with all of your ARK in one wallet, or you can divide your ARK into two wallets of 500 ARK each and vote for two different delegates. You can create as many wallets as you want and divide your ARK among them in any proportion you choose.
+- _1 ARK equals a voting weight of 1._ The more ARK you hold, the more voting weight you possess. If you split your ARK into multiple wallets, your voting power divides proportionally among those wallets. For example, if you have 1,000 ARK your voting power is equal to 1,000 ARK. If you split your ARK into two wallets, each will have a voting power of 500 ARK.
+- _Each vote or un-vote comes with a fee._ Each transaction in the ARK network costs a certain amount of ARK. With the implementation of dynamic fees, this cost will become adjustable. You can choose how much you want to spend for each specific transaction, even for voting and for un-voting.
 
 ## Whom to Vote for?
 
@@ -22,7 +22,7 @@ Open the ARK Desktop Wallet and select the wallet you wish to vote with. The wal
 
 ![Click on a wallet you wish to vote from](./assets/how-to-vote-in-the-ark-desktop-wallet/clickonawallet.jpg)
 
-From within the chosen wallet, click on the ***Delegates*** button to open the delegate view where you can cast your vote (note: there is an indicator that lets you know if you are not yet voting from the selected wallet).
+From within the chosen wallet, click on the **_Delegates_** button to open the delegate view where you can cast your vote (note: there is an indicator that lets you know if you are not yet voting from the selected wallet).
 
 ![Click on Delegates tab](./assets/how-to-vote-in-the-ark-desktop-wallet/clickondelegates.jpg)
 
@@ -30,15 +30,15 @@ In the delegate selection window, you can scroll up or down to view the full lis
 
 ![Click on delegate you wish to vote for](./assets/how-to-vote-in-the-ark-desktop-wallet/clickonadelegate.jpg)
 
-Selecting a delegate will display basic statistics about that delegate. To cast your vote click on the ***Vote*** button.
+Selecting a delegate will display basic statistics about that delegate. To cast your vote click on the **_Vote_** button.
 
 ![Click on delegate you wish to vote for](./assets/how-to-vote-in-the-ark-desktop-wallet/clickonvotebutton.jpg)
 
-Now, you can select your ‘voting fee' for this specific voting transaction. You can choose from a predefined range of fees or input a custom fee that you wish to pay for voting. Note that if you select a fee that is too low, it will not be accepted by any of the currently active delegates.  If no delegate accepts your transaction, it will not be confirmed and will remain in the transaction pool for 45 minutes before being dropped. After selecting your voting fee, input your wallet passphrase and press ***Next*** to continue.
+Now, you can select your ‘voting fee' for this specific voting transaction. You can choose from a predefined range of fees or input a custom fee that you wish to pay for voting. Note that if you select a fee that is too low, it will not be accepted by any of the currently active delegates. If no delegate accepts your transaction, it will not be confirmed and will remain in the transaction pool for 45 minutes before being dropped. After selecting your voting fee, input your wallet passphrase and press **_Next_** to continue.
 
 ![Voting modal](./assets/how-to-vote-in-the-ark-desktop-wallet/votingmodal.jpg)
 
-The final step is to review the transaction information and press the ***Send*** button. You also have the option to go ***Back*** to the previous screen or ***Save*** the signed transaction in JSON format (for advanced users).
+The final step is to review the transaction information and press the **_Send_** button. You also have the option to go **_Back_** to the previous screen or **_Save_** the signed transaction in JSON format (for advanced users).
 
 ![Confirmation window](./assets/how-to-vote-in-the-ark-desktop-wallet/clickonsend.jpg)
 
@@ -60,11 +60,11 @@ Open the ARK Desktop Wallet and select the wallet you wish to un-vote from. Agai
 
 ![Click on a wallet you wish to vote from](./assets/how-to-vote-in-the-ark-desktop-wallet/clickonawallet.jpg)
 
-From within the chosen wallet, click on the ***Delegates*** button to open the delegate view where you can un-vote.
+From within the chosen wallet, click on the **_Delegates_** button to open the delegate view where you can un-vote.
 
 ![Click on Delegates tab](./assets/how-to-vote-in-the-ark-desktop-wallet/clickondelegatesunvoting.jpg)
 
-Once in the delegate selection window, you can click on the ***Unvote*** button at the bottom, or you can scroll up or down the list click the delegate directly to un-vote.
+Once in the delegate selection window, you can click on the **_Unvote_** button at the bottom, or you can scroll up or down the list click the delegate directly to un-vote.
 
 ![Un-voting a delegate](./assets/how-to-vote-in-the-ark-desktop-wallet/windowunvoting.jpg)
 
@@ -72,11 +72,11 @@ Now, basic statistics will be displayed about the delegate you are un-voting. Cl
 
 ![Click on delegate you wish to un-vote](./assets/how-to-vote-in-the-ark-desktop-wallet/unvotebutton.jpg)
 
-The un-voting fee selection process is the same as described above for voting. Select from a predefined range of fees or input a custom fee that you wish to pay for un-voting. Then input your wallet passphrase and press ***Next*** to continue.
+The un-voting fee selection process is the same as described above for voting. Select from a predefined range of fees or input a custom fee that you wish to pay for un-voting. Then input your wallet passphrase and press **_Next_** to continue.
 
 ![Un-voting modal](./assets/how-to-vote-in-the-ark-desktop-wallet/unvotingmodal.jpg)
 
-The last step is to review the transaction information and press the ***Send*** button. You also have the option to go ***Back*** to the previous screen or ***Save*** the signed transaction in JSON format (for advanced users).
+The last step is to review the transaction information and press the **_Send_** button. You also have the option to go **_Back_** to the previous screen or **_Save_** the signed transaction in JSON format (for advanced users).
 
 ![Confirmation window](./assets/how-to-vote-in-the-ark-desktop-wallet/unvotedelegate.jpg)
 
@@ -92,4 +92,4 @@ The un-voting transaction now shows in your list of transactions. You can hover 
 
 ![Hover over](./assets/how-to-vote-in-the-ark-desktop-wallet/hoveroverunvote.jpg)
 
-To cast a vote for newly selected delegate scroll back to the ***Voting*** section of this article and repeat those steps.
+To cast a vote for newly selected delegate scroll back to the **_Voting_** section of this article and repeat those steps.

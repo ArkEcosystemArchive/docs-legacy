@@ -1,6 +1,7 @@
 ---
 title: "Events"
 ---
+
 [[toc]]
 
 # Events
@@ -12,14 +13,14 @@ Effective integrations in your backend can be achieved using events, similar to 
 Emitting events is pretty straightforward. Just resolve the `event-emitter` from `@arkecosystem/core-container` and call the `emit` method with a name and data to be emitted.
 
 ```js
-const container = require('@arkecosystem/core-container')
-const emitter = container.resolvePlugin('event-emitter')
+const container = require("@arkecosystem/core-container");
+const emitter = container.resolvePlugin("event-emitter");
 
-emitter.emit('block.forged', {
-  id: 'fake-id',
-  generatorPublicKey: 'fake-generator-public-key',
+emitter.emit("block.forged", {
+  id: "fake-id",
+  generatorPublicKey: "fake-generator-public-key",
   amount: 10
-})
+});
 ```
 
 ## Listening to Events
@@ -27,14 +28,14 @@ emitter.emit('block.forged', {
 Listening to events is as straightforward as emitting them. Just resolve the `event-emitter` from `@arkecosystem/core-container` and call the `on` method with a name and then process the incoming data.
 
 ```js
-const container = require('@arkecosystem/core-container')
-const emitter = container.resolvePlugin('event-emitter')
+const container = require("@arkecosystem/core-container");
+const emitter = container.resolvePlugin("event-emitter");
 
-emitter.on('block.forged', block => {
-  if (block.generatorPublicKey === 'fake-generator-public-key') {
-    console.log(`You just forged a block for ${block.amount} ARK`)
+emitter.on("block.forged", block => {
+  if (block.generatorPublicKey === "fake-generator-public-key") {
+    console.log(`You just forged a block for ${block.amount} ARK`);
   }
-})
+});
 ```
 
 ## Available Events
@@ -44,7 +45,7 @@ emitter.on('block.forged', block => {
 #### event
 
 ```js
-"block.applied"
+"block.applied";
 ```
 
 #### description
@@ -60,7 +61,7 @@ Emitted when a block is applied to the Node and all including transactions are a
 #### event
 
 ```js
-"block.forged"
+"block.forged";
 ```
 
 #### description
@@ -76,7 +77,7 @@ When a Delegate Node has created a new block, the newly created block is emitted
 #### event
 
 ```js
-"block.reverted"
+"block.reverted";
 ```
 
 #### description
@@ -92,7 +93,7 @@ Due to data corruption or other reasons, a Node might revert its state until it 
 #### event
 
 ```js
-"delegate.registered"
+"delegate.registered";
 ```
 
 #### description
@@ -108,7 +109,7 @@ When a transaction has been processed, and a wallet registers itself as a Delega
 #### event
 
 ```js
-"delegate.resigned"
+"delegate.resigned";
 ```
 
 #### description
@@ -124,7 +125,7 @@ This event will be emitted when a wallet resigns as a Delegate, and the transact
 #### event
 
 ```js
-"forger.failed"
+"forger.failed";
 ```
 
 #### description
@@ -140,7 +141,7 @@ The `error` message causing the failure.
 #### event
 
 ```js
-"forger.missing"
+"forger.missing";
 ```
 
 #### description
@@ -160,7 +161,7 @@ This event is currently [disabled](https://github.com/ArkEcosystem/core/blob/a71
 #### event
 
 ```js
-"forger.started"
+"forger.started";
 ```
 
 #### description
@@ -176,7 +177,7 @@ The `publicKey` of the forging Delegate.
 #### event
 
 ```js
-"peer.added"
+"peer.added";
 ```
 
 #### description
@@ -192,7 +193,7 @@ This event will be emitted when a peer is added to the list of accepted peers.
 #### event
 
 ```js
-"peer.removed"
+"peer.removed";
 ```
 
 #### description
@@ -203,13 +204,12 @@ Fired after a peer has been removed from the accepted peers.
 
 [Peer](/guidebook/core/data-models.html#peer)
 
-
 ### transaction.applied
 
 #### event
 
 ```js
-"transaction.applied"
+"transaction.applied";
 ```
 
 #### description
@@ -225,7 +225,7 @@ This event will be emitted when a transaction is applied to a wallet.
 #### event
 
 ```js
-"transaction.expired"
+"transaction.expired";
 ```
 
 #### description
@@ -241,7 +241,7 @@ After a transaction has expired and is removed from the transaction pool, the `t
 #### event
 
 ```js
-"transaction.forged"
+"transaction.forged";
 ```
 
 #### description
@@ -257,7 +257,7 @@ This event will be emitted when a transaction is included in a block and thus ha
 #### event
 
 ```js
-"transaction.reverted"
+"transaction.reverted";
 ```
 
 #### description
@@ -273,7 +273,7 @@ This event will be emitted when a transaction is reverted from a wallet. Often f
 #### event
 
 ```js
-"wallet.vote"
+"wallet.vote";
 ```
 
 #### description
@@ -284,13 +284,12 @@ This event will be emitted when a wallet casts a vote in on a delegate.
 
 [Wallet](/guidebook/core/data-models.html#wallet)
 
-
 ### wallet.unvote
 
 #### event
 
 ```js
-"wallet.unvote"
+"wallet.unvote";
 ```
 
 #### description

@@ -17,10 +17,10 @@ The default logger we provide is [winston](https://github.com/winstonjs/winston)
 Let's take a closer look at how the logger is bootstrapped and how easy it is to extend it.
 
 ```js
-const logManager = manager.get('logManager')
-await logManager.makeDriver(new WinstonDriver(options))
+const logManager = manager.get("logManager");
+await logManager.makeDriver(new WinstonDriver(options));
 
-return logManager.driver()
+return logManager.driver();
 ```
 
 The first thing we do is to grab an instance of the `LogManager` that is available through the `container` that provides us with all instances of other plugins.

@@ -53,7 +53,7 @@ This folder contains the TypeScript code before it gets compiled to JavaScript v
 
 Now the unit tests associated to this packages would be located in the following directory :
 
-**/\_\_tests__/unit/core-blockchain**
+**/\_\_tests\_\_/unit/core-blockchain**
 
 Now that we have an idea of how the code is organized, we can go inside the `/__tests__/unit/core-blockchain` folder and see how the tests are structured.
 
@@ -76,7 +76,7 @@ Important thing to note: except for special directories like `mocks`, the direct
 
 ### Mocks
 
-Most unit tests need *mocks*, hence the `/mock` folder where general mocking is set up (this folder contains mostly basic mocks corresponding to packages dependencies, for example `core-blockchain` is depending on `core-container` which will be mocked here).
+Most unit tests need _mocks_, hence the `/mock` folder where general mocking is set up (this folder contains mostly basic mocks corresponding to packages dependencies, for example `core-blockchain` is depending on `core-container` which will be mocked here).
 
 Then in the actual test files we will be able to use the pre-defined mocks by importing the `mock` folder, but also modify or add new mocks as we need.
 
@@ -176,20 +176,21 @@ Assert that the given value is a transaction.
 
 ```ts
 expect({
-    version: 1,
-    network: 23,
-    type: 0,
-    timestamp: 35672738,
-    senderPublicKey: "03d7dfe44e771039334f4712fb95ad355254f674c8f5d286503199157b7bf7c357",
-    fee: 10000000,
-    vendorFieldHex: "5449443a2030",
-    amount: 200000000,
-    expiration: 0,
-    recipientId: "AFzQCx5YpGg5vKMBg4xbuYbqkhvMkKfKe5",
-    signature:
-        "304502210096ec6e27176fa694638d6fff35d7a551b2ed8c479a7e03264026eea41a05edd702206c071c97d1c6cc3bfec64dfff808cb0d5dfe857803428efb80bf7717b85cb619",
-    vendorField: "TID: 0",
-    id: "a5e9e6039675563959a783fa672c0ffe65369168a1ecffa3c89bf82961d8dbad",
+  version: 1,
+  network: 23,
+  type: 0,
+  timestamp: 35672738,
+  senderPublicKey:
+    "03d7dfe44e771039334f4712fb95ad355254f674c8f5d286503199157b7bf7c357",
+  fee: 10000000,
+  vendorFieldHex: "5449443a2030",
+  amount: 200000000,
+  expiration: 0,
+  recipientId: "AFzQCx5YpGg5vKMBg4xbuYbqkhvMkKfKe5",
+  signature:
+    "304502210096ec6e27176fa694638d6fff35d7a551b2ed8c479a7e03264026eea41a05edd702206c071c97d1c6cc3bfec64dfff808cb0d5dfe857803428efb80bf7717b85cb619",
+  vendorField: "TID: 0",
+  id: "a5e9e6039675563959a783fa672c0ffe65369168a1ecffa3c89bf82961d8dbad"
 }).toBeTransaction();
 ```
 
@@ -199,20 +200,21 @@ Assert that the given value is a valid transaction.
 
 ```ts
 expect({
-    version: 1,
-    network: 23,
-    type: 0,
-    timestamp: 35672738,
-    senderPublicKey: "03d7dfe44e771039334f4712fb95ad355254f674c8f5d286503199157b7bf7c357",
-    fee: 10000000,
-    vendorFieldHex: "5449443a2030",
-    amount: 200000000,
-    expiration: 0,
-    recipientId: "AFzQCx5YpGg5vKMBg4xbuYbqkhvMkKfKe5",
-    signature:
-        "304502210096ec6e27176fa694638d6fff35d7a551b2ed8c479a7e03264026eea41a05edd702206c071c97d1c6cc3bfec64dfff808cb0d5dfe857803428efb80bf7717b85cb619",
-    vendorField: "TID: 0",
-    id: "a5e9e6039675563959a783fa672c0ffe65369168a1ecffa3c89bf82961d8dbad",
+  version: 1,
+  network: 23,
+  type: 0,
+  timestamp: 35672738,
+  senderPublicKey:
+    "03d7dfe44e771039334f4712fb95ad355254f674c8f5d286503199157b7bf7c357",
+  fee: 10000000,
+  vendorFieldHex: "5449443a2030",
+  amount: 200000000,
+  expiration: 0,
+  recipientId: "AFzQCx5YpGg5vKMBg4xbuYbqkhvMkKfKe5",
+  signature:
+    "304502210096ec6e27176fa694638d6fff35d7a551b2ed8c479a7e03264026eea41a05edd702206c071c97d1c6cc3bfec64dfff808cb0d5dfe857803428efb80bf7717b85cb619",
+  vendorField: "TID: 0",
+  id: "a5e9e6039675563959a783fa672c0ffe65369168a1ecffa3c89bf82961d8dbad"
 }).toBeValidTransaction();
 ```
 
@@ -231,7 +233,9 @@ expect("DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN").toBeAddress();
 Assert that the given value is a public key.
 
 ```ts
-expect("022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d").toBePublicKey();
+expect(
+  "022cca9529ec97a772156c152a00aad155ee6708243e65c9d211a589cb5d43234d"
+).toBePublicKey();
 ```
 
 #### toBeWallet()
@@ -240,8 +244,9 @@ Assert that the given value is a wallet.
 
 ```ts
 expect({
-    address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
-    publicKey: "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0",
+  address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
+  publicKey:
+    "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0"
 }).toBeWallet();
 ```
 
@@ -251,9 +256,10 @@ Assert that the given value is a delegate wallet.
 
 ```ts
 expect({
-    username: "arkxdev",
-    address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
-    publicKey: "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0",
+  username: "arkxdev",
+  address: "DQ7VAW7u171hwDW75R1BqfHbA9yiKRCBSh",
+  publicKey:
+    "0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0"
 }).toBeDelegate();
 ```
 
@@ -264,7 +270,8 @@ expect({
 Assert that the given value is an array containing blocks.
 
 ```ts
-expect([{
+expect([
+  {
     blockSignature: "",
     createdAt: "",
     generatorPublicKey: "",
@@ -280,8 +287,9 @@ expect([{
     totalFee: "",
     transactions: "",
     updatedAt: "",
-    version: "",
-}]).toBeValidArrayOfBlocks();
+    version: ""
+  }
+]).toBeValidArrayOfBlocks();
 ```
 
 #### toBeValidBlock()
@@ -290,22 +298,22 @@ Assert that the given value is a transfer transaction.
 
 ```ts
 expect({
-    blockSignature: "",
-    createdAt: "",
-    generatorPublicKey: "",
-    height: "",
-    id: "",
-    numberOfTransactions: "",
-    payloadHash: "",
-    payloadLength: "",
-    previousBlock: "",
-    reward: "",
-    timestamp: "",
-    totalAmount: "",
-    totalFee: "",
-    transactions: "",
-    updatedAt: "",
-    version: "",
+  blockSignature: "",
+  createdAt: "",
+  generatorPublicKey: "",
+  height: "",
+  id: "",
+  numberOfTransactions: "",
+  payloadHash: "",
+  payloadLength: "",
+  previousBlock: "",
+  reward: "",
+  timestamp: "",
+  totalAmount: "",
+  totalFee: "",
+  transactions: "",
+  updatedAt: "",
+  version: ""
 }).toBeValidBlock();
 ```
 
@@ -335,17 +343,17 @@ Assert that the given value is a transaction from an API response.
 
 ```ts
 expect({
-    id: "",
-    blockid: "",
-    type: "",
-    timestamp: "",
-    amount: "",
-    fee: "",
-    senderId: "",
-    senderPublicKey: "",
-    signature: "",
-    asset: "",
-    confirmations: "",
+  id: "",
+  blockid: "",
+  type: "",
+  timestamp: "",
+  amount: "",
+  fee: "",
+  senderId: "",
+  senderPublicKey: "",
+  signature: "",
+  asset: "",
+  confirmations: ""
 }).toBeApiTransaction();
 ```
 
@@ -355,19 +363,19 @@ Assert that the given value is a paginated API response.
 
 ```ts
 expect({
-    status: 200,
-    headers: {},
-    data: {
-        meta: {
-            pageCount: "",
-            totalCount: "",
-            next: "",
-            previous: "",
-            self: "",
-            first: "",
-            last: "",
-        },
-    },
+  status: 200,
+  headers: {},
+  data: {
+    meta: {
+      pageCount: "",
+      totalCount: "",
+      next: "",
+      previous: "",
+      self: "",
+      first: "",
+      last: ""
+    }
+  }
 }).toBePaginated();
 ```
 
@@ -377,19 +385,19 @@ Assert that the given value is a successful API response.
 
 ```ts
 expect({
-    status: 200,
-    headers: {},
-    data: {
-        meta: {
-            pageCount: "",
-            totalCount: "",
-            next: "",
-            previous: "",
-            self: "",
-            first: "",
-            last: "",
-        },
-    },
+  status: 200,
+  headers: {},
+  data: {
+    meta: {
+      pageCount: "",
+      totalCount: "",
+      next: "",
+      previous: "",
+      self: "",
+      first: "",
+      last: ""
+    }
+  }
 }).toBeSuccessfulResponse();
 ```
 
@@ -406,7 +414,7 @@ Here are some things that are available in `utils`:
 - Testnet fixtures (blocks, delegates public keys and secrets)
 - Generators: generate objects such as transactions
 
-There is still a lot to improve in `utils`, some things might also be outdated. *Don't hesitate to make changes to improve it*.
+There is still a lot to improve in `utils`, some things might also be outdated. _Don't hesitate to make changes to improve it_.
 
 ### Do more than "basic" tests
 
@@ -418,4 +426,4 @@ Go deeper and test it with different parameters. Ask yourself: in which case thi
 
 If you have anything to ask, suggest or want to have any talk about testing, don't hesitate to reach out to the team.
 
-On Slack, you can contact *Air1* as he is managing the tests.
+On Slack, you can contact _Air1_ as he is managing the tests.

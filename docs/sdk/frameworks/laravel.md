@@ -44,7 +44,7 @@ This facade will dynamically pass static method calls to the `ark` object in the
 
 #### ArkServiceProvider
 
-*This class contains no public methods of interest, it should be added to the providers array in `config/app.php` as it sets up ioc bindings.*
+_This class contains no public methods of interest, it should be added to the providers array in `config/app.php` as it sets up ioc bindings._
 
 ### Examples
 

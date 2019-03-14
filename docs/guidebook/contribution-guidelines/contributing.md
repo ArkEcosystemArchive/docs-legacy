@@ -18,7 +18,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 ## Dos and Don'ts
 
-- **Do** commit features, refactors and additions to your branch. **If you do commit them, rebase your repository to remove them before sending your pull request.**
+- **Do** commit features, refactors and additions to a branch instead of `master` and `develop` directly and send a PR from your branch.
 
 - **Don't** commit console.logs, debugging or related functions to your branch. They are only of value during local development and differ for each developer.
 
@@ -51,6 +51,8 @@ While the following guidelines are not an absolute requirement, writing your cod
 When you think your contribution is ready and you would like to submit a pull-request, remember first to open an issue and then send a pull request that mentions the issue by making use of [closing-issues-using-keywords](https://help.github.com/articles/closing-issues-using-keywords/).
 
 When your pull request gets merged the issue will be automatically closed, and a connection be made between those two which makes it easier to figure out which issues and pull requests are related to each other.
+
+> If your PR fixes a bug or resolves a feature request, be sure to reference the issue with a keyword. Read more about keywords at the [official GitHub docs](https://help.github.com/en/articles/closing-issues-using-keywords).
 
 ## Things we DO NOT accept as additions to any applications or packages
 

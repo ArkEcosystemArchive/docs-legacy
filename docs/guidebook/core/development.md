@@ -76,7 +76,6 @@ For development, you could use our ready-to-use [Docker Compose](https://docs.do
 
 If you want to start a node which consists of a `relay` and `forger` you can use any of the following commands (inside `packages/core`).
 
-- `yarn start` => `~/.ark`
 - `yarn start:mainnet` => `packages/core/bin/config/networks/mainnet`
 - `yarn start:devnet` => `packages/core/bin/config/networks/devnet`
 - `yarn start:testnet` => `packages/core/bin/config/networks/testnet`

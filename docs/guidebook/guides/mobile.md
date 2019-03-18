@@ -91,7 +91,7 @@ If you discover a security vulnerability within this application, please send an
 - If you find any bugs, submit an [issue](https://github.com/ArkEcosystem/mobile-wallet/issues) or open [pull-request](https://github.com/ArkEcosystem/mobile-wallet/pulls), helping us catch and fix them.
 - Engage with other users and developers on the [ArkEcosystem Slack](https://ark.io/slack/).
 - Join to our [gitter](https://gitter.im/ark-developers/Lobby).
-- [Contribution bounties](https://docs.ark.io/guidebook/contribution-guidelines/contributing.html).
+- [Contribution bounties](/guidebook/contribution-guidelines/contributing.html).
 - [Help translate](https://github.com/ArkEcosystem/mobile-wallet/blob/master/TRANSLATING.md).
 
 ## Credits

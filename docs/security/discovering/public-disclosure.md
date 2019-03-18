@@ -1,6 +1,6 @@
 # Public Disclosure
 
-After we have assessed the risk and mitigated a vulnerability, it is publicly disclosed in our [dedicated repository](https://github.com/ArkEcosystem/security-vulnerabilities). 
+After we have assessed the risk and mitigated a vulnerability, it is publicly disclosed in our [dedicated repository](https://github.com/ArkEcosystem/security-vulnerabilities).
 
 ## Rewards program
 
@@ -12,13 +12,13 @@ We know that software will always have flaws that are hard to notice initially. 
 
 The worst of the worst security vulnerabilities related to funds or taking control of the network that need to be addressed and fixed ASAP.
 
-Examples: 
+Examples:
 - Making ARK out of thin air.
 - Spending someone else’s ARK without the need of their private keys
 - Replaying the same transaction multiple times without the need of private keys.
 - Exposing private keys via public methods.
 - Taking control of the entire network.
-- Permanently forking the network or a way to permanently destroy the integrity of the ARK blockchain without requiring a malicious delegate. 
+- Permanently forking the network or a way to permanently destroy the integrity of the ARK blockchain without requiring a malicious delegate.
 
 
 ### High: $2,000-$3,000
@@ -45,11 +45,11 @@ Examples:
 
 Security vulnerabilities that usually have no impact on the whole blockchain infrastructure, but can still pose problems for some specific things.
 
-Examples: 
+Examples:
 - Things that only affect a subset of nodes (e.g. hardware failures caused by an attack when the server satisfies the minimum requirements)
 - Inconveniences caused by a malicious delegate).
 
-Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: https://docs.ark.io/security/contributing/#procedure-for-a-pach
+Including a patch with your findings will also make you eligible for a bonus of up to 50% on top of these numbers. To get a bonus make sure to follow the steps outlined here: /security/contributing/#procedure-for-a-pach
 The size of the bonus is determined at the sole discretion of the Core Developers.
 
 

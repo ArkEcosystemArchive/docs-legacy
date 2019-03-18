@@ -62,15 +62,15 @@ Finally, we can set up the entire repository with one command:
 yarn setup
 ```
 
-If you wish to run tests from this point, follow the instructions in the [docker](./docker.html) guide (use case #1). Then, you may run tests on the whole repository or individual packages with `yarn test`.
+If you wish to run tests from this point, follow the instructions in the [docker](./docker.html) guide (use case #1). Then, you may run tests on the whole repository with `yarn test`.
 
 Just follow those steps and you are ready to get started. Happy Hacking!
 
 ## Database
 
-Ark Core stores all the blockchain data in a database. You could read more about it, in the [database section](https://docs.ark.io/guidebook/core/database.html#introduction).
+Ark Core stores all the blockchain data in a database. You could read more about it, in the [database section](/guidebook/core/development.html#database).
 
-For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](https://docs.ark.io/guidebook/core/docker.html).
+For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](/guidebook/core/docker.html).
 
 ## Starting a node
 

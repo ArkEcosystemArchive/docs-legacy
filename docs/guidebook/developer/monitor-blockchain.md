@@ -11,11 +11,11 @@ Generally speaking, there are two primary contexts in which you might want to mo
 
 Monitoring to the blockchain on a node is useful in combination with a local wallet to trigger actions as soon as possible after an event occurs.  External applications might want to listen to the blockchain to synchronize their database with the network's current state.
 
-Within Ark Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.  
+Within Ark Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
 
 By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, Ark Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
 
-This recipe will cover the first approach — monitoring with a custom plugin installed in Ark Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](https://docs.ark.io/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
+This recipe will cover the first approach — monitoring with a custom plugin installed in Ark Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
 
 This example assumes you have a working testnet running, and we'll need to create a custom plugin. Make sure you have a correctly set up development environment.
 
@@ -83,7 +83,7 @@ We can use this information to match against our forged blocks.
 
 At this point, researching the Events API can help us see which events might broadcast the information we are looking and, by extension, which events are most worth listening to.
 
-Looking at the list of [available events](https://docs.ark.io/guidebook/core/events.html#available-events), the most suitable candidate for obtaining blocks is `block.applied`.
+Looking at the list of [available events](/guidebook/core/events.html#available-events), the most suitable candidate for obtaining blocks is `block.applied`.
 
 ::: tip
 
@@ -99,11 +99,11 @@ if (block.forger === delegateWeAreMonitoring) {
 }
 ```
 
-Looking at the data model for a [block](https://docs.ark.io/guidebook/core/data-models.html#block), we can see that each block holds a copy of `generatorPublicKey` — in other words, the public key of the delegate who generated this block. That means, with the delegate information we got from the API and the block information we are receiving from our `block.applied` event, we should have everything we need to turn our pseudocode into working code.
+Looking at the data model for a [block](/guidebook/core/data-models.html#block), we can see that each block holds a copy of `generatorPublicKey` — in other words, the public key of the delegate who generated this block. That means, with the delegate information we got from the API and the block information we are receiving from our `block.applied` event, we should have everything we need to turn our pseudocode into working code.
 
 ```js
 // the public key from /api/delegates JSON response
-const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751' 
+const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
 // the public key of the block generator
 const generatorKey = block.generatorPublicKey
 
@@ -130,7 +130,7 @@ Next, let us get our solution into code. We will create a file in our plugin's `
 ```js
 // lib/delegate-monitor.js
 
-const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751' 
+const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
 const generatorKey = block.generatorPublicKey
 
 if (delegateKey === generatorKey) {
@@ -144,7 +144,7 @@ In our case, we need to utilize the `addListener` method, also available by call
 
 ```js
 function listenToDelegate (block) {
-    const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751' 
+    const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
     const generatorKey = block.generatorPublicKey
 
     if (delegateKey === generatorKey) {
@@ -176,7 +176,7 @@ module.exports = {
 }
 
 function monitorDelegate (block) {
-    const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751' 
+    const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
     const generatorKey = block.generatorPublicKey
 
     if (delegateKey === generatorKey) {

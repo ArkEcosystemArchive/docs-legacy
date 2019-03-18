@@ -53,4 +53,4 @@ Every plugin that is being registered in this file will be automatically loaded 
 
 ## Developing Plugins
 
-Check our [official guide](/guidebook/developer/write-a-plugin.html) to learn more about how to get started with plugin development.
+Check our [official guide](/tutorials/core/plugins/how-to-write-a-core-plugin.html) to learn more about how to get started with plugin development.

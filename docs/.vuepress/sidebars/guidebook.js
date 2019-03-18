@@ -8,7 +8,6 @@ module.exports = [
             "/guidebook/developer/setup-dev-environment.md",
             "/guidebook/developer/monitor-blockchain.md",
             "/guidebook/developer/send-transaction.md",
-            "/guidebook/developer/write-a-plugin.md",
             "/guidebook/developer/tester-cli-transaction.md"
         ]
     },

@@ -110,12 +110,12 @@ Starting ark-relay... done
 ```
 
 ::: tip
-All CLI commands with description can be viewed at [CLI Commands](https://docs.ark.io/guidebook/core/cli.html#available-commands) or by running `ark help` command.
+All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `ark help` command.
 :::
 
 ### 8. Checking to see if everything is working
 
-Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands 
+Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
 ark relay:log

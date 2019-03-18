@@ -6,7 +6,7 @@ Microsoft Azure offers cheap, reliable servers, virtual machines, and container 
 
 ::: tip
 
-This deployment method can be used to jump-start your journey to your BridgeChain in the process outlined [here](https://docs.ark.io/deployer/deployer.html).
+This deployment method can be used to jump-start your journey to your BridgeChain in the process outlined [here](/deployer/deployer.html).
 
 :::
 

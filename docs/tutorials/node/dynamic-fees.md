@@ -56,7 +56,7 @@ You can use dynamic fee constants to alter how the dynamic fee formula is applie
 
 `enabled` tells our node it should store uncommitted transactions, and send them to other nodes as well. This is the primary function of Relay nodes, and on by default.
 
-The `maxTransactionsPerSender` is a protection against spam attacks. For delegates, it might be useful to increase this value to 3000 (or their number of voters). `allowedSenders` is a specific whitelist. 
+The `maxTransactionsPerSender` is a protection against spam attacks. For delegates, it might be useful to increase this value to 3000 (or their number of voters). `allowedSenders` is a specific whitelist.
 
 `dynamicFees` is of special interest here. If `enabled` is set to `false`, your node will fall back to static fees. `minFeePool` value represents the minimum fee in Arktoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Arktoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
 
@@ -78,4 +78,4 @@ By default, the max transaction pool size is set to 100000. To change this value
 
 ## Restart Your Node
 
-With the node restarted, your dynamic fees should be working as intended. Feel free to test this using the utilities in `core-tester-cli` following the process in the [tester cli](https://docs.ark.io/tutorials/developer/tester-cli-transaction.html) tutorial.
+With the node restarted, your dynamic fees should be working as intended. Feel free to test this using the utilities in `core-tester-cli` following the process in the [tester cli](/tutorials/developer/tester-cli-transaction.html) tutorial.

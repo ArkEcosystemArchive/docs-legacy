@@ -1,4 +1,10 @@
-# How to write an Ark Core Plugin
+---
+title: How to write a Core Plugin
+---
+
+# How to write a Core Plugin
+
+[[toc]]
 
 In this guide, you will find information to enable you to write a proper Ark Core plugin, for use in your own Ark deployments; both in the case of Ark Core nodes a `BridgeChain` nodes.
 
@@ -104,7 +110,7 @@ yarn bootstrap
 If your package relies on any dependencies you should install them via [lerna add](https://github.com/lerna/lerna/tree/master/commands/add) the plugin you are developing.
 
 ```bash
-lerna add --scope=@arkecosystem/demo-plugin dependency-name --dev
+lerna add dependency-name --scope=@vendor/demo-plugin --dev
 ```
 
 Once everything is set up and configured, we can move on to developing the plugin.

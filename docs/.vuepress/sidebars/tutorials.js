@@ -10,8 +10,18 @@ module.exports = [
       "/tutorials/usage-guides/how-to-use-ark-mobile-wallet",
       "/tutorials/usage-guides/how-to-vote-in-the-ark-desktop-wallet"
     ]
-  },
-  {
+  }, {
+    title: "Core Plugins",
+    collapsable: false,
+    children: [
+      "/tutorials/core/plugins/how-to-write-a-core-plugin",
+      "/tutorials/core/plugins/how-to-interact-with-the-blockchain",
+      "/tutorials/core/plugins/how-to-interact-with-the-database",
+      "/tutorials/core/plugins/how-to-interact-with-wallets",
+      "/tutorials/core/plugins/how-to-interact-with-events",
+      "/tutorials/core/plugins/how-to-create-http-servers",
+    ]
+  }, {
     title: "Node",
     collapsable: false,
     children: [

@@ -154,7 +154,7 @@ cd ~
 
 #### Running Ark Core installation script
 
-Installing Ark Core is a straightforward process. We will use Ark installer script that will install all of the necessary dependencies, Ark Core onto your server and publish configuration files for it. To install essentials run this command: 
+Installing Ark Core is a straightforward process. We will use Ark installer script that will install all of the necessary dependencies, Ark Core onto your server and publish configuration files for it. To install essentials run this command:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
@@ -221,12 +221,12 @@ Starting ark-relay... done
 ```
 
 ::: tip
-All CLI commands with description can be viewed at [CLI Commands](https://docs.ark.io/guidebook/core/cli.html#available-commands) or by running `ark help` command.
+All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `ark help` command.
 :::
 
 #### Checking to see if everything is working
 
-Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands 
+Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
 ark relay:log

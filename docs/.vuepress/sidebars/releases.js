@@ -2,7 +2,7 @@ module.exports = [
   ['/', 'Back to Table of Contents'],
   ['/releases/', 'Releases Home'],
   {
-    title: "v2.3",
+    title: "[NOT-RELEASED] v2.3",
     collapsable: true,
     children: [
       ["/releases/v2.3/", "Summary"],

@@ -12,8 +12,6 @@ Ark Core allows you to use a [.env](https://github.com/bevry/envfile) file to pr
 
 | Variable          | Plugin                               | Default                                               |
 |-------------------|--------------------------------------|-------------------------------------------------------|
-| CORE_LOG_FILE      | @arkecosystem/core-logger-winston    | $ARK_PATH_DATA/logs/core/$ARK_NETWORK_NAME/%DATE%.log |
-| CORE_DB_STORAGE    | @arkecosystem/core-database-postgres | $ARK_PATH_DATA/database/$ARK_NETWORK_NAME             |
 | CORE_DB_HOST       | @arkecosystem/core-database-postgres | localhost                                             |
 | CORE_DB_USERNAME   | @arkecosystem/core-database-postgres | ark                                                   |
 | CORE_DB_PASSWORD   | @arkecosystem/core-database-postgres | password                                              |
@@ -23,6 +21,6 @@ Ark Core allows you to use a [.env](https://github.com/bevry/envfile) file to pr
 | CORE_API_HOST      | @arkecosystem/core-api               | 0.0.0.0                                               |
 | CORE_API_PORT      | @arkecosystem/core-api               | 4003                                                  |
 | CORE_WEBHOOKS_HOST | @arkecosystem/core-webhooks          | 0.0.0.0                                               |
-| CORE_WEBHOOKS_PORT | @arkecosystem/core-webhooks          | 4004                                                                                    
+| CORE_WEBHOOKS_PORT | @arkecosystem/core-webhooks          | 4004                                                  | 
 | CORE_JSONRPC_HOST  | @arkecosystem/core-json-rpc          | 0.0.0.0                                               |
 | CORE_JSONRPC_PORT  | @arkecosystem/core-json-rpc          | @arkecosystem/core-json-rpc                           |

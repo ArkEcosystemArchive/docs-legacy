@@ -22,4 +22,4 @@ This channel targets the stable version of core and receives updates when bug fi
 
 ## Notes
 
-During the development of 2.2.0 there were the channels `alpha`, `beta` and `rc` as a lot of testing had to be done before going publich with the switch from using a git repository to providing a CLI. From 2.3.0 onwards the `next` channel will serve as a combination of all of the aforementioned.
+During the development of 2.2.0 there were the channels `alpha`, `beta` and `rc` as a lot of testing had to be done before going public with the switch from using a git repository to providing a CLI. From 2.3.0 onwards the `next` channel will serve as a combination of all of the aforementioned.

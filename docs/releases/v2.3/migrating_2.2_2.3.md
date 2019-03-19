@@ -47,6 +47,16 @@ Be sure to complete all of the following changes before you continue to upgrade 
 
 > If you are using the plugin and want to continue using it you need to run `yarn global add @arkecosystem/core-logger-winston` and leave your configuration unchanged.
 
+### [DEVNET ONLY] Switching to the `next` release channel
+
+During the development of 2.2.0 there were the channels `alpha`, `beta` and `rc` as a lot of testing had to be done before going public with the switch from using a git repository to providing a CLI. Run the following command to install the 2.3.0 release.
+
+```shell
+yarn global add @arkecosystem/core@next
+```
+
+From 2.3.0 onwards the `next` channel will serve as a combination of all of the old channels on `devnet`. This means there won't be the need to switch between alpha, beta or rc anymore.
+
 ## Upgrade Steps
 
 ::: warning

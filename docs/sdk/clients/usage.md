@@ -950,7 +950,6 @@ You may query for:
 - A specific delegate using the username as ID.
 - All blocks forged by a specific delegate.
 - The voters of a specific delegate.
-- Voter balances of a delegate.
 
 :::: tabs
 
@@ -1034,13 +1033,6 @@ print(client.delegates.blocks(delegate_id="goose"))
 ```python
 print(client.delegates.voters(delegate_id="goose"))
 >> {'meta': {'count': 100, ... }}
-```
-
-#### List voter balances for a delegate
-
-```python
-print(client.delegates.voter_balances(delegate_id="goose"))
->> {'data': {'AZpoKsoqHAMWBNqeEf3WNfRCenxLR51pBt': 998386, ... }}
 ```
 
 :::

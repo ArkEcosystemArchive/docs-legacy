@@ -17,6 +17,7 @@ module.exports = [
       "/tutorials/core/plugins/how-to-write-a-core-plugin",
       "/tutorials/core/plugins/how-to-interact-with-the-blockchain",
       "/tutorials/core/plugins/how-to-interact-with-the-database",
+      "/tutorials/core/plugins/how-to-interact-with-the-transaction-pool",
       "/tutorials/core/plugins/how-to-interact-with-wallets",
       "/tutorials/core/plugins/how-to-interact-with-events",
       "/tutorials/core/plugins/how-to-create-http-servers",

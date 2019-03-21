@@ -156,6 +156,27 @@ docker-compose -f docker-compose-build.yml up -d
 
 This will build your ARK Core Docker image and run two separate containers. One for Core itself and another one for PostgreSQL.
 
+## Update
+
+### Docker live updates are now possible with [CLI](https://docs.ark.io/guidebook/core/cli.html)
+
+As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
+
+```bash
+docker exec -it core-devnet sudo apk add make gcc g++ git python
+```
+
+> We are all set! Run the update and follow instructions:
+
+
+```bash
+docker exec -it core-devnet ark update
+```
+
+::: tip
+Updates and all changes made to the containers are kept even on container or host restart.
+:::
+
 ## Development
 
 ### Generate the Configurations

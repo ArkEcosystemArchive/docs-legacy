@@ -159,6 +159,7 @@ Installing Ark Core is a straightforward process. We will use Ark installer scri
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
 ```
+
 You will be asked to input your current users password for sudo privileges. Write or paste it and press `enter` to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
@@ -231,6 +232,7 @@ Now we want to see if the Ark Relay process has started the synchronization proc
 ```bash
 ark relay:log
 ```
+
 or
 
 ```bash
@@ -245,6 +247,30 @@ If the process has started you will see a lot of messages like this (with actual
 
 Note that depending on the network you use synchronization of the blockchain can take upwards of 10 hours.
 
+### Recommended Configurations for a Forger Relay
+
+::: warning
+**Default configurations that ship with Core are meant for the use of normal relays.**
+
+If you are a forging delegate you are strongly advised to take additional security measures and disable as many public access points as possible on your relay to minimise the surface for possible attacks.
+:::
+
+We recommend to run multiple relays to strengthen the the network and to make it possible to disable public access to things like the API on your relay that is connected to your forger.
+
+Simple things like whitelists can already go a long way to limit the access of outsiders to public facing services like APIs or your plugins that might expose public access.
+
+#### Whitelisting Public API Access
+
+The first thing that we recommend that should be done on a relay that is used by your forger to retrieve all forging related information is to limit the Public API access.
+
+Open the `~/.config/ark-core/{NETWORK}/plugins.js` file and locate the `@arkecosystem/core-api` entry. By default you will see an entry for `whitelist: ["*"]` which means everyone can access your Public API which is recommended for relays but as this part of the guide is about a relay used for a forger we will change this setting.
+
+We recommend to limit the whitelist to IPs/Servers that you control or know are trusted. Simply changed the `whitelist` setting to `whitelist: ["ip-you-trust", "ip-you-trust", "ip-you-trust", ...]` and restart your relay. Now only the trusted IPs will be able to access your Public API.
+
+##### Notes
+
+1. If you do not use the Public API at all you can simply remove it from your plugins.js file and restart your relay.
+2. Core ships with the Public API enabled by default because desktop and mobile wallets rely on access to it. It is your job as a delegate and node-maintainer to provide enough relays so that wallets and developers can have access to the Public API without having to hit forging servers with loads of requests.
 
 ### What's Next?
 

@@ -41,6 +41,10 @@ The counterpart to the Guidebook, the tutorials contains practical code snippets
 [*Deployer*](/tutorials/deployer/) is the place to go for code snippets and tutorials related to building your own blockchain. We cover setting up your blockchain and deploying it to major cloud hosting service providers.
 [*Exchanges*](/exchanges/) is where developers for cryptocurrency exchanges can find information on how to integrate the ARK coin into their platforms. Though we cannot make any guarantees about the codebases of any projects besides the ARK coin, this recipe should serve as a good starting point for integrating Ark BridgeChain coins as well.
 
+### [Ark Ecosystem Cryptography](/cryptography/)
+
+This section provides details and insights into the Cryptographic Identities of the Ark Blockchain. It covers topics such as PrivateKeys, PublicKeys, and Signatures; as well as the hashing and encoding methods used by Ark.
+
 ### [Ark API](/api/)
 
 This section describes the structure of all Ark APIs, as well as usage examples. After you've read the Guidebook and tutorials, this section should be the first place you turn to find out how to interact with the Ark Ecosystem software.

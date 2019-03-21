@@ -241,12 +241,13 @@ sudo ufw default deny incoming
 
 #### Enable Node Port
 
-Depending which network this node is for will determine what port you open here. For mainnet use `4001`, devnet use `4002`, and testnet use `4000`.
+Depending which network this node is for will determine what port you open here. For mainnet use `4001`, devnet use `4002`, and testnet use `4000` and public API which is by default located on port `4003`.
 
-We don't want to open any more ports than required to operate securely.
+We don't want to open any more ports than required to operate securely so we will open  P2P port depending on the network (in our example for mainnet) and public API port.
 
 ```bash
 sudo ufw allow 4001/tcp
+sudo ufw allow 4003/tcp
 ```
 
 #### Install knockd on server

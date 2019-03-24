@@ -14,15 +14,19 @@ You can find the source code of this package at [packages/core-graphql](https://
 yarn add @arkecosystem/core-graphql
 ```
 
+## Alias
+
+`graphql`
+
 ## Configuration
 
-```js
-module.exports = {
-  enabled: false,
-  host: process.env.ARK_GRAPHQL_HOST || '0.0.0.0',
-  port: process.env.ARK_GRAPHQL_PORT || 4005,
-  path: '/graphql',
-}
+```ts
+export const defaults = {
+    enabled: false,
+    host: process.env.CORE_GRAPHQL_HOST || "0.0.0.0",
+    port: process.env.CORE_GRAPHQL_PORT || 4005,
+    path: "/graphql",
+};
 ```
 
 ## Usage

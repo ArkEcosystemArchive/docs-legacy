@@ -4,19 +4,19 @@ title: "Event Emittter"
 
 # Event Emitter
 
+::: tip
+You can find the source code of this package at [packages/core-event-emitter](https://github.com/ArkEcosystem/core/tree/develop/packages/core-event-emitter).
+:::
+
 ## Installation
 
 ```bash
 yarn add @arkecosystem/core-event-emitter
 ```
 
-## **Alias**
+## Alias
 
 `event-emitter`
-
-## **Implementation**
-
-[core-event-emitter](https://github.com/ArkEcosystem/core/tree/develop/packages/core-event-emitter)
 
 ## Notable Dependencies
 
@@ -34,29 +34,29 @@ Conceptually, this feature is similar to the [Hooks implementation in WordPress]
 
 Another way to think of the Event API is in the context of a [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In this pattern, Ark Core packages can act both as publishers and subscribers of events. 
 
-The list of events published by Ark Core packages can be found in `core-blockchain`'s `getEvents` [method](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/blockchain.ts#L664-L689):
+The list of events published by Ark Core packages can be found in `core-blockchain`'s `getEvents` [method](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/blockchain.ts#L589-L610):
 
-```js
-getEvents() {
-  return [
-    'block.applied',
-    'block.forged',
-    'block.reverted',
-    'delegate.registered',
-    'delegate.resigned',
-    'forger.failed',
-    'forger.missing',
-    'forger.started',
-    'peer.added',
-    'peer.removed',
-    'round.created',
-    'state:started',
-    'transaction.applied',
-    'transaction.expired',
-    'transaction.forged',
-    'transaction.reverted',
-    'wallet.saved',
-    'wallet.created.cold',
-  ]
+```ts
+public getEvents() {
+    return [
+        "block.applied",
+        "block.forged",
+        "block.reverted",
+        "delegate.registered",
+        "delegate.resigned",
+        "forger.failed",
+        "forger.missing",
+        "forger.started",
+        "peer.added",
+        "peer.removed",
+        "round.created",
+        "state:started",
+        "transaction.applied",
+        "transaction.expired",
+        "transaction.forged",
+        "transaction.reverted",
+        "wallet.saved",
+        "wallet.created.cold",
+    ];
 }
 ```

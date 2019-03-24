@@ -20,7 +20,7 @@ All JSON-RPC implementations should be built using the tools of your programming
 
 By default, the JSON-API listens on port 8080 for requests. This means that all JSON-RPC interactions should be POST requests to the URL `http://{NODE_IP}:{JSON-RPC_PORT}`, with the IP address of your node combined with the JSON-RPC port number.
 
-If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `ARK_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory.
+If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `CORE_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory.
 
 Your config directory is located at `~/.config/ark-core/{network}/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 

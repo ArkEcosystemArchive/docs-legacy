@@ -4,27 +4,27 @@ title: "Blockchain"
 
 # Blockchain
 
+::: tip
+You can find the source code of this package at [packages/core-blockchain](https://github.com/ArkEcosystem/core/tree/develop/packages/core-blockchain).
+:::
+
 ## Installation
 
 ```bash
 yarn add @arkecosystem/core-blockchain
 ```
 
-## **Alias**
+## Alias
 
 `blockchain`
 
-## **Implementation**
-
-[core-blockchain](https://github.com/ArkEcosystem/core/tree/develop/packages/core-blockchain)
-
-## **Notable Dependencies**
+## Notable Dependencies
 
 - [async](https://caolan.github.io/async/)
 - [xstate](https://github.com/davidkpiano/xstate#readme)
 - [immutable](http://facebook.github.io/immutable-js/)
 
-## **Summary**
+## Summary
 
 Blockchain is the primary "decision maker" of Ark Core. It receives updates on network state from the P2P API and the database, and uses this information to decide what processes should be run.
 
@@ -51,26 +51,25 @@ The core of the `core-blockchain` package defines these states and actions. In a
 
 If a node has recently rebooted and needs to collect blocks from peers, for example, the `core-blockchain` package oversees the synchronization process and watches the state for errors. In case of a network fork, `core-blockchain` initiates a rollback process to remove potentially faulty blocks before pinging peers.
 
-A top-level overview of the possible states and actions can be found in the `machines` directory under [blockchain.js](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/machines/blockchain.js). There are many different components to `core-blockchain`, and anybody looking to better understand Ark Core's internals would be well serviced by studying this package in depth.
+A top-level overview of the possible states and actions can be found in the `machines` directory under [blockchain.ts](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/machines/blockchain.ts). There are many different components to `core-blockchain`, and anybody looking to better understand Ark Core's internals would be well serviced by studying this package in depth.
 
 Here's a brief overview of how core functionality is divided throughout the package:
 
-- The top-level [blockchain.js](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/blockchain.js) file contains the Blockchain class that is ultimately loaded into the container. This file implements the *xstate* library, inherits actions from the state-machine.js file, and dispatches events to queues to be fulfilled by other packages
-- The [state-machine.js](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/state-machine.js) file is dedicated to providing many of the actions that the Blockchain class executes in response to changes in state. This is a good place to look to find the "meat" of the `core-blockchain` package, as much of the interaction with other Ark Core packages happens here.
-- The Blockchain class maintains two queues: the [rebuild](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/queue/rebuild.js) queue and the [process](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/queue/process.js) queue. The process queue is used to add new blocks to the chain, while the rebuild queue is used to verify and synchronize blocks in the case of a fork or rollback. Both queues ultimately dispatch actions with block payloads to the Blockchain class for further processing.
-- The [state-storage.js](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/lib/state-storage.js) file provides a single, in-memory access point for all files in the `core-blockchain` package to read and update state as necessary. It utilizes the *immutable* library to prevent side effects from causing unwanted state mutations.
+- The top-level [blockchain.ts](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/blockchain.ts) file contains the Blockchain class that is ultimately loaded into the container. This file implements the *xstate* library, inherits actions from the state-machine.ts file, and dispatches events to queues to be fulfilled by other packages
+- The [state-machine.ts](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/state-machine.ts) file is dedicated to providing many of the actions that the Blockchain class executes in response to changes in state. This is a good place to look to find the "meat" of the `core-blockchain` package, as much of the interaction with other Ark Core packages happens here.
+- The [state-storage.ts](https://github.com/ArkEcosystem/core/blob/develop/packages/core-blockchain/src/state-storage.ts) file provides a single, in-memory access point for all files in the `core-blockchain` package to read and update state as necessary. It utilizes the *immutable* library to prevent side effects from causing unwanted state mutations.
 
-## **Default Settings**
-```js
-{
-  fastRebuild: false,
-  databaseRollback: {
-    maxBlockRewind: 10000,
-    steps: 1000,
-  },
-  state: {
-    maxLastBlocks: 100,
-    maxLastTransactionIds: 10000,
-  },
-}
+## Configuration
+
+```ts
+export const defaults = {
+    databaseRollback: {
+        maxBlockRewind: 10000,
+        steps: 1000,
+    },
+    state: {
+        maxLastBlocks: 100,
+        maxLastTransactionIds: 10000,
+    },
+};
 ```

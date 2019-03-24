@@ -69,7 +69,6 @@ module.exports = [
                 title: 'Deprecated',
                 children: [
                     '/guidebook/core/plugins/deprecated/',
-                    '/guidebook/core/plugins/deprecated/core-debugger-cli.md',
                     '/guidebook/core/plugins/deprecated/core-graphql.md',
                     '/guidebook/core/plugins/deprecated/core-logger-winston.md',
                 ]

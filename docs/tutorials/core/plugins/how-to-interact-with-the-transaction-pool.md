@@ -17,7 +17,7 @@ The `core-transaction-pool` package manages everything that is related to transa
 ```ts
 import { app } from "@arkecosystem/core-container";
 
-const transactionPool = app.resolvePlugin("transactionPool");
+const transactionPool = app.resolvePlugin("transaction-pool");
 
 async function callTransactionPoolMethods() {
   // Get all transfer transactions from the pool.

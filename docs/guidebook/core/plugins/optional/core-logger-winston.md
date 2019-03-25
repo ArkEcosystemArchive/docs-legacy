@@ -2,7 +2,7 @@
 title: "Logger - Winston"
 ---
 
-# Loggger - Winston
+# Logger - Winston
 
 ::: tip
 You can find the source code of this package at [packages/core-logger-winston](https://github.com/ArkEcosystem/core/tree/develop/packages/core-logger-winston).

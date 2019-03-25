@@ -58,9 +58,13 @@ module.exports = [
                     '/guidebook/core/plugins/optional/',
                     '/guidebook/core/plugins/optional/core-api.md',
                     '/guidebook/core/plugins/optional/core-elasticsearch.md',
+                    '/guidebook/core/plugins/optional/core-error-tracker-airbrake.md',
                     '/guidebook/core/plugins/optional/core-error-tracker-bugsnag.md',
+                    '/guidebook/core/plugins/optional/core-error-tracker-raygun.md',
+                    '/guidebook/core/plugins/optional/core-error-tracker-rollbar.md',
                     '/guidebook/core/plugins/optional/core-error-tracker-sentry.md',
                     '/guidebook/core/plugins/optional/core-json-rpc.md',
+                    '/guidebook/core/plugins/optional/core-logger-winston.md',
                     '/guidebook/core/plugins/optional/core-tester-cli.md',
                     '/guidebook/core/plugins/optional/core-vote-report.md',
                     '/guidebook/core/plugins/optional/core-webhooks.md',
@@ -71,7 +75,6 @@ module.exports = [
                     '/guidebook/core/plugins/deprecated/',
                     '/guidebook/core/plugins/deprecated/core-debugger-cli.md',
                     '/guidebook/core/plugins/deprecated/core-graphql.md',
-                    '/guidebook/core/plugins/deprecated/core-logger-winston.md',
                 ]
             }
         ]

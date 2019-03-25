@@ -235,7 +235,7 @@ export class PluginRegistrar {
 
 In the `PluginRegistrar.setUp` method, we loop through this plugins property and register each plugin into our container according to the settings defined in the previous steps.
 
-This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the file that's returned by the `__loadPlugins` method. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
+This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the object that's returned by `container.config.get("plugins")`. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
 
 ```js
 module.exports = {

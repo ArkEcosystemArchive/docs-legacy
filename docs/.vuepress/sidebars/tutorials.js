@@ -44,4 +44,17 @@ module.exports = [
       "/tutorials/deployer/faq"
     ]
   },
+  {
+    title: "IoT",
+    collapsable: false,
+    children: [
+      "/tutorials/iot/environment/arduino/",
+      "/tutorials/iot/environment/os/",
+      "/tutorials/iot/environment/cpp/",
+      "/tutorials/iot/boards/esp32-adafruit/",
+      "/tutorials/iot/boards/esp8266-adafruit/",
+      "/tutorials/iot/storing-data-on-the-blockchain",
+      "/tutorials/iot/reacting-to-data-on-the-blockchain"
+    ]
+  }
 ];

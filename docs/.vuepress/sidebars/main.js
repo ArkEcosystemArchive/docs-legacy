@@ -8,6 +8,7 @@ module.exports = [
       '/guidebook/',
       '/tutorials/',
       '/cryptography/',
+      '/iot/',
       '/exchanges/',
       '/api/',
       '/sdk/',

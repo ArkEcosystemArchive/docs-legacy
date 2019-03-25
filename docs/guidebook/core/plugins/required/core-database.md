@@ -54,9 +54,10 @@ Resolving `core-database` into your plugins after `core-database-postgres` has l
 
 ## Behind the Scenes
 
-At the top level of the package, an instance of PostgresConnection is created from the neighboring [connection.js](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/connection.js) file and loaded into the [database manager](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database/lib/manager.js) found in the interface.
+At the top level of the package, an instance of PostgresConnection is created from the neighboring [postgres-connection.ts](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/src/postgres-connection.ts) file and loaded into the [database manager](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database/src/manager.ts) found in the interface.
 
 The connection from Ark Core to the Postgres database is created though the connection's `make` method:
+
 ```ts
 public async make(): Promise<Database.IDatabaseConnection> {
     if (this.db) {
@@ -85,14 +86,15 @@ public async make(): Promise<Database.IDatabaseConnection> {
     return null;
 }
 ```
+
 As the code above demonstrates, the PostgresQL database connection consists of the following major parts:
 
-- [QueryExecutor](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/sql/query-executor.js): this class is responsible for executing queries on the databases. Its various methods correspond to how many results the query should expect as its return value: `none`, `one`, `oneOrNone`, `many`, `manyOrNone`, and `any`.
-- [Migrations](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/index.js): this JavaScript file loads the various migration SQL files necessary for the PostgresQL DB and executes them if necessary. In general, the concept of [migrations](https://en.wikipedia.org/wiki/Schema_migration) is used across software programming to refer to the process of creating and updating how data is saved in a database. In other words, as applications evolve and their data needs change, data representations *migrate* from one form to another, with each such migration represented in one SQL query.
-    - `core-database-postgres` defines four migrations that create new Postgres tables: [wallets](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305100000-create-wallets-table.sql), [blocks](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305300000-create-blocks-table.sql), [transactions](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305400000-create-transactions-table.sql), and [rounds](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305200000-create-rounds-table.sql).
-- [Models](https://github.com/ArkEcosystem/core/tree/develop/packages/core-database-postgres/lib/models): these JavaScript classes guide the serialization process as raw PostgresQL query results are transformed into data objects for use elsewhere in Ark Core. Keep in mind that, unlike the data models available in Core's `crypto` library, these data models contain strictly data, not methods. The sole responsibility of the models in `core-database-postgres` is to ensure that the raw data results returned from Postgres queries can be accessed in JavaScript without incident.
-- [Repositories](https://github.com/ArkEcosystem/core/tree/develop/packages/core-database-postgres/lib/repositories): These repositories combine Postgres queries with database models to produce JavaScript object responses to data queries throughout Core.
-- [WalletManager](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database/lib/wallet-manager.js): an in-memory access point for wallet information. Changes in wallet balances are recorded in the WalletManager first, then saved into the database in batches to improve performance.
+- [QueryExecutor](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/src/sql/query-executor.ts): this class is responsible for executing queries on the databases. Its various methods correspond to how many results the query should expect as its return value: `none`, `one`, `oneOrNone`, `many`, `manyOrNone`, and `any`.
+- [Migrations](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/src/migrations/index.ts): this TypeScript file loads the various migration SQL files necessary for the PostgresQL DB and executes them if necessary. In general, the concept of [migrations](https://en.wikipedia.org/wiki/Schema_migration) is used across software programming to refer to the process of creating and updating how data is saved in a database. In other words, as applications evolve and their data needs change, data representations *migrate* from one form to another, with each such migration represented in one SQL query.
+    - `core-database-postgres` defines four migrations that create new Postgres tables: [blocks](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305300000-create-blocks-table.sql), [transactions](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305400000-create-transactions-table.sql), and [rounds](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305200000-create-rounds-table.sql).
+- [Models](https://github.com/ArkEcosystem/core/tree/develop/packages/core-database-postgres/src/models): these TypeScript classes guide the serialization process as raw PostgresQL query results are transformed into data objects for use elsewhere in Ark Core. Keep in mind that, unlike the data models available in Core's `crypto` library, these data models contain strictly data, not methods. The sole responsibility of the models in `core-database-postgres` is to ensure that the raw data results returned from Postgres queries can be accessed in JavaScript without incident.
+- [Repositories](https://github.com/ArkEcosystem/core/tree/develop/packages/core-database-postgres/src/repositories): These repositories combine Postgres queries with database models to produce TypeScript object responses to data queries throughout Core.
+- [WalletManager](https://github.com/ArkEcosystem/core/blob/develop/packages/core-database/src/wallet-manager.ts): an in-memory access point for wallet information. Changes in wallet balances are recorded in the WalletManager.
 
 ## Interface Methods
 
@@ -101,9 +103,7 @@ These are the functions outlined in the database interface:
 - verifyBlockchain
 - getActiveDelegates
 - buildWallets
-- saveWallets
 - saveBlock
-- enqueueSaveBlock
 - enqueueDeleteBlock
 - enqueueDeleteRound
 - commitQueuedQueries
@@ -111,14 +111,28 @@ These are the functions outlined in the database interface:
 - getBlock
 - getLastBlock
 - getBlocks
+- getBlocksByHeight
 - getTopBlocks
 - getRecentBlockIds
 - saveRound
 - deleteRound
+- getTransaction
+- getForgedTransactionsIds
+- loadBlocksFromCurrentRound
+- loadTransactionsForBlocks
+- updateDelegateStats
+- applyRound
+- revertRound
+- applyBlock
+- revertBlock
+- verifyTransaction
+- getBlocksForRound
+- getCommonBlocks
 
 Rewriting the `core-database` layer should be done with caution. Although the Postgres database implementation might require more computational resources than a lower-level datastore, this complexity brings with it a streamlining of developer experience through the use of well-known SQL queries. This is particularly important given the many ways in which Ark Core data can be accessed by external applications — from the Public API to webhooks.
 
 ## Postgres Database Configuration
+
 ```ts
 export const defaults = {
     initialization: {

@@ -12,5 +12,6 @@ Use the sidebar to navigate this section, or follow the links below:
 - [Node](/tutorials/node/)
 - [Deployer](/tutorials/deployer/)
 - [Pay](/tutorials/pay)
+- [IoT](/tutorials/iot)
 
 Tutorials might become outdated over time. If you find any incorrect information, please [open an issue](https://github.com/ArkEcosystem/docs/issues).

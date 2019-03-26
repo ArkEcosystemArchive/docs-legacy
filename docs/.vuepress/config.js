@@ -41,6 +41,7 @@ const config = {
       "/faq/": require("./sidebars/faq"),
       "/introduction/": require("./sidebars/introduction"),
       "/tutorials/": require('./sidebars/tutorials'),
+      "/iot/": require('./sidebars/iot'),
       "/guidebook/": require('./sidebars/guidebook'),
       "/exchanges/": require('./sidebars/exchanges'),
       "/releases/": require('./sidebars/releases'),

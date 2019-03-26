@@ -89,8 +89,7 @@ module.exports = [
             "/guidebook/guides/explorer",
             "/guidebook/guides/pay",
         ]
-    },
-    {
+    }, {
         title: "Contribution Guidelines",
         collapsable: true,
         children: [
@@ -101,8 +100,15 @@ module.exports = [
             "/guidebook/contribution-guidelines/git-branch-guidelines",
             "/guidebook/contribution-guidelines/git-commit-guidelines",
             "/guidebook/contribution-guidelines/project-structuring",
-            "/guidebook/contribution-guidelines/releases-and-versioning",
             "/guidebook/contribution-guidelines/repository-management"
+        ]
+    }, {
+        title: "Release Guidelines",
+        collapsable: true,
+        children: [
+            "/guidebook/release-guidelines/",
+            "/guidebook/release-guidelines/releases-and-versioning",
+            "/guidebook/release-guidelines/going-live"
         ]
     }
 ];

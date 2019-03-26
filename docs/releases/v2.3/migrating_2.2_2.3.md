@@ -47,6 +47,28 @@ Be sure to complete all of the following changes before you continue to upgrade 
 
 > If you are using the plugin and want to continue using it you need to run `yarn global add @arkecosystem/core-logger-winston` and leave your configuration unchanged.
 
+### Package Aliases
+
+From version 2.3 onwards all aliases defined by Core packages will adhere to the `kebab-case` format. If your plugin makes use of any of the following packages, make sure to adjust the calls to the core containers `resolvePlugin` and `resolveOptions` methods with the new alias:
+
+| Old             | New              |
+| --------------- | ---------------- |
+| databaseManager | database-manager |
+| logManager      | log-manager      |
+| transactionPool | transaction-pool |
+
+For example, change
+
+```ts
+const logManager: LogManager = container.resolvePlugin("logManager");
+```
+
+to
+
+```ts
+const logManager: LogManager = container.resolvePlugin("log-manager");
+```
+
 ### [DEVNET ONLY] Switching to the `next` release channel
 
 During the development of 2.2.0 there were the channels `alpha`, `beta` and `rc` as a lot of testing had to be done before going public with the switch from using a git repository to providing a CLI. Run the following command to install the 2.3.0 release.

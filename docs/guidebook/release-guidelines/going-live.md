@@ -84,4 +84,4 @@ To make sure that everything is working as intended you should follow these chec
   - Ledger
 - Send a second signature registration transaction
   - 1 Passphrase
-  - Ledger
+  

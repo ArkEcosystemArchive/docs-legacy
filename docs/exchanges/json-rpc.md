@@ -30,7 +30,7 @@ Note that the JSON-RPC disables remote access by default. If you must connect to
 
 ```js
 '@arkecosystem/core-json-rpc': {
-  whitelist: ['192.168.1.*', '10.0.*.*']
+    whitelist: ['192.168.1.*', '10.0.*.*']
 }
 ```
 
@@ -38,7 +38,7 @@ Alternatively, you can enable access from all remote hosts by enabling the `allo
 
 ```js
 '@arkecosystem/core-json-rpc': {
-  allowRemote: true
+    allowRemote: true
 }
 ```
 
@@ -712,18 +712,16 @@ Creates a transaction using a saved BIP38 wallet. As with `transactions.create`,
 
 The node uses variables defined in `~/.config/ark-core/{network}/.env` for configuration. All required variables have defaults set as well.
 
-```js
+```ts
 {
-    enabled: process.env.ARK_JSON_RPC_ENABLED,
-    host: process.env.ARK_JSON_RPC_HOST || '0.0.0.0',
-    port: process.env.ARK_JSON_RPC_PORT || 8080,
+    enabled: process.env.CORE_JSON_RPC_ENABLED,
+    host: process.env.CORE_JSON_RPC_HOST || "0.0.0.0",
+    port: process.env.CORE_JSON_RPC_PORT || 8080,
     allowRemote: false,
-    whitelist: ['127.0.0.1', '::ffff:127.0.0.1'],
+    whitelist: ["127.0.0.1", "::ffff:127.0.0.1"],
     database: {
-    uri:
-        process.env.ARK_JSON_RPC_DATABASE
-        || `sqlite://${process.env.ARK_PATH_DATA}/database/json-rpc.sqlite`,
-    options: {},
+        uri: process.env.CORE_JSON_RPC_DATABASE || `sqlite://${process.env.CORE_PATH_DATA}/json-rpc.sqlite`,
+        options: {},
     },
 }
 ```

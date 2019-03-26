@@ -14,15 +14,19 @@ You can find the source code of this package at [packages/core-error-tracker-sen
 yarn add @arkecosystem/core-error-tracker-sentry
 ```
 
+## Alias
+
+`error-tracker`
+
 ## Configuration
 
 > Check https://docs.sentry.io/quickstart?platform=node to find your DSN and more information about available options.
 
-```js
-module.exports = {
-  dsn: process.env.ARK_ERROR_TRACKER_SENTRY_DSN,
-  debug: true,
-  attachStacktrace: true,
-  environment: process.env.ARK_NETWORK_NAME,
-}
+```ts
+export const defaults = {
+    dsn: process.env.CORE_ERROR_TRACKER_SENTRY_DSN,
+    debug: true,
+    attachStacktrace: true,
+    environment: process.env.CORE_NETWORK_NAME,
+};
 ```

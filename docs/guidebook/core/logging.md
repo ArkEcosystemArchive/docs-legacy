@@ -17,7 +17,7 @@ The default logger we provide is [winston](https://github.com/winstonjs/winston)
 Let's take a closer look at how the logger is bootstrapped and how easy it is to extend it.
 
 ```js
-const logManager = manager.get("logManager");
+const logManager = manager.get("log-manager");
 await logManager.makeDriver(new WinstonDriver(options));
 
 return logManager.driver();

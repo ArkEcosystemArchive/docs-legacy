@@ -18,7 +18,7 @@ Be sure to complete all of the following changes before you continue to upgrade 
 
 ### Configuration
 
-- Since 2.3 we no longer ship `@arkecosystem/core-logger-winston` by default, open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-logger-winston` plugin and replace it like shown below.
+- Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logger-pino`. We advise you to switch to the new package, to do so open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-logger-winston` plugin and replace it like shown below.
 
 #### Old
 
@@ -44,8 +44,6 @@ Be sure to complete all of the following changes before you continue to upgrade 
 ```js
 "@arkecosystem/core-logger-pino": {},
 ```
-
-> If you are using the plugin and want to continue using it you need to run `yarn global add @arkecosystem/core-logger-winston` and leave your configuration unchanged.
 
 ### Package Aliases
 

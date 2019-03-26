@@ -26,4 +26,4 @@ Requests that return multiple items will be paginated to 100 items by default. Y
 
 ## Public Testing Relay
 
-If you are not running a relay yourself you can use [https://api.ark.io/api/v2/](https://api.ark.io/api/v2/) to test API calls. Happy developing!
+If you are not running a relay yourself you can use [https://api.ark.io/api/](https://api.ark.io/api/) to test API calls. Happy developing!

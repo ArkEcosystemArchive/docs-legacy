@@ -21,6 +21,23 @@ To make sure that everything is working as intended you should follow these chec
 - Test `core-json-rpc` to ensure it works for exchanges
 - Run benchmarks on `master` and `develop` to see if there are crypto performance regressions
 
+### Transactions
+
+- Send a transfer transaction
+  - 1 Passphrase
+  - 2 Passphrases
+- Send a vote transaction
+  - 1 Passphrase
+  - 2 Passphrases
+- Send an unvote transaction
+  - 1 Passphrase
+  - 2 Passphrases
+- Send a delegate registration transaction
+  - 1 Passphrase
+  - 2 Passphrases
+- Send a second signature registration transaction
+  - 1 Passphrase
+
 ## Checklist for Desktop Wallet
 
 - Run tests and make sure CircleCI is passing
@@ -42,10 +59,13 @@ To make sure that everything is working as intended you should follow these chec
 - Import a wallet
 - Import a wallet **(with address only)**
 - Import a wallet **(with passphrase only)**
+- Protect with a password
 
 ### Transactions
 
 - Browse transactions
+- Send transactions with dynamic fees
+- Send transactions with static fees
 - Send a transfer transaction
   - 1 Passphrase
   - 2 Passphrases

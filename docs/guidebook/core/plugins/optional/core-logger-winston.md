@@ -14,36 +14,38 @@ You can find the source code of this package at [packages/core-logger-winston](h
 yarn add @arkecosystem/core-logger-winston
 ```
 
+## Alias
+
+`logger`
+
 ## Configuration
 
-```js
-module.exports = {
-  transports: {
-    console: {
-      constructor: "Console",
-      options: {
-        level: process.env.ARK_LOG_LEVEL || "debug",
-        format: require("./formatter")(true),
-        stderrLevels: ["error", "warn"]
-      }
+```ts
+import { formatter } from "./formatter";
+
+export const defaults = {
+    transports: {
+        console: {
+            constructor: "Console",
+            options: {
+                level: process.env.CORE_LOG_LEVEL || "debug",
+                format: formatter(true),
+                stderrLevels: ["error", "warn"],
+            },
+        },
+        dailyRotate: {
+            package: "winston-daily-rotate-file",
+            constructor: "DailyRotateFile",
+            options: {
+                level: process.env.CORE_LOG_LEVEL || "debug",
+                format: formatter(false),
+                filename: process.env.CORE_LOG_FILE || `${process.env.CORE_PATH_LOG}/%DATE%.log`,
+                datePattern: "YYYY-MM-DD",
+                zippedArchive: true,
+                maxSize: "100m",
+                maxFiles: "10",
+            },
+        },
     },
-    dailyRotate: {
-      package: "winston-daily-rotate-file",
-      constructor: "DailyRotateFile",
-      options: {
-        level: process.env.ARK_LOG_LEVEL || "debug",
-        format: require("./formatter")(false),
-        filename:
-          process.env.ARK_LOG_FILE ||
-          `${process.env.ARK_PATH_DATA}/logs/core/${
-            process.env.ARK_NETWORK_NAME
-          }/%DATE%.log`,
-        datePattern: "YYYY-MM-DD",
-        zippedArchive: true,
-        maxSize: "100m",
-        maxFiles: "10"
-      }
-    }
-  }
 };
 ```

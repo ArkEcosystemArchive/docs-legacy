@@ -57,19 +57,19 @@ Notice the first three keys in the `dynamicFees` object: `enable`, `minFeePool` 
 
 The `dynamic` keys in `fees` tells us whether or not dynamic fees should be enabled. The default configuration, as shown above, **enables** dynamic fees. If we were to change `enabled` to false, the node would instead disable dynamic fees.
 
-The `minFeePool` value represents the minimum fee in Arktoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Arktoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
+The `minFeePool` value represents the minimum fee in Satoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Satoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
 
-Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's arktoshi-per-byte value:
+Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's satoshi-per-byte value:
 
 ```js
-const calculatedFee = (addonBytesValue + transactionSizeInBytes) * arktoshiPerByte
+const calculatedFee = (addonBytesValue + transactionSizeInBytes) * satoshiPerByte
 ```
 
 ## Changing the Transaction Pool Size
 
-It is also possible to alter the economic tradeoff of dynamic fees by changing the maximum size of your transaction pool. The behavior specified in the `ARK_MAX_TRANSACTIONS_IN_POOL` environment variable takes effect once the pool hits the specified number of transactions.
+It is also possible to alter the economic tradeoff of dynamic fees by changing the maximum size of your transaction pool. The behavior specified in the `CORE_MAX_TRANSACTIONS_IN_POOL` environment variable takes effect once the pool hits the specified number of transactions.
 
-Once that happens, your node checks the fee of each incoming transaction and only includes them in its pool of forgeable transactions if the incoming fee is higher than the smallest fee currently in the pool and evicts the smallest fee transaction from the pool to obey the cap defined by `ARK_MAX_TRANSACTIONS_IN_POOL`.
+Once that happens, your node checks the fee of each incoming transaction and only includes them in its pool of forgeable transactions if the incoming fee is higher than the smallest fee currently in the pool and evicts the smallest fee transaction from the pool to obey the cap defined by `CORE_MAX_TRANSACTIONS_IN_POOL`.
 
 Note that, as fee transactions are only executed upon block creation, removing a transaction from the pool in this manner does not result in a charge to the "losing" transaction.
 
@@ -78,7 +78,7 @@ By default, the max transaction pool size is set to 100000. To change this value
 ##### file: ~/.config/ark-core/{network}/.env
 
 ```
-ARK_MAX_TRANSACTIONS_IN_POOL=100000
+CORE_MAX_TRANSACTIONS_IN_POOL=100000
 ```
 
 ## Restart Your Node

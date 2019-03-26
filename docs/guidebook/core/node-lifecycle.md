@@ -103,7 +103,7 @@ We can see that this code only requires one external dependency: an `app` object
 
 To understand how this setup differs between forgers and relays, let's look at the `buildApplication` call in the [forger:run](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/forger/run.ts) command:
 
-```js
+```ts
 public async run(): Promise<void> {
     const { flags } = await this.parseWithNetwork(RunCommand);
 
@@ -111,6 +111,7 @@ public async run(): Promise<void> {
         include: [
             "@arkecosystem/core-event-emitter",
             "@arkecosystem/core-config",
+            "@arkecosystem/core-logger",
             "@arkecosystem/core-logger-pino",
             "@arkecosystem/core-forger",
         ],
@@ -188,18 +189,18 @@ export class Environment {
 
 Without going too much into the implementation details, the `setUp` function here effectively takes care of binding values into our `process.env` object, which is a global object used throughout our Node application. You can read more about the `process.env` object [here](https://nodejs.org/api/process.html#process_process_env), but the SparkNotes is that the `Environment.setUp` method defines the following variables for use throughout our node:
 
-- ARK_PATH_CONFIG: the path to our configuration directory, pulled in from our NPM script and dependent on the network our node is running on
-- ARK_PATH_DATA: the path to our data directory, which defaults to `~/.local/share/ark-core/{network}`
-- ARK_NETWORK: a stringified version of the `network.json` file in our ARK_PATH_CONFIG directory
-- ARK_NETWORK_NAME: the `name` property from our `network.json` file
+- CORE_PATH_CONFIG: the path to our configuration directory, pulled in from our NPM script and dependent on the network our node is running on
+- CORE_PATH_DATA: the path to our data directory, which defaults to `~/.local/share/ark-core/{network}`
+- CORE_NETWORK: a stringified version of the `network.json` file in our CORE_PATH_CONFIG directory
+- CORE_NETWORK_NAME: the `name` property from our `network.json` file
 
-Additionally, here is where we load any environment variables defined in our node's `.env` file. This `.env` file, located in your ARK_PATH_DATA directory, is where you can specify many of the optional settings for your node: whether to enable webhooks, GraphQL, and so on. All optional settings are loaded into the environment here, after the essential environment variables listed above.
+Additionally, here is where we load any environment variables defined in our node's `.env` file. This `.env` file, located in your CORE_PATH_DATA directory, is where you can specify many of the optional settings for your node: whether to enable webhooks, GraphQL, and so on. All optional settings are loaded into the environment here, after the essential environment variables listed above.
 
 ## Loading Our Plugins
 
 With the proper environment now set up, we can begin fleshing out our node's central capacities using plugins. We can see from our `Container.setUp` method that plugins are initialized using the `PluginRegistrar` and setup using the Registrar's `setUp` method.
 
-Using the snippets below or the source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core-container/lib/registrars/plugin.js), let's look at the constructor and `setUp` methods for `PluginRegistrar`:
+Using the snippets below or the source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core-container/src/registrars/plugin.ts), let's look at the constructor and `setUp` methods for `PluginRegistrar`:
 
 ```ts
 import { asValue } from "awilix";
@@ -234,7 +235,7 @@ export class PluginRegistrar {
 
 In the `PluginRegistrar.setUp` method, we loop through this plugins property and register each plugin into our container according to the settings defined in the previous steps.
 
-This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the file that's returned by the `__loadPlugins` method. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
+This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the object that's returned by `container.config.get("plugins")`. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
 
 ```js
 module.exports = {

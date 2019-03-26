@@ -14,17 +14,19 @@ You can find the source code of this package at [packages/core-error-tracker-bug
 yarn add @arkecosystem/core-error-tracker-bugsnag
 ```
 
+## Alias
+
+`error-tracker`
+
 ## Configuration
 
 > Check https://docs.bugsnag.com/platforms/nodejs/other/configuration-options/ for more options and details.
 
-```js
-module.exports = {
-  apiKey: process.env.ARK_ERROR_TRACKER_BUGSNAG_API_KEY,
-  configuration: {
+```ts
+export const defaults = {
+    apiKey: process.env.CORE_ERROR_TRACKER_BUGSNAG_API_KEY,
     metaData: {
-      network: process.env.ARK_NETWORK_NAME,
+        network: process.env.CORE_NETWORK_NAME,
     },
-  },
-}
+};
 ```

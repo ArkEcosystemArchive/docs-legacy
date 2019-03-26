@@ -13,3 +13,7 @@ You can find the source code of this package at [packages/core-logger](https://g
 ```bash
 yarn add @arkecosystem/core-logger
 ```
+
+## Alias
+
+`log-manager`

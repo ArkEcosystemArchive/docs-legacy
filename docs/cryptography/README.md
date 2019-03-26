@@ -10,7 +10,7 @@ This section provides a brief overview the cryptographic identities and protocol
 
 The following examples will be using test-fixtures from the [ARK Core](https://github.com/ArkEcosystem/core/) repo on [GitHub](https://github.com/ArkEcosystem/).
 
-[Identities Test Fixtures:](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/__tests__/identities/fixture.json)
+[Identities Test Fixtures:](https://github.com/ArkEcosystem/core/blob/develop/__tests__/unit/crypto/identities/fixture.json)
 
 ```json
 {
@@ -24,9 +24,9 @@ The following examples will be using test-fixtures from the [ARK Core](https://g
 }
 ```
 
-[Message Test Fixtures:](https://github.com/ArkEcosystem/core/blob/master/packages/crypto/__tests__/utils/message.test.ts)
+[Message Test Fixtures:](https://github.com/ArkEcosystem/core/blob/develop/__tests__/unit/crypto/utils/message.test.ts)
 
-```js
+```ts
 const fixture = {
     data: {
         publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",

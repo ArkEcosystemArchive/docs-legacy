@@ -1,6 +1,9 @@
 ---
 title: "Using Docker"
 ---
+
+# Using Docker
+
 ## Running a Docker Relay Node
 
 ### Recommended Hardware Requirements
@@ -16,7 +19,7 @@ Prerequisites to be installed:
 
 - [Docker Community Edition](https://docs.docker.com/install)
 - [Docker Compose](https://docs.docker.com/compose/install)
-:::
+  :::
 
 ### TL;DR
 
@@ -63,6 +66,7 @@ sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli container
 ```bash
 sudo usermod -aG docker ${USER}
 ```
+
 :::warning
 You'll have to logout and login again or just open another session in order to activate the last step.
 :::
@@ -106,6 +110,7 @@ sudo systemctl start docker && sudo systemctl enable docker
 ```bash
 sudo usermod -aG docker ${USER}
 ```
+
 :::warning
 You'll have to logout and login again or just open another session in order to activate the last step.
 :::
@@ -142,6 +147,7 @@ For normal Node operation, make sure TCP port 4001 is accessible from outside.
 ```bash
 docker-compose up -d
 ```
+
 ::: tip
 If you prefer to use custom DB Name, DB User and DB Password simply adjust variables `POSTGRES_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB` `(file=docker-compose.yml)` and `CORE_DB_PASSWORD`, `CORE_DB_USERNAME` and `CORE_DB_DATABASE` `(file=mainnet.env)` correspondingly.
 :::
@@ -173,6 +179,7 @@ postgres-mainnet    Up 4 minutes
 ```bash
 docker logs core-mainnet
 ```
+
 ```bash
 docker logs postgres-mainnet
 ```
@@ -196,7 +203,6 @@ docker exec -it core-devnet sudo apk add make gcc g++ git python
 ```
 
 - We are all set! Run the update and follow instructions:
-
 
 ```bash
 docker exec -it core-devnet ark update

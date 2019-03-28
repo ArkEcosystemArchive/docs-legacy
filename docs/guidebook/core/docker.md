@@ -7,8 +7,8 @@ title: "Docker"
 ::: tip
 Prerequisites to be installed:
 
-- [Docker Engine](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker Engine](https://docs.docker.com/install)
+- [Docker Compose](https://docs.docker.com/compose/install)
 
 :::
 

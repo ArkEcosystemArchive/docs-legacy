@@ -18,13 +18,9 @@ yarn add @arkecosystem/core-event-emitter
 
 `event-emitter`
 
-## Notable Dependencies
-
-- [eventemitter3](https://github.com/primus/eventemitter3)
-
 ## Summary
 
-`core-event-emitter` wraps around NodeJS's native Event class to provide event functionality across an Ark Core node. While Ark Core uses eventemitter3 to utilize fully asynchronous event handling, the eventemitter3 API mirrors that of NodeJS's Event API, allowing Node developers to build Ark packages using familiar and extensible conventions.
+`core-event-emitter` wraps around NodeJS's native Event class to provide event functionality across an Ark Core node.
 
 ## Behind the Scenes
 
@@ -40,7 +36,9 @@ The list of events published by Ark Core packages can be found in `core-blockcha
 public getEvents() {
     return [
         "block.applied",
+        "block.disregarded",
         "block.forged",
+        "block.received",
         "block.reverted",
         "delegate.registered",
         "delegate.resigned",
@@ -54,6 +52,9 @@ public getEvents() {
         "transaction.applied",
         "transaction.expired",
         "transaction.forged",
+        "transaction.pool.added",
+        "transaction.pool.rejected",
+        "transaction.pool.removed",
         "transaction.reverted",
         "wallet.saved",
         "wallet.created.cold",

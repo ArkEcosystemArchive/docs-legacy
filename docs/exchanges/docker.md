@@ -199,13 +199,13 @@ docker exec -it core-mainnet pm2 logs
 - As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 
 ```bash
-docker exec -it core-devnet sudo apk add make gcc g++ git python
+docker exec -it core-mainnet sudo apk add make gcc g++ git python
 ```
 
 - We are all set! Run the update and follow instructions:
 
 ```bash
-docker exec -it core-devnet ark update
+docker exec -it core-mainnet ark update
 ```
 
 ::: tip

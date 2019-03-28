@@ -149,26 +149,31 @@ POST /api/webhooks
 
 ### Events  
 
-| Event                | Description                                                                         | Implemented        |
-|----------------------|-------------------------------------------------------------------------------------|--------------------|
-| block.applied        | Fires when a block is saved                                                         | :white_check_mark: |
-| block.forged         | Fires when a block is forged                                                        | :white_check_mark: |
-| block.reverted       | Fires when a block is removed from the database (e.g. on a rollback)                | :white_check_mark: |
-| delegate.registered  | Fires when a new delegate is registered                                             | :white_check_mark: |
-| delegate.resigned    | Fires when a delegate resigns                                                       | :white_check_mark: |
-| forger.failed        | Fires when the forger module fails to start                                         | :white_check_mark: |
-| forger.missing       | Fires when it is detected that the forger module isn't running                      | :white_check_mark: |
-| forger.started       | Fires when the forger module forges a new block                                     | :x:                |
-| peer.added           | Fires when a peer is added                                                          | :white_check_mark: |
-| peer.removed         | Fires when a peer is removed                                                        | :white_check_mark: |
-| round.created        | Fires when a new round is created and saved to the database                         | :white_check_mark: |
-| state:started        |                                                                                     | :x:                |
-| transaction.applied  | Fires when a transaction is saved                                                   | :white_check_mark: |
-| transaction.expired  | Fires when an unconfirmed transaction expires                                       | :white_check_mark: |
-| transaction.forged   | Fires when a transaction is forged by a delegate                                    | :white_check_mark: |
-| transaction.reverted | Fires when a transaction is removed from the database                               | :x:                |
-| wallet.saved         | Fires when a wallet is updated (e.g. its balance changed, voted etc)                | :white_check_mark: |
-| wallet.created.cold  | Fires when a wallet that never existed before is saved (e.g. received its first tx) | :white_check_mark: |
+| Event                     | Description                                                                         | Implemented        |
+|---------------------------|-------------------------------------------------------------------------------------|--------------------|
+| block.applied             | Fires when a block is saved                                                         | :white_check_mark: |
+| block.disregarded         | Fires when a block is disregarded                                                   | :white_check_mark: |
+| block.forged              | Fires when a block is forged                                                        | :white_check_mark: |
+| block.received            | Fires when a block is incoming                                                      | :white_check_mark: |
+| block.reverted            | Fires when a block is removed from the database (e.g. on a rollback)                | :white_check_mark: |
+| delegate.registered       | Fires when a new delegate is registered                                             | :white_check_mark: |
+| delegate.resigned         | Fires when a delegate resigns                                                       | :white_check_mark: |
+| forger.failed             | Fires when the forger module fails to start                                         | :white_check_mark: |
+| forger.missing            | Fires when it is detected that the forger module isn't running                      | :white_check_mark: |
+| forger.started            | Fires when the forger module forges a new block                                     | :x:                |
+| peer.added                | Fires when a peer is added                                                          | :white_check_mark: |
+| peer.removed              | Fires when a peer is removed                                                        | :white_check_mark: |
+| round.created             | Fires when a new round is created and saved to the database                         | :white_check_mark: |
+| state:started             |                                                                                     | :x:                |
+| transaction.applied       | Fires when a transaction is saved                                                   | :white_check_mark: |
+| transaction.expired       | Fires when an unconfirmed transaction expires                                       | :white_check_mark: |
+| transaction.forged        | Fires when a transaction is forged by a delegate                                    | :white_check_mark: |
+| transaction.pool.added    | Fires when transactions are added to the transaction pool                           | :white_check_mark: |
+| transaction.pool.rejected | Fires when transactions are rejected and _not_ added to the transaction pool        | :white_check_mark: |
+| transaction.pool.removed  | Fires when a transaction is removed from the transaction pool by its ID             | :white_check_mark: |
+| transaction.reverted      | Fires when a transaction is removed from the database                               | :x:                |
+| wallet.saved              | Fires when a wallet is updated (e.g. its balance changed, voted etc)                | :white_check_mark: |
+| wallet.created.cold       | Fires when a wallet that never existed before is saved (e.g. received its first tx) | :white_check_mark: |
 
 ### Conditions  
 

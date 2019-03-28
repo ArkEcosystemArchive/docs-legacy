@@ -6,6 +6,7 @@ module.exports = [
     collapsable: false,
     children: [
       "/exchanges/relay",
+      "/exchanges/docker",
     ]
   },
   {

@@ -13,7 +13,8 @@ We have added "quick guides" to walk you through the process of interacting with
 
 Use the sidebar to navigate this section, or follow the links below:
 
-* [Relay node installation instructions](/exchanges/relay.html)
+* [Relay node installation instructions (Bare Metal or VM](/exchanges/relay.html)
+* [Run a relay node using Docker](/exchanges/docker.html)
 * [Public API quick guide](/exchanges/public-api.html)
 * [JSON-RPC quick guide](/exchanges/json-rpc-quick.html)
 * [Migration to Ark-Core - What do I need to know?](/exchanges/migrating-to-ark-core.html)

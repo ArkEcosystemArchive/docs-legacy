@@ -1,6 +1,7 @@
 ---
 title: "Installing and configuring a Relay Node (Bare Metal or VM)"
 ---
+
 # Installing a Relay Node
 
 ## Introduction
@@ -165,9 +166,8 @@ Please read the documentation pages for all of our [Ark API clients and cryptogr
 
 Also, read the [API documentation](/api/public/v2/).
 
----
-title: "Using Docker"
----
+# Using Docker
+
 ## Running a Docker Relay Node 
 
 ::: tip

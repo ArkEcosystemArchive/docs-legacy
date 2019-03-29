@@ -11,6 +11,12 @@ module.exports = [
       "/tutorials/usage-guides/how-to-vote-in-the-ark-desktop-wallet"
     ]
   }, {
+    title: "Core",
+    collapsable: false,
+    children: [
+      "/tutorials/core/how-to-use-milestones",
+    ]
+  }, {
     title: "Core Plugins",
     collapsable: false,
     children: [

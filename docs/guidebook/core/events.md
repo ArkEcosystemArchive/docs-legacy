@@ -88,6 +88,30 @@ Due to data corruption or other reasons, a Node might revert its state until it 
 
 [Block](/guidebook/core/data-models.html#block)
 
+### block.disregarded
+
+#### event
+
+```js
+"block.disregarded";
+```
+
+#### description
+
+Fires when a block is disregarded
+
+### block.received
+
+#### event
+
+```js
+"block.received";
+```
+
+#### description
+
+Fires when a block is incoming
+
 ### delegate.registered
 
 #### event
@@ -251,6 +275,42 @@ This event will be emitted when a transaction is included in a block and thus ha
 #### payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
+
+### transaction.pool.added
+
+#### event
+
+```js
+"transaction.pool.added";
+```
+
+#### description
+
+Fires when transactions are added to the transaction pool
+
+### transaction.pool.rejected
+
+#### event
+
+```js
+"transaction.pool.rejected";
+```
+
+#### description
+
+Fires when transactions are rejected and not added to the transaction pool
+
+### transaction.pool.removed
+
+#### event
+
+```js
+"transaction.pool.removed";
+```
+
+#### description
+
+Fires when a transaction is removed from the transaction pool by its ID
 
 ### transaction.reverted
 

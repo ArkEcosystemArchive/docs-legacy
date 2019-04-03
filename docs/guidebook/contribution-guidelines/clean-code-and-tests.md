@@ -34,6 +34,12 @@ Here is a quick TLDR to sum SOLID application design up:
 4. Each Entity should follow a contract and always return the same output, no matter the implementation.
 5. Each Entity should be as loosely coupled as possible.
 
+## Comments
+
+1. Comments should be avoided as much as possible by writing expressive code.
+2. Don't use docblocks for methods that can be fully type hinted. If you find yourself to really need a description you should probably go back and refactor the piece of code you want to comment to reduce the complexity and need for a comment.
+3. Only add a description when it provides more context than the method signature itself. Use full sentences for descriptions, including a period at the end.
+
 ## Test Suites
 
 Writing a test suite for your application is fundamental for the maintainability of your application for future developers.

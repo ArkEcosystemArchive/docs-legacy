@@ -34,6 +34,14 @@ Here is a quick TLDR to sum SOLID application design up:
 4. Each Entity should follow a contract and always return the same output, no matter the implementation.
 5. Each Entity should be as loosely coupled as possible.
 
+### Defaults for Classes
+
+Try to keep the **O** of **SOLID** in your mind: code should be open for extension, but closed for modification. That's why you should use `private` as the default visibility modifier.
+
+This way you're encouraged to think before opening up your classes to the outside world. You should take a moment to think about possible other ways to solve a problem instead of opening up classes. You could for example rely more on composition, dependency injection and interfaces; instead of extending classes.
+
+Especially in the context of open source, you're encouraged to think twice about making a method `public` or `protected`, or opening a class for extension. Every entry point in your code that is open for the public to use, is an entry point you'll have to maintain with backwards compatibility in mind.
+
 ## Comments
 
 1. Comments should be avoided as much as possible by writing expressive code.

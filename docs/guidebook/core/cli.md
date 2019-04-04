@@ -270,11 +270,11 @@ ark core:log
 
 #### Flags
 
-| Name      | Description                                 |      Required      |
-| --------- | ------------------------------------------- | :----------------: |
-| --error   | only show error output                      | :white_check_mark: |
-| --network | the name of the network that should be used |        :x:         |
-| --token   | the name of the token that should be used   |        :x:         |
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --error   | only show error output                      |   :x:    |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 #### Examples
 
@@ -527,11 +527,11 @@ ark forger:log
 
 #### Flags
 
-| Name      | Description                                 |      Required      |
-| --------- | ------------------------------------------- | :----------------: |
-| --error   | only show error output                      | :white_check_mark: |
-| --network | the name of the network that should be used |        :x:         |
-| --token   | the name of the token that should be used   |        :x:         |
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --error   | only show error output                      |   :x:    |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 #### Examples
 
@@ -678,11 +678,11 @@ ark relay:log
 
 #### Flags
 
-| Name      | Description                                 |      Required      |
-| --------- | ------------------------------------------- | :----------------: |
-| --error   | only show error output                      | :white_check_mark: |
-| --network | the name of the network that should be used |        :x:         |
-| --token   | the name of the token that should be used   |        :x:         |
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --error   | only show error output                      |   :x:    |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 #### Examples
 
@@ -853,7 +853,6 @@ ark snapshot:dump
 | Name              | Description                                     | Required |
 | ----------------- | ----------------------------------------------- | :------: |
 | --blocks          | blocks to append to, correlates to folder name  |   :x:    |
-| --codec           | codec name, default is msg-lite binary          |   :x:    |
 | --start           | [default: -1] start network height to export    |   :x:    |
 | --end             | [default: -1] end network height to export      |   :x:    |
 | --skipCompression | skip gzip compression                           |   :x:    |
@@ -875,10 +874,9 @@ ark snapshot:restore
 
 | Name               | Description                                     | Required |
 | ------------------ | ----------------------------------------------- | :------: |
-| --signatureVerify  | signature verification                          |   :x:    |
+| --verifySignatures | signature verification                          |   :x:    |
 | --skipRestartRound | skip revert to current round                    |   :x:    |
 | --blocks           | blocks to append to, correlates to folder name  |   :x:    |
-| --codec            | codec name, default is msg-lite binary          |   :x:    |
 | --start            | [default: -1] start network height to export    |   :x:    |
 | --end              | [default: -1] end network height to export      |   :x:    |
 | --skipCompression  | skip gzip compression                           |   :x:    |
@@ -888,7 +886,7 @@ ark snapshot:restore
 
 ### snapshot:rollback
 
-Rollback the database to a specific height
+Roll back the database to a specific height or by a specified number of blocks
 
 #### Usage
 
@@ -898,12 +896,17 @@ ark snapshot:rollback
 
 #### Flags
 
-| Name      | Description                                           | Required |
-| --------- | ----------------------------------------------------- | :------: |
-| --height  | [default: -1] block network height number to rollback |   :x:    |
-| --trace   | dumps generated queries and settings to console       |   :x:    |
-| --network | the name of the network that should be used           |   :x:    |
-| --token   | the name of the token that should be used             |   :x:    |
+::: warning
+Either `height` or `number` has to be provided.
+:::
+
+| Name      | Description                                           |        Required         |
+| --------- | ----------------------------------------------------- | :---------------------: |
+| --height  | block network height number to roll back to           | :ballot_box_with_check: |
+| --number  | number of blocks to roll back                         | :ballot_box_with_check: |
+| --trace   | dumps generated queries and settings to console       |           :x:           |
+| --network | the name of the network that should be used           |           :x:           |
+| --token   | the name of the token that should be used             |           :x:           |
 
 ### snapshot:truncate
 
@@ -914,6 +917,11 @@ Truncate the database
 ```bash
 ark snapshot:truncate
 ```
+
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 ### snapshot:verify
 
@@ -927,17 +935,16 @@ ark snapshot:verify
 
 #### Flags
 
-| Name              | Description                                     | Required |
-| ----------------- | ----------------------------------------------- | :------: |
-| --signatureVerify | signature verification                          |   :x:    |
-| --blocks          | blocks to append to, correlates to folder name  |   :x:    |
-| --codec           | codec name, default is msg-lite binary          |   :x:    |
-| --start           | [default: -1] start network height to export    |   :x:    |
-| --end             | [default: -1] end network height to export      |   :x:    |
-| --skipCompression | skip gzip compression                           |   :x:    |
-| --trace           | dumps generated queries and settings to console |   :x:    |
-| --network         | the name of the network that should be used     |   :x:    |
-| --token           | the name of the token that should be used       |   :x:    |
+| Name               | Description                                     | Required |
+| ------------------ | ----------------------------------------------- | :------: |
+| --verifySignatures | signature verification                          |   :x:    |
+| --blocks           | blocks to append to, correlates to folder name  |   :x:    |
+| --start            | [default: -1] start network height to export    |   :x:    |
+| --end              | [default: -1] end network height to export      |   :x:    |
+| --skipCompression  | skip gzip compression                           |   :x:    |
+| --trace            | dumps generated queries and settings to console |   :x:    |
+| --network          | the name of the network that should be used     |   :x:    |
+| --token            | the name of the token that should be used       |   :x:    |
 
 ## Plugins
 

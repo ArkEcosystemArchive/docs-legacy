@@ -853,7 +853,6 @@ ark snapshot:dump
 | Name              | Description                                     | Required |
 | ----------------- | ----------------------------------------------- | :------: |
 | --blocks          | blocks to append to, correlates to folder name  |   :x:    |
-| --codec           | codec name, default is msg-lite binary          |   :x:    |
 | --start           | [default: -1] start network height to export    |   :x:    |
 | --end             | [default: -1] end network height to export      |   :x:    |
 | --skipCompression | skip gzip compression                           |   :x:    |
@@ -878,7 +877,6 @@ ark snapshot:restore
 | --verifySignatures | signature verification                          |   :x:    |
 | --skipRestartRound | skip revert to current round                    |   :x:    |
 | --blocks           | blocks to append to, correlates to folder name  |   :x:    |
-| --codec            | codec name, default is msg-lite binary          |   :x:    |
 | --start            | [default: -1] start network height to export    |   :x:    |
 | --end              | [default: -1] end network height to export      |   :x:    |
 | --skipCompression  | skip gzip compression                           |   :x:    |

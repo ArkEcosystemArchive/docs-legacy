@@ -270,11 +270,11 @@ ark core:log
 
 #### Flags
 
-| Name      | Description                                 |      Required      |
-| --------- | ------------------------------------------- | :----------------: |
-| --error   | only show error output                      | :white_check_mark: |
-| --network | the name of the network that should be used |        :x:         |
-| --token   | the name of the token that should be used   |        :x:         |
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --error   | only show error output                      |   :x:    |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 #### Examples
 
@@ -527,11 +527,11 @@ ark forger:log
 
 #### Flags
 
-| Name      | Description                                 |      Required      |
-| --------- | ------------------------------------------- | :----------------: |
-| --error   | only show error output                      | :white_check_mark: |
-| --network | the name of the network that should be used |        :x:         |
-| --token   | the name of the token that should be used   |        :x:         |
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --error   | only show error output                      |   :x:    |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 #### Examples
 
@@ -678,11 +678,11 @@ ark relay:log
 
 #### Flags
 
-| Name      | Description                                 |      Required      |
-| --------- | ------------------------------------------- | :----------------: |
-| --error   | only show error output                      | :white_check_mark: |
-| --network | the name of the network that should be used |        :x:         |
-| --token   | the name of the token that should be used   |        :x:         |
+| Name      | Description                                 | Required |
+| --------- | ------------------------------------------- | :------: |
+| --error   | only show error output                      |   :x:    |
+| --network | the name of the network that should be used |   :x:    |
+| --token   | the name of the token that should be used   |   :x:    |
 
 #### Examples
 

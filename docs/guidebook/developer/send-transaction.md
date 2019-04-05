@@ -429,6 +429,10 @@ Address address = Address::fromPassphrase(passphrase, devnetByte);
 //  'address.toString()' output: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
 ```
 
+```cpp
+uint64_t epoch = Ark::Crypto::Utils::Slot::epoch(Ark::Crypto::Networks::Devnet);
+
+//  'epoch' output: 1490101200
 :::
 
 ::: tab ruby

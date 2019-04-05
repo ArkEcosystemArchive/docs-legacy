@@ -419,7 +419,7 @@ func main() {
 
 With the C++ SDK's, there is no default network configuration.
 
-i.e. Each method that produces network-dependent output takes the network version as a function parameter.
+i.e. Each method that produces network-dependent output takes a network object or version-byte as a function parameter.
 
 ```cpp
 const char * passphrase = "this is a top secret passphrase";

@@ -416,6 +416,19 @@ func main() {
 :::
 
 ::: tab C++
+
+With the C++ SDK's, there is no default network configuration.
+
+i.e. Each method that produces network-dependent output takes the network version as a function parameter.
+
+```cpp
+const char * passphrase = "this is a top secret passphrase";
+const uint8_t devnetByte = 0x1E;
+Address address = Address::fromPassphrase(passphrase, devnetByte);
+
+//  'address.toString()' output: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+```
+
 :::
 
 ::: tab ruby

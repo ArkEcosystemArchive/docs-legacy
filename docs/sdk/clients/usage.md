@@ -449,6 +449,8 @@ go test ./...
 
 :::
 
+::: tab C++
+
 1. Fork the [package](https://github.com/ArkEcosystem/cpp-client).
 
 2. Clone the newly forked repository.

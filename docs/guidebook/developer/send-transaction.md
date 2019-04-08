@@ -416,6 +416,23 @@ func main() {
 :::
 
 ::: tab C++
+
+With the C++ SDK's, there is no default network configuration.
+
+i.e. Each method that produces network-dependent output takes a network object or version-byte as a function parameter.
+
+```cpp
+const char * passphrase = "this is a top secret passphrase";
+const uint8_t devnetByte = 0x1E;
+Address address = Address::fromPassphrase(passphrase, devnetByte);
+
+//  'address.toString()' output: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
+```
+
+```cpp
+uint64_t epoch = Ark::Crypto::Utils::Slot::epoch(Ark::Crypto::Networks::Devnet);
+
+//  'epoch' output: 1490101200
 :::
 
 ::: tab ruby

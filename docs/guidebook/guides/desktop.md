@@ -39,7 +39,10 @@ Translations are part of our [ARK Development and Security Bounty Program](https
 
 Full translations are considered to be `Tier 3`, while grammar fixes, typos, etc. are considered to be `Tier 6`.
 
-<details><summary>Full translations should involve 5 tasks</summary>
+<details>
+<summary>
+  <h4>Full translations should involve 5 tasks</h4>
+</summary>
 
  - Create a pull request for the language you are going to translate. If you have doubts about something, use English to explain them.
  - Translate the textual content of the application, using the [English language file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) as the reference. To do that, a new file, with the language locale code should be created. The name of the file should be a valid [RFC 5646](https://tools.ietf.org/html/rfc5646) and should be located at `src/renderer/i18n/locales/LANGUAGE.js`. Thanks to [vue-i18n-extract](https://github.com/pixari/vue-i18n-extract), it is possible to execute `yarn i18n src/renderer/i18n/locales/LANGUAGE.js` to find suggestions of missing translations.
@@ -82,7 +85,10 @@ npm install -g yarn
 
 ### Commands
 
-<details><summary>List of commands</summary>
+<details>
+<summary>
+  <h4>List of commands</h4>
+</summary>
 
 ``` bash
 # Install dependencies
@@ -91,7 +97,7 @@ yarn install
 # Execute the application. Making changes in the code, updates the application (hot reloading).
 yarn dev
 
-# Lint all JS/Vue files in the `src` and `__tests__`
+# Lint all JS/Vue files in `src` and `__tests__`
 yarn lint
 
 # Lint, and fix, all JS/Vue files in `src` and `__tests__`

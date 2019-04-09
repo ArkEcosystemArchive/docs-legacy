@@ -106,4 +106,4 @@ If you discover a security vulnerability within this application, please send an
 
 ## License
 
-[MIT](https://github.com/ARKEcosystem/mobile-wallet/blob/master/LICENSE) © [ARKEcosystem](https://ark.io)
+[MIT](https://github.com/ARKEcosystem/mobile-wallet/blob/master/LICENSE) © [ARK Ecosystem](https://ark.io)

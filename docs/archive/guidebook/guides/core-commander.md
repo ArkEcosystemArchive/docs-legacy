@@ -30,4 +30,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](https://github.com/ARKEcosystem/core-commander/blob/master/LICENSE) © [ARKEcosystem](https://ark.io)
+[MIT](https://github.com/ARKEcosystem/core-commander/blob/master/LICENSE) © [ARK Ecosystem](https://ark.io)

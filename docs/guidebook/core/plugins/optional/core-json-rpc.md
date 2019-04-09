@@ -9,7 +9,7 @@ If you are looking to just broadcast transactions you should take a look at [Cre
 # JSON-RPC
 
 ::: tip
-You can find the source code of this package at [packages/core-json-rpc](https://github.com/ArkEcosystem/core/tree/develop/packages/core-json-rpc).
+You can find the source code of this package at [packages/core-json-rpc](https://github.com/ARKEcosystem/core/tree/develop/packages/core-json-rpc).
 :::
 
 ## Installation

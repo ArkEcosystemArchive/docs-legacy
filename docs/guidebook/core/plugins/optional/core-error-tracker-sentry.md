@@ -5,7 +5,7 @@ title: "Error Tracker - Sentry"
 # Error Tracker - Sentry
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-sentry](https://github.com/ArkEcosystem/core/tree/develop/packages/core-error-tracker-sentry).
+You can find the source code of this package at [packages/core-error-tracker-sentry](https://github.com/ARKEcosystem/core/tree/develop/packages/core-error-tracker-sentry).
 :::
 
 ## Installation

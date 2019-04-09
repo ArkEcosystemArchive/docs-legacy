@@ -7,10 +7,10 @@ Connecting to the API is done via the Crypto and Client SDKs. Many queries can b
 
 At a surface level, the two SDKs are separated by their functions and intended use cases:
 
-- The Crypto SDK provides the cryptographic functions necessary to authenticate and validate Ark transactions.
-- The Client SDK provides wrapper functions to unify and streamline API calls between your application and the Ark blockchain.
+- The Crypto SDK provides the cryptographic functions necessary to authenticate and validate ARK transactions.
+- The Client SDK provides wrapper functions to unify and streamline API calls between your application and the ARK blockchain.
 
-Put another way, the Crypto SDK structures your data in a format that all Ark nodes can understand, while the Client SDK handles the actual communication between your application and an Ark node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
+Put another way, the Crypto SDK structures your data in a format that all ARK nodes can understand, while the Client SDK handles the actual communication between your application and an ARK node. Where the Crypto SDK is internal, the Client SDK is external, as the below diagram illustrates:
 
 ![A diagram showing the differences between Client and Crypto APIs](./assets/public-api/client-crypto.png)
 
@@ -26,7 +26,7 @@ These quick actions will all assume you've loaded a Client instance with the IP 
 
 ::: tip
 
-Ark Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version (defaults to v2).
+ARK Node (v1) has been deprecated. Some references to V1 client constructors may remain for legacy purposes. However, no current clients require you to specify the API Version (defaults to v2).
 :::
 
 :::: tabs
@@ -58,7 +58,7 @@ Connection<Two> connection = new Connection(map);
 package main
 
 import (
-  ark "github.com/ArkEcosystem/go-client/client"
+  ark "github.com/ARKEcosystem/go-client/client"
   "net/url"
   )
 
@@ -72,8 +72,8 @@ func main() {
 ::: tab python
 
 ```python
-from client import ArkClient
-client = ArkClient('http://127.0.0.1:4003/api')
+from client import ARKClient
+client = ARKClient('http://127.0.0.1:4003/api')
 ```
 
 :::
@@ -82,7 +82,7 @@ client = ArkClient('http://127.0.0.1:4003/api')
 
 ## Check Wallet Balance
 
-Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given Ark address.
+Checking a wallet balance involves using the `wallets` resource to `GET` the wallet corresponding to a given ARK address.
 
 :::: tabs
 ::: tab javascript
@@ -382,7 +382,7 @@ pprint(client.transactions.create([tx]))
 There are a few things worth noticing about the above code. Firstly, the code assumes that you have declared two variables already:
 
 1. `passphrase` - the passphrase of the sending account, used to sign the transaction. This should come from somewhere secure, such as a `.env` file.
-2. `recipientId` - the Ark address of the receiving account. Should be provided by the exchange user when submitting withdrawal requests.
+2. `recipientId` - the ARK address of the receiving account. Should be provided by the exchange user when submitting withdrawal requests.
 
 Second, when sending your request using the `exchangeClient`, ensure that the value of `transactions` is an array, even if you have only one transaction object.
 

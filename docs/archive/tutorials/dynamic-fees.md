@@ -4,13 +4,13 @@ This tutorial outlines how to configure a Delegate Node to accept dynamic fees. 
 
 ## Why dynamic fees
 
-Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the Ark Network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
+Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the ARK Network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
 
 Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/Miner_fees), where it is a vital part of its mining economy.
 
 ## Find Your Config Directory
 
-First things first, you need to find your config directory. If you installed Ark Core using the `core-commander`, you can typically find this folder at `~/.config/ark-core/{network}/`.
+First things first, you need to find your config directory. If you installed ARK Core using the `core-commander`, you can typically find this folder at `~/.config/ark-core/{network}/`.
 
 The file we'll access from this folder is `plugins.js`. If you see it, you're in the right place.
 
@@ -24,7 +24,7 @@ nano ~/.config/ark-core/{network}/plugins.js
 
 There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@arkecosystem/core-transaction-pool` key, and the dynamic fees themselves.
 
-You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Ark Core node. The `dynamicFees` config key in your `@arkecosystem/core-transaction-pool` section should look like this:
+You can use dynamic fee constants to alter how the dynamic fee formula is applied in your ARK Core node. The `dynamicFees` config key in your `@arkecosystem/core-transaction-pool` section should look like this:
 
 ##### file: ~/.config/ark-core/{network}/plugins.js
 

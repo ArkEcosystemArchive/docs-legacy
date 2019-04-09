@@ -8,9 +8,9 @@ title: "Guidelines"
 
 ## Introduction
 
-**The following is a guide for implementing a new Ark Cryptography SDK. It covers the required functionalities as well as guidelines for how cryptography should typically look and behave.**
+**The following is a guide for implementing a new ARK Cryptography SDK. It covers the required functionalities as well as guidelines for how cryptography should typically look and behave.**
 
-These guidelines are to be strictly followed if you are implementing or modifying a cryptography package for the Ark Ecosystem.
+These guidelines are to be strictly followed if you are implementing or modifying a cryptography package for the ARK Ecosystem.
 
 Following these guidelines is required to provide a streamlined experience across different languages to make it easier for new developers to get started with developing a new package or modify an existing one without lowering the quality of the already existing implementation.
 
@@ -137,7 +137,7 @@ Following these guidelines is required to provide a streamlined experience acros
 
 ## Terminology & Phrasing
 
-- If you need to use the `Ark` name, keep these 2 use-cases in mind. The first one is `ARK` which is used in financial contexts like `10 ARK`. The second is `Ark` which used for everything else that is not talking about `ARK`, the financial unit.
+- If you need to use the `ARK` name, keep these 2 use-cases in mind. The first one is `ARK` which is used in financial contexts like `10 ARK`. The second is `ARK` which used for everything else that is not talking about `ARK`, the financial unit.
 
 - If you work with functions that require a `secret` or `passphrase` name the variables `passphrase` and `secondPassphrase`.
 
@@ -149,7 +149,7 @@ Following these guidelines is required to provide a streamlined experience acros
 
 The structure outlined here should be followed as closely as possible. If you work with an **Object Oriented Programming Language** you should be able to implement this structure as is, small adjustments might be required for languages like Go as nested packages can get hacky.
 
-You can check [https://github.com/ArkEcosystem/php-crypto](https://github.com/ArkEcosystem/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
+You can check [https://github.com/ARKEcosystem/php-crypto](https://github.com/ARKEcosystem/php-crypto) for an example of how this structure looks like when implemented and how it is reflected in the structure of tests.
 
 ```
 [src | lib | crypto]
@@ -217,12 +217,12 @@ There are already a few implementations of cryptography packages available, so t
 
 ### Object Oriented Programming
 
-- [https://github.com/ArkEcosystem/dotnet-crypto](https://github.com/ArkEcosystem/dotnet-crypto)
-- [https://github.com/ArkEcosystem/php-crypto](https://github.com/ArkEcosystem/php-crypto)
-- [https://github.com/ArkEcosystem/python-crypto](https://github.com/ArkEcosystem/python-crypto)
-- [https://github.com/ArkEcosystem/ruby-crypto](https://github.com/ArkEcosystem/ruby-crypto)
+- [https://github.com/ARKEcosystem/dotnet-crypto](https://github.com/ARKEcosystem/dotnet-crypto)
+- [https://github.com/ARKEcosystem/php-crypto](https://github.com/ARKEcosystem/php-crypto)
+- [https://github.com/ARKEcosystem/python-crypto](https://github.com/ARKEcosystem/python-crypto)
+- [https://github.com/ARKEcosystem/ruby-crypto](https://github.com/ARKEcosystem/ruby-crypto)
 
 ### Functional Programming
 
-- [https://github.com/ArkEcosystem/elixir-crypto](https://github.com/ArkEcosystem/elixir-crypto)
-- [https://github.com/ArkEcosystem/go-crypto](https://github.com/ArkEcosystem/go-crypto)
+- [https://github.com/ARKEcosystem/elixir-crypto](https://github.com/ARKEcosystem/elixir-crypto)
+- [https://github.com/ARKEcosystem/go-crypto](https://github.com/ARKEcosystem/go-crypto)

@@ -4,4 +4,4 @@ Even though no harm may have been intended; testing a security vulnerability by 
 
 To initially validate your suspicions, ensure you run your tests on a local network, using our [docker](/guidebook/core/docker.md) for example. By mounting a volume to persist data, you can attach the mounted volumes and images in your vulnerability reported, ensuring we have the same data as you do, and can reproduce the issue as fast as possible.
 
-After you have reported the vulnerability, the Ark team will collaborate with you on a possible solution.
+After you have reported the vulnerability, the ARK team will collaborate with you on a possible solution.

@@ -8,7 +8,7 @@ title: How to interact with events
 
 ## Getting Started
 
-Core provides a package called [core-event-emitter](https://github.com/ArkEcosystem/core/tree/develop/packages/core-event-emitter/src) which exposes an instance of the [Node.js EventEmitter](https://nodejs.org/api/events.html). This plugin should not be installed manually but rather be resolved from the app container.
+Core provides a package called [core-event-emitter](https://github.com/ARKEcosystem/core/tree/develop/packages/core-event-emitter/src) which exposes an instance of the [Node.js EventEmitter](https://nodejs.org/api/events.html). This plugin should not be installed manually but rather be resolved from the app container.
 
 ## Listening for events
 

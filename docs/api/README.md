@@ -4,7 +4,7 @@ title: "API Reference"
 
 # Introduction
 
-This is an API reference to the various Ark Ecosystem services.
+This is an API reference to the various ARK Ecosystem services.
 
 Use the sidebar to navigate this section, or follow the links below:
 

@@ -5,7 +5,7 @@ title: "Elasticsearch"
 # Elasticsearch
 
 ::: tip
-You can find the source code of this package at [packages/core-elasticsearch](https://github.com/ArkEcosystem/core/tree/develop/packages/core-elasticsearch).
+You can find the source code of this package at [packages/core-elasticsearch](https://github.com/ARKEcosystem/core/tree/develop/packages/core-elasticsearch).
 :::
 
 ## Installation

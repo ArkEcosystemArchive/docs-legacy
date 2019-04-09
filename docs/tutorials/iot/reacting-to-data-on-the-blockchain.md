@@ -2,12 +2,12 @@
 
 Making IoT react to data on the Blockchain is rough. There's not a lot of support, and the learning curve is fairly steep. Fortunately the tools to get your project up and running are here.
 
-This guide will serve as your own personal primer on triggering events in the real-world using data stored on the Ark Public Blockchain.
+This guide will serve as your own personal primer on triggering events in the real-world using data stored on the ARK Public Blockchain.
 
 [[toc]]
 
 The example we will be building works on both, the Arduino IDE and with PlatformIO.
-We will be using Ark Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather "blink" when your boards Chip ID hash is found on the [ARK Blockchain](/introduction/blockchain).  
+We will be using ARK Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather "blink" when your boards Chip ID hash is found on the [ARK Blockchain](/introduction/blockchain).
 With a little tweaking, you could even trigger solenoids, servos, or cloud functions depending on your projects goals.
 
 ## Step 1: Project Setup
@@ -29,7 +29,7 @@ If you're using [PlatformIO](https://platformio.org), your `platformio.ini` file
 platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Ark-Cpp-Client, Ark-Cpp-Crypto
+lib_deps = ARK-Cpp-Client, ARK-Cpp-Crypto
 upload_speed = 921600
 monitor_speed = 115200
 ```
@@ -38,8 +38,8 @@ monitor_speed = 115200
 
 ---
 
-Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), or your 'main.cpp' file if using PlatformIO.  
-Start by adding the headers to import Arduino, Ark Cpp-Client, and Cpp-Crypto.
+Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), or your 'main.cpp' file if using PlatformIO.
+Start by adding the headers to import Arduino, ARK Cpp-Client, and Cpp-Crypto.
 
 ```cpp
 #include <Arduino.h>
@@ -76,19 +76,19 @@ const char* ssid = "yourWiFiSSID";
 const char* password = "yourWiFiPassword";
 ```
 
-We will also need a Devnet Peer to connect to.  
-You can find more Ark Peers here: https://github.com/ArkEcosystem/peers
+We will also need a Devnet Peer to connect to.
+You can find more ARK Peers here: https://github.com/ARKEcosystem/peers
 
 ```cpp
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 ```
 
-Now, we'll add your Ark Devnet [(DARK) Address](/glossary/#dark-address) and your [Passphrase](/faq/passphrases.html#passphrases).
+Now, we'll add your ARK Devnet [(DARK) Address](/glossary/#dark-address) and your [Passphrase](/faq/passphrases.html#passphrases).
 Make sure to delete this Passphrase from your sketch when we're finished.
 
 ```cpp
-const char* recipientId = "yourArkDevnetAddress";
+const char* recipientId = "yourARKDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 ```
 
@@ -101,7 +101,7 @@ We'll also define the pin of the LED we want to blink.
 Create the connection object we'll use to talk to the [ARK Blockchain](/introduction/blockchain) via its [API](/api).
 
 ```cpp
-Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
+ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 ```
 
 Also create a variable to store your [VendorField](/glossary/#smartbridge), this will be your board ID's hash and is what we'll be searching for on the Blockchain later.
@@ -164,12 +164,12 @@ const char* password = "yourPassword";
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 
-const char* recipientId = "yourArkDevnetAddress";
+const char* recipientId = "yourARKDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 #define led 13
 
-Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
+ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 
 char vendorField[Sha256::BLOCK_LEN + 1] = { '\0' };
 
@@ -199,7 +199,7 @@ void loop() {
 }
 ```
 
-## Step 2: Posting your Data to the Ark Blockchain
+## Step 2: Posting your Data to the ARK Blockchain
 
 Next we'll be posting data to the [Blockchain](/introduction/blockchain). You can just copy this method from below into your example project
 
@@ -216,7 +216,7 @@ void sendTX(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
     const auto shaHash = Sha256::getHash(&bytArray[0], idByteLen);
     memmove(vfBuffer, BytesToHex(&shaHash.value[0], &shaHash.value[0] + shaHash.HASH_LEN).c_str(), Sha256::BLOCK_LEN);
 
-     Transaction transaction = Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
+     Transaction transaction = ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
     const auto txJson = transaction.toJson();
 
     char jsonBuffer[576] = { '\0' };
@@ -227,7 +227,7 @@ void sendTX(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
 }
 ```
 
-## Step 3: Getting and Reacting to Data on the Ark Blockchain
+## Step 3: Getting and Reacting to Data on the ARK Blockchain
 
 Now that we have the "sending" part of the process mapped out, we'll go ahead and create the logic to search the [ARK Blockchain](/introduction/blockchain) for our [VendorField](/glossary/#smartbridge).
 This method should have the vendorField passed to it.
@@ -433,12 +433,12 @@ const char* password = "yourPassword";
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 
-const char* recipientId = "yourArkDevnetAddress";
+const char* recipientId = "yourARKDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 #define led 13
 
-Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
+ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 
 char vendorField[Sha256::BLOCK_LEN + 1] = { '\0' };
 
@@ -452,7 +452,7 @@ void sendTX(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
     const auto shaHash = Sha256::getHash(&bytArray[0], idByteLen);
     memmove(vfBuffer, BytesToHex(&shaHash.value[0], &shaHash.value[0] + shaHash.HASH_LEN).c_str(), Sha256::BLOCK_LEN);
 
-    Transaction transaction = Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
+    Transaction transaction = ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
     const auto txJson = transaction.toJson();
 
     char jsonBuffer[576] = { '\0' };
@@ -541,7 +541,7 @@ You can see the compiler doing its thing in that window to the bottom left. This
 ![Arduino Flash 2](./assets/reacting-to-data-on-the-blockchain/3-arduino-flash-2.png)
 
 After the sketch is flashed to your board, you should get a response in the serial monitor.
-This is what it will look like when your TX has been found on the Ark Blockchain.
+This is what it will look like when your TX has been found on the ARK Blockchain.
 Your ESP32 should also be blinking!
 
 ![Arduino Success](./assets/reacting-to-data-on-the-blockchain/3-arduino-success.png)
@@ -563,7 +563,7 @@ After the sketch is flashed to your board, you should get a response in the seri
 
 ![PIO Upload 3](./assets/reacting-to-data-on-the-blockchain/3-pio-upload-3.png)
 
-This is what it will look like when your TX has been found on the Ark Blockchain.
+This is what it will look like when your TX has been found on the ARK Blockchain.
 Your ESP32 should also be blinking!
 
 ![PIO Success](./assets/reacting-to-data-on-the-blockchain/3-pio-success.png)
@@ -572,5 +572,5 @@ Your ESP32 should also be blinking!
 
 Congrats, you just posted AND reacted to data on a public Blockchain!! 🎉 🎊
 
-From here, the sky is the limit!  
+From here, the sky is the limit!
 We can now leverage the power of the [ARK Blockchain](/introduction/blockchain) and its [VendorField](/glossary/#smartbridge). We could trigger alerts and notifications, even control things in the physical world! Set up a solenoid to unlock a door, create a vending machine, rent access to your robotics or e-transportation project... any of a million different configurations and possibilities.

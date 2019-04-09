@@ -5,7 +5,7 @@ title: "Container"
 # Container
 
 ::: tip
-You can find the source code of this package at [packages/core-container](https://github.com/ArkEcosystem/core/tree/develop/packages/core-container).
+You can find the source code of this package at [packages/core-container](https://github.com/ARKEcosystem/core/tree/develop/packages/core-container).
 :::
 
 ## Installation

@@ -6,7 +6,7 @@ title: Public Delegates API
 
 Delegates are regular wallets which have registered themselves eligible to become a Delegate by a [registration transaction](/introduction/ark/understanding-transactions-and-block-propagation.html#delegate-registration). If a Delegate is amongst the top 51 highest voted (by staked ARK), it may run a forging Node, which produces a block once every 6.8 minutes, awarding the Delegate two ARK + the transaction fees.
 
-Genesis Delegates are the initial, virtualized Delegates. They were not registered nor voted in, and in the Ark `mainnet` have been replaced by actual Delegates a long time ago.
+Genesis Delegates are the initial, virtualized Delegates. They were not registered nor voted in, and in the ARK `mainnet` have been replaced by actual Delegates a long time ago.
 
 ## List all delegates
 
@@ -326,20 +326,20 @@ POST /api/delegates/search
 ```json
 {
     "meta": {
-        "count": 1, 
-        "pageCount": 1, 
-        "totalCount": 1, 
-        "next": null, 
-        "previous": null, 
-        "self": "/api/v2/delegates/search?limit=100&page=1", 
-        "first": "/api/v2/delegates/search?limit=100&page=1", 
+        "count": 1,
+        "pageCount": 1,
+        "totalCount": 1,
+        "next": null,
+        "previous": null,
+        "self": "/api/v2/delegates/search?limit=100&page=1",
+        "first": "/api/v2/delegates/search?limit=100&page=1",
         "last": "/api/v2/delegates/search?limit=100&page=1"
-   }, 
+   },
    "data": [
         {
             "username": "darkgalp",
-            "address": "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3", 
-            "publicKey": "037997a6553ea8073eb199e9f5ff23b8f0892e79433ef35e13966e0a12849d02e3", 
+            "address": "DMzBk3g7ThVQPYmpYDTHBHiqYuTtZ9WdM3",
+            "publicKey": "037997a6553ea8073eb199e9f5ff23b8f0892e79433ef35e13966e0a12849d02e3",
             "votes": 4635816197288,
             "rank": 24,
             "blocks": {

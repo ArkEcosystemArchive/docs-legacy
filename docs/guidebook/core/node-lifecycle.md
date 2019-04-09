@@ -1,6 +1,6 @@
 # Examining the Node Lifecycle
 
-Let's take a look inside Ark Core to understand better what's happening behind the scenes when we install and start our relays and forgers. From the moment Core Commander pings our node awake to the moment our node is brought offline, we'll look at the behavior that all Ark nodes share and examine differences and commonalities between relays and forgers.
+Let's take a look inside ARK Core to understand better what's happening behind the scenes when we install and start our relays and forgers. From the moment Core Commander pings our node awake to the moment our node is brought offline, we'll look at the behavior that all ARK nodes share and examine differences and commonalities between relays and forgers.
 
 ## Starting Our Node
 
@@ -28,7 +28,7 @@ There are quite a few scripts here, but a closer look reveals considerable overl
 "relay:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark relay:run",
 ```
 
-We can see from the script name (the part before the colon) that this is a script designed to start a relay node on Ark devnet. The actual body of the command (the part after the colon) begins with the segment `yarn ark relay:run`. This segment essentially tells our node, or whichever process is running this script, to look inside the `bin` directory and launch the `relay:run` command located in the `src/commands/relay/run` file.
+We can see from the script name (the part before the colon) that this is a script designed to start a relay node on ARK devnet. The actual body of the command (the part after the colon) begins with the segment `yarn ark relay:run`. This segment essentially tells our node, or whichever process is running this script, to look inside the `bin` directory and launch the `relay:run` command located in the `src/commands/relay/run` file.
 
 The rest of this command specifies a pair of arguments to pass to the `relay` command:
 
@@ -36,7 +36,7 @@ The rest of this command specifies a pair of arguments to pass to the `relay` co
 
 If you look again at the scripts posted above, you'll notice that all of them contain this same basic formula, with only minor differences from script to script. Scripts may start `relays`,  `forgers`,  `testnet` nodes or `mainnet` nodes.
 
-Let's look at the [relay:run](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/relay/run.ts) command in greater detail:
+Let's look at the [relay:run](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/relay/run.ts) command in greater detail:
 
 ```ts
 import { app } from "@arkecosystem/core-container";
@@ -67,7 +67,7 @@ export class RunCommand extends BaseCommand {
 }
 ```
 
-For the sake of brevity, I've only included the `relay:run` command here. Looking through the [commands directory](https://github.com/ArkEcosystem/core/tree/develop/packages/core/src/commands), however, reveals that these commands have closely linked functionality, similar to the npm scripts we inspected earlier.
+For the sake of brevity, I've only included the `relay:run` command here. Looking through the [commands directory](https://github.com/ARKEcosystem/core/tree/develop/packages/core/src/commands), however, reveals that these commands have closely linked functionality, similar to the npm scripts we inspected earlier.
 
 Breaking down what's happening here:
 
@@ -81,12 +81,12 @@ Breaking down what's happening here:
 ## Bootstrapping Our Container
 
 ::: tip
-The container in this context does refer to IoC, not to packaged software such as [Docker](https://www.docker.com/resources/what-container) or [rkt](https://coreos.com/rkt/). Ark Core may be deployed any number of ways.
+The container in this context does refer to IoC, not to packaged software such as [Docker](https://www.docker.com/resources/what-container) or [rkt](https://coreos.com/rkt/). ARK Core may be deployed any number of ways.
 :::
 
 We see from the analysis above that ultimately, what we've done so far is define a bundle of options and pass them to the CLI. However, what does this do exactly?
 
-Let's take a look at the `buildApplication` method from the [BaseCommand](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/command.ts#L91-L98):
+Let's take a look at the `buildApplication` method from the [BaseCommand](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/command.ts#L91-L98):
 
 ```ts
 protected async buildApplication(app, flags: CommandFlags, config: Options) {
@@ -99,9 +99,9 @@ protected async buildApplication(app, flags: CommandFlags, config: Options) {
 }
 ```
 
-We can see that this code only requires one external dependency: an `app` object, pulled in from the `core-container` package of Ark Core. In the exported function, we take the options given to us by the `relay:run` command in the previous section and pass them as the second argument into `app.setUp()`. The third argument to `setUp` defines values that are particular to the type of node we want to run. As this particular file is used to start a full node with both forging and relay capacities, our setup here is fairly straightforward as we want to use the full range of functions provided by Ark Core. We tell our `p2p` and `blockchain` packages whether this is the first time our network is being started based on the `network-start` option mentioned earlier, and we pass our delegate authentication information to `forger` so it can forge our blocks properly.
+We can see that this code only requires one external dependency: an `app` object, pulled in from the `core-container` package of ARK Core. In the exported function, we take the options given to us by the `relay:run` command in the previous section and pass them as the second argument into `app.setUp()`. The third argument to `setUp` defines values that are particular to the type of node we want to run. As this particular file is used to start a full node with both forging and relay capacities, our setup here is fairly straightforward as we want to use the full range of functions provided by ARK Core. We tell our `p2p` and `blockchain` packages whether this is the first time our network is being started based on the `network-start` option mentioned earlier, and we pass our delegate authentication information to `forger` so it can forge our blocks properly.
 
-To understand how this setup differs between forgers and relays, let's look at the `buildApplication` call in the [forger:run](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/forger/run.ts) command:
+To understand how this setup differs between forgers and relays, let's look at the `buildApplication` call in the [forger:run](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/forger/run.ts) command:
 
 ```ts
 public async run(): Promise<void> {
@@ -132,7 +132,7 @@ An immediate takeaway from this review is that, while functionality might differ
 
 We'll dive more into the mechanics of `core-container` in a future Guidebook chapter, but for now, suffice it to say that the `container` contains our plugins. It creates the proper environment for our plugins to run in, determines which plugins should be loaded, and loads them.
 
-To illustrate this, let's look inside our container package. You can find the source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core-container/src/container.ts), or follow along below:
+To illustrate this, let's look inside our container package. You can find the source code [here](https://github.com/ARKEcosystem/core/blob/develop/packages/core-container/src/container.ts), or follow along below:
 
 ```ts
 import { Environment } from "./environment";
@@ -200,7 +200,7 @@ Additionally, here is where we load any environment variables defined in our nod
 
 With the proper environment now set up, we can begin fleshing out our node's central capacities using plugins. We can see from our `Container.setUp` method that plugins are initialized using the `PluginRegistrar` and setup using the Registrar's `setUp` method.
 
-Using the snippets below or the source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core-container/src/registrars/plugin.ts), let's look at the constructor and `setUp` methods for `PluginRegistrar`:
+Using the snippets below or the source code [here](https://github.com/ARKEcosystem/core/blob/develop/packages/core-container/src/registrars/plugin.ts), let's look at the constructor and `setUp` methods for `PluginRegistrar`:
 
 ```ts
 import { asValue } from "awilix";
@@ -235,7 +235,7 @@ export class PluginRegistrar {
 
 In the `PluginRegistrar.setUp` method, we loop through this plugins property and register each plugin into our container according to the settings defined in the previous steps.
 
-This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the object that's returned by `container.config.get("plugins")`. You can view the full source code [here](https://github.com/ArkEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
+This is the step in our node's lifecycle where the node's most essential functions are loaded: from the Public API to the P2P API to the blockchain itself. All plugins are booted up upon their inclusion in the container through the plugin registrar. To get a sense of the order in which these plugins are loaded, we can look at the object that's returned by `container.config.get("plugins")`. You can view the full source code [here](https://github.com/ARKEcosystem/core/blob/develop/packages/core/bin/config/devnet/plugins.js), but here's a snippet:
 
 ```js
 module.exports = {
@@ -301,7 +301,7 @@ Typically, you should try to add your plugin to the bottom of this file, with on
 
 While the steps outlined above are enough to get our node up and running, there's one process we haven't looked at yet: the shutdown process. Typically you'll want your nodes to run forever so they can relay or forge as necessary. However, whether in preparation for an upgrade or to troubleshoot technical problems, sometimes you've got to shut everything down.
 
-Fortunately, `core-container` registers a handler in its constructor that's designed to handle shutdowns in such a way as to not corrupt any data. Let's take a look at [this handler](https://github.com/ArkEcosystem/core/blob/develop/packages/core-container/src/container.ts#L239-L281):
+Fortunately, `core-container` registers a handler in its constructor that's designed to handle shutdowns in such a way as to not corrupt any data. Let's take a look at [this handler](https://github.com/ARKEcosystem/core/blob/develop/packages/core-container/src/container.ts#L239-L281):
 
 ```ts
 private registerExitHandler(exitEvents: string[]) {

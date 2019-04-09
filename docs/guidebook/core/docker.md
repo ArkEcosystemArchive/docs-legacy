@@ -181,7 +181,7 @@ Updates and all changes made to the containers are kept even on container or hos
 
 ### Generate the Configurations
 
-Ark Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
+ARK Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
 
 For instance, you could use this command:
 
@@ -195,7 +195,7 @@ This command creates a new directory (`docker`) that contains 1 folder per netwo
 
 **Run a PostgreSQL container while using NodeJS from your local environment.**
 
-This configuration is well suited when you are not developing Ark Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
+This configuration is well suited when you are not developing ARK Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
 
 ::: warning
 PostgreSQL is run in a separate container and it's port gets mapped to your `localhost`, so you should not have PostgreSQL running locally.
@@ -219,11 +219,11 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-### Serve Ark Core as a collection of Containers
+### Serve ARK Core as a collection of Containers
 
-**Run a PostgreSQL container, build and run Ark-Core using a mounted volume.**
+**Run a PostgreSQL container, build and run ARK-Core using a mounted volume.**
 
-When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing Ark Core itself, as you do not need to rebuild the container to test your changes.
+When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing ARK Core itself, as you do not need to rebuild the container to test your changes.
 
 ::: tip
 Along with PostgreSQL container, now you also have a NodeJS container which mounts your local ark-core git folder inside the container and installs all NPM prerequisites.
@@ -243,5 +243,5 @@ docker exec -it ark-$NETWORK-core bash
 *Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script.*
 
 ::: warning
-Development files/presets are not Production ready. Official Production Ark-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
+Development files/presets are not Production ready. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
 :::

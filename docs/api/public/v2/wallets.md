@@ -340,7 +340,7 @@ GET /api/wallets/{id}/votes
 
 ## List all top wallets
 
-Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the Ark ICO.
+Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the ARK ICO.
 
 ### Endpoint
 

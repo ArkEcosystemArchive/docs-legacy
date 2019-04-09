@@ -1,10 +1,10 @@
-# Ark Docs
+# ARK Docs
 
 <p align="center">
-    <img src="https://github.com/ArkEcosystem/docs/blob/master/banner.png" />
+    <img src="https://github.com/ARKEcosystem/docs/blob/master/banner.png" />
 </p>
 
-> Official documentation for the Ark Ecosystem powered by VuePress.
+> Official documentation for the ARK Ecosystem powered by VuePress.
 
 ## Development
 
@@ -26,4 +26,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) © [ARKEcosystem](https://ark.io)

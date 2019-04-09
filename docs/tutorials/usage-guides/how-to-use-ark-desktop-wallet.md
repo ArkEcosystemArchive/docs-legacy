@@ -4,16 +4,16 @@
 
 ## What is it?
 
-The Ark Desktop Wallet is an application which allows you to manage Ark transactions. It provides an extensive set of functionalities, including management of profiles and wallets, the creation of both online and offline transactions, wallet summary, stylistic customizations, multilingual support, various currency integrations including BTC and much more!
+The ARK Desktop Wallet is an application which allows you to manage ARK transactions. It provides an extensive set of functionalities, including management of profiles and wallets, the creation of both online and offline transactions, wallet summary, stylistic customizations, multilingual support, various currency integrations including BTC and much more!
 
 ## Installation
 
-To download the application, you can visit the link below and select the appropriate release for your computer's platform. The Ark Desktop Wallet is available for Windows, Mac, and Linux.
+To download the application, you can visit the link below and select the appropriate release for your computer's platform. The ARK Desktop Wallet is available for Windows, Mac, and Linux.
 
-[Ark Desktop Wallet releases](https://github.com/ArkEcosystem/ark-desktop/releases)
+[ARK Desktop Wallet releases](https://github.com/ARKEcosystem/ark-desktop/releases)
 
 ::: warning
-**Note**: The above link is the authoritative source for Ark Desktop Wallet releases. As a friendly reminder, don't ever click on links that are not provided by the Ark Team.
+**Note**: The above link is the authoritative source for ARK Desktop Wallet releases. As a friendly reminder, don't ever click on links that are not provided by the ARK Team.
 :::
 
 When you arrive on this page, you will see multiple download options. Select the one that reflects your operating system:
@@ -22,7 +22,7 @@ When you arrive on this page, you will see multiple download options. Select the
 
 ## Getting Started
 
-After opening the Ark Desktop Wallet application for the first time, you will be greeted with security instructions. Please read every slide, as each one provides essential details on how you can better protect your funds.
+After opening the ARK Desktop Wallet application for the first time, you will be greeted with security instructions. Please read every slide, as each one provides essential details on how you can better protect your funds.
 
 ![Welcome Slides](./assets/how-to-use-the-desktop-wallet/new/Welcome.png)
 
@@ -37,7 +37,7 @@ Once you've read through the welcome instructions, you will be presented a page 
 ![Profile Details](./assets/how-to-use-the-desktop-wallet/new/NewProfile1.png)
 
 - **Network**
-  - Which network to operate on, either the regular Ark network or the Ark Devnet (for developers)
+  - Which network to operate on, either the regular ARK network or the ARK Devnet (for developers)
 
 ![Network Selection](./assets/how-to-use-the-desktop-wallet/new/NewProfile2.png)
 
@@ -53,13 +53,13 @@ Upon successfully creating your profile, you will be brought to the dashboard.
 
 ## News and Important Updates
 
-The Desktop Wallet has a dedicated section, showing news and other relevant updates in the Ark Ecosystem. Often, you will receive new blog posts in this section, which can be accessed via clicking the newspaper icon in the wallet's navigation bar.
+The Desktop Wallet has a dedicated section, showing news and other relevant updates in the ARK Ecosystem. Often, you will receive new blog posts in this section, which can be accessed via clicking the newspaper icon in the wallet's navigation bar.
 
 ![News](./assets/how-to-use-the-desktop-wallet/new/News.png)
 
-## Creating or Importing your Ark Wallet
+## Creating or Importing your ARK Wallet
 
-The Ark Desktop Wallet allows you to both create new wallets and import existing ones. You can begin either process by clicking the appropriate button at the top of the sidebar when on the app dashboard.
+The ARK Desktop Wallet allows you to both create new wallets and import existing ones. You can begin either process by clicking the appropriate button at the top of the sidebar when on the app dashboard.
 
 ### Creating a New Wallet
 
@@ -123,7 +123,7 @@ Upon clicking **_Next_**, you will have to review the transfer transaction's det
 
 ### Voting for a Registered Delegate and Unvoting
 
-Delegated Proof of Stake, the consensus algorithm used by the Ark Core, requires network participants to vote for delegates with their funds. A vote is not like a transfer; it merely helps determine which delegates have the most support from network members. You may only vote for one delegate at a time, and your funds are not locked while you are voting.
+Delegated Proof of Stake, the consensus algorithm used by the ARK Core, requires network participants to vote for delegates with their funds. A vote is not like a transfer; it merely helps determine which delegates have the most support from network members. You may only vote for one delegate at a time, and your funds are not locked while you are voting.
 
 - **Browse the list of registered delegates**
   ![Delegate List](./assets/how-to-use-the-desktop-wallet/new/Delegates.png)
@@ -177,7 +177,7 @@ To verify a message that was signed by a different wallet, you need the wallet's
 :::tip
 The public key of a wallet is much like the address, except it doesn't follow the same format and is not shown by default in the Desktop Wallet. You can view your wallet's public key by clicking the key icon next to your wallet's address in the wallet detail page's header.
 
-The Ark Network will only know your public key once you have sent a transaction.
+The ARK Network will only know your public key once you have sent a transaction.
 :::
 
 For demonstration purposes, the images below are shown from the perspective of a second wallet, assuming the necessary details to verify the message were provided to the verifying user.

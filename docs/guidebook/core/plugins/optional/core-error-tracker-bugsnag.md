@@ -5,7 +5,7 @@ title: "Error Tracker - Bugsnag"
 # Error Tracker - Bugsnag
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-bugsnag](https://github.com/ArkEcosystem/core/tree/develop/packages/core-error-tracker-bugsnag).
+You can find the source code of this package at [packages/core-error-tracker-bugsnag](https://github.com/ARKEcosystem/core/tree/develop/packages/core-error-tracker-bugsnag).
 :::
 
 ## Installation

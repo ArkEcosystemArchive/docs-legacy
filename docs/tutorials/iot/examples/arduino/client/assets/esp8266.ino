@@ -1,15 +1,15 @@
 /**
- * This file is part of Ark Cpp Client.
+ * This file is part of ARK Cpp Client.
  *
- * (c) Ark Ecosystem <info@ark.io>
+ * (c) ARK Ecosystem <info@ark.io>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  **/
- 
+
 /**d
  * This sketch covers how to use the Cpp-Client API.
- * It allows your ESP8266 to send requests to an Ark Node
+ * It allows your ESP8266 to send requests to an ARK Node
  */
 
  /**
@@ -21,7 +21,7 @@
 
 /**
  * This is where you include the 'arkClient.h' header.
- * This allows your project to use Ark Cpp-Client.
+ * This allows your project to use ARK Cpp-Client.
  */
 #include <arkClient.h>
 /**/
@@ -44,12 +44,12 @@ const char* password = "yourWiFiPassword";
 
 /****************************************/
 
-/** 
- *  This is the IP address of an Ark Node
+/**
+ *  This is the IP address of an ARK Node
  *  Specifically, this is a Devnet V2 Node IP
- *  You can find more peers here: https://github.com/ArkEcosystem/peers
- *  
- *  The Public API port for the V2 Ark network is '4003'
+ *  You can find more peers here: https://github.com/ARKEcosystem/peers
+ *
+ *  The Public API port for the V2 ARK network is '4003'
  */
 const char* peer = "167.114.29.55";
 int port = 4003;
@@ -61,7 +61,7 @@ int port = 4003;
  * This is how you define a connection while speficying the API class as a 'template argument'
  * You instantiate a connection by passing a IP address as a 'c_string', and the port as an 'int'.
  */
-Ark::Client::Connection<Ark::Client::Api> connection(peer, port);
+ARK::Client::Connection<ARK::Client::Api> connection(peer, port);
 /**/
 
 /****************************************/
@@ -69,7 +69,7 @@ Ark::Client::Connection<Ark::Client::Api> connection(peer, port);
 void checkAPI() {
   /**
    * This is how you can check the Version of the API
-   * In this example, it should return '2' as an 'int' for V2 of Arks' API. 
+   * In this example, it should return '2' as an 'int' for V2 of ARKs' API.
    */
   auto apiVersion = connection.api.version();
     Serial.print("\nAPI Version: ");
@@ -81,12 +81,12 @@ void checkAPI() {
   /**
    * Here you can call a list of 'All' 'Blocks' on the network.
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   *  
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/blocks?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this
-   * 
+   *
    * {
    *  "meta": {
    *    "count": 2,
@@ -157,7 +157,7 @@ void checkAPI() {
    *    }
    *  ]
    * }
-   * 
+   *
    */
   const auto blocksResponse = connection.api.blocks.all(2, 1);
     Serial.print("\nBlocks Response: ");
@@ -169,12 +169,12 @@ void checkAPI() {
   /**
    * The following method can be used to search for a speficit Delegate.
    * In this case, 'boldninja'.
-   * 
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/delegates/boldninja'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
-   * 
+   *
    * {
    *  "data": {
    *    "username": "boldninja",
@@ -216,12 +216,12 @@ void checkAPI() {
 
   /**
    * The following method can be used to get the Status of a Node.
-   * 
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/node/status'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
-   * 
+   *
    * {
    *  "data": {
    *    "synced": true,
@@ -239,11 +239,11 @@ void checkAPI() {
 
   /**
    * The following method can be used to get a list of 'All' 'Peers' on the network.
-   * 
+   *
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   * 
+   *
    * This is equivalant to calling 'http://167.114.29.49:4003/api/v2/peers?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -291,9 +291,9 @@ void checkAPI() {
 
   /**
    * The following method can be used to get a list of 'Transaction' 'Types'.
-   * 
+   *
    * This is equivalant to calling 'http://167.114.29.49:4003/api/v2/transactions/types'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -321,9 +321,9 @@ void checkAPI() {
   /**
    * This method can be used to get a list of 'Vote' Transactions.
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   * 
+   *
    * This is equivalant to calling 'http://167.114.29.49:4003/api/v2/votes?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -396,9 +396,9 @@ void checkAPI() {
   /**
    * This method can be used to get a list of 'Top' 'Wallets' (Wallets with the most ARK).
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   * 
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/wallets/top?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *

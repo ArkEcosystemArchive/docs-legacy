@@ -48,7 +48,7 @@ To make sure that everything is working as intended you should follow these chec
 - Setup the wallet from 0 **(delete the database / cache)**
 - Browse news
 - Switch networks
-- Connect to custom peers and networks outside of Ark
+- Connect to custom peers and networks outside of ARK
 - Test screenshot protection
 - Create, browse, edit and remove contacts
 
@@ -84,4 +84,4 @@ To make sure that everything is working as intended you should follow these chec
   - Ledger
 - Send a second signature registration transaction
   - 1 Passphrase
-  
+

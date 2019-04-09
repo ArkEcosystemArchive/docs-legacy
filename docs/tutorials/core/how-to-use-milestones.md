@@ -5,7 +5,7 @@ title: How to use milestones
 # How to use milestones
 
 ::: tip
-**This article will base everything on the official [Ark Devnet Milestones](https://github.com/ArkEcosystem/core/blob/develop/packages/crypto/src/networks/devnet/milestones.json).**
+**This article will base everything on the official [ARK Devnet Milestones](https://github.com/ARKEcosystem/core/blob/develop/packages/crypto/src/networks/devnet/milestones.json).**
 
 When you fork Core and plan to run your own network this milestone configuration will be the one of the most interest to you to test your network before going live in production.
 :::
@@ -16,7 +16,7 @@ Milestones are a collection of height based configurations that determine things
 
 Everytime a new block is received the height of a node changes and Core will check if there is a milestone that needs to be activated. Milestones are always merged from the earliest to the latest to ensure that all properties of the initial milestone are still intact and properties are only modified or added but never removed.
 
-As previously explained the milestones are just collections of configurations that have keys and values. Lets take a look at the `devnet` milestones of Ark.
+As previously explained the milestones are just collections of configurations that have keys and values. Lets take a look at the `devnet` milestones of ARK.
 
 ```json
 [

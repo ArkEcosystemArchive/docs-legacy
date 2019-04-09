@@ -5,7 +5,7 @@ title: "Webhooks"
 # Webhooks
 
 ::: tip
-You can find the source code of this package at [packages/core-webhooks](https://github.com/ArkEcosystem/core/tree/develop/packages/core-webhooks).
+You can find the source code of this package at [packages/core-webhooks](https://github.com/ARKEcosystem/core/tree/develop/packages/core-webhooks).
 :::
 
 ## Installation

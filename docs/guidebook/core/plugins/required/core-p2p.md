@@ -5,7 +5,7 @@ title: "P2P API"
 # P2P API
 
 ::: tip
-You can find the source code of this package at [packages/core-p2p](https://github.com/ArkEcosystem/core/tree/develop/packages/core-p2p).
+You can find the source code of this package at [packages/core-p2p](https://github.com/ARKEcosystem/core/tree/develop/packages/core-p2p).
 :::
 
 ## Installation

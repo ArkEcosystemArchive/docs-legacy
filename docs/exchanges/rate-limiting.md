@@ -1,10 +1,10 @@
 # Configuring Rate Limits
 
-Ark Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, Ark Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
+ARK Core is mainly used in the context of public services, providing desktop wallets with the necessary endpoints to function. Since they serve anonymous users and to protect against DDoS attacks, ARK Core nodes have strict rate limits. Enterprise users (such as exchanges) might encounter a problem creating large batches of transactions and broadcasting them. The rate limit can be configured in multiple ways to solve these problems.
 
 ## Exceeding the Rate Limit
 
-By default, rate limits are enabled on Ark Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
+By default, rate limits are enabled on ARK Core nodes. When the rate limit is exceeded; a `429` HTTP status is returned.
 
 ## Configuring the Rate Limit
 
@@ -21,7 +21,7 @@ Setting `API_RATE_LIMIT` to false will globally disable all rate limits. For int
 
 ## Configuration through a Plugin
 
-Lower access to the rate limiting can be obtained by writing a plugin/ We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the Ark Core rate limiter.
+Lower access to the rate limiting can be obtained by writing a plugin/ We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the ARK Core rate limiter.
 
 ```js
 @arkecosystem/core-api: {
@@ -41,7 +41,7 @@ Cache timeouts can be disabled, which is especially useful on resource-strained 
 
 ## Further reference
 
-Ark Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This ratelimiter can be configured by setting/altering [core-api](https://github.com/ArkEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-api/lib/defaults.js#L38-L45).
+ARK Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This ratelimiter can be configured by setting/altering [core-api](https://github.com/ARKEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-api/lib/defaults.js#L38-L45).
 
 ```js
 rateLimit: {

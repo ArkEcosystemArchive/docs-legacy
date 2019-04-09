@@ -5,7 +5,7 @@ title: "Logger - Winston"
 # Logger - Winston
 
 ::: tip
-You can find the source code of this package at [packages/core-logger-winston](https://github.com/ArkEcosystem/core/tree/develop/packages/core-logger-winston).
+You can find the source code of this package at [packages/core-logger-winston](https://github.com/ARKEcosystem/core/tree/develop/packages/core-logger-winston).
 :::
 
 ## Installation

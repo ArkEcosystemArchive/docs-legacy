@@ -1,6 +1,6 @@
 const config = {
-  title: "Ark Ecosystem Documentation",
-  description: "The central knowledge hub for all things Ark Ecosystem",
+  title: "ARK Ecosystem Documentation",
+  description: "The central knowledge hub for all things ARK Ecosystem",
   plugins: ['tabs'],
   head: [
     [
@@ -13,7 +13,7 @@ const config = {
   ],
   themeConfig: {
     logo: "https://ark.io/images/media-kit/red-corners.png",
-    repo: "ArkEcosystem/docs",
+    repo: "ARKEcosystem/docs",
     repoLabel: "Contribute!",
     editLinks: true,
     editLinkText: "Help us improve this page!",

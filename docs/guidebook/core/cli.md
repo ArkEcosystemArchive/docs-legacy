@@ -8,13 +8,13 @@ title: "Command Line Interface"
 
 ## Installation
 
-Since Version 2.2.0 we distribute the Ark Core as an npm package, which has to be globally installed, which provides a built-in CLI.
+Since Version 2.2.0 we distribute the ARK Core as an npm package, which has to be globally installed, which provides a built-in CLI.
 
 ### Prerequisites
 
-In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/ArkEcosystem/core/develop/install.sh) to see what dependencies need to be installed and configured.
+In the next sections we will run you through an automated setup of a new server with a Core installation at the end of it but if you prefer to do a manual setup, take a look at [install.sh](https://raw.githubusercontent.com/ARKEcosystem/core/develop/install.sh) to see what dependencies need to be installed and configured.
 
-**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/ArkEcosystem/core/blob/master/packages/core/src/process-manager.ts) to see how it works under the hood.**
+**A global `pm2` installation is required as the CLI uses it to manage processes. Take a look at the [process manager](https://github.com/ARKEcosystem/core/blob/master/packages/core/src/process-manager.ts) to see how it works under the hood.**
 
 ### Existing Installation
 
@@ -37,7 +37,7 @@ adduser ark
 usermod -aG sudo ark
 su ark
 cd ~
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ARKEcosystem/core/master/install.sh)
 ```
 
 Once this command has finished you should start your relay and forger with one of the commands that are documented further down on this page. If you are having any issues with the CLI, head down to the **Troubleshoot** section which covers the most common issues we know about.
@@ -46,7 +46,7 @@ Once this command has finished you should start your relay and forger with one o
 
 ## Configuration
 
-Before you can start using Ark Core you will need to publish the configuration of the network you wish to operate on.
+Before you can start using ARK Core you will need to publish the configuration of the network you wish to operate on.
 
 ```bash
 ark config:publish
@@ -86,7 +86,7 @@ If you are receiving a message to the effect of `The "..." process has entered a
 
 ### autocomplete
 
-You might be used to tab completion, which the Ark CLI does support. Using this command does not configure autocompletion, but does show you instructions.
+You might be used to tab completion, which the ARK CLI does support. Using this command does not configure autocompletion, but does show you instructions.
 
 #### Usage
 
@@ -948,7 +948,7 @@ ark snapshot:verify
 
 ## Plugins
 
-Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the Ark Blockchain but any developer can create their own plugins and publish them.
+Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the ARK Blockchain but any developer can create their own plugins and publish them.
 
 ### Publishment
 

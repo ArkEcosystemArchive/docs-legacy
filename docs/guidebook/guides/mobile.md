@@ -2,18 +2,18 @@
 title: "Mobile Wallet"
 ---
 
-# Ark Mobile Wallet
+# ARK Mobile Wallet
 
 ![Mobile Wallet](./assets/mobile/banner.png)
 
 > A Wallet for Everyone
 
-[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/mobile-wallet)](https://circleci.com/gh/ArkEcosystem/mobile-wallet)
+[![Build Status](https://badgen.now.sh/circleci/github/ARKEcosystem/mobile-wallet)](https://circleci.com/gh/ARKEcosystem/mobile-wallet)
 [![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/mobile-wallet)](https://codecov.io/gh/arkecosystem/mobile-wallet)
-[![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/mobile-wallet)](https://github.com/ArkEcosystem/mobile-wallet/releases/latest)
+[![Latest Version](https://badgen.now.sh/github/release/ARKEcosystem/mobile-wallet)](https://github.com/ARKEcosystem/mobile-wallet/releases/latest)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-Ark's Mobile Wallet is a hybrid application built for both Android and iOS. Created using Ionic framework and Ark’s [TypeScript API](https://github.com/ArkEcosystem/ark-ts) to interact with the Ark network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
+ARK's Mobile Wallet is a hybrid application built for both Android and iOS. Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ARKEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
 ## Download
 
@@ -88,18 +88,18 @@ If you discover a security vulnerability within this application, please send an
 
 ## Contributing
 
-- If you find any bugs, submit an [issue](https://github.com/ArkEcosystem/mobile-wallet/issues) or open [pull-request](https://github.com/ArkEcosystem/mobile-wallet/pulls), helping us catch and fix them.
-- Engage with other users and developers on the [ArkEcosystem Slack](https://ark.io/slack/).
+- If you find any bugs, submit an [issue](https://github.com/ARKEcosystem/mobile-wallet/issues) or open [pull-request](https://github.com/ARKEcosystem/mobile-wallet/pulls), helping us catch and fix them.
+- Engage with other users and developers on the [ARKEcosystem Slack](https://ark.io/slack/).
 - Join to our [gitter](https://gitter.im/ark-developers/Lobby).
 - [Contribution bounties](/guidebook/contribution-guidelines/contributing.html).
-- [Help translate](https://github.com/ArkEcosystem/mobile-wallet/blob/master/TRANSLATING.md).
+- [Help translate](https://github.com/ARKEcosystem/mobile-wallet/blob/master/TRANSLATING.md).
 
 ## Credits
 
 - [Lúcio Rubens](https://github.com/luciorubeens)
 - [Alex Barnsley](https://github.com/alexbarnsley)
-- [All Contributors](https://github.com/ArkEcosystem/mobile-wallet/contributors)
+- [All Contributors](https://github.com/ARKEcosystem/mobile-wallet/contributors)
 
 ## License
 
-[MIT](https://github.com/ArkEcosystem/mobile-wallet/blob/master/LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](https://github.com/ARKEcosystem/mobile-wallet/blob/master/LICENSE) © [ARKEcosystem](https://ark.io)

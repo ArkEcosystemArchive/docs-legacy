@@ -8,9 +8,9 @@ This section provides a brief overview the cryptographic identities and protocol
 
 [[toc]]
 
-The following examples will be using test-fixtures from the [ARK Core](https://github.com/ArkEcosystem/core/) repo on [GitHub](https://github.com/ArkEcosystem/).
+The following examples will be using test-fixtures from the [ARK Core](https://github.com/ARKEcosystem/core/) repo on [GitHub](https://github.com/ARKEcosystem/).
 
-[Identities Test Fixtures:](https://github.com/ArkEcosystem/core/blob/develop/__tests__/unit/crypto/identities/fixture.json)
+[Identities Test Fixtures:](https://github.com/ARKEcosystem/core/blob/develop/__tests__/unit/crypto/identities/fixture.json)
 
 ```json
 {
@@ -24,7 +24,7 @@ The following examples will be using test-fixtures from the [ARK Core](https://g
 }
 ```
 
-[Message Test Fixtures:](https://github.com/ArkEcosystem/core/blob/develop/__tests__/unit/crypto/utils/message.test.ts)
+[Message Test Fixtures:](https://github.com/ARKEcosystem/core/blob/develop/__tests__/unit/crypto/utils/message.test.ts)
 
 ```ts
 const fixture = {
@@ -46,13 +46,13 @@ const fixture = {
 
 ![Passphrase](./assets/passphrase_transparent.png)
 
->The passphrase is the master password (key) for your ARK tokens. Every Ark address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
+>The passphrase is the master password (key) for your ARK tokens. Every ARK address has its own unique passphrase. With the passphrase you can sign transactions to send your ARK or vote for a delegate.
 >
 >Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. We CANNOT recover any lost passphrases.
 
 A [Passphrase](/faq/passphrases.html) is a "key to the castle." It is used to directly calculate the [PrivateKey](#privatekey) of an [ARK Account](/glossary/#account) and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
 
-We can technically use any word, phrase, or string as a passphrase which will result in a valid ARK [Address](#address) or Wallet; however, it is heavily discouraged as the security of an address relies on the randomness of its Passphrase.  
+We can technically use any word, phrase, or string as a passphrase which will result in a valid ARK [Address](#address) or Wallet; however, it is heavily discouraged as the security of an address relies on the randomness of its Passphrase.
 Humans are bad at creating randomness, and entering sequences of random letters and numbers isn't easy to do accurately.
 
 To promote usability while also maintaining security, ARK Passphrases are implemented using the [BIP39 Protocol](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).  Simply, it's a mnemonic sentence constructed via randomly chosen words from a large [wordlist](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md). From here, that sentence or "Passphrase" is piped through a series of hashing, curve, and encoding algorithms to derive a [PrivateKey](#privatekey) / [WIF](#wif), a [PublicKey](#publickey), and subsequently [Addresses](#address) / Wallets and [Signatures](#signature).
@@ -85,7 +85,7 @@ PrivateKey DEC(base 10 encoded):
 97932109907804210295451942024598204992707895659209392543371974078748689061650
 ```
 
-The DEC representation is the "base 10" interpretation of our PrivateKey and gives us a little insight into the size of the numbers we're dealing with "under the hood". This large integer is also referred to as a "BigNumber" or UINT256. 
+The DEC representation is the "base 10" interpretation of our PrivateKey and gives us a little insight into the size of the numbers we're dealing with "under the hood". This large integer is also referred to as a "BigNumber" or UINT256.
 
 ## WIF (PrivateKey)
 
@@ -120,7 +120,7 @@ Since an address is derived from a [PublicKey](#publickey), that means it is als
 
 #### Address Prefix Table
 
-The following is a full prefix-byte table for custom Address construction and is provided for informational purposes.  
+The following is a full prefix-byte table for custom Address construction and is provided for informational purposes.
 While this would not be used for ARK Mainnet or Devnet, it _CAN_ be used for custom networks.
 
 | dec: | hex: | prefix: |
@@ -254,7 +254,7 @@ While this would not be used for ARK Mainnet or Devnet, it _CAN_ be used for cus
 
 A Signature is essentially proof that a message or transaction was "signed" by a particular [PrivateKey](#privatekey) / [Passphrase](#passphrase).
 
-Remember that this same [PrivateKey](#privatekey) also has a matching [PublicKey](#publickey).  
+Remember that this same [PrivateKey](#privatekey) also has a matching [PublicKey](#publickey).
 That means a Signature is computationally linked to its corresponding PublicKey using [ECDSA](#ecdsa) and [SECP256K1](#secp256k1) standards.
 
 ARK Signatures also use [DER Encoding](#der).
@@ -294,7 +294,7 @@ This is known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/
 
 ---
 
->"Can the reader say what two numbers multiplied together will produce the number 8616460799? I think it unlikely that anyone but myself will ever know"  
+>"Can the reader say what two numbers multiplied together will produce the number 8616460799? I think it unlikely that anyone but myself will ever know"
 -William S Jevons, The Principles of Science, 1874
 
 ---
@@ -315,11 +315,11 @@ Signature (r, s):
 (0fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e, 5ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8)
 ```
 
-In our example, the "r" and "s" values are each 32-bytes in length.  
-Each of the "r" and "s" sequence identifiers are also 1-byte in length.  
+In our example, the "r" and "s" values are each 32-bytes in length.
+Each of the "r" and "s" sequence identifiers are also 1-byte in length.
 Additionally, the slots for the size of "r" and "s" each occupy 1-byte.
 
-This means that the length of the "r" and "s" values is 64-bytes.  
+This means that the length of the "r" and "s" values is 64-bytes.
 The (r,s) section identifiers and their sizes occupy a total of 4-bytes.
 
 The total length of our signature is 68-bytes (`0x44` in hex).
@@ -376,6 +376,6 @@ As its name suggests, SHA256 hashes are 256-bits in length.
 
 <!--
 NOTE:
-Images provided in this doc are located in the `/cryptography/assets` directory.  
+Images provided in this doc are located in the `/cryptography/assets` directory.
 These were created--and may be edited--using the free web-app https://draw.io.
 -->

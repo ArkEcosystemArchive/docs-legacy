@@ -1,7 +1,7 @@
 # Changelog
 
 ::: tip
-The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md).
+The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
 :::
 
 ### Added
@@ -71,7 +71,7 @@ The official changelog of `v2.1` is hosted in the [core repository](https://gith
 -   Properly verify block slot timestamps ([#1985])
 -   Return fixed peer states for v1 and v2 API responses ([#2027])
 -   Validate IP ranges to detect loopbacks ([#2045])
--   https://github.com/ArkEcosystem/security-vulnerabilities/blob/master/core/core-sv-010.md ([#2046])
+-   https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-010.md ([#2046])
 -   Check if the blockchain state storage is available before performing fork checks ([#2047])
 -   Gracefully handle a corrupted cached `peers.json` file ([#2061])
 -   Always sort transactions by sequence and the requested field to make API sorting deterministic ([#2058])

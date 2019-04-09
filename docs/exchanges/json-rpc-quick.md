@@ -9,7 +9,7 @@ Remote Procedure Call (RPC) is a protocol that allows one program to request a s
 By replacing dedicated protocols and communication methods with a standardized interface, RPC is designed to facilitate communication between client and server processes. The functions contained within RPC are accessible by any program that must communicate using a client/server methodology.
 
 ::: tip
-The majority of platforms utilizing Bitcoin use the Bitcoind-RPC server. To accommodate these services and make the integration of Ark as user-friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The Ark RPC will minimize headaches and streamlines the addition process of ARK to existing architectures.
+The majority of platforms utilizing Bitcoin use the Bitcoind-RPC server. To accommodate these services and make the integration of ARK as user-friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The ARK RPC will minimize headaches and streamlines the addition process of ARK to existing architectures.
 :::
 
 # JSON-RPC Quick Actions
@@ -24,7 +24,7 @@ If you're having trouble connecting, your JSON-RPC may be disabled. To enable it
 
 Your config directory is located at `~/.config/ark-core/{network}/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
-All request should include the HTTP header `Content-Type: application/json` to inform the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
+All request should include the HTTP header `Content-Type: application/json` to inform the ARK Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
 
 Each quick action will interact with the JSON-RPC in the same way - unless noted otherwise, any of these actions can be accessed with the following code:
 
@@ -191,7 +191,7 @@ print(r)
 
 ## Check Wallet Balance
 
-This method can be used to check the account balance associated with a particular Ark address. To utilize it, use the following body payload:
+This method can be used to check the account balance associated with a particular ARK address. To utilize it, use the following body payload:
 
 :::: tabs
 

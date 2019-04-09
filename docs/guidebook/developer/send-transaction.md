@@ -1,6 +1,6 @@
-# How to Send Your First Transaction using the Ark SDK
+# How to Send Your First Transaction using the ARK SDK
 
-We will use the client and crypto libraries to send an Ark transaction programmatically. You will see how the client and crypto libraries work together to provide a comprehensive base for any Ark project and learn how to configure the SDKs to work alongside your testnet.
+We will use the client and crypto libraries to send an ARK transaction programmatically. You will see how the client and crypto libraries work together to provide a comprehensive base for any ARK project and learn how to configure the SDKs to work alongside your testnet.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ Finally, to send a transaction, we need our testnet to be running. So before we 
 
 ## Connect To Testnet
 
-With our testnet up and running, the first thing we need to do is connect to it. All interactions between Ark Nodes and the outside world happen through the Public API, which is a REST API facilitating different [actions](/api/) on the blockchain.
+With our testnet up and running, the first thing we need to do is connect to it. All interactions between ARK Nodes and the outside world happen through the Public API, which is a REST API facilitating different [actions](/api/) on the blockchain.
 
 It is possible to interact with a node directly through HTTP without using any programming language at all. By default, the Public API for testnet opens a connection on your local machine at `http://0.0.0.0:4003/api`. We can check out newly forged [blocks](http://0.0.0.0:4003/api/blocks) in our browser with a running testnet. You should see a response showing you all the (empty) blocks your testnet forgers have recently created.
 
@@ -22,7 +22,7 @@ If the response you see is hard to read, consider downloading a JSON Viewer for 
 
 :::
 
-Sending complex requests directly in your browser's URL window by typing them out is neither fun nor efficient. Instead, we can leverage one of Ark's most popular features: the client SDKs available in virtually all major programming languages. These SDKs streamline interacting with the Ark blockchain no matter your language.
+Sending complex requests directly in your browser's URL window by typing them out is neither fun nor efficient. Instead, we can leverage one of ARK's most popular features: the client SDKs available in virtually all major programming languages. These SDKs streamline interacting with the ARK blockchain no matter your language.
 
 ::: tip
 
@@ -85,8 +85,8 @@ public class Main {
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Client;
-using ArkEcosystem.Client.API.Two;
+using ARKEcosystem.Client;
+using ARKEcosystem.Client.API.Two;
 
 static void Main(string[] args)
 {
@@ -109,7 +109,7 @@ static void Main(string[] args)
 
 require_once('vendor/autoload.php');
 
-use ArkEcosystem\Client\Connection;
+use ARKEcosystem\Client\Connection;
 
 $connection = new Connection([
     'host' => 'http://0.0.0.0:4003/api/',
@@ -121,9 +121,9 @@ $connection = new Connection([
 ::: tab python
 
 ```python
-from client import ArkClient
+from client import ARKClient
 
-client = ArkClient('http://127.0.0.1:4003/api')
+client = ARKClient('http://127.0.0.1:4003/api')
 ```
 
 :::
@@ -136,7 +136,7 @@ package main
 import (
     "net/url"
 
-    ark "github.com/ArkEcosystem/go-client/client"
+    ark "github.com/ARKEcosystem/go-client/client"
 )
 
 func main() {
@@ -156,7 +156,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
+ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::
@@ -166,9 +166,9 @@ Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
 ```ruby
 require 'arkecosystem/client'
 
-manager = ArkEcosystem::Client::ConnectionManager.new()
+manager = ARKEcosystem::Client::ConnectionManager.new()
 
-manager.connect(ArkEcosystem::Client::Connection.new({
+manager.connect(ARKEcosystem::Client::Connection.new({
   host: "http://0.0.0.0:4003/api/",
   version: 2
 }), 'main')
@@ -205,7 +205,7 @@ fn main() {
 ::: tab elixir
 
 ```elixir
-iex > client = ArkEcosystem.Client.new(%{
+iex > client = ARKEcosystem.Client.new(%{
 ... >             host: "http://0.0.0.0:4003/api",
 ... >             nethash: "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23",
 ... >             version: "1.1.1"
@@ -333,7 +333,7 @@ let blocks = v2.blocks.all(&params);
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Blocks.list(client)
+iex> ARKEcosystem.Client.API.Two.Blocks.list(client)
 ```
 
 :::
@@ -344,7 +344,7 @@ With any luck, the data you'll get back from that request will very closely rese
 
 ## Changing Config Manager
 
-At some point during the tutorial, you might run into some network-related bugs. By default, as of the time of writing, the `crypto` and `client` libraries are configured to work on devnet unless explicitly told otherwise. As devnet is the ecosystem-wide testing ground for the new Ark Core, setting devnet as the default ensures that community testers can set up nodes and applications with a minimum of overhead.
+At some point during the tutorial, you might run into some network-related bugs. By default, as of the time of writing, the `crypto` and `client` libraries are configured to work on devnet unless explicitly told otherwise. As devnet is the ecosystem-wide testing ground for the new ARK Core, setting devnet as the default ensures that community testers can set up nodes and applications with a minimum of overhead.
 
 However, there are some network-level differences between testnet and devnet that will cause some problems in our application if left unaddressed. To solve this, we need to tell our application to use the testnet settings.
 
@@ -398,7 +398,7 @@ set_custom_network(epoch, version, wif)
 package main
 
 import (
-    crypto "github.com/ArkEcosystem/go-crypto/crypto"
+    crypto "github.com/ARKEcosystem/go-crypto/crypto"
 )
 
 func main() {
@@ -430,7 +430,7 @@ Address address = Address::fromPassphrase(passphrase, devnetByte);
 ```
 
 ```cpp
-uint64_t epoch = Ark::Crypto::Utils::Slot::epoch(Ark::Crypto::Networks::Devnet);
+uint64_t epoch = ARK::Crypto::Utils::Slot::epoch(ARK::Crypto::Networks::Devnet);
 
 //  'epoch' output: 1490101200
 :::
@@ -457,7 +457,7 @@ To send a transaction, we need two an account to send the transaction from, and 
 
 Fortunately, our testnet comes equipped with 51 accounts out of the box: our forging delegates. By now, if your testnet has been running for more than a couple minutes, each of your delegates should have received forging rewards for creating blocks, so we can be sure that our accounts have enough ARK to send a transaction. We need to means of accessing those funds.
 
-To do so, we'll need to look in the directory containing our testnet files. There, in the `packages/core` directory, we'll find a `lib` folder containing all of the application files used by the `core` package. Included there is a `config` directory, which holds all of the configuration settings for each network supported by Ark Core out of the box. Inside the `testnet` config directory, we find a file called `delegates.json`.
+To do so, we'll need to look in the directory containing our testnet files. There, in the `packages/core` directory, we'll find a `lib` folder containing all of the application files used by the `core` package. Included there is a `config` directory, which holds all of the configuration settings for each network supported by ARK Core out of the box. Inside the `testnet` config directory, we find a file called `delegates.json`.
 
 If you open that file, you should see some information about dynamic fees, followed by a list of passphrases under the key `secrets`. Each of those passphrases represents a single delegate on our testnet. Using nothing more than the passphrase, we can use the `crypto` library to derive private keys, public keys, and addresses for a given delegate. If you're interested in learning how that's possible, the standard comes from [Bitcoin Improvement Proposal 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 
@@ -548,7 +548,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",
@@ -651,7 +651,7 @@ std::string sendResponse = connection.api.transactions.send(transactionsBuffer);
 A couple of things to note here:
 
 - In this example, we're just receiving the response from the server and logging it to the console immediately. In a real-world scenario, you'd likely want to do something with this response: more on that in a moment.
-  
+
 - All transactions should be wrapped in an array since it is possible to send multiple transactions at once.
 
 For the full SDK demo, check out the [demos](/sdk/examples/sdk-demos.html)

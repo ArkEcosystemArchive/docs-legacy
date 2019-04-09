@@ -11,8 +11,8 @@ title: "Voting & Delegates"
 
 The best places to find delegate information are:
 
-- [Reddit](https://www.reddit.com/r/ArkDelegates/)
-- [Ark forum](https://forum.ark.io/category/5/delegates)
+- [Reddit](https://www.reddit.com/r/ARKDelegates/)
+- [ARK forum](https://forum.ark.io/category/5/delegates)
 - [arkdelegates.io](https://arkdelegates.io/)
 
 ## Is voting a risk for my wallet?
@@ -35,7 +35,7 @@ No. The vote weight will automatically adapt to your wallet balance for every de
 
 ## Can I vote from an exchange?
 
-No. You need to send the ARK to your personal Ark address and vote via the official Ark Desktop Wallet.
+No. You need to send the ARK to your personal ARK address and vote via the official ARK Desktop Wallet.
 
 ## I just put all my ARK on a Ledger Nano S, do I need to re-vote?
 

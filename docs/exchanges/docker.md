@@ -12,7 +12,7 @@ title: "Using Docker"
 - 40GB SSD
 - 2 Cores
 
-Ark Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
+ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
 ::: tip
 Prerequisites to be installed:
@@ -130,8 +130,8 @@ You'll have to logout and login again or just open another session in order to a
 ```bash
 mkdir mainnet &&
 cd mainnet &&
-curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/mainnet/docker-compose.yml &&
-curl -sOJ https://raw.githubusercontent.com/ArkEcosystem/core/master/docker/production/mainnet/mainnet.env
+curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/mainnet/docker-compose.yml &&
+curl -sOJ https://raw.githubusercontent.com/ARKEcosystem/core/master/docker/production/mainnet/mainnet.env
 ```
 
 ### Running the Node

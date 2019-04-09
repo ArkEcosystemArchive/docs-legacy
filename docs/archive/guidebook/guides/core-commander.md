@@ -5,15 +5,15 @@ title: "Core Commander"
 # Core Commander
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ArkEcosystem/core-commander/master/banner.png" />
+    <img src="https://raw.githubusercontent.com/ARKEcosystem/core-commander/master/banner.png" />
 </p>
 
-**A shell script to easily setup, configure and maintain an Ark Core.**
+**A shell script to easily setup, configure and maintain an ARK Core.**
 
 ## Installation
 
 ```bash
-git clone https://github.com/ArkEcosystem/core-commander
+git clone https://github.com/ARKEcosystem/core-commander
 cd core-commander
 bash commander.sh
 ```
@@ -26,8 +26,8 @@ If you discover a security vulnerability within this package, please send an e-m
 
 - [Brian Faust](https://github.com/faustbrian)
 - [Alex Barnsley](https://github.com/alexbarnsley)
-- [All Contributors](https://github.com/ArkEcosystem/core-commander/contributors)
+- [All Contributors](https://github.com/ARKEcosystem/core-commander/contributors)
 
 ## License
 
-[MIT](https://github.com/ArkEcosystem/core-commander/blob/master/LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](https://github.com/ARKEcosystem/core-commander/blob/master/LICENSE) © [ARKEcosystem](https://ark.io)

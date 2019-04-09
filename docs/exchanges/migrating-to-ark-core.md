@@ -1,17 +1,17 @@
 ---
-title: "Migrating your Tools from Ark Node to Ark Core"
+title: "Migrating your Tools from ARK Node to ARK Core"
 ---
-# Migrating your Tools from Ark Node to Ark Core
+# Migrating your Tools from ARK Node to ARK Core
 
 ## Introduction
 
-This article will guide you through the steps required to migrate your tools and applications from Ark Node to Ark Core v2.
+This article will guide you through the steps required to migrate your tools and applications from ARK Node to ARK Core v2.
 
 ## Posting Transactions
 
-In Ark Node you would post your signed transactions to the P2P API at `http://127.0.0.1:4002/peer/transactions` and receive a list of transaction IDs.
+In ARK Node you would post your signed transactions to the P2P API at `http://127.0.0.1:4002/peer/transactions` and receive a list of transaction IDs.
 
-This endpoint is still available in Ark Core. However, you are now advised to use `http://127.0.0.1:4003/api/v2/transactions` to post your transactions. It behaves the same way as the P2P API but has no risk of being deprecated as it is integrated into the new Public API.
+This endpoint is still available in ARK Core. However, you are now advised to use `http://127.0.0.1:4003/api/v2/transactions` to post your transactions. It behaves the same way as the P2P API but has no risk of being deprecated as it is integrated into the new Public API.
 
 **This new endpoint will return you three lists of transaction IDs:**
 
@@ -26,7 +26,7 @@ You can circumvent the transaction throttling that results in excessive transact
 
 ## Paginating the 2.0 API
 
-Ark Core currently supports both the 1.0 API from Ark Node which will be removed shortly and the new 2.0 API which provides proper pagination of data and indicates how much data is available.
+ARK Core currently supports both the 1.0 API from ARK Node which will be removed shortly and the new 2.0 API which provides proper pagination of data and indicates how much data is available.
 
 If you interact with the 2.0 API and wish to paginate data you can append `?page=4&limit=25` to the URL. The response will contain a `meta` field that will contain the total count of records available, where you currently are and URLs to the next, previous, first and last page of items available.
 
@@ -34,11 +34,11 @@ Having those meta fields available will allow you to easily loop over all availa
 
 ## Client libraries
 
-The older SDKs consisted of different implementations per programming languages. Ark v2 also included a migration to a brand new SDK with a more consistent design across programming languages.
+The older SDKs consisted of different implementations per programming languages. ARK v2 also included a migration to a brand new SDK with a more consistent design across programming languages.
 
 Each SDK consist of two libraries:
 
-1. `{LANG}-client` library used to send and receive payloads to the public API, webhooks or JSON-RPC. (e.g [python-client](https://github.com/ArkEcosystem/python-client))
+1. `{LANG}-client` library used to send and receive payloads to the public API, webhooks or JSON-RPC. (e.g [python-client](https://github.com/ARKEcosystem/python-client))
 
 2. `{LANG}-crypto` library, which can create, sign and verify transactions. It also includes cryptographic functions to validate blocks.
 

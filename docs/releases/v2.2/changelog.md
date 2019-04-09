@@ -1,7 +1,7 @@
 # Changelog
 
 ::: tip
-The official changelog of `v2.2` is hosted in the [core repository](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md).
+The official changelog of `v2.2` is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
 :::
 
 ### Added
@@ -32,19 +32,19 @@ The official changelog of `v2.2` is hosted in the [core repository](https://gith
 -   Remove unnecessary ping call in `core-p2p` ([#2123])
 -   Remove broken getRandomDownloadBlocksPeer ([#2121])
 
-[#2100]: https://github.com/ArkEcosystem/core/pull/2100
-[#2102]: https://github.com/ArkEcosystem/core/pull/2102
-[#2103]: https://github.com/ArkEcosystem/core/pull/2103
-[#2106]: https://github.com/ArkEcosystem/core/pull/2106
-[#2108]: https://github.com/ArkEcosystem/core/pull/2108
-[#2119]: https://github.com/ArkEcosystem/core/pull/2119
-[#2121]: https://github.com/ArkEcosystem/core/pull/2121
-[#2123]: https://github.com/ArkEcosystem/core/pull/2123
-[#2125]: https://github.com/ArkEcosystem/core/pull/2125
-[#2135]: https://github.com/ArkEcosystem/core/pull/2135
-[#2137]: https://github.com/ArkEcosystem/core/pull/2137
-[#2139]: https://github.com/ArkEcosystem/core/pull/2139
-[#2142]: https://github.com/ArkEcosystem/core/pull/2142
-[#2144]: https://github.com/ArkEcosystem/core/pull/2144
-[#2149]: https://github.com/ArkEcosystem/core/pull/2149
-[#2152]: https://github.com/ArkEcosystem/core/pull/2152
+[#2100]: https://github.com/ARKEcosystem/core/pull/2100
+[#2102]: https://github.com/ARKEcosystem/core/pull/2102
+[#2103]: https://github.com/ARKEcosystem/core/pull/2103
+[#2106]: https://github.com/ARKEcosystem/core/pull/2106
+[#2108]: https://github.com/ARKEcosystem/core/pull/2108
+[#2119]: https://github.com/ARKEcosystem/core/pull/2119
+[#2121]: https://github.com/ARKEcosystem/core/pull/2121
+[#2123]: https://github.com/ARKEcosystem/core/pull/2123
+[#2125]: https://github.com/ARKEcosystem/core/pull/2125
+[#2135]: https://github.com/ARKEcosystem/core/pull/2135
+[#2137]: https://github.com/ARKEcosystem/core/pull/2137
+[#2139]: https://github.com/ARKEcosystem/core/pull/2139
+[#2142]: https://github.com/ARKEcosystem/core/pull/2142
+[#2144]: https://github.com/ARKEcosystem/core/pull/2144
+[#2149]: https://github.com/ARKEcosystem/core/pull/2149
+[#2152]: https://github.com/ARKEcosystem/core/pull/2152

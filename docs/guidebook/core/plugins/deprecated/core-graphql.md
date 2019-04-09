@@ -5,7 +5,7 @@ title: "GraphQL"
 # GraphQL
 
 ::: tip
-You can find the source code of this package at [packages/core-graphql](https://github.com/ArkEcosystem/core/tree/develop/packages/core-graphql).
+You can find the source code of this package at [packages/core-graphql](https://github.com/ARKEcosystem/core/tree/develop/packages/core-graphql).
 :::
 
 ## Installation

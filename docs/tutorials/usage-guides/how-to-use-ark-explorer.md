@@ -1,16 +1,16 @@
 ---
-title: "How To Use The Ark Explorer?"
+title: "How To Use The ARK Explorer?"
 ---
 
-# How to use the Ark Explorer on Mobile
+# How to use the ARK Explorer on Mobile
 
 ## What is a block explorer?
 
 If a blockchain is a highway of transactional records, from the very first to the most current, a block explorer is your Hollywood tour bus: the guide to every aspect of that highway as you travel through it. Most people, when using the block explorer, are only doing so to confirm a transaction they have sent or are receiving, this, however, taps into a tiny fraction of the power contained within the explorer.
 Block explorers can give anyone access to all the information contained within that blockchain. You can search every block that was ever created, see every transaction an address has conducted as well as a snapshot of the status of that network.
-Most blockchains have a block explorer, and Ark is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users of any level.
+Most blockchains have a block explorer, and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users of any level.
 
-Let’s begin our journey into the Ark explorer.
+Let’s begin our journey into the ARK explorer.
 
 ![MOBILE BLOCK EXPLORER Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
 
@@ -22,19 +22,19 @@ When you first arrive at [explorer.ark.io](https://explorer.ark.io), you will fi
 
 This is a list of the most recent transactions to have been broadcast over the network. Inside each transaction details page, you will be able to view the following information:
 
-- **ID:** This will show the unique identification (ID) hash for this transaction. If you click on this ID, you will be able to see how many confirmations it has received and what block it has been included in. By being incorporated into a block, it proves the network has accepted the transaction as valid, and it will forever be written into the Ark blockchain.
+- **ID:** This will show the unique identification (ID) hash for this transaction. If you click on this ID, you will be able to see how many confirmations it has received and what block it has been included in. By being incorporated into a block, it proves the network has accepted the transaction as valid, and it will forever be written into the ARK blockchain.
 
 - **Amount:** This will indicate the amount of ARK that was sent from the Sender to the Recipient.
 
-- **Sender:** This field shows the Ark address which signed the transaction; i.e., who is sending the transaction.
+- **Sender:** This field shows the ARK address which signed the transaction; i.e., who is sending the transaction.
 
-- **Recipient:** Here we see the Ark address to which the sender (above) sent this transaction to; i.e., who is receiving the transaction.
+- **Recipient:** Here we see the ARK address to which the sender (above) sent this transaction to; i.e., who is receiving the transaction.
 
 - **Timestamp:** This indicates the exact time at which the transaction was broadcasted and accepted by the network.
 
 - **Fee:** This indicates the fee paid to send the transaction. A list of current fees on the ARK network can be found in [**Fees for Transactions**](/basics/understanding-transactions-and-block-propagation.html#fees-for-transactions).
 
-- **SmartBridge:** This field indicates the Ark SmartBridge that was used in the transaction. SmartBridges are part of the innovations driving the Ark Ecosystem: it allows for different blockchains to interact with each other. Think of each blockchain as an island with no outside communication. If you work on Ethereum Island and your business partner only works on Bitcoin Island, you can't trade or work together. Ark SmartBridges are like an airstrip, cargo barge, cellphone towers, and internet all rolled into one. You can do business with any of the other islands from any island instantaneously and friction free. A more detailed explanation of SmartBridges can be found in the section [**What are BridgeChains and how to use them**](/basics/how-does-ark-smartbridge-work.html).
+- **SmartBridge:** This field indicates the ARK SmartBridge that was used in the transaction. SmartBridges are part of the innovations driving the ARK Ecosystem: it allows for different blockchains to interact with each other. Think of each blockchain as an island with no outside communication. If you work on Ethereum Island and your business partner only works on Bitcoin Island, you can't trade or work together. ARK SmartBridges are like an airstrip, cargo barge, cellphone towers, and internet all rolled into one. You can do business with any of the other islands from any island instantaneously and friction free. A more detailed explanation of SmartBridges can be found in the section [**What are BridgeChains and how to use them**](/basics/how-does-ark-smartbridge-work.html).
 
 ### Latest Blocks
 
@@ -46,7 +46,7 @@ This is a list of the most recent blocks to have been broadcast over the network
 
 - **Height:** This section will show how far from the first (genesis) block the blockchain has progressed. For example, if you are looking at a block with a height of 1000, this will indicate that the block is the 999th since the first (genesis) block.
 
-- **Timestamp:** This indicates the date and time at which block was forged and committed onto the Ark blockchain.
+- **Timestamp:** This indicates the date and time at which block was forged and committed onto the ARK blockchain.
 
 - **Transactions:** Here you will see how many transactions were included in the block.
 
@@ -75,17 +75,17 @@ Across the top of the page, you will also see a list of details about the curren
 
 ![DROPDOWN Overview](./assets/how-to-use-the-ark-explorer/DROPDOWN.png)
 
-**Ark Icon:** Returns to the Ark explorer home page.
+**ARK Icon:** Returns to the ARK explorer home page.
 
 **Drop Down Menu:**
 
-- **Home:** This will take you back to the Ark explorer home page.
+- **Home:** This will take you back to the ARK explorer home page.
 
-- **Top Wallets:** This will show you the wallets, ordered high to low by balance. From there, you will be able to see their ranking, wallet address, balance and the percentage of the total supply they own. Currently, the Ark development team holds the most significant portion of ARK, which is used to pay for projects and developers to bring network improvements and community support.
+- **Top Wallets:** This will show you the wallets, ordered high to low by balance. From there, you will be able to see their ranking, wallet address, balance and the percentage of the total supply they own. Currently, the ARK development team holds the most significant portion of ARK, which is used to pay for projects and developers to bring network improvements and community support.
 
 ![Top Wallets](./assets/how-to-use-the-ark-explorer/TOPWALLETS.png)
 
-- **Delegate Monitor:** This shows the current list of delegates and all the votes they've earned. Ark is run by its community, whose members vote for delegates. Delegates, among other things, participate in community matters and forge blocks. The top 51 delegates are allowed to forge. Many delegates rely on community support to maintain their position within the network.
+- **Delegate Monitor:** This shows the current list of delegates and all the votes they've earned. ARK is run by its community, whose members vote for delegates. Delegates, among other things, participate in community matters and forge blocks. The top 51 delegates are allowed to forge. Many delegates rely on community support to maintain their position within the network.
 
 ![Delegate Monitor Overview](./assets/how-to-use-the-ark-explorer/DELEGATEMONITOROVERVIEW.png)
 
@@ -100,7 +100,7 @@ If you click on a delegate’s username, you will be taken to the delegate's wal
 
 - **Transactions:** Green arrows indicate the number of transactions into the delegate's wallet, while red arrows indicate transactions OUT of the delegate's wallet.
 
-- **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online, they are not forging (verifying) new blocks. Thus this can be an essential aspect for Ark community members to consider when voting.
+- **Uptime:** Indicates the percentage of time the delegate's node has been connected to the network. When delegate nodes are not online, they are not forging (verifying) new blocks. Thus this can be an essential aspect for ARK community members to consider when voting.
 
 - **Rank/Status:** This shows what the delegate's ranking is regarding vote weight. For example, seeing the number 6 means the delegate has the sixth highest number of votes of all the delegates in the network.
 
@@ -120,7 +120,7 @@ The last three menu option are as follows:
 
 ## Search Bar
 
-Here you can input any Ark address, transaction ID or block ID and find detailed information about them. Most users will use this to check the status of a transaction they have sent or are expecting. If you were to send someone a transaction of 5 ARK, a transaction ID would be generated, and you could forward that information to the recipient as both a validation of payment and a digital receipt.
+Here you can input any ARK address, transaction ID or block ID and find detailed information about them. Most users will use this to check the status of a transaction they have sent or are expecting. If you were to send someone a transaction of 5 ARK, a transaction ID would be generated, and you could forward that information to the recipient as both a validation of payment and a digital receipt.
 
 ## Day/Night Mode
 
@@ -128,4 +128,4 @@ This is merely an aesthetic choice depending on the user and how they prefer the
 
 ## Conclusion
 
-With this information, you can now take advantage of the full breadth of functionality contained within the Ark explorer. While this may seem like a simple tool, it is also powerful. Block explorers help individuals see what the blockchain is up to!
+With this information, you can now take advantage of the full breadth of functionality contained within the ARK explorer. While this may seem like a simple tool, it is also powerful. Block explorers help individuals see what the blockchain is up to!

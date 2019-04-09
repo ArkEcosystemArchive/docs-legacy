@@ -1,6 +1,6 @@
 # How to Monitor the Blockchain
 
-In this recipe, we will build an Ark Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your Ark Core node by writing plugins to react to network events as they occur.
+In this recipe, we will build an ARK Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your ARK Core node by writing plugins to react to network events as they occur.
 
 ## Define the problem
 
@@ -11,11 +11,11 @@ Generally speaking, there are two primary contexts in which you might want to mo
 
 Monitoring to the blockchain on a node is useful in combination with a local wallet to trigger actions as soon as possible after an event occurs.  External applications might want to listen to the blockchain to synchronize their database with the network's current state.
 
-Within Ark Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
+Within ARK Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
 
-By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, Ark Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
+By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, ARK Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
 
-This recipe will cover the first approach — monitoring with a custom plugin installed in Ark Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
+This recipe will cover the first approach — monitoring with a custom plugin installed in ARK Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
 
 This example assumes you have a working testnet running, and we'll need to create a custom plugin. Make sure you have a correctly set up development environment.
 
@@ -120,7 +120,7 @@ The first thing we will do is scaffold out a custom plugin called `core-delegate
 
 ```bash
 cd plugins/
-git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
+git submodule add -f https://github.com/ARKEcosystem/core-plugin-skeleton
 ```
 
 Once the submodule is added, rename the `core-plugin-skeleton` directory to `core-delegate-monitor`. Make sure to rename your plugin to `@arkecosystem/core-delegate-monitor` in your plugin's new `package.json`, and to add the necessary configuration to your `plugins.js` file. It is also convenient to alter the remote URL of the repository; so you can manage your plugin as a separate repository.

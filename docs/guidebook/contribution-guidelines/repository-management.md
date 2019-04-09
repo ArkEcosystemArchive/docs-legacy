@@ -4,7 +4,7 @@ title: "Repository Management"
 
 # Repository Management
 
-While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Ark Ecosystem and increases the likelihood your pull request will be accepted.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the ARK Ecosystem and increases the likelihood your pull request will be accepted.
 
 ## Structure
 
@@ -41,9 +41,9 @@ To make everyone's life easier when looking for issues or pull requests of speci
 **Notes**
 
 - The `Type: Bug` label always has to be combined with a `Priority: *` and `Severity: *`  label to indicate how severe the problem caused by the bug is and how many users are affected by it. _The combination of those determines how fast the bug needs to be fixed._
-- Bounty tiers need to be assigned _before_ a pull request is merged. If no tier is assigned or is assigned to a team member the ArkEcosystem Bot will comment in the affected issue.
+- Bounty tiers need to be assigned _before_ a pull request is merged. If no tier is assigned or is assigned to a team member the ARKEcosystem Bot will comment in the affected issue.
 - For issues that are tasks a `Difficulty: *` label should be assigned to provide developers a sense of how much work it will be.
-- The `Complexity: *` labels should never be assigned manually as the ArkEcosystem Bot will evaluate the complexity of a pull request and assign a label.
+- The `Complexity: *` labels should never be assigned manually as the ARKEcosystem Bot will evaluate the complexity of a pull request and assign a label.
 
 **Bounty**
 
@@ -317,7 +317,7 @@ To make everyone's life easier when looking for issues or pull requests of speci
 
 ## Assigning Bounty Tiers before merging a Pull Request
 
-Before a developer merges a PR, it is *required* to assign one of the seven bounty labels. Those labels will be used by the _ArkEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
+Before a developer merges a PR, it is *required* to assign one of the seven bounty labels. Those labels will be used by the _ARKEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
 
 **Tier 1 - $100**
 

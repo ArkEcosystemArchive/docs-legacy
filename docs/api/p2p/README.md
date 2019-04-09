@@ -4,7 +4,7 @@ title: "P2P"
 
 ## Introduction
 
-This describes the resources that make up the internal P2P. If you have any problems or requests please [open an issue](https://github.com/ArkEcosystem/core/issues/new/choose).
+This describes the resources that make up the internal P2P. If you have any problems or requests please [open an issue](https://github.com/ARKEcosystem/core/issues/new/choose).
 
 ### Public Testing Relay
 
@@ -19,7 +19,7 @@ In order to communicate with the P2P API you will need to provide the nethash of
 | Name    | Type   | Description                                               | Required           |
 |---------|:------:|-----------------------------------------------------------|:------------------:|
 | nethash | string | The nethhash of the network you are making the request on | :white_check_mark: |
-| version | string | The version of ArkEcosystem/ark-node.                     | :white_check_mark: |
+| version | string | The version of ARKEcosystem/ark-node.                     | :white_check_mark: |
 | port    | int    | The port used for communication.                          | :white_check_mark: |
 
 ### Mainnet

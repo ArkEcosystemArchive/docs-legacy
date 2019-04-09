@@ -1,8 +1,8 @@
-# How to Send Transactions using the Ark Core Tester CLI
+# How to Send Transactions using the ARK Core Tester CLI
 
 ## Prerequisites
 
-Ensure you have a working copy of the most recent [GitHub repo for Ark Core](https://github.com/arkecosystem/core). If you're using Ark Core Commander, it will be installed at `~/ark-core`.
+Ensure you have a working copy of the most recent [GitHub repo for ARK Core](https://github.com/arkecosystem/core). If you're using ARK Core Commander, it will be installed at `~/ark-core`.
 
 The commands shown in the next examples are all run in the `~/ark-core/packages/core-tester-cli/` folder.
 
@@ -283,8 +283,8 @@ For the output
 [ERROR]: Delegate count incorrect. '120' but should be '121'
 ```
 
-Now, despite the error, the newly registered delegate can still be found [here](https://dexplorer.ark.io/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 arktoshi (1 ARK only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the Ark Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not. 
+Now, despite the error, the newly registered delegate can still be found [here](https://dexplorer.ark.io/wallets/D7qKmPXo21PvwVKjbEQ85N7vPqods6anXD); with a registration fee of 100 000 000 arktoshi (1 ARK only). This is due to the blockchain having to spin more than 2.5 blocks, or 20 seconds, before reaching this low delegate dynamic fee threshold, while the ARK Core Tester CLI only waits a strict 20 seconds before determining whether the transaction was successful or not.
 
 ## Conclusion
 
-You should now be able to properly manage your test transactions with the help of the tester cli utility! If you have any questions or signals to present, please do so either on [Slack](https://arkecosystem.slack.com) with a message or [GitHub](https://github.com/ArkEcosystem/docs) with an issue.
+You should now be able to properly manage your test transactions with the help of the tester cli utility! If you have any questions or signals to present, please do so either on [Slack](https://arkecosystem.slack.com) with a message or [GitHub](https://github.com/ARKEcosystem/docs) with an issue.

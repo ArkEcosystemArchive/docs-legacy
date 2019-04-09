@@ -34,7 +34,7 @@ The rest of this command specifies a pair of arguments to pass to the `relay` co
 
 - config: `./bin/config/devnet`. This specifies a folder in which the configuration files for our node can be found.
 
-If you look again at the scripts posted above, you'll notice that all of them contain this same basic formula, with only minor differences from script to script. Scripts may start `relays`,  `forgers`,  `testnet` nodes or `mainnet` nodes.
+If you look again at the scripts posted above, you'll notice that all of them contain this same basic formula, with only minor differences from script to script. Scripts may start `relays`, `forgers`, `testnet` nodes or `mainnet` nodes.
 
 Let's look at the [relay:run](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/relay/run.ts) command in greater detail:
 
@@ -44,26 +44,26 @@ import { CommandFlags } from "../../types";
 import { BaseCommand } from "../command";
 
 export class RunCommand extends BaseCommand {
-    public static description: string = "Run the relay (without pm2)";
+  public static description: string = "Run the relay (without pm2)";
 
-    public static flags: CommandFlags = {
-        ...BaseCommand.flagsNetwork,
-        ...BaseCommand.flagsBehaviour,
-    };
+  public static flags: CommandFlags = {
+    ...BaseCommand.flagsNetwork,
+    ...BaseCommand.flagsBehaviour
+  };
 
-    public async run(): Promise<void> {
-        const { flags } = await this.parseWithNetwork(RunCommand);
+  public async run(): Promise<void> {
+    const { flags } = await this.parseWithNetwork(RunCommand);
 
-        await this.buildApplication(app, flags, {
-            exclude: ["@arkecosystem/core-forger"],
-            options: {
-                "@arkecosystem/core-p2p": this.buildPeerOptions(flags),
-                "@arkecosystem/core-blockchain": {
-                    networkStart: flags.networkStart,
-                },
-            },
-        });
-    }
+    await this.buildApplication(app, flags, {
+      exclude: ["@arkecosystem/core-forger"],
+      options: {
+        "@arkecosystem/core-p2p": this.buildPeerOptions(flags),
+        "@arkecosystem/core-blockchain": {
+          networkStart: flags.networkStart
+        }
+      }
+    });
+  }
 }
 ```
 
@@ -176,14 +176,14 @@ Our CLI options are passed into an `Environment` object and loaded using another
 
 ```ts
 export class Environment {
-    constructor(readonly variables: any) {}
+  constructor(readonly variables: any) {}
 
-    public setUp() {
-        this.exportPaths();
-        this.exportVariables();
-    }
+  public setUp() {
+    this.exportPaths();
+    this.exportVariables();
+  }
 
-    // ...
+  // ...
 }
 ```
 
@@ -209,27 +209,30 @@ import isString from "lodash/isString";
 import semver from "semver";
 
 export class PluginRegistrar {
-    private container: any;
-    private plugins: any;
-    private options: any;
-    private deregister: any;
+  private container: any;
+  private plugins: any;
+  private options: any;
+  private deregister: any;
 
-    constructor(container, options: any = {}) {
-        this.container = container;
-        this.plugins = container.config.get("plugins");
-        this.options = this.__castOptions(options);
-        this.deregister = [];
+  constructor(container, options: any = {}) {
+    this.container = container;
+    this.plugins = container.config.get("plugins");
+    this.options = this.__castOptions(options);
+    this.deregister = [];
+  }
+
+  public async setUp() {
+    for (const [name, options] of Object.entries(this.plugins)) {
+      await this.register(name, options);
+
+      if (
+        (this.options.exit && this.options.exit === name) ||
+        this.container.shuttingDown
+      ) {
+        break;
+      }
     }
-
-    public async setUp() {
-        for (const [name, options] of Object.entries(this.plugins)) {
-            await this.register(name, options);
-
-            if ((this.options.exit && this.options.exit === name) || this.container.shuttingDown) {
-                break;
-            }
-        }
-    }
+  }
 }
 ```
 
@@ -239,55 +242,58 @@ This is the step in our node's lifecycle where the node's most essential functio
 
 ```js
 module.exports = {
-    "@arkecosystem/core-event-emitter": {},
-    "@arkecosystem/core-logger-pino": {},
-    "@arkecosystem/core-database-postgres": {
-        connection: {
-            host: process.env.CORE_DB_HOST || "localhost",
-            port: process.env.CORE_DB_PORT || 5432,
-            database: process.env.CORE_DB_DATABASE || `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
-            user: process.env.CORE_DB_USERNAME || process.env.CORE_TOKEN,
-            password: process.env.CORE_DB_PASSWORD || "password",
-        },
-    },
-    "@arkecosystem/core-transaction-pool": {
-        enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
-        maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
-        allowedSenders: [],
-        dynamicFees: {
-            enabled: true,
-            minFeePool: 1000,
-            minFeeBroadcast: 1000,
-            addonBytes: {
-                transfer: 100,
-                secondSignature: 250,
-                delegateRegistration: 400000,
-                vote: 100,
-                multiSignature: 500,
-                ipfs: 250,
-                timelockTransfer: 500,
-                multiPayment: 500,
-                delegateResignation: 400000,
-            },
-        },
-    },
-    "@arkecosystem/core-p2p": {
-        host: process.env.CORE_P2P_HOST || "0.0.0.0",
-        port: process.env.CORE_P2P_PORT || 4002,
-        minimumNetworkReach: 5,
-        coldStart: 5,
-    },
-    "@arkecosystem/core-blockchain": {},
-    "@arkecosystem/core-api": {
-        enabled: !process.env.CORE_API_DISABLED,
-        host: process.env.CORE_API_HOST || "0.0.0.0",
-        port: process.env.CORE_API_PORT || 4003,
-        whitelist: ["*"],
-    },
-    "@arkecosystem/core-forger": {
-        hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`],
-    },
-    "@arkecosystem/core-snapshots": {},
+  "@arkecosystem/core-event-emitter": {},
+  "@arkecosystem/core-logger-pino": {},
+  "@arkecosystem/core-database-postgres": {
+    connection: {
+      host: process.env.CORE_DB_HOST || "localhost",
+      port: process.env.CORE_DB_PORT || 5432,
+      database:
+        process.env.CORE_DB_DATABASE ||
+        `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
+      user: process.env.CORE_DB_USERNAME || process.env.CORE_TOKEN,
+      password: process.env.CORE_DB_PASSWORD || "password"
+    }
+  },
+  "@arkecosystem/core-transaction-pool": {
+    enabled: !process.env.CORE_TRANSACTION_POOL_DISABLED,
+    maxTransactionsPerSender:
+      process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
+    allowedSenders: [],
+    dynamicFees: {
+      enabled: true,
+      minFeePool: 1000,
+      minFeeBroadcast: 1000,
+      addonBytes: {
+        transfer: 100,
+        secondSignature: 250,
+        delegateRegistration: 400000,
+        vote: 100,
+        multiSignature: 500,
+        ipfs: 250,
+        timelockTransfer: 500,
+        multiPayment: 500,
+        delegateResignation: 400000
+      }
+    }
+  },
+  "@arkecosystem/core-p2p": {
+    host: process.env.CORE_P2P_HOST || "0.0.0.0",
+    port: process.env.CORE_P2P_PORT || 4002,
+    minimumNetworkReach: 5,
+    coldStart: 5
+  },
+  "@arkecosystem/core-blockchain": {},
+  "@arkecosystem/core-api": {
+    enabled: !process.env.CORE_API_DISABLED,
+    host: process.env.CORE_API_HOST || "0.0.0.0",
+    port: process.env.CORE_API_PORT || 4003,
+    whitelist: ["*"]
+  },
+  "@arkecosystem/core-forger": {
+    hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`]
+  },
+  "@arkecosystem/core-snapshots": {}
 };
 ```
 

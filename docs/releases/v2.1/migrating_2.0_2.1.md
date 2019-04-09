@@ -110,7 +110,7 @@ You can read more about those paths at [https://specifications.freedesktop.org/b
 
 ### Conclusion
 
-Once all these changes have been made you will need to restart your relay and forger *(if you are a delegate)* for these changes to take effect.
+Once all these changes have been made you will need to restart your relay and forger _(if you are a delegate)_ for these changes to take effect.
 
 If you've been running your relay and forger manually you need to change `packages/core/bin/ark` to `packages/core/dist/index.js` to ensure that the JavaScript files, created by the TypeScript Compiler, are executed.
 

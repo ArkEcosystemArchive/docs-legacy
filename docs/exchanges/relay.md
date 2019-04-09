@@ -8,7 +8,6 @@ title: "Installing and configuring a Relay Node (Bare Metal or VM)"
 
 A Relay Node is a full node in the ARK Network; it maintains a complete copy of the ledger (blockchain). These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
 
-
 ## Recommended Hardware Requirements
 
 - 4GB RAM
@@ -22,12 +21,12 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
 - Stable internet connection
 - Access to multiple open ports (actual ports may be configured)
 
-    | service    | port | required | enabled by default | documentation                             |
-    |------------|------|----------|--------------------|-------------------------------------------|
-    | p2p        | 4001 | yes      | yes                | [reference](/api/p2p/)                    |
-    | public API | 4003 | no       | yes                | [reference](/exchanges/public-api.html)   |
-    | webhook    | 4004 | no       | no                 | [reference](/api/webhooks/)               |
-    | JSON-RPC   | 8080 | no       | no                 | [reference](/exchanges/json-rpc.html)     |
+  | service    | port | required | enabled by default | documentation                           |
+  | ---------- | ---- | -------- | ------------------ | --------------------------------------- |
+  | p2p        | 4001 | yes      | yes                | [reference](/api/p2p/)                  |
+  | public API | 4003 | no       | yes                | [reference](/exchanges/public-api.html) |
+  | webhook    | 4004 | no       | no                 | [reference](/api/webhooks/)             |
+  | JSON-RPC   | 8080 | no       | no                 | [reference](/exchanges/json-rpc.html)   |
 
 ## Using the official `Installation Script`
 
@@ -66,6 +65,7 @@ We will use ARK installer script that will install all of the necessary dependen
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/ARKEcosystem/core/master/install.sh)
 ```
+
 You will be asked to input your current users password for sudo privileges. Write or paste it and press enter to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
@@ -121,6 +121,7 @@ Now we want to see if the ARK Relay process has started the synchronization proc
 ```bash
 ark relay:log
 ```
+
 or
 
 ```bash
@@ -133,7 +134,6 @@ If the process has started you will see a lot of messages like this (with actual
 [YYYY-DD-MM hh:mm:ss][DEBUG]: Delegate <delegate name> (<public key>) allowed to forge block <#> 👍
 ```
 
-
 ::: tip
 Synchronization of the blockchain can take upwards of 10 hours so let it run, once its synronized `allowed to forge block` messages will only pop-up every 8 seconds. A single round consists of 51 delegates each forging a single block.
 :::
@@ -145,6 +145,7 @@ Ensure you properly restart the node process when editing your .env file. Use th
 ```bash
 pm2 restart all --update-env
 ```
+
 :::
 
 ## Next steps
@@ -165,4 +166,3 @@ If you need to configure your node further, go to:
 Please read the documentation pages for all of our [ARK API clients and cryptography libraries](/sdk/) (offered in many programming languages).
 
 Also, read the [API documentation](/api/public/v2/).
-

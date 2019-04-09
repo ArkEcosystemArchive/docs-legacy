@@ -50,8 +50,9 @@ This will run two separate containers. One for Core itself and another one for P
 
 ::: tip
 Prerequisites to be installed:
+
 - [OpenSSL](https://www.openssl.org/)
-:::
+  :::
 
 Two additional steps are needed to be able to run a forger:
 
@@ -62,11 +63,12 @@ cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 sed -i 's/^MODE=relay/MODE=forger/g $NETWORK.env
 ```
 
-2. Configure your delegate secret and password. *Just use the additional script **enc.sh**.*
+2. Configure your delegate secret and password. _Just use the additional script **enc.sh**._
 
 ```bash
 bash enc.sh
 ```
+
 You will be asked to enter your delegate secret, followed by entering your password twice.
 Script will create a new folder named `enc`, containing set of encrypted public and private keys.
 
@@ -168,7 +170,6 @@ docker exec -it core-devnet sudo apk add make gcc g++ git python
 
 > We are all set! Run the update and follow instructions:
 
-
 ```bash
 docker exec -it core-devnet ark update
 ```
@@ -212,7 +213,7 @@ To run the containers in the [background](https://docs.docker.com/engine/referen
 docker-compose up -d
 ```
 
-*In case you need to start with a clean Database:*
+_In case you need to start with a clean Database:_
 
 ```bash
 docker-compose down -v
@@ -234,13 +235,13 @@ cd docker/development/$NETWORK      # (NETWORK = testnet || devnet)
 docker-compose up -d
 ```
 
-*You can now enter your ark-core container and use NodeJS in a Docker container (Linux environment).*
+_You can now enter your ark-core container and use NodeJS in a Docker container (Linux environment)._
 
 ```bash
 docker exec -it ark-$NETWORK-core bash
 ```
 
-*Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script.*
+_Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
 ::: warning
 Development files/presets are not Production ready. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).

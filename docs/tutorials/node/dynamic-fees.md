@@ -63,7 +63,8 @@ The `maxTransactionsPerSender` is a protection against spam attacks. For delegat
 Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's arktoshi-per-byte value:
 
 ```js
-const calculatedFee = (addonBytesValue + transactionSizeInBytes) * arktoshiPerByte
+const calculatedFee =
+  (addonBytesValue + transactionSizeInBytes) * arktoshiPerByte;
 ```
 
 ## Changing the Transaction Pool Size

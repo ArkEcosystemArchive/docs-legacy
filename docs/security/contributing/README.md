@@ -15,7 +15,7 @@ The last point is of special interest ton patches. It might be convenient to add
 // some pseudocode
 
 if (block.id === someID) {
-    patch(block)
+  patch(block);
 }
 ```
 

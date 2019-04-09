@@ -15,6 +15,7 @@ yarn add @arkecosystem/core-forger
 ```
 
 ## Alias
+
 `forger`
 
 ## Summary
@@ -93,25 +94,27 @@ From there, the newly forged block is converted to a JSON representation and pro
 
 ```ts
 export const store = {
-    /**
-     * @param  {Hapi.Request} request
-     * @param  {Hapi.Toolkit} h
-     * @return {Hapi.Response}
-     */
-    handler: (request, h) => {
-        request.payload.block.ip = request.info.remoteAddress;
+  /**
+   * @param  {Hapi.Request} request
+   * @param  {Hapi.Toolkit} h
+   * @return {Hapi.Response}
+   */
+  handler: (request, h) => {
+    request.payload.block.ip = request.info.remoteAddress;
 
-        app.resolvePlugin<Blockchain.IBlockchain>("blockchain").handleIncomingBlock(request.payload.block);
+    app
+      .resolvePlugin<Blockchain.IBlockchain>("blockchain")
+      .handleIncomingBlock(request.payload.block);
 
-        return h.response(null).code(204);
-    },
-    options: {
-        plugins: {
-            "hapi-ajv": {
-                payloadSchema: schema.postBlock,
-            },
-        },
-    },
+    return h.response(null).code(204);
+  },
+  options: {
+    plugins: {
+      "hapi-ajv": {
+        payloadSchema: schema.postBlock
+      }
+    }
+  }
 };
 ```
 
@@ -119,6 +122,6 @@ export const store = {
 
 ```ts
 export const defaults = {
-    hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`],
+  hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`]
 };
 ```

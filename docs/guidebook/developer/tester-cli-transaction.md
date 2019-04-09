@@ -43,9 +43,9 @@ Some parameters are common to all transaction types:
 
 The basic premise is the following:
 
- 1. Fill in a command with the passphrase to a wallet with enough DARK
- 2. A transfer will be issued to a randomly generated address
- 3. After a moment the type-specific transaction will be issued to other randomly generated addresses
+1.  Fill in a command with the passphrase to a wallet with enough DARK
+2.  A transfer will be issued to a randomly generated address
+3.  After a moment the type-specific transaction will be issued to other randomly generated addresses
 
 Accounts randomly generated are available in the `./test-wallets` file.
 

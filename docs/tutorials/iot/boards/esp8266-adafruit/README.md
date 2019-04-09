@@ -26,48 +26,48 @@ title: Adafruit ESP8266 Overview and Setup
 | • `transactions(const char* const blockId)` |**[x]**|
 | • `search(const std::map<std::string, std::string>& bodyParameters, int limit, int page)` |**[x]**|
 
-| **Delegates:** |**[x]**|
-| :----- | :---: |
-| • `get(const char *const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `blocks(const char *const identifier, int limit, int page)` |**[x]**|
-| • `voters(const char *const identifier, int limit, int page)` |**[x]**|
+| **Delegates:**                                                | **[x]** |
+| :------------------------------------------------------------ | :-----: |
+| • `get(const char *const identifier)`                         | **[x]** |
+| • `all(int limit, int page)`                                  | **[x]** |
+| • `blocks(const char *const identifier, int limit, int page)` | **[x]** |
+| • `voters(const char *const identifier, int limit, int page)` | **[x]** |
 
-| **Node:** |**[x]**|
-| :----- | :---: |
-| • `configuration()` |**[x]**|
-| • `status()` |**[x]**|
-| • `syncing()` |**[x]**|
+| **Node:**           | **[x]** |
+| :------------------ | :-----: |
+| • `configuration()` | **[x]** |
+| • `status()`        | **[x]** |
+| • `syncing()`       | **[x]** |
 
-| **Peers:** |**[x]**|
-| :----- | :---: |
-| • `get(const char* const ip)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
+| **Peers:**                    | **[x]** |
+| :---------------------------- | :-----: |
+| • `get(const char* const ip)` | **[x]** |
+| • `all(int limit, int page)`  | **[x]** |
 
-| **Transactions** |**[x]**|
-| :----- | :---: |
-| • `getUnconfirmed(const char* const identifier)` |**[x]**|
-| • `get(const char* const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `allUnconfirmed(int limit, int page)` |**[x]**|
-| • `types()` |**[x]**|
-| • `search(const std::map<std::string, std::string>& body_parameters, int limit, int page)` |**[x]**|
+| **Transactions**                                                                           | **[x]** |
+| :----------------------------------------------------------------------------------------- | :-----: |
+| • `getUnconfirmed(const char* const identifier)`                                           | **[x]** |
+| • `get(const char* const identifier)`                                                      | **[x]** |
+| • `all(int limit, int page)`                                                               | **[x]** |
+| • `allUnconfirmed(int limit, int page)`                                                    | **[x]** |
+| • `types()`                                                                                | **[x]** |
+| • `search(const std::map<std::string, std::string>& body_parameters, int limit, int page)` | **[x]** |
 
-| **Votes** |**[x]**|
-| :----- | :---: |
-| • `get(const char* const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
+| **Votes**                             | **[x]** |
+| :------------------------------------ | :-----: |
+| • `get(const char* const identifier)` | **[x]** |
+| • `all(int limit, int page)`          | **[x]** |
 
-| **Wallets** |**[x]**|
-| :----- | :---: |
-| • `get(const char *const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `top(int limit, int page)` |**[x]**|
-| • `transactions(const char *const identifier, int limit, int page)` |**[x]**|
-| • `transactionsReceived(const char *const identifier, int limit, int page)` |**[x]**|
-| • `transactionsSent(const char *const identifier, int limit, int page)` |**[x]**|
-| • `votes(const char *const identifier, int limit, int page)` |**[x]**|
-| • `search(const std::map<std::string, std::string> &bodyParameters, int limit, int page)` |**[x]**|
+| **Wallets**                                                                               | **[x]** |
+| :---------------------------------------------------------------------------------------- | :-----: |
+| • `get(const char *const identifier)`                                                     | **[x]** |
+| • `all(int limit, int page)`                                                              | **[x]** |
+| • `top(int limit, int page)`                                                              | **[x]** |
+| • `transactions(const char *const identifier, int limit, int page)`                       | **[x]** |
+| • `transactionsReceived(const char *const identifier, int limit, int page)`               | **[x]** |
+| • `transactionsSent(const char *const identifier, int limit, int page)`                   | **[x]** |
+| • `votes(const char *const identifier, int limit, int page)`                              | **[x]** |
+| • `search(const std::map<std::string, std::string> &bodyParameters, int limit, int page)` | **[x]** |
 
 ---
 
@@ -79,17 +79,18 @@ title: Adafruit ESP8266 Overview and Setup
 | • `get(int type)` |**[x]**|
 | • `set(int type, uint64_t fee)` |**[x]**|
 
-| **Network:** |**[x]**|
-| :----- | :---: |
-| • `get()` |**[x]**|
-| • `set(const AbstractNetwork& network)` |**[x]**|
+| **Network:**                            | **[x]** |
+| :-------------------------------------- | :-----: |
+| • `get()`                               | **[x]** |
+| • `set(const AbstractNetwork& network)` | **[x]** |
 
 **Enums:**
 | **Fees:** |**[x]**|
 | :----- | :---: |
 
-| **Types:** |**[x]**|
-| :----- | :---: |
+| **Types:** | **[x]** |
+| :--------- | :-----: |
+
 
 **Identities:**
 | **Address:** |**[x]**|
@@ -105,41 +106,41 @@ title: Adafruit ESP8266 Overview and Setup
 | • `base58encode(const uint8_t *source)` |**[x]**|
 | • `bytesFromBase58Check(const char *const address)` |**[x]**|
 
-| **Mnemonic:** |**[x]**|
-| :----- | :---: |
-| • `generate(size_t num_words = 12u, Language language)` |**[x]**|
+| **Mnemonic:**                                           | **[x]** |
+| :------------------------------------------------------ | :-----: |
+| • `generate(size_t num_words = 12u, Language language)` | **[x]** |
 
-| **PrivateKey:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase)` |**[x]**|
-| • `fromHex(const char *const privateKey)` |**[x]**|
-| • `fromWIFString(const char *wifStr, uint8_t wifByte)` |**[x]**|
-| • `validate(PrivateKey privateKey)` |**[x]**|
-| • `validate(const char *privateKeyStr)` |**[x]**|
-| • `validate(const uint8_t *privateKeyBytes)` |**[x]**|
+| **PrivateKey:**                                        | **[x]** |
+| :----------------------------------------------------- | :-----: |
+| • `toBytes()`                                          | **[x]** |
+| • `toString()`                                         | **[x]** |
+| • `fromPassphrase(const char *const passphrase)`       | **[x]** |
+| • `fromHex(const char *const privateKey)`              | **[x]** |
+| • `fromWIFString(const char *wifStr, uint8_t wifByte)` | **[x]** |
+| • `validate(PrivateKey privateKey)`                    | **[x]** |
+| • `validate(const char *privateKeyStr)`                | **[x]** |
+| • `validate(const uint8_t *privateKeyBytes)`           | **[x]** |
 
-| **PublicKey:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `isValid()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase)` |**[x]**|
-| • `fromHex(const char *const publicKey)` |**[x]**|
-| • `fromPrivateKey(PrivateKey privateKey)` |**[x]**|
-| • `validate(PublicKey publicKey)` |**[x]**|
-| • `validate(const char *publicKeyStr)` |**[x]**|
-| • `validate(const uint8_t *publicKeyBytes)` |**[x]**|
+| **PublicKey:**                                   | **[x]** |
+| :----------------------------------------------- | :-----: |
+| • `toBytes()`                                    | **[x]** |
+| • `toString()`                                   | **[x]** |
+| • `isValid()`                                    | **[x]** |
+| • `fromPassphrase(const char *const passphrase)` | **[x]** |
+| • `fromHex(const char *const publicKey)`         | **[x]** |
+| • `fromPrivateKey(PrivateKey privateKey)`        | **[x]** |
+| • `validate(PublicKey publicKey)`                | **[x]** |
+| • `validate(const char *publicKeyStr)`           | **[x]** |
+| • `validate(const uint8_t *publicKeyBytes)`      | **[x]** |
 
-| **WIF:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase, uint8_t wifByte)` |**[x]**|
+| **WIF:**                                                          | **[x]** |
+| :---------------------------------------------------------------- | :-----: |
+| • `toBytes()`                                                     | **[x]** |
+| • `toString()`                                                    | **[x]** |
+| • `fromPassphrase(const char *const passphrase, uint8_t wifByte)` | **[x]** |
 
 **Transactions:**
-|  **builder:** |**[x]**|
+| **builder:** |**[x]**|
 | :----- | :---: |
 | • `buildTransfer(std::string recipientId, uint64_t amount, std::string vendorField, std::string passphrase std::string secondPassphrase = "")` |**[x]**|
 | • `buildSecondSignatureRegistration(std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
@@ -147,22 +148,22 @@ title: Adafruit ESP8266 Overview and Setup
 | • `buildVote(std::vector<std::string> votes, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
 | • `buildMultiSignatureRegistration(uint8_t min, uint8_t lifetime, std::vector<std::string> keysgroup, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
 
-| **Deserializer:** |**[x]**|
-| :----- | :---: |
-| • `deserialize()` |**[x]**|
+| **Deserializer:** | **[x]** |
+| :---------------- | :-----: |
+| • `deserialize()` | **[x]** |
 
-| **Serializer:** |**[x]**|
-| :----- | :---: |
-| • `serialize()` |**[x]**|
+| **Serializer:** | **[x]** |
+| :-------------- | :-----: |
+| • `serialize()` | **[x]** |
 
-| **Transaction:** |**[*]**|
-| :----- | :---: |
-| • `getId()` |**[x]**|
-| • `sign(const char* passphrase)` |**[x]**|
-| • `secondSign(const char* passphrase)` |**[x]**|
-| • `verify()` |**[ ]**|
-| • `secondVerify(const char* secondPublicKey)` |**[ ]**|
-| • `toBytes(bool skipSignature = true, bool skipSecondSignature = true)` |**[x]**|
+| **Transaction:**                                                        | **[*]** |
+| :---------------------------------------------------------------------- | :-----: |
+| • `getId()`                                                             | **[x]** |
+| • `sign(const char* passphrase)`                                        | **[x]** |
+| • `secondSign(const char* passphrase)`                                  | **[x]** |
+| • `verify()`                                                            | **[ ]** |
+| • `secondVerify(const char* secondPublicKey)`                           | **[ ]** |
+| • `toBytes(bool skipSignature = true, bool skipSecondSignature = true)` | **[x]** |
 
 **Utils:**
 | **Message:** |**[_unstable_]**|
@@ -173,10 +174,10 @@ title: Adafruit ESP8266 Overview and Setup
 | • `toJson()` |**[x]**|
 | • `toString()` |**[x]**|
 
-| **slot:** |**[_unstable_]**|
-| :----- | :---: |
-| • `time(Crypto::Networks::AbstractNetwork network)` |**[ ]**|
-| • `epoch(Crypto::Networks::AbstractNetwork network)` |**[ ]**|
+| **slot:**                                            | **[_unstable_]** |
+| :--------------------------------------------------- | :--------------: |
+| • `time(Crypto::Networks::AbstractNetwork network)`  |     **[ ]**      |
+| • `epoch(Crypto::Networks::AbstractNetwork network)` |     **[ ]**      |
 
 </p>
 </details>
@@ -218,7 +219,6 @@ title: Adafruit ESP8266 Overview and Setup
 ![ESP8266 Lower](../assets/esp8266-adafruit/esp8266-adafruit-lower.jpg)
 ![ESP8266 Pinout](../assets/esp8266-adafruit/esp8266-adafruit-pinout.png)
 
-
 **External Resources:**
 
 - **Adafruit Feather Huzzah ESP8266: Overview:**
@@ -256,6 +256,7 @@ this is a line separated list of hardware configuration JSON configs.
 > **Preferences** >> **Additional Boards Manager URL's**
 
 Add this line to the URL's list:
+
 > `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 ![Arduino Board URLs](../assets/esp32-adafruit/arduino-ide-esp32-board-urls.png)
@@ -265,6 +266,7 @@ Add this line to the URL's list:
 **Download the ESP8266 packages via Board Manager:**
 
 Open the Boards Manager from the _**Tools**_ dropdown menu:
+
 > **Tools** >> **Board** >> **Boards Manager**
 
 Search for and install the '**ESP8266**' package in _**Boards Manager**_.
@@ -277,6 +279,7 @@ Search for and install the '**ESP8266**' package in _**Boards Manager**_.
 **Select your Board:**
 
 From the _**Tools**_ dropdown menu:
+
 > **Tools** >> **Board**
 
 Select the Adafruit ESP32 Feather board
@@ -289,13 +292,14 @@ Select the Adafruit ESP32 Feather board
 
 For your system to talk to the ESP8266 via USB, you will also need to install the _**SiLabs CP2104 Driver**_.
 
-1) You can download the zip file for your operating system from the following website:
-    - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-    > _e.g._
-    > -  _Linux_3.x.x_4.x.x_VCP_Driver_Source.zip_
-    > - _Mac_OSX_VCP_Driver.zip_
-    > - _CP210x_VCP_Windows.zip_
-2) Unzip the downloaded file and run the installation package inside the unzipped folder.
+1. You can download the zip file for your operating system from the following website:
+   - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+     > _e.g._
+     >
+     > - _Linux_3.x.x_4.x.x_VCP_Driver_Source.zip_
+     > - _Mac_OSX_VCP_Driver.zip_
+     > - _CP210x_VCP_Windows.zip_
+2. Unzip the downloaded file and run the installation package inside the unzipped folder.
 
 <details><summary>The following pictures are of the CP2104 USB Driver installation process for macOS systems:
 </summary>

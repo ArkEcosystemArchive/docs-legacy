@@ -85,7 +85,7 @@ Use this initial passphrase only during the setup or testing phase. Move all fun
 
 ## Start the BridgeChain
 
-*Note: --name is important as it relates to the config files for your chain*
+_Note: --name is important as it relates to the config files for your chain_
 
 ```bash
 $ ./bridgechain.sh start-node --name MyTest
@@ -126,8 +126,8 @@ Edit/copy the `peers.json` and add the IP and port of your first node.
     {
       "ip": "my.intial.node.ip",
       "port": 4001
-    },
-    ],
+    }
+  ],
   "sources": [
     "https://raw.githubusercontent.com/ARKEcosystem/peers/master/mainnet.json"
   ]

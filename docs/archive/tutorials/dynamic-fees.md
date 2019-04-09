@@ -62,7 +62,8 @@ The `minFeePool` value represents the minimum fee in Satoshi per byte a transact
 Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's satoshi-per-byte value:
 
 ```js
-const calculatedFee = (addonBytesValue + transactionSizeInBytes) * satoshiPerByte
+const calculatedFee =
+  (addonBytesValue + transactionSizeInBytes) * satoshiPerByte;
 ```
 
 ## Changing the Transaction Pool Size

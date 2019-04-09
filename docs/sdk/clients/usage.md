@@ -1372,12 +1372,10 @@ Through this API you can:
 ```js
 async function init() {
   try {
-    const response = await client
-      .resource("transactions")
-      .all({
-        senderId: "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
-        orderBy: "timestamp.epoch"
-      });
+    const response = await client.resource("transactions").all({
+      senderId: "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+      orderBy: "timestamp.epoch"
+    });
     return response.data;
   } catch (e) {
     console.log(e);

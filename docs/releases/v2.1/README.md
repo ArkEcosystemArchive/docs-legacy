@@ -6,9 +6,9 @@ TypeScript makes perfect sense for growing projects that need to scale and have 
 
 We recommend staying on the latest version of ARK; however, this upgrade does not break any APIs, thus `v2.0` nodes are still able to join the network. Development on `v2.0` has ceased in favor of the newer Typescript version.
 
-* **Upgrade time**: low - upgrading to `v2.1` does not break any APIs and can be performed incrementally in the network.
-* **Complexity**: low - the internal blockchain representation is not altered.
-* **Risk**: low - `v2.1` is backward compatible with `v2.0`; thus a downgrade is possible at any moment.
+- **Upgrade time**: low - upgrading to `v2.1` does not break any APIs and can be performed incrementally in the network.
+- **Complexity**: low - the internal blockchain representation is not altered.
+- **Risk**: low - `v2.1` is backward compatible with `v2.0`; thus a downgrade is possible at any moment.
 
 ## Breaking Changes
 

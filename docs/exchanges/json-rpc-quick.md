@@ -20,7 +20,7 @@ All JSON-RPC implementations should be built using the tools of your programming
 
 By default, the JSON-API listens on port 8080 for requests. This means that all JSON-RPC interactions should be POST requests to the URL `http://{NODE_IP}:{JSON-RPC_PORT}`, with the IP address of your node combined with the JSON-RPC port number.
 
-If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `CORE_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory.
+If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `CORE_JSON_RPC_ENABLED=true` to the **_.env_** file in your config directory.
 
 Your config directory is located at `~/.config/ark-core/{network}/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
@@ -281,7 +281,7 @@ const body = {
   jsonrpc: "2.0",
   method: "blocks.latest",
   id: 31 // internal ID to track responses
-}
+};
 ```
 
 :::
@@ -545,7 +545,7 @@ const body = {
   params: {
     id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86"
   }
-}
+};
 ```
 
 :::
@@ -581,7 +581,7 @@ func main() {
 
 ::: tab python
 
-``` python
+```python
 r = requests.post(
   "http://0.0.0.0:8080",
   json={"jsonrpc": "2.0", "method": "transactions.info", "id": 31,

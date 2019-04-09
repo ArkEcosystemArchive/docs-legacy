@@ -4,5 +4,5 @@ No idea what a blockchain is? Wondering what cryptocurrencies are and why your n
 
 Use the sidebar to navigate this section, or follow the links below:
 
-* [Intro to Blockchain](/introduction/blockchain/)
-* [Intro to ARK](/introduction/ark/)
+- [Intro to Blockchain](/introduction/blockchain/)
+- [Intro to ARK](/introduction/ark/)

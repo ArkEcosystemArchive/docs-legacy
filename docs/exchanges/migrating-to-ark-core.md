@@ -1,6 +1,7 @@
 ---
 title: "Migrating your Tools from ARK Node to ARK Core"
 ---
+
 # Migrating your Tools from ARK Node to ARK Core
 
 ## Introduction

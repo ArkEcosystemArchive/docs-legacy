@@ -42,7 +42,7 @@ This is a list of the most recent transactions to have been broadcast over the n
 
 This is a list of the most recent blocks to have been broadcast over the network. Inside each block details page, you will be able to view the following information:
 
-- **ID:** This will the show unique identification (ID) hash for the forged block.  If you want to learn more about "blockchain", refer to our section on [**What is The Blockchain?**](/blockchain/what-is-the-blockchain.html) and [**When Do You Need A Blockchain?**](/blockchain/when-do-you-need-a-blockchain.html).
+- **ID:** This will the show unique identification (ID) hash for the forged block. If you want to learn more about "blockchain", refer to our section on [**What is The Blockchain?**](/blockchain/what-is-the-blockchain.html) and [**When Do You Need A Blockchain?**](/blockchain/when-do-you-need-a-blockchain.html).
 
 - **Height:** This section will show how far from the first (genesis) block the blockchain has progressed. For example, if you are looking at a block with a height of 1000, this will indicate that the block is the 999th since the first (genesis) block.
 

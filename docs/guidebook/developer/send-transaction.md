@@ -52,9 +52,9 @@ As mentioned above, by default our testnet will connect its Public API to the [h
 ::: tab javascript
 
 ```js
-const Client = require('@arkecosystem/client')
+const Client = require("@arkecosystem/client");
 
-const client = new Client('http://0.0.0.0:4003');
+const client = new Client("http://0.0.0.0:4003");
 client.setVersion(2);
 ```
 
@@ -357,12 +357,12 @@ To do so, import the `configManager` package from `crypto`, then tell it to use 
 ::: tab javascript
 
 ```js
-const Client = require('@arkecosystem/client')
-const { configManager } = require('@arkecosystem/crypto')
+const Client = require("@arkecosystem/client");
+const { configManager } = require("@arkecosystem/crypto");
 
-configManager.setFromPreset('ark', 'testnet')
+configManager.setFromPreset("ark", "testnet");
 
-const testnetClient = new Client('http://0.0.0.0:4003', 2) // (API URL, API version)
+const testnetClient = new Client("http://0.0.0.0:4003", 2); // (API URL, API version)
 ```
 
 :::
@@ -429,7 +429,7 @@ Address address = Address::fromPassphrase(passphrase, devnetByte);
 //  'address.toString()' output: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"
 ```
 
-```cpp
+````cpp
 uint64_t epoch = ARK::Crypto::Utils::Slot::epoch(ARK::Crypto::Networks::Devnet);
 
 //  'epoch' output: 1490101200
@@ -503,7 +503,7 @@ const transaction = transactionBuilder
   .recipientId("your recipient's address here")
   .sign("your sender's passphrase here")
   .getStruct() // returns signed transaction object
-```
+````
 
 :::
 
@@ -582,10 +582,10 @@ With everything in place, it's time to send some TARK (testnet ARK) using the `c
 
 ```js
 testnetClient
-  .resource('transactions')
+  .resource("transactions")
   .create({ transactions: [transaction] })
   .then(response => console.log(response.data))
-  .catch(error => console.error(error))
+  .catch(error => console.error(error));
 ```
 
 All client method calls to API endpoints return [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) objects, which should be resolved either with the `then... catch` methods as used in our example, or the newer ES6 `async/await` syntax if your environment supports it.
@@ -661,10 +661,14 @@ With any luck, if we run the code and output to the console, our transfer should
 ```json
 {
   "data": {
-    "accept": ["62c0bcb45bddfcf68c57a5b7b7a36d4bb6463e1eb7ba1318804f83b4fa4f8d7d"],
+    "accept": [
+      "62c0bcb45bddfcf68c57a5b7b7a36d4bb6463e1eb7ba1318804f83b4fa4f8d7d"
+    ],
     "excess": [],
     "invalid": [],
-    "broadcast": ["62c0bcb45bddfcf68c57a5b7b7a36d4bb6463e1eb7ba1318804f83b4fa4f8d7d"]
+    "broadcast": [
+      "62c0bcb45bddfcf68c57a5b7b7a36d4bb6463e1eb7ba1318804f83b4fa4f8d7d"
+    ]
   },
   "errors": null
 }

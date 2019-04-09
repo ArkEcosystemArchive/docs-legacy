@@ -6,89 +6,89 @@ ARK Core (`v2.0.X`) is a complete redesign, deprecating all APIs and internal st
 
 ### Fixed
 
--   https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-009.md
--   https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-010.md
+- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-009.md
+- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-010.md
 
 ## [2.0.18] - 2019-01-28
 
 ### Fixed
 
--   https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-011.md
+- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-011.md
 
 ## [2.0.17] - 2019-01-15
 
 ### Fixed
 
--   https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-008.md
--   https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-007.md
+- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-008.md
+- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-007.md
 
 ## [2.0.16] - 2018-12-17
 
 ### Fixed
 
--   Prevent the list of peers from becoming too short. This is related to the nodes running behind a firewall.
+- Prevent the list of peers from becoming too short. This is related to the nodes running behind a firewall.
 
 Closed security vulnerabilities:
 
--   [CORE-SV-004](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-004.md)
--   [CORE-SV-003](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-003.md)
--   [CORE-SV-002](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-002.md)
--   [CORE-SV-001](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-001.md)
+- [CORE-SV-004](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-004.md)
+- [CORE-SV-003](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-003.md)
+- [CORE-SV-002](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-002.md)
+- [CORE-SV-001](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-001.md)
 
 ## [2.0.15] - 2018-12-11
 
 ### Fixed
 
--   Ensure no local peers are enlisted and that the IP of the TCP connection is used ([#1695])
+- Ensure no local peers are enlisted and that the IP of the TCP connection is used ([#1695])
 
 ## [2.0.14] - 2018-12-10
 
 ### Fixed
 
--   Reset last downloaded block when the block is discarded ([#1692])
+- Reset last downloaded block when the block is discarded ([#1692])
 
 ## [2.0.13] - 2018-12-07
 
 ### Fixed
 
--   Ensure safe integer range for block height lookups via API ([#1673])
+- Ensure safe integer range for block height lookups via API ([#1673])
 
 ## [2.0.12] - 2018-12-06
 
 ### Fixed
 
--   Perform second-signature checks in the `canApply` logic of multi-signatures ([#1658])
--   return the encoded WIF for BIP38 wallets instead of the encrypted WIF ([#1653])
+- Perform second-signature checks in the `canApply` logic of multi-signatures ([#1658])
+- return the encoded WIF for BIP38 wallets instead of the encrypted WIF ([#1653])
 
 ## [2.0.11] - 2018-12-05
 
 ### Added
 
--   Store executed migrations in the database ([#1648])
+- Store executed migrations in the database ([#1648])
 
 ### Changed
 
--   Increase cache generation timeout and make it configurable ([#1645], [#1646])
+- Increase cache generation timeout and make it configurable ([#1645], [#1646])
 
 ## [2.0.1] - 2018-12-05
 
 ### Added
 
--   Retrieve blocks via height or ID per public API ([#1626])
+- Retrieve blocks via height or ID per public API ([#1626])
 
 ### Changed
 
--   Improved performance for block and transaction queries by adding more indices on critical columns ([#1636], [#1638], [#1634])
+- Improved performance for block and transaction queries by adding more indices on critical columns ([#1636], [#1638], [#1634])
 
 ### Fixed
 
--   Take milestones into account for supply calculations ([#1640])
--   Use the raw transaction data in `acceptChainedBlock` to avoid timestamp mismatches and second signature double spend errors ([#1564])
--   Return the correct peer count for the v2 public API ([#1563])
+- Take milestones into account for supply calculations ([#1640])
+- Use the raw transaction data in `acceptChainedBlock` to avoid timestamp mismatches and second signature double spend errors ([#1564])
+- Return the correct peer count for the v2 public API ([#1563])
 
 ## [2.0.0] - 2018-12-03
 
--   Initial Release
+- Initial Release
 
 [unreleased]: https://github.com/ARKEcosystem/core/compare/2.0.19...develop
 [2.1.0]: https://github.com/ARKEcosystem/core/compare/2.0.19...2.1.0

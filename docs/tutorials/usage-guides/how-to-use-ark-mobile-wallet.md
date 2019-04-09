@@ -22,7 +22,7 @@ After reading through the welcome slides, you will be able to create a profile.
 
 ![Create a Profile on ARK Mobile Wallet](./assets/how-to-use-the-mobile-wallet/arkWallet4.png)
 
-After you hit the ***Create A Profile*** button, you will be prompted to create a six-digit PIN confirm it afterward.
+After you hit the **_Create A Profile_** button, you will be prompted to create a six-digit PIN confirm it afterward.
 
 ::: warning
 It is imperative that you remember this PIN.
@@ -44,13 +44,11 @@ If you choose to generate a wallet, follow the prompts and you should be shown y
 Keep your secret passphrase safe and secure, without it, you will not be able to restore your wallet, and you will lose all of your ARK tokens.
 :::
 
-
-
-After hitting ***Next***, you will be asked to verify your Secret Passphrase. Your PIN will be required to encrypt your address.
+After hitting **_Next_**, you will be asked to verify your Secret Passphrase. Your PIN will be required to encrypt your address.
 
 The next screen will show you the amount of ARK tokens you have in your wallets, your shareable Public Address, the Market Value of ARK in USD, Satoshis, and the 24-hour Change.
 
-![ARK Mobile Wallet Passphrase](./assets/how-to-use-the-mobile-wallet/arkWallet8.png)             ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet9.png)
+![ARK Mobile Wallet Passphrase](./assets/how-to-use-the-mobile-wallet/arkWallet8.png) ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet9.png)
 
 ## Importing a wallet
 
@@ -66,8 +64,8 @@ If you decide to copy and paste your information into the app, make sure your de
 
 You can hit the triple bar in the top left corner, doing so will give you numerous options for you to select.
 
-Choosing ***Wallets*** will place you at the main ARK Wallet balance screen. After you reach the main ARK Wallet balance screen, you can add another wallet, touch the triple bar on the top left corner, or choose an existing wallet to view even closer.
-If you want to add another wallet,  push the blue circle we used earlier to create or import a wallet.
+Choosing **_Wallets_** will place you at the main ARK Wallet balance screen. After you reach the main ARK Wallet balance screen, you can add another wallet, touch the triple bar on the top left corner, or choose an existing wallet to view even closer.
+If you want to add another wallet, push the blue circle we used earlier to create or import a wallet.
 If you hit the triple bar on the top left corner, you get numerous options where you can view and select:
 
 - Main wallet balance screen
@@ -84,9 +82,9 @@ If you hit the triple bar on the top left corner, you get numerous options where
   - You can save contacts by name and ARK Address for quicker sending/receiving
 - Sign Out
 
-![ARK Mobile Wallet Triple Bar](./assets/how-to-use-the-mobile-wallet/arkWallet13.png)            ![ARK Mobile Wallet Settings](./assets/how-to-use-the-mobile-wallet/arkWallet12.png)
+![ARK Mobile Wallet Triple Bar](./assets/how-to-use-the-mobile-wallet/arkWallet13.png) ![ARK Mobile Wallet Settings](./assets/how-to-use-the-mobile-wallet/arkWallet12.png)
 
-If you want to view an existing wallet and the transaction history, you will need to touch the rectangle(s) right below the ***Total Balance*** text.
+If you want to view an existing wallet and the transaction history, you will need to touch the rectangle(s) right below the **_Total Balance_** text.
 
 ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet14.png)
 
@@ -106,7 +104,7 @@ To begin voting, we need ARK in our wallets. Once you've transferred ARK to your
 
 ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet14.png)
 
-Once the wallet has been selected, hit the triple bar and choose ***Delegates***. This will show you the top 51 Active Delegates and the delegates on standby
+Once the wallet has been selected, hit the triple bar and choose **_Delegates_**. This will show you the top 51 Active Delegates and the delegates on standby
 
 ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet16.png)
 ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet17.png)

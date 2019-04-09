@@ -10,7 +10,7 @@ ARK IoT features the first crypto SDK's designed to support IoT architecture, en
 
 Currently, the ARK [Cpp-Client](https://github.com/ARKEcosystem/cpp-client) and [Cpp-Crypto](https://github.com/ARKEcosystem/cpp-crypto) SDK's are designed to run on boards and platforms like [Espressif](https://www.espressif.com/), [Arduino](https://www.arduino.cc/), [PlatformIO](https://platformio.org/).
 
-The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK helps developers fetch information from the  [ARK Blockchain](/introduction/blockchain) about its current state: which [Delegates](/glossary/#delegate) are currently forging, what transactions are associated with a given wallet, and so on.
+The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK helps developers fetch information from the [ARK Blockchain](/introduction/blockchain) about its current state: which [Delegates](/glossary/#delegate) are currently forging, what transactions are associated with a given wallet, and so on.
 
 The [**Cpp-Crypto**](https://github.com/ARKEcosystem/cpp-crypto) SDK, by contrast, assists developers in working with transactions: signing, serializing, deserializing, etc.
 
@@ -28,6 +28,7 @@ There are 2 ways to install the Cpp SDK's.
 ### Arduino IDE Library Manager
 
 Open the Arduino Library Manager:
+
 > Sketch >> Include Library >> Manage Libraries
 
 Search for and install both, ARK Cpp-Client and ARK Cpp-Crypto.
@@ -39,7 +40,6 @@ Be sure to install the "-arduino" versions as pictured.
 ![Arduino Library Manager 2](.././assets/cpp-sdk/lib-mngr-2.png)
 
 ![Arduino Library Manager 3](.././assets/cpp-sdk/lib-mngr-3.png)
-
 
 #### Dependencies
 
@@ -61,7 +61,6 @@ Cpp-Crypto uses "micro-ecc" and "ArduinoJson"; use the Arduino Library Manager t
 ![Arduino Library Manager 4](.././assets/cpp-sdk/lib-mngr-4.png)
 
 ![Arduino Library Manager 5](.././assets/cpp-sdk/lib-mngr-5.png)
-
 
 ---
 
@@ -103,14 +102,13 @@ None! There are currently no external dependencies for using Cpp-Client in the A
 
 - micro-ecc: [https://github.com/kmackay/micro-ecc](https://github.com/kmackay/micro-ecc)
 - ArduinoJson: [https://github.com/bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson)
-> note: be sure to use 'v5.13.5' of ArduinoJson. Do not use beta versions > v6.0.0.
+  > note: be sure to use 'v5.13.5' of ArduinoJson. Do not use beta versions > v6.0.0.
 
 ---
 
 #### Load example Sketches directly from the Arduino 'Examples' dropdown menu
 
-> **Files** >> **Examples** >> **ARK-Cpp-Client** >> **arduino** >> **api** >> **ESP32**
-> **Files** >> **Examples** >> **ARK-Cpp-Crypto** >> **arduino** >> **api** >> **ESP32**
+> **Files** >> **Examples** >> **ARK-Cpp-Client** >> **arduino** >> **api** >> **ESP32** > **Files** >> **Examples** >> **ARK-Cpp-Crypto** >> **arduino** >> **api** >> **ESP32**
 
 ![Sketch Select](.././assets/cpp-sdk/arduino-ide-cpp-sdk-sketch-select.jpeg)
 
@@ -163,17 +161,17 @@ Or... if we would prefer to use the command line:
 **From the command line:**
 
 - **Using library Id:**
-    > `platformio lib install 5900`
+  > `platformio lib install 5900`
 - **Using library Name:**
-    > `platformio lib install "ARK-Cpp-Client"`
+  > `platformio lib install "ARK-Cpp-Client"`
 - **Install specific version:**
-    > `platformio lib install 5900@1.2.0`
-    > `platformio lib install "ARK-Cpp-Client@1.2.0"`
+  > `platformio lib install 5900@1.2.0` > `platformio lib install "ARK-Cpp-Client@1.2.0"`
 
 **Dependencies:**
 The Dependencies should install after you install the Cpp-Client package.
 You only need these if you're running the included Cpp-Client tests,
 but in case you need to install those dependencies manually:
+
 > `platformio lib -g install ArduinoJson AUnit`
 
 ### Cpp-Crypto
@@ -181,15 +179,15 @@ but in case you need to install those dependencies manually:
 **From the command line:**
 
 - **Using library Id:**
-    > `platformio lib install 5899`
+  > `platformio lib install 5899`
 - **Using library Name:**
-    > `platformio lib install "ARK-Cpp-Crypto"`
+  > `platformio lib install "ARK-Cpp-Crypto"`
 - **Install specific version:**
-    > `platformio lib install 5899@0.3.2`
-    > `platformio lib install "ARK-Cpp-Crypto@0.3.2"`
+  > `platformio lib install 5899@0.3.2` > `platformio lib install "ARK-Cpp-Crypto@0.3.2"`
 
 **Dependencies:**
 The Dependencies should install after you install the Cpp-Client package.
 You only needs these if you're running the included Cpp-Client tests,
 but in case you need to install those dependencies manually:
+
 > `platformio lib -g install micro-ecc bip39 AUnit`

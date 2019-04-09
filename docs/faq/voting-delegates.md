@@ -5,6 +5,7 @@ title: "Voting & Delegates"
 # Voting & Delegates
 
 ## How can I vote for a delegate?
+
 [Follow our voting guide.](https://blog.ark.io/how-to-vote-or-un-vote-an-ark-delegate-and-how-does-it-all-work-819c5439da68)
 
 ## How can I find and choose a delegate?

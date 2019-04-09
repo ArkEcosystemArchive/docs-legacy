@@ -110,7 +110,7 @@ yarn dev --env.routerMode=history
 
 ## Testing
 
-``` bash
+```bash
 $ yarn test
 ```
 
@@ -120,10 +120,10 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## Contributing
 
-* If you find any bugs, submit an [issue](https://github.com/ARKEcosystem/explorer/issues) or open a [pull-request](https://github.com/ARKEcosystem/explorer/pulls), helping us catch and fix them.
-* Engage with other users and developers on the [ARKEcosystem Slack](https://ark.io/slack/).
-* Join our [gitter](https://gitter.im/ark-developers/Lobby).
-* [Contribute bounties](https://github.com/ARKEcosystem/bounty-program).
+- If you find any bugs, submit an [issue](https://github.com/ARKEcosystem/explorer/issues) or open a [pull-request](https://github.com/ARKEcosystem/explorer/pulls), helping us catch and fix them.
+- Engage with other users and developers on the [ARKEcosystem Slack](https://ark.io/slack/).
+- Join our [gitter](https://gitter.im/ark-developers/Lobby).
+- [Contribute bounties](https://github.com/ARKEcosystem/bounty-program).
 
 ## Credits
 

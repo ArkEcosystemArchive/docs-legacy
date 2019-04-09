@@ -5,6 +5,7 @@ title: "Minimalistic SDK demos"
 ## SDK client and crypto usage samples
 
 The code represents minimal example of `client` and `crypto` libraries usage for the specified programming language. Example functionality consists of:
+
 - importing/loading the needed dependencies/libraries
 - initialisation of the client and connecting to an ark-node(peer)
 - retrieve a specific block via API
@@ -16,6 +17,7 @@ Please refer to the code comments or check more detailed documentation for speci
 
 :::: tabs
 ::: tab java
+
 ```java
 import com.google.gson.internal.LinkedTreeMap;
 import org.arkecosystem.client.Connection;
@@ -97,9 +99,11 @@ public class Main {
     }
 }
 ```
+
 :::
 
 ::: tab php
+
 ```php
 <?php
 
@@ -134,9 +138,11 @@ var_dump($response['data']);
 var_dump($response['data']['accept']);
 var_dump($response['data']['broadcast']);
 ```
+
 :::
 
 ::: tab elixir
+
 ```elixir
 defmodule ElixirTest do
 
@@ -168,9 +174,11 @@ defmodule ElixirTest do
   end
 end
 ```
+
 :::
 
 ::: tab python
+
 ```python
 from ark.client import ARKClient
 from crypto.transactions.builder.transfer import Transfer
@@ -195,6 +203,7 @@ if __name__ == '__main__':
     # posting transactions to the connected node as specifid in the connection above
     client.transactions.create([transaction_dict])
 ```
+
 :::
 
 ::: tab C++
@@ -408,6 +417,7 @@ int main() {
 :::
 
 ::: tab ruby
+
 ```ruby
 require 'arkecosystem/client'
 require 'arkecosystem/crypto'
@@ -426,9 +436,11 @@ response = connection.transactions.create({transactions: [transaction.to_params]
 
 puts response.body
 ```
+
 :::
 
 ::: tab swift
+
 ```swift
 import UIKit
 import SwiftClient
@@ -460,9 +472,11 @@ class ViewController: UIViewController {
     }
 }
 ```
+
 :::
 
 ::: tab go
+
 ```go
 package main
 
@@ -499,5 +513,6 @@ func main() {
     connection.Transactions.Create(context.Background(), body)
 }
 ```
+
 :::
 ::::

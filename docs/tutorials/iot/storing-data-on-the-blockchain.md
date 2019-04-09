@@ -75,6 +75,7 @@ const char* password = "yourWiFiPassword";
 ```
 
 We will also need a Devnet Peer to connect to.
+
 > You can find more ARK Peers here: [https://github.com/ARKEcosystem/peers](https://github.com/ARKEcosystem/peers)
 
 ```cpp

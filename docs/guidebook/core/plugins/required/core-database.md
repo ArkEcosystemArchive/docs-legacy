@@ -15,12 +15,15 @@ yarn add @arkecosystem/core-database
 ```
 
 ## Alias
+
 `database`
 
 ## Interface
+
 [core-database](https://github.com/ARKEcosystem/core/tree/develop/packages/core-database)
 
 ## Implementation
+
 [core-database-postgres](https://github.com/ARKEcosystem/core/tree/develop/packages/core-database-postgres)
 
 ## Notable Dependencies
@@ -46,11 +49,11 @@ Resolving `core-database` into your plugins after `core-database-postgres` has l
 - `getActiveDelegates(height, delegates)` takes as parameters the total list of delegates and the height at which a delegate list should be built. It returns an array of all actively forging delegates, sorted by vote count descending.
 - `buildWallets()` loads and returns wallets using simple payment verification.
 - `verifyBlockchain()` checks the Postgres database to ensure the following facts:
-    - A last block (ie. the block at maximum chain height) is accessible
-    - Last block height is equal to the block count
-    - Number of stored transactions equals the sum of all block transaction counts
-    - Sum of all transaction fees equals all block fees
-    - Sum of all transaction amounts equals all block total amounts
+  - A last block (ie. the block at maximum chain height) is accessible
+  - Last block height is equal to the block count
+  - Number of stored transactions equals the sum of all block transaction counts
+  - Sum of all transaction fees equals all block fees
+  - Sum of all transaction amounts equals all block total amounts
 
 ## Behind the Scenes
 
@@ -90,8 +93,8 @@ public async make(): Promise<Database.IDatabaseConnection> {
 As the code above demonstrates, the PostgresQL database connection consists of the following major parts:
 
 - [QueryExecutor](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/src/sql/query-executor.ts): this class is responsible for executing queries on the databases. Its various methods correspond to how many results the query should expect as its return value: `none`, `one`, `oneOrNone`, `many`, `manyOrNone`, and `any`.
-- [Migrations](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/src/migrations/index.ts): this TypeScript file loads the various migration SQL files necessary for the PostgresQL DB and executes them if necessary. In general, the concept of [migrations](https://en.wikipedia.org/wiki/Schema_migration) is used across software programming to refer to the process of creating and updating how data is saved in a database. In other words, as applications evolve and their data needs change, data representations *migrate* from one form to another, with each such migration represented in one SQL query.
-    - `core-database-postgres` defines four migrations that create new Postgres tables: [blocks](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305300000-create-blocks-table.sql), [transactions](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305400000-create-transactions-table.sql), and [rounds](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305200000-create-rounds-table.sql).
+- [Migrations](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/src/migrations/index.ts): this TypeScript file loads the various migration SQL files necessary for the PostgresQL DB and executes them if necessary. In general, the concept of [migrations](https://en.wikipedia.org/wiki/Schema_migration) is used across software programming to refer to the process of creating and updating how data is saved in a database. In other words, as applications evolve and their data needs change, data representations _migrate_ from one form to another, with each such migration represented in one SQL query.
+  - `core-database-postgres` defines four migrations that create new Postgres tables: [blocks](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305300000-create-blocks-table.sql), [transactions](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305400000-create-transactions-table.sql), and [rounds](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database-postgres/lib/migrations/20180305200000-create-rounds-table.sql).
 - [Models](https://github.com/ARKEcosystem/core/tree/develop/packages/core-database-postgres/src/models): these TypeScript classes guide the serialization process as raw PostgresQL query results are transformed into data objects for use elsewhere in ARK Core. Keep in mind that, unlike the data models available in Core's `crypto` library, these data models contain strictly data, not methods. The sole responsibility of the models in `core-database-postgres` is to ensure that the raw data results returned from Postgres queries can be accessed in JavaScript without incident.
 - [Repositories](https://github.com/ARKEcosystem/core/tree/develop/packages/core-database-postgres/src/repositories): These repositories combine Postgres queries with database models to produce TypeScript object responses to data queries throughout Core.
 - [WalletManager](https://github.com/ARKEcosystem/core/blob/develop/packages/core-database/src/wallet-manager.ts): an in-memory access point for wallet information. Changes in wallet balances are recorded in the WalletManager.
@@ -135,17 +138,19 @@ Rewriting the `core-database` layer should be done with caution. Although the Po
 
 ```ts
 export const defaults = {
-    initialization: {
-        capSQL: true,
-        promiseLib: require("bluebird"),
-        noLocking: process.env.NODE_ENV === "test",
-    },
-    connection: {
-        host: process.env.CORE_DB_HOST || "localhost",
-        port: process.env.CORE_DB_PORT || 5432,
-        database: process.env.CORE_DB_DATABASE || `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
-        user: process.env.CORE_DB_USERNAME || process.env.CORE_TOKEN,
-        password: process.env.CORE_DB_PASSWORD || "password",
-    },
+  initialization: {
+    capSQL: true,
+    promiseLib: require("bluebird"),
+    noLocking: process.env.NODE_ENV === "test"
+  },
+  connection: {
+    host: process.env.CORE_DB_HOST || "localhost",
+    port: process.env.CORE_DB_PORT || 5432,
+    database:
+      process.env.CORE_DB_DATABASE ||
+      `${process.env.CORE_TOKEN}_${process.env.CORE_NETWORK_NAME}`,
+    user: process.env.CORE_DB_USERNAME || process.env.CORE_TOKEN,
+    password: process.env.CORE_DB_PASSWORD || "password"
+  }
 };
 ```

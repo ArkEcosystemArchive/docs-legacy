@@ -900,13 +900,13 @@ ark snapshot:rollback
 Either `height` or `number` has to be provided.
 :::
 
-| Name      | Description                                           |        Required         |
-| --------- | ----------------------------------------------------- | :---------------------: |
-| --height  | block network height number to roll back to           | :ballot_box_with_check: |
-| --number  | number of blocks to roll back                         | :ballot_box_with_check: |
-| --trace   | dumps generated queries and settings to console       |           :x:           |
-| --network | the name of the network that should be used           |           :x:           |
-| --token   | the name of the token that should be used             |           :x:           |
+| Name      | Description                                     |        Required         |
+| --------- | ----------------------------------------------- | :---------------------: |
+| --height  | block network height number to roll back to     | :ballot_box_with_check: |
+| --number  | number of blocks to roll back                   | :ballot_box_with_check: |
+| --trace   | dumps generated queries and settings to console |           :x:           |
+| --network | the name of the network that should be used     |           :x:           |
+| --token   | the name of the token that should be used       |           :x:           |
 
 ### snapshot:truncate
 

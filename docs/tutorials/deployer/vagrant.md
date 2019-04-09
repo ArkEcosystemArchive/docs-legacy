@@ -2,7 +2,7 @@
 
 We have also provided a Vagrantfile which allows you to deploy your own BridgeChain and Explorer together with no configuration necessary.
 
-*Note: This requires [Vagrant version 2+](https://www.vagrantup.com/downloads.html) to be installed.*
+_Note: This requires [Vagrant version 2+](https://www.vagrantup.com/downloads.html) to be installed._
 
 ```bash
 git clone https://github.com/ARKEcosystem/ark-deployer.git

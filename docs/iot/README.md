@@ -25,6 +25,7 @@ Currently, the ARK [Cpp-Client](https://github.com/ARKEcosystem/cpp-client) and 
 The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK help developers fetch information from the ARK blockchain about its current state: which delegates are currently forging, what transactions are associated with a given wallet, and so on.
 
 ---
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/ARKEcosystem/cpp-crypto/master/banner.png" width="900">
 </p>

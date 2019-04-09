@@ -236,7 +236,7 @@ This method should have the vendorField passed to it.
 bool txWasFound(char vfBuffer[Sha256::BLOCK_LEN + 1]) { }
 ```
 
-The REST API of the [ARK Blockchain](/introduction/blockchain)  doesn't [search for vendorFields](/api/public/v2/transactions.html#search-for-transactions) explicitly by "string"; rather it uses the HEX representation of the vendorField string.
+The REST API of the [ARK Blockchain](/introduction/blockchain) doesn't [search for vendorFields](/api/public/v2/transactions.html#search-for-transactions) explicitly by "string"; rather it uses the HEX representation of the vendorField string.
 
 Let's go ahead and get the Hex of the vendorField, and place that into a string object 'vendorFieldHexString'.
 

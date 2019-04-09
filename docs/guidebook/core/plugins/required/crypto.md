@@ -85,12 +85,12 @@ public static fromPassphrase(passphrase: string, compressed: boolean = true): Ke
 There are three managers of note:
 
 - [Config](https://github.com/ARKEcosystem/core/blob/develop/packages/crypto/src/managers/config.ts)
-    - sets config for use in `crypto` calculations, both for cryptographic and non-cryptographic functions
+  - sets config for use in `crypto` calculations, both for cryptographic and non-cryptographic functions
 - [Fee](https://github.com/ARKEcosystem/core/blob/develop/packages/crypto/src/managers/fee.ts)
-    - Fee Manager is used for static fees. If static fees are enabled in your node, this Fee Manager is used to match incoming fees against the values defined in your network config file.
+  - Fee Manager is used for static fees. If static fees are enabled in your node, this Fee Manager is used to match incoming fees against the values defined in your network config file.
 - [Network](https://github.com/ARKEcosystem/core/blob/develop/packages/crypto/src/managers/network.ts)
-    - The NetworkManager class fetches JSON configs out of the neighboring `networks` directory based on which coin and network the client requests. By default, the NetworkManager selects `ark` as the default coin and `devnet` as the default network.
-    - NetworkManager's `findByName` function is used in `core-container` to set configuration settings in the `Environment` class. This ensures that ARK Core nodes always have fallback values to refer to if used in conjunction with the `ark` network.
+  - The NetworkManager class fetches JSON configs out of the neighboring `networks` directory based on which coin and network the client requests. By default, the NetworkManager selects `ark` as the default coin and `devnet` as the default network.
+  - NetworkManager's `findByName` function is used in `core-container` to set configuration settings in the `Environment` class. This ensures that ARK Core nodes always have fallback values to refer to if used in conjunction with the `ark` network.
 
 ## Utils
 

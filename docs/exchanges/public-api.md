@@ -1,6 +1,7 @@
 ---
 title: "Public API Quick Actions"
 ---
+
 # Public API Quick Actions
 
 Connecting to the API is done via the Crypto and Client SDKs. Many queries can be performed using the Client SDK alone, while the Crypto SDK performs any actions requiring cryptographic functionality (i.e., signing transactions).
@@ -34,8 +35,8 @@ ARK Node (v1) has been deprecated. Some references to V1 client constructors may
 ::: tab javascript
 
 ```js
-const Client = require('@arkecosystem/client')
-const exchangeClient = new Client('YOUR.NODE.IP', 2)
+const Client = require("@arkecosystem/client");
+const exchangeClient = new Client("YOUR.NODE.IP", 2);
 ```
 
 :::
@@ -88,20 +89,20 @@ Checking a wallet balance involves using the `wallets` resource to `GET` the wal
 ::: tab javascript
 
 ```js
-const walletAddress = "ARyNwFj7nQUCip5gYt4gSWG6F8evL93eBL"
-let wallet
+const walletAddress = "ARyNwFj7nQUCip5gYt4gSWG6F8evL93eBL";
+let wallet;
 
 exchangeClient
-  .resource('wallets')
+  .resource("wallets")
   .get(walletAddress)
   .then(response => {
-      wallet = response.data.data
+    wallet = response.data.data;
   })
   .catch(error => {
-    console.log(error)
+    console.log(error);
   });
 
-console.log(wallet.balance)
+console.log(wallet.balance);
 ```
 
 :::
@@ -146,20 +147,20 @@ If you know the ID of the block you are looking for, you can use the `GET` metho
 ::: tab javascript
 
 ```js
-const blockId = 4439278960598580069
-let block
+const blockId = 4439278960598580069;
+let block;
 
 exchangeClient
-  .resource('blocks')
+  .resource("blocks")
   .get(blockId)
   .then(response => {
-      block = response.data.data
+    block = response.data.data;
   })
   .catch(error => {
-    console.log(error)
+    console.log(error);
   });
 
-console.log(block)
+console.log(block);
 ```
 
 :::
@@ -211,7 +212,7 @@ For example, this code can be used to search all blocks between blockchain heigh
 
 ```js
 exchangeClient
-  .resource('blocks')
+  .resource("blocks")
   .search({
     height: {
       from: 720,
@@ -223,8 +224,8 @@ exchangeClient
     }
   })
   .then(response => {
-    console.log(response.data) // all blocks matching the search criteria
-  })
+    console.log(response.data); // all blocks matching the search criteria
+  });
 ```
 
 :::
@@ -305,33 +306,33 @@ With all the steps together, here is an example of how to send a transaction for
 ::: tab javascript
 
 ```js
-const crypto = require('@arkecosystem/crypto')
-const transactionBuilder = crypto.transactionBuilder
+const crypto = require("@arkecosystem/crypto");
+const transactionBuilder = crypto.transactionBuilder;
 
 const transaction = transactionBuilder
   .transfer()
   .amount(2 * Math.pow(10, 8))
   .recipientId(recipientId)
   .sign(passphrase)
-  .getStruct()
+  .getStruct();
 
 exchangeClient
-  .resource('transactions')
+  .resource("transactions")
   .create({
     transactions: [transaction]
   })
   .then(response => {
-    console.log(response.data)
+    console.log(response.data);
 
     if (response.data.errors) {
       errors.forEach(error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
     }
   })
   .catch(error => {
-    console.log(error)
-  })
+    console.log(error);
+  });
 ```
 
 :::
@@ -424,14 +425,15 @@ Once a transaction has been created and added to the blockchain, you can access 
 ::: tab javascript
 
 ```js
-const transactionId = "9085b309dd0c20c12c1a00c40e1c71cdadaa74476b669e9f8a632db337fb6915"
+const transactionId =
+  "9085b309dd0c20c12c1a00c40e1c71cdadaa74476b669e9f8a632db337fb6915";
 
 exchangeClient
-  .resource('transactions')
+  .resource("transactions")
   .get(transactionId)
   .then(response => {
-    console.log(response.data)
-  })
+    console.log(response.data);
+  });
 ```
 
 :::
@@ -489,7 +491,7 @@ If the transaction has been added to the blockchain, you'll receive the followin
 }
 ```
 
-You can see that the `confirmations` key holds the number of confirmations this transaction has received from the network, in the above case 0. As the average block takes  8 seconds to forge, finality is typically established within a minute following a transaction's addition to the blockchain.
+You can see that the `confirmations` key holds the number of confirmations this transaction has received from the network, in the above case 0. As the average block takes 8 seconds to forge, finality is typically established within a minute following a transaction's addition to the blockchain.
 
 ## Check Node Status
 
@@ -501,11 +503,11 @@ Checking node status can be done by using the `node` resource's `status` method:
 
 ```js
 exchangeClient
-  .resource('node')
+  .resource("node")
   .status()
   .then(response => {
-    console.log(response.data)
-  })
+    console.log(response.data);
+  });
 ```
 
 :::

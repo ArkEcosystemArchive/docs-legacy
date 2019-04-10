@@ -4,7 +4,7 @@ title: Public Blockchain API
 
 # Public Blockchain API
 
-## Retrieve Information
+## Retrieve Latest Block and Supply
 
 Used to get the latest block and supply of the blockchain.
 

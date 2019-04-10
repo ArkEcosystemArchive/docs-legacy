@@ -44,3 +44,59 @@ table {
 .tabs-component-tab.is-active {
     border-color: #f02b3e !important;
 }
+
+.custom-block.danger,
+.custom-block.tip,
+.custom-block.warning {
+  border-radius: 4px;
+}
+
+details {
+  background-color: #eee;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  margin: 1.6em 0;
+  padding: 1.6em;
+}
+
+details figure:last-child,
+details p:last-child,
+details ul:last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important; 
+}
+
+details pre:last-child {
+  margin-bottom: 0 !important;
+}
+
+details:not([open]) summary::after {
+  content: "...";
+}
+
+details:not([open]) summary:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+summary {
+  cursor: pointer;
+  padding: 1.6em;
+  margin: -1.6em;
+  outline: none;
+}
+
+summary > h4 {
+  display: inline-block;
+  margin: 0;
+  margin-right: .4em;
+  word-wrap: normal;
+}
+
+tr:nth-child(2n-1) {
+  background-color: white;
+}
+
+tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}

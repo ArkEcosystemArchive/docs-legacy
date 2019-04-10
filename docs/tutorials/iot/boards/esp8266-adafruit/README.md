@@ -10,7 +10,9 @@ title: Adafruit ESP8266 Overview and Setup
 
 ## Features
 
-<details><summary>These are the SDK features that are currently available on the Adafruit ESP8266 Feather board.
+<details>
+<summary>
+  <h4>These are the SDK features that are currently available on the Adafruit ESP8266 Feather board</h4>
 </summary>
 <p>
 
@@ -186,7 +188,10 @@ title: Adafruit ESP8266 Overview and Setup
 
 ## Specs
 
-<details><summary>These are the specifications for the Adafruit ESP8266 Feather board.</summary>
+<details>
+<summary>
+  <h4>These are the specifications for the Adafruit ESP8266 Feather board</h4>
+</summary>
 <p>
 
 > This is the Adafruit Feather HUZZAH ESP8266 - our take on an 'all-in-one' ESP8266 WiFi development board with built in USB and battery charging. Its an ESP8266 WiFi module with all the extras you need, ready to rock!
@@ -244,7 +249,10 @@ title: Adafruit ESP8266 Overview and Setup
 
 ## Setup
 
-<details><summary>These are the steps to setup your Adafruit ESP8266 Feather board.</summary>
+<details>
+<summary>
+  <h4>These are the steps to setup your Adafruit ESP8266 Feather board</h4>
+</summary>
 <p>
 
 **Add ESP8266 to the Arduino IDE:**
@@ -301,7 +309,9 @@ For your system to talk to the ESP8266 via USB, you will also need to install th
      > - _CP210x_VCP_Windows.zip_
 2. Unzip the downloaded file and run the installation package inside the unzipped folder.
 
-<details><summary>The following pictures are of the CP2104 USB Driver installation process for macOS systems:
+<details>
+<summary>
+  <h4>The following pictures are of the CP2104 USB Driver installation process for macOS systems</h4>
 </summary>
 <p>
 
@@ -325,7 +335,10 @@ For your system to talk to the ESP8266 via USB, you will also need to install th
 
 ## Client Example: Arduino Sketch
 
-<details><summary>ESP8266.ino:</summary>
+<details>
+<summary>
+  <h4>ESP8266.ino</h4>
+</summary>
 <p>
 
 ```cpp
@@ -800,13 +813,18 @@ void loop() {}; // We can leave this empty, as we don't want to repeat anything 
 </p>
 </details>
 
-> you can also download the `ESP8266.ino` Client Sketch [here](https://github.com/ARKEcosystem/cpp-client/blob/master/examples/arduino/ESP8266/ESP8266.ino).
+::: tip
+You can also download the `ESP8266.ino` Client Sketch [here](https://github.com/ARKEcosystem/cpp-client/blob/master/examples/arduino/ESP8266/ESP8266.ino).
+:::
 
 ---
 
 ## Crypto Example: Arduino Sketch
 
-<details><summary>ESP8266.ino</summary>
+<details>
+<summary>
+  <h4>ESP8266.ino</h4>
+</summary>
 <p>
 
 ```cpp
@@ -943,4 +961,6 @@ void loop() {}; // We can leave this empty, as we don't want to repeat anything 
 </p>
 </details>
 
-> you can also download the `ESP8266.ino` Crypto Sketch [here](https://github.com/ARKEcosystem/cpp-crypto/blob/master/examples/arduino/ESP8266/ESP8266.ino).
+::: tip
+You can also download the `ESP8266.ino` Crypto Sketch [here](https://github.com/ARKEcosystem/cpp-crypto/blob/master/examples/arduino/ESP8266/ESP8266.ino).
+:::

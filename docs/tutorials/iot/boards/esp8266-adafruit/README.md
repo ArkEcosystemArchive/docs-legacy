@@ -10,189 +10,206 @@ title: Adafruit ESP8266 Overview and Setup
 
 ## Features
 
+### Cpp-Client
+
+These are the SDK features that are currently available on the Adafruit ESP8266 Feather board.
+
 <details>
 <summary>
-  <h4>These are the SDK features that are currently available on the Adafruit ESP8266 Feather board</h4>
+  <h4>API</h4>
 </summary>
-<p>
 
-**Cpp-Client:**
-| Feature: | Supported:**[ ]**|
-| :------: | :----: |
+| Blocks                                                                                  | Supported          |
+| :-------------------------------------------------------------------------------------- | :----------------: |
+| `get(const char* const blockId)`                                                        | :white_check_mark: |
+| `all(int limit, int page)`                                                              | :white_check_mark: |
+| `transactions(const char* const blockId)`                                               | :white_check_mark: |
+| `search(const std::map<std::string, std::string>& bodyParameters, int limit, int page)` | :white_check_mark: |
 
-**API:**
-| **Blocks:** |**[x]**|
-| :----- | :---: |
-| • `get(const char* const blockId)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `transactions(const char* const blockId)` |**[x]**|
-| • `search(const std::map<std::string, std::string>& bodyParameters, int limit, int page)` |**[x]**|
+| Delegates                                                   | Supported          |
+| :---------------------------------------------------------- | :----------------: |
+| `get(const char *const identifier)`                         | :white_check_mark: |
+| `all(int limit, int page)`                                  | :white_check_mark: |
+| `blocks(const char *const identifier, int limit, int page)` | :white_check_mark: |
+| `voters(const char *const identifier, int limit, int page)` | :white_check_mark: |
 
-| **Delegates:**                                                | **[x]** |
-| :------------------------------------------------------------ | :-----: |
-| • `get(const char *const identifier)`                         | **[x]** |
-| • `all(int limit, int page)`                                  | **[x]** |
-| • `blocks(const char *const identifier, int limit, int page)` | **[x]** |
-| • `voters(const char *const identifier, int limit, int page)` | **[x]** |
+| Node              | Supported          |
+| :---------------- | :----------------: |
+| `configuration()` | :white_check_mark: |
+| `status()`        | :white_check_mark: |
+| `syncing()`       | :white_check_mark: |
 
-| **Node:**           | **[x]** |
-| :------------------ | :-----: |
-| • `configuration()` | **[x]** |
-| • `status()`        | **[x]** |
-| • `syncing()`       | **[x]** |
+| Peers                       | Supported          |
+| :-------------------------- | :----------------: |
+| `get(const char* const ip)` | :white_check_mark: |
+| `all(int limit, int page)`  | :white_check_mark: |
 
-| **Peers:**                    | **[x]** |
-| :---------------------------- | :-----: |
-| • `get(const char* const ip)` | **[x]** |
-| • `all(int limit, int page)`  | **[x]** |
+| Transactions                                                                             | Supported          |
+| :--------------------------------------------------------------------------------------- | :----------------: |
+| `getUnconfirmed(const char* const identifier)`                                           | :white_check_mark: |
+| `get(const char* const identifier)`                                                      | :white_check_mark: |
+| `all(int limit, int page)`                                                               | :white_check_mark: |
+| `allUnconfirmed(int limit, int page)`                                                    | :white_check_mark: |
+| `types()`                                                                                | :white_check_mark: |
+| `search(const std::map<std::string, std::string>& body_parameters, int limit, int page)` | :white_check_mark: |
 
-| **Transactions**                                                                           | **[x]** |
-| :----------------------------------------------------------------------------------------- | :-----: |
-| • `getUnconfirmed(const char* const identifier)`                                           | **[x]** |
-| • `get(const char* const identifier)`                                                      | **[x]** |
-| • `all(int limit, int page)`                                                               | **[x]** |
-| • `allUnconfirmed(int limit, int page)`                                                    | **[x]** |
-| • `types()`                                                                                | **[x]** |
-| • `search(const std::map<std::string, std::string>& body_parameters, int limit, int page)` | **[x]** |
+| Votes                               | Supported          |
+| :---------------------------------- | :----------------: |
+| `get(const char* const identifier)` | :white_check_mark: |
+| `all(int limit, int page)`          | :white_check_mark: |
 
-| **Votes**                             | **[x]** |
-| :------------------------------------ | :-----: |
-| • `get(const char* const identifier)` | **[x]** |
-| • `all(int limit, int page)`          | **[x]** |
+| Wallets                                                                                 | Supported          |
+| :-------------------------------------------------------------------------------------- | :----------------: |
+| `get(const char *const identifier)`                                                     | :white_check_mark: |
+| `all(int limit, int page)`                                                              | :white_check_mark: |
+| `top(int limit, int page)`                                                              | :white_check_mark: |
+| `transactions(const char *const identifier, int limit, int page)`                       | :white_check_mark: |
+| `transactionsReceived(const char *const identifier, int limit, int page)`               | :white_check_mark: |
+| `transactionsSent(const char *const identifier, int limit, int page)`                   | :white_check_mark: |
+| `votes(const char *const identifier, int limit, int page)`                              | :white_check_mark: |
+| `search(const std::map<std::string, std::string> &bodyParameters, int limit, int page)` | :white_check_mark: |
 
-| **Wallets**                                                                               | **[x]** |
-| :---------------------------------------------------------------------------------------- | :-----: |
-| • `get(const char *const identifier)`                                                     | **[x]** |
-| • `all(int limit, int page)`                                                              | **[x]** |
-| • `top(int limit, int page)`                                                              | **[x]** |
-| • `transactions(const char *const identifier, int limit, int page)`                       | **[x]** |
-| • `transactionsReceived(const char *const identifier, int limit, int page)`               | **[x]** |
-| • `transactionsSent(const char *const identifier, int limit, int page)`                   | **[x]** |
-| • `votes(const char *const identifier, int limit, int page)`                              | **[x]** |
-| • `search(const std::map<std::string, std::string> &bodyParameters, int limit, int page)` | **[x]** |
-
----
-
-**Cpp-Crypto:**
-
-**Configuration:**
-| **Fee:** |**[x]**|
-| :----- | :---: |
-| • `get(int type)` |**[x]**|
-| • `set(int type, uint64_t fee)` |**[x]**|
-
-| **Network:**                            | **[x]** |
-| :-------------------------------------- | :-----: |
-| • `get()`                               | **[x]** |
-| • `set(const AbstractNetwork& network)` | **[x]** |
-
-**Enums:**
-| **Fees:** |**[x]**|
-| :----- | :---: |
-
-| **Types:** | **[x]** |
-| :--------- | :-----: |
-
-
-**Identities:**
-| **Address:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase, uint8_t networkVersion)` |**[x]**|
-| • `fromPrivateKey(PrivateKey privateKey, uint8_t networkVersion)` |**[x]**|
-| • `fromPublicKey(PublicKey publicKey, uint8_t networkVersion)` |**[x]**|
-| • `validate(Address address, uint8_t networkVersion)` |**[x]**|
-| • `validate(const char *const addressStr, uint8_t networkVersion)` |**[x]**|
-| • `validate(const uint8_t *addressBytes, uint8_t networkVersion)` |**[x]**|
-| • `base58encode(const uint8_t *source)` |**[x]**|
-| • `bytesFromBase58Check(const char *const address)` |**[x]**|
-
-| **Mnemonic:**                                           | **[x]** |
-| :------------------------------------------------------ | :-----: |
-| • `generate(size_t num_words = 12u, Language language)` | **[x]** |
-
-| **PrivateKey:**                                        | **[x]** |
-| :----------------------------------------------------- | :-----: |
-| • `toBytes()`                                          | **[x]** |
-| • `toString()`                                         | **[x]** |
-| • `fromPassphrase(const char *const passphrase)`       | **[x]** |
-| • `fromHex(const char *const privateKey)`              | **[x]** |
-| • `fromWIFString(const char *wifStr, uint8_t wifByte)` | **[x]** |
-| • `validate(PrivateKey privateKey)`                    | **[x]** |
-| • `validate(const char *privateKeyStr)`                | **[x]** |
-| • `validate(const uint8_t *privateKeyBytes)`           | **[x]** |
-
-| **PublicKey:**                                   | **[x]** |
-| :----------------------------------------------- | :-----: |
-| • `toBytes()`                                    | **[x]** |
-| • `toString()`                                   | **[x]** |
-| • `isValid()`                                    | **[x]** |
-| • `fromPassphrase(const char *const passphrase)` | **[x]** |
-| • `fromHex(const char *const publicKey)`         | **[x]** |
-| • `fromPrivateKey(PrivateKey privateKey)`        | **[x]** |
-| • `validate(PublicKey publicKey)`                | **[x]** |
-| • `validate(const char *publicKeyStr)`           | **[x]** |
-| • `validate(const uint8_t *publicKeyBytes)`      | **[x]** |
-
-| **WIF:**                                                          | **[x]** |
-| :---------------------------------------------------------------- | :-----: |
-| • `toBytes()`                                                     | **[x]** |
-| • `toString()`                                                    | **[x]** |
-| • `fromPassphrase(const char *const passphrase, uint8_t wifByte)` | **[x]** |
-
-**Transactions:**
-| **builder:** |**[x]**|
-| :----- | :---: |
-| • `buildTransfer(std::string recipientId, uint64_t amount, std::string vendorField, std::string passphrase std::string secondPassphrase = "")` |**[x]**|
-| • `buildSecondSignatureRegistration(std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
-| • `buildDelegateRegistration(std::string username, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
-| • `buildVote(std::vector<std::string> votes, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
-| • `buildMultiSignatureRegistration(uint8_t min, uint8_t lifetime, std::vector<std::string> keysgroup, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
-
-| **Deserializer:** | **[x]** |
-| :---------------- | :-----: |
-| • `deserialize()` | **[x]** |
-
-| **Serializer:** | **[x]** |
-| :-------------- | :-----: |
-| • `serialize()` | **[x]** |
-
-| **Transaction:**                                                        | **[*]** |
-| :---------------------------------------------------------------------- | :-----: |
-| • `getId()`                                                             | **[x]** |
-| • `sign(const char* passphrase)`                                        | **[x]** |
-| • `secondSign(const char* passphrase)`                                  | **[x]** |
-| • `verify()`                                                            | **[ ]** |
-| • `secondVerify(const char* secondPublicKey)`                           | **[ ]** |
-| • `toBytes(bool skipSignature = true, bool skipSecondSignature = true)` | **[x]** |
-
-**Utils:**
-| **Message:** |**[_unstable_]**|
-| :----- | :---: |
-| • `sign(std::string newMessage, const char *const passphrase)` |**[x]**|
-| • `verify()` |**[ ]**|
-| • `toArray()` |**[x]**|
-| • `toJson()` |**[x]**|
-| • `toString()` |**[x]**|
-
-| **slot:**                                            | **[_unstable_]** |
-| :--------------------------------------------------- | :--------------: |
-| • `time(Crypto::Networks::AbstractNetwork network)`  |     **[ ]**      |
-| • `epoch(Crypto::Networks::AbstractNetwork network)` |     **[ ]**      |
-
-</p>
 </details>
 
----
+### Cpp-Crypto
+
+<details>
+<summary>
+  <h4>Configuration</h4>
+</summary>
+
+| **Fee:** | Supported          |
+| :----- | :---: |
+| `get(int type)` | :white_check_mark: |
+| `set(int type, uint64_t fee)` | :white_check_mark: |
+
+| **Network:**                            | Supported          |
+| :-------------------------------------- | :----------------: |
+| `get()`                               | :white_check_mark: |
+| `set(const AbstractNetwork& network)` | :white_check_mark: |
+
+</details>
+
+<details>
+<summary>
+  <h4>Enums</h4>
+</summary>
+
+| Enums | Supported          |
+| :---- | :----------------: |
+| Fees  | :white_check_mark: |
+| Types | :white_check_mark: |
+
+</details>
+
+<details>
+<summary>
+  <h4>Identities</h4>
+</summary>
+
+| Address                                                                | Supported          |
+| :--------------------------------------------------------------------- | :----------------: |
+| `toBytes()`                                                            | :white_check_mark: |
+| `toString()`                                                           | :white_check_mark: |
+| `fromPassphrase(const char *const passphrase, uint8_t networkVersion)` | :white_check_mark: |
+| `fromPrivateKey(PrivateKey privateKey, uint8_t networkVersion)`        | :white_check_mark: |
+| `fromPublicKey(PublicKey publicKey, uint8_t networkVersion)`           | :white_check_mark: |
+| `validate(Address address, uint8_t networkVersion)`                    | :white_check_mark: |
+| `validate(const char *const addressStr, uint8_t networkVersion)`       | :white_check_mark: |
+| `validate(const uint8_t *addressBytes, uint8_t networkVersion)`        | :white_check_mark: |
+| `base58encode(const uint8_t *source)`                                  | :white_check_mark: |
+| `bytesFromBase58Check(const char *const address)`                      | :white_check_mark: |
+
+| Mnemonic                                              | Supported          |
+| :---------------------------------------------------- | :----------------: |
+| `generate(size_t num_words = 12u, Language language)` | :white_check_mark: |
+
+| PrivateKey                                           | Supported          |
+| :--------------------------------------------------- | :----------------: |
+| `toBytes()`                                          | :white_check_mark: |
+| `toString()`                                         | :white_check_mark: |
+| `fromPassphrase(const char *const passphrase)`       | :white_check_mark: |
+| `fromHex(const char *const privateKey)`              | :white_check_mark: |
+| `fromWIFString(const char *wifStr, uint8_t wifByte)` | :white_check_mark: |
+| `validate(PrivateKey privateKey)`                    | :white_check_mark: |
+| `validate(const char *privateKeyStr)`                | :white_check_mark: |
+| `validate(const uint8_t *privateKeyBytes)`           | :white_check_mark: |
+
+| PublicKey                                      | Supported          |
+| :--------------------------------------------- | :----------------: |
+| `toBytes()`                                    | :white_check_mark: |
+| `toString()`                                   | :white_check_mark: |
+| `isValid()`                                    | :white_check_mark: |
+| `fromPassphrase(const char *const passphrase)` | :white_check_mark: |
+| `fromHex(const char *const publicKey)`         | :white_check_mark: |
+| `fromPrivateKey(PrivateKey privateKey)`        | :white_check_mark: |
+| `validate(PublicKey publicKey)`                | :white_check_mark: |
+| `validate(const char *publicKeyStr)`           | :white_check_mark: |
+| `validate(const uint8_t *publicKeyBytes)`      | :white_check_mark: |
+
+| WIF                                                             | Supported          |
+| :-------------------------------------------------------------- | :----------------: |
+| `toBytes()`                                                     | :white_check_mark: |
+| `toString()`                                                    | :white_check_mark: |
+| `fromPassphrase(const char *const passphrase, uint8_t wifByte)` | :white_check_mark: |
+
+</details>
+
+<details>
+<summary>
+  <h4>Transactions</h4>
+</summary>
+
+| Builder                                                                                                                                                         | Supported          |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------: |
+| `buildTransfer(std::string recipientId, uint64_t amount, std::string vendorField, std::string passphrase std::string secondPassphrase = "")`                    | :white_check_mark: |
+| `buildSecondSignatureRegistration(std::string passphrase, std::string secondPassphrase = "")`                                                                   | :white_check_mark: |
+| `buildDelegateRegistration(std::string username, std::string passphrase, std::string secondPassphrase = "")`                                                    | :white_check_mark: |
+| `buildVote(std::vector<std::string> votes, std::string passphrase, std::string secondPassphrase = "")`                                                          | :white_check_mark: |
+| `buildMultiSignatureRegistration(uint8_t min, uint8_t lifetime, std::vector<std::string> keysgroup, std::string passphrase, std::string secondPassphrase = "")` | :white_check_mark: |
+
+| Deserializer    | Supported          |
+| :-------------- | :----------------: |
+| `deserialize()` | :white_check_mark: |
+
+| Serializer    | Supported          |
+| :------------ | :----------------: |
+| `serialize()` | :white_check_mark: |
+
+| Transaction                                                           | Supported          |
+| :-------------------------------------------------------------------- | :----------------: |
+| `getId()`                                                             | :white_check_mark: |
+| `sign(const char* passphrase)`                                        | :white_check_mark: |
+| `secondSign(const char* passphrase)`                                  | :white_check_mark: |
+| `verify()`                                                            | :x:                |
+| `secondVerify(const char* secondPublicKey)`                           | :x:                |
+| `toBytes(bool skipSignature = true, bool skipSecondSignature = true)` | :white_check_mark: |
+
+</details>
+
+<details>
+<summary>
+  <h4>Utils</h4>
+</summary>
+
+| Message                                                      | Supported (unstable) |
+| :----------------------------------------------------------- | :------------------: |
+| `sign(std::string newMessage, const char *const passphrase)` | :white_check_mark:   |
+| `verify()`                                                   | :x:                  |
+| `toArray()`                                                  | :white_check_mark:   |
+| `toJson()`                                                   | :white_check_mark:   |
+| `toString()`                                                 | :white_check_mark:   |
+
+| Slot                                               | Supported |
+| :------------------------------------------------- | :-------: |
+| `time(Crypto::Networks::AbstractNetwork network)`  | :x:       |
+| `epoch(Crypto::Networks::AbstractNetwork network)` | :x:       |
+
+</details>
 
 ## Specs
 
-<details>
-<summary>
-  <h4>These are the specifications for the Adafruit ESP8266 Feather board</h4>
-</summary>
-<p>
+These are the specifications for the Adafruit ESP8266 Feather board.
 
 > This is the Adafruit Feather HUZZAH ESP8266 - our take on an 'all-in-one' ESP8266 WiFi development board with built in USB and battery charging. Its an ESP8266 WiFi module with all the extras you need, ready to rock!
 >
@@ -220,44 +237,32 @@ title: Adafruit ESP8266 Overview and Setup
 - 4 mounting holes
 - Reset button
 
-**Pinout:**
+#### Pinout
+
 ![ESP8266 Lower](../assets/esp8266-adafruit/esp8266-adafruit-lower.jpg)
 ![ESP8266 Pinout](../assets/esp8266-adafruit/esp8266-adafruit-pinout.png)
 
-**External Resources:**
+### External Resources
 
-- **Adafruit Feather Huzzah ESP8266: Overview:**
-  > https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/overview
-- **How To: Up and Running with Adafruit HUZZAH Feather ESP8266:**
-  > http://imaginen4tion.blogspot.com/2015/12/how-to-up-and-running-with-adafruit.html
-- **espressif.com: ESP8266 SDK's and Demos:**
-  > http://espressif.com/en/support/download/sdks-demos
-- **ESP 8266 Non-OS SDK API Reference:**
-  > http://espressif.com/sites/default/files/documentation/2c-esp8266_non_os_sdk_api_reference_en.pdf
+- [Adafruit Feather Huzzah ESP8266: Overview](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266/overview)
+- [How To: Up and Running with Adafruit HUZZAH Feather ESP8266](http://imaginen4tion.blogspot.com/2015/12/how-to-up-and-running-with-adafruit.html)
+- [espressif ESP8266 SDK's and Demos](http://espressif.com/en/support/download/sdks-demos)
+- [ESP 8266 Non-OS SDK API Reference (PDF)](http://espressif.com/sites/default/files/documentation/2c-esp8266_non_os_sdk_api_reference_en.pdf)
 
-**Troubleshooting:**
+### Troubleshooting
 
-- **ESP8266: Crashing:**
-  > http://arduino-esp8266.readthedocs.io/en/latest/faq/a02-my-esp-crashes.html#introduction
-- **ESP8266: Exception Causes:**
-  > https://github.com/esp8266/Arduino/blob/master/doc/exception_causes.rst
-
-</p>
-</details>
-
----
+- [ESP8266 Crashing](http://arduino-esp8266.readthedocs.io/en/latest/faq/a02-my-esp-crashes.html#introduction)
+- [ESP8266 Exception Causes](https://github.com/esp8266/Arduino/blob/master/doc/exception_causes.rst)
 
 ## Setup
 
+These are the steps to setup your Adafruit ESP8266 Feather board.
+
 <details>
 <summary>
-  <h4>These are the steps to setup your Adafruit ESP8266 Feather board</h4>
+  <h4>1. Add ESP8266 to the Arduino IDE</h4>
 </summary>
-<p>
 
-**Add ESP8266 to the Arduino IDE:**
-
-**Additional Boards Manager URL's:**
 To add ESP8266 to the Arduino IDE, use _**'Additional Boards Manager URL's'**_ in 'Preferences';
 this is a line separated list of hardware configuration JSON configs.
 
@@ -265,13 +270,16 @@ this is a line separated list of hardware configuration JSON configs.
 
 Add this line to the URL's list:
 
-> `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
+> http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 ![Arduino Board URLs](../assets/esp32-adafruit/arduino-ide-esp32-board-urls.png)
 
----
+</details>
 
-**Download the ESP8266 packages via Board Manager:**
+<details>
+<summary>
+  <h4>2. Download the ESP8266 packages via Board Manager</h4>
+</summary>
 
 Open the Boards Manager from the _**Tools**_ dropdown menu:
 
@@ -282,9 +290,12 @@ Search for and install the '**ESP8266**' package in _**Boards Manager**_.
 ![Open Boards Manager](../assets/esp8266-adafruit/arduino-ide-esp8266-open-boards-manager.png)
 ![Search Boards Manager](../assets/esp8266-adafruit/arduino-ide-esp8266-search-boards-manager.png)
 
----
+</details>
 
-**Select your Board:**
+<details>
+<summary>
+  <h4>3. Select your Board</h4>
+</summary>
 
 From the _**Tools**_ dropdown menu:
 
@@ -294,14 +305,18 @@ Select the Adafruit ESP32 Feather board
 
 ![Select Board](../assets/esp8266-adafruit/arduino-ide-esp8266-select-board.png)
 
----
+</details>
 
-**Install the USB driver:**
+<details>
+<summary>
+  <h4>4. Install the USB driver</h4>
+</summary>
 
-For your system to talk to the ESP8266 via USB, you will also need to install the _**SiLabs CP2104 Driver**_.
+For your system to be able to talk to the ESP8266 via USB, you will also need to install the _**SiLabs CP2104 Driver**_.
 
 1. You can download the zip file for your operating system from the following website:
-   - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+   
+   [https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
      > _e.g._
      >
      > - _Linux_3.x.x_4.x.x_VCP_Driver_Source.zip_
@@ -309,37 +324,20 @@ For your system to talk to the ESP8266 via USB, you will also need to install th
      > - _CP210x_VCP_Windows.zip_
 2. Unzip the downloaded file and run the installation package inside the unzipped folder.
 
-<details>
-<summary>
-  <h4>The following pictures are of the CP2104 USB Driver installation process for macOS systems</h4>
-</summary>
-<p>
+::: tip Example
+Pictures of an installation process of the CP2104 USB Driver for macOS systems can be found [here](/tutorials/iot/drivers/cp2104/).
+:::
 
-![CP2104](../assets/cp2104/cp2104-usb-driver-1.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-2.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-3.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-4.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-5.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-6.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-7.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-8.jpeg)
-![CP2104](../assets/cp2104/cp2104-usb-driver-9.jpeg)
-
-</p>
 </details>
 
-</p>
-</details>
+## Examples
 
----
-
-## Client Example: Arduino Sketch
+### Client - Arduino Sketch
 
 <details>
 <summary>
   <h4>ESP8266.ino</h4>
 </summary>
-<p>
 
 ```cpp
 /**
@@ -810,22 +808,18 @@ void loop() {}; // We can leave this empty, as we don't want to repeat anything 
 
 ```
 
-</p>
 </details>
 
 ::: tip
 You can also download the `ESP8266.ino` Client Sketch [here](https://github.com/ARKEcosystem/cpp-client/blob/master/examples/arduino/ESP8266/ESP8266.ino).
 :::
 
----
-
-## Crypto Example: Arduino Sketch
+### Crypto - Arduino Sketch
 
 <details>
 <summary>
   <h4>ESP8266.ino</h4>
 </summary>
-<p>
 
 ```cpp
 /**
@@ -958,7 +952,6 @@ void loop() {}; // We can leave this empty, as we don't want to repeat anything 
 
 ```
 
-</p>
 </details>
 
 ::: tip

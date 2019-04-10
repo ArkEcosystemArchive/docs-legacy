@@ -10,12 +10,12 @@ You can check our [roadmap](https://ark.io/roadmap/) for current updates and ong
 
 ## When will the next “big thing” be released, why are there no dates?
 
-Ark gives no dates, we develop and announce. We update when we feel something is ready and properly announce via social media and this blog.
+ARK gives no dates, we develop and announce. We update when we feel something is ready and properly announce via social media and this blog.
 
 ## What are your plans for marketing?
 
-Ark does not discuss marketing plans or strategic partnerships with the general public.
+ARK does not discuss marketing plans or strategic partnerships with the general public.
 
 ## When will you be on new exchanges?
 
-Ark does not discuss strategic partnerships or exchange additions with the general public until we are ready to announce them or when exchange decides to announce.
+ARK does not discuss strategic partnerships or exchange additions with the general public until we are ready to announce them or when exchange decides to announce.

@@ -5,12 +5,12 @@ title: "Explorer"
 # Explorer
 
 <p align="center">
-    <img src="https://github.com/ArkEcosystem/explorer/raw/master/ARKExplorer.png" />
+    <img src="https://github.com/ARKEcosystem/explorer/raw/master/ARKExplorer.png" />
 </p>
 
 > Designed and developed from the ground-up, using lean & fast developmental frameworks (Tailwind CSS & Vue.JS).
 
-[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/explorer)](https://circleci.com/gh/ArkEcosystem/explorer)
+[![Build Status](https://badgen.now.sh/circleci/github/ARKEcosystem/explorer)](https://circleci.com/gh/ARKEcosystem/explorer)
 [![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/explorer)](https://codecov.io/gh/arkecosystem/explorer)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
@@ -21,7 +21,7 @@ You can access it at [https://explorer.ark.io/](https://explorer.ark.io/).
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ArkEcosystem/explorer
+git clone https://github.com/ARKEcosystem/explorer
 ```
 
 ### 2. Install Dependencies
@@ -110,7 +110,7 @@ yarn dev --env.routerMode=history
 
 ## Testing
 
-``` bash
+```bash
 $ yarn test
 ```
 
@@ -120,18 +120,18 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## Contributing
 
-* If you find any bugs, submit an [issue](https://github.com/ArkEcosystem/explorer/issues) or open a [pull-request](https://github.com/ArkEcosystem/explorer/pulls), helping us catch and fix them.
-* Engage with other users and developers on the [ArkEcosystem Slack](https://ark.io/slack/).
-* Join our [gitter](https://gitter.im/ark-developers/Lobby).
-* [Contribute bounties](https://github.com/ArkEcosystem/bounty-program).
+- If you find any bugs, submit an [issue](https://github.com/ARKEcosystem/explorer/issues) or open a [pull-request](https://github.com/ARKEcosystem/explorer/pulls), helping us catch and fix them.
+- Engage with other users and developers on the [ARKEcosystem Slack](https://ark.io/slack/).
+- Join our [gitter](https://gitter.im/ark-developers/Lobby).
+- [Contribute bounties](https://github.com/ARKEcosystem/bounty-program).
 
 ## Credits
 
 - [Brian Faust](https://github.com/faustbrian)
 - [Lúcio Rubens](https://github.com/luciorubeens)
 - [Alex Barnsley](https://github.com/alexbarnsley)
-- [All Contributors](https://github.com/ArkEcosystem/explorer/contributors)
+- [All Contributors](https://github.com/ARKEcosystem/explorer/contributors)
 
 ## License
 
-[MIT](https://github.com/ArkEcosystem/explorer/blob/master/LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](https://github.com/ARKEcosystem/explorer/blob/master/LICENSE) © [ARK Ecosystem](https://ark.io)

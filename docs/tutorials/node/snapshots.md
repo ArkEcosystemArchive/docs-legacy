@@ -1,16 +1,16 @@
 # Creating and Using Snapshots
 
-Node operators are most likely familiar with creating snapshots of their database and restoring their nodes using a snapshot to lower downtime. In Ark V1, Postgres' native SQL dump was used to create snapshots. Ark V2 has packages to optimize snapshots and increase the ease of use.
+Node operators are most likely familiar with creating snapshots of their database and restoring their nodes using a snapshot to lower downtime. In ARK V1, Postgres' native SQL dump was used to create snapshots. ARK V2 has packages to optimize snapshots and increase the ease of use.
 
 ## Summary
 
-The `core-snapshots` package facilitates the process of creating, verifying, and applying blockchain backups. This suite of packages can be used to create regular database backups in a serialization format understood by all Ark Core nodes.
+The `core-snapshots` package facilitates the process of creating, verifying, and applying blockchain backups. This suite of packages can be used to create regular database backups in a serialization format understood by all ARK Core nodes.
 
 To ensure that snapshots are usable across the network, it is often helpful to establish a common standard of data serialization. If all nodes agree on a single ruleset governing how blockchain data maps into a database representation, it becomes much easier to compare, validate, and verify snapshots created by different nodes. `core-snapshots` offers three such standards, also known as codecs, covering a wide range of use cases:
 
-- The `lite` codec utilizes a MessagePack encoding format with Ark-specific key-value pairs. This encoding format is faster than the `ark` format, but results in larger backup file sizes, as keys are stored alongside their respective values
-- The `ark` codec uses Ark's serialize and deserialize standards in creating the backup. As the Ark serialization protocol does not include key data, this codec results in smaller database backup sizes. However, this density comes at the expense of performance, as Ark serialization (currently) cannot match MessagePack's encoding and decoding speed.
-- The `msgpack` codec uses MessagePack without any Ark-specific standards. As this codec has no specific knowledge of Ark serialization, this option is both the fastest and the most inefficient regarding snapshot file size.
+- The `lite` codec utilizes a MessagePack encoding format with ARK-specific key-value pairs. This encoding format is faster than the `ark` format, but results in larger backup file sizes, as keys are stored alongside their respective values
+- The `ark` codec uses ARK's serialize and deserialize standards in creating the backup. As the ARK serialization protocol does not include key data, this codec results in smaller database backup sizes. However, this density comes at the expense of performance, as ARK serialization (currently) cannot match MessagePack's encoding and decoding speed.
+- The `msgpack` codec uses MessagePack without any ARK-specific standards. As this codec has no specific knowledge of ARK serialization, this option is both the fastest and the most inefficient regarding snapshot file size.
 
 With all options, the tradeoff to keep in mind is performance vs. filesystem impact. If you have an external storage solution for backups and limited computational resources, using `msgpack` will ensure maximum performance across all potential use cases. Alternatively, if your node setup is robust and backup creation speed is not a relevant factor, the `ark` codec might be the right choice.
 
@@ -18,7 +18,7 @@ If you're unsure of which to choose, use the `lite` codec. Generally speaking, i
 
 ## Usage
 
-The `@arkecosystem/core` is a command-line interface designed to help node operators and developers automate their backup creation workflow. While the commands themselves can be found with `ark snapshot --help`, the source code behind these commands can be found in the `packages/core/src/commands/snapshot` [file](https://github.com/ArkEcosystem/core/blob/develop/packages/core/src/commands/snapshot).
+The `@arkecosystem/core` is a command-line interface designed to help node operators and developers automate their backup creation workflow. While the commands themselves can be found with `ark snapshot --help`, the source code behind these commands can be found in the `packages/core/src/commands/snapshot` [file](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/snapshot).
 
 ## Create A Snapshot
 
@@ -63,7 +63,7 @@ Note that all appends create new backup folders and leave the original snapshot 
 
 ## Restoring a snapshot
 
-The `restore` command allows you to restore your Ark Core node with data from a backup you previously created.
+The `restore` command allows you to restore your ARK Core node with data from a backup you previously created.
 
 Restoring new snapshots **should not be done while your node is still running**, as running a blockchain node without blockchain data can lead to unexpected behavior.
 
@@ -101,7 +101,7 @@ Please note that this will increase the restore time drastically.
 
 Verifying a snapshot with the `verify` command involves running checks on a snapshot to ensure all signatures are cryptographically valid and that block hashes follow each other in a logical progression to create a valid blockchain.
 
-Please note that the `verify` command does not interact with the database in any way. It is therefore safe, and a good idea, to verify all snapshots before importing them into your Ark Core node.
+Please note that the `verify` command does not interact with the database in any way. It is therefore safe, and a good idea, to verify all snapshots before importing them into your ARK Core node.
 
 ```bash
 ark snapshot:verify --blocks 0-331985
@@ -119,7 +119,7 @@ Note that database verification is run by default whenever a node boots up. Alth
 
 ## Performing a Rollback
 
-The `rollback` command can be used to roll your blockchain database back to a specific height. This can be useful to manually alter your blockchain structure in case the rollback features included in Ark Core are not accurate enough for your use case.
+The `rollback` command can be used to roll your blockchain database back to a specific height. This can be useful to manually alter your blockchain structure in case the rollback features included in ARK Core are not accurate enough for your use case.
 
 The following command will rollback the chain to block height of 350000:
 

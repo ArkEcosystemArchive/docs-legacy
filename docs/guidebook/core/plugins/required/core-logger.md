@@ -5,7 +5,7 @@ title: "Logger - Interface"
 # Logger - Interface
 
 ::: tip
-You can find the source code of this package at [packages/core-logger](https://github.com/ArkEcosystem/core/tree/develop/packages/core-logger).
+You can find the source code of this package at [packages/core-logger](https://github.com/ARKEcosystem/core/tree/develop/packages/core-logger).
 :::
 
 ## Installation

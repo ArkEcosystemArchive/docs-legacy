@@ -6,7 +6,7 @@ title: How to write a Core Plugin
 
 [[toc]]
 
-In this guide, you will find information to enable you to write a proper Ark Core plugin, for use in your own Ark deployments; both in the case of Ark Core nodes a `BridgeChain` nodes.
+In this guide, you will find information to enable you to write a proper ARK Core plugin, for use in your own ARK deployments; both in the case of ARK Core nodes a `BridgeChain` nodes.
 
 ## Basic Structure & Properties of a Plugin
 
@@ -66,19 +66,19 @@ The **options** parameter is whatever options the user passes to your plugin whe
 
 ## Setup
 
-Many components are required to have a proper environment setup for the development of your Ark Core plugin.
+Many components are required to have a proper environment setup for the development of your ARK Core plugin.
 
 You can view instructions on how to setup your development environment in the [here](./setup-dev-environment.md).
 
 ### Plugin Skeleton
 
-Make sure you are in the Ark Core folder cloned from the official [repo](https://github.com/ArkEcosystem/core).
+Make sure you are in the ARK Core folder cloned from the official [repo](https://github.com/ARKEcosystem/core).
 
 Add a submodule for the plugin skeleton.
 
 ```bash
 cd plugins/
-git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
+git submodule add -f https://github.com/ARKEcosystem/core-plugin-skeleton
 cd core-plugin-skeleton
 ```
 
@@ -165,7 +165,7 @@ export const plugin: Container.PluginDescriptor = {
 
 ### Testing
 
-Testing is streamlined by the `test-utils` Ark Core package.
+Testing is streamlined by the `test-utils` ARK Core package.
 
 Before writing our `jest` testing suite, we will first set up the test environment in a file called `setup.ts` under the existing `__tests__` folder.
 
@@ -213,4 +213,4 @@ Finally, we can verify that our plugin functions correctly by invoking `yarn tes
 
 ## Conclusion
 
-In the end, you should be able to write your plugin for Ark Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.
+In the end, you should be able to write your plugin for ARK Core, with full interoperability with the existing core packages and other dependencies that might be required for your project.

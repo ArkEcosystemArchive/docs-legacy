@@ -5,6 +5,7 @@ title: "Minimalistic SDK demos"
 ## SDK client and crypto usage samples
 
 The code represents minimal example of `client` and `crypto` libraries usage for the specified programming language. Example functionality consists of:
+
 - importing/loading the needed dependencies/libraries
 - initialisation of the client and connecting to an ark-node(peer)
 - retrieve a specific block via API
@@ -16,6 +17,7 @@ Please refer to the code comments or check more detailed documentation for speci
 
 :::: tabs
 ::: tab java
+
 ```java
 import com.google.gson.internal.LinkedTreeMap;
 import org.arkecosystem.client.Connection;
@@ -97,16 +99,18 @@ public class Main {
     }
 }
 ```
+
 :::
 
 ::: tab php
+
 ```php
 <?php
 
 require 'vendor/autoload.php';
 
-use ArkEcosystem\Crypto\Transactions\Builder\Transfer;
-use ArkEcosystem\Client\Connection;
+use ARKEcosystem\Crypto\Transactions\Builder\Transfer;
+use ARKEcosystem\Client\Connection;
 
 // Instantiate a client
 $connection = new Connection([
@@ -134,16 +138,18 @@ var_dump($response['data']);
 var_dump($response['data']['accept']);
 var_dump($response['data']['broadcast']);
 ```
+
 :::
 
 ::: tab elixir
+
 ```elixir
 defmodule ElixirTest do
 
-  alias ArkEcosystem.Crypto.Transactions.Transaction
-  alias ArkEcosystem.Crypto.Transactions.Builder
+  alias ARKEcosystem.Crypto.Transactions.Transaction
+  alias ARKEcosystem.Crypto.Transactions.Builder
 
-  @client ArkEcosystem.Client.new(%{
+  @client ARKEcosystem.Client.new(%{
           host: "https://dexplorer.ark.io:8443/api/v2",
           nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
           version: "2.0.0"
@@ -151,7 +157,7 @@ defmodule ElixirTest do
 
   def main do
     #Find a block with height 939627
-    IO.inspect ArkEcosystem.Client.API.Two.Block.show(@client, '939627')
+    IO.inspect ARKEcosystem.Client.API.Two.Block.show(@client, '939627')
 
     transaction = Builder.build_transfer(
       "D5rHMAmTXVbG7HVF3NvTN3ghpWGEii5mH2",
@@ -164,24 +170,26 @@ defmodule ElixirTest do
     transaction = transaction |> Transaction.to_params
 
     # posting transactions to the connected node as specified in the connection above
-    ArkEcosystem.Client.API.Two.Transaction.create(@client, [transaction])
+    ARKEcosystem.Client.API.Two.Transaction.create(@client, [transaction])
   end
 end
 ```
+
 :::
 
 ::: tab python
+
 ```python
-from ark.client import ArkClient
+from ark.client import ARKClient
 from crypto.transactions.builder.transfer import Transfer
 
 # Instantiate the client
-client = ArkClient('https://dexplorer.ark.io:8443/api/', api_version='v2')
+client = ARKClient('https://dexplorer.ark.io:8443/api/', api_version='v2')
 
 # find block with height 545774
 response = client.blocks.get('545774')
 
-# Creating a transaction with the Arkecosystem-Python-Crypto builder
+# Creating a transaction with the ARKecosystem-Python-Crypto builder
 tx = Transfer(recipientId='D5rHMAmTXVbG7HVF3NvTN3ghpWGEii5mH2', amount=10000000,
               vendorField="This is a transaction from Python")
 
@@ -195,6 +203,7 @@ if __name__ == '__main__':
     # posting transactions to the connected node as specifid in the connection above
     client.transactions.create([transaction_dict])
 ```
+
 :::
 
 ::: tab C++
@@ -223,13 +232,13 @@ const char* password = "yourWiFiPassword";
 
 void doExample() {
     //  create the connection.
-    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
+    ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.55", 4003);
 
     //  retrieve a specific block.
     std::string blockResponse = connection.api.blocks.get("58328125061111756");
 
     //  create transaction payload.
-    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
         "recipientID",
         1000000000,
         "vendorfield",
@@ -242,7 +251,7 @@ void doExample() {
 
     // Let's save the transactionsBuffer to a 'string' object for passing to Cpp-Client.
     std::string jsonStr = transactionsBuffer;
-    
+
     std::string sendResponse = connection.api.transactions.send(jsonStr);
 
     //  handle response data from API.
@@ -289,7 +298,7 @@ void loop() { };
 platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Ark-Cpp-Client, Ark-Cpp-Crypto
+lib_deps = ARK-Cpp-Client, ARK-Cpp-Crypto
 upload_speed = 921600
 monitor_speed = 115200
 
@@ -319,13 +328,13 @@ const char* password = "yourWiFiPassword";
 
 void doExample() {
     //  create the connection.
-    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
+    ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.55", 4003);
 
     //  retrieve a specific block.
     std::string blockResponse = connection.api.blocks.get("58328125061111756");
 
     //  create transaction payload.
-    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
         "recipientID",
         1000000000,
         "vendorfield",
@@ -338,7 +347,7 @@ void doExample() {
 
     // Let's save the transactionsBuffer to a 'string' object for passing to Cpp-Client.
     std::string jsonStr = transactionsBuffer;
-    
+
     std::string sendResponse = connection.api.transactions.send(jsonStr);
 
     //  handle response data from API.
@@ -380,13 +389,13 @@ void loop() { };
 
 int main() {
     //  create the connection.
-    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
+    ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.55", 4003);
 
     //  retrieve a specific block.
     std::string blockResponse = connection.api.blocks.get("58328125061111756");
 
     //  create transaction payload.
-    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+    auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
         "recipientID",
         1000000000,
         "vendorfield",
@@ -408,13 +417,14 @@ int main() {
 :::
 
 ::: tab ruby
+
 ```ruby
 require 'arkecosystem/client'
 require 'arkecosystem/crypto'
 
-connection = ArkEcosystem::Client::Connection.new(host: "http://my.ark.node:4003/api/", version: 2)
+connection = ARKEcosystem::Client::Connection.new(host: "http://my.ark.node:4003/api/", version: 2)
 
-transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
+transaction = ARKEcosystem::Crypto::Transactions::Builder::Transfer.new()
                   .set_recipient_id('DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8')
                   .set_amount(100000)
                   .set_vendor_field('Hello from Ruby !')
@@ -426,9 +436,11 @@ response = connection.transactions.create({transactions: [transaction.to_params]
 
 puts response.body
 ```
+
 :::
 
 ::: tab swift
+
 ```swift
 import UIKit
 import SwiftClient
@@ -443,10 +455,10 @@ class ViewController: UIViewController {
         let conn = Connection(host: "https://dexplorer.ark.io:8443/api")
 
         // Set the correct network, devnet is default but explicitly set here
-        ArkNetwork.shared.set(network: Devnet())
+        ARKNetwork.shared.set(network: Devnet())
 
         // Create a transfer transaction
-        let transfer = ArkBuilder.buildTransfer("secret passphrase",
+        let transfer = ARKBuilder.buildTransfer("secret passphrase",
                                                 secondPassphrase: nil,
                                                 to: "DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8",
                                                 amount: 10000000,
@@ -460,9 +472,11 @@ class ViewController: UIViewController {
     }
 }
 ```
+
 :::
 
 ::: tab go
+
 ```go
 package main
 
@@ -499,5 +513,6 @@ func main() {
     connection.Transactions.Create(context.Background(), body)
 }
 ```
+
 :::
 ::::

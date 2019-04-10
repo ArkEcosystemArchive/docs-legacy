@@ -1,38 +1,38 @@
 {
-    "name": "@arkecosystem/docs",
-    "description": "Official documentation for the Ark Ecosystem",
-    "contributors": [
-        "Brian Faust <brian@ark.io>"
-    ],
-    "license": "MIT",
-    "keywords": [
-        "ark",
-        "blockchain",
-        "crypto",
-        "dpos",
-        "docs",
-        "api"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ArkEcosystem/docs.git"
-    },
-    "bugs": {
-        "url": "https://github.com/ArkEcosystem/docs/issues"
-    },
-    "homepage": "https://github.com/ArkEcosystem/docs",
-    "scripts": {
-        "dev": "vuepress dev docs",
-        "build": "vuepress build docs"
-    },
-    "devDependencies": {
-        "axios": "^0.18.0",
-        "highlight.js": "^9.13.1",
-        "nprogress": "^0.2.0",
-        "sweetalert": "^2.1.0",
-        "vue": "^2.5.21",
-        "vue-tabs-component": "^1.5.0",
-        "vuepress": "^1.0.0-alpha.44",
-        "vuepress-plugin-tabs": "^0.2.0"
-    }
+  "name": "@arkecosystem/docs",
+  "description": "Official documentation for the ARK Ecosystem",
+  "contributors": [
+    "Brian Faust <brian@ark.io>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ark",
+    "blockchain",
+    "crypto",
+    "dpos",
+    "docs",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARKEcosystem/docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ARKEcosystem/docs/issues"
+  },
+  "homepage": "https://github.com/ARKEcosystem/docs",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "highlight.js": "^9.13.1",
+    "nprogress": "^0.2.0",
+    "sweetalert": "^2.1.0",
+    "vue": "^2.5.21",
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^1.0.0-alpha.44",
+    "vuepress-plugin-tabs": "^0.2.0"
+  }
 }

@@ -19,7 +19,7 @@ All plugins listed on this page are actively maintained and **required** to run 
 | [core-utils](/guidebook/core/plugins/required/core-utils.md)                       |            [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-utils)](https://www.npmjs.com/package/@arkecosystem/core-utils)            |
 | [crypto](/guidebook/core/plugins/required/crypto.md)                               |                [![npm](https://badgen.now.sh/npm/v/@arkecosystem/crypto)](https://www.npmjs.com/package/@arkecosystem/crypto)                |
 
-Check [core/packages](https://github.com/ArkEcosystem/core/tree/develop/packages) if you wish to take a look at them.
+Check [core/packages](https://github.com/ARKEcosystem/core/tree/develop/packages) if you wish to take a look at them.
 
 ## Security
 

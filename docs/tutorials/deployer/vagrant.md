@@ -2,10 +2,10 @@
 
 We have also provided a Vagrantfile which allows you to deploy your own BridgeChain and Explorer together with no configuration necessary.
 
-*Note: This requires [Vagrant version 2+](https://www.vagrantup.com/downloads.html) to be installed.*
+_Note: This requires [Vagrant version 2+](https://www.vagrantup.com/downloads.html) to be installed._
 
 ```bash
-git clone https://github.com/ArkEcosystem/ark-deployer.git
+git clone https://github.com/ARKEcosystem/ark-deployer.git
 ```
 
 To initiate a Vagrant Machine, execute:
@@ -22,7 +22,7 @@ vagrant destroy
 
 ## Tweaking BridgeChain Options (Advanced)
 
-Open up `~/ark-deployer/vagrant/config.json` and you will see all the possible options that you can change. These are all used when deploying the BridgeChain on Vagrant and can be customized. Refer to the [node options](https://github.com/ArkEcosystem/ark-deployer#optional-parameters) and [explorer options](https://github.com/ArkEcosystem/ark-deployer#optional-parameters-1) before continuing to get an idea of what each does. Once you are happy with your settings, go ahead and start the Vagrant environment as above.
+Open up `~/ark-deployer/vagrant/config.json` and you will see all the possible options that you can change. These are all used when deploying the BridgeChain on Vagrant and can be customized. Refer to the [node options](https://github.com/ARKEcosystem/ark-deployer#optional-parameters) and [explorer options](https://github.com/ARKEcosystem/ark-deployer#optional-parameters-1) before continuing to get an idea of what each does. Once you are happy with your settings, go ahead and start the Vagrant environment as above.
 
 ## Next Steps
 

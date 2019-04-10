@@ -5,7 +5,7 @@ title: "Error Tracker - Bugsnag"
 # Error Tracker - Bugsnag
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-bugsnag](https://github.com/ArkEcosystem/core/tree/develop/packages/core-error-tracker-bugsnag).
+You can find the source code of this package at [packages/core-error-tracker-bugsnag](https://github.com/ARKEcosystem/core/tree/develop/packages/core-error-tracker-bugsnag).
 :::
 
 ## Installation
@@ -24,9 +24,9 @@ yarn add @arkecosystem/core-error-tracker-bugsnag
 
 ```ts
 export const defaults = {
-    apiKey: process.env.CORE_ERROR_TRACKER_BUGSNAG_API_KEY,
-    metaData: {
-        network: process.env.CORE_NETWORK_NAME,
-    },
+  apiKey: process.env.CORE_ERROR_TRACKER_BUGSNAG_API_KEY,
+  metaData: {
+    network: process.env.CORE_NETWORK_NAME
+  }
 };
 ```

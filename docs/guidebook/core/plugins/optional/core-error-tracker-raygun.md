@@ -5,7 +5,7 @@ title: "Error Tracker - Raygun"
 # Error Tracker - Raygun
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-raygun](https://github.com/ArkEcosystem/core/tree/develop/packages/core-error-tracker-raygun).
+You can find the source code of this package at [packages/core-error-tracker-raygun](https://github.com/ARKEcosystem/core/tree/develop/packages/core-error-tracker-raygun).
 :::
 
 ## Installation

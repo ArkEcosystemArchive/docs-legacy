@@ -19,4 +19,4 @@ All plugins listed on this page are actively maintained but **not required** to 
 | [core-vote-report](/guidebook/core/plugins/optional/core-vote-report.md)                       |            [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-vote-report)](https://www.npmjs.com/package/@arkecosystem/core-vote-report)            |
 | [core-webhooks](/guidebook/core/plugins/optional/core-webhooks.md)                             |               [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-webhooks)](https://www.npmjs.com/package/@arkecosystem/core-webhooks)               |
 
-Check [core/packages](https://github.com/ArkEcosystem/core/tree/develop/packages) if you wish to take a look at them.
+Check [core/packages](https://github.com/ARKEcosystem/core/tree/develop/packages) if you wish to take a look at them.

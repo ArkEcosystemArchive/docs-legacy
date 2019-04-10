@@ -8,7 +8,7 @@ title: "Development"
 
 ## Introduction
 
-Ark Core is now written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages.
+ARK Core is now written in [TypeScript](https://github.com/microsoft/typescript), and it has been using [Lerna](https://github.com/lerna/lerna) to manage the development and publication of its packages.
 
 These tools make it easy for us to set up the development environment, everything is handled by scripts provided in the Core's `package.json` file.
 
@@ -41,9 +41,9 @@ The next important required dependency is a global installation of yarn through 
 npm i -g yarn
 ```
 
-[Yarn](https://yarnpkg.com) is the package manager used by Ark Core; it replaces npm from here on out.
+[Yarn](https://yarnpkg.com) is the package manager used by ARK Core; it replaces npm from here on out.
 
-With yarn installed globally, we can proceed to set up the Ark Core repository.
+With yarn installed globally, we can proceed to set up the ARK Core repository.
 
 Before we install all the JavaScript and TypeScript packages, we need to make sure we are on the develop branch.
 
@@ -68,7 +68,7 @@ Just follow those steps and you are ready to get started. Happy Hacking!
 
 ## Database
 
-Ark Core stores all the blockchain data in a database. You could read more about it, in the [database section](/guidebook/core/development.html#database).
+ARK Core stores all the blockchain data in a database. You could read more about it, in the [database section](/guidebook/core/development.html#database).
 
 For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](/guidebook/core/docker.html).
 

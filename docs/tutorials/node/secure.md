@@ -1,14 +1,14 @@
 ---
-title: "How To Secure Your Ark Node"
+title: "How To Secure Your ARK Node"
 ---
 
-# How To Secure Your Ark Node
+# How To Secure Your ARK Node
 
 [[toc]]
 
-When running an Ark node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start.
+When running an ARK node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start.
 
-We assume you completed all the steps as outlined in the previous guide: [Setup Your Ark Node]().
+We assume you completed all the steps as outlined in the previous guide: [Setup Your ARK Node]().
 
 ::: warning
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.
@@ -147,7 +147,7 @@ exit
 ssh user@yournode -p 55555
 ```
 
-If everything was setup successfully, you should be reconnected to your Ark Node. Replace `55555` with the port you chose when setting up your `sshd_config`.
+If everything was setup successfully, you should be reconnected to your ARK Node. Replace `55555` with the port you chose when setting up your `sshd_config`.
 
 ### Install Fail2Ban
 
@@ -243,7 +243,7 @@ sudo ufw default deny incoming
 
 Depending which network this node is for will determine what port you open here. For mainnet use `4001`, devnet use `4002`, and testnet use `4000` and public API which is by default located on port `4003`.
 
-We don't want to open any more ports than required to operate securely so we will open  P2P port depending on the network (in our example for mainnet) and public API port.
+We don't want to open any more ports than required to operate securely so we will open P2P port depending on the network (in our example for mainnet) and public API port.
 
 ```bash
 sudo ufw allow 4001/tcp
@@ -368,7 +368,7 @@ sudo apt-get install knockd
 
 Logs for knockd appear in `syslog` and will be crucial if you need to troubleshoot.
 
-Run the following command on your Ark Node server.
+Run the following command on your ARK Node server.
 
 ```bash
 tail -f /var/log/syslog
@@ -467,7 +467,7 @@ Windows users can generate their ssh key using [PuTTY Key Generator](https://www
 
 ##### Copy your **PUBLIC KEY** to your Server
 
-Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your Ark node server.
+Copy the contents of your `id_rsa.pub` file on your local machine to your `~/.ssh/authorized_keys` on your ARK node server.
 
 #### Disable Password Authentication
 
@@ -558,7 +558,7 @@ Scroll down to `Origin Certificates` and click the `Create Certificate` button. 
 
 ![cloudflare origin certificate](./assets/secure/cloudflare_certificate.png)
 
-Open Terminal on your Ark Node Server
+Open Terminal on your ARK Node Server
 
 We need to create a new folder and copy our keys to our server.
 
@@ -576,7 +576,7 @@ Copy the `PRIVATE KEY` to the file `ark.key` and the `CERTIFICATE` to `ark.crt`.
 sudo service nginx start
 ```
 
-If everything started fine, you should be able to access your Ark node API's
+If everything started fine, you should be able to access your ARK node API's
 behind SSL. Giving you the bonus of Cloudflare DDOS protection.
 
 Otherwise, if you get any errors run the following command to troubleshoot nginx.

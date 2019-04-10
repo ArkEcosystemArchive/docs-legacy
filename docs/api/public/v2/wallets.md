@@ -19,34 +19,34 @@ GET /api/wallets
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Response
 
 ```json
 {
-    "meta": {
-        "count": 2,
-        "pageCount": 421,
-        "totalCount": 841,
-        "next": "/v2/wallets?page=2",
-        "previous": null,
-        "self": "/v2/wallets?page=1",
-        "first": "/v2/wallets?page=1",
-        "last": "/v2/wallets?page=421"
-    },
-    "data": [
-        {
-            "address": "D59NTfV92ca9QevUydvMiFMFdubbCaAVCV",
-            "publicKey": "037d035f08b3bad0d5bb605232c7aa41555693c480044dbeb797270a44c339da5a",
-            "username": null,
-            "secondPublicKey": null,
-            "balance": 1023145260990,
-            "isDelegate": false
-        }
-    ]
+  "meta": {
+    "count": 2,
+    "pageCount": 421,
+    "totalCount": 841,
+    "next": "/v2/wallets?page=2",
+    "previous": null,
+    "self": "/v2/wallets?page=1",
+    "first": "/v2/wallets?page=1",
+    "last": "/v2/wallets?page=421"
+  },
+  "data": [
+    {
+      "address": "D59NTfV92ca9QevUydvMiFMFdubbCaAVCV",
+      "publicKey": "037d035f08b3bad0d5bb605232c7aa41555693c480044dbeb797270a44c339da5a",
+      "username": null,
+      "secondPublicKey": null,
+      "balance": 1023145260990,
+      "isDelegate": false
+    }
+  ]
 }
 ```
 
@@ -62,22 +62,22 @@ GET /api/wallets/{id}
 
 ### Path Parameters
 
-| Name | Type   | Description                                   | Required           |
-|------|:------:|-----------------------------------------------|:------------------:|
+| Name |  Type  | Description                                   |      Required      |
+| ---- | :----: | --------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Response
 
 ```json
 {
-    "data": {
-        "address": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-        "publicKey": "0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7",
-        "username": "bongoninja",
-        "secondPublicKey": null,
-        "balance": 12534670000000,
-        "isDelegate": true
-    }
+  "data": {
+    "address": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+    "publicKey": "0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7",
+    "username": "bongoninja",
+    "secondPublicKey": null,
+    "balance": 12534670000000,
+    "isDelegate": true
+  }
 }
 ```
 
@@ -93,16 +93,16 @@ GET /api/wallets/{id}/transactions
 
 ### Path Parameters
 
-| Name | Type   | Description                                   | Required           |
-|------|:------:|-----------------------------------------------|:------------------:|
+| Name |  Type  | Description                                   |      Required      |
+| ---- | :----: | --------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Response
 
@@ -154,16 +154,16 @@ GET /api/wallets/{id}/transactions/received
 
 ### Path Parameters
 
-| Name | Type   | Description                                   | Required           |
-|------|:------:|-----------------------------------------------|:------------------:|
+| Name |  Type  | Description                                   |      Required      |
+| ---- | :----: | --------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Response
 
@@ -221,56 +221,56 @@ GET /api/wallets/{id}/transactions/sent
 
 ### Path Parameters
 
-| Name | Type   | Description                                   | Required           |
-|------|:------:|-----------------------------------------------|:------------------:|
+| Name |  Type  | Description                                   |      Required      |
+| ---- | :----: | --------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Response
 
 ```json
 {
-    "meta": {
-        "count": 2,
-        "pageCount": 2,
-        "totalCount": 4,
-        "next": "/v2/wallets/boldninja/transactions/sent?page=2",
-        "previous": null,
-        "self": "/v2/wallets/boldninja/transactions/sent?page=1",
-        "first": "/v2/wallets/boldninja/transactions/sent?page=1",
-        "last": "/v2/wallets/boldninja/transactions/sent?page=2"
-    },
-    "data": [
-        {
-            "id": "686b989f56ede8141289691d166b8158f0b2c3b272112fdf77198e394fa4b59a",
-            "blockId": "16409699706603010399",
-            "version": 1,
-            "type": 3,
-            "amount": 0,
-            "fee": 100000000,
-            "sender": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-            "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-            "signature": "304402202ad26e82b6b9c96babfb7fba4389d17e868cc802ada3a7d263848a8b7baa144402205e5571afdba7b1c0cad698620c5306e320f3dadcb9a82df6ebbd3af7df757904",
-            "signSignature": null,
-            "asset": {
-                "votes": [
-                    "+0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7"
-                ]
-            },
-            "confirmations": 526006,
-            "timestamp": {
-                "epoch": 49663543,
-                "unix": 1539764743,
-                "human": "2018-10-17T08:25:43.000Z"
-            }
-        }
-    ]
+  "meta": {
+    "count": 2,
+    "pageCount": 2,
+    "totalCount": 4,
+    "next": "/v2/wallets/boldninja/transactions/sent?page=2",
+    "previous": null,
+    "self": "/v2/wallets/boldninja/transactions/sent?page=1",
+    "first": "/v2/wallets/boldninja/transactions/sent?page=1",
+    "last": "/v2/wallets/boldninja/transactions/sent?page=2"
+  },
+  "data": [
+    {
+      "id": "686b989f56ede8141289691d166b8158f0b2c3b272112fdf77198e394fa4b59a",
+      "blockId": "16409699706603010399",
+      "version": 1,
+      "type": 3,
+      "amount": 0,
+      "fee": 100000000,
+      "sender": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+      "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
+      "signature": "304402202ad26e82b6b9c96babfb7fba4389d17e868cc802ada3a7d263848a8b7baa144402205e5571afdba7b1c0cad698620c5306e320f3dadcb9a82df6ebbd3af7df757904",
+      "signSignature": null,
+      "asset": {
+        "votes": [
+          "+0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7"
+        ]
+      },
+      "confirmations": 526006,
+      "timestamp": {
+        "epoch": 49663543,
+        "unix": 1539764743,
+        "human": "2018-10-17T08:25:43.000Z"
+      }
+    }
+  ]
 }
 ```
 
@@ -286,61 +286,61 @@ GET /api/wallets/{id}/votes
 
 ### Path Parameters
 
-| Name | Type   | Description                                   | Required           |
-|------|:------:|-----------------------------------------------|:------------------:|
+| Name |  Type  | Description                                   |      Required      |
+| ---- | :----: | --------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Response
 
 ```json
 {
-    "meta": {
-        "count": 2,
-        "pageCount": 2,
-        "totalCount": 3,
-        "next": "/v2/wallets/boldninja/votes?page=2",
-        "previous": null,
-        "self": "/v2/wallets/boldninja/votes?page=1",
-        "first": "/v2/wallets/boldninja/votes?page=1",
-        "last": "/v2/wallets/boldninja/votes?page=2"
-    },
-    "data": [
-        {
-            "id": "08c6b23f9edd97b613f17153fb97a316a4fb83136e9842655dafc8262f363e0e",
-            "blockId": "14847399772737279404",
-            "version": 1,
-            "type": 3,
-            "amount": 0,
-            "fee": 100000000,
-            "sender": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "recipient": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-            "signature": "304402207ba0e8aaee93695360081b7ce713f13d62b544038ac440bd46357398af86cae6022059ac74586738be1ef622e0baba992d0e417d9aed7ab980f374eb0c9d53e25f8e",
-            "asset": {
-                "votes": [
-                    "+0257b7724e97cd832e0c28533a86da5220656f9b5122141daab20e8526decce01f"
-                ]
-            },
-            "confirmations": 1636029,
-            "timestamp": {
-                "epoch": 17094358,
-                "unix": 1507195558,
-                "human": "2017-10-05T09:25:58Z"
-            }
-        }
-    ]
+  "meta": {
+    "count": 2,
+    "pageCount": 2,
+    "totalCount": 3,
+    "next": "/v2/wallets/boldninja/votes?page=2",
+    "previous": null,
+    "self": "/v2/wallets/boldninja/votes?page=1",
+    "first": "/v2/wallets/boldninja/votes?page=1",
+    "last": "/v2/wallets/boldninja/votes?page=2"
+  },
+  "data": [
+    {
+      "id": "08c6b23f9edd97b613f17153fb97a316a4fb83136e9842655dafc8262f363e0e",
+      "blockId": "14847399772737279404",
+      "version": 1,
+      "type": 3,
+      "amount": 0,
+      "fee": 100000000,
+      "sender": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
+      "recipient": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
+      "signature": "304402207ba0e8aaee93695360081b7ce713f13d62b544038ac440bd46357398af86cae6022059ac74586738be1ef622e0baba992d0e417d9aed7ab980f374eb0c9d53e25f8e",
+      "asset": {
+        "votes": [
+          "+0257b7724e97cd832e0c28533a86da5220656f9b5122141daab20e8526decce01f"
+        ]
+      },
+      "confirmations": 1636029,
+      "timestamp": {
+        "epoch": 17094358,
+        "unix": 1507195558,
+        "human": "2017-10-05T09:25:58Z"
+      }
+    }
+  ]
 }
 ```
 
 ## List all top wallets
 
-Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the Ark ICO.
+Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the ARK ICO.
 
 ### Endpoint
 
@@ -351,43 +351,43 @@ GET /api/wallets/top
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Response
 
 ```json
 {
-    "meta": {
-        "count": 100,
-        "pageCount": 1859,
-        "totalCount": 185829,
-        "next": "/api/v2/wallets/top?page=2&limit=100",
-        "previous": null,
-        "self": "/api/v2/wallets/top?page=1&limit=100",
-        "first": "/api/v2/wallets/top?page=1&limit=100",
-        "last": "/api/v2/wallets/top?page=1859&limit=100"
+  "meta": {
+    "count": 100,
+    "pageCount": 1859,
+    "totalCount": 185829,
+    "next": "/api/v2/wallets/top?page=2&limit=100",
+    "previous": null,
+    "self": "/api/v2/wallets/top?page=1&limit=100",
+    "first": "/api/v2/wallets/top?page=1&limit=100",
+    "last": "/api/v2/wallets/top?page=1859&limit=100"
+  },
+  "data": [
+    {
+      "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
+      "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
+      "username": null,
+      "secondPublicKey": null,
+      "balance": 11499593462120632,
+      "isDelegate": false
     },
-    "data": [
-        {
-            "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
-            "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
-            "username": null,
-            "secondPublicKey": null,
-            "balance": 11499593462120632,
-            "isDelegate": false
-        },
-        {
-            "address": "DRac35wghMcmUSe5jDMLBDLWkVVjyKZFxK",
-            "publicKey": "0374e9a97611540a9ce4812b0980e62d3c5141ea964c2cab051f14a78284570dcd",
-            "username": null,
-            "secondPublicKey": null,
-            "balance": 554107676293547,
-            "isDelegate": false
-        },
-        //... 98 more wallets
-    ]
+    {
+      "address": "DRac35wghMcmUSe5jDMLBDLWkVVjyKZFxK",
+      "publicKey": "0374e9a97611540a9ce4812b0980e62d3c5141ea964c2cab051f14a78284570dcd",
+      "username": null,
+      "secondPublicKey": null,
+      "balance": 554107676293547,
+      "isDelegate": false
+    }
+    //... 98 more wallets
+  ]
 }
 ```
 
@@ -404,49 +404,49 @@ POST /api/wallets/search
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
-| page  | int  | The number of the page that will be returned. | :x:      |
-| limit | int  | The number of resources per page.             | :x:      |
+| ----- | :--: | --------------------------------------------- | :------: |
+| page  | int  | The number of the page that will be returned. |   :x:    |
+| limit | int  | The number of resources per page.             |   :x:    |
 
 ### Body Parameters
 
-| Name             | Type   | Description | Required |
-|------------------|:------:|-------------|:--------:|
-| address          | string | ...         | :x:      |
-| publicKey        | string | ...         | :x:      |
-| secondPublicKey  | string | ...         | :x:      |
-| vote             | string | ...         | :x:      |
-| username         | string | ...         | :x:      |
-| balance          | object | ...         | :x:      |
-| balance.from     | int    | ...         | :x:      |
-| balance.to       | int    | ...         | :x:      |
-| votebalance      | object | ...         | :x:      |
-| votebalance.from | int    | ...         | :x:      |
-| votebalance.to   | int    | ...         | :x:      |
+| Name             |  Type  | Description | Required |
+| ---------------- | :----: | ----------- | :------: |
+| address          | string | ...         |   :x:    |
+| publicKey        | string | ...         |   :x:    |
+| secondPublicKey  | string | ...         |   :x:    |
+| vote             | string | ...         |   :x:    |
+| username         | string | ...         |   :x:    |
+| balance          | object | ...         |   :x:    |
+| balance.from     |  int   | ...         |   :x:    |
+| balance.to       |  int   | ...         |   :x:    |
+| votebalance      | object | ...         |   :x:    |
+| votebalance.from |  int   | ...         |   :x:    |
+| votebalance.to   |  int   | ...         |   :x:    |
 
 ### Response
 
 ```json
 {
-    "meta": {
-        "count": 2,
-        "pageCount": 2,
-        "totalCount": 3,
-        "next": "/v2/wallets/search?page=2",
-        "previous": null,
-        "self": "/v2/wallets/search?page=1",
-        "first": "/v2/wallets/search?page=1",
-        "last": "/v2/wallets/search?page=2"
-    },
-    "data": [
-        {
-            "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
-            "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
-            "username": null,
-            "secondPublicKey": null,
-            "balance": 351774803773,
-            "isDelegate": false
-        }
-    ]
+  "meta": {
+    "count": 2,
+    "pageCount": 2,
+    "totalCount": 3,
+    "next": "/v2/wallets/search?page=2",
+    "previous": null,
+    "self": "/v2/wallets/search?page=1",
+    "first": "/v2/wallets/search?page=1",
+    "last": "/v2/wallets/search?page=2"
+  },
+  "data": [
+    {
+      "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
+      "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
+      "username": null,
+      "secondPublicKey": null,
+      "balance": 351774803773,
+      "isDelegate": false
+    }
+  ]
 }
 ```

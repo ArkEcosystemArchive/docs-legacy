@@ -6,7 +6,7 @@ title: "Contributing"
 
 ## Introduction
 
-While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Ark Ecosystem and increases the likelihood your pull request will be accepted.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the ARK Ecosystem and increases the likelihood your pull request will be accepted.
 
 ## Minimum Requirements
 
@@ -36,7 +36,7 @@ While the following guidelines are not an absolute requirement, writing your cod
 
 - **Do** send pull requests that improve code readability.
 
-- **Don't** send pull requests that improve code readability to your liking. *Follow the standards that are specified in the project. Should you have questions, refer to our existing codebases, or contact us on [slack](https://ark.io/slack).*
+- **Don't** send pull requests that improve code readability to your liking. _Follow the standards that are specified in the project. Should you have questions, refer to our existing codebases, or contact us on [slack](https://ark.io/slack)._
 
 - **Do** send pull requests that improve stability.
 
@@ -56,6 +56,6 @@ When your pull request gets merged the issue will be automatically closed, and a
 
 ## Things we DO NOT accept as additions to any applications or packages
 
-The Ark Team distances itself from anything that is related to payouts by delegates or voter calculations.
+The ARK Team distances itself from anything that is related to payouts by delegates or voter calculations.
 
 If the feature you would like to add contains anything that adds functionality to calculate or process payouts to voters in this way, consider creating an extension using plugins or our SDKs to implement it yourself.

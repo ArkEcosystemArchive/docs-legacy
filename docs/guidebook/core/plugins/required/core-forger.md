@@ -5,7 +5,7 @@ title: "Forger"
 # Forger
 
 ::: tip
-You can find the source code of this package at [packages/core-forger](https://github.com/ArkEcosystem/core/tree/develop/packages/core-forger).
+You can find the source code of this package at [packages/core-forger](https://github.com/ARKEcosystem/core/tree/develop/packages/core-forger).
 :::
 
 ## Installation
@@ -14,12 +14,13 @@ You can find the source code of this package at [packages/core-forger](https://g
 yarn add @arkecosystem/core-forger
 ```
 
-## Alias 
+## Alias
+
 `forger`
 
-## Summary 
+## Summary
 
-`core-forger` offers a top-level wrapper around the forging process. While not directly responsible for the block creation logic (that can be found in the Delegate model), `core-forger` coordinates the environment in which forging occurs and updates other Ark Core packages on its own forging status.
+`core-forger` offers a top-level wrapper around the forging process. While not directly responsible for the block creation logic (that can be found in the Delegate model), `core-forger` coordinates the environment in which forging occurs and updates other ARK Core packages on its own forging status.
 
 ## Usage
 
@@ -29,17 +30,17 @@ The `core-forger` package is enabled by default in full nodes and forging nodes,
 yarn full:mainnet
 ```
 
-Swap out the node type and network as necessary by using the scripts in `core`'s [package.json](https://github.com/ArkEcosystem/core/blob/develop/packages/core/package.json) file.
+Swap out the node type and network as necessary by using the scripts in `core`'s [package.json](https://github.com/ARKEcosystem/core/blob/develop/packages/core/package.json) file.
 
 ## Forging and the Network
 
-`core-forger` needs to have a host to connect to. As the forger holds no information about the blockchain state, it must make REST calls to an Ark Core node's P2P API to determine when to forge. 
+`core-forger` needs to have a host to connect to. As the forger holds no information about the blockchain state, it must make REST calls to an ARK Core node's P2P API to determine when to forge.
 
-The `core-forger` package generalizes its peer connection in the [client](https://github.com/ArkEcosystem/core/blob/develop/packages/core-forger/src/client.ts) class, which handles communication between the forging process and the rest of the node. The client establishes peers based on the `hosts` config.
+The `core-forger` package generalizes its peer connection in the [client](https://github.com/ARKEcosystem/core/blob/develop/packages/core-forger/src/client.ts) class, which handles communication between the forging process and the rest of the node. The client establishes peers based on the `hosts` config.
 
 By default, your `hosts` config includes a link to the default P2P API port. This assumes that you are running a full node, or a node with both relay and forging capabilities.
 
-If you are running a forging node without relay capacities, you will not have an internal P2P API available to you. In this case, you must connect to an Ark Core node with a P2P interface. 
+If you are running a forging node without relay capacities, you will not have an internal P2P API available to you. In this case, you must connect to an ARK Core node with a P2P interface.
 
 ## Behind the Scenes
 
@@ -85,33 +86,35 @@ public async __forgeNewBlock(delegate: models.Delegate, round, networkState: Net
 }
 ```
 
-The `__getTransactionsForForging` method fetches transactions from the `transactions/forging` endpoint of the P2P API. This endpoint polls the Blockchain API, which returns a list of forging transactions from the Transaction Pool. 
+The `__getTransactionsForForging` method fetches transactions from the `transactions/forging` endpoint of the P2P API. This endpoint polls the Blockchain API, which returns a list of forging transactions from the Transaction Pool.
 
-This transaction list is returned to `__forgeNewBlock`, which combines the transaction data with information from the current round to create a new block using the `delegate.forge` method. 
+This transaction list is returned to `__forgeNewBlock`, which combines the transaction data with information from the current round to create a new block using the `delegate.forge` method.
 
 From there, the newly forged block is converted to a JSON representation and propagated throughout the network via the client's `broadcast` method. This method sends a POST connection to the P2P API's `/blocks` endpoint, which queues the new block and broadcasts it to peers for validation:
 
 ```ts
 export const store = {
-    /**
-     * @param  {Hapi.Request} request
-     * @param  {Hapi.Toolkit} h
-     * @return {Hapi.Response}
-     */
-    handler: (request, h) => {
-        request.payload.block.ip = request.info.remoteAddress;
+  /**
+   * @param  {Hapi.Request} request
+   * @param  {Hapi.Toolkit} h
+   * @return {Hapi.Response}
+   */
+  handler: (request, h) => {
+    request.payload.block.ip = request.info.remoteAddress;
 
-        app.resolvePlugin<Blockchain.IBlockchain>("blockchain").handleIncomingBlock(request.payload.block);
+    app
+      .resolvePlugin<Blockchain.IBlockchain>("blockchain")
+      .handleIncomingBlock(request.payload.block);
 
-        return h.response(null).code(204);
-    },
-    options: {
-        plugins: {
-            "hapi-ajv": {
-                payloadSchema: schema.postBlock,
-            },
-        },
-    },
+    return h.response(null).code(204);
+  },
+  options: {
+    plugins: {
+      "hapi-ajv": {
+        payloadSchema: schema.postBlock
+      }
+    }
+  }
 };
 ```
 
@@ -119,6 +122,6 @@ export const store = {
 
 ```ts
 export const defaults = {
-    hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`],
+  hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`]
 };
 ```

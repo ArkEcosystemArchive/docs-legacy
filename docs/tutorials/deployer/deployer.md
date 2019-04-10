@@ -14,10 +14,10 @@ user@user:~$ ssh user@myserver
 Last login: Thu Jan 17 13:18:41 2019 from 94.215.141.65
 ```
 
-Download Ark Deployer. Git should be installed as it is bundled with Ubuntu and other Linux based distributions.
+Download ARK Deployer. Git should be installed as it is bundled with Ubuntu and other Linux based distributions.
 
 ```bash
-$ git clone https://github.com/ArkEcosystem/ark-deployer.git \
+$ git clone https://github.com/ARKEcosystem/ark-deployer.git \
   && cd ark-deployer
 
 Cloning into 'ark-deployer'...
@@ -29,7 +29,7 @@ Receiving objects: 100% (694/694), 116.61 KiB | 612.00 KiB/s, done.
 Resolving deltas: 100% (447/447), done.
 ```
 
-`NodeJS` and `NPM` are required for most of the products produced by Ark. `nvm` is especially useful for managing different `NodeJS` versions on the same machine.
+`NodeJS` and `NPM` are required for most of the products produced by ARK. `nvm` is especially useful for managing different `NodeJS` versions on the same machine.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
@@ -61,7 +61,7 @@ $ ./bridgechain.sh install-node \
 ...
 ```
 
-There are many more options available when installing the node, which can be found [here](https://github.com/ArkEcosystem/ark-deployer#optional-parameters). You can also use a JSON config file, which you can learn about [here](https://github.com/ArkEcosystem/ark-deployer#json-config).
+There are many more options available when installing the node, which can be found [here](https://github.com/ARKEcosystem/ark-deployer#optional-parameters). You can also use a JSON config file, which you can learn about [here](https://github.com/ARKEcosystem/ark-deployer#json-config).
 
 ::: warning
 
@@ -85,7 +85,7 @@ Use this initial passphrase only during the setup or testing phase. Move all fun
 
 ## Start the BridgeChain
 
-*Note: --name is important as it relates to the config files for your chain*
+_Note: --name is important as it relates to the config files for your chain_
 
 ```bash
 $ ./bridgechain.sh start-node --name MyTest
@@ -110,7 +110,7 @@ First, install a node using the official [core-commander](/exchanges/relay.html)
 
 in `core-commander/ecosystem.config.js` we can see what parameters are passed to the startup command when running the `relay`, `forger` or `explorer`.
 
-The `--config` flag is of particular interest to us, as it passed the config files we wish to use. You can find real-world configurations in the [core repository](https://github.com/ArkEcosystem/core/tree/master/packages/core/bin/config). Each of the directories contains a full set of configuration files needed to run a node.
+The `--config` flag is of particular interest to us, as it passed the config files we wish to use. You can find real-world configurations in the [core repository](https://github.com/ARKEcosystem/core/tree/master/packages/core/bin/config). Each of the directories contains a full set of configuration files needed to run a node.
 
 Edit/copy the `peers.json` and add the IP and port of your first node.
 
@@ -126,10 +126,10 @@ Edit/copy the `peers.json` and add the IP and port of your first node.
     {
       "ip": "my.intial.node.ip",
       "port": 4001
-    },
-    ],
+    }
+  ],
   "sources": [
-    "https://raw.githubusercontent.com/ArkEcosystem/peers/master/mainnet.json"
+    "https://raw.githubusercontent.com/ARKEcosystem/peers/master/mainnet.json"
   ]
 }
 ```

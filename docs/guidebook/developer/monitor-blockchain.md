@@ -1,6 +1,6 @@
 # How to Monitor the Blockchain
 
-In this recipe, we will build an Ark Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your Ark Core node by writing plugins to react to network events as they occur.
+In this recipe, we will build an ARK Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your ARK Core node by writing plugins to react to network events as they occur.
 
 ## Define the problem
 
@@ -9,13 +9,13 @@ Generally speaking, there are two primary contexts in which you might want to mo
 1. From a full node.
 2. From an external application.
 
-Monitoring to the blockchain on a node is useful in combination with a local wallet to trigger actions as soon as possible after an event occurs.  External applications might want to listen to the blockchain to synchronize their database with the network's current state.
+Monitoring to the blockchain on a node is useful in combination with a local wallet to trigger actions as soon as possible after an event occurs. External applications might want to listen to the blockchain to synchronize their database with the network's current state.
 
-Within Ark Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
+Within ARK Core (that is, on a particular node), monitoring can be done in a custom plugin. In this approach, the recommended strategy involves subscribing to events created by the `core-event-emitter` module.
 
-By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, Ark Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
+By contrast, monitoring your blockchain from an external application is best done by subscribing to a webhook. Under this model, ARK Core nodes `POST` a payload to your application with relevant information whenever a subscribed event is triggered.
 
-This recipe will cover the first approach — monitoring with a custom plugin installed in Ark Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
+This recipe will cover the first approach — monitoring with a custom plugin installed in ARK Core. Implementing webhooks can differ substantially depending on the languages and frameworks you use. A detailed webhook recipe is in the works with examples across SDKs. For now, if you're looking to get started with webhooks in your application, the [Webhooks](/guidebook/core/webhooks.html) chapter of the Guidebook is an excellent place to start.
 
 This example assumes you have a working testnet running, and we'll need to create a custom plugin. Make sure you have a correctly set up development environment.
 
@@ -27,7 +27,7 @@ The simplest solution to this problem is: when a delegate forges, we should do s
 
 ```js
 if (ourDelegate.Forges()) {
-    doSomething()
+  doSomething();
 }
 ```
 
@@ -35,7 +35,7 @@ For our "something" in this example, we'll be outputting text to the console. So
 
 ```js
 if (ourDelegate.Forges()) {
-    console.log('Our delegate forged')
+  console.log("Our delegate forged");
 }
 ```
 
@@ -45,7 +45,7 @@ We know that we want to know as soon as our delegates forges. One potential appr
 
 ```js
 if (delegateWhoForgedBlock == delegateWeAreMonitoring) {
-    console.log('Our delegate forged!')
+  console.log("Our delegate forged!");
 }
 ```
 
@@ -95,7 +95,7 @@ If we can assume that the `block.applied` event gives us a copy of the block tha
 
 ```js
 if (block.forger === delegateWeAreMonitoring) {
-    console.log('Our delegate forged!')
+  console.log("Our delegate forged!");
 }
 ```
 
@@ -103,12 +103,13 @@ Looking at the data model for a [block](/guidebook/core/data-models.html#block),
 
 ```js
 // the public key from /api/delegates JSON response
-const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
+const delegateKey =
+  "02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751";
 // the public key of the block generator
-const generatorKey = block.generatorPublicKey
+const generatorKey = block.generatorPublicKey;
 
 if (delegateKey === generatorKey) {
-    console.log('Our delegate forged!')
+  console.log("Our delegate forged!");
 }
 ```
 
@@ -120,7 +121,7 @@ The first thing we will do is scaffold out a custom plugin called `core-delegate
 
 ```bash
 cd plugins/
-git submodule add -f https://github.com/ArkEcosystem/core-plugin-skeleton
+git submodule add -f https://github.com/ARKEcosystem/core-plugin-skeleton
 ```
 
 Once the submodule is added, rename the `core-plugin-skeleton` directory to `core-delegate-monitor`. Make sure to rename your plugin to `@arkecosystem/core-delegate-monitor` in your plugin's new `package.json`, and to add the necessary configuration to your `plugins.js` file. It is also convenient to alter the remote URL of the repository; so you can manage your plugin as a separate repository.
@@ -130,11 +131,12 @@ Next, let us get our solution into code. We will create a file in our plugin's `
 ```js
 // lib/delegate-monitor.js
 
-const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
-const generatorKey = block.generatorPublicKey
+const delegateKey =
+  "02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751";
+const generatorKey = block.generatorPublicKey;
 
 if (delegateKey === generatorKey) {
-    console.log('Our delegate forged!')
+  console.log("Our delegate forged!");
 }
 ```
 
@@ -143,45 +145,47 @@ Now we need to figure out where to get our block object from to create our gener
 In our case, we need to utilize the `addListener` method, also available by calling the `on` alias. To do so, wrap our `if` statement into a callback function that we can pass to our event emitter:
 
 ```js
-function listenToDelegate (block) {
-    const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
-    const generatorKey = block.generatorPublicKey
+function listenToDelegate(block) {
+  const delegateKey =
+    "02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751";
+  const generatorKey = block.generatorPublicKey;
 
-    if (delegateKey === generatorKey) {
-        console.log('Our delegate forged!')
-    }
+  if (delegateKey === generatorKey) {
+    console.log("Our delegate forged!");
+  }
 }
 ```
 
 Now we use `event-emitter` as a listener object. We will do so by loading our container, then resolving our plugin out of it:
 
 ```js
-const container = require('@arkecosystem/core-container')
-const emitter = container.resolvePlugin('event-emitter')
+const container = require("@arkecosystem/core-container");
+const emitter = container.resolvePlugin("event-emitter");
 ```
 
 Now, because we want to attach our listener when our node boots up and detach our listener when our node shuts down, we want to export functions that we can use in our plugin's `register` and `deregister` hooks. Let's add two functions to our `module.exports`:
 
 ```js
-const container = require('@arkecosystem/core-container')
-const emitter = container.resolvePlugin('event-emitter')
+const container = require("@arkecosystem/core-container");
+const emitter = container.resolvePlugin("event-emitter");
 
 module.exports = {
-    startMonitoring () {
-        emitter.on('block.applied', monitorDelegate)
-    },
-    stopMonitoring () {
-        emitter.off('block.applied', monitorDelegate)
-    }
-}
+  startMonitoring() {
+    emitter.on("block.applied", monitorDelegate);
+  },
+  stopMonitoring() {
+    emitter.off("block.applied", monitorDelegate);
+  }
+};
 
-function monitorDelegate (block) {
-    const delegateKey = '02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751'
-    const generatorKey = block.generatorPublicKey
+function monitorDelegate(block) {
+  const delegateKey =
+    "02c1151ab35e371a333e73f72e9971cfc16782e421186cfff9325d3c3b9cf91751";
+  const generatorKey = block.generatorPublicKey;
 
-    if (delegateKey === generatorKey) {
-        console.log('Our delegate forged!')
-    }
+  if (delegateKey === generatorKey) {
+    console.log("Our delegate forged!");
+  }
 }
 ```
 
@@ -190,24 +194,24 @@ function monitorDelegate (block) {
 With our functions in place, the only steps remaining involve making some changes to our plugin's `index.js` file:
 
 ```js
-'use strict'
-const { startMonitoring, stopMonitoring } = require('./delegate-monitor')
+"use strict";
+const { startMonitoring, stopMonitoring } = require("./delegate-monitor");
 
 /**
-* The struct used by the plugin container.
-* @type {Object}
-*/
+ * The struct used by the plugin container.
+ * @type {Object}
+ */
 exports.plugin = {
-    pkg: require('../package.json'),
-    defaults: require('./defaults'),
-    alias: 'core-delegate-monitor',
-    async register (container, options) {
-      startMonitoring()
-    },
-    async deregister (container, options) {
-      stopMonitoring()
-    }
-}
+  pkg: require("../package.json"),
+  defaults: require("./defaults"),
+  alias: "core-delegate-monitor",
+  async register(container, options) {
+    startMonitoring();
+  },
+  async deregister(container, options) {
+    stopMonitoring();
+  }
+};
 ```
 
 The next time your node reboots, your monitor should be working.

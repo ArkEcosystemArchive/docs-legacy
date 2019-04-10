@@ -5,7 +5,7 @@ title: "Error Tracker - Airbrake"
 # Error Tracker - Airbrake
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-airbrake](https://github.com/ArkEcosystem/core/tree/develop/packages/core-error-tracker-airbrake).
+You can find the source code of this package at [packages/core-error-tracker-airbrake](https://github.com/ARKEcosystem/core/tree/develop/packages/core-error-tracker-airbrake).
 :::
 
 ## Installation

@@ -10,7 +10,7 @@ The major change in `v2.1` is a full migration to TypeScript, a typed flavor of 
 
 ## Debranding
 
-BridgeChains and private chains reusing the Ark codebase previously had to debrand the codebase themselves, meaning they had to remove mentions of `Ark` from their configuration files and other hardcoded locations. `v2.1` is blockchain-brand agnostic. In general, all variables are named the same, except that the ARK has been removed from the name.
+BridgeChains and private chains reusing the ARK codebase previously had to debrand the codebase themselves, meaning they had to remove mentions of `ARK` from their configuration files and other hardcoded locations. `v2.1` is blockchain-brand agnostic. In general, all variables are named the same, except that the ARK has been removed from the name.
 
 For example:
 

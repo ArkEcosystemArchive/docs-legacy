@@ -179,7 +179,7 @@ The `error` message causing the failure.
 ### forger.started
 
 ::: warning
-This event is currently [disabled](https://github.com/ArkEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-forger/lib/manager.js#L197-L203) due to a bug in the implementation.
+This event is currently [disabled](https://github.com/ARKEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-forger/lib/manager.js#L197-L203) due to a bug in the implementation.
 :::
 
 #### event

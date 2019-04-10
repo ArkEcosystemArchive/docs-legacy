@@ -28,48 +28,48 @@ title: Adafruit ESP8266 Overview and Setup
 | • `transactions(const char* const blockId)` |**[x]**|
 | • `search(const std::map<std::string, std::string>& bodyParameters, int limit, int page)` |**[x]**|
 
-| **Delegates:** |**[x]**|
-| :----- | :---: |
-| • `get(const char *const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `blocks(const char *const identifier, int limit, int page)` |**[x]**|
-| • `voters(const char *const identifier, int limit, int page)` |**[x]**|
+| **Delegates:**                                                | **[x]** |
+| :------------------------------------------------------------ | :-----: |
+| • `get(const char *const identifier)`                         | **[x]** |
+| • `all(int limit, int page)`                                  | **[x]** |
+| • `blocks(const char *const identifier, int limit, int page)` | **[x]** |
+| • `voters(const char *const identifier, int limit, int page)` | **[x]** |
 
-| **Node:** |**[x]**|
-| :----- | :---: |
-| • `configuration()` |**[x]**|
-| • `status()` |**[x]**|
-| • `syncing()` |**[x]**|
+| **Node:**           | **[x]** |
+| :------------------ | :-----: |
+| • `configuration()` | **[x]** |
+| • `status()`        | **[x]** |
+| • `syncing()`       | **[x]** |
 
-| **Peers:** |**[x]**|
-| :----- | :---: |
-| • `get(const char* const ip)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
+| **Peers:**                    | **[x]** |
+| :---------------------------- | :-----: |
+| • `get(const char* const ip)` | **[x]** |
+| • `all(int limit, int page)`  | **[x]** |
 
-| **Transactions** |**[x]**|
-| :----- | :---: |
-| • `getUnconfirmed(const char* const identifier)` |**[x]**|
-| • `get(const char* const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `allUnconfirmed(int limit, int page)` |**[x]**|
-| • `types()` |**[x]**|
-| • `search(const std::map<std::string, std::string>& body_parameters, int limit, int page)` |**[x]**|
+| **Transactions**                                                                           | **[x]** |
+| :----------------------------------------------------------------------------------------- | :-----: |
+| • `getUnconfirmed(const char* const identifier)`                                           | **[x]** |
+| • `get(const char* const identifier)`                                                      | **[x]** |
+| • `all(int limit, int page)`                                                               | **[x]** |
+| • `allUnconfirmed(int limit, int page)`                                                    | **[x]** |
+| • `types()`                                                                                | **[x]** |
+| • `search(const std::map<std::string, std::string>& body_parameters, int limit, int page)` | **[x]** |
 
-| **Votes** |**[x]**|
-| :----- | :---: |
-| • `get(const char* const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
+| **Votes**                             | **[x]** |
+| :------------------------------------ | :-----: |
+| • `get(const char* const identifier)` | **[x]** |
+| • `all(int limit, int page)`          | **[x]** |
 
-| **Wallets** |**[x]**|
-| :----- | :---: |
-| • `get(const char *const identifier)` |**[x]**|
-| • `all(int limit, int page)` |**[x]**|
-| • `top(int limit, int page)` |**[x]**|
-| • `transactions(const char *const identifier, int limit, int page)` |**[x]**|
-| • `transactionsReceived(const char *const identifier, int limit, int page)` |**[x]**|
-| • `transactionsSent(const char *const identifier, int limit, int page)` |**[x]**|
-| • `votes(const char *const identifier, int limit, int page)` |**[x]**|
-| • `search(const std::map<std::string, std::string> &bodyParameters, int limit, int page)` |**[x]**|
+| **Wallets**                                                                               | **[x]** |
+| :---------------------------------------------------------------------------------------- | :-----: |
+| • `get(const char *const identifier)`                                                     | **[x]** |
+| • `all(int limit, int page)`                                                              | **[x]** |
+| • `top(int limit, int page)`                                                              | **[x]** |
+| • `transactions(const char *const identifier, int limit, int page)`                       | **[x]** |
+| • `transactionsReceived(const char *const identifier, int limit, int page)`               | **[x]** |
+| • `transactionsSent(const char *const identifier, int limit, int page)`                   | **[x]** |
+| • `votes(const char *const identifier, int limit, int page)`                              | **[x]** |
+| • `search(const std::map<std::string, std::string> &bodyParameters, int limit, int page)` | **[x]** |
 
 ---
 
@@ -81,17 +81,18 @@ title: Adafruit ESP8266 Overview and Setup
 | • `get(int type)` |**[x]**|
 | • `set(int type, uint64_t fee)` |**[x]**|
 
-| **Network:** |**[x]**|
-| :----- | :---: |
-| • `get()` |**[x]**|
-| • `set(const AbstractNetwork& network)` |**[x]**|
+| **Network:**                            | **[x]** |
+| :-------------------------------------- | :-----: |
+| • `get()`                               | **[x]** |
+| • `set(const AbstractNetwork& network)` | **[x]** |
 
 **Enums:**
 | **Fees:** |**[x]**|
 | :----- | :---: |
 
-| **Types:** |**[x]**|
-| :----- | :---: |
+| **Types:** | **[x]** |
+| :--------- | :-----: |
+
 
 **Identities:**
 | **Address:** |**[x]**|
@@ -107,41 +108,41 @@ title: Adafruit ESP8266 Overview and Setup
 | • `base58encode(const uint8_t *source)` |**[x]**|
 | • `bytesFromBase58Check(const char *const address)` |**[x]**|
 
-| **Mnemonic:** |**[x]**|
-| :----- | :---: |
-| • `generate(size_t num_words = 12u, Language language)` |**[x]**|
+| **Mnemonic:**                                           | **[x]** |
+| :------------------------------------------------------ | :-----: |
+| • `generate(size_t num_words = 12u, Language language)` | **[x]** |
 
-| **PrivateKey:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase)` |**[x]**|
-| • `fromHex(const char *const privateKey)` |**[x]**|
-| • `fromWIFString(const char *wifStr, uint8_t wifByte)` |**[x]**|
-| • `validate(PrivateKey privateKey)` |**[x]**|
-| • `validate(const char *privateKeyStr)` |**[x]**|
-| • `validate(const uint8_t *privateKeyBytes)` |**[x]**|
+| **PrivateKey:**                                        | **[x]** |
+| :----------------------------------------------------- | :-----: |
+| • `toBytes()`                                          | **[x]** |
+| • `toString()`                                         | **[x]** |
+| • `fromPassphrase(const char *const passphrase)`       | **[x]** |
+| • `fromHex(const char *const privateKey)`              | **[x]** |
+| • `fromWIFString(const char *wifStr, uint8_t wifByte)` | **[x]** |
+| • `validate(PrivateKey privateKey)`                    | **[x]** |
+| • `validate(const char *privateKeyStr)`                | **[x]** |
+| • `validate(const uint8_t *privateKeyBytes)`           | **[x]** |
 
-| **PublicKey:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `isValid()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase)` |**[x]**|
-| • `fromHex(const char *const publicKey)` |**[x]**|
-| • `fromPrivateKey(PrivateKey privateKey)` |**[x]**|
-| • `validate(PublicKey publicKey)` |**[x]**|
-| • `validate(const char *publicKeyStr)` |**[x]**|
-| • `validate(const uint8_t *publicKeyBytes)` |**[x]**|
+| **PublicKey:**                                   | **[x]** |
+| :----------------------------------------------- | :-----: |
+| • `toBytes()`                                    | **[x]** |
+| • `toString()`                                   | **[x]** |
+| • `isValid()`                                    | **[x]** |
+| • `fromPassphrase(const char *const passphrase)` | **[x]** |
+| • `fromHex(const char *const publicKey)`         | **[x]** |
+| • `fromPrivateKey(PrivateKey privateKey)`        | **[x]** |
+| • `validate(PublicKey publicKey)`                | **[x]** |
+| • `validate(const char *publicKeyStr)`           | **[x]** |
+| • `validate(const uint8_t *publicKeyBytes)`      | **[x]** |
 
-| **WIF:** |**[x]**|
-| :----- | :---: |
-| • `toBytes()` |**[x]**|
-| • `toString()` |**[x]**|
-| • `fromPassphrase(const char *const passphrase, uint8_t wifByte)` |**[x]**|
+| **WIF:**                                                          | **[x]** |
+| :---------------------------------------------------------------- | :-----: |
+| • `toBytes()`                                                     | **[x]** |
+| • `toString()`                                                    | **[x]** |
+| • `fromPassphrase(const char *const passphrase, uint8_t wifByte)` | **[x]** |
 
 **Transactions:**
-|  **builder:** |**[x]**|
+| **builder:** |**[x]**|
 | :----- | :---: |
 | • `buildTransfer(std::string recipientId, uint64_t amount, std::string vendorField, std::string passphrase std::string secondPassphrase = "")` |**[x]**|
 | • `buildSecondSignatureRegistration(std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
@@ -149,22 +150,22 @@ title: Adafruit ESP8266 Overview and Setup
 | • `buildVote(std::vector<std::string> votes, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
 | • `buildMultiSignatureRegistration(uint8_t min, uint8_t lifetime, std::vector<std::string> keysgroup, std::string passphrase, std::string secondPassphrase = "")` |**[x]**|
 
-| **Deserializer:** |**[x]**|
-| :----- | :---: |
-| • `deserialize()` |**[x]**|
+| **Deserializer:** | **[x]** |
+| :---------------- | :-----: |
+| • `deserialize()` | **[x]** |
 
-| **Serializer:** |**[x]**|
-| :----- | :---: |
-| • `serialize()` |**[x]**|
+| **Serializer:** | **[x]** |
+| :-------------- | :-----: |
+| • `serialize()` | **[x]** |
 
-| **Transaction:** |**[*]**|
-| :----- | :---: |
-| • `getId()` |**[x]**|
-| • `sign(const char* passphrase)` |**[x]**|
-| • `secondSign(const char* passphrase)` |**[x]**|
-| • `verify()` |**[ ]**|
-| • `secondVerify(const char* secondPublicKey)` |**[ ]**|
-| • `toBytes(bool skipSignature = true, bool skipSecondSignature = true)` |**[x]**|
+| **Transaction:**                                                        | **[*]** |
+| :---------------------------------------------------------------------- | :-----: |
+| • `getId()`                                                             | **[x]** |
+| • `sign(const char* passphrase)`                                        | **[x]** |
+| • `secondSign(const char* passphrase)`                                  | **[x]** |
+| • `verify()`                                                            | **[ ]** |
+| • `secondVerify(const char* secondPublicKey)`                           | **[ ]** |
+| • `toBytes(bool skipSignature = true, bool skipSecondSignature = true)` | **[x]** |
 
 **Utils:**
 | **Message:** |**[_unstable_]**|
@@ -175,10 +176,10 @@ title: Adafruit ESP8266 Overview and Setup
 | • `toJson()` |**[x]**|
 | • `toString()` |**[x]**|
 
-| **slot:** |**[_unstable_]**|
-| :----- | :---: |
-| • `time(Crypto::Networks::AbstractNetwork network)` |**[ ]**|
-| • `epoch(Crypto::Networks::AbstractNetwork network)` |**[ ]**|
+| **slot:**                                            | **[_unstable_]** |
+| :--------------------------------------------------- | :--------------: |
+| • `time(Crypto::Networks::AbstractNetwork network)`  |     **[ ]**      |
+| • `epoch(Crypto::Networks::AbstractNetwork network)` |     **[ ]**      |
 
 </p>
 </details>
@@ -211,9 +212,9 @@ title: Adafruit ESP8266 Overview and Setup
 - Auto-reset support for getting into bootload mode before firmware upload
 - 9 x GPIO pins - can also be used as I2C and SPI
 - 1 x analog inputs 1.0V max
-- Built in 100mA LiPoly charger with charging status indicator LED,  
+- Built in 100mA LiPoly charger with charging status indicator LED,
   can also cut a trace to disable the charger
-- Pin #0 red LED for general purpose blinking.  
+- Pin #0 red LED for general purpose blinking.
   Pin #2 blue LED for bootloading debug & general purpose blinking
 - Power/enable pin
 - 4 mounting holes
@@ -222,7 +223,6 @@ title: Adafruit ESP8266 Overview and Setup
 **Pinout:**
 ![ESP8266 Lower](../assets/esp8266-adafruit/esp8266-adafruit-lower.jpg)
 ![ESP8266 Pinout](../assets/esp8266-adafruit/esp8266-adafruit-pinout.png)
-
 
 **External Resources:**
 
@@ -258,12 +258,13 @@ title: Adafruit ESP8266 Overview and Setup
 **Add ESP8266 to the Arduino IDE:**
 
 **Additional Boards Manager URL's:**
-To add ESP8266 to the Arduino IDE, use _**'Additional Boards Manager URL's'**_ in 'Preferences';  
+To add ESP8266 to the Arduino IDE, use _**'Additional Boards Manager URL's'**_ in 'Preferences';
 this is a line separated list of hardware configuration JSON configs.
 
 > **Preferences** >> **Additional Boards Manager URL's**
 
-Add this line to the URL's list:  
+Add this line to the URL's list:
+
 > `http://arduino.esp8266.com/stable/package_esp8266com_index.json`
 
 ![Arduino Board URLs](../assets/esp32-adafruit/arduino-ide-esp32-board-urls.png)
@@ -273,6 +274,7 @@ Add this line to the URL's list:
 **Download the ESP8266 packages via Board Manager:**
 
 Open the Boards Manager from the _**Tools**_ dropdown menu:
+
 > **Tools** >> **Board** >> **Boards Manager**
 
 Search for and install the '**ESP8266**' package in _**Boards Manager**_.
@@ -285,6 +287,7 @@ Search for and install the '**ESP8266**' package in _**Boards Manager**_.
 **Select your Board:**
 
 From the _**Tools**_ dropdown menu:
+
 > **Tools** >> **Board**
 
 Select the Adafruit ESP32 Feather board
@@ -297,13 +300,14 @@ Select the Adafruit ESP32 Feather board
 
 For your system to talk to the ESP8266 via USB, you will also need to install the _**SiLabs CP2104 Driver**_.
 
-1) You can download the zip file for your operating system from the following website:
-    - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
-    > _e.g._
-    > -  _Linux_3.x.x_4.x.x_VCP_Driver_Source.zip_
-    > - _Mac_OSX_VCP_Driver.zip_
-    > - _CP210x_VCP_Windows.zip_ 
-2) Unzip the downloaded file and run the installation package inside the unzipped folder.
+1. You can download the zip file for your operating system from the following website:
+   - https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+     > _e.g._
+     >
+     > - _Linux_3.x.x_4.x.x_VCP_Driver_Source.zip_
+     > - _Mac_OSX_VCP_Driver.zip_
+     > - _CP210x_VCP_Windows.zip_
+2. Unzip the downloaded file and run the installation package inside the unzipped folder.
 
 <details>
 <summary>
@@ -339,17 +343,17 @@ For your system to talk to the ESP8266 via USB, you will also need to install th
 
 ```cpp
 /**
- * This file is part of Ark Cpp Client.
+ * This file is part of ARK Cpp Client.
  *
- * (c) Ark Ecosystem <info@ark.io>
+ * (c) ARK Ecosystem <info@ark.io>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  **/
- 
+
 /**d
  * This sketch covers how to use the Cpp-Client API.
- * It allows your ESP8266 to send requests to an Ark Node
+ * It allows your ESP8266 to send requests to an ARK Node
  */
 
  /**
@@ -361,7 +365,7 @@ For your system to talk to the ESP8266 via USB, you will also need to install th
 
 /**
  * This is where you include the 'arkClient.h' header.
- * This allows your project to use Ark Cpp-Client.
+ * This allows your project to use ARK Cpp-Client.
  */
 #include <arkClient.h>
 /**/
@@ -384,12 +388,12 @@ const char* password = "yourWiFiPassword";
 
 /****************************************/
 
-/** 
- *  This is the IP address of an Ark Node
+/**
+ *  This is the IP address of an ARK Node
  *  Specifically, this is a Devnet V2 Node IP
- *  You can find more peers here: https://github.com/ArkEcosystem/peers
- *  
- *  The Public API port for the V2 Ark network is '4003'
+ *  You can find more peers here: https://github.com/ARKEcosystem/peers
+ *
+ *  The Public API port for the V2 ARK network is '4003'
  */
 const char* peer = "167.114.29.55";
 int port = 4003;
@@ -401,7 +405,7 @@ int port = 4003;
  * This is how you define a connection while speficying the API class as a 'template argument'
  * You instantiate a connection by passing a IP address as a 'c_string', and the port as an 'int'.
  */
-Ark::Client::Connection<Ark::Client::Api> connection(peer, port);
+ARK::Client::Connection<ARK::Client::Api> connection(peer, port);
 /**/
 
 /****************************************/
@@ -409,7 +413,7 @@ Ark::Client::Connection<Ark::Client::Api> connection(peer, port);
 void checkAPI() {
   /**
    * This is how you can check the Version of the API
-   * In this example, it should return '2' as an 'int' for V2 of Arks' API. 
+   * In this example, it should return '2' as an 'int' for V2 of ARKs' API.
    */
   auto apiVersion = connection.api.version();
     Serial.print("\nAPI Version: ");
@@ -421,12 +425,12 @@ void checkAPI() {
   /**
    * Here you can call a list of 'All' 'Blocks' on the network.
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   *  
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/blocks?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this
-   * 
+   *
    * {
    *  "meta": {
    *    "count": 2,
@@ -497,7 +501,7 @@ void checkAPI() {
    *    }
    *  ]
    * }
-   * 
+   *
    */
   const auto blocksResponse = connection.api.blocks.all(2, 1);
     Serial.print("\nBlocks Response: ");
@@ -509,12 +513,12 @@ void checkAPI() {
   /**
    * The following method can be used to search for a speficit Delegate.
    * In this case, 'boldninja'.
-   * 
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/delegates/boldninja'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
-   * 
+   *
    * {
    *  "data": {
    *    "username": "boldninja",
@@ -556,12 +560,12 @@ void checkAPI() {
 
   /**
    * The following method can be used to get the Status of a Node.
-   * 
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/node/status'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
-   * 
+   *
    * {
    *  "data": {
    *    "synced": true,
@@ -579,11 +583,11 @@ void checkAPI() {
 
   /**
    * The following method can be used to get a list of 'All' 'Peers' on the network.
-   * 
+   *
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   * 
+   *
    * This is equivalant to calling 'http://167.114.29.49:4003/api/v2/peers?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -631,9 +635,9 @@ void checkAPI() {
 
   /**
    * The following method can be used to get a list of 'Transaction' 'Types'.
-   * 
+   *
    * This is equivalant to calling 'http://167.114.29.49:4003/api/v2/transactions/types'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -661,9 +665,9 @@ void checkAPI() {
   /**
    * This method can be used to get a list of 'Vote' Transactions.
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   * 
+   *
    * This is equivalant to calling 'http://167.114.29.49:4003/api/v2/votes?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -736,9 +740,9 @@ void checkAPI() {
   /**
    * This method can be used to get a list of 'Top' 'Wallets' (Wallets with the most ARK).
    * The '2' and '1' refer to the pagination (e.g. response limit and how many pages)
-   * 
+   *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/wallets/top?limit=2&page=1'
-   * 
+   *
    * The response should be a json-formatted object
    * The "pretty print" version would look something like this:
    *
@@ -810,7 +814,7 @@ void loop() {}; // We can leave this empty, as we don't want to repeat anything 
 </details>
 
 ::: tip
-You can also download the `ESP8266.ino` Client Sketch [here](https://github.com/ArkEcosystem/cpp-client/blob/master/examples/arduino/ESP8266/ESP8266.ino).
+You can also download the `ESP8266.ino` Client Sketch [here](https://github.com/ARKEcosystem/cpp-client/blob/master/examples/arduino/ESP8266/ESP8266.ino).
 :::
 
 ---
@@ -825,31 +829,31 @@ You can also download the `ESP8266.ino` Client Sketch [here](https://github.com/
 
 ```cpp
 /**
- * This file is part of Ark Cpp Crypto.
+ * This file is part of ARK Cpp Crypto.
  *
- * (c) Ark Ecosystem <info@ark.io>
+ * (c) ARK Ecosystem <info@ark.io>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  **/
- 
+
 /**
  * ESP8266 Cpp-Crypto Usage Sketch
  *
  * This sketch covers how to use the Cpp-Crypto library.
- * It allows your ESP8266 use Ark Ecosystem cryptographic protocols.
+ * It allows your ESP8266 use ARK Ecosystem cryptographic protocols.
  */
 
  /**
  * NOTE: At the time of this writing, the Cpp-Crypto library requires running the 'ARDUINO_IDE.sh' bash script located in the 'extras' folder.
  * This converts our library to be compatible with the Arduino IDE.
  */
- 
+
 /****************************************/
 
 /**
  * This is where you include the 'arkCrypto.h' header.
- * This allows your project to use Ark Cpp-Crypto.
+ * This allows your project to use ARK Cpp-Crypto.
  */
 #include <arkCrypto.h>
 /**/
@@ -859,23 +863,23 @@ You can also download the `ESP8266.ino` Client Sketch [here](https://github.com/
 void checkCrypto() {
   /**
    * This is how you can check the default 'Network' "Transaction 'Fees' by type.
-   * In this example, it should return a 'uint64_t' integer of '10000000' as the default 'Fee' for a 'Transaction' of 'Type' '0'. 
+   * In this example, it should return a 'uint64_t' integer of '10000000' as the default 'Fee' for a 'Transaction' of 'Type' '0'.
    */
-    Ark::Crypto::Configuration::Fee fee;
+    ARK::Crypto::Configuration::Fee fee;
     unsigned long typeZeroTransactionFee = fee.get(0);
     Serial.print("\n Type 0 default Transaction Fee: ");
     Serial.println(typeZeroTransactionFee); // The response is a 'uint64_t' integer.
-  
+
   /**/
 
   /********************/
 
   /**
-   * The following methods allows you to create an ARK address. 
+   * The following methods allows you to create an ARK address.
    * This is done by passing a 12-word 'Passphrase' and the 'Network' 'Version' "byte".
-   * The 'Version" "byte" is a BASE58 P2PKH byte. Ark Devnet is '0x1E'; Ark Mainnet is '0x17'. 
-   * 
-   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask", 
+   * The 'Version" "byte" is a BASE58 P2PKH byte. ARK Devnet is '0x1E'; ARK Mainnet is '0x17'.
+   *
+   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",
    * and the 'Devnet' 'Version' byte (0x1E); the ARK Address should be "DStZXkgpEjxbG355nQ26vnkp95p24U9tsV"
    */
   const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
@@ -890,10 +894,10 @@ void checkCrypto() {
   /********************/
 
   /**
-   * The following methods allows create a 'PrivateKey'. 
+   * The following methods allows create a 'PrivateKey'.
    * This is done by passing a 12-word 'Passphrase'.
-   * 
-   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask", 
+   *
+   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",
    * the 'PrivateKey" should be "950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021".
    * This is a 'SHA256' of your "Passphrase".
    */
@@ -906,10 +910,10 @@ void checkCrypto() {
   /********************/
 
   /**
-   * The following methods allows create a 'PublicKey'. 
+   * The following methods allows create a 'PublicKey'.
    * This is done by passing a 12-word 'Passphrase'.
-   * 
-   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask", 
+   *
+   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",
    * the 'PublicKey" should be "029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4".
    */
   const auto passphrase3 = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
@@ -921,13 +925,13 @@ void checkCrypto() {
   /********************/
 
   /**
-   * The following methods allows create a 'WIF'-style "PrivateKey". 
+   * The following methods allows create a 'WIF'-style "PrivateKey".
    * 'WIF' stands for "Wallet Import Format"
    * This is done by passing a 12-word 'Passphrase' and the 'Network' 'WIF' "byte".
-   * The 'WIF" "byte" is a BASE58 WIF byte. Ark Devnet is '0xaa'; Ark Mainnet is also '0xaa'. 
+   * The 'WIF" "byte" is a BASE58 WIF byte. ARK Devnet is '0xaa'; ARK Mainnet is also '0xaa'.
 
-   * 
-   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask", 
+   *
+   * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",
    * and the 'Devnet' 'WIF' byte (0xaa);
    * The 'WIF" should be "SEZuJZouNK8GLXNApjciH4QnSKiNr971exVcL2Y6XfrDF5o977zB".
    */
@@ -958,5 +962,5 @@ void loop() {}; // We can leave this empty, as we don't want to repeat anything 
 </details>
 
 ::: tip
-You can also download the `ESP8266.ino` Crypto Sketch [here](https://github.com/ArkEcosystem/cpp-crypto/blob/master/examples/arduino/ESP8266/ESP8266.ino).
+You can also download the `ESP8266.ino` Crypto Sketch [here](https://github.com/ARKEcosystem/cpp-crypto/blob/master/examples/arduino/ESP8266/ESP8266.ino).
 :::

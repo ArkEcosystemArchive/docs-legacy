@@ -1,14 +1,14 @@
 ---
-title: "How To Setup Your Ark Node"
+title: "How To Setup Your ARK Node"
 ---
 
-# How To Setup Your Ark Node
+# How To Setup Your ARK Node
 
 [[toc]]
 
 ## Introduction
 
-Here we will help you set up an Ark Relay node, which relays transactions and secures the Ark Network.
+Here we will help you set up an ARK Relay node, which relays transactions and secures the ARK Network.
 
 ## Bare-metal
 
@@ -32,7 +32,7 @@ The setup is not suitable as a Delegate Node, but can function as a Relay Node.
 
 #### Provision a Linux Server
 
-Running an Ark Core node is not like Bitcoin mining, and thus there are more options to choose from. AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few recommended choices.
+Running an ARK Core node is not like Bitcoin mining, and thus there are more options to choose from. AWS, Linode, Digital Ocean, Vultr, Microsoft Azure, and OVH are just a few recommended choices.
 
 Delegate Nodes have a higher minimum requirement on the hardware specifications. These nodes are the security of our network
 so their uptime is of most importance in making sure the network runs smoothly.
@@ -96,7 +96,7 @@ give you a temporary password.
 
 #### Create a user
 
-Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage Ark related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
+Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage ARK related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
 
 ```bash
 adduser username
@@ -137,36 +137,36 @@ By default, this is a `superuser`.
 usermod -a -G sudo username
 ```
 
-### Installing Ark Core
+### Installing ARK Core
 
-We're now ready to begin installing Ark. The initial install may take a while
+We're now ready to begin installing ARK. The initial install may take a while
 and at times appear not to be doing anything. Please have patience and let the process
 finish.
 
-#### Switch to the Ark user
+#### Switch to the ARK user
 
-While installing Ark Core, we should use the Ark user that we created above and go to the base directory. To switch to it, run:
+While installing ARK Core, we should use the ARK user that we created above and go to the base directory. To switch to it, run:
 
 ```bash
 sudo su - username
 cd ~
 ```
 
-#### Running Ark Core installation script
+#### Running ARK Core installation script
 
-Installing Ark Core is a straightforward process. We will use Ark installer script that will install all of the necessary dependencies, Ark Core onto your server and publish configuration files for it. To install essentials run this command:
+Installing ARK Core is a straightforward process. We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/ArkEcosystem/core/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ARKEcosystem/core/master/install.sh)
 ```
 
 You will be asked to input your current users password for sudo privileges. Write or paste it and press `enter` to start installation process.
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
-#### Selecting Ark Core network
+#### Selecting ARK Core network
 
-Once installation of dependencies and Ark Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
+Once installation of dependencies and ARK Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 `Mainnet` is public network, `Devnet` is development network for testing and `Testnet` is our private testing network.
 
@@ -177,7 +177,7 @@ Once installation of dependencies and Ark Core is finished you will need to sele
    testnet
 ```
 
-If you are tinkering and want to play with Ark for the first time, select `devnet` and request DARK coins in our [public Slack](https://ark.io/slack/).
+If you are tinkering and want to play with ARK for the first time, select `devnet` and request DARK coins in our [public Slack](https://ark.io/slack/).
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`
 
@@ -185,11 +185,11 @@ After you made your selection you will need to confirm by pressing `y` and confi
 ? Can you confirm? › (y/N)
 ```
 
-With that we have sucessfully installed Ark Core and published our configuration options.
+With that we have sucessfully installed ARK Core and published our configuration options.
 
-#### Configuring Ark Core database
+#### Configuring ARK Core database
 
-Last step of the Ark Core essential configuration is to configure database parameters. You will be presented with a prompt:
+Last step of the ARK Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
 ```bash
 Would you like to configure the database? [y/N]:
@@ -207,9 +207,9 @@ Enter the database name: ark
 
 This will create PostgreSQL role and database to be used for storing blockchain data. That's it, you are all set!
 
-#### Starting Ark Relay process
+#### Starting ARK Relay process
 
-To start Ark relay process and with it synchronization process with Ark blockchain we need to start relay process with our integrated CLI:
+To start ARK relay process and with it synchronization process with ARK blockchain we need to start relay process with our integrated CLI:
 
 ```bash
 ark relay:start
@@ -227,7 +227,7 @@ All CLI commands with description can be viewed at [CLI Commands](/guidebook/cor
 
 #### Checking to see if everything is working
 
-Now we want to see if the Ark Relay process has started the synchronization process you can do that by running one of these two commands
+Now we want to see if the ARK Relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
 ark relay:log
@@ -277,8 +277,8 @@ We recommend to limit the whitelist to IPs/Servers that you control or know are 
 Great! You have a working node, but now you should think about securing it.
 It is especially important if you plan on using this as your delegate/forging node.
 
-In our next section, we'll discuss making sure your Ark node is as secure as possible.
-As the Ark network grows, hacking attempts on delegate and relay nodes will become
+In our next section, we'll discuss making sure your ARK node is as secure as possible.
+As the ARK network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.
 

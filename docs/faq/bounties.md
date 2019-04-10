@@ -6,15 +6,15 @@ title: "Bounties"
 
 [[toc]]
 
-Thanks for your interest in contributing to the Ark Ecosystem! Please take a moment to review this document **before submitting a pull request**.
+Thanks for your interest in contributing to the ARK Ecosystem! Please take a moment to review this document **before submitting a pull request**.
 
 ## Introduction
 
-Ark has a bounty program for all accepted PR (Pull Requests) for this repository
+ARK has a bounty program for all accepted PR (Pull Requests) for this repository
 
 More information can be found at [https://blog.ark.io/ark-github-development-bounty-113806ae9ffe](https://blog.ark.io/ark-github-development-bounty-113806ae9ffe)
 
-Before pushing PR, please [jump in our slack #development](https://ark.io/slack) channel in order to discuss your contributions or to connect with other Ark developers.
+Before pushing PR, please [jump in our slack #development](https://ark.io/slack) channel in order to discuss your contributions or to connect with other ARK developers.
 
 ### Guidelines
 
@@ -30,7 +30,7 @@ Before pushing PR, please [jump in our slack #development](https://ark.io/slack)
 - General Bug Fixes
 - Implement new features
 - Improve documentation
-- create something new for Ark.
+- create something new for ARK.
 
 ## Pull requests
 
@@ -42,40 +42,40 @@ Please ensure that the tests are passing when submitting a pull request. If you'
 
 ## Eligible Repositories
 
-- [ark-js](https://github.com/ArkEcosystem/ark-js)
-- [ark-lite-wallet](https://github.com/ArkEcosystem/ark-lite-wallet)
-- [ark-node](https://github.com/ArkEcosystem/ark-node)
-- [ark-pay](https://github.com/ArkEcosystem/pay)
-- [ark-ts](https://github.com/ArkEcosystem/ark-ts)
-- [core](https://github.com/ArkEcosystem/core)
-- [core-commander](https://github.com/ArkEcosystem/core-commander)
-- [cpp-client](https://github.com/ArkEcosystem/cpp-client)
-- [cpp-crypto](https://github.com/ArkEcosystem/cpp-crypto)
-- [deployer](https://github.com/ArkEcosystem/deployer)
-- [desktop-wallet](https://github.com/ArkEcosystem/desktop-wallet)
-- [docs](https://github.com/ArkEcosystem/docs)
-- [dotnet-client](https://github.com/ArkEcosystem/dotnet-client)
-- [dotnet-crypto](https://github.com/ArkEcosystem/dotnet-crypto)
-- [elixir-client](https://github.com/ArkEcosystem/elixir-client)
-- [elixir-crypto](https://github.com/ArkEcosystem/elixir-crypto)
-- [explorer](https://github.com/ArkEcosystem/explorer)
-- [go-client](https://github.com/ArkEcosystem/go-client)
-- [go-crypto](https://github.com/ArkEcosystem/go-crypto)
-- [java-client](https://github.com/ArkEcosystem/java-client)
-- [java-crypto](https://github.com/ArkEcosystem/java-crypto)
-- [javascript-cli](https://github.com/ArkEcosystem/javascript-cli)
-- [ledger](https://github.com/ArkEcosystem/ledger)
-- [mobile-wallet](https://github.com/ArkEcosystem/mobile-wallet)
-- [paper-wallet](https://github.com/ArkEcosystem/paper-wallet)
-- [php-client](https://github.com/ArkEcosystem/php-client)
-- [php-crypto](https://github.com/ArkEcosystem/php-crypto)
-- [python-client](https://github.com/ArkEcosystem/python-client)
-- [python-crypto](https://github.com/ArkEcosystem/python-crypto)
-- [qrcode](https://github.com/ArkEcosystem/qrcode)
-- [rpc-server](https://github.com/ArkEcosystem/rpc-server)
-- [ruby-client](https://github.com/ArkEcosystem/ruby-client)
-- [ruby-crypto](https://github.com/ArkEcosystem/ruby-crypto)
-- [rust-client](https://github.com/ArkEcosystem/rust-client)
-- [rust-crypto](https://github.com/ArkEcosystem/rust-crypto)
-- [swift-client](https://github.com/ArkEcosystem/swift-client)
-- [swift-crypto](https://github.com/ArkEcosystem/swift-crypto)
+- [ark-js](https://github.com/ARKEcosystem/ark-js)
+- [ark-lite-wallet](https://github.com/ARKEcosystem/ark-lite-wallet)
+- [ark-node](https://github.com/ARKEcosystem/ark-node)
+- [ark-pay](https://github.com/ARKEcosystem/pay)
+- [ark-ts](https://github.com/ARKEcosystem/ark-ts)
+- [core](https://github.com/ARKEcosystem/core)
+- [core-commander](https://github.com/ARKEcosystem/core-commander)
+- [cpp-client](https://github.com/ARKEcosystem/cpp-client)
+- [cpp-crypto](https://github.com/ARKEcosystem/cpp-crypto)
+- [deployer](https://github.com/ARKEcosystem/deployer)
+- [desktop-wallet](https://github.com/ARKEcosystem/desktop-wallet)
+- [docs](https://github.com/ARKEcosystem/docs)
+- [dotnet-client](https://github.com/ARKEcosystem/dotnet-client)
+- [dotnet-crypto](https://github.com/ARKEcosystem/dotnet-crypto)
+- [elixir-client](https://github.com/ARKEcosystem/elixir-client)
+- [elixir-crypto](https://github.com/ARKEcosystem/elixir-crypto)
+- [explorer](https://github.com/ARKEcosystem/explorer)
+- [go-client](https://github.com/ARKEcosystem/go-client)
+- [go-crypto](https://github.com/ARKEcosystem/go-crypto)
+- [java-client](https://github.com/ARKEcosystem/java-client)
+- [java-crypto](https://github.com/ARKEcosystem/java-crypto)
+- [javascript-cli](https://github.com/ARKEcosystem/javascript-cli)
+- [ledger](https://github.com/ARKEcosystem/ledger)
+- [mobile-wallet](https://github.com/ARKEcosystem/mobile-wallet)
+- [paper-wallet](https://github.com/ARKEcosystem/paper-wallet)
+- [php-client](https://github.com/ARKEcosystem/php-client)
+- [php-crypto](https://github.com/ARKEcosystem/php-crypto)
+- [python-client](https://github.com/ARKEcosystem/python-client)
+- [python-crypto](https://github.com/ARKEcosystem/python-crypto)
+- [qrcode](https://github.com/ARKEcosystem/qrcode)
+- [rpc-server](https://github.com/ARKEcosystem/rpc-server)
+- [ruby-client](https://github.com/ARKEcosystem/ruby-client)
+- [ruby-crypto](https://github.com/ARKEcosystem/ruby-crypto)
+- [rust-client](https://github.com/ARKEcosystem/rust-client)
+- [rust-crypto](https://github.com/ARKEcosystem/rust-crypto)
+- [swift-client](https://github.com/ARKEcosystem/swift-client)
+- [swift-crypto](https://github.com/ARKEcosystem/swift-crypto)

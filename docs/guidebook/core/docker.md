@@ -50,8 +50,9 @@ This will run two separate containers. One for Core itself and another one for P
 
 ::: tip
 Prerequisites to be installed:
+
 - [OpenSSL](https://www.openssl.org/)
-:::
+  :::
 
 Two additional steps are needed to be able to run a forger:
 
@@ -62,11 +63,12 @@ cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
 sed -i 's/^MODE=relay/MODE=forger/g $NETWORK.env
 ```
 
-2. Configure your delegate secret and password. *Just use the additional script **enc.sh**.*
+2. Configure your delegate secret and password. _Just use the additional script **enc.sh**._
 
 ```bash
 bash enc.sh
 ```
+
 You will be asked to enter your delegate secret, followed by entering your password twice.
 Script will create a new folder named `enc`, containing set of encrypted public and private keys.
 
@@ -168,7 +170,6 @@ docker exec -it core-devnet sudo apk add make gcc g++ git python
 
 > We are all set! Run the update and follow instructions:
 
-
 ```bash
 docker exec -it core-devnet ark update
 ```
@@ -181,7 +182,7 @@ Updates and all changes made to the containers are kept even on container or hos
 
 ### Generate the Configurations
 
-Ark Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
+ARK Core include several `Dockerfile` and `docker-compose.yml` templates to ease development. They can be used to generate different configurations, depending on the network and token.
 
 For instance, you could use this command:
 
@@ -195,7 +196,7 @@ This command creates a new directory (`docker`) that contains 1 folder per netwo
 
 **Run a PostgreSQL container while using NodeJS from your local environment.**
 
-This configuration is well suited when you are not developing Ark Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
+This configuration is well suited when you are not developing ARK Core, but instead working with the API. By tearing down the PostgreSQL container, you reset the Nodes blockchain.
 
 ::: warning
 PostgreSQL is run in a separate container and it's port gets mapped to your `localhost`, so you should not have PostgreSQL running locally.
@@ -212,18 +213,18 @@ To run the containers in the [background](https://docs.docker.com/engine/referen
 docker-compose up -d
 ```
 
-*In case you need to start with a clean Database:*
+_In case you need to start with a clean Database:_
 
 ```bash
 docker-compose down -v
 docker-compose up -d
 ```
 
-### Serve Ark Core as a collection of Containers
+### Serve ARK Core as a collection of Containers
 
-**Run a PostgreSQL container, build and run Ark-Core using a mounted volume.**
+**Run a PostgreSQL container, build and run ARK-Core using a mounted volume.**
 
-When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing Ark Core itself, as you do not need to rebuild the container to test your changes.
+When a container is built, all files are copied inside the container. It cannot interact with the host's filesystem unless a directory is specifically [mounted](https://docs.docker.com/storage/volumes/) during container start. This configuration works well when developing ARK Core itself, as you do not need to rebuild the container to test your changes.
 
 ::: tip
 Along with PostgreSQL container, now you also have a NodeJS container which mounts your local ark-core git folder inside the container and installs all NPM prerequisites.
@@ -234,14 +235,14 @@ cd docker/development/$NETWORK      # (NETWORK = testnet || devnet)
 docker-compose up -d
 ```
 
-*You can now enter your ark-core container and use NodeJS in a Docker container (Linux environment).*
+_You can now enter your ark-core container and use NodeJS in a Docker container (Linux environment)._
 
 ```bash
 docker exec -it ark-$NETWORK-core bash
 ```
 
-*Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script.*
+_Need to start everything from scratch and make sure there are no remaining cached containers, images or volumes left? Just use the **purge_all.sh** script._
 
 ::: warning
-Development files/presets are not Production ready. Official Production Ark-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
+Development files/presets are not Production ready. Official Production ARK-Core Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core).
 :::

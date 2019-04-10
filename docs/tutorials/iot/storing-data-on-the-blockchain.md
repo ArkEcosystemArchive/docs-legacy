@@ -6,7 +6,7 @@ You can store, prove, verify, or reference data in a way that suits your use cas
 [[toc]]
 
 The example sketch we will be building works on both, the [Arduino IDE](/tutorials/iot/environment/arduino) and with [PlatformIO](/tutorials/iot/environment/os).
-We will be using Ark Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather to post a SHA256 hash of your boards 'Chip ID' to the [ARK Blockchain](/introduction/blockchain).
+We will be using ARK Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather to post a SHA256 hash of your boards 'Chip ID' to the [ARK Blockchain](/introduction/blockchain).
 
 ## Step 1: Project Setup
 
@@ -27,7 +27,7 @@ If you're using PlatformIO, your `platformio.ini` file should look like this:
 platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Ark-Cpp-Client, Ark-Cpp-Crypto
+lib_deps = ARK-Cpp-Client, ARK-Cpp-Crypto
 upload_speed = 921600
 monitor_speed = 115200
 ```
@@ -36,8 +36,8 @@ monitor_speed = 115200
 
 ---
 
-Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), or your 'main.cpp' file if using PlatformIO.  
-Start by adding the headers to import Arduino, Ark Cpp-Client, and Cpp-Crypto.
+Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), or your 'main.cpp' file if using PlatformIO.
+Start by adding the headers to import Arduino, ARK Cpp-Client, and Cpp-Crypto.
 
 ```cpp
 #include <Arduino.h>
@@ -75,18 +75,19 @@ const char* password = "yourWiFiPassword";
 ```
 
 We will also need a Devnet Peer to connect to.
-> You can find more Ark Peers here: [https://github.com/ArkEcosystem/peers](https://github.com/ArkEcosystem/peers)
+
+> You can find more ARK Peers here: [https://github.com/ARKEcosystem/peers](https://github.com/ARKEcosystem/peers)
 
 ```cpp
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 ```
 
-Now, we'll add your Ark Devnet [(DARK) Address](/glossary/#dark-address) and your [Passphrase](/faq/passphrases.html#passphrases).
+Now, we'll add your ARK Devnet [(DARK) Address](/glossary/#dark-address) and your [Passphrase](/faq/passphrases.html#passphrases).
 Make sure to delete this Passphrase from your sketch when we're finished.
 
 ```cpp
-const char* recipientId = "yourArkDevnetAddress";
+const char* recipientId = "yourARKDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 ```
 
@@ -144,7 +145,7 @@ const char* password = "yourPassword";
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 
-const char* recipientId = "yourArkDevnetAddress";
+const char* recipientId = "yourARKDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 void setupWiFi() {
@@ -187,7 +188,7 @@ This is basically just the boards MAC address.
 
 ```cpp
 void idHashToBuffer(char hashBuffer[64]) {
-    int idByteLen = 6; 
+    int idByteLen = 6;
     uint64_t chipId = ESP.getEfuseMac();
 };
 ```
@@ -218,7 +219,7 @@ When this method is done, is should look like the following:
 
 ```cpp
 void idHashToBuffer(char hashBuffer[64]) {
-    int idByteLen = 6; 
+    int idByteLen = 6;
     uint64_t chipId = ESP.getEfuseMac();
 
     uint8_t *bytArray = *reinterpret_cast<uint8_t(*)[sizeof(uint64_t)]>(&chipId);
@@ -231,7 +232,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 
 ## Step 3: Build the Transaction
 
-Here, we will build the transaction using your Ark Devnet [(DARK) Address](/glossary/#dark-address), 0.00000001 DARK, your boards 'Chip ID' SHA256 hash, and your [Secret Passphrase](/faq/passphrases.html#passphrases).
+Here, we will build the transaction using your ARK Devnet [(DARK) Address](/glossary/#dark-address), 0.00000001 DARK, your boards 'Chip ID' SHA256 hash, and your [Secret Passphrase](/faq/passphrases.html#passphrases).
 
 Lets create another method to handle this.
 
@@ -243,14 +244,14 @@ Transaction txFromHash(char hashBuffer[64]) {
 'return' the line to build the transaction.
 
 ```cpp
-return Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+return ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 ```
 
 It should look like this when you're finished:
 
 ```cpp
 Transaction txFromHash(char hashBuffer[64]) {
-   return Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+   return ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 };
 ```
 
@@ -271,7 +272,7 @@ Transaction transaction = txFromHash(hashBuffer);
 ```
 
 Now that the Transaction has been built, let's get the Transactions' JSON and "snprintf' that into a Transactions JSON array buffer.
-We'll then copy that buffer into a std::string for passing to the Ark-Client API.
+We'll then copy that buffer into a std::string for passing to the ARK-Client API.
 
 ```cpp
 char jsonBuffer[576] = { '\0' };
@@ -279,13 +280,13 @@ snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_
 std::string jsonStr(jsonBuffer);
 ```
 
-This is where we will use Ark Cpp-Client to create an API connection using the 'darkIp' and 'darkPort' we declared earlier.
+This is where we will use ARK Cpp-Client to create an API connection using the 'darkIp' and 'darkPort' we declared earlier.
 
 ```cpp
-Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
+ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 ```
 
-Next we send the transactions array to the Ark Network!
+Next we send the transactions array to the ARK Network!
 
 ```cpp
 std::string txSendResponse = connection.api.transactions.send(jsonStr);
@@ -312,7 +313,7 @@ void loop() {
     snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_str());
     std::string jsonStr(jsonBuffer);
 
-    Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
+    ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 
     std::string txSendResponse = connection.api.transactions.send(jsonStr);
         Serial.print("\ntxSendResponse: ");
@@ -340,11 +341,11 @@ const char* password = "yourWiFiPassword";
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 
-const char* recipientId = "yourArkDevnetAddress";
+const char* recipientId = "yourARKDevnetAddress";
 const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 void idHashToBuffer(char hashBuffer[64]) {
-    int idByteLen = 6; 
+    int idByteLen = 6;
     uint64_t chipId = ESP.getEfuseMac();
 
     uint8_t *bytArray = *reinterpret_cast<uint8_t(*)[sizeof(uint64_t)]>(&chipId);
@@ -356,7 +357,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 }
 
 Transaction txFromHash(char hashBuffer[64]) {
-    return Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+    return ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 }
 
 void setupWiFi() {
@@ -387,7 +388,7 @@ void loop() {
     snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_str());
     std::string jsonStr(jsonBuffer);
 
-    Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
+    ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 
     std::string txSendResponse = connection.api.transactions.send(jsonStr);
         Serial.print("\ntxSendResponse: ");
@@ -439,10 +440,10 @@ This is what a successfully POSTed Transaction response will look like:
 
 ---
 
-Congrats, you just used IoT and the Ark Ecosystem to store sensor data on a public Blockchain! 🎉 🎊
+Congrats, you just used IoT and the ARK Ecosystem to store sensor data on a public Blockchain! 🎉 🎊
 
-Keep in mind, we don't have to always "stick to the script."  
-Now that we have a basic understanding of how to post data to the blockchain,  
+Keep in mind, we don't have to always "stick to the script."
+Now that we have a basic understanding of how to post data to the blockchain,
 we can get creative and store or reference nearly any type of information we please.
 We could serialize or encode information, we could reference an IPFS hash, or simply send a friendly message with our transaction.
 

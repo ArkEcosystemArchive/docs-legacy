@@ -4,7 +4,7 @@ title: "Tutorials"
 
 # Introduction
 
-The tutorials are a collection for all Ark Ecosystem guides, code snippets, and more. It contains easy guides to help you get started with different parts of Ark Core and the Ark API. It does not provide a complete technical reference, merely quickstart guides.
+The tutorials are a collection for all ARK Ecosystem guides, code snippets, and more. It contains easy guides to help you get started with different parts of ARK Core and the ARK API. It does not provide a complete technical reference, merely quickstart guides.
 
 Use the sidebar to navigate this section, or follow the links below:
 
@@ -14,4 +14,4 @@ Use the sidebar to navigate this section, or follow the links below:
 - [Pay](/tutorials/pay)
 - [IoT](/tutorials/iot)
 
-Tutorials might become outdated over time. If you find any incorrect information, please [open an issue](https://github.com/ArkEcosystem/docs/issues).
+Tutorials might become outdated over time. If you find any incorrect information, please [open an issue](https://github.com/ARKEcosystem/docs/issues).

@@ -67,19 +67,19 @@ To get started with `C#` and the `.NET` framework, follow the [official guide](h
 #### Package Manager
 
 ```bash
-Install-Package ArkEcosystem.Client -Version 0.2.1
+Install-Package ARKEcosystem.Client -Version 0.2.1
 ```
 
 #### .NET CLI
 
 ```bash
-dotnet add package ArkEcosystem.Client --version 0.2.1
+dotnet add package ARKEcosystem.Client --version 0.2.1
 ```
 
 #### Paket CLI
 
 ```bash
-paket add ArkEcosystem.Client --version 0.2.1
+paket add ARKEcosystem.Client --version 0.2.1
 ```
 
 :::
@@ -133,7 +133,7 @@ The package can be installed by using the following commands in your terminal :
 #### go get
 
 ```bash
-go get github.com/ArkEcosystem/go-client/client
+go get github.com/ARKEcosystem/go-client/client
 ```
 
 :::
@@ -147,7 +147,7 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 #### CMake
 
 ```bash
-git clone https://github.com/ArkEcosystem/cpp-client
+git clone https://github.com/ARKEcosystem/cpp-client
 cd cpp-client
 # init & update micro-ecc submodule
 git submodule init
@@ -160,7 +160,7 @@ cmake --build .
 
 Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
-Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Client library.
+Using the Arduino IDE's built-in Library Manager, install the ARK-Cpp-Client library.
 Be sure to install the "-arduino" version of Cpp-Client.
 
 #### Using with the Arduino IDE
@@ -178,7 +178,7 @@ Python is required to run PlatformIO, so grab an installer package from [python.
 Add the following line to your `platformio.ini` configuration file:
 
 ```asciidoc
-lib_deps = Ark-Cpp-Client
+lib_deps = ARK-Cpp-Client
 ```
 
 This is an example of a fully configured `platformio.ini file for the Adafruit ESP32 Feather:
@@ -197,7 +197,7 @@ This is an example of a fully configured `platformio.ini file for the Adafruit E
 [env:featheresp32]platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Ark-Cpp-Client
+lib_deps = ARK-Cpp-Client
 upload_speed = 921600
 monitor_speed = 115200
 
@@ -248,10 +248,10 @@ Swift is the alternative to Object-C by Apple. To get started, head over to the 
 #### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Swift (and Objective-C) Cocoa Projects.
-You can use it to integrate the Ark Swift Client in your project, by adding it to your `Podfile` as follows:
+You can use it to integrate the ARK Swift Client in your project, by adding it to your `Podfile` as follows:
 
 ```
-pod 'SwiftClient', :git => 'https://github.com/ArkEcosystem/swift-client.git', :tag => '1.0.1'
+pod 'SwiftClient', :git => 'https://github.com/ARKEcosystem/swift-client.git', :tag => '1.0.1'
 ```
 
 Afterward, install it by running `pod install`.
@@ -271,7 +271,7 @@ Add the following to your Cargo.toml:
 
 ```
 [dependencies]
-arkecosystem-client = {git = "https://github.com/ArkEcosystem/rust-client", branch = "master" }
+arkecosystem-client = {git = "https://github.com/ARKEcosystem/rust-client", branch = "master" }
 ```
 
 :::
@@ -310,7 +310,7 @@ If you want to contribute to the SDKs itself, follow this guide.
 
 ::: tab javascript
 
-1. Fork the [package](https://github.com/ArkEcosystem/javascript-client).
+1. Fork the [package](https://github.com/ARKEcosystem/javascript-client).
 
 2. Clone your forked repository.
 
@@ -348,7 +348,7 @@ $ yarn test
 
 ::: tab php
 
-1. Fork the [package](https://github.com/ArkEcosystem/php-client).
+1. Fork the [package](https://github.com/ARKEcosystem/php-client).
 
 2. Clone your forked repository.
 
@@ -378,7 +378,7 @@ $ phpunit
 
 ::: tab python
 
-1. Fork the [package](https://github.com/ArkEcosystem/python-client).
+1. Fork the [package](https://github.com/ARKEcosystem/python-client).
 
 2. Clone your forked repository.
 
@@ -420,7 +420,7 @@ pytest
 
 ::: tab golang
 
-1. Fork the [package](https://github.com/ArkEcosystem/go-client)
+1. Fork the [package](https://github.com/ARKEcosystem/go-client)
 
 2. Clone your forked repository.
 
@@ -451,7 +451,7 @@ go test ./...
 
 ::: tab C++
 
-1. Fork the [package](https://github.com/ArkEcosystem/cpp-client).
+1. Fork the [package](https://github.com/ARKEcosystem/cpp-client).
 
 2. Clone the newly forked repository.
 
@@ -475,7 +475,7 @@ cmake --build .
 5. Now we can run the tests to see if everything is running as it should.
 
 ```bash
-./test/Ark-Cpp-Client-tests
+./test/ARK-Cpp-Client-tests
 ```
 
 #### ESP8266 (PlatformIO)
@@ -496,7 +496,7 @@ pio run -e esp32 -t upload
 
 ::: tab swift
 
-1. Fork the [package](https://github.com/ArkEcosystem/swift-client).
+1. Fork the [package](https://github.com/ARKEcosystem/swift-client).
 
 2. Clone your forked repository.
 
@@ -526,7 +526,7 @@ Dependencies are now installed, you can now run the tests to see if everything i
 
 ::: tab rust
 
-1. Fork the [package](https://github.com/ArkEcosystem/rust-client).
+1. Fork the [package](https://github.com/ARKEcosystem/rust-client).
 
 2. Clone your forked repository.
 
@@ -557,13 +557,13 @@ cargo test
 By default, the requests are performed with [Alamofire](https://github.com/Alamofire/Alamofire), and the response is given to the callback function as `[String: Any]`.
 The functions that are responsible for this can be found in `Utils.swift`.
 You can easily override this default functionality by defining your own `handleApiGet` and `handleApiPost` functions and passing them to the endpoint object (e.g. `Blocks`.
-An example of how this is done can be found by looking at the tests, e.g. those of [Blocks](https://github.com/ArkEcosystem/swift-client/blob/master/Client/ClientTests/Api/Endpoints/BlocksTest.swift), as a mocked api handler is used for them.
+An example of how this is done can be found by looking at the tests, e.g. those of [Blocks](https://github.com/ARKEcosystem/swift-client/blob/master/Client/ClientTests/Api/Endpoints/BlocksTest.swift), as a mocked api handler is used for them.
 
 :::
 
 ::: tab elixir
 
-1. Fork the [package](https://github.com/ArkEcosystem/elixir-client).
+1. Fork the [package](https://github.com/ARKEcosystem/elixir-client).
 
 2. Clone your forked repository.
 
@@ -637,8 +637,8 @@ public class Main {
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Client;
-using ArkEcosystem.Client.API.Two;
+using ARKEcosystem.Client;
+using ARKEcosystem.Client.API.Two;
 
 static void Main(string[] args)
 {
@@ -661,7 +661,7 @@ static void Main(string[] args)
 
 require_once('vendor/autoload.php');
 
-use ArkEcosystem\Client\Connection;
+use ARKEcosystem\Client\Connection;
 
 $connection = new Connection([
     'host' => 'http://my.ark.node:port/api/', // TRAILING SLASH!
@@ -673,9 +673,9 @@ $connection = new Connection([
 ::: tab python
 
 ```python
-from client import ArkClient
+from client import ARKClient
 
-client = ArkClient('http://127.0.0.1:4003/api')
+client = ARKClient('http://127.0.0.1:4003/api')
 ```
 
 :::
@@ -688,7 +688,7 @@ package main
 import (
     "net/url"
 
-    ark "github.com/ArkEcosystem/go-client/client"
+    ark "github.com/ARKEcosystem/go-client/client"
 )
 
 func main() {
@@ -709,10 +709,10 @@ func main() {
 
 Before making a request, you should create a `Connection`.
 A `Connection` expects an IP Address and Port by which the API can be reached.
-An example Connection, that interfaces with the API of an Ark Node, would be created as follows:
+An example Connection, that interfaces with the API of an ARK Node, would be created as follows:
 
 ```cpp
-Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
+ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::
@@ -722,9 +722,9 @@ Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
 ```ruby
 require 'arkecosystem/client'
 
-manager = ArkEcosystem::Client::ConnectionManager.new()
+manager = ARKEcosystem::Client::ConnectionManager.new()
 
-manager.connect(ArkEcosystem::Client::Connection.new({
+manager.connect(ARKEcosystem::Client::Connection.new({
   host: "http://my.ark.node:port/api/",
   version: 2
 }), 'main')
@@ -765,7 +765,7 @@ fn main() {
 ::: tab elixir
 
 ```elixir
-iex > client = ArkEcosystem.Client.new(%{
+iex > client = ARKEcosystem.Client.new(%{
 ... >             host: "http://my.node.ip:myport/api",
 ... >             nethash: "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23",
 ... >             version: "1.1.1"
@@ -778,7 +778,7 @@ iex > client = ArkEcosystem.Client.new(%{
 
 ## Blocks
 
-This service API grants access to the [blocks resource](/api/public/v2/blocks.html). A block is a signed set of transactions created by a delegate and permanently committed to the Ark blockchain.
+This service API grants access to the [blocks resource](/api/public/v2/blocks.html). A block is a signed set of transactions created by a delegate and permanently committed to the ARK blockchain.
 
 You may query for:
 
@@ -931,7 +931,7 @@ let blocks = v2.blocks.all(&params);
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Blocks.list(client)
+iex> ARKEcosystem.Client.API.Two.Blocks.list(client)
 ```
 
 :::
@@ -942,7 +942,7 @@ iex> ArkEcosystem.Client.API.Two.Blocks.list(client)
 
 The client SDK can be used to query the [delegate resource](/api/public/v2/delegates.html).
 
-A delegate is a regular wallet that has broadcasted a registration transaction, acquired a sufficient number of votes, and has a Relay Node configured to forge new blocks through a `forger` module. At any time only 51 delegates are active. They are cost-efficient miners running the Ark Network.
+A delegate is a regular wallet that has broadcasted a registration transaction, acquired a sufficient number of votes, and has a Relay Node configured to forge new blocks through a `forger` module. At any time only 51 delegates are active. They are cost-efficient miners running the ARK Network.
 
 Voters are wallets which have broadcasted a vote transaction on a delegate. A vote remains active until an un-vote transaction is sent (it does not have to be recast unless a wallet wishes to change from delegate). Voting for a delegate does not give the delegate access to the wallet nor does it lock the coins in it.
 
@@ -1085,7 +1085,7 @@ let delegates = v2.delegates.all(&params);
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Delegates.list(client)
+iex> ARKEcosystem.Client.API.Two.Delegates.list(client)
 ```
 
 :::
@@ -1094,7 +1094,7 @@ iex> ArkEcosystem.Client.API.Two.Delegates.list(client)
 
 ## Node
 
-The Ark Network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The [node resource](/api/public/v2/node.html) allows for querying the health and configurations of the node used by the instantiated client.
+The ARK Network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The [node resource](/api/public/v2/node.html) allows for querying the health and configurations of the node used by the instantiated client.
 
 You may query for:
 
@@ -1220,7 +1220,7 @@ let node = v2.node.status().unwrap();
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Node.status(client)
+iex> ARKEcosystem.Client.API.Two.Node.status(client)
 ```
 
 :::
@@ -1341,7 +1341,7 @@ let peers = v2.peers.all(&params);
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Peers.list(client)
+iex> ARKEcosystem.Client.API.Two.Peers.list(client)
 ```
 
 :::
@@ -1372,12 +1372,10 @@ Through this API you can:
 ```js
 async function init() {
   try {
-    const response = await client
-      .resource("transactions")
-      .all({
-        senderId: "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
-        orderBy: "timestamp.epoch"
-      });
+    const response = await client.resource("transactions").all({
+      senderId: "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+      orderBy: "timestamp.epoch"
+    });
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1512,7 +1510,7 @@ let transactions = v2.transactions.all(&params).unwrap();
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Transactions.list(client)
+iex> ARKEcosystem.Client.API.Two.Transactions.list(client)
 ```
 
 :::
@@ -1632,7 +1630,7 @@ let votes = v2.votes.all(&params).unwrap();
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Votes.list(client)
+iex> ARKEcosystem.Client.API.Two.Votes.list(client)
 ```
 
 :::
@@ -1791,7 +1789,7 @@ let wallets = v2.wallets.all(&params).unwrap();
 ::: tab elixir
 
 ```elixir
-iex> ArkEcosystem.Client.API.Two.Wallets.list(client)
+iex> ARKEcosystem.Client.API.Two.Wallets.list(client)
 ```
 
 :::

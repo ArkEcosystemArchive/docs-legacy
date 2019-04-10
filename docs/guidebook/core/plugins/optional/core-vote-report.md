@@ -5,7 +5,7 @@ title: "Vote Report"
 # Vote Report
 
 ::: tip
-You can find the source code of this package at [packages/core-vote-report](https://github.com/ArkEcosystem/core/tree/develop/packages/core-vote-report).
+You can find the source code of this package at [packages/core-vote-report](https://github.com/ARKEcosystem/core/tree/develop/packages/core-vote-report).
 :::
 
 ## Installation
@@ -32,8 +32,8 @@ To use the `vote-report` package, add it to your plugins file in your config dir
 
 ```ts
 export const defaults = {
-    host: process.env.CORE_VOTE_REPORT_HOST || "0.0.0.0",
-    port: process.env.CORE_VOTE_REPORT_PORT || 4006,
-    delegateRows: process.env.CORE_VOTE_REPORT_DELEGATE_ROWS || 80,
+  host: process.env.CORE_VOTE_REPORT_HOST || "0.0.0.0",
+  port: process.env.CORE_VOTE_REPORT_PORT || 4006,
+  delegateRows: process.env.CORE_VOTE_REPORT_DELEGATE_ROWS || 80
 };
 ```

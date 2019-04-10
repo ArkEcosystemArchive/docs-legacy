@@ -5,7 +5,7 @@ title: "Logger - Winston"
 # Logger - Winston
 
 ::: tip
-You can find the source code of this package at [packages/core-logger-winston](https://github.com/ArkEcosystem/core/tree/develop/packages/core-logger-winston).
+You can find the source code of this package at [packages/core-logger-winston](https://github.com/ARKEcosystem/core/tree/develop/packages/core-logger-winston).
 :::
 
 ## Installation
@@ -24,28 +24,30 @@ yarn add @arkecosystem/core-logger-winston
 import { formatter } from "./formatter";
 
 export const defaults = {
-    transports: {
-        console: {
-            constructor: "Console",
-            options: {
-                level: process.env.CORE_LOG_LEVEL || "debug",
-                format: formatter(true),
-                stderrLevels: ["error", "warn"],
-            },
-        },
-        dailyRotate: {
-            package: "winston-daily-rotate-file",
-            constructor: "DailyRotateFile",
-            options: {
-                level: process.env.CORE_LOG_LEVEL || "debug",
-                format: formatter(false),
-                filename: process.env.CORE_LOG_FILE || `${process.env.CORE_PATH_LOG}/%DATE%.log`,
-                datePattern: "YYYY-MM-DD",
-                zippedArchive: true,
-                maxSize: "100m",
-                maxFiles: "10",
-            },
-        },
+  transports: {
+    console: {
+      constructor: "Console",
+      options: {
+        level: process.env.CORE_LOG_LEVEL || "debug",
+        format: formatter(true),
+        stderrLevels: ["error", "warn"]
+      }
     },
+    dailyRotate: {
+      package: "winston-daily-rotate-file",
+      constructor: "DailyRotateFile",
+      options: {
+        level: process.env.CORE_LOG_LEVEL || "debug",
+        format: formatter(false),
+        filename:
+          process.env.CORE_LOG_FILE ||
+          `${process.env.CORE_PATH_LOG}/%DATE%.log`,
+        datePattern: "YYYY-MM-DD",
+        zippedArchive: true,
+        maxSize: "100m",
+        maxFiles: "10"
+      }
+    }
+  }
 };
 ```

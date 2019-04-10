@@ -1,17 +1,18 @@
 ---
-title: "Ark Desktop Wallet v2.x.x"
+title: "ARK Desktop Wallet v2.x.x"
 ---
 
 # Desktop Wallet
 
-![Ark Desktop](./assets/desktop/banner.png)
+![ARK Desktop](./assets/desktop/banner.png)
 
-[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/desktop-wallet)](https://circleci.com/gh/ArkEcosystem/desktop-wallet)
-[![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/desktop-wallet)](https://github.com/ArkEcosystem/desktop-wallet/releases)
+[![Build Status](https://badgen.now.sh/circleci/github/ARKEcosystem/desktop-wallet)](https://circleci.com/gh/ARKEcosystem/desktop-wallet)
+[![Latest Version](https://badgen.now.sh/github/release/ARKEcosystem/desktop-wallet)](https://github.com/ARKEcosystem/desktop-wallet/releases)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
 ## Download
-[Latest Release](https://github.com/ArkEcosystem/ark-desktop/releases)
+
+[Latest Release](https://github.com/ARKEcosystem/ark-desktop/releases)
 
 ## Installing via Package Managers
 
@@ -41,13 +42,13 @@ Full translations are considered to be `Tier 3`, while grammar fixes, typos, etc
 
 <details><summary>Full translations should involve 5 tasks</summary>
 
- - Create a pull request for the language you are going to translate. If you have doubts about something, use English to explain them.
- - Translate the textual content of the application, using the [English language file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) as the reference. To do that, a new file, with the language locale code should be created. The name of the file should be a valid [RFC 5646](https://tools.ietf.org/html/rfc5646) and should be located at `src/renderer/i18n/locales/LANGUAGE.js`. Thanks to [vue-i18n-extract](https://github.com/pixari/vue-i18n-extract), it is possible to execute `yarn i18n src/renderer/i18n/locales/LANGUAGE.js` to find suggestions of missing translations.
- - Add the language to the [English language file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) at the `LANGUAGES` key.
- - Update the [date and time formats file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/date-time-formats.js) to include the short and long format that are used commonly by native speakers.
- - Update the [number formats file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/number-formats.js) to include the preferred way of displaying currencies used commonly by native speakers.
- - Add the language at the `I18N.enabledLocales` array at the [main configuration file](https://github.com/ArkEcosystem/desktop-wallet/blob/develop/config/index.js). This step is necessary to make the language would not be available.
- - Execute the application. Go to the [ development section](https://github.com/ArkEcosystem/desktop-wallet#development) to learn how to install the requirements and execute it.
+- Create a pull request for the language you are going to translate. If you have doubts about something, use English to explain them.
+- Translate the textual content of the application, using the [English language file](https://github.com/ARKEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) as the reference. To do that, a new file, with the language locale code should be created. The name of the file should be a valid [RFC 5646](https://tools.ietf.org/html/rfc5646) and should be located at `src/renderer/i18n/locales/LANGUAGE.js`. Thanks to [vue-i18n-extract](https://github.com/pixari/vue-i18n-extract), it is possible to execute `yarn i18n src/renderer/i18n/locales/LANGUAGE.js` to find suggestions of missing translations.
+- Add the language to the [English language file](https://github.com/ARKEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/locales/en-US.js) at the `LANGUAGES` key.
+- Update the [date and time formats file](https://github.com/ARKEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/date-time-formats.js) to include the short and long format that are used commonly by native speakers.
+- Update the [number formats file](https://github.com/ARKEcosystem/desktop-wallet/blob/develop/src/renderer/i18n/number-formats.js) to include the preferred way of displaying currencies used commonly by native speakers.
+- Add the language at the `I18N.enabledLocales` array at the [main configuration file](https://github.com/ARKEcosystem/desktop-wallet/blob/develop/config/index.js). This step is necessary to make the language would not be available.
+- Execute the application. Go to the [ development section](https://github.com/ARKEcosystem/desktop-wallet#development) to learn how to install the requirements and execute it.
 
 </details>
 
@@ -56,26 +57,33 @@ Full translations are considered to be `Tier 3`, while grammar fixes, typos, etc
 ### Requirements
 
 #### Ubuntu
+
 In Ubuntu the development files of `libudev` are necessary:
+
 ```
 sudo apt-get install libudev-dev libusb-1.0-0-dev
 ```
 
 #### Windows
+
 - Python 2.7
 - Visual Studio 2017
 
 #### Node 11
+
 To download, head over to [here](https://nodejs.org/en/) and download Node 11.
 
 If you already have npm installed, you can run
+
 ```
 npm install -g n
 sudo n 11
 ```
 
 #### Yarn
+
 Install the Yarn dependency manager
+
 ```
 npm install -g yarn
 ```
@@ -84,7 +92,7 @@ npm install -g yarn
 
 <details><summary>List of commands</summary>
 
-``` bash
+```bash
 # Install dependencies
 yarn install
 
@@ -159,4 +167,4 @@ If you discover a security vulnerability within this project, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)

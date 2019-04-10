@@ -9,7 +9,7 @@ Remote Procedure Call (RPC) is a protocol that allows one program to request a s
 By replacing dedicated protocols and communication methods with a standardized interface, RPC is designed to facilitate communication between client and server processes. The functions contained within RPC are accessible by any program that must communicate using a client/server methodology.
 
 ::: tip
-The majority of platforms utilizing Bitcoin use the Bitcoind-RPC server. To accommodate these services and make the integration of Ark as user-friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The Ark RPC will minimize headaches and streamlines the addition process of ARK to existing architectures.
+The majority of platforms utilizing Bitcoin use the Bitcoind-RPC server. To accommodate these services and make the integration of ARK as user-friendly as possible, it was our goal to develop a familiar process for use now, and in the future. The ARK RPC will minimize headaches and streamlines the addition process of ARK to existing architectures.
 :::
 
 # JSON-RPC Quick Actions
@@ -20,11 +20,11 @@ All JSON-RPC implementations should be built using the tools of your programming
 
 By default, the JSON-API listens on port 8080 for requests. This means that all JSON-RPC interactions should be POST requests to the URL `http://{NODE_IP}:{JSON-RPC_PORT}`, with the IP address of your node combined with the JSON-RPC port number.
 
-If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `CORE_JSON_RPC_ENABLED=true` to the ***.env*** file in your config directory.
+If you're having trouble connecting, your JSON-RPC may be disabled. To enable it, log into your node and add the key `CORE_JSON_RPC_ENABLED=true` to the **_.env_** file in your config directory.
 
 Your config directory is located at `~/.config/ark-core/{network}/.env` by default. If the .env file does not exist, create it, then restart your node to apply your changes.
 
-All request should include the HTTP header `Content-Type: application/json` to inform the Ark Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
+All request should include the HTTP header `Content-Type: application/json` to inform the ARK Core node that your request body is formatted as JSON, which is necessary to use all JSON-RPC endpoints.
 
 Each quick action will interact with the JSON-RPC in the same way - unless noted otherwise, any of these actions can be accessed with the following code:
 
@@ -191,7 +191,7 @@ print(r)
 
 ## Check Wallet Balance
 
-This method can be used to check the account balance associated with a particular Ark address. To utilize it, use the following body payload:
+This method can be used to check the account balance associated with a particular ARK address. To utilize it, use the following body payload:
 
 :::: tabs
 
@@ -281,7 +281,7 @@ const body = {
   jsonrpc: "2.0",
   method: "blocks.latest",
   id: 31 // internal ID to track responses
-}
+};
 ```
 
 :::
@@ -545,7 +545,7 @@ const body = {
   params: {
     id: "b60525042509586151fac7e3c70fe7a75ca00ffdf9988f20d0c1c0f3db798e86"
   }
-}
+};
 ```
 
 :::
@@ -581,7 +581,7 @@ func main() {
 
 ::: tab python
 
-``` python
+```python
 r = requests.post(
   "http://0.0.0.0:8080",
   json={"jsonrpc": "2.0", "method": "transactions.info", "id": 31,

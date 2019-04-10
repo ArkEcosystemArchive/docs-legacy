@@ -1,8 +1,8 @@
 # Releases
 
-Here you will find overviews of each minor release of Ark Core, and corresponding documentation on the changes, migrations and upgrade, and descriptions on design decisions and further improvements.
+Here you will find overviews of each minor release of ARK Core, and corresponding documentation on the changes, migrations and upgrade, and descriptions on design decisions and further improvements.
 
-Ark adheres to standard versioning that using the Semver model:
+ARK adheres to standard versioning that using the Semver model:
 
 - **MAJOR**: 2.0.0 was the initial non-backwards compatible release on the Mainnet.
 - **MINOR**: 2.x.0 will add new functionality and cover bigger changes and new features that introduce higher end impacts (2.1.0, 2.2.0, …).

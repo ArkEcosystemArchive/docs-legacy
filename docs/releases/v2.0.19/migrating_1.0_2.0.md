@@ -4,9 +4,9 @@
 This is an archived guide. `v2.0.X` has been deprecated.
 :::
 
-Initially, you might have created your BridgeChain using [Ark Node](https://github.com/ArkEcosystem/ark-node), the official v1 implementation. Now that [Ark Core](https://github.com/arkecosystem/core) (v2) has reached a stable, production-ready release, you will want to upgrade your network.
+Initially, you might have created your BridgeChain using [ARK Node](https://github.com/ARKEcosystem/ark-node), the official v1 implementation. Now that [ARK Core](https://github.com/arkecosystem/core) (v2) has reached a stable, production-ready release, you will want to upgrade your network.
 
-Depending on the size of your BridgeChain network, upgrading to `Ark Core` may need more or less preparation. Upgrading is a breaking change, and all `v1` nodes will become incompatible with your new network. You should ensure that your users are aware of the upgrade, and node operators have time to adequately prepare for the migration, as they will need to update their tools and code bases.
+Depending on the size of your BridgeChain network, upgrading to `ARK Core` may need more or less preparation. Upgrading is a breaking change, and all `v1` nodes will become incompatible with your new network. You should ensure that your users are aware of the upgrade, and node operators have time to adequately prepare for the migration, as they will need to update their tools and code bases.
 
 [[toc]]
 
@@ -27,10 +27,10 @@ Together with your node operators, it would be best if you decided on a cutoff b
 
 The new `v2` implementation is backward compatible with `v1`; thus we can deploy our new nodes without forcing a migration. Your BridgeChain configuration is defined by the following files, which are needed by `v2` as well.
 
-- [config.mainnet.json](https://github.com/ArkEcosystem/ark-node/blob/mainnet/config.mainnet.json)
-- [genesisBlock.json](https://github.com/ArkEcosystem/ark-node/blob/mainnet/genesisBlock.json)
+- [config.mainnet.json](https://github.com/ARKEcosystem/ark-node/blob/mainnet/config.mainnet.json)
+- [genesisBlock.json](https://github.com/ARKEcosystem/ark-node/blob/mainnet/genesisBlock.json)
 
-Clone [Ark Core](https://github.com/arkecosystem/core) so that we can configure our network. Make sure to verify that you have the latest tag.
+Clone [ARK Core](https://github.com/arkecosystem/core) so that we can configure our network. Make sure to verify that you have the latest tag.
 
 ```bash
 git clone git@github.com:arkecosystem/core
@@ -255,7 +255,7 @@ We are going to start a relay node, which is the equivalent of a standard `v1` n
 lerna bootstrap
 ```
 
-This might take a while, as lerna obtains all dependencies required for `Ark Core`. Once the process is done, run the following command to start the synchronization process:
+This might take a while, as lerna obtains all dependencies required for `ARK Core`. Once the process is done, run the following command to start the synchronization process:
 
 ```bash
 (cd packages/core && yarn start:MyNet)

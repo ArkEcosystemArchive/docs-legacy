@@ -4,7 +4,7 @@ title: "Clean Code & Tests"
 
 # Clean Code & Tests
 
-While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the Ark Ecosystem and increases the likelihood your pull request will be accepted.
+While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the ARK Ecosystem and increases the likelihood your pull request will be accepted.
 
 ## Clean Code
 
@@ -58,4 +58,4 @@ Try to keep your naming conventions consistent and readable because keep in mind
 
 You should aim for high coverage of business-critical parts of your application and for at least sufficient enough coverage of utilities and smaller working parts to be confident that your test suite catches any bugs caused by future changes.
 
-*If you are working on a JavaScript project we recommend you to use [jest](https://facebook.github.io/jest/) and follow the `it('should ...')` naming convention.*
+_If you are working on a JavaScript project we recommend you to use [jest](https://facebook.github.io/jest/) and follow the `it('should ...')` naming convention._

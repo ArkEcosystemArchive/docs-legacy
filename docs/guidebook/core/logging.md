@@ -8,7 +8,7 @@ title: "Logging"
 
 ## Introduction
 
-To efficiently operate a node in the Ark Network or a BridgeChain, logging malfunctions and obtaining insights when errors occur is invaluable. As a Delegate, you also wish to be informed when critical errors occur, and monitor the day-to-day activity of the Delegate Node.
+To efficiently operate a node in the ARK Network or a BridgeChain, logging malfunctions and obtaining insights when errors occur is invaluable. As a Delegate, you also wish to be informed when critical errors occur, and monitor the day-to-day activity of the Delegate Node.
 
 The default logger we provide is [winston](https://github.com/winstonjs/winston) which allows you to use multiple types of transport with minimal configuration needed.
 

@@ -8,7 +8,7 @@ title: "JSON-RPC configuration"
 
 ## Summary
 
-> A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the Ark blockchain.
+> A [JSON-RPC 2.0 Specification](http://www.jsonrpc.org/specification) compliant server to interact with the ARK blockchain.
 
 `core-json-rpc` offers a JSON-RPC interface to interact with the ARK blockchain. This functionality is primarily useful for exchange developers, as it provides functionality mirroring that of the popular Bitcoin JSON-RPC API.
 
@@ -18,9 +18,9 @@ If you are looking to just broadcast transactions, you should take a look at how
 
 ## Usage
 
-Using `core-json-rpc` requires an Ark Core relay node to connect to. For exchanges, this node should be run on internal servers whenever possible to guard against man-in-the-middle attacks such as [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+Using `core-json-rpc` requires an ARK Core relay node to connect to. For exchanges, this node should be run on internal servers whenever possible to guard against man-in-the-middle attacks such as [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
-By default, Ark Core sets up the JSON-RPC node to run on port 8080. As all JSON-RPC requests are handled from a single endpoint, this means that your endpoint should be:
+By default, ARK Core sets up the JSON-RPC node to run on port 8080. As all JSON-RPC requests are handled from a single endpoint, this means that your endpoint should be:
 
 ```
 `{NODE_IP}:8080/`

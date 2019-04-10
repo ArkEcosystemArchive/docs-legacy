@@ -4,7 +4,7 @@
 
 2. **I lost my Genesis Passphrase. Where can I find it?** Take a look in your configuration file, in `delegates.json`. You will find it in there (unless you removed it).
 
-3. **Will Deployer work on XYZ Operating System?** We recommend only running the Ark Node on Ubuntu 16.04. It may be possible on other Operating systems, but it is more specifically tested/used on this Operating System.
+3. **Will Deployer work on XYZ Operating System?** We recommend only running the ARK Node on Ubuntu 16.04. It may be possible on other Operating systems, but it is more specifically tested/used on this Operating System.
 
 4. **Can I change the fees for my BridgeChain?** Yes you can which can be found under node options, however this causes issues with the Desktop Wallet (and anything that uses the ark-js package).
 

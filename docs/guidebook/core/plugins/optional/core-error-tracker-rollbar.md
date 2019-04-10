@@ -5,7 +5,7 @@ title: "Error Tracker - Rollbar"
 # Error Tracker - Rollbar
 
 ::: tip
-You can find the source code of this package at [packages/core-error-tracker-rollbar](https://github.com/ArkEcosystem/core/tree/develop/packages/core-error-tracker-rollbar).
+You can find the source code of this package at [packages/core-error-tracker-rollbar](https://github.com/ARKEcosystem/core/tree/develop/packages/core-error-tracker-rollbar).
 :::
 
 ## Installation

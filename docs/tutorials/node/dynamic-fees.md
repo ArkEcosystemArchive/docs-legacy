@@ -8,13 +8,13 @@ This tutorial is compatible with v2.1+, for older guides, check the [archive](/a
 
 ## Why dynamic fees
 
-Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the Ark Network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
+Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the ARK Network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
 
 Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/Miner_fees), where it is a vital part of its mining economy.
 
 ## Finding the Configuration
 
-Transactions are ordered by fee inside the mempool, and thus the configurations for dynamic fees are found inside [packages/core/src/config/mainnet/plugins.js](https://github.com/ArkEcosystem/core/blob/master/packages/core/src/config/mainnet/plugins.js) under the `"@arkecosystem/core-transaction-pool"` key.
+Transactions are ordered by fee inside the mempool, and thus the configurations for dynamic fees are found inside [packages/core/src/config/mainnet/plugins.js](https://github.com/ARKEcosystem/core/blob/master/packages/core/src/config/mainnet/plugins.js) under the `"@arkecosystem/core-transaction-pool"` key.
 
 ## Edit Your Dynamic Fee Constants
 
@@ -26,7 +26,7 @@ nano packages/core/src/config/mainnet/plugins.js
 
 There are two separate settings here worth configuring: the `dynamicFees` constants, which is found under the `@arkecosystem/core-transaction-pool` key, and the dynamic fees themselves.
 
-You can use dynamic fee constants to alter how the dynamic fee formula is applied in your Ark Core node. The `dynamicFees` config key in your `@arkecosystem/core-transaction-pool` section should look like this:
+You can use dynamic fee constants to alter how the dynamic fee formula is applied in your ARK Core node. The `dynamicFees` config key in your `@arkecosystem/core-transaction-pool` section should look like this:
 
 ##### file: packages/core/src/config/mainnet/plugins.js
 
@@ -58,12 +58,13 @@ You can use dynamic fee constants to alter how the dynamic fee formula is applie
 
 The `maxTransactionsPerSender` is a protection against spam attacks. For delegates, it might be useful to increase this value to 3000 (or their number of voters). `allowedSenders` is a specific whitelist.
 
-`dynamicFees` is of special interest here. If `enabled` is set to `false`, your node will fall back to static fees. `minFeePool` value represents the minimum fee in Arktoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in Arktoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
+`dynamicFees` is of special interest here. If `enabled` is set to `false`, your node will fall back to static fees. `minFeePool` value represents the minimum fee in ARKtoshi per byte a transaction should have to be included in the configured node's transaction pool. Similarly, `minFeeBroadcast` represents the minimum fee in ARKtoshi per byte a transaction should have to be broadcasted to peers for possible inclusion elsewhere in the network. Differentiating between these two values can allow forgers to filter out low-fee transactions from their nodes without rejecting them from the system altogether.
 
 Below `minFeeBroadcast` you'll find the `addonBytes` object, which sets byte values to be added onto specific transaction types when calculating fees. The minimum fee calculation adds this addonBytes value to each transaction's length in bytes before multiplying by the node's arktoshi-per-byte value:
 
 ```js
-const calculatedFee = (addonBytesValue + transactionSizeInBytes) * arktoshiPerByte
+const calculatedFee =
+  (addonBytesValue + transactionSizeInBytes) * arktoshiPerByte;
 ```
 
 ## Changing the Transaction Pool Size

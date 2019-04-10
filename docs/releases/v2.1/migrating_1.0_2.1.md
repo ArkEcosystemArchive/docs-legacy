@@ -1,6 +1,6 @@
 # Migrating from v1.0 to v2.1
 
-Shortly after the release of `v2.0`, Ark Core was rewritten in [TypeScript](https://www.typescriptlang.org/), a typed superset of JavaScript, well suited for large projects as it prevents an entire class of runtime bugs. If you are on `v1`, we recommend upgrading to `v2.1` and skipping `v2.0`.
+Shortly after the release of `v2.0`, ARK Core was rewritten in [TypeScript](https://www.typescriptlang.org/), a typed superset of JavaScript, well suited for large projects as it prevents an entire class of runtime bugs. If you are on `v1`, we recommend upgrading to `v2.1` and skipping `v2.0`.
 
 The process is mostly the same, where we will port our custom configurations to the appropriate files, alter some defaults and then letting our `v2.1` nodes sync before excluding old nodes from our network.
 
@@ -27,10 +27,10 @@ Experience teaches us that migrations are always troublesome and that supporting
 
 The new `v2.1` implementation is backward compatible with `v1`; thus we can deploy our new nodes without forcing a migration. Your BridgeChain configuration is defined by the following files, which we will use in our `v2.1` configuration as well.
 
-- [config.mainnet.json](https://github.com/ArkEcosystem/ark-node/blob/mainnet/config.mainnet.json)
-- [genesisBlock.json](https://github.com/ArkEcosystem/ark-node/blob/mainnet/genesisBlock.json)
+- [config.mainnet.json](https://github.com/ARKEcosystem/ark-node/blob/mainnet/config.mainnet.json)
+- [genesisBlock.json](https://github.com/ARKEcosystem/ark-node/blob/mainnet/genesisBlock.json)
 
-Clone [Ark Core](https://github.com/arkecosystem/core) so that we can configure our network. Make sure to verify that you have the latest tag.
+Clone [ARK Core](https://github.com/arkecosystem/core) so that we can configure our network. Make sure to verify that you have the latest tag.
 
 ```bash
 git clone git@github.com:arkecosystem/core
@@ -66,7 +66,7 @@ To us, `peers.json` is most relevant. The latter should look something like this
     }
   ],
   "sources": [
-    "https://raw.githubusercontent.com/ArkEcosystem/peers/master/devnet.json"
+    "https://raw.githubusercontent.com/ARKEcosystem/peers/master/devnet.json"
   ]
 }
 ```
@@ -203,7 +203,7 @@ You can copy the `index.ts` and `network.json` from an existing directory (i.e.,
 }
 ```
 
-If your BridgeChain was created during `v1.0.X`, you most likely copied Ark's milestones. If not, edit this file according to your own milestones.
+If your BridgeChain was created during `v1.0.X`, you most likely copied ARK's milestones. If not, edit this file according to your own milestones.
 
 #### milestones.json
 
@@ -386,7 +386,7 @@ We are going to start a relay node, which is the equivalent of a standard `v1` n
 yarn setup
 ```
 
-This might take a while, as lerna obtains all dependencies required for `Ark Core`. Once the process is done, run the following command to start the synchronization process:
+This might take a while, as lerna obtains all dependencies required for `ARK Core`. Once the process is done, run the following command to start the synchronization process:
 
 ```bash
 (cd packages/core && yarn start:MyNet)

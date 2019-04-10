@@ -8,7 +8,7 @@ title: "Plugins"
 
 ## Introduction
 
-Ark Core has an extensive and powerful plugin system that allows you to very easily break your application up into isolated pieces of business logic, and reusable utilities.
+ARK Core has an extensive and powerful plugin system that allows you to very easily break your application up into isolated pieces of business logic, and reusable utilities.
 
 ## Installing Plugins
 

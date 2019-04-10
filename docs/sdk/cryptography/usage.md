@@ -67,19 +67,19 @@ To get started with `C#` and the `.NET` framework, follow the [official guide](h
 #### Package Manager
 
 ```bash
-Install-Package ArkEcosystem.Crypto -Version 0.2.1
+Install-Package ARKEcosystem.Crypto -Version 0.2.1
 ```
 
 #### .NET CLI
 
 ```bash
-dotnet add package ArkEcosystem.Crypto --version 0.2.1
+dotnet add package ARKEcosystem.Crypto --version 0.2.1
 ```
 
 #### Paket CLI
 
 ```bash
-paket add ArkEcosystem.Crypto --version 0.2.1
+paket add ARKEcosystem.Crypto --version 0.2.1
 ```
 
 :::
@@ -133,7 +133,7 @@ The package can be installed by using the following commands in your terminal:
 #### go get
 
 ```bash
-go get github.com/ArkEcosystem/go-crypto/crypto
+go get github.com/ARKEcosystem/go-crypto/crypto
 ```
 
 :::
@@ -147,7 +147,7 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 #### Make
 
 ```bash
-git clone https://github.com/ArkEcosystem/cpp-crypto
+git clone https://github.com/ARKEcosystem/cpp-crypto
 cd cpp-crypto
 # init & update micro-ecc submodule
 git submodule init
@@ -160,7 +160,7 @@ cmake --build .
 
 Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.arduino.cc/en/Main/Software)
 
-Using the Arduino IDE's built-in Library Manager, install the Ark-Cpp-Crypto library.
+Using the Arduino IDE's built-in Library Manager, install the ARK-Cpp-Crypto library.
 Be sure to install the "-arduino" version of Cpp-Crypto.
 
 ##### Dependencies
@@ -185,7 +185,7 @@ Python is required to run PlatformIO, so grab an installer package from [python.
 Add the following line to your `platformio.ini` configuration file:
 
 ```asciidoc
-lib_deps = Ark-Cpp-Crypto
+lib_deps = ARK-Cpp-Crypto
 ```
 
 This is an example of a fully configured `platformio.ini file for the Adafruit ESP32 Feather:
@@ -204,7 +204,7 @@ This is an example of a fully configured `platformio.ini file for the Adafruit E
 [env:featheresp32]platform = espressif32
 board = featheresp32
 framework = arduino
-lib_deps = Ark-Cpp-Crypto
+lib_deps = ARK-Cpp-Crypto
 upload_speed = 921600
 monitor_speed = 115200
 
@@ -255,10 +255,10 @@ Swift is the alternative to Object-C by Apple. To get started, head over to the 
 #### CocoaPods
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Swift (and Objective-C) Cocoa Projects.
-You can use it to integrate the Ark Swift Crypto in your project, by adding it to your `Podfile` as follows:
+You can use it to integrate the ARK Swift Crypto in your project, by adding it to your `Podfile` as follows:
 
 ```
-pod 'SwiftCrypto', :git => 'https://github.com/ArkEcosystem/swift-crypto.git', :tag => '1.0.1'
+pod 'SwiftCrypto', :git => 'https://github.com/ARKEcosystem/swift-crypto.git', :tag => '1.0.1'
 ```
 
 Afterward, install it by running `pod install`.
@@ -278,7 +278,7 @@ Add the following to your Cargo.toml:
 
 ```
 [dependencies]
-arkecosystem-crypto = {git = "https://github.com/ArkEcosystem/rust-crypto", branch = "master" }
+arkecosystem-crypto = {git = "https://github.com/ARKEcosystem/rust-crypto", branch = "master" }
 ```
 
 :::
@@ -317,7 +317,7 @@ If you want to contribute to the code of this SDK, execute the following command
 
 ::: tab javascript
 
-1. Fork the [package](https://github.com/ArkEcosystem/javascript-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/javascript-crypto).
 
 2. Clone your forked repository.
 
@@ -355,7 +355,7 @@ yarn test
 
 ::: tab php
 
-1. Fork the [package](https://github.com/ArkEcosystem/php-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/php-crypto).
 
 2. Clone your forked repository.
 
@@ -386,7 +386,7 @@ $ phpunit
 
 ::: tab python
 
-1. Fork the [package](https://github.com/ArkEcosystem/python-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/python-crypto).
 
 2. Clone your forked repository.
 
@@ -418,7 +418,7 @@ pytest
 
 ::: tab golang
 
-1. Fork the [package](https://github.com/ArkEcosystem/go-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/go-crypto).
 
 2. Clone your forked repository.
 
@@ -449,7 +449,7 @@ $ go test ./...
 
 ::: tab C++
 
-1. Fork the [package](https://github.com/ArkEcosystem/cpp-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/cpp-crypto).
 
 2. Clone the newly forked repository.
 
@@ -473,7 +473,7 @@ cmake --build .
 5. Now we can run the tests to see if everything is running as it should.
 
 ```bash
-./test/Ark-Cpp-Crypto-tests
+./test/ARK-Cpp-Crypto-tests
 ```
 
 #### ESP8266 (PlatformIO)
@@ -496,7 +496,7 @@ pio run -e esp32 -t upload
 
 ::: tab swift
 
-1. Fork the [package](https://github.com/ArkEcosystem/swift-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/swift-crypto).
 
 2. Clone your forked repository.
 
@@ -529,7 +529,7 @@ The easiest way to install this is by using Homebrew: `brew install swiftlint`.
 
 ::: tab rust
 
-1. Fork the [package](https://github.com/ArkEcosystem/rust-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/rust-crypto).
 
 2. Clone your forked repository.
 
@@ -559,7 +559,7 @@ cargo test
 
 ::: tab elixir
 
-1. Fork the [package](https://github.com/ArkEcosystem/elixir-crypto).
+1. Fork the [package](https://github.com/ARKEcosystem/elixir-crypto).
 
 2. Clone your forked repository.
 
@@ -597,7 +597,7 @@ Depending on the library, you must import and initialize it in a specific way.
 
 ::: tab javascript
 
-To perform cryptographic functions with the Ark JavaScript Crypto library, you must first require it:
+To perform cryptographic functions with the ARK JavaScript Crypto library, you must first require it:
 
 ```js
 const { crypto } = require("@arkecosystem/crypto");
@@ -623,7 +623,7 @@ import org.arkecosystem.crypto.transactions.builder.Transfer;
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 ```
 
 :::
@@ -631,7 +631,7 @@ using ArkEcosystem.Crypto;
 ::: tab php
 
 ```php
-use ArkEcosystem\Crypto\Transactions\Builder\Transfer;
+use ARKEcosystem\Crypto\Transactions\Builder\Transfer;
 ```
 
 :::
@@ -650,7 +650,7 @@ from crypto.transactions.builder.transfer import Transfer
 package main
 
 import (
-    crypto "github.com/ArkEcosystem/go-crypto/crypto"
+    crypto "github.com/ARKEcosystem/go-crypto/crypto"
 )
 ```
 
@@ -686,8 +686,8 @@ use arkecosystem_crypto::transactions::builder;
 ::: tab elixir
 
 ```elixir
-alias ArkEcosystem.Crypto.Transactions.Transaction
-alias ArkEcosystem.Crypto.Transactions.Builder
+alias ARKEcosystem.Crypto.Transactions.Transaction
+alias ARKEcosystem.Crypto.Transactions.Builder
 ```
 
 :::
@@ -751,7 +751,7 @@ Transaction transfer = new Transfer()
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 var transaction = Crypto.Builder.Transfer.Create(
   "AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
@@ -766,7 +766,7 @@ var transaction = Crypto.Builder.Transfer.Create(
 ::: tab php
 
 ```php
-use ArkEcosystem\Crypto\Transactions\Builder\Transfer;
+use ARKEcosystem\Crypto\Transactions\Builder\Transfer;
 
 $transaction = Transfer::new()
     ->recipient('DGihocTkwDygiFvmg6aG8jThYTic47GzU9')
@@ -807,7 +807,7 @@ transaction := crypto.BuildTransfer(
 Using the Transaction builder class.
 
 ```cpp
-Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+ARK::Crypto::Transactions::Transaction transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",
@@ -818,9 +818,9 @@ Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Bui
 We can also do this manually.
 
 ```cpp
-  Ark::Crypto::Transactions::Transaction transaction;
-  transaction.type = Ark::Crypto::Enums::Types::TRANSFER;
-  transaction.fee = Ark::Crypto::Configuration::Fee().get(Ark::Crypto::Enums::Types::TRANSFER);
+  ARK::Crypto::Transactions::Transaction transaction;
+  transaction.type = ARK::Crypto::Enums::Types::TRANSFER;
+  transaction.fee = ARK::Crypto::Configuration::Fee().get(ARK::Crypto::Enums::Types::TRANSFER);
   transaction.recipientId = "recipientId";
   transaction.amount = 1000000000;
   transaction.vendorField = "vendorfield";
@@ -835,7 +835,7 @@ We can also do this manually.
 ```ruby
 require 'arkecosystem/crypto'
 
-transaction = ArkEcosystem::Crypto::Transactions::Builder::Transfer.new()
+transaction = ARKEcosystem::Crypto::Transactions::Builder::Transfer.new()
   .set_recipient_id('DGihocTkwDygiFvmg6aG8jThYTic47GzU9')
   .set_amount(1 * 10 ** 8)
   .set_vendor_field('This is a transaction from Ruby')
@@ -851,7 +851,7 @@ puts transaction.to_params
 
 ```swift
 // Creating a transaction automatically signs it with the provides passphrase(s)
-let transfer = ArkBuilder.buildTransfer(
+let transfer = ARKBuilder.buildTransfer(
     "secret passphrase",
     secondPassphrase: nil,
     to: "DBk4cPYpqp7EBcvkstVDpyX7RQJNHxpMg8",
@@ -880,8 +880,8 @@ let transaction = builder::build_transfer(
 ::: tab elixir
 
 ```elixir
-alias ArkEcosystem.Crypto.Transactions.Transaction
-alias ArkEcosystem.Crypto.Transactions.Builder
+alias ARKEcosystem.Crypto.Transactions.Transaction
+alias ARKEcosystem.Crypto.Transactions.Builder
 
 transaction = Builder.build_transfer(
     "AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
@@ -899,7 +899,7 @@ IO.puts Transaction.verify(transaction)
 
 ### Serialize (AIP11)
 
-Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the Ark Blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
+Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the ARK Blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
 
 :::: tabs
 
@@ -925,7 +925,7 @@ String serializedHex = Arrays.toString(bytes);
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 var transaction = new Serializer(transactionObject).Serialize();
 ```
@@ -935,7 +935,7 @@ var transaction = new Serializer(transactionObject).Serialize();
 ::: tab php
 
 ```php
-use ArkEcosystem\Crypto\Transactions\Serializer;
+use ARKEcosystem\Crypto\Transactions\Serializer;
 
 $buffer = Serializer::new($transaction)->serialize();
 ```
@@ -963,14 +963,14 @@ serialized := crypto.SerializeTransaction(transaction)
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
+ARK::Crypto::Transactions::Transaction transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",
     "passphrase",
     "secondPassphrase");
 
-Ark::Crypto::Transactions::Serializer serializer(transfer);
+ARK::Crypto::Transactions::Serializer serializer(transfer);
 std::string serializedTransaction = serializer.serialize();
 ```
 
@@ -981,7 +981,7 @@ std::string serializedTransaction = serializer.serialize();
 ```ruby
 require 'arkecosystem/crypto'
 
-serializer = ArkEcosystem::Crypto::Transactions::Serializer.new(transaction)
+serializer = ARKEcosystem::Crypto::Transactions::Serializer.new(transaction)
 
 puts serializer.serialize
 ```
@@ -991,7 +991,7 @@ puts serializer.serialize
 ::: tab swift
 
 ```swift
-let serialized = ArkSerializer.serialize(transaction: transaction)
+let serialized = ARKSerializer.serialize(transaction: transaction)
 ```
 
 :::
@@ -1009,7 +1009,7 @@ println!("{:?}", transactions::serialize(&transaction));
 ::: tab elixir
 
 ```elixir
-alias ArkEcosystem.Crypto.Transactions.Serializer
+alias ARKEcosystem.Crypto.Transactions.Serializer
 
 serialized = Serializer.serialize(transaction, %{underscore: true})
 
@@ -1047,7 +1047,7 @@ Transaction transaction = new Deserializer().deserialize("serialized-hex");
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 var transaction = new Deserializer(serializedTransaction).Deserialize();
 ```
@@ -1057,7 +1057,7 @@ var transaction = new Deserializer(serializedTransaction).Deserialize();
 ::: tab php
 
 ```php
-use ArkEcosystem\Crypto\Transactions\Deserializer;
+use ARKEcosystem\Crypto\Transactions\Deserializer;
 
 $transaction = Deserializer::new($serializedTransaction)->deserialize();
 ```
@@ -1085,7 +1085,7 @@ transaction := crypto.DeserializeTransaction(serialized)
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Transactions::Deserializer deserializer("serialized_transaction");
+ARK::Crypto::Transactions::Deserializer deserializer("serialized_transaction");
 auto actual = deserializer.deserialize();
 ```
 
@@ -1096,7 +1096,7 @@ auto actual = deserializer.deserialize();
 ```ruby
 require 'arkecosystem/crypto'
 
-deserializer = ArkEcosystem::Crypto::Transactions::Deserializer.new(serialized_transaction)
+deserializer = ARKEcosystem::Crypto::Transactions::Deserializer.new(serialized_transaction)
 ```
 
 :::
@@ -1104,7 +1104,7 @@ deserializer = ArkEcosystem::Crypto::Transactions::Deserializer.new(serialized_t
 ::: tab swift
 
 ```swift
-let deserialized = ArkDeserializer.deserialize(serialized: serialized)
+let deserialized = ARKDeserializer.deserialize(serialized: serialized)
 ```
 
 :::
@@ -1122,7 +1122,7 @@ let transaction = transactions::deserialize(&serialized_transaction);
 ::: tab elixir
 
 ```elixir
-alias ArkEcosystem.Crypto.Transactions.Deserializer
+alias ARKEcosystem.Crypto.Transactions.Deserializer
 
 transaction = Deserializer.deserialize(serialized_transaction)
 ```
@@ -1170,7 +1170,7 @@ Message message = Message.sign("Hello World", "this is a top secret passphrase")
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 var message = Message.Sign("Hello World", "passphrase");
 ```
@@ -1180,7 +1180,7 @@ var message = Message.Sign("Hello World", "passphrase");
 ::: tab php
 
 ```php
-use ArkEcosystem\Crypto\Utils\Message;
+use ARKEcosystem\Crypto\Utils\Message;
 
 $message = Message::sign('Hello World', 'this is a top secret passphrase');
 ```
@@ -1210,7 +1210,7 @@ message, _ := crypto.SignMessage("Hello World", "top secret")
 ```cpp
 const auto text = "Computer science is no more about computers than astronomy is about telescopes.";
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-Ark::Crypto::Utils::Message message;
+ARK::Crypto::Utils::Message message;
 message.sign(text, passphrase);
 ```
 
@@ -1221,7 +1221,7 @@ message.sign(text, passphrase);
 ```ruby
 require 'arkecosystem/crypto'
 
-message = ArkEcosystem::Crypto::Utils::Message.sign('Hello World', 'this is a top secret passphrase')
+message = ARKEcosystem::Crypto::Utils::Message.sign('Hello World', 'this is a top secret passphrase')
 ```
 
 :::
@@ -1229,7 +1229,7 @@ message = ArkEcosystem::Crypto::Utils::Message.sign('Hello World', 'this is a to
 ::: tab swift
 
 ```swift
-let message = ArkMessage.sign(message: "Hello World", passphrase: "this is a top secret passphrase")
+let message = ARKMessage.sign(message: "Hello World", passphrase: "this is a top secret passphrase")
 ```
 
 :::
@@ -1247,7 +1247,7 @@ let message = Message::sign("Hello World", "this is a top secret passphrase");
 ::: tab elixir
 
 ```elixir
-alias ArkEcosystem.Crypto.Utils.Message
+alias ARKEcosystem.Crypto.Utils.Message
 
 message = Message.sign("Hello World", "passphrase")
 ```
@@ -1288,7 +1288,7 @@ System.out.println(message.verify());
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 var message = Message.Sign("Hello World", "passphrase");
 Console.WriteLine(message.Verify());
@@ -1299,7 +1299,7 @@ Console.WriteLine(message.Verify());
 ::: tab php
 
 ```php
-use ArkEcosystem\Crypto\Utils\Message;
+use ARKEcosystem\Crypto\Utils\Message;
 
 $message = Message::new([
     'publickey' => '02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9',
@@ -1340,10 +1340,10 @@ ok, err := message.Verify()
 
 ```cpp
 const auto text = "Computer science is no more about computers than astronomy is about telescopes.";
-Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromHex("0275776018638e5c40f1b922901e96cac2caa734585ef302b4a2801ee9a338a456");
+ARK::Crypto::Identities::PublicKey publicKey = ARK::Crypto::Identities::PublicKey::fromHex("0275776018638e5c40f1b922901e96cac2caa734585ef302b4a2801ee9a338a456");
 std::vector<uint8_t> signature = HexToBytes("3044022021704f2adb2e4a10a3ddc1d7d64552b8061c05f6d12a168c69091c75581d611402200edf37689d2786fc690af9f0f6fa1f629c95695039f648a6d455484302402e93");
 
-Ark::Crypto::Utils::Message message(
+ARK::Crypto::Utils::Message message(
     text,
     publicKey,
     signature
@@ -1359,7 +1359,7 @@ bool isValid = message.verify();
 ```ruby
 require 'arkecosystem/crypto'
 
-message = ArkEcosystem::Crypto::Utils::Message.new(
+message = ARKEcosystem::Crypto::Utils::Message.new(
   publickey: '02e012f0a7cac12a74bdc17d844cbc9f637177b470019c32a53cef94c7a56e2ea9',
   signature: '304402202e00853a2438249fbaa030151b47e25bc1668dfed6eb7bc159fb347e50e7a87e0220472dcef61c89904fd05e2069cedf89ccbf644fe8d741a0b78aa3933056ca0802',
   message: 'Hello World'
@@ -1374,7 +1374,7 @@ puts message.verify
 
 ```swift
 // Create a message by providing the required info, or sign one with the method shown above
-let message = ArkMessage(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
+let message = ARKMessage(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192",
                          signature: "304402200fb4adddd1f1d652b544ea6ab62828a0a65b712ed447e2538db0caebfa68929e02205ecb2e1c63b29879c2ecf1255db506d671c8b3fa6017f67cfd1bf07e6edd1cc8",
                          message: "Hello World")
 
@@ -1402,7 +1402,7 @@ println!("Valid: {:?}", message.verify());
 ::: tab elixir
 
 ```elixir
-alias ArkEcosystem.Crypto.Utils.Message
+alias ARKEcosystem.Crypto.Utils.Message
 
 message = Message.sign("Hello World", "passphrase")
 
@@ -1448,7 +1448,7 @@ Address.fromPassphrase("this is a top secret passphrase");
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.Address.FromPassphrase('this is a top secret passphrase');
 ```
@@ -1458,7 +1458,7 @@ Identities.Address.FromPassphrase('this is a top secret passphrase');
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\Address::fromPassphrase('this is a top secret passphrase');
+ARKEcosystem\Crypto\Identities\Address::fromPassphrase('this is a top secret passphrase');
 ```
 
 :::
@@ -1486,7 +1486,7 @@ address, _ := crypto.AddressFromPassphrase("this is a top secret passphrase")
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
 const uint8_t networkVersion = 0x1E;
-Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPassphrase(passphrase, networkVersion);
+ARK::Crypto::Identities::Address address = ARK::Crypto::Identities::Address::fromPassphrase(passphrase, networkVersion);
 ```
 
 :::
@@ -1494,7 +1494,7 @@ Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fro
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::Address.from_passphrase('this is a top secret passphrase')
+ARKEcosystem::Crypto::Identities::Address.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -1502,7 +1502,7 @@ ArkEcosystem::Crypto::Identities::Address.from_passphrase('this is a top secret 
 ::: tab swift
 
 ```swift
-let address = ArkAddress.from(passphrase: "this is a top secret passphrase")
+let address = ARKAddress.from(passphrase: "this is a top secret passphrase")
 ```
 
 :::
@@ -1519,7 +1519,7 @@ address::from_passphrase("this is a top secret passphrase", None);
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.Address.from_passphrase('this is a top secret passphrase')
+ARKEcosystem.Crypto.Identities.Address.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -1553,7 +1553,7 @@ Address.fromPublicKey("034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.Address.FromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
@@ -1563,7 +1563,7 @@ Identities.Address.FromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\Address::fromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
+ARKEcosystem\Crypto\Identities\Address::fromPublicKey('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
 
 :::
@@ -1590,9 +1590,9 @@ address := publicKey.ToAddress()
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+ARK::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
 const uint8_t networkVersion = 0x1E;
-Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPublicKey(publicKey, networkVersion);
+ARK::Crypto::Identities::Address address = ARK::Crypto::Identities::Address::fromPublicKey(publicKey, networkVersion);
 ```
 
 :::
@@ -1600,7 +1600,7 @@ Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fro
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::Address.from_public_key('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
+ARKEcosystem::Crypto::Identities::Address.from_public_key('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
 ```
 
 :::
@@ -1608,7 +1608,7 @@ ArkEcosystem::Crypto::Identities::Address.from_public_key('034151a3ec46b5670a682
 ::: tab swift
 
 ```swift
-let address = ArkAddress.from(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192")
+let address = ARKAddress.from(publicKey: "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192")
 ```
 
 :::
@@ -1626,7 +1626,7 @@ address::from_public_key(&public_key, None);
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.Address.from_public_key('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
+ARKEcosystem.Crypto.Identities.Address.from_public_key('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
 ```
 
 :::
@@ -1660,7 +1660,7 @@ Address.fromPrivateKey(privateKey);
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.Address.FromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
 ```
@@ -1670,7 +1670,7 @@ Identities.Address.FromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d7
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\Address::fromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
+ARKEcosystem\Crypto\Identities\Address::fromPrivateKey('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
 ```
 
 :::
@@ -1700,7 +1700,7 @@ fmt.Println(privateKey.ToAddress())
 ```cpp
 PrivateKey privateKey("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
 const uint8_t networkVersion = 0x1E;
-Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPrivateKey(privateKey, networkVersion);
+ARK::Crypto::Identities::Address address = ARK::Crypto::Identities::Address::fromPrivateKey(privateKey, networkVersion);
 ```
 
 :::
@@ -1708,7 +1708,7 @@ Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fro
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::Address.from_private_key('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
+ARKEcosystem::Crypto::Identities::Address.from_private_key('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
 ```
 
 :::
@@ -1716,7 +1716,7 @@ ArkEcosystem::Crypto::Identities::Address.from_private_key('d8839c2432bfd0a67ef1
 ::: tab swift
 
 ```swift
-let address = ArkAddress.from(privateKey: ArkPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712"))
+let address = ARKAddress.from(privateKey: ARKPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712"))
 ```
 
 :::
@@ -1734,7 +1734,7 @@ address::from_private_key(&private_key, None);
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.Address.from_private_key('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
+ARKEcosystem.Crypto.Identities.Address.from_private_key('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
 ```
 
 :::
@@ -1766,7 +1766,7 @@ Address.validate("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.Address.Validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib');
 ```
@@ -1776,7 +1776,7 @@ Identities.Address.Validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib');
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\Address::validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib');
+ARKEcosystem\Crypto\Identities\Address::validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib');
 ```
 
 :::
@@ -1802,9 +1802,9 @@ fmt.Println(crypto.ValidateAddress("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"))
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Identities::Address address("DStZXkgpEjxbG355nQ26vnkp95p24U9tsV");
+ARK::Crypto::Identities::Address address("DStZXkgpEjxbG355nQ26vnkp95p24U9tsV");
 const uint8_t networkVersion = 0x1E;
-bool isValid = Ark::Crypto::Identities::Address::validate(address, networkVersion);
+bool isValid = ARK::Crypto::Identities::Address::validate(address, networkVersion);
 ```
 
 :::
@@ -1812,7 +1812,7 @@ bool isValid = Ark::Crypto::Identities::Address::validate(address, networkVersio
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::Address.validate('address')
+ARKEcosystem::Crypto::Identities::Address.validate('address')
 ```
 
 :::
@@ -1820,7 +1820,7 @@ ArkEcosystem::Crypto::Identities::Address.validate('address')
 ::: tab swift
 
 ```swift
-print(ArkAddress.validate(address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"))
+print(ARKAddress.validate(address: "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"))
 ```
 
 :::
@@ -1837,7 +1837,7 @@ address::validate("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib", None);
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.Address.validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib')
+ARKEcosystem.Crypto.Identities.Address.validate('D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib')
 ```
 
 :::
@@ -1877,7 +1877,7 @@ PrivateKey.fromPassphrase("this is a top secret passphrase").getPrivateKeyAsHex(
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.PrivateKey.FromPassphrase('this is a top secret passphrase');
 ```
@@ -1887,7 +1887,7 @@ Identities.PrivateKey.FromPassphrase('this is a top secret passphrase');
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\PrivateKey::fromPassphrase('this is a top secret passphrase');
+ARKEcosystem\Crypto\Identities\PrivateKey::fromPassphrase('this is a top secret passphrase');
 ```
 
 :::
@@ -1914,7 +1914,7 @@ privateKey, _ := crypto.PrivateKeyFromPassphrase("this is a top secret passphras
 
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromPassphrase(passphrase);
+ARK::Crypto::Identities::PrivateKey privateKey = ARK::Crypto::Identities::PrivateKey::fromPassphrase(passphrase);
 ```
 
 :::
@@ -1922,7 +1922,7 @@ Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::Privat
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::PrivateKey.from_passphrase('this is a top secret passphrase')
+ARKEcosystem::Crypto::Identities::PrivateKey.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -1930,7 +1930,7 @@ ArkEcosystem::Crypto::Identities::PrivateKey.from_passphrase('this is a top secr
 ::: tab swift
 
 ```swift
-let privateKey = ArkPrivateKey.from(passphrase: "this is a top secret passphrase")
+let privateKey = ARKPrivateKey.from(passphrase: "this is a top secret passphrase")
 ```
 
 :::
@@ -1947,7 +1947,7 @@ private_key::from_passphrase("this is a top secret passphrase").unwrap();
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.PrivateKey.from_passphrase('this is a top secret passphrase')
+ARKEcosystem.Crypto.Identities.PrivateKey.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -1977,7 +1977,7 @@ PrivateKey.fromHex("d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.PrivateKey.FromHex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
 ```
@@ -1987,7 +1987,7 @@ Identities.PrivateKey.FromHex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d70791
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\PrivateKey::fromHex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
+ARKEcosystem\Crypto\Identities\PrivateKey::fromHex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712');
 ```
 
 :::
@@ -2013,7 +2013,7 @@ privateKey, _ := crypto.PrivateKeyFromHex("d8839c2432bfd0a67ef10a804ba991eabba19
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromHex("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
+ARK::Crypto::Identities::PrivateKey privateKey = ARK::Crypto::Identities::PrivateKey::fromHex("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
 ```
 
 :::
@@ -2021,7 +2021,7 @@ Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::Privat
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
+ARKEcosystem::Crypto::Identities::PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
 ```
 
 :::
@@ -2029,7 +2029,7 @@ ArkEcosystem::Crypto::Identities::PrivateKey.from_hex('d8839c2432bfd0a67ef10a804
 ::: tab swift
 
 ```swift
-let privateKey = ArkPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
+let privateKey = ARKPrivateKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
 ```
 
 :::
@@ -2046,7 +2046,7 @@ private_key::from_hex("d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d458
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
+ARKEcosystem.Crypto.Identities.PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712')
 ```
 
 :::
@@ -2078,7 +2078,7 @@ This function has not been implemented in this client library.
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\PrivateKey::fromWif('SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA');
+ARKEcosystem\Crypto\Identities\PrivateKey::fromWif('SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA');
 ```
 
 :::
@@ -2095,7 +2095,7 @@ This function has not been implemented in this client library.
 
 ```cpp
 const char* wifStr = "SEZuJZouNK8GLXNApjciH4QnSKiNr971exVcL2Y6XfrDF5o977zB";
-Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromWIFString(wifStr, wifByte);
+ARK::Crypto::Identities::PrivateKey privateKey = ARK::Crypto::Identities::PrivateKey::fromWIFString(wifStr, wifByte);
 ```
 
 :::
@@ -2151,7 +2151,7 @@ PublicKey.fromPassphrase("this is a top secret passphrase");
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.PublicKey.FromPassphrase('this is a top secret passphrase');
 ```
@@ -2161,7 +2161,7 @@ Identities.PublicKey.FromPassphrase('this is a top secret passphrase');
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\PublicKey::fromPassphrase('this is a top secret passphrase');
+ARKEcosystem\Crypto\Identities\PublicKey::fromPassphrase('this is a top secret passphrase');
 ```
 
 :::
@@ -2188,7 +2188,7 @@ publicKey, _ := crypto.PublicKeyFromPassphrase("this is a top secret passphrase"
 
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromPassphrase(passphrase);
+ARK::Crypto::Identities::PublicKey publicKey = ARK::Crypto::Identities::PublicKey::fromPassphrase(passphrase);
 ```
 
 :::
@@ -2196,7 +2196,7 @@ Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKe
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::PublicKey.from_passphrase('this is a top secret passphrase')
+ARKEcosystem::Crypto::Identities::PublicKey.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -2204,7 +2204,7 @@ ArkEcosystem::Crypto::Identities::PublicKey.from_passphrase('this is a top secre
 ::: tab swift
 
 ```swift
-let publicKey = ArkPublicKey.from(passphrase: "this is a top secret passphrase")
+let publicKey = ARKPublicKey.from(passphrase: "this is a top secret passphrase")
 ```
 
 :::
@@ -2222,7 +2222,7 @@ public_key::from_passphrase("this is a top secret passphrase").unwrap();
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.PublicKey.from_passphrase('this is a top secret passphrase')
+ARKEcosystem.Crypto.Identities.PublicKey.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -2244,7 +2244,7 @@ This function has not been implemented in this client library.
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.PublicKey.FromHex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
@@ -2254,7 +2254,7 @@ Identities.PublicKey.FromHex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\PublicKey::fromHex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
+ARKEcosystem\Crypto\Identities\PublicKey::fromHex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
 
 :::
@@ -2280,7 +2280,7 @@ publicKey, _ := crypto.PublicKeyFromHex("034151a3ec46b5670a682b0a63394f863587d1b
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromHex("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+ARK::Crypto::Identities::PublicKey publicKey = ARK::Crypto::Identities::PublicKey::fromHex("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
 ```
 
 :::
@@ -2288,7 +2288,7 @@ Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKe
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::PublicKey.from_hex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
+ARKEcosystem::Crypto::Identities::PublicKey.from_hex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
 ```
 
 :::
@@ -2296,7 +2296,7 @@ ArkEcosystem::Crypto::Identities::PublicKey.from_hex('034151a3ec46b5670a682b0a63
 ::: tab swift
 
 ```swift
-let publicKey = ArkPublicKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
+let publicKey = ARKPublicKey.from(hex: "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712")
 ```
 
 :::
@@ -2314,7 +2314,7 @@ public_key::from_hex("034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.PublicKey.from_hex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
+ARKEcosystem.Crypto.Identities.PublicKey.from_hex('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192')
 ```
 
 :::
@@ -2346,7 +2346,7 @@ This function has not been implemented in this client library.
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\PublicKey::validate('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
+ARKEcosystem\Crypto\Identities\PublicKey::validate('034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192');
 ```
 
 :::
@@ -2362,8 +2362,8 @@ This function has not been implemented in this client library.
 ::: tab C++
 
 ```cpp
-Ark::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
-bool isValid = Ark::Crypto::Identities::PublicKey::validate(publicKey);
+ARK::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+bool isValid = ARK::Crypto::Identities::PublicKey::validate(publicKey);
 ```
 
 :::
@@ -2419,7 +2419,7 @@ WIF.fromPassphrase("this is a top secret passphrase");
 ::: tab .NET
 
 ```csharp
-using ArkEcosystem.Crypto;
+using ARKEcosystem.Crypto;
 
 Identities.WIF.FromPassphrase('this is a top secret passphrase')
 ```
@@ -2429,7 +2429,7 @@ Identities.WIF.FromPassphrase('this is a top secret passphrase')
 ::: tab php
 
 ```php
-ArkEcosystem\Crypto\Identities\WIF::fromPassphrase('this is a top secret passphrase');
+ARKEcosystem\Crypto\Identities\WIF::fromPassphrase('this is a top secret passphrase');
 ```
 
 :::
@@ -2457,7 +2457,7 @@ privateKey, _ := crypto.PrivateKeyFromPassphrase("this is a top secret passphras
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
 const uint8_t wifByte = 0xaa;
-Ark::Crypto::Identities::WIF wif = Ark::Crypto::Identities::WIF::fromPassphrase(passphrase, wifByte);
+ARK::Crypto::Identities::WIF wif = ARK::Crypto::Identities::WIF::fromPassphrase(passphrase, wifByte);
 ```
 
 :::
@@ -2465,7 +2465,7 @@ Ark::Crypto::Identities::WIF wif = Ark::Crypto::Identities::WIF::fromPassphrase(
 ::: tab ruby
 
 ```ruby
-ArkEcosystem::Crypto::Identities::WIF.from_passphrase('this is a top secret passphrase')
+ARKEcosystem::Crypto::Identities::WIF.from_passphrase('this is a top secret passphrase')
 ```
 
 :::
@@ -2490,7 +2490,7 @@ wif::from_passphrase("this is a top secret passphrase").unwrap();
 ::: tab elixir
 
 ```elixir
-ArkEcosystem.Crypto.Identities.WIF.from_passphrase('this is a top secret passphrase')
+ARKEcosystem.Crypto.Identities.WIF.from_passphrase('this is a top secret passphrase')
 ```
 
 :::

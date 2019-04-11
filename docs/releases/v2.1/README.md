@@ -12,7 +12,7 @@ We recommend staying on the latest version of ARK; however, this upgrade does no
 
 ## Breaking Changes
 
-Plugins relying on the core-APIs may need to be refactored to TypeScript, and cannot rely on the same modules anymore. The [changelog](/releases/v2.1/changelog.md) contains all changes and references to each commit.
+Plugins relying on the core-APIs may need to be refactored to TypeScript, and cannot rely on the same modules anymore. The [changelog](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md) contains all changes and references to each commit.
 
 ## Upgrading
 

@@ -6,7 +6,6 @@ module.exports = [
     collapsable: true,
     children: [
       ["/releases/v2.3/", "Summary"],
-      "/releases/v2.3/changelog.md",
       "/releases/v2.3/migrating_2.2_2.3.md",
     ]
   },
@@ -15,7 +14,6 @@ module.exports = [
     collapsable: true,
     children: [
       ["/releases/v2.2/", "Summary"],
-      "/releases/v2.2/changelog.md",
       "/releases/v2.2/migrating_2.1_2.2.md",
     ]
   },
@@ -24,7 +22,6 @@ module.exports = [
     collapsable: true,
     children: [
       ["/releases/v2.1/", "Summary"],
-      "/releases/v2.1/changelog.md",
       "/releases/v2.1/changes.md",
       "/releases/v2.1/migrating_1.0_2.1.md",
       "/releases/v2.1/migrating_2.0_2.1.md",
@@ -35,7 +32,6 @@ module.exports = [
     collapsable: true,
     children: [
       ["/releases/v2.0.19/", "Summary"],
-      "/releases/v2.0.19/changelog.md",
       "/releases/v2.0.19/migrating_1.0_2.0.md",
     ]
   },

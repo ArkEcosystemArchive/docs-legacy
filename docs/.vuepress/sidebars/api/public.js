@@ -14,6 +14,7 @@ module.exports = [
     collapsable: false,
     children: [
       ['/api/public/v2/', 'Getting Started'],
+      ['/api/public/v2/blockchain', 'Blockchain'],
       ['/api/public/v2/blocks', 'Blocks'],
       ['/api/public/v2/delegates', 'Delegates'],
       ['/api/public/v2/node', 'Node'],

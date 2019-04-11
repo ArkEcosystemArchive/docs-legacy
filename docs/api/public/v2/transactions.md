@@ -19,7 +19,7 @@ POST /api/transactions
 ### Body Parameters
 
 | Name         | Type  | Description                         |      Required      |
-| ------------ | :---: | ----------------------------------- | :----------------: |
+| :----------- | :---: | :---------------------------------- | :----------------: |
 | transactions | array | The list of transactions to create. | :white_check_mark: |
 
 ### Response
@@ -57,7 +57,7 @@ GET /api/transactions/{id}
 ### Path Parameters
 
 | Name |  Type  | Description                                        |      Required      |
-| ---- | :----: | -------------------------------------------------- | :----------------: |
+| :--- | :----: | :------------------------------------------------- | :----------------: |
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -96,7 +96,7 @@ GET /api/transactions
 ### Query Parameters
 
 | Name    | Type | Description                                   | Required |
-| ------- | :--: | --------------------------------------------- | :------: |
+| :------ | :--: | :-------------------------------------------- | :------: |
 | page    | int  | The number of the page that will be returned. |   :x:    |
 | limit   | int  | The number of resources per page.             |   :x:    |
 | type    | int  | The transaction type to be retrieved.         |   :x:    |
@@ -153,7 +153,7 @@ GET /api/transactions/unconfirmed/
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -274,7 +274,7 @@ GET /api/transactions/unconfirmed/{id}
 ### Path Parameters
 
 | Name |  Type  | Description                                        |      Required      |
-| ---- | :----: | -------------------------------------------------- | :----------------: |
+| :--- | :----: | :------------------------------------------------- | :----------------: |
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -314,14 +314,14 @@ POST /api/transactions/search
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
 ### Body Parameters
 
 | Name            |  Type  | Description | Required |
-| --------------- | :----: | ----------- | :------: |
+| :-------------- | :----: | :---------- | :------: |
 | orderBy         | string | ...         |   :x:    |
 | id              | string | ...         |   :x:    |
 | blockId         | string | ...         |   :x:    |

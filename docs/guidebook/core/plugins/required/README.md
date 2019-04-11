@@ -5,7 +5,7 @@ title: "Introduction"
 All plugins listed on this page are actively maintained and **required** to run a relay that can sync with the network.
 
 | Package                                                                            |                                                                   Version                                                                    |
-| ---------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------: |
+| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------: |
 | [core](/guidebook/core/plugins/required/core.md)                                   |                  [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core)](https://www.npmjs.com/package/@arkecosystem/core)                  |
 | [core-blockchain](/guidebook/core/plugins/required/core-blockchain.md)             |       [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-blockchain)](https://www.npmjs.com/package/@arkecosystem/core-blockchain)       |
 | [core-container](/guidebook/core/plugins/required/core-container.md)               |        [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-container)](https://www.npmjs.com/package/@arkecosystem/core-container)        |

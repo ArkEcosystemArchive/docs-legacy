@@ -50,7 +50,7 @@ Be sure to complete all of the following changes before you continue to upgrade 
 From version 2.3 onwards all aliases defined by Core packages will adhere to the `kebab-case` format. If your plugin makes use of any of the following packages, make sure to adjust the calls to the core containers `resolvePlugin` and `resolveOptions` methods with the new alias:
 
 | Old             | New              |
-| --------------- | ---------------- |
+| :-------------- | :--------------- |
 | databaseManager | database-manager |
 | logManager      | log-manager      |
 | transactionPool | transaction-pool |

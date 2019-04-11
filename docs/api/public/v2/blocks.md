@@ -21,7 +21,7 @@ GET /api/blocks
 ### Query Parameters
 
 | Name   | Type   | Description                                   | Required |
-|--------|:------:|-----------------------------------------------|:--------:|
+| :----- | :----: | :-------------------------------------------- | :------: |
 | page   | int    | The number of the page that will be returned. | :x:      |
 | limit  | int    | The number of resources per page.             | :x:      |
 | id     | string | The identifier of the block to be retrieved.  | :x:      |
@@ -169,9 +169,9 @@ GET /api/blocks/{id|height}
 
 ### Path Parameters
 
-| Name         | Type   | Description                                            | Required           |
-|--------------|:------:|--------------------------------------------------------|:------------------:|
-| {id\|height} | string | The ID or height of the block to be retrieved.         | :white_check_mark: |
+| Name         | Type   | Description                                    | Required           |
+| :----------- | :----: | :--------------------------------------------- | :----------------: |
+| {id\|height} | string | The ID or height of the block to be retrieved. | :white_check_mark: |
 
 ### Examples
 
@@ -229,13 +229,13 @@ GET /api/blocks/{id|height}/transactions
 ### Path Parameters
 
 | Name         | Type   | Description                                  | Required           |
-|--------------|:------:|----------------------------------------------|:------------------:|
+| :----------- | :----: | :------------------------------------------- | :----------------: |
 | {id\|height} | string | The identifier of the block to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. | :x:      |
 | limit | int  | The number of resources per page.             | :x:      |
 
@@ -311,14 +311,14 @@ POST /api/blocks/search
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. | :x:      |
 | limit | int  | The number of resources per page.             | :x:      |
 
 ### Body Parameters
 
 | Name                      | Type   | Description                                                                                                                      | Required |
-|---------------------------|:------:|----------------------------------------------------------------------------------------------------------------------------------|:--------:|
+| :------------------------ | :----: | :------------------------------------------------------------------------------------------------------------------------------- | :------: |
 | id                        | string | ID of the block.                                                                                                                 | :x:      |
 | version                   | int    | Version of the block.                                                                                                            | :x:      |
 | previousBlock             | int    | ID of the previous block.                                                                                                        | :x:      |

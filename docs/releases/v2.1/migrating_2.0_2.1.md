@@ -98,7 +98,7 @@ dynamicFees: {
 From version 2.1 onwards Core will make use of system specific paths to support as many platforms as possible in the long-term.
 
 | Old             | New                                  |
-| --------------- | ------------------------------------ |
+| :-------------- | :----------------------------------- |
 | ~/.ark/database | $HOME/.local/share/ark-core/$network |
 | ~/.ark/config   | $HOME/.config/ark-core/$network      |
 | n/a             | $HOME/.cache/ark-core/$network       |

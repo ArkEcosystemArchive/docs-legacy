@@ -15,7 +15,7 @@ GET /api/accounts/getAllAccounts
 ### Query Parameters
 
 | Name   | Type | Description                                    | Required |
-|--------|:----:|------------------------------------------------|:--------:|
+| :----- | :--: | :--------------------------------------------- | :------: |
 | offset | int  | The offset of resources that will be returned. | :x:      |
 | limit  | int  | The number of resources per page.              | :x:      |
 
@@ -58,7 +58,7 @@ GET /api/accounts
 ### Query Parameters
 
 | Name    | Type   | Description                                    | Required           |
-|---------|:------:|------------------------------------------------|:------------------:|
+| :------ | :----: | :--------------------------------------------- | :----------------: |
 | address | string | The identifier of the account to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -98,7 +98,7 @@ GET /api/accounts/top
 ### Query Parameters
 
 | Name   | Type | Description                                    | Required |
-|--------|:----:|------------------------------------------------|:--------:|
+| :----- | :--: | :--------------------------------------------- | :------: |
 | offset | int  | The offset of resources that will be returned. | :x:      |
 | limit  | int  | The number of resources per page.              | :x:      |
 
@@ -137,7 +137,7 @@ GET /api/accounts/getBalance
 ### Query Parameters
 
 | Name    | Type   | Description                                    | Required           |
-|---------|:------:|------------------------------------------------|:------------------:|
+| :------ | :----: | :--------------------------------------------- | :----------------: |
 | address | string | The identifier of the account to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -196,7 +196,7 @@ GET /api/accounts/getPublicKey
 ### Query Parameters
 
 | Name    | Type   | Description                                    | Required           |
-|---------|:------:|------------------------------------------------|:------------------:|
+| :------ | :----: | :--------------------------------------------- | :----------------: |
 | address | string | The identifier of the account to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -255,7 +255,7 @@ GET /api/accounts/delegates
 ### Query Parameters
 
 | Name    | Type   | Description                                    | Required           |
-|---------|:------:|------------------------------------------------|:------------------:|
+| :------ | :----: | :--------------------------------------------- | :----------------: |
 | address | string | The identifier of the account to be retrieved. | :white_check_mark: |
 
 ### Response

@@ -11,7 +11,7 @@ To operate a node in any ARK network, you need to provide configuration to it on
 ARK Core allows you to use a [.env](https://github.com/bevry/envfile) file to provide a configuration that is environment specific without having to touch the `~/.config/ark-core/{network}/plugins.js` file. The `.env` file needs to be stored at `~/.config/ark-core/{network}/.env`.
 
 | Variable           | Plugin                               | Default    |
-| ------------------ | ------------------------------------ | ---------- |
+| :----------------- | :----------------------------------- | :--------- |
 | CORE_DB_HOST       | @arkecosystem/core-database-postgres | localhost  |
 | CORE_DB_USERNAME   | @arkecosystem/core-database-postgres | ark        |
 | CORE_DB_PASSWORD   | @arkecosystem/core-database-postgres | password   |

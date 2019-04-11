@@ -114,17 +114,17 @@ Since an address is derived from a [PublicKey](#publickey), that means it is als
 
 ### Network Prefixes
 
-| network: | dec: |  hex:  | prefix: | example address:                     |
-| :------- | :--: | :----: | :-----: | :----------------------------------- |
-| Mainnet  |  30  | `0x17` |   `A`   | "AewxfHQobSc49a4radHp74JZCGP8LRe4xA" |
-| Devnet   |  23  | `0x1E` |   `D`   | "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib" |
+| Network | dec |  hex   | Prefix  | Example address                      |
+| :------ | :-: | :----: | :-----: | :----------------------------------- |
+| Mainnet | 30  | `0x17` |   `A`   | `AewxfHQobSc49a4radHp74JZCGP8LRe4xA` |
+| Devnet  | 23  | `0x1E` |   `D`   | `D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib` |
 
 #### Address Prefix Table
 
 The following is a full prefix-byte table for custom Address construction and is provided for informational purposes.
 While this would not be used for ARK Mainnet or Devnet, it _CAN_ be used for custom networks.
 
-|     dec:      |      hex:       |       prefix:       |
+|      dec      |      hex        |       Prefix        |
 | :-----------: | :-------------: | :-----------------: |
 |      `0`      |     `0x00`      |         `1`         |
 |      `1`      |     `0x01`      | `Q-Z`, `a-k`, `m-o` |
@@ -245,7 +245,7 @@ While this would not be used for ARK Mainnet or Devnet, it _CAN_ be used for cus
 |     `144`     |     `0x90`      |     `z` or `2`      |
 | `145` - `255` | `0x91` - `0xFF` |         `2`         |
 
-> adapted from: https://en.bitcoin.it/wiki/List_of_address_prefixes
+> Adapted from: [https://en.bitcoin.it/wiki/List_of_address_prefixes](https://en.bitcoin.it/wiki/List_of_address_prefixes)
 
 <!-- ### BIP32 | HD Wallets -->
 
@@ -270,7 +270,7 @@ ARK Signatures also use [DER Encoding](#der).
 
 It is a standard to sign and verify transactions/messages and [Signatures](#signature) using [Elliptical Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic-curve_cryptography).
 
-|            ECDSA Equation:             |
+|            ECDSA Equation              |
 | :------------------------------------: |
 | y<sup>2</sup> = x<sup>3</sup> + ax + b |
 
@@ -283,22 +283,19 @@ Additionally, no two inputs will ever produce the same output;
 It is also hard to reverse.
 This is known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography) and is the basis for Curve Cryptography.
 
-| Curve Parameters: |
-| :---------------: |
-|       a = 0       |
-|       b = 7       |
+| Curve Parameters |
+| :--------------: |
+|       a = 0      |
+|       b = 7      |
 
 |             SECP256K1 Equation             |
 | :----------------------------------------: |
 | y<sup>2</sup> = x<sup>3</sup> + (0)x + (7) |
 |     y<sup>2</sup> = x<sup>3</sup> + 7      |
 
----
-
-> "Can the reader say what two numbers multiplied together will produce the number 8616460799? I think it unlikely that anyone but myself will ever know"
-> -William S Jevons, The Principles of Science, 1874
-
----
+> Can the reader say what two numbers multiplied together will produce the number 8616460799? I think it unlikely that anyone but myself will ever know.
+>
+> ~ William S Jevons, The Principles of Science, 1874
 
 ### Encoding
 
@@ -325,15 +322,15 @@ The (r,s) section identifiers and their sizes occupy a total of 4-bytes.
 
 The total length of our signature is 68-bytes (`0x44` in hex).
 
-|   identifier: | size(dec): | size(hex): |
-| ------------: | :--------- | :--------- |
-|   r sequence: | 1          | 1          |
-|        r size | 1          | 1          |
-|      r-value: | 32         | 20         |
-|    s sequence | 1          | 1          |
-|        s size | 1          | 1          |
-|      s-value: | 32         | 20         |
-| total length: | 68         | 44         |
+| Identifier   | Size (dec) | Size (hex) |
+| :----------- | :--------: | :--------: |
+| r sequence   |    `1`     |    `0x1`   |
+| r size       |    `1`     |    `0x1`   |
+| r-value:     |   `32`     |   `0x20`   |
+| s sequence   |    `1`     |    `0x1`   |
+| s size       |    `1`     |    `0x1`   |
+| s-value      |   `32`     |   `0x20`   |
+| total length |   `68`     |   `0x44`   |
 
 The very first byte of an encoded signature is the sequence identifier `30`.
 

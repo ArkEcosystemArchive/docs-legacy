@@ -17,7 +17,7 @@ To communicate with the Webhooks API, you will need to provide the token you con
 ### Headers
 
 | Name          | Type   | Description                                          | Required           |
-|---------------|:------:|------------------------------------------------------|:------------------:|
+| :------------ | :----: | :--------------------------------------------------- | :----------------: |
 | Authorization | string | The webhook token defined in the node configuration. | :white_check_mark: |
 
 ## List all webhooks
@@ -33,7 +33,7 @@ GET /api/webhooks
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-|-------|:----:|-----------------------------------------------|:--------:|
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. | :x:      |
 | limit | int  | The number of resources per page.             | :x:      |
 
@@ -82,7 +82,7 @@ GET /api/webhooks/{id}
 ### Path Parameters
 
 | Name | Type   | Description                                    | Required           |
-|------|:------:|------------------------------------------------|:------------------:|
+| :--- | :----: | :--------------------------------------------- | :----------------: |
 | id   | string | The identifier of the webhook to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -120,7 +120,7 @@ POST /api/webhooks
 ### Body Parameters
 
 | Name       | Type   | Description                                             | Required           |
-|------------|:------:|---------------------------------------------------------|:------------------:|
+| :--------- | :----: | :------------------------------------------------------ | :----------------: |
 | event      | string | The name of the event to be listened for.               | :white_check_mark: |
 | target     | string | The target URL for the HTTP payload.                    | :white_check_mark: |
 | enabled    | string | The value to enable or disable the webhook.             | :x:                |
@@ -150,7 +150,7 @@ POST /api/webhooks
 ### Events  
 
 | Event                     | Description                                                                         | Implemented        |
-|---------------------------|-------------------------------------------------------------------------------------|--------------------|
+| :-------------------------| :-----------------------------------------------------------------------------------| :------------------|
 | block.applied             | Fires when a block is saved                                                         | :white_check_mark: |
 | block.disregarded         | Fires when a block is disregarded                                                   | :white_check_mark: |
 | block.forged              | Fires when a block is forged                                                        | :white_check_mark: |
@@ -178,7 +178,7 @@ POST /api/webhooks
 ### Conditions  
 
 | Condition   | Description                                         |
-|-------------|-----------------------------------------------------|  
+| :-----------| :---------------------------------------------------|  
 | between     | Check if the given value is between min and max     |
 | contains    | Check if A contains B                               |
 | eq          | Check if A equals B                                 |
@@ -205,13 +205,13 @@ PUT /api/webhooks/{id}
 ### Path Parameters
 
 | Name | Type   | Description                                  | Required           |
-|------|:------:|----------------------------------------------|:------------------:|
+| :--- | :----: | :------------------------------------------- | :----------------: |
 | id   | string | The identifier of the webhook to be updated. | :white_check_mark: |
 
 ### Body Parameters
 
 | Name       | Type   | Description                                             | Required |
-|------------|:------:|---------------------------------------------------------|:--------:|
+| :--------- | :----: | :------------------------------------------------------ | :------: |
 | event      | string | The name of the event to be listened for.               | :x:      |
 | target     | string | The target URL for the HTTP payload.                    | :x:      |
 | enabled    | string | The value to enable or disable the webhook.             | :x:      |
@@ -236,7 +236,7 @@ DELETE /api/webhooks/{id}
 ### Path Parameters
 
 | Name | Type   | Description                                  | Required           |
-|------|:------:|----------------------------------------------|:------------------:|
+| :--- | :----: | :------------------------------------------- | :----------------: |
 | id   | string | The identifier of the webhook to be deleted. | :white_check_mark: |
 
 ### Response

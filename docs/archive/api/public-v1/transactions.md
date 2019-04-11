@@ -19,7 +19,7 @@ GET /api/transactions
 ### Query Parameters
 
 | Name            | Type   | Description                                                    | Required |
-|-----------------|:------:|----------------------------------------------------------------|:--------:|
+| :-------------- | :----: | :------------------------------------------------------------- | :------: |
 | offset          | int    | The offset of resources that will be returned.                 | :x:      |
 | limit           | int    | The number of resources per page.                              | :x:      |
 | blockId         | int    | Unique identifier for the block.                               | :x:      |
@@ -77,7 +77,7 @@ GET /api/transactions/get
 ### Query Parameters
 
 | Name | Type   | Description                                        | Required           |
-|------|:------:|----------------------------------------------------|:------------------:|
+| :--- | :----: | :------------------------------------------------- | :----------------: |
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -121,7 +121,7 @@ GET /api/transactions/unconfirmed
 ### Query Parameters
 
 | Name            | Type   | Description                                                    | Required        |
-|-----------------|:------:|----------------------------------------------------------------|:---------------:|
+| :-------------- | :----: | :------------------------------------------------------------- | :-------------: |
 | senderPublicKey | string | The sender public key by which the resources will be filtered. | :x:             |
 | id              | string | The address by which the resources will be filtered.           | :x:             |
 
@@ -154,7 +154,7 @@ GET /api/transactions/unconfirmed/get
 ### Query Parameters
 
 | Name | Type   | Description                                        | Required           |
-|------|:------:|----------------------------------------------------|:------------------:|
+| :--- | :----: | :------------------------------------------------- | :----------------: |
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
 
 ### Response

@@ -15,7 +15,7 @@ GET /api/peers
 ### Query Parameters
 
 | Name    | Type   | Description                                                   | Required |
-|---------|:------:|---------------------------------------------------------------|:--------:|
+| :------ | :----: | :------------------------------------------------------------ | :------: |
 | offset  | int    | The offset of resources that will be returned.                | :x:      |
 | limit   | int    | The number of resources per page.                             | :x:      |
 | port    | int    | The port by which the resources will be filtered.             | :x:      |
@@ -63,7 +63,7 @@ GET /api/peers/get
 ### Query Parameters
 
 | Name | Type | Description                                 | Required           |
-|------|:----:|---------------------------------------------|:------------------:|
+| :--- | :--: | :------------------------------------------ | :----------------: |
 | ip   | int  | The IP address of the peer to be retrieved. | :white_check_mark: |
 | port | int  | The port of the peer to be retrieved.       | :white_check_mark: |
 

@@ -23,7 +23,7 @@ GET /api/delegates
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -111,7 +111,7 @@ GET /api/delegates/{id}
 ### Path Parameters
 
 | Name |  Type  | Description                                     |      Required      |
-| ---- | :----: | ----------------------------------------------- | :----------------: |
+| :--- | :----: | :---------------------------------------------- | :----------------: |
 | id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -162,13 +162,13 @@ GET /api/delegates/{id}/blocks
 ### Path Parameters
 
 | Name |  Type  | Description                                     |      Required      |
-| ---- | :----: | ----------------------------------------------- | :----------------: |
+| :--- | :----: | :---------------------------------------------- | :----------------: |
 | id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -232,13 +232,13 @@ GET /api/delegates/{id}/voters
 ### Path Parameters
 
 | Name |  Type  | Description                                     |      Required      |
-| ---- | :----: | ----------------------------------------------- | :----------------: |
+| :--- | :----: | :---------------------------------------------- | :----------------: |
 | id   | string | The identifier of the delegate to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -282,14 +282,14 @@ POST /api/delegates/search
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
 ### Body Parameters
 
 | Name                |  Type  | Description                                                 | Required |
-| ------------------- | :----: | ----------------------------------------------------------- | :------: |
+| :------------------ | :----: | :---------------------------------------------------------- | :------: |
 | orderBy             | string | The column by which the delegates will be sorted.           |   :x:    |
 | address             | string | The address of the delegate to be retrieved.                |   :x:    |
 | publicKey           | string | The public key of the delegate to be retrieved.             |   :x:    |

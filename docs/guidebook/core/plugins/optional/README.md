@@ -5,7 +5,7 @@ title: "Introduction"
 All plugins listed on this page are actively maintained but **not required** to run a relay that can sync with the network.
 
 | Package                                                                                        |                                                                         Version                                                                          |
-| ---------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [core-api](/guidebook/core/plugins/optional/core-api.md)                                       |                    [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-api)](https://www.npmjs.com/package/@arkecosystem/core-api)                    |
 | [core-elasticsearch](/guidebook/core/plugins/optional/core-elasticsearch.md)                   |          [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-elasticsearch)](https://www.npmjs.com/package/@arkecosystem/core-elasticsearch)          |
 | [core-error-tracker-airbrake](/guidebook/core/plugins/optional/core-error-tracker-airbrake.md) | [![npm](https://badgen.now.sh/npm/v/@arkecosystem/core-error-tracker-airbrake)](https://www.npmjs.com/package/@arkecosystem/core-error-tracker-airbrake) |

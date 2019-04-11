@@ -18,8 +18,8 @@ GET /api/peers
 
 ### Query Parameters
 
-| Name    | Type   | Description                                                   | Required    |
-|---------|:------:|---------------------------------------------------------------|:-----------:|
+| Name    | Type   | Description                                                   | Required |
+| :------ | :----: | :------------------------------------------------------------ | :------: |
 | page    | int    | The number of the page that will be returned.                 | :x:      |
 | limit   | int    | The number of resources per page.                             | :x:      |
 | port    | int    | The port by which the resources will be filtered.             | :x:      |
@@ -68,9 +68,9 @@ GET /api/peers/{ip}
 
 ### Query Parameters
 
-| Name | Type   | Description                                  | Required           |
-|------|:------:|----------------------------------------------|:------------------:|
-| ip   | string | The IP address of the peer to be retrieved.  | :white_check_mark: |
+| Name | Type   | Description                                 | Required           |
+| :--- | :----: | :------------------------------------------ | :----------------: |
+| ip   | string | The IP address of the peer to be retrieved. | :white_check_mark: |
 
 ### Response
 

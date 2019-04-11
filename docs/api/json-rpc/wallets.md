@@ -18,7 +18,7 @@ POST /
 ### Body Parameters
 
 | Name           | Type   | Description                                   | Required           |
-|----------------|:------:|-----------------------------------------------|:------------------:|
+| :------------- | :----: | :-------------------------------------------- | :----------------: |
 | jsonrpc        | string | The protocol version. **Has to be 2.0!**      | :white_check_mark: |
 | id             | string | The identifier of the request.                | :white_check_mark: |
 | method         | string | The method name. **Has to be wallets.info!**  | :white_check_mark: |
@@ -83,7 +83,7 @@ POST /
 ### Body Parameters
 
 | Name           | Type   | Description                                           | Required           |
-|----------------|:------:|-------------------------------------------------------|:------------------:|
+| :------------- | :----: | :---------------------------------------------------- | :----------------: |
 | jsonrpc        | string | The protocol version. **Has to be 2.0!**              | :white_check_mark: |
 | id             | string | The identifier of the request.                        | :white_check_mark: |
 | method         | string | The method name. **Has to be wallets.transactions!**  | :white_check_mark: |
@@ -161,7 +161,7 @@ POST /
 ### Body Parameters
 
 | Name              | Type   | Description                                     | Required           |
-|-------------------|:------:|-------------------------------------------------|:------------------:|
+| :---------------- | :----: | :---------------------------------------------- | :----------------: |
 | jsonrpc           | string | The protocol version. **Has to be 2.0!**        | :white_check_mark: |
 | id                | string | The identifier of the request.                  | :white_check_mark: |
 | method            | string | The method name. **Has to be wallets.create!**  | :white_check_mark: |
@@ -223,7 +223,7 @@ POST /
 ### Body Parameters
 
 | Name          | Type   | Description                                         | Required           |
-|---------------|:------:|-----------------------------------------------------|:------------------:|
+| :------------ | :----: | :-------------------------------------------------- | :----------------: |
 | jsonrpc       | string | The protocol version. **Has to be 2.0!**            | :white_check_mark: |
 | id            | string | The identifier of the request.                      | :white_check_mark: |
 | method        | string | The method name. **Has to be wallets.bip38.info!**  | :white_check_mark: |
@@ -284,7 +284,7 @@ POST /
 ### Body Parameters
 
 | Name          | Type   | Description                                           | Required           |
-|---------------|:------:|-------------------------------------------------------|:------------------:|
+| :------------ | :----: | :---------------------------------------------------- | :----------------: |
 | jsonrpc       | string | The protocol version. **Has to be 2.0!**              | :white_check_mark: |
 | id            | string | The identifier of the request.                        | :white_check_mark: |
 | method        | string | The method name. **Has to be wallets.bip38.create!**  | :white_check_mark: |

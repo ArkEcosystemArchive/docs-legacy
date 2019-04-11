@@ -84,7 +84,7 @@ Creates a transaction object for submission to the blockchain. Combine with `tra
 #### Parameters
 
 | Name        |  Type  | Description                                  | Required |
-| ----------- | :----: | -------------------------------------------- | :------: |
+| :---------- | :----: | :------------------------------------------- | :------: |
 | amount      |  int   | The amount of ARK to transfer, in arktoshis. |   :x:    |
 | recipientId | string | The receivers address                        |   :x:    |
 | passphrase  | string | The passphrase of the signing wallet.        |   :x:    |
@@ -138,7 +138,7 @@ Broadcasts a transaction to the network for approval. Note that transaction obje
 #### Parameters
 
 | Name |  Type  | Description                                                                       | Required |
-| ---- | :----: | --------------------------------------------------------------------------------- | :------: |
+| :--- | :----: | :-------------------------------------------------------------------------------- | :------: |
 | id   | string | The ID of the transaction object. Returned by the `transactions.create` endpoint. |   :x:    |
 
 #### Request
@@ -186,7 +186,7 @@ Returns metadata for a given transaction.
 #### Parameters
 
 | Name |  Type  | Description                       | Required |
-| ---- | :----: | --------------------------------- | :------: |
+| :--- | :----: | :-------------------------------- | :------: |
 | id   | string | The ID of the transaction object. |   :x:    |
 
 #### Request
@@ -242,7 +242,7 @@ Derives a public key and address from a given passphrase.
 #### Parameters
 
 | Name       |  Type  | Description                                                 | Required |
-| ---------- | :----: | ----------------------------------------------------------- | :------: |
+| :--------- | :----: | :---------------------------------------------------------- | :------: |
 | passphrase | string | The account passphrase used to derive the keys and address. |   :x:    |
 
 #### Request
@@ -284,7 +284,7 @@ Returns metadata for a given account.
 #### Parameters
 
 | Name    |  Type  | Description                                            | Required |
-| ------- | :----: | ------------------------------------------------------ | :------: |
+| :------ | :----: | :----------------------------------------------------- | :------: |
 | address | string | The address of the account to return transactions for. |   :x:    |
 
 #### Request
@@ -331,7 +331,7 @@ Returns an array of all transactions associated with a given account.
 #### Parameters
 
 | Name    |  Type  | Description                                            | Required |
-| ------- | :----: | ------------------------------------------------------ | :------: |
+| :------ | :----: | :----------------------------------------------------- | :------: |
 | address | string | The address of the account to return transactions for. |   :x:    |
 | offset  |  int   | The offset to use when fetching transactions.          |   :x:    |
 
@@ -391,7 +391,7 @@ Returns metadata for a given block.
 #### Parameters
 
 | Name |  Type  | Description   | Required |
-| ---- | :----: | ------------- | :------: |
+| :--- | :----: | :------------ | :------: |
 | id   | string | The block ID. |   :x:    |
 
 #### Request
@@ -518,7 +518,7 @@ Returns an array of the transactions of a given block.
 #### Parameters
 
 | Name   |  Type  | Description                                                                  | Required |
-| ------ | :----: | ---------------------------------------------------------------------------- | :------: |
+| :----- | :----: | :--------------------------------------------------------------------------- | :------: |
 | id     | string | The block ID.                                                                |   :x:    |
 | offset |  int   | Amount of transactions that will be offset in the returned transaction list. |   :x:    |
 
@@ -580,7 +580,7 @@ Returns account `publicKey`, `address` and decrypted `WIF` of created account.
 #### Parameters
 
 | Name   |  Type  | Description                                                                                                                                                         | Required |
-| ------ | :----: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
+| :----- | :----: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------: |
 | bip38  | string | The password that should be used to create the BIP38 wallet.                                                                                                        |   :x:    |
 | userId |  any   | The user ID that should be combined with the `bip38` to create a secure password. Can be any value, exchanges typically use internal user IDs or something similar. |   :x:    |
 
@@ -625,7 +625,7 @@ Retrieves saved BIP38 wallet from the server. The wallet must be stored in JSON-
 #### Parameters
 
 | Name   |  Type  | Description                                                  | Required |
-| ------ | :----: | ------------------------------------------------------------ | :------: |
+| :----- | :----: | :----------------------------------------------------------- | :------: |
 | bip38  | string | The password that should be used to create the BIP38 wallet. |   :x:    |
 | userId |  any   | The user ID associated with the BIP38 wallet.                |   :x:    |
 
@@ -667,7 +667,7 @@ Creates a transaction using a saved BIP38 wallet. As with `transactions.create`,
 #### Parameters
 
 | Name        |  Type  | Description                                           | Required |
-| ----------- | :----: | ----------------------------------------------------- | :------: |
+| :---------- | :----: | :---------------------------------------------------- | :------: |
 | amount      |  int   | The amount of ARK to transfer, in arktoshis.          |   :x:    |
 | recipientId | string | The receiver's address.                               |   :x:    |
 | passphrase  | string | The bip38 password used to create the sender account. |   :x:    |

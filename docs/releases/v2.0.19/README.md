@@ -63,7 +63,7 @@ The old code was very dependent on the ARK team for snapshots when building or r
 All SDKs have been updated to reflect the change to `v2`. The structure of each SDK has been standardized, by splitting the cryptography and API client into separate libraries.
 
 | Language | Client                                                         | Crypto                                                         |
-| -------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| :------- | :------------------------------------------------------------- | :------------------------------------------------------------- |
 | Java     | [java-client](https://github.com/ARKEcosystem/java-client)     | [java-crypto](https://github.com/ARKEcosystem/java-crypto)     |
 | .NET     | [dotnet-client](https://github.com/ARKEcosystem/dotnet-client) | [dotnet-crypto](https://github.com/ARKEcosystem/dotnet-crypto) |
 | PHP      | [php-client](https://github.com/ARKEcosystem/php-client)       | [php-crypto](https://github.com/ARKEcosystem/php-crypto)       |

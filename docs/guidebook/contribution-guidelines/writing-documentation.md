@@ -173,7 +173,7 @@ For certain cases (docs, website, forum), it is acceptable to use the actual URL
 - _"I love the community over at the [forum.ark.io](https://forum.ark.io)"_
 
 :::danger
-When talking about ARK's native currency, you MUST refer to it as ARK - it is commonly used as the currency ticker on exchanges and within ARK Ecosystem projects like the ARK Desktop Wallet and ARK Explorer. The currency symbol for ARK is "Ѧ". It can be represented with the decimal Unicode 1126 or "\&#1126;" in HTML.
+When talking about ARK's native currency, you MUST refer to it as ARK - it is commonly used as the currency ticker on exchanges and within ARK Ecosystem projects like the ARK Desktop Wallet and ARK Explorer. The currency symbol for ARK is "Ѧ". It can be represented with the decimal Unicode 1126 or `\&#1126;` in HTML.
 :::
 
 Generic terms like "address", "wallet", "transaction", "delegate", "vote", "blockchain", "currency" SHOULD NOT be capitalized, alongside the three above terms which mainly refer to concepts and not necessarily rigid implementations.
@@ -228,7 +228,7 @@ Please use this template for every document which has any reference at all:
 <!-- Generated using https://www.tablesgenerator.com/markdown_tables. It looks bad in .md files, but good ones rendered. -->
 
 | Project                         | Repository                                                                                       | Description                                                                                                              |
-| ------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| :------------------------------ | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
 | ARK Core                        | [https://github.com/arkecosystem/core ](https://github.com/arkecosystem/core)                    | The reference implementation of the ARK Blockchain, also refered to as ARK v2                                            |
 | ARK Node                        | [https://github.com/arkecosystem/ark-node ](https://github.com/arkecosystem/ark-node)            | Deprecated implementation of ARK v1                                                                                      |
 | ARK Mobile Wallet               | [https://github.com/arkecosystem/mobile-wallet ](https://github.com/arkecosystem/mobile-wallet)  | Cross platform mobile wallet built using ionic.                                                                          |

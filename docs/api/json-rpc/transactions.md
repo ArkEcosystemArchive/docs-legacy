@@ -15,7 +15,7 @@ POST /
 ### Body Parameters
 
 | Name      | Type   | Description                                        | Required           |
-|-----------|:------:|----------------------------------------------------|:------------------:|
+| :-------- | :----: | :------------------------------------------------- | :----------------: |
 | jsonrpc   | string | The protocol version. **Has to be 2.0!**           | :white_check_mark: |
 | id        | string | The identifier of the request.                     | :white_check_mark: |
 | method    | string | The method name. **Has to be transaction.info!**   | :white_check_mark: |
@@ -93,7 +93,7 @@ POST /
 ### Body Parameters
 
 | Name                | Type   | Description                                            | Required           |
-|---------------------|:------:|--------------------------------------------------------|:------------------:|
+| :------------------ | :----: | :----------------------------------------------------- | :----------------: |
 | jsonrpc             | string | The protocol version. **Has to be 2.0!**               | :white_check_mark: |
 | id                  | string | The identifier of the request.                         | :white_check_mark: |
 | method              | string | The method name. **Has to be transactions.broadcast!** | :white_check_mark: |
@@ -161,7 +161,7 @@ POST /
 ### Body Parameters
 
 | Name               | Type   | Description                                         | Required           |
-|--------------------|:------:|-----------------------------------------------------|:------------------:|
+| :----------------- | :----: | :-------------------------------------------------- | :----------------: |
 | jsonrpc            | string | The protocol version. **Has to be 2.0!**            | :white_check_mark: |
 | id                 | string | The identifier of the request.                      | :white_check_mark: |
 | method             | string | The method name. **Has to be transactions.create!** | :white_check_mark: |
@@ -233,7 +233,7 @@ POST /
 ### Body Parameters
 
 | Name               | Type   | Description                                       | Required           |
-|--------------------|:------:|---------------------------------------------------|:------------------:|
+| :----------------- | :----: | :------------------------------------------------ | :----------------: |
 | jsonrpc            | string | The protocol version. **Has to be 2.0!**          | :white_check_mark: |
 | id                 | string | The identifier of the request.                    | :white_check_mark: |
 | method             | string | The method name. **Has to be transactions.list!** | :white_check_mark: |

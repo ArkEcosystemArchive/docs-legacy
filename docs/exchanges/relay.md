@@ -21,12 +21,12 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
 - Stable internet connection
 - Access to multiple open ports (actual ports may be configured)
 
-  | service    | port | required | enabled by default | documentation                           |
-  | ---------- | ---- | -------- | ------------------ | --------------------------------------- |
-  | p2p        | 4001 | yes      | yes                | [reference](/api/p2p/)                  |
-  | public API | 4003 | no       | yes                | [reference](/exchanges/public-api.html) |
-  | webhook    | 4004 | no       | no                 | [reference](/api/webhooks/)             |
-  | JSON-RPC   | 8080 | no       | no                 | [reference](/exchanges/json-rpc.html)   |
+  | Service    | Port |      Required      | Enabled by default |              Documentation              |
+  | :--------- | :--: | :----------------: | :----------------:	| :-------------------------------------: |
+  | p2p        | 4001 | :white_check_mark: | :white_check_mark: | [reference](/api/p2p/)                  |
+  | public API | 4003 |        :x:         | :white_check_mark: | [reference](/exchanges/public-api.html) |
+  | webhook    | 4004 |        :x:         |        :x:         | [reference](/api/webhooks/)             |
+  | JSON-RPC   | 8080 |        :x:         |        :x:         | [reference](/exchanges/json-rpc.html)   |
 
 ## Using the official `Installation Script`
 
@@ -111,7 +111,7 @@ Starting ark-relay... done
 ```
 
 ::: tip
-All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `ark help` command.
+All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by executing the `ark help` command.
 :::
 
 ### 8. Checking to see if everything is working
@@ -140,7 +140,7 @@ Synchronization of the blockchain can take upwards of 10 hours so let it run, on
 
 ::: danger
 
-Ensure you properly restart the node process when editing your .env file. Use the `--update-env` flag, for example:
+Ensure you properly restart the node process when editing your `.env` file. Use the `--update-env` flag, for example:
 
 ```bash
 pm2 restart all --update-env

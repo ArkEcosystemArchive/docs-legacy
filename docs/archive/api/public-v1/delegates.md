@@ -15,7 +15,7 @@ GET /api/delegates
 ### Query Parameters
 
 | Name    | Type | Description                                       | Required |
-|---------|:----:|---------------------------------------------------|:--------:|
+| :------ | :--: | :------------------------------------------------ | :------: |
 | offset  | int  | The offset of resources that will be returned.    | :x:      |
 | limit   | int  | The number of resources per page.                 | :x:      |
 | orderBy | int  | The column by which the resources will be sorted. | :x:      |
@@ -56,7 +56,7 @@ GET /api/delegates/voters
 ### Query Parameters
 
 | Name      | Type   | Description                                     | Required           |
-|-----------|:------:|-------------------------------------------------|:------------------:|
+| :-------- | :----: | :---------------------------------------------- | :----------------: |
 | publicKey | string | The public key of the delegate to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -95,7 +95,7 @@ GET /api/delegates/get
 ### Query Parameters
 
 | Name      | Type   | Description                                       | Required |
-|-----------|:------:|---------------------------------------------------|:--------:|
+| :-------- | :----: | :------------------------------------------------ | :------: |
 | publicKey | string | The public key of the delegate to be retrieved.   | :o:      |
 | username  | string | The username key of the delegate to be retrieved. | :o:      |
 
@@ -199,7 +199,7 @@ GET /api/delegates/forging/getForgedByAccount
 ### Query Parameters
 
 | Name               | Type      | Description                                 | Required           |
-|--------------------|:---------:|---------------------------------------------|:------------------:|
+| :----------------- | :-------: | :------------------------------------------ | :----------------: |
 | generatorPublicKey | string    | The public key of the delegate that forged. | :white_check_mark: |
 
 ### Response
@@ -234,7 +234,7 @@ GET /api/delegates/search
 ### Query Parameters
 
 | Name   | Type | Description                                               | Required           |
-|--------|:----:|-----------------------------------------------------------|:------------------:|
+| :----- | :--: | :-------------------------------------------------------- | :----------------: |
 | offset | int  | The offset of resources that will be returned.            | :x:                |
 | limit  | int  | The number of resources per page.                         | :x:                |
 | q      | int  | The search query by which the resources will be filtered. | :white_check_mark: |

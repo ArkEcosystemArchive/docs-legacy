@@ -19,7 +19,7 @@ GET /api/wallets
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -63,7 +63,7 @@ GET /api/wallets/{id}
 ### Path Parameters
 
 | Name |  Type  | Description                                   |      Required      |
-| ---- | :----: | --------------------------------------------- | :----------------: |
+| :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Response
@@ -94,13 +94,13 @@ GET /api/wallets/{id}/transactions
 ### Path Parameters
 
 | Name |  Type  | Description                                   |      Required      |
-| ---- | :----: | --------------------------------------------- | :----------------: |
+| :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -155,13 +155,13 @@ GET /api/wallets/{id}/transactions/received
 ### Path Parameters
 
 | Name |  Type  | Description                                   |      Required      |
-| ---- | :----: | --------------------------------------------- | :----------------: |
+| :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -222,13 +222,13 @@ GET /api/wallets/{id}/transactions/sent
 ### Path Parameters
 
 | Name |  Type  | Description                                   |      Required      |
-| ---- | :----: | --------------------------------------------- | :----------------: |
+| :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -287,13 +287,13 @@ GET /api/wallets/{id}/votes
 ### Path Parameters
 
 | Name |  Type  | Description                                   |      Required      |
-| ---- | :----: | --------------------------------------------- | :----------------: |
+| :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -351,7 +351,7 @@ GET /api/wallets/top
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
@@ -404,14 +404,14 @@ POST /api/wallets/search
 ### Query Parameters
 
 | Name  | Type | Description                                   | Required |
-| ----- | :--: | --------------------------------------------- | :------: |
+| :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
 ### Body Parameters
 
 | Name             |  Type  | Description | Required |
-| ---------------- | :----: | ----------- | :------: |
+| :--------------- | :----: | :---------- | :------: |
 | address          | string | ...         |   :x:    |
 | publicKey        | string | ...         |   :x:    |
 | secondPublicKey  | string | ...         |   :x:    |

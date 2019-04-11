@@ -15,7 +15,7 @@ GET /api/blocks
 ### Query Parameters
 
 | Name   | Type | Description                                    | Required |
-|--------|:----:|------------------------------------------------|:--------:|
+| :----- | :--: | :--------------------------------------------- | :------: |
 | offset | int  | The offset of resources that will be returned. | :x:      |
 | limit  | int  | The number of resources per page.              | :x:      |
 
@@ -81,7 +81,7 @@ GET /api/blocks/get
 ### Query Parameters
 
 | Name | Type   | Description                                  | Required           |
-|------|:------:|----------------------------------------------|:------------------:|
+| :--- | :----: | :------------------------------------------- | :----------------: |
 | id   | string | The identifier of the block to be retrieved. | :white_check_mark: |
 
 ### Response

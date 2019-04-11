@@ -8,6 +8,10 @@ ARK adheres to standard versioning that using the Semver model:
 - **MINOR**: 2.x.0 will add new functionality and cover bigger changes and new features that introduce higher end impacts (2.1.0, 2.2.0, …).
 - **PATCH**: 2.0.x will be backwards-compatible bug fixes, minor improvements and small additional features (2.0.1, 2.0.11, …).
 
+### Changelog
+
+The official changelog of ARK Core is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
+
 ## Channels
 
 Core is released in 2 different channels via `npm` to have different versions for `devnet` and `mainnet` during development.

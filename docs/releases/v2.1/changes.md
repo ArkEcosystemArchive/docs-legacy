@@ -24,11 +24,11 @@ has now been renamed to
 CORE_DB_XXX
 ```
 
-in ~/.ark/.env and other files. We have also made editing these easier by collapsing different configuration files into a single network config.
+in `~/.ark/.env` and other files. We have also made editing these easier by collapsing different configuration files into a single network config.
 
 ### Comprehensive Variable Changelist
 
-The following variables were renamed/added to the configuration of a network. The changes can be found in your ~/.ark/env file and plugins.js file.
+The following variables were renamed/added to the configuration of a network. The changes can be found in your `~/.ark/.env` and `plugins.js` file.
 
 Note:
 

@@ -1,26 +1,26 @@
 # Changelog
 
-ARK Core (`v2.0.X`) is a complete redesign, deprecating all APIs and internal structure. The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
+ARK Core (`v2.0.X`) is a complete redesign, deprecating all APIs and internal structure. The official changelog of `v2.0` is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
 
 ## [2.0.19] - 2019-01-31
 
 ### Fixed
 
-- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-009.md
-- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-010.md
+- [CORE-SV-010](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-010.md)
+- [CORE-SV-009](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-009.md)
 
 ## [2.0.18] - 2019-01-28
 
 ### Fixed
 
-- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-011.md
+- [CORE-SV-011](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-011.md)
 
 ## [2.0.17] - 2019-01-15
 
 ### Fixed
 
-- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-008.md
-- https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-007.md
+- [CORE-SV-008](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-008.md)
+- [CORE-SV-007](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-007.md)
 
 ## [2.0.16] - 2018-12-17
 

@@ -4,6 +4,26 @@
 The official changelog of `v2.1` is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
 :::
 
+## [2.1.2] - 2019-02-13
+
+### Fixed
+
+- Fix quorum related issues ([#2091])
+- Remove signatures from transaction payload ([#2097])
+
+Closed security vulnerabilities:
+
+- [CORE-SV-013](https://github.com/ARKEcosystem/security-vulnerabilities/blob/master/core/core-sv-013.md)
+
+## [2.1.1] - 2019-02-12
+
+### Fixed
+
+- Configuration endpoint does not show dynamic fees ([#2082])
+- Return the correct supply for the legacy API ([#2083])
+
+## [2.1.0] - 2019-02-11
+
 ### Added
 
 - Added a `milestoneHash` identifier to use for peer banning ([#1837])
@@ -81,3 +101,74 @@ The official changelog of `v2.1` is hosted in the [core repository](https://gith
 - Removed the `transactionsFromIds` P2P endpoint ([#1911])
 - Removed the `validator` and `rules` fron `@arkecosystem/crypto` ([#2021])
 - Ended support for the legacy multisignatures from the previous LISK fork ([#2057])
+
+
+[2.1.0]: https://github.com/ARKEcosystem/core/compare/2.0.19...2.1.0
+[2.1.1]: https://github.com/ARKEcosystem/core/compare/2.1.0...2.1.1
+[2.1.2]: https://github.com/ARKEcosystem/core/compare/2.1.1...2.1.2
+[#1625]: https://github.com/ARKEcosystem/core/pull/1625
+[#1655]: https://github.com/ARKEcosystem/core/pull/1655
+[#1689]: https://github.com/ARKEcosystem/core/pull/1689
+[#1717]: https://github.com/ARKEcosystem/core/pull/1717
+[#1730]: https://github.com/ARKEcosystem/core/pull/1730
+[#1731]: https://github.com/ARKEcosystem/core/pull/1731
+[#1733]: https://github.com/ARKEcosystem/core/pull/1733
+[#1738]: https://github.com/ARKEcosystem/core/pull/1738
+[#1831]: https://github.com/ARKEcosystem/core/pull/1831
+[#1833]: https://github.com/ARKEcosystem/core/pull/1833
+[#1836]: https://github.com/ARKEcosystem/core/pull/1836
+[#1837]: https://github.com/ARKEcosystem/core/pull/1837
+[#1853]: https://github.com/ARKEcosystem/core/pull/1853
+[#1869]: https://github.com/ARKEcosystem/core/pull/1869
+[#1873]: https://github.com/ARKEcosystem/core/pull/1873
+[#1887]: https://github.com/ARKEcosystem/core/pull/1887
+[#1891]: https://github.com/ARKEcosystem/core/pull/1891
+[#1898]: https://github.com/ARKEcosystem/core/pull/1898
+[#1901]: https://github.com/ARKEcosystem/core/pull/1901
+[#1905]: https://github.com/ARKEcosystem/core/pull/1905
+[#1906]: https://github.com/ARKEcosystem/core/pull/1906
+[#1911]: https://github.com/ARKEcosystem/core/pull/1911
+[#1917]: https://github.com/ARKEcosystem/core/pull/1917
+[#1919]: https://github.com/ARKEcosystem/core/pull/1919
+[#1924]: https://github.com/ARKEcosystem/core/pull/1924
+[#1926]: https://github.com/ARKEcosystem/core/pull/1926
+[#1927]: https://github.com/ARKEcosystem/core/pull/1927
+[#1930]: https://github.com/ARKEcosystem/core/pull/1930
+[#1931]: https://github.com/ARKEcosystem/core/pull/1931
+[#1939]: https://github.com/ARKEcosystem/core/pull/1939
+[#1940]: https://github.com/ARKEcosystem/core/pull/1940
+[#1941]: https://github.com/ARKEcosystem/core/pull/1941
+[#1943]: https://github.com/ARKEcosystem/core/pull/1943
+[#1947]: https://github.com/ARKEcosystem/core/pull/1947
+[#1948]: https://github.com/ARKEcosystem/core/pull/1948
+[#1953]: https://github.com/ARKEcosystem/core/pull/1953
+[#1954]: https://github.com/ARKEcosystem/core/pull/1954
+[#1955]: https://github.com/ARKEcosystem/core/pull/1955
+[#1957]: https://github.com/ARKEcosystem/core/pull/1957
+[#1969]: https://github.com/ARKEcosystem/core/pull/1969
+[#1970]: https://github.com/ARKEcosystem/core/pull/1970
+[#1985]: https://github.com/ARKEcosystem/core/pull/1985
+[#1987]: https://github.com/ARKEcosystem/core/pull/1987
+[#1996]: https://github.com/ARKEcosystem/core/pull/1996
+[#1999]: https://github.com/ARKEcosystem/core/pull/1999
+[#2009]: https://github.com/ARKEcosystem/core/pull/2009
+[#2016]: https://github.com/ARKEcosystem/core/pull/2016
+[#2021]: https://github.com/ARKEcosystem/core/pull/2021
+[#2027]: https://github.com/ARKEcosystem/core/pull/2027
+[#2038]: https://github.com/ARKEcosystem/core/pull/2038
+[#2044]: https://github.com/ARKEcosystem/core/pull/2044
+[#2045]: https://github.com/ARKEcosystem/core/pull/2045
+[#2046]: https://github.com/ARKEcosystem/core/pull/2046
+[#2047]: https://github.com/ARKEcosystem/core/pull/2047
+[#2049]: https://github.com/ARKEcosystem/core/pull/2049
+[#2050]: https://github.com/ARKEcosystem/core/pull/2050
+[#2051]: https://github.com/ARKEcosystem/core/pull/2051
+[#2052]: https://github.com/ARKEcosystem/core/pull/2052
+[#2053]: https://github.com/ARKEcosystem/core/pull/2053
+[#2057]: https://github.com/ARKEcosystem/core/pull/2057
+[#2058]: https://github.com/ARKEcosystem/core/pull/2058
+[#2061]: https://github.com/ARKEcosystem/core/pull/2061
+[#2082]: https://github.com/ARKEcosystem/core/pull/2082
+[#2083]: https://github.com/ARKEcosystem/core/pull/2083
+[#2091]: https://github.com/ARKEcosystem/core/pull/2091
+[#2097]: https://github.com/ARKEcosystem/core/pull/2097

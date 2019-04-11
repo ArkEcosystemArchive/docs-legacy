@@ -4,6 +4,18 @@
 The official changelog of `v2.2` is hosted in the [core repository](https://github.com/ARKEcosystem/core/blob/master/CHANGELOG.md).
 :::
 
+## [2.2.2] - 2019-03-19
+
+### Removed
+
+- Remove /api/v2/delegates/{id}/voters/balances endpoint ([#2265])
+
+## [2.2.1] - 2019-03-12
+
+Sync package versions with npm, no changes.
+
+## [2.2.0] - 2019-03-11
+
 ### Added
 
 - Implement a CLI with @oclif to replace commander ([#2100])
@@ -32,6 +44,9 @@ The official changelog of `v2.2` is hosted in the [core repository](https://gith
 - Remove unnecessary ping call in `core-p2p` ([#2123])
 - Remove broken getRandomDownloadBlocksPeer ([#2121])
 
+[2.2.0]: https://github.com/ARKEcosystem/core/compare/2.1.2...2.2.0
+[2.2.1]: https://github.com/ARKEcosystem/core/compare/2.2.0...2.2.1
+[2.2.2]: https://github.com/ARKEcosystem/core/compare/2.2.1...2.2.2
 [#2100]: https://github.com/ARKEcosystem/core/pull/2100
 [#2102]: https://github.com/ARKEcosystem/core/pull/2102
 [#2103]: https://github.com/ARKEcosystem/core/pull/2103
@@ -48,3 +63,4 @@ The official changelog of `v2.2` is hosted in the [core repository](https://gith
 [#2144]: https://github.com/ARKEcosystem/core/pull/2144
 [#2149]: https://github.com/ARKEcosystem/core/pull/2149
 [#2152]: https://github.com/ARKEcosystem/core/pull/2152
+[#2265]: https://github.com/ARKEcosystem/core/pull/2265

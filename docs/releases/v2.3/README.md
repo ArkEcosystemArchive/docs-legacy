@@ -4,4 +4,4 @@ ARK `v2.3` is a minor update but not backward compatible with `v2.2.X`. This upd
 
 - **Upgrade time**: low - upgrading to `v2.3` only requires minimal configuration changes.
 - **Complexity**: medium - the `wallets` table has been removed from the database which can impact third-party applications.
-- **Risk**: medium - `v2.2` is not backward compatible with `v2.1` and includes breaking changes.
+- **Risk**: medium - `v2.3` is not backward compatible with `v2.2` and includes breaking changes.

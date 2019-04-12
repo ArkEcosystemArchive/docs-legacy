@@ -47,9 +47,9 @@ The counterpart to the Guidebook, the tutorials contains practical code snippets
 
 This section provides details and insights into the Cryptographic Identities of the ARK Blockchain. It covers topics such as PrivateKeys, PublicKeys, and Signatures; as well as the hashing and encoding methods used by ARK.
 
-### [ARK Ecosystem IoT(Internet of Things)](/iot/)
+### [ARK Ecosystem IoT (Internet of Things)](/iot/)
 
-[_IoT(Internet of Things)_](/iot/) provides an overview of what ARK IoT is, what boards are supported, and offers design considerations and general guidance on developing with ARK on IoT platforms.
+[_IoT (Internet of Things)_](/iot/) provides an overview of what ARK IoT is, what boards are supported, and offers design considerations and general guidance on developing with ARK on IoT platforms.
 
 ### [ARK API](/api/)
 

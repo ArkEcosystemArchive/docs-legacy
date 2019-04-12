@@ -74,7 +74,7 @@ Passphrase:
 "this is a top secret passphrase"
 ```
 
-PrivateKey HEX(base 16) / SHA256 of Passphrase:
+PrivateKey HEX (base 16) / SHA256 of Passphrase:
 
 ```asciidoc
 d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712

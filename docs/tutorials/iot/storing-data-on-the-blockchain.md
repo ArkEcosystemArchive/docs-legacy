@@ -193,7 +193,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 };
 ```
 
-The Chip ID is a 64-bit unsigned(positive) DEC encoded value.
+The Chip ID is a 64-bit unsigned (positive) DEC encoded value.
 To properly perform a SHA256 hash, we'll need the uint8_t/byte value.
 The ESP32 also used "little-endian" or "least significant byte",
 basically, we need to reverse this byte-array.

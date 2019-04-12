@@ -4,7 +4,7 @@ title: IoT Tutorials
 
 # ARK IoT
 
-**ARK IoT** is a growing ecosystem of _"things"_ interoperability that aims to make using IoT and Blockchain technology easier.
+**ARK IoT** is a growing ecosystem of _"things"_ interoperability that aims to make using IoT and blockchain technology easier.
 
 If you previously wanted to use IoT and Crypto tech in general, you had to try dozens of libraries; wasting countless hours of tweaking and debugging.
 It's a lot like getting a 5,000-piece puzzle with no picture and no edges.

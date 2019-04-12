@@ -12,7 +12,7 @@ title: "Using Docker"
 - 40GB SSD
 - 2 Cores
 
-ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
+ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
 ::: tip
 Prerequisites to be installed:

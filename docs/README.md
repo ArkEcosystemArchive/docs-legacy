@@ -41,15 +41,15 @@ The counterpart to the Guidebook, the tutorials contains practical code snippets
 
 [_Deployer_](/tutorials/deployer/) is the place to go for code snippets and tutorials related to building your own blockchain. We cover setting up your blockchain and deploying it to major cloud hosting service providers.
 [_Exchanges_](/exchanges/) is where developers for cryptocurrency exchanges can find information on how to integrate the ARK coin into their platforms. Though we cannot make any guarantees about the codebases of any projects besides the ARK coin, this recipe should serve as a good starting point for integrating ARK BridgeChain coins as well.
-[_IoT_](/tutorials/iot/) provides guidance on anything from setting up your ARK IoT development environment to storing and reacting to data on the ARK Blockchain using platforms like Arduino and PlatformIO.
+[_IoT_](/tutorials/iot/) provides guidance on anything from setting up your ARK IoT development environment to storing and reacting to data on the ARK blockchain using platforms like Arduino and PlatformIO.
 
 ### [ARK Ecosystem Cryptography](/cryptography/)
 
-This section provides details and insights into the Cryptographic Identities of the ARK Blockchain. It covers topics such as PrivateKeys, PublicKeys, and Signatures; as well as the hashing and encoding methods used by ARK.
+This section provides details and insights into the cryptographic identities of the ARK blockchain. It covers topics such as PrivateKeys, PublicKeys, and Signatures; as well as the hashing and encoding methods used by ARK.
 
-### [ARK Ecosystem IoT(Internet of Things)](/iot/)
+### [ARK Ecosystem IoT (Internet of Things)](/iot/)
 
-[_IoT(Internet of Things)_](/iot/) provides an overview of what ARK IoT is, what boards are supported, and offers design considerations and general guidance on developing with ARK on IoT platforms.
+[_IoT (Internet of Things)_](/iot/) provides an overview of what ARK IoT is, what boards are supported, and offers design considerations and general guidance on developing with ARK on IoT platforms.
 
 ### [ARK API](/api/)
 

@@ -41,7 +41,7 @@ Once the registration transaction has been incorporated in the blockchain, other
 
 For ARK, the top 51 delegates are responsible for forging blocks and maintaining consensus over the transaction history of the blockchain. If a delegate is inactive for a given 51 block round, that slot is skipped.
 
-Delegated block production is an advantage for a Blockchain. It allows for seamless processing of blocks because the delegates are incentivized, through monetary reward, to maintain their voters' pledges by acting appropriately.
+Delegated block production is an advantage for a blockchain. It allows for seamless processing of blocks because the delegates are incentivized, through monetary reward, to maintain their voters' pledges by acting appropriately.
 
 ### Peer
 
@@ -97,13 +97,13 @@ When a delegate doesn't forge and broadcasts a block within the time slot alloca
 
 ### Approval
 
-This is a value derived from the number of votes, counted in ARK, a delegate has to their name and the total amount of ARK used for voting on the Blockchain.
+This is a value derived from the number of votes, counted in ARK, a delegate has to their name and the total amount of ARK used for voting on the blockchain.
 
 Delegates with more votes than others will also show a higher approval rating, often shown in percentage.
 
 ### Vote
 
-In a Delegegated Proof of Stake Blockchain like ARK, the nodes responsible for forging blocks are the 51 registered delegates who have the most votes. A given address can only vote for a single registered delegate, and the weight of a vote is proportional to the amount of ARK held by the voter.
+In a Delegated Proof of Stake blockchain like ARK, the nodes responsible for forging blocks are the 51 registered delegates who have the most votes. A given address can only vote for a single registered delegate, and the weight of a vote is proportional to the amount of ARK held by the voter.
 
 ### Voter
 

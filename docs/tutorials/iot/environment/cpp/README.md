@@ -10,7 +10,7 @@ ARK IoT features the first crypto SDK's designed to support IoT architecture, en
 
 Currently, the ARK [Cpp-Client](https://github.com/ARKEcosystem/cpp-client) and [Cpp-Crypto](https://github.com/ARKEcosystem/cpp-crypto) SDK's are designed to run on boards and platforms like [Espressif](https://www.espressif.com/), [Arduino](https://www.arduino.cc/), [PlatformIO](https://platformio.org/).
 
-The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK helps developers fetch information from the [ARK Blockchain](/introduction/blockchain) about its current state: which [Delegates](/glossary/#delegate) are currently forging, what transactions are associated with a given wallet, and so on.
+The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK helps developers fetch information from the [ARK blockchain](/introduction/blockchain) about its current state: which [Delegates](/glossary/#delegate) are currently forging, what transactions are associated with a given wallet, and so on.
 
 The [**Cpp-Crypto**](https://github.com/ARKEcosystem/cpp-crypto) SDK, by contrast, assists developers in working with transactions: signing, serializing, deserializing, etc.
 

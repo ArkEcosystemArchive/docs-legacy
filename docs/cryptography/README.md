@@ -4,7 +4,7 @@ title: "Cryptography"
 
 # Cryptography
 
-This section provides a brief overview the cryptographic identities and protocols used by the [ARK Blockchain](/introduction/blockchain/).
+This section provides a brief overview the cryptographic identities and protocols used by the [ARK blockchain](/introduction/blockchain/).
 
 [[toc]]
 
@@ -51,12 +51,12 @@ const fixture = {
 >
 > Do not lose it, and do not share it with others, or you could lose access to your ARK tokens. If you lose your passphrase, or if it is stolen, there is nothing we can do to help you. We CANNOT recover any lost passphrases.
 
-A [Passphrase](/faq/passphrases.html) is a "key to the castle." It is used to directly calculate the [PrivateKey](#privatekey) of an [ARK Account](/glossary/#account) and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
+A [passphrase](/faq/passphrases.html) is a "key to the castle." It is used to directly calculate the [PrivateKey](#privatekey) of an [ARK account](/glossary/#account) and should never be shared, stored irresponsibly, or transmitted over the internet. The only person that should ever have access to a passphrase is the owner of its account.
 
 We can technically use any word, phrase, or string as a passphrase which will result in a valid ARK [Address](#address) or Wallet; however, it is heavily discouraged as the security of an address relies on the randomness of its Passphrase.
 Humans are bad at creating randomness, and entering sequences of random letters and numbers isn't easy to do accurately.
 
-To promote usability while also maintaining security, ARK Passphrases are implemented using the [BIP39 Protocol](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). Simply, it's a mnemonic sentence constructed via randomly chosen words from a large [wordlist](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md). From here, that sentence or "Passphrase" is piped through a series of hashing, curve, and encoding algorithms to derive a [PrivateKey](#privatekey) / [WIF](#wif), a [PublicKey](#publickey), and subsequently [Addresses](#address) / Wallets and [Signatures](#signature).
+To promote usability while also maintaining security, ARK passphrases are implemented using the [BIP39 Protocol](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki). Simply, it's a mnemonic sentence constructed via randomly chosen words from a large [wordlist](https://github.com/bitcoin/bips/blob/master/bip-0039/bip-0039-wordlists.md). From here, that sentence or "Passphrase" is piped through a series of hashing, curve, and encoding algorithms to derive a [PrivateKey](#privatekey) / [WIF](#wif), a [PublicKey](#publickey), and subsequently [Addresses](#address) / Wallets and [Signatures](#signature).
 
 > To learn more about randomness, visit the Wiki's on [Randomness](https://en.wikipedia.org/wiki/Randomness) and [Random Number Generation](https://en.wikipedia.org/wiki/Random_number_generation)
 
@@ -74,7 +74,7 @@ Passphrase:
 "this is a top secret passphrase"
 ```
 
-PrivateKey HEX(base 16) / SHA256 of Passphrase:
+PrivateKey HEX (base 16) / SHA256 of Passphrase:
 
 ```asciidoc
 d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712
@@ -108,7 +108,7 @@ ARK also uses "Point Compression" to obtain compressed PublicKeys that are 33-by
 
 ![Address](./assets/address_transparent.png)
 
-An ARK Address is shareable much like an e-mail address. It is the destination to which ARK tokens can be sent, and is obtained from a [PublicKey](#publickey) via a combination of [RIPEMD160](#ripemd160) hashing and [Base58Check](#base58check) encoding prefixed by a single network byte.
+An ARK address is shareable much like an e-mail address. It is the destination to which ARK tokens can be sent, and is obtained from a [PublicKey](#publickey) via a combination of [RIPEMD160](#ripemd160) hashing and [Base58Check](#base58check) encoding prefixed by a single network byte.
 
 Since an address is derived from a [PublicKey](#publickey), that means it is also mathematically tied to a [PrivateKey](#privatekey) and [Passphrase](#passphrase).
 
@@ -352,7 +352,7 @@ DER Encoded Signature:
 
 [Base58Check](https://en.bitcoin.it/wiki/Base58Check_encoding) encoding is used to produce human readable/typeable text from a hash.
 
-It is used to encode a [PrivateKey](#privatekey) and is also the final step to encoding an [ARK Address](#address).
+It is used to encode a [PrivateKey](#privatekey) and is also the final step to encoding an [ARK address](#address).
 
 ---
 

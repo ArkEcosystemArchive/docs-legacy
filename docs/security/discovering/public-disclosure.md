@@ -6,7 +6,7 @@ After we have assessed the risk and mitigated a vulnerability, it is publicly di
 
 Our rewards program encourages researchers to contribute to the security of the ARK Ecosystem through the following bounties:
 
-We know that software will always have flaws that are hard to notice initially. As we take security of our network as a top priority, we provide a security/vulnerability bounty for bugs or errors in the ARK Core that could potentially harm or exploit the [ARK Network](https://github.com/ARKEcosystem/core).
+We know that software will always have flaws that are hard to notice initially. As we take security of our network as a top priority, we provide a security/vulnerability bounty for bugs or errors in the ARK Core that could potentially harm or exploit the [ARK network](https://github.com/ARKEcosystem/core).
 
 ### Critical: $5,000-$10,000
 
@@ -56,7 +56,7 @@ The size of the bonus is determined at the sole discretion of the Core Developer
 ## Eligibility
 
 1. Never publicly disclose any exploit or vulnerability.
-2. Never maliciously initiate an exploit on ARK Public Network, if you need to validate your setup use your own local ARK Network or use ARK Developer Network
+2. Never maliciously initiate an exploit on the ARK public network, if you need to validate your setup use your own local ARK network or use the ARK development network
 3. To receive the bounty, you must send an in-depth explanation in an email to [security@ark.io](mailto:security@ark.io) with the steps to reproduce the vulnerability and if possible a patch or PoC to negate the security vulnerability in question.
 
 _Security bounty can fall in higher or lower tier than you anticipated, all our decisions are final. Exploits which make indirect use of already known issues might not be eligible for a security bounty. Do not take every word literal and examples serve as a basis on what you can expect (it also depends a lot on circumstances of how you can exploit it, what’s the impact and every security vulnerability is evaluated on a case by case basis). Security vulnerabilities are paid in ARK based on the daily average rate before the payout._

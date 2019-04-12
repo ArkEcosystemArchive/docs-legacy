@@ -874,7 +874,7 @@ void checkCrypto() {
    * The 'Version" "byte" is a BASE58 P2PKH byte. ARK Devnet is '0x1E'; ARK Mainnet is '0x17'.
    *
    * Given the passphrase ""bullet parade snow bacon mutual deposit brass floor staff list concert ask",
-   * and the 'Devnet' 'Version' byte (0x1E); the ARK Address should be "DStZXkgpEjxbG355nQ26vnkp95p24U9tsV"
+   * and the 'Devnet' 'Version' byte (0x1E); the ARK address should be "DStZXkgpEjxbG355nQ26vnkp95p24U9tsV"
    */
   const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
   const uint8_t networkVersion = 0x1E;

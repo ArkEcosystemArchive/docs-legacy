@@ -79,7 +79,7 @@ If you hit the triple bar on the top left corner, you get numerous options where
   - Privacy Policy
   - Version Number
 - Contacts
-  - You can save contacts by name and ARK Address for quicker sending/receiving
+  - You can save contacts by name and ARK address for quicker sending/receiving
 - Sign Out
 
 ![ARK Mobile Wallet Triple Bar](./assets/how-to-use-the-mobile-wallet/arkWallet13.png) ![ARK Mobile Wallet Settings](./assets/how-to-use-the-mobile-wallet/arkWallet12.png)

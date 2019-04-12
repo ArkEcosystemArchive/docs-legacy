@@ -1,12 +1,12 @@
 # Storing Data on the Blockchain
 
-The ability to store data on a public Blockchain brings many benefits.
+The ability to store data on a public blockchain brings many benefits.
 You can store, prove, verify, or reference data in a way that suits your use case.
 
 [[toc]]
 
 The example sketch we will be building works on both, the [Arduino IDE](/tutorials/iot/environment/arduino) and with [PlatformIO](/tutorials/iot/environment/os).
-We will be using ARK Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather to post a SHA256 hash of your boards 'Chip ID' to the [ARK Blockchain](/introduction/blockchain).
+We will be using ARK Cpp-Client, Cpp-Crypto, and an Adafruit ESP32 Feather to post a SHA256 hash of your boards 'Chip ID' to the [ARK blockchain](/introduction/blockchain).
 
 ## Step 1: Project Setup
 
@@ -74,17 +74,19 @@ const char* ssid = "yourWiFiSSID";
 const char* password = "yourWiFiPassword";
 ```
 
-We will also need a Devnet Peer to connect to.
+We will also need a Devnet peer to connect to.
 
-> You can find more ARK Peers here: [https://github.com/ARKEcosystem/peers](https://github.com/ARKEcosystem/peers)
+::: tip
+You can find more ARK peers here: [https://github.com/ARKEcosystem/peers](https://github.com/ARKEcosystem/peers)
+:::
 
 ```cpp
 const char* darkIp = "167.114.29.49";
 int darkPort = 4003;
 ```
 
-Now, we'll add your ARK Devnet [(DARK) Address](/glossary/#dark-address) and your [Passphrase](/faq/passphrases.html#passphrases).
-Make sure to delete this Passphrase from your sketch when we're finished.
+Now, we'll add your ARK Devnet [(DARK) address](/glossary/#dark-address) and your [passphrase](/faq/passphrases.html#passphrases).
+Make sure to delete this passphrase from your sketch when we're finished.
 
 ```cpp
 const char* recipientId = "yourARKDevnetAddress";
@@ -193,7 +195,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 };
 ```
 
-The Chip ID is a 64-bit unsigned(positive) DEC encoded value.
+The Chip ID is a 64-bit unsigned (positive) DEC encoded value.
 To properly perform a SHA256 hash, we'll need the uint8_t/byte value.
 The ESP32 also used "little-endian" or "least significant byte",
 basically, we need to reverse this byte-array.
@@ -232,7 +234,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 
 ## Step 3: Build the Transaction
 
-Here, we will build the transaction using your ARK Devnet [(DARK) Address](/glossary/#dark-address), 0.00000001 DARK, your boards 'Chip ID' SHA256 hash, and your [Secret Passphrase](/faq/passphrases.html#passphrases).
+Here, we will build the transaction using your ARK Devnet [(DARK) address](/glossary/#dark-address), 0.00000001 DARK, your boards 'Chip ID' SHA256 hash, and your [secret passphrase](/faq/passphrases.html#passphrases).
 
 Lets create another method to handle this.
 
@@ -286,7 +288,7 @@ This is where we will use ARK Cpp-Client to create an API connection using the '
 ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
 ```
 
-Next we send the transactions array to the ARK Network!
+Next we send the transactions array to the ARK network!
 
 ```cpp
 std::string txSendResponse = connection.api.transactions.send(jsonStr);
@@ -440,7 +442,7 @@ This is what a successfully POSTed Transaction response will look like:
 
 ---
 
-Congrats, you just used IoT and the ARK Ecosystem to store sensor data on a public Blockchain! 🎉 🎊
+Congrats, you just used IoT and the ARK Ecosystem to store sensor data on a public blockchain! :tada: :confetti_ball:
 
 Keep in mind, we don't have to always "stick to the script."
 Now that we have a basic understanding of how to post data to the blockchain,

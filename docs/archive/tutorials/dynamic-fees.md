@@ -4,7 +4,7 @@ This tutorial outlines how to configure a Delegate Node to accept dynamic fees. 
 
 ## Why dynamic fees
 
-Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the ARK Network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
+Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the ARK network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
 
 Dynamic fees were introduced initially in [Bitcoin](https://en.bitcoin.it/wiki/Miner_fees), where it is a vital part of its mining economy.
 

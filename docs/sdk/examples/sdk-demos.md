@@ -7,10 +7,10 @@ title: "Minimalistic SDK demos"
 The code represents minimal example of `client` and `crypto` libraries usage for the specified programming language. Example functionality consists of:
 
 - importing/loading the needed dependencies/libraries
-- initialisation of the client and connecting to an ark-node(peer)
+- initialisation of the client and connecting to an ark-node (peer)
 - retrieve a specific block via API
 - create transaction payload
-- post transaction payload to an ark-node(peer)
+- post transaction payload to an ark-node (peer)
 - handle response data from API
 
 Please refer to the code comments or check more detailed documentation for specific SDK in the left menu.
@@ -245,7 +245,7 @@ void doExample() {
         "passphrase",
         "secondPassphrase");
 
-    //  post transaction payload to an ark-node(peer).
+    //  post transaction payload to an ark-node (peer).
     char transactionsBuffer[600];
     snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
 
@@ -341,7 +341,7 @@ void doExample() {
         "passphrase",
         "secondPassphrase");
 
-    //  post transaction payload to an ark-node(peer).
+    //  post transaction payload to an ark-node (peer).
     char transactionsBuffer[600];
     snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
 
@@ -402,7 +402,7 @@ int main() {
         "passphrase",
         "secondPassphrase");
 
-    //  post transaction payload to an ark-node(peer).
+    //  post transaction payload to an ark-node (peer).
     char transactionsBuffer[600];
     snprintf(&transactionsBuffer[0], 600, "{\"transactions\":[%s]}", transfer.toJson().c_str());
 

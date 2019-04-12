@@ -28,7 +28,7 @@ You can use the offline folders to split-up your funds within a wallet. This all
 
 ## When I open my ARK Desktop Wallet I see an empty ARK address which should have ARK tokens in it.
 
-Most likely you are not connected to the network, make sure the cloud icon in the upper right menu (3rd icon) has a checkmark inside it (meaning connected to network) and does not have line through it(disconnected from ARK network). If it has a line through it, it means either you are not connected to the internet or your firewall maybe blocking your data traffic.
+Most likely you are not connected to the network, make sure the cloud icon in the upper right menu (3rd icon) has a checkmark inside it (meaning connected to network) and does not have line through it (disconnected from ARK network). If it has a line through it, it means either you are not connected to the internet or your firewall maybe blocking your data traffic.
 
 ## When I open ARK Desktop I see black screen and nothing is there / I’m trying to make a screenshot and screen is black?
 

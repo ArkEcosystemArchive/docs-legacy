@@ -9,7 +9,7 @@
 
 /**
  * This sketch covers how to use the Cpp-Client API.
- * It allows your ESP32 to send requests to an ARK Node
+ * It allows your ESP32 to send requests to an ARK node
  */
 
  /**
@@ -45,8 +45,8 @@ const char* password = "yourWiFiPassword";
 /****************************************/
 
 /**
- *  This is the IP address of an ARK Node
- *  Specifically, this is a Devnet V2 Node IP
+ *  This is the IP address of an ARK node
+ *  Specifically, this is a Devnet V2 node IP
  *  You can find more peers here: https://github.com/ARKEcosystem/peers
  *
  *  The Public API port for the V2 ARK network is '4003'
@@ -215,7 +215,7 @@ void checkAPI() {
   /********************/
 
   /**
-   * The following method can be used to get the Status of a Node.
+   * The following method can be used to get the Status of a node.
    *
    * This is equivalant to calling '167.114.29.49:4003/api/v2/node/status'
    *

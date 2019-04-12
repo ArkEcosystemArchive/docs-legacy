@@ -28,13 +28,13 @@ You can pickup any of the existing issues on GitHub that are marked with the `Ty
 
 ### Reward Tiers
 
+ - `Tier 0` - Custom Reward
  - `Tier 1` - $100
  - `Tier 2` - $50
  - `Tier 3` - $25
  - `Tier 4` - $10
  - `Tier 5` - $5
  - `Tier 6` - $1
- - `Tier 0` - Custom Reward
 
 Payments will be made at the beginning of each month for the prior month and will be paid in ARK with USD valuation at the time of the payout.
 

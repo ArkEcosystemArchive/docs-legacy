@@ -55,7 +55,7 @@ The old code was very dependent on the ARK team for snapshots when building or r
 ## Breaking Changes
 
 - **External APIs**: all software relying on the `v1` APIs should upgrade as soon as possible.
-- **Snapshots**: Existing backups of the ARK Blockchain cannot be directly imported by `v2`.
+- **Snapshots**: Existing backups of the ARK blockchain cannot be directly imported by `v2`.
 - **Database Schema**: `v2` alters the blockchain representation; thus scripts directly querying the SQL backend will no longer work.
 
 ## Libraries

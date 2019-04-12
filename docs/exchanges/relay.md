@@ -6,7 +6,7 @@ title: "Installing and configuring a Relay Node (Bare Metal or VM)"
 
 ## Introduction
 
-A Relay Node is a full node in the ARK Network; it maintains a complete copy of the ledger (blockchain). These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
+A Relay Node is a full node in the ARK network; it maintains a complete copy of the ledger (blockchain). These nodes serve as a public API endpoint, use an internal service discovery mechanism to locate other nodes and keep each other in sync. Public nodes are used by the SPV clients to transmit signed transactions.
 
 ## Recommended Hardware Requirements
 
@@ -14,7 +14,7 @@ A Relay Node is a full node in the ARK Network; it maintains a complete copy of 
 - 40GB SSD
 - 2 Cores
 
-ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance Node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
+ARK Nodes execute many query intensive operations. The most cost-effective approach for running a high-performance node is choosing SSD over HDD. Increasing the total RAM improves cache performance.
 
 ## Configuration Requirements
 
@@ -96,7 +96,7 @@ Enter the database name: ark_mainnet
 
 This will create PostgreSQL role and database to be used for storing blockchain data.
 
-### 7. Starting ARK Relay process
+### 7. Starting ARK relay process
 
 To start ARK relay process and with it synchronization process with ARK blockchain we need to start relay process with our integrated CLI:
 
@@ -116,7 +116,7 @@ All CLI commands with description can be viewed at [CLI Commands](/guidebook/cor
 
 ### 8. Checking to see if everything is working
 
-Now we want to see if the ARK Relay process has started the synchronization process you can do that by running one of these two commands
+Now we want to see if the ARK relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
 ark relay:log

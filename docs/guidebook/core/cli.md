@@ -948,7 +948,7 @@ ark snapshot:verify
 
 ## Plugins
 
-Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the ARK Blockchain but any developer can create their own plugins and publish them.
+Core itself is composed of multiple plugins that once stitched together provide the full system needed to interact with the ARK blockchain but any developer can create their own plugins and publish them.
 
 ### Publishment
 

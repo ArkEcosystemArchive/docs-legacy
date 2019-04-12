@@ -147,7 +147,7 @@ exit
 ssh user@yournode -p 55555
 ```
 
-If everything was setup successfully, you should be reconnected to your ARK Node. Replace `55555` with the port you chose when setting up your `sshd_config`.
+If everything was setup successfully, you should be reconnected to your ARK node. Replace `55555` with the port you chose when setting up your `sshd_config`.
 
 ### Install Fail2Ban
 
@@ -368,7 +368,7 @@ sudo apt-get install knockd
 
 Logs for knockd appear in `syslog` and will be crucial if you need to troubleshoot.
 
-Run the following command on your ARK Node server.
+Run the following command on your ARK node server.
 
 ```bash
 tail -f /var/log/syslog
@@ -558,7 +558,7 @@ Scroll down to `Origin Certificates` and click the `Create Certificate` button. 
 
 ![cloudflare origin certificate](./assets/secure/cloudflare_certificate.png)
 
-Open Terminal on your ARK Node Server
+Open Terminal on your ARK node server
 
 We need to create a new folder and copy our keys to our server.
 

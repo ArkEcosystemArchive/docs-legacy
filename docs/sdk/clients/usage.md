@@ -709,7 +709,7 @@ func main() {
 
 Before making a request, you should create a `Connection`.
 A `Connection` expects an IP Address and Port by which the API can be reached.
-An example Connection, that interfaces with the API of an ARK Node, would be created as follows:
+An example Connection, that interfaces with the API of an ARK node, would be created as follows:
 
 ```cpp
 ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.54", 4003);
@@ -942,7 +942,7 @@ iex> ARKEcosystem.Client.API.Two.Blocks.list(client)
 
 The client SDK can be used to query the [delegate resource](/api/public/v2/delegates.html).
 
-A delegate is a regular wallet that has broadcasted a registration transaction, acquired a sufficient number of votes, and has a Relay Node configured to forge new blocks through a `forger` module. At any time only 51 delegates are active. They are cost-efficient miners running the ARK Network.
+A delegate is a regular wallet that has broadcasted a registration transaction, acquired a sufficient number of votes, and has a Relay Node configured to forge new blocks through a `forger` module. At any time only 51 delegates are active. They are cost-efficient miners running the ARK network.
 
 Voters are wallets which have broadcasted a vote transaction on a delegate. A vote remains active until an un-vote transaction is sent (it does not have to be recast unless a wallet wishes to change from delegate). Voting for a delegate does not give the delegate access to the wallet nor does it lock the coins in it.
 
@@ -1094,7 +1094,7 @@ iex> ARKEcosystem.Client.API.Two.Delegates.list(client)
 
 ## Node
 
-The ARK Network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The [node resource](/api/public/v2/node.html) allows for querying the health and configurations of the node used by the instantiated client.
+The ARK network consists of different anonymous nodes (servers), maintaining the public ledger, validating transactions and blocks and providing APIs. The [node resource](/api/public/v2/node.html) allows for querying the health and configurations of the node used by the instantiated client.
 
 You may query for:
 

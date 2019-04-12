@@ -899,7 +899,7 @@ IO.puts Transaction.verify(transaction)
 
 ### Serialize (AIP11)
 
-Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the ARK Blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
+Serialization of a transaction object ensures it is compact and properly formatted to be incorporated in the ARK blockchain. If you are using the crypto SDK in combination with the public API SDK, you should not need to serialize manually.
 
 :::: tabs
 

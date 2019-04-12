@@ -8,7 +8,7 @@ title: "How To Setup Your ARK Node"
 
 ## Introduction
 
-Here we will help you set up an ARK Relay node, which relays transactions and secures the ARK Network.
+Here we will help you set up an ARK relay node, which relays transactions and secures the ARK network.
 
 ## Bare-metal
 
@@ -207,7 +207,7 @@ Enter the database name: ark
 
 This will create PostgreSQL role and database to be used for storing blockchain data. That's it, you are all set!
 
-#### Starting ARK Relay process
+#### Starting ARK relay process
 
 To start ARK relay process and with it synchronization process with ARK blockchain we need to start relay process with our integrated CLI:
 
@@ -227,7 +227,7 @@ All CLI commands with description can be viewed at [CLI Commands](/guidebook/cor
 
 #### Checking to see if everything is working
 
-Now we want to see if the ARK Relay process has started the synchronization process you can do that by running one of these two commands
+Now we want to see if the ARK relay process has started the synchronization process you can do that by running one of these two commands
 
 ```bash
 ark relay:log

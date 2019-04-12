@@ -1,6 +1,6 @@
 # Configuring GUI Services
 
-## Setting up your BridgeChain Explorer
+## Setting Up Your BridgeChain Explorer
 
 The explorer is used to view information on your BridgeChain. It provides details about the delegates that are active and on standby. It also provides information about all the addresses, transactions and blocks that are available. In summary, everything you need to know about your BridgeChain can be found in the explorer.
 
@@ -42,7 +42,7 @@ Once the explorer is running, you can give it a test by navigating to it through
 
 ![Image 6](./assets/setup/6.png)
 
-## Adding the BridgeChain to your Desktop Wallet
+## Adding the BridgeChain to Your Desktop Wallet
 
 Having a BridgeChain is great, but you'll probably to interact with it and send out some of your genesis tokens. This will be required when forging with new delegate nodes (instead of auto-forging).
 
@@ -102,7 +102,7 @@ Enter your desired name, and input your passphrase. You can then submit that tra
 
 Reload your desktop wallet and you will see your wallet is now a delegate.
 
-### Voting for your new Delegate
+### Voting for Your New Delegate
 
 Because we’re in an auto-forging state, we don’t need to vote for ourselves. However, once no genesis delegates remain, votes are required to become a Delegate.
 

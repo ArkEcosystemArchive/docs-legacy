@@ -1,8 +1,8 @@
 ---
-title: How to use milestones
+title: "How to Use Milestones"
 ---
 
-# How to use milestones
+# How to Use Milestones
 
 ::: tip
 **This article will base everything on the official [ARK Devnet Milestones](https://github.com/ARKEcosystem/core/blob/develop/packages/crypto/src/networks/devnet/milestones.json).**
@@ -10,7 +10,7 @@ title: How to use milestones
 When you fork Core and plan to run your own network this milestone configuration will be the one of the most interest to you to test your network before going live in production.
 :::
 
-## What are milestones and how do they work?
+## What Are Milestones and How Do They Work?
 
 Milestones are a collection of height based configurations that determine things like how Core handles specific data, when new transaction types are valid or changes to fees and how many delegates are active as forgers.
 
@@ -88,11 +88,11 @@ For example you can see that the `reward` is configured as `0` at height `1` whi
 
 As soon as the network reaches height `10800` it expects all blocks to be broadcasted with a reward of `200000000` and will no longer accept blocks that specify `0` as their reward which will result in a hard-fork for everyone that does not update as they will be unable to accept incoming blocks.
 
-## How do I modify or add properties?
+## How Do I Modify or Add Properties?
 
 Adding or modifying properties is as easy as adding a new object with the key-value pairs that you would like to add to previous milestone or overwrite. The next few examples should give you an idea about how simple it is to modify your milestones to change the behaviour and expectations of your network.
 
-### Changing the forging rewards at a specific height
+### Changing the Forging Rewards at a Specific Height
 
 ```json
 [
@@ -130,7 +130,7 @@ Adding or modifying properties is as easy as adding a new object with the key-va
 ]
 ```
 
-### Changing the number of delegates (block producers)
+### Changing the Number of Delegates (Block Producers)
 
 ```json
 [
@@ -168,7 +168,7 @@ Adding or modifying properties is as easy as adding a new object with the key-va
 ]
 ```
 
-### Changing the number of a transactions a block can hold
+### Changing the Number of a Transactions a Block Can Hold
 
 ```json
 [
@@ -209,7 +209,7 @@ Adding or modifying properties is as easy as adding a new object with the key-va
 ]
 ```
 
-### Changing the length of the vendor field / smart bridge
+### Changing the Length of the Vendor Field / Smart Bridge
 
 ```json
 [
@@ -247,7 +247,7 @@ Adding or modifying properties is as easy as adding a new object with the key-va
 ]
 ```
 
-### Changing the time in seconds to produce and broadcast blocks
+### Changing the Time in Seconds to Produce and Broadcast Blocks
 
 ```json
 [
@@ -285,7 +285,7 @@ Adding or modifying properties is as easy as adding a new object with the key-va
 ]
 ```
 
-### Adding static fees for new transaction types
+### Adding Static Fees for New Transaction Types
 
 ```json
 [

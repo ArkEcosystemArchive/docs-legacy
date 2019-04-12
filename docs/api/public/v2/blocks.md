@@ -1,5 +1,5 @@
 ---
-title: Public Blocks API
+title: "Public Blocks API"
 ---
 
 # Public Blocks API
@@ -8,7 +8,7 @@ Blocks are added every eight seconds to the blockchain by a Delegate Node. Due t
 
 All state changes to the blockchain are in the form of blocks; they contain a set of transactions and metadata. A block is rejected if one or more of the transactions is invalid; or if the metadata is invalid. Thus a block returned from the Public API is always valid.
 
-## List all blocks
+## List All Blocks
 
 The Public API may be used to query for blocks. This dataset contains millions of blocks; thus for analytical purposes, we recommend you use the [Elasticsearch](/guidebook/core/plugins/optional/core-elasticsearch.md) plugin or query the database directly.
 
@@ -155,7 +155,7 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?height=7000042
 }
 ```
 
-## Retrieve a block
+## Retrieve a Block
 
 Blocks may be retrieved by ID or by height. The height is an incremental integer.
 
@@ -216,7 +216,7 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks/7000042
 }
 ```
 
-## List all transactions in a block
+## List All Transactions in a Block
 
 Instead of deserializing the block's payload; you can also obtain the transactions of each block as proper transaction objects directly.
 
@@ -298,7 +298,7 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks/1207994422066799667
 }
 ```
 
-## Search all blocks
+## Search All Blocks
 
 It is possible to filter for specifics blocks using the search resource. Filtering for blocks at the Node side is a lot more efficient than requesting a large payload and filtering it at the client side.
 

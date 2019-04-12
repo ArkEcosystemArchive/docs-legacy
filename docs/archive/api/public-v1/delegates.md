@@ -1,10 +1,10 @@
 ---
-title: Public Delegates API
+title: "Public Delegates API"
 ---
 
 # Public Delegates API
 
-## List all delegates
+## List All Delegates
 
 ### Endpoint
 
@@ -45,7 +45,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates \
 ```
 </request-example>
 
-## List all voters of a delegate
+## List All Voters of a Delegate
 
 ### Endpoint
 
@@ -84,7 +84,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/voters?publicKey=032fcfd1
 ```
 </request-example>
 
-## Retrieve a delegate
+## Retrieve a Delegate
 
 ### Endpoint
 
@@ -130,7 +130,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/get?username=arkx \
 ```
 </request-example>
 
-## Retrieve the delegate registration fee
+## Retrieve the Delegate Registration Fee
 
 ### Endpoint
 
@@ -161,7 +161,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/fee \
 ```
 </request-example>
 
-## Retrieve the total count of delegates
+## Retrieve the Total Count of Delegates
 
 ### Endpoint
 
@@ -188,7 +188,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/count \
 ```
 </request-example>
 
-## Retrieve the total forged of a delegate
+## Retrieve the Total Forged of a Delegate
 
 ### Endpoint
 
@@ -223,7 +223,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/forging/getForgedByAccoun
 ```
 </request-example>
 
-## Search all delegates
+## Search All Delegates
 
 ### Endpoint
 
@@ -266,7 +266,7 @@ curl -X GET https://explorer.ark.io:8443/api/delegates/search?q=arkx \
 ```
 </request-example>
 
-## Retrieve the list of next forging delegates
+## Retrieve the List of Next Forging Delegates
 
 ### Endpoint
 

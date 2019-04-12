@@ -12,7 +12,7 @@ ARK Core is now written in [TypeScript](https://github.com/microsoft/typescript)
 
 These tools make it easy for us to set up the development environment, everything is handled by scripts provided in the Core's `package.json` file.
 
-## Getting started
+## Getting Started
 
 Firstly, you should have [git](https://git-scm.com) installed.
 
@@ -72,7 +72,7 @@ ARK Core stores all the blockchain data in a database. You could read more about
 
 For development, you could use our ready-to-use [Docker Compose](https://docs.docker.com/compose/) configurations, following the instructions at [Docker section](/guidebook/core/docker.html).
 
-## Starting a node
+## Starting a Node
 
 If you want to start a node which consists of a `relay` and `forger` you can use any of the following commands (inside `packages/core`).
 
@@ -80,7 +80,7 @@ If you want to start a node which consists of a `relay` and `forger` you can use
 - `yarn start:devnet` => `packages/core/bin/config/networks/devnet`
 - `yarn start:testnet` => `packages/core/bin/config/networks/testnet`
 
-## Starting a relay
+## Starting a Relay
 
 If you want to start a `relay`, you can use any of the following commands (inside `packages/core`).
 
@@ -88,7 +88,7 @@ If you want to start a `relay`, you can use any of the following commands (insid
 - `yarn relay:devnet` => `packages/core/bin/config/networks/devnet`
 - `yarn relay:testnet` => `packages/core/bin/config/networks/testnet`
 
-## Starting a forger
+## Starting a Forger
 
 If you want to start a `forger`, you can use any of the following commands (inside `packages/core`).
 

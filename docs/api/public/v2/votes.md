@@ -1,5 +1,5 @@
 ---
-title: Public Votes API
+title: "Public Votes API"
 ---
 
 # Public Votes API
@@ -12,7 +12,7 @@ Users are often confused by the voting mechanism and the fee associated with a v
 
 :::
 
-## List all votes
+## List All Votes
 
 All voting transactions may be obtained through this API. This is the equivalent of `transactions/search` with the body parameter `type: 3`.
 
@@ -70,7 +70,7 @@ GET /api/votes
 }
 ```
 
-## Retrieve a vote
+## Retrieve a Vote
 
 Votes may be retrieved using their transaction ID. Note the `asset` field, which contains the `votes` object. The first character of each item in the array indicates if it was a vote: `+`, or unvote: `-`, followed by the public key of the Delegate.
 

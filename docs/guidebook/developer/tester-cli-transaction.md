@@ -1,4 +1,4 @@
-# How to Send Transactions using the ARK Core Tester CLI
+# How to Send Transactions Using the ARK Core Tester CLI
 
 ## Prerequisites
 

@@ -22,7 +22,7 @@ Integration tests generally are rather slow compared to unit tests as they test 
 
 Unit tests generally are the fastest tests in your suite. The speed at which they are executed is great but they give you no guarantee that all components work once they are stitched together, which is why need the previously mentioned `integration` tests.
 
-## Code organization
+## Code Organization
 
 Before all, let's see and understand how the code is organized. When you open the ark repository, you should see the following directory structure:
 
@@ -57,7 +57,7 @@ Now the unit tests associated to this packages would be located in the following
 
 Now that we have an idea of how the code is organized, we can go inside the `/__tests__/unit/core-blockchain` folder and see how the tests are structured.
 
-## Tests structure
+## Tests Structure
 
 We'll keep `/__tests__/unit/core-blockchain` as an example. Open the folder and you'll see something like this:
 
@@ -401,7 +401,7 @@ expect({
 }).toBeSuccessfulResponse();
 ```
 
-## Guidelines for writing tests
+## Guidelines for Writing Tests
 
 ### Use `utils` folder for common stuff
 
@@ -422,7 +422,7 @@ When we write some new tests, generally we start by checking that the feature is
 
 Go deeper and test it with different parameters. Ask yourself: in which case this could very well fail, such as a particular set of parameters? If I were to refactor the feature, what would I like to be tested then?
 
-### Contact us
+### Contact Us
 
 If you have anything to ask, suggest or want to have any talk about testing, don't hesitate to reach out to the team.
 

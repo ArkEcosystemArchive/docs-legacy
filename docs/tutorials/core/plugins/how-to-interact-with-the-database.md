@@ -1,12 +1,12 @@
 ---
-title: How to interact with the database
+title: "How to Interact With the Database"
 ---
 
-# How to interact with the database
+# How to Interact With the Database
 
 [[toc]]
 
-## Getting started
+## Getting Started
 
 Blocks and transactions are the bread and butter of every blockchain. Core stores them in a [PostgreSQL](https://www.postgresql.org/) database.
 

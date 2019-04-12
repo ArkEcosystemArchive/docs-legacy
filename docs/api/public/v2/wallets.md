@@ -1,12 +1,12 @@
 ---
-title: Public Wallets API
+title: "Public Wallets API"
 ---
 
 # Public Wallets API
 
 Wallets are addresses containing, or previously having contained ARK. A wallet's public key may be unknown to the network, in that case, it is referred to as a `cold wallet`.
 
-## List all wallets
+## List All Wallets
 
 A paginated API is provided to obtain all wallets, including empty ones.
 
@@ -50,7 +50,7 @@ GET /api/wallets
 }
 ```
 
-## Retrieve a wallet
+## Retrieve a Wallet
 
 Specific wallets can be obtained either by their `publicKey` or `address`.
 
@@ -81,7 +81,7 @@ GET /api/wallets/{id}
 }
 ```
 
-## List all transactions of a wallet
+## List All Transactions of a Wallet
 
 All transactions belonging to a wallet can be obtained using this API. Equivalent to `transactions/search` with parameters `senderId` and `recipientId`.
 
@@ -142,7 +142,7 @@ GET /api/wallets/{id}/transactions
 }
 ```
 
-## List all received transactions of a wallet
+## List All Received Transactions of a Wallet
 
 Incoming transactions can be obtained as well, Equivalent to `transactions/search` with parameter `recipientId` set.
 
@@ -203,7 +203,7 @@ GET /api/wallets/{id}/transactions/received
 }
 ```
 
-## List all sent transactions of a wallet
+## List All Sent Transactions of a Wallet
 
 The inverse of `transactions/received`.
 
@@ -274,7 +274,7 @@ GET /api/wallets/{id}/transactions/sent
 }
 ```
 
-## List all votes of a wallet
+## List All Votes of a Wallet
 
 Returns all votes made by the wallet. Often users create a new wallet instead of recasting their vote, as the former was historically cheaper.
 
@@ -338,7 +338,7 @@ GET /api/wallets/{id}/votes
 }
 ```
 
-## List all top wallets
+## List All Top Wallets
 
 Sort the wallets by their balance. Most top wallets belong to exchanges and the frozen remainder from the ARK ICO.
 
@@ -391,7 +391,7 @@ GET /api/wallets/top
 }
 ```
 
-## Search all wallets
+## Search All Wallets
 
 Searching for specific wallets is possible as well. A direct database query usually is more performant when the query expression becomes complicated.
 

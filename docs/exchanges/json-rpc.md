@@ -1,8 +1,8 @@
 ---
-title: "JSON-RPC configuration"
+title: "JSON-RPC Configuration"
 ---
 
-# JSON-RPC configuration
+# JSON-RPC Configuration
 
 [[toc]]
 
@@ -71,7 +71,7 @@ All JSON-RPC responses are formatted as follows:
 
 A result is an object defined per RPC method.
 
-### Create transaction
+### Create Transaction
 
 ```js
 transactions.create;
@@ -125,7 +125,7 @@ An example transaction from `034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c7
 }
 ```
 
-### Broadcast transaction
+### Broadcast Transaction
 
 ```js
 transactions.broadcast;
@@ -173,7 +173,7 @@ Broadcasts a transaction to the network for approval. Note that transaction obje
 }
 ```
 
-### Transaction info
+### Transaction Info
 
 ```js
 transactions.info;
@@ -229,7 +229,7 @@ An example transaction from `ANBkoGqWeTSiaEVgVzSKZd3jS7UWzv9PSo` to `ANBkoGqWeTS
 }
 ```
 
-### Create a wallet
+### Create a Wallet
 
 ```js
 wallets.create;
@@ -271,7 +271,7 @@ Derives a public key and address from a given passphrase.
 }
 ```
 
-### Wallet info
+### Wallet Info
 
 ```js
 wallets.info;
@@ -318,7 +318,7 @@ An example response for one of the genesis addresses:
 }
 ```
 
-### List wallet transactions
+### List Wallet Transactions
 
 ```js
 wallets.transactions;
@@ -378,7 +378,7 @@ Returns an array of all transactions associated with a given account.
 }
 ```
 
-### Get block info
+### Get Block Info
 
 ```js
 blocks.info;
@@ -443,7 +443,7 @@ Returns metadata for a given block.
 }
 ```
 
-### Get latest block
+### Get Latest Block
 
 ```js
 blocks.latest;
@@ -505,7 +505,7 @@ An example response for block number 29.
 }
 ```
 
-### List block transactions
+### List Block Transactions
 
 ```js
 blocks.transactions;
@@ -565,7 +565,7 @@ Returns an array of the transactions of a given block.
 }
 ```
 
-### Create BIP38 wallet
+### Create BIP38 Wallet
 
 ```js
 wallets.bip38.create;
@@ -612,7 +612,7 @@ Returns account `publicKey`, `address` and decrypted `WIF` of created account.
 }
 ```
 
-### BIP38 wallet info
+### BIP38 Wallet Info
 
 ```js
 wallets.bip38.info;
@@ -654,7 +654,7 @@ Retrieves saved BIP38 wallet from the server. The wallet must be stored in JSON-
 }
 ```
 
-### Create transaction using BIP38
+### Create Transaction Using BIP38
 
 ```js
 transactions.bip38.create;

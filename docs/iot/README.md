@@ -32,7 +32,7 @@ The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK help develo
 
 The [**Cpp-Crypto**](https://github.com/ARKEcosystem/cpp-crypto) SDK, by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
 
-## Currently Supported Boards
+#"# Currently Supported Boards"
 
 - [Adafruit ESP32 Overview and Setup](/tutorials/iot/boards/esp32-adafruit/)
 - [Adafruit ESP8266 Overview and Setup](/tutorials/iot/boards/esp8266-adafruit/)

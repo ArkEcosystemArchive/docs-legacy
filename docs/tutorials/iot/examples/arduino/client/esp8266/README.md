@@ -1,5 +1,5 @@
 ---
-title: Arduino Cpp-Client - ESP8266 Example
+title: "Arduino Cpp-Client - ESP8266 Example"
 ---
 
 # Client: ESP8266 Arduino Example Sketch

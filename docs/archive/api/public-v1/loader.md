@@ -1,10 +1,10 @@
 ---
-title: Public Loader API
+title: "Public Loader API"
 ---
 
 # Public Loader API
 
-## Retrieve the configuration
+## Retrieve the Configuration
 
 ### Endpoint
 
@@ -36,7 +36,7 @@ curl -X GET https://explorer.ark.io:8443/api/loader/autoconfigure \
 ```
 </request-example>
 
-## Retrieve the status
+## Retrieve the Status
 
 ### Endpoint
 
@@ -64,7 +64,7 @@ curl -X GET https://explorer.ark.io:8443/api/loader/status \
 ```
 </request-example>
 
-## Retrieve the syncing status
+## Retrieve the Syncing Status
 
 ### Endpoint
 

@@ -19,7 +19,7 @@ CORE_API_RATE_LIMIT_USER_LIMIT=300
 
 Setting `API_RATE_LIMIT` to false will globally disable all rate limits. For internal use this is secure. More fine-grained control may be exerted by using `CORE_API_RATE_LIMIT_USER_LIMIT`, which uses IP addresses to assign rate limits. The unit is `requests/minute`.
 
-## Configuration through a Plugin
+## Configuration Through a Plugin
 
 Lower access to the rate limiting can be obtained by writing a plugin/ We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the ARK Core rate limiter.
 
@@ -39,7 +39,7 @@ The `whitelist` option may be used to allow specific IP addresses to access the 
 
 Cache timeouts can be disabled, which is especially useful on resource-strained machines running heavy queries, such as walking the chain block by block.
 
-## Further reference
+## Further Reference
 
 ARK Core uses the [hapi](https://hapijs.com/) framework for its API internals and more specifically [hapi-rate-limit](https://github.com/wraithgar/hapi-rate-limit). This ratelimiter can be configured by setting/altering [core-api](https://github.com/ARKEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-api/lib/defaults.js#L38-L45).
 

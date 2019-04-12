@@ -1,5 +1,5 @@
 ---
-title: ARK Public API
+title: "ARK Public API"
 ---
 
 # ARK Public API

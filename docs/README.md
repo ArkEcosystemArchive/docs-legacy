@@ -4,7 +4,7 @@ title: "Introduction"
 
 # Introduction
 
-## What is ARK Ecosystem?
+## What Is ARK Ecosystem?
 
 ARK Ecosystem's goal is to give everyone the power to easily create, customize and scale their own blockchain networks. By combining innovative network design with accessible & extensible software, ARK Ecosystem allows for maximum developer productivity. We prioritize builders and doers from every walk of life by building blockchain software that balances power and ease of use.
 

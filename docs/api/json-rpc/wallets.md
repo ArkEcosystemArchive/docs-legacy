@@ -1,9 +1,9 @@
 ---
-title: JSON-RPC Wallets API
+title: "JSON-RPC Wallets API"
 ---
 # JSON-RPC Wallets API
 
-## Get a wallet
+## Get a Wallet
 
 ::: tip
 This replaces the `GET /:network/account/:address` endpoint.
@@ -68,7 +68,7 @@ POST /
 }
 ```
 
-## Get a wallets transactions
+## Get a Wallets Transactions
 
 ::: tip
 This replaces the `GET /:network/transactions/:address` endpoint.
@@ -146,7 +146,7 @@ POST /
 }
 ```
 
-## Create a wallet
+## Create a Wallet
 
 ::: tip
 This replaces the `POST /:network/account` endpoint.
@@ -208,7 +208,7 @@ POST /
 }
 ```
 
-## Get a BIP38 wallet
+## Get a BIP38 Wallet
 
 ::: tip
 This replaces the `GET /:network/account/bip38/:userid` endpoint.
@@ -269,7 +269,7 @@ POST /
 }
 ```
 
-## Create a BIP38 wallet
+## Create a BIP38 Wallet
 
 ::: tip
 This replaces the `POST /:network/account/bip38` endpoint.

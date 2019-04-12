@@ -1,5 +1,5 @@
 ---
-title: Public Delegates API
+title: "Public Delegates API"
 ---
 
 # Public Delegates API
@@ -8,7 +8,7 @@ Delegates are regular wallets which have registered themselves eligible to becom
 
 Genesis Delegates are the initial, virtualized Delegates. They were not registered nor voted in, and in the ARK `mainnet` have been replaced by actual Delegates a long time ago.
 
-## List all delegates
+## List All Delegates
 
 You can obtain all Delegates through this paginated API. Note that all registered Delegates are returned in this response, not just the top 51 forging Delegates.
 
@@ -74,11 +74,11 @@ GET /api/delegates
 }
 ```
 
-## Retrieve a delegate
+## Retrieve a Delegate
 
 You can query for a specific delegate by username, address, and public key; thus the following queries will result in an identical response. Note that public keys are always known for delegates, as they have previously transmitted a registration transaction. This is not the case for regular wallets.
 
-#### Query by username
+#### Query by Username
 
 ```bash
 curl \
@@ -86,7 +86,7 @@ curl \
     https://explorer.ark.io:8443/api/delegates/boldninja
 ```
 
-#### Query by address
+#### Query by Address
 
 ```bash
 curl \
@@ -94,7 +94,7 @@ curl \
     https://explorer.ark.io:8443/api/delegates/DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN
 ```
 
-#### Query by public key
+#### Query by Public Key
 
 ```bash
 curl \
@@ -149,7 +149,7 @@ GET /api/delegates/{id}
 }
 ```
 
-## List all blocks of a delegate
+## List All Blocks of a Delegate
 
 The `delegate` resource allows you to obtain blocks from a specific Delegate. This is the equivalent of [searching for blocks](/api/public/v2/blocks.html#search-all-blocks) using the `generatorPublicKey`.
 
@@ -219,7 +219,7 @@ GET /api/delegates/{id}/blocks
 }
 ```
 
-## List all Voters of a Delegate
+## List All Voters of a Delegate
 
 Obtaining the voters of a Delegate is trivial as well. This endpoint returns **active** voters. To acquire historical voters, it is better to query the database directly.
 

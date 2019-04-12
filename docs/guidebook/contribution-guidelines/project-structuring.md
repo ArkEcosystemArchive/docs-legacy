@@ -21,7 +21,7 @@ Make sure that all the dependencies you use are maintained and receive new relea
 - `bin/` is for any executable scripts, or compiled binaries used with, or built from your module.
 - `__tests__/` is for all of your tests with [jest](https://github.com/facebook/jest).
 
-#### lib
+#### Lib
 
 If you are developing a module only for server-side use with node.js, your project files should be placed in the `lib` directory.
 
@@ -29,15 +29,15 @@ If you are developing a module only for server-side use with node.js, your proje
 
 If you are developing a module for server-side or browser use, your project files should be placed in the `src` directory.
 
-#### build
+#### Build
 
 If you are building a module that needs to run both in the browser and on a server, you should use [webpack](https://github.com/webpack/webpack) and place the build scripts inside the `build` directory.
 
-#### dist
+#### Dist
 
 If you're using Webpack to bundle your assets, the output should be placed in the `dist` directory.
 
-#### bin
+#### Bin
 
 The `bin` folder is for any system modules your package will use or generate, including:
 

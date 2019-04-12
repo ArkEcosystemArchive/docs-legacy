@@ -1,10 +1,10 @@
-# Using our Custom Deployer
+# Using Our Custom Deployer
 
 Installing your first node on a bare-metal server is the best way to become familiar with the underlying dependencies and configuration files. The `deployer` handles most work for you; it only requires some initial dependencies such as `NodeJS` and for you to properly configure it.
 
 For this guide you will need a server with an Ubuntu installation, both 16.04 or 18.04 are well tested, but other versions and distributions may work as well. Running this tutorial locally is also possible, but not recommended for actual usage.
 
-## Remote into your machine using SSH
+## Remote Into Your Machine Using SSH
 
 Skip this step if you are carrying out this guide locally.
 
@@ -100,13 +100,13 @@ Watch Logs? [y/N]: y
 
 Your logs should be showing the forging progress; where each virtualized Delegate awaits its turn before creating a new block.
 
-### Set up another forging Node
+### Set Up Another Forging Node
 
 You will need a new machine ready for us to set up. To make it easier, we will use `core-commander` to setup all dependencies then overwrite with our BridgeChain configuration.
 
 First, install a node using the official [core-commander](/exchanges/relay.html)
 
-### Set Custom configurations
+### Set Custom Configurations
 
 in `core-commander/ecosystem.config.js` we can see what parameters are passed to the startup command when running the `relay`, `forger` or `explorer`.
 

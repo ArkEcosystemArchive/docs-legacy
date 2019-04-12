@@ -1,5 +1,5 @@
 ---
-title: Public Blockchain API
+title: "Public Blockchain API"
 ---
 
 # Public Blockchain API

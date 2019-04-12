@@ -12,7 +12,7 @@ One way ARK will facilitate a less strict form of state channels is through the 
 
 ![ACES](./assets/how-does-ark-smartbridge-work/9b0fa65-aces-ark-to-eth.png)
 
-### What does that mean?
+### What Does That Mean?
 
 It’s quite simple. If you want to trigger an event on a blockchain via a different blockchain, you check if that chain is SmartBridge compatible (sufficient reputable encoded listeners offering services). If it is, then you can issue a SmartBridge transaction to any compatible blockchain via the ark wallet and the possibilities are endless.
 
@@ -26,6 +26,6 @@ It’s quite simple. If you want to trigger an event on a blockchain via a diffe
 
 (Example 3 would require Shapeshift to be its encoded listener so that it is always looking for the next SmartBridge TX. Just like ARK, Encoded listener nodes set their transaction fees. Which can be adjusted by the node operator but not ARK.)
 
-### Encoded listeners
+### Encoded Listeners
 
 The Encoded listener node is a hub for listening to SmartBridge transactions. This transaction hub can be set up and run by anyone, Shapeshift, Changelly or even Coinbase. Anyone that wants to act as a medium to help the network can. So in exchange for providing this service, they will be collecting transaction fees for passing data or exchanging currencies via SmartBridge.

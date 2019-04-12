@@ -1,5 +1,5 @@
 ---
-title: ARK Node
+title: "ARK Node"
 ---
 
 # ARK Node Recipes

@@ -4,7 +4,7 @@ title: "Public Signatures API"
 
 # Public Signatures API
 
-## Retrieve the signature registration fee
+## Retrieve the Signature Registration Fee
 
 ### Endpoint
 

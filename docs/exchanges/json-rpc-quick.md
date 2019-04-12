@@ -2,7 +2,7 @@
 title: "JSON-RPC Quick Actions"
 ---
 
-# What is RPC?
+# What Is RPC?
 
 Remote Procedure Call (RPC) is a protocol that allows one program to request a service from software located on another computer network without having to understand all of the network’s details. A procedure call is also sometimes known as a function call or a subroutine call.
 

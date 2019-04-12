@@ -6,7 +6,7 @@ This tutorial outlines how to configure a Delegate Node to accept dynamic fees. 
 This tutorial is compatible with v2.1+, for older guides, check the [archive](/archive/tutorials/dynamic-fees.md)
 :::
 
-## Why dynamic fees
+## Why Dynamic Fees
 
 Although it might seem that a Delegate Node obtains the highest profit by increasing his/her fee; doing so might decrease the total amount of fees collected, as the transaction volume of the ARK network decreases. Dynamic fees ensure users and delegates find a natural middle ground, as Delegate Nodes compete with each other over transactions.
 
@@ -28,7 +28,7 @@ There are two separate settings here worth configuring: the `dynamicFees` consta
 
 You can use dynamic fee constants to alter how the dynamic fee formula is applied in your ARK Core node. The `dynamicFees` config key in your `@arkecosystem/core-transaction-pool` section should look like this:
 
-##### file: packages/core/src/config/mainnet/plugins.js
+##### File: packages/core/src/config/mainnet/plugins.js
 
 ```js
 "@arkecosystem/core-transaction-pool": {

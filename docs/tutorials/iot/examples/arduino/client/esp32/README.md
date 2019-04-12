@@ -1,5 +1,5 @@
 ---
-title: Arduino Cpp-Client - ESP32 Example
+title: "Arduino Cpp-Client - ESP32 Example"
 ---
 
 # Client: ESP32 Arduino Example Sketch

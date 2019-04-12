@@ -64,7 +64,7 @@ pm2 kill && pm2 cleardump && pm2 reset
 
 If this doesn't help, read the known issues below and see if any of those solve your issues.
 
-### Command not found
+### Command Not Found
 
 If you are receiving a message to the effect of `ark command not found` your bash environment most likely doesn't have the yarn bin path registered. Execute the following command to resolve the issue.
 
@@ -72,19 +72,19 @@ If you are receiving a message to the effect of `ark command not found` your bas
 
 If you are using a shell other then the default bash, like zsh, you will need to replace `~/.bashrc` with `~/.zshrc`.
 
-### Process fails to start after update
+### Process Fails to Start After Update
 
 If the processes fail to start or restart after an update it is most likely an issue with pm2. Running `pm2 update` should usually resolve the issue.
 
 If this doesn't resolve the issue you should run `pm2 delete all && ark relay:start && pm2 logs`, also `ark forger:start` if you are a delegate.
 
-### Process has entered an unknown state
+### Process Has Entered an Unknown State
 
 If you are receiving a message to the effect of `The "..." process has entered an unknown state.` your pm2 instance is not responding properly. This is usually resolved by a simple `pm2 update`, if that doesn't help try `pm2 kill` to destroy the pm2 daemon so it gets restarted the next time an application tries to access it.
 
 ## Available Commands
 
-### autocomplete
+### Autocomplete
 
 You might be used to tab completion, which the ARK CLI does support. Using this command does not configure autocompletion, but does show you instructions.
 
@@ -94,7 +94,7 @@ You might be used to tab completion, which the ARK CLI does support. Using this 
 ark autocomplete
 ```
 
-### config:cli
+### Config:cli
 
 Configure the CLI
 
@@ -119,13 +119,13 @@ ark config:cli
 ark config:cli --token="mine"
 ```
 
-##### Switch to the beta channel
+##### Switch to the Beta Channel
 
 ```bash
 ark config:cli --channel="beta"
 ```
 
-### config:forger
+### Config:forger
 
 Configure the forging delegate
 
@@ -147,13 +147,13 @@ ark config:forger
 
 #### Examples
 
-##### Configure a delegate using an encrypted BIP38
+##### Configure a Delegate Using an Encrypted BIP38
 
 ```bash
 ark config:forger --method=bip38 --bip39="..." --password="..."
 ```
 
-##### Configure a delegate using a BIP39 passphrase
+##### Configure a Delegate Using a BIP39 Passphrase
 
 ```bash
 ark config:forger --method=bip39 --bip39="..."
@@ -208,7 +208,7 @@ ark config:forger:bip39
 ark config:forger:bip39 --bip39="..."
 ```
 
-### config:publish
+### Config:publish
 
 Publish the configuration
 
@@ -227,13 +227,13 @@ ark config:publish
 
 #### Examples
 
-##### Publish the configuration
+##### Publish the Configuration
 
 ```bash
 ark config:publish
 ```
 
-### config:reset
+### Config:reset
 
 Reset the configuration
 
@@ -252,13 +252,13 @@ ark config:reset
 
 #### Examples
 
-##### Reset the configuration for the mainnet network
+##### Reset the Configuration for the Mainnet Network
 
 ```bash
 ark config:reset --network=mainnet
 ```
 
-### core:log
+### Core:log
 
 Show the core log
 
@@ -282,7 +282,7 @@ ark core:log
 ark core:log
 ```
 
-### core:restart
+### Core:restart
 
 Restart the core
 
@@ -301,13 +301,13 @@ ark core:restart
 
 #### Examples
 
-##### Restart the core
+##### Restart the Core
 
 ```bash
 ark core:restart
 ```
 
-### core:start
+### Core:start
 
 Start the core
 
@@ -335,43 +335,43 @@ ark core:start
 
 #### Examples
 
-##### Run core with a daemon
+##### Run Core With a Daemon
 
 ```bash
 ark core:start
 ```
 
-##### Run core as genesis
+##### Run Core as Genesis
 
 ```bash
 ark core:start --networkStart
 ```
 
-##### Disable any discovery by other peers
+##### Disable Any Discovery by Other Peers
 
 ```bash
 ark core:start --disableDiscovery
 ```
 
-##### Skip the initial discovery
+##### Skip the Initial Discovery
 
 ```bash
 ark core:start --skipDiscovery
 ```
 
-##### Ignore the minimum network reach
+##### Ignore the Minimum Network Reach
 
 ```bash
 ark core:start --ignoreMinimumNetworkReach
 ```
 
-##### Start a seed
+##### Start a Seed
 
 ```bash
 ark core:start --launchMode=seed
 ```
 
-##### Run core without a daemon
+##### Run Core Without a Daemon
 
 ```bash
 ark core:start --no-daemon
@@ -383,7 +383,7 @@ or use the following command, which supports the same set of flags.:
 ark core:run
 ```
 
-### core:stop
+### Core:stop
 
 Stop the core
 
@@ -403,19 +403,19 @@ ark core:stop
 
 #### Examples
 
-##### Stop the core
+##### Stop the Core
 
 ```bash
 ark core:stop
 ```
 
-##### Stop the core daemon
+##### Stop the Core Daemon
 
 ```bash
 ark core:stop --daemon
 ```
 
-### env:get
+### Env:get
 
 Get the value of an environment variable
 
@@ -434,13 +434,13 @@ ark env:get KEY
 
 #### Examples
 
-##### Get the log level
+##### Get the Log Level
 
 ```bash
 ark env:get CORE_LOG_LEVEL
 ```
 
-### env:list
+### Env:list
 
 List all environment variables
 
@@ -459,13 +459,13 @@ ark env:list
 
 #### Examples
 
-##### List all environment variables
+##### List All Environment Variables
 
 ```bash
 ark env:list
 ```
 
-### env:paths
+### Env:paths
 
 Get all of the environment paths
 
@@ -484,13 +484,13 @@ ark env:paths
 
 #### Examples
 
-##### List all environment paths
+##### List All Environment Paths
 
 ```bash
 ark env:paths
 ```
 
-### env:set
+### Env:set
 
 Set the value of an environment variable
 
@@ -509,13 +509,13 @@ ark env:set KEY VALUE
 
 #### Examples
 
-##### Set the log level
+##### Set the Log Level
 
 ```bash
 ark env:set CORE_LOG_LEVEL info
 ```
 
-### forger:log
+### Forger:log
 
 Show the forger log
 
@@ -539,7 +539,7 @@ ark forger:log
 ark forger:log
 ```
 
-### forger:restart
+### Forger:restart
 
 Restart the forger
 
@@ -558,13 +558,13 @@ ark forger:restart
 
 #### Examples
 
-##### Restart the forger
+##### Restart the Forger
 
 ```bash
 ark forger:restart
 ```
 
-### forger:start
+### Forger:start
 
 Start the forger
 
@@ -593,25 +593,25 @@ ark forger:run
 
 #### Examples
 
-##### Run a forger with a bip39 passphrase
+##### Run a Forger With a bip39 Passphrase
 
 ```bash
 ark forger:start --bip39="..."
 ```
 
-##### Run a forger with an encrypted bip38
+##### Run a Forger With an Encrypted bip38
 
 ```bash
 ark forger:start --bip38="..." --password="..."
 ```
 
-##### Run a forger without a daemon
+##### Run a Forger Without a Daemon
 
 ```bash
 ark forger:start --no-daemon
 ```
 
-### forger:stop
+### Forger:stop
 
 Stop the forger
 
@@ -631,19 +631,19 @@ ark forger:stop
 
 #### Examples
 
-##### Stop the forger
+##### Stop the Forger
 
 ```bash
 ark forger:stop
 ```
 
-##### Stop the forger daemon
+##### Stop the Forger Daemon
 
 ```bash
 ark forger:stop --daemon
 ```
 
-### forger:status
+### Forger:status
 
 Show the forger status.
 
@@ -666,7 +666,7 @@ ark forger:status
 ark forger:status
 ```
 
-### relay:log
+### Relay:log
 
 Show the relay log
 
@@ -690,7 +690,7 @@ ark relay:log
 ark relay:log
 ```
 
-### relay:restart
+### Relay:restart
 
 Restart the relay
 
@@ -709,13 +709,13 @@ ark relay:restart
 
 #### Examples
 
-##### Restart the relay
+##### Restart the Relay
 
 ```bash
 ark relay:restart
 ```
 
-### relay:start
+### Relay:start
 
 Start the relay
 
@@ -746,49 +746,49 @@ ark relay:run
 
 #### Examples
 
-##### Run a relay with a pm2 daemon
+##### Run a Relay With a pm2 Daemon
 
 ```bash
 ark relay:start --network=mainnet
 ```
 
-##### Run a genesis relay
+##### Run a Genesis Relay
 
 ```bash
 ark relay:start --networkStart
 ```
 
-##### Disable any discovery by other peers
+##### Disable Any Discovery by Other Peers
 
 ```bash
 ark relay:start --disableDiscovery
 ```
 
-##### Skip the initial discovery
+##### Skip the Initial Discovery
 
 ```bash
 ark relay:start --skipDiscovery
 ```
 
-##### Ignore the minimum network reach
+##### Ignore the Minimum Network Reach
 
 ```bash
 ark relay:start --ignoreMinimumNetworkReach
 ```
 
-##### Start a seed
+##### Start a Seed
 
 ```bash
 ark relay:start --launchMode=seed
 ```
 
-##### Run a relay without a daemon
+##### Run a Relay Without a Daemon
 
 ```bash
 ark relay:start --no-daemon
 ```
 
-### relay:stop
+### Relay:stop
 
 Stop the relay
 
@@ -808,19 +808,19 @@ ark relay:stop
 
 #### Examples
 
-##### Stop the relay
+##### Stop the Relay
 
 ```bash
 ark relay:stop
 ```
 
-##### Stop the relay daemon
+##### Stop the Relay Daemon
 
 ```bash
 ark relay:stop --daemon
 ```
 
-### top
+### Top
 
 List all core daemons
 
@@ -832,13 +832,13 @@ ark top
 
 #### Examples
 
-##### List all core daemons
+##### List All Core Daemons
 
 ```bash
 ark top
 ```
 
-### snapshot:dump
+### Snapshot:dump
 
 Create a dump of the database
 
@@ -860,7 +860,7 @@ ark snapshot:dump
 | --network         | the name of the network that should be used     |   :x:    |
 | --token           | the name of the token that should be used       |   :x:    |
 
-### snapshot:restore
+### Snapshot:restore
 
 Restore the database from a dump
 
@@ -884,7 +884,7 @@ ark snapshot:restore
 | --network          | the name of the network that should be used     |   :x:    |
 | --token            | the name of the token that should be used       |   :x:    |
 
-### snapshot:rollback
+### Snapshot:rollback
 
 Roll back the database to a specific height or by a specified number of blocks
 
@@ -908,7 +908,7 @@ Either `height` or `number` has to be provided.
 | --network | the name of the network that should be used     |           :x:           |
 | --token   | the name of the token that should be used       |           :x:           |
 
-### snapshot:truncate
+### Snapshot:truncate
 
 Truncate the database
 
@@ -923,7 +923,7 @@ ark snapshot:truncate
 | --network | the name of the network that should be used |   :x:    |
 | --token   | the name of the token that should be used   |   :x:    |
 
-### snapshot:verify
+### Snapshot:verify
 
 Create a new snapshot
 

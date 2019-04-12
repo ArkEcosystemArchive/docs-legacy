@@ -26,7 +26,7 @@ Use a clear, semi-formal tone in writing. There is no need to go as far as acade
 - Use proper punctuation, in tables, captions, and citations. Titles should use [title casing](https://grammar.yourdictionary.com/capitalization/rules-for-capitalization-in-titles.html).
 - Avoid using abbreviations.
 
-## Code snippets
+## Code Snippets
 
 In tutorials and descriptions, we often have code snippets present to illustrate SDK functionalities. If you provide a code snippet, showing how to use a function, ensure that the reader knows what has been omitted. Start a tutorial with the setup code, imports, and installations before the main body. Ensure the code uses correct namespaces. When documenting a library, use the library as if you were an end-user:
 
@@ -152,7 +152,7 @@ Most markdown linters will warn you of these common issues.
 
 There are many terms commonly used when describing aspects of ARK and related technologies. To standardize how documentation is presented to the user and to remove differences across different texts, we have established the following rules for using ARK terminology.
 
-### Commonly used Technological Concepts and Project Names
+### Commonly Used Technological Concepts and Project Names
 
 Firstly, the term "ARK" refers to an entire umbrella of concepts and is mainly used as a prefix to describe projects it maintains or supports.
 

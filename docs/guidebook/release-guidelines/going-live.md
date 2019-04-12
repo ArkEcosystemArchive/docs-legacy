@@ -1,5 +1,5 @@
 ---
-title: Going Live!
+title: "Going Live!"
 ---
 
 # Going Live!

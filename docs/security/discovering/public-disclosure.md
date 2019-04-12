@@ -2,7 +2,7 @@
 
 After we have assessed the risk and mitigated a vulnerability, it is publicly disclosed in our [dedicated repository](https://github.com/ARKEcosystem/security-vulnerabilities).
 
-## Rewards program
+## Rewards Program
 
 Our rewards program encourages researchers to contribute to the security of the ARK Ecosystem through the following bounties:
 

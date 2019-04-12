@@ -1,10 +1,10 @@
 ---
-title: Public Accounts API
+title: "Public Accounts API"
 ---
 
 # Public Accounts API
 
-## List all accounts
+## List All Accounts
 
 ### Endpoint
 
@@ -47,7 +47,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts/getAllAccounts \
 ```
 </request-example>
 
-## Retrieve an account
+## Retrieve an Account
 
 ### Endpoint
 
@@ -87,7 +87,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts?address=AUDud8tvyVZa67p3QY
 ```
 </request-example>
 
-## List all top accounts
+## List All Top Accounts
 
 ### Endpoint
 
@@ -126,7 +126,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts/top \
 ```
 </request-example>
 
-## Retrieve the balance of an account
+## Retrieve the Balance of an Account
 
 ### Endpoint
 
@@ -159,7 +159,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts/getBalance?address=AUDud8t
 ```
 </request-example>
 
-## Retrieve the delegate registration fee
+## Retrieve the Delegate Registration Fee
 
 ### Endpoint
 
@@ -185,7 +185,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts/delegates/fee \
 ```
 </request-example>
 
-## Retrieve the public key of an account
+## Retrieve the Public Key of an Account
 
 ### Endpoint
 
@@ -217,7 +217,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts/getPublicKey?address=AUDud
 ```
 </request-example>
 
-## Retrieve the total count of accounts
+## Retrieve the Total Count of Accounts
 
 ### Endpoint
 
@@ -244,7 +244,7 @@ curl -X GET https://explorer.ark.io:8443/api/accounts/count \
 ```
 </request-example>
 
-## Retrieve the voted delegate of an account
+## Retrieve the Voted Delegate of an Account
 
 ### Endpoint
 

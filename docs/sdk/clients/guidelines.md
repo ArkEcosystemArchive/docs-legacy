@@ -54,7 +54,7 @@ Following these guidelines is required to provide a streamlined experience acros
 - Votes
 - Wallets
 
-## Things to keep in mind
+## Things to Keep in Mind
 
 - Do not assume what the developer is going to do with the output. **If your programming language of choice allows you to return the raw response without any mapping, do so. If you work with a programming language like `Go` that is strict and requires you to provide a struct you should fully reflect the original API response in your struct.**
 - Do not incorporate any cryptography functionality. **An example of this would be to have a `createTransaction` method that sends a signed transaction to the API and the method itself would create the signed transaction instead of expecting it as an argument.**

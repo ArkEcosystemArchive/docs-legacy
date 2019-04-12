@@ -15,7 +15,7 @@ git clone git@github.com:arkecosystem/deployer
 cd deployer
 ```
 
-## Building the image
+## Building the Image
 
 Inside `deployer/docker` you find the `Dockerfile` which specifies the build instructions for our image.
 
@@ -75,7 +75,7 @@ docker build -t $IMAGE_NAME .
 
 Where IMAGE_NAME is whatever you want it to be. If you have a hub.docker.com account, `mydockerusername:deployer:latest` would be suitable so that you can push it to your registry later on.
 
-## Running the deployer
+## Running the Deployer
 
 To run your BridgeChain and associated services, execute:
 

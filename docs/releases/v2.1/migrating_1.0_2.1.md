@@ -378,7 +378,7 @@ git remote set-url origin https://github.com/myorganization/mynet.git
 git push
 ```
 
-## Syncing with the Existing Network
+## Syncing With the Existing Network
 
 We are going to start a relay node, which is the equivalent of a standard `v1` node without entering your delegate's passphrase. First bootstrap all dependencies.
 

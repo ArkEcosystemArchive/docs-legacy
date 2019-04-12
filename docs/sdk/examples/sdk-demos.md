@@ -1,8 +1,8 @@
 ---
-title: "Minimalistic SDK demos"
+title: "Minimalistic SDK Demos"
 ---
 
-## SDK client and crypto usage samples
+## SDK Client and Crypto Usage Samples
 
 The code represents minimal example of `client` and `crypto` libraries usage for the specified programming language. Example functionality consists of:
 
@@ -183,13 +183,13 @@ end
 from ark.client import ARKClient
 from crypto.transactions.builder.transfer import Transfer
 
-# Instantiate the client
+# Instantiate the Client
 client = ARKClient('https://dexplorer.ark.io:8443/api/', api_version='v2')
 
-# find block with height 545774
+# Find Block With Height 545774
 response = client.blocks.get('545774')
 
-# Creating a transaction with the ARKecosystem-Python-Crypto builder
+# Creating a Transaction With the ARKecosystem-Python-Crypto Builder
 tx = Transfer(recipientId='D5rHMAmTXVbG7HVF3NvTN3ghpWGEii5mH2', amount=10000000,
               vendorField="This is a transaction from Python")
 

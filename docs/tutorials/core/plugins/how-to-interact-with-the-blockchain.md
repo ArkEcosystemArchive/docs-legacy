@@ -1,8 +1,8 @@
 ---
-title: How to interact with the blockchain
+title: "How to Interact With the Blockchain"
 ---
 
-# How to interact with the blockchain
+# How to Interact With the Blockchain
 
 [[toc]]
 
@@ -12,7 +12,7 @@ The `core-blockchain` package is the central entity around which everythign revo
 
 It holds all of the information that is important to know when you want to see what the current state of your node is. **Do not trust the database, trust the in-memory data it exposes as it's updated in real-time.**
 
-## Interacting with the state of the blockchain
+## Interacting With the State of the Blockchain
 
 ```ts
 import { app } from "@arkecosystem/core-container";

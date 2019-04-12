@@ -1,12 +1,12 @@
 ---
-title: Public Peers API
+title: "Public Peers API"
 ---
 
 # Public Peers API
 
 The `peers` resource is much like the [node](/api/public/v2/node.md) resource, but only exposes the IPs and ports of connected peers. Recursively traversing this API and its responses allow you to inspect the entire network.
 
-## List all peers
+## List All Peers
 
 Returns all peers known by the Node. These are not necessarily all peers; only public Nodes appear here.
 
@@ -56,7 +56,7 @@ GET /api/peers
 }
 ```
 
-## Retrieve a peer
+## Retrieve a Peer
 
 Specific peers can be found by IP address. Note that a peer may have their Public API disabled, and thus they are only reachable by the internal `p2p` API.
 

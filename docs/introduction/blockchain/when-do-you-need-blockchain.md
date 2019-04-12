@@ -1,8 +1,8 @@
 ---
-title: "When Do You Need A Blockchain?"
+title: "When Do You Need a Blockchain?"
 ---
 
-# When Do You Need A Blockchain?
+# When Do You Need a Blockchain?
 
 It seems easy to slap blockchain onto an idea and expect millions of users to come rolling in. This notion seems especially true in the “Blockchain Renaissance” of 2017 and 2018. The complex truth is, however, that to achieve mass adoption, one must overcome the hurdles of user experience and gain massive advantages against the centralized incumbents. The traditional banking system and FANG companies have a strong foothold in our society. Although it can surely be said that blockchain is a truly disruptive technology, that doesn’t necessarily mean that your specific idea is guaranteed to actually disrupt anything.
 
@@ -14,14 +14,14 @@ Let’s assume your idea requires the transfer of value of some kind between ind
 
 You are also limiting your liability because you place the responsibility of protecting the value onto the users. If they lose their private key, you are not liable. As long as they control their private key, their funds are safe and you will not have to worry about spending time and money protecting their funds directly. Thus, you might need a blockchain if you realize that your idea requires a lot of time and funds to develop the value transfer layer using standard means, and the traditional centralized version of your idea assumes a lot of security risk that would cost a lot of time and money to mitigate.
 
-## When the Transaction size is Small
+## When the Transaction Size Is Small
 
 Imagine one billion dollars in quarters down in the deepest depths of the ocean. Now imagine each quarter is housed inside a clam. It is economically impossible to harvest the billion dollars. You would have to invest in underwater robotics technology to bring all the clams up, and even after spending millions on that, you would have to hire enough shuckers to open four billion clams, which will have an unreasonable labor cost and could take dozens of decades. Micropayments are a huge hassle for the traditional financial system, as VISA, merchant processors, and banks eat up a substantial value from each transaction. There is a limit at which it is no longer economically feasible to use the traditional system for micropayments. Blockchain, however, allows you to receive four billion quarters’ worth of value from four billion different people all around the world, instantly and at a fraction of the cost of using the traditional system, giving us a much more sustainable micropayment system.
 
 Business models such as freemium apps try to work around the microtransaction problem by using in-app currency. You spend $9.99 to buy one hundred thousand Sparkles, and then you can buy a digital hat for your avatar for 10 Sparkles. These business models, however, don’t let you earn Sparkles and then cash out of the system. Blockchain has two-way value transfer built into its architecture. When your idea involves the two-way exchange of goods and services worth tiny amounts, it’s a great reason to take a look at blockchain.
 Further use-cases include automated interaction between internet-of-things (IoT) devices or micropayments to online content creators based on time spent reading an article or watching a video as well.
 
-## When users have multiple ways to spend and earn on your platform
+## When Users Have Multiple Ways to Spend and Earn on Your Platform
 
 Now that we’ve touched on the significance and advantages of blockchain for two-way value transfer within your platform, it should be noted that blockchain also provides a significant leg up when your platform involves earning tokens that can immediately be spent on something else within the system. A real-world example of this is [STEEM](https://steem.com/) where you earn STEEM for posting content, and you can choose to cash out that STEEM or use it to get Steem Power, increasing your influence in the network. For the average user, cashing out can be a bit cumbersome as it involves multiple steps and takes time and a bit of a learning curve to achieve. Using tokens earned for in-platform goods and services facilitates a seamless user experience that benefits the consumers, the providers of goods and services, and the overall health of the microeconomy.
 
@@ -36,7 +36,7 @@ The review feedback dictates whether the MORSELS in escrow are released back to 
 
 Now we can apply this rough sketch as it pertains to the concept of using blockchain for A-B earn-spend methods. The writer earns MORSELS through review tips. They could cash out, but it would be easier to put those MORSELS in escrow to write more reviews and thereby get more tips. They could also spend the MORSELS at participating restaurants, essentially eating for free. The restaurants purchase MORSELS directly from the app to fund its social economy.
 
-## When your Users are Unbanked
+## When Your Users Are Unbanked
 
 If a large group of your target market is unbanked, blockchain has serious potential to assist you in executing your idea. For business to be conducted over the internet, the traditional banking system or blockchain are the only options. If the traditional banking system is unavailable, the only place to go is blockchain. Uber and Lyft cannot exist unless both driver and rider have access to traditional banking. As a consumer, you can use prepaid debit cards to purchase goods and services online or through apps, but earning poses some major hurdles. Cryptocurrencies like Bitcoin appear to have a lot of promise in underdeveloped areas.
 
@@ -44,7 +44,7 @@ Suppose there is a platform called Thread. Thread connects independent fashion d
 
 Now we can tie it all together according to this concept. The designers do not need a bank account to do business on Thread. They can receive payment for clothes in cryptocurrency, and buy raw materials locally or online with that cryptocurrency. They can also use Bitcoin to buy goods and services wherever it is accepted in their area. Because the platform runs peer-to-peer, there is no bloated middleman or corrupt organization on the designer end. The money goes directly into the hands of the garment provider. If your idea aims to include the developing world in some way, you can overcome the hurdle of your participants being unbanked by using Blockchain.
 
-## When Automation of Transaction is Key
+## When Automation of Transaction Is Key
 
 If your idea involves the disbursement of value to multiple parties on a transaction event, blockchain is ideal for making this process easy to develop and deploy. 
 

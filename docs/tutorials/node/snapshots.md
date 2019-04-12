@@ -20,11 +20,11 @@ If you're unsure of which to choose, use the `lite` codec. Generally speaking, i
 
 The `@arkecosystem/core` is a command-line interface designed to help node operators and developers automate their backup creation workflow. While the commands themselves can be found with `ark snapshot --help`, the source code behind these commands can be found in the `packages/core/src/commands/snapshot` [file](https://github.com/ARKEcosystem/core/blob/develop/packages/core/src/commands/snapshot).
 
-## Create A Snapshot
+## Create a Snapshot
 
 Calling the `dump` CLI command prompts your node to create a backup and save it in the data directory specified at runtime. The folder name will follow the format `{data}/snapshots/{network}/{startblock}-{endblock}` and contains `transactions.lite`, `blocks.lite` and `meta.json`.
 
-### Creating a new snapshot
+### Creating a New Snapshot
 
 To create a snapshot, run the following command:
 
@@ -61,7 +61,7 @@ ark snapshot:dump --blocks 0-331985
 
 Note that all appends create new backup folders and leave the original snapshot intact. To preserve hard disk space, remove old backups if you are sure your appended snapshot is valid.
 
-## Restoring a snapshot
+## Restoring a Snapshot
 
 The `restore` command allows you to restore your ARK Core node with data from a backup you previously created.
 

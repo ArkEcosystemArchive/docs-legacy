@@ -128,7 +128,7 @@ Following these guidelines is required to provide a streamlined experience acros
 - **nethash** Get the nethash of the network.
 - **wif** Get the wif prefix of the network.
 
-## Things to keep in mind
+## Things to Keep in Mind
 
 - Do not assume what the developer is going to do with the output. **If you are working with a buffer, return the buffer instead of a hex encoded value.**
 - Add optional helper methods to easily convert identities between `binary` and `hex`. **An example of this would be to be able to do `privateKey.toHex()` instead of having to encode the private key bytes to hex manually.**

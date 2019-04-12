@@ -1,5 +1,5 @@
 ---
-title: How to setup the Arduino IDE
+title: "How to Setup the Arduino IDE"
 ---
 
 # Arduino IDE Setup
@@ -24,7 +24,7 @@ You can even run the Arduino IDE on a Raspberry Pi (Linux Arm release), so you d
 
 ---
 
-## Download and install
+## Download and Install
 
 ![Arduino](.././assets/arduino/arduino-ide-overview.jpeg)
 

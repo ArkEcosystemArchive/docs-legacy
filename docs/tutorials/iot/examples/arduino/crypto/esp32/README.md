@@ -1,5 +1,5 @@
 ---
-title: Arduino Cpp-Crypto - ESP32 Example
+title: "Arduino Cpp-Crypto - ESP32 Example"
 ---
 
 # Crypto: ESP32 Arduino Example Sketch

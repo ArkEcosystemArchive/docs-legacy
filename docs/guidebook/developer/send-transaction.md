@@ -1,4 +1,4 @@
-# How to Send Your First Transaction using the ARK SDK
+# How to Send Your First Transaction Using the ARK SDK
 
 We will use the client and crypto libraries to send an ARK transaction programmatically. You will see how the client and crypto libraries work together to provide a comprehensive base for any ARK project and learn how to configure the SDKs to work alongside your testnet.
 
@@ -10,7 +10,7 @@ You'll also want to make a directory in which to place your code. Because we con
 
 Finally, to send a transaction, we need our testnet to be running. So before we start writing code, make sure to start the testnet by navigating to the `packages/core` folder of your `core` repo and running the command `yarn full:testnet`.
 
-## Connect To Testnet
+## Connect to Testnet
 
 With our testnet up and running, the first thing we need to do is connect to it. All interactions between ARK Nodes and the outside world happen through the Public API, which is a REST API facilitating different [actions](/api/) on the blockchain.
 
@@ -384,7 +384,7 @@ from crypto.configuration.network import set_network
 
 set_network(Testnet)
 
-# or if you need custom parameters
+# Or if You Need Custom Parameters
 from crypto.configuration.network import set_custom_network
 
 set_custom_network(epoch, version, wif)

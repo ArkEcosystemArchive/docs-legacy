@@ -1,10 +1,10 @@
 ---
-title: JSON-RPC Transactions API
+title: "JSON-RPC Transactions API"
 ---
 
 # JSON-RPC Transactions API
 
-## Get a transaction
+## Get a Transaction
 
 ### Endpoint
 
@@ -74,7 +74,7 @@ POST /
 }
 ```
 
-## Broadcast transactions
+## Broadcast Transactions
 
 ::: tip
 This replaces the `POST /:network/broadcast` endpoint.
@@ -146,7 +146,7 @@ POST /
 }
 ```
 
-## Create a transaction
+## Create a Transaction
 
 ::: tip
 This replaces the `POST /:network/transaction` endpoint.
@@ -218,7 +218,7 @@ POST /
 }
 ```
 
-## Create a transaction from a BIP38
+## Create a Transaction from a BIP38
 
 ::: tip
 This replaces the `POST /:network/transaction/bip38` endpoint.

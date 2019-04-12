@@ -8,7 +8,7 @@ There are two stable versions of the Public API: the Public API v1 and the Publi
 
 When using the Public API v1, we encourage you to request v1 via the `API-Version: 1` header. Similarly, use `API-Version: 2` to request API v2.
 
-## Current version
+## Current Version
 
 By default, all requests to a relay receive the v1 version of the Public API. We encourage you to request this version via the `API-Version` header explicitly.
 

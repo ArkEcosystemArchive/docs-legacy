@@ -1,8 +1,8 @@
 ---
-title: "How To Setup Your ARK Node"
+title: "How to Setup Your ARK Node"
 ---
 
-# How To Setup Your ARK Node
+# How to Setup Your ARK Node
 
 [[toc]]
 
@@ -10,7 +10,7 @@ title: "How To Setup Your ARK Node"
 
 Here we will help you set up an ARK relay node, which relays transactions and secures the ARK network.
 
-## Bare-metal
+## Bare-Metal
 
 ### Minimum Requirements
 
@@ -94,7 +94,7 @@ When prompted, use the password given to you by your cloud provider. Some provid
 will require you to set up a root password when creating the VM, while others may
 give you a temporary password.
 
-#### Create a user
+#### Create a User
 
 Executing this guide as the root user should be avoided. Instead create a new, dedicated user to manage ARK related software. On your server type the following into the command line and press enter. Where `username` is the name you want to log in with:
 
@@ -124,7 +124,7 @@ Enter the new value, or press ENTER for the default
 Is the information correct? [Y/n] Y
 ```
 
-#### Granting sudo privileges
+#### Granting Sudo Privileges
 
 Next, we need to make sure that our user can do all the things it needs to do. Type
 the command below into your command line and press enter. Where `username` is the
@@ -143,7 +143,7 @@ We're now ready to begin installing ARK. The initial install may take a while
 and at times appear not to be doing anything. Please have patience and let the process
 finish.
 
-#### Switch to the ARK user
+#### Switch to the ARK User
 
 While installing ARK Core, we should use the ARK user that we created above and go to the base directory. To switch to it, run:
 
@@ -152,7 +152,7 @@ sudo su - username
 cd ~
 ```
 
-#### Running ARK Core installation script
+#### Running ARK Core Installation Script
 
 Installing ARK Core is a straightforward process. We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command:
 
@@ -164,7 +164,7 @@ You will be asked to input your current users password for sudo privileges. Writ
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
-#### Selecting ARK Core network
+#### Selecting ARK Core Network
 
 Once installation of dependencies and ARK Core is finished you will need to select on which network you wish to operate. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
@@ -187,7 +187,7 @@ After you made your selection you will need to confirm by pressing `y` and confi
 
 With that we have sucessfully installed ARK Core and published our configuration options.
 
-#### Configuring ARK Core database
+#### Configuring ARK Core Database
 
 Last step of the ARK Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
@@ -207,7 +207,7 @@ Enter the database name: ark
 
 This will create PostgreSQL role and database to be used for storing blockchain data. That's it, you are all set!
 
-#### Starting ARK relay process
+#### Starting ARK Relay Process
 
 To start ARK relay process and with it synchronization process with ARK blockchain we need to start relay process with our integrated CLI:
 
@@ -225,7 +225,7 @@ Starting ark-relay... done
 All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by running `ark help` command.
 :::
 
-#### Checking to see if everything is working
+#### Checking to See if Everything Is Working
 
 Now we want to see if the ARK relay process has started the synchronization process you can do that by running one of these two commands
 

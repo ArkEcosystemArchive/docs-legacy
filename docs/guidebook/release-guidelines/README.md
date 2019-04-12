@@ -1,5 +1,5 @@
 ---
-title: Release Guidelines
+title: "Release Guidelines"
 ---
 
 # Release Guidelines

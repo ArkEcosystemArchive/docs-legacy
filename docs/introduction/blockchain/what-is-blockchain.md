@@ -1,4 +1,4 @@
-# What is Blockchain?
+# What Is Blockchain?
 
 [[toc]]
 

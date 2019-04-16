@@ -16,11 +16,11 @@ The official changelog of ARK Core is hosted in the [core repository](https://gi
 
 Core is released in 2 different channels via `npm` to have different versions for `devnet` and `mainnet` during development.
 
-### next
+### Next
 
 This channel targets the next minor or major release and is used for `devnet` releases which means it receives regular updates as development goes on.
 
-### latest
+### Latest
 
 This channel targets the stable version of core and receives updates when bug fixes or security patches are needed. Outside of those cases there will usually only be updates once development on a current version of the `next` channel has been completed.
 

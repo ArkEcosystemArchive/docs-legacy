@@ -2,7 +2,7 @@
 
 In this recipe, we will build an ARK Core plugin to monitor our blockchain and trigger an action whenever a given delegate forges a block. You are going to learn how to integrate custom functionality into your ARK Core node by writing plugins to react to network events as they occur.
 
-## Define the problem
+## Define the Problem
 
 Generally speaking, there are two primary contexts in which you might want to monitor your blockchain:
 

@@ -36,7 +36,7 @@ Your new profile must then be assigned a name and a network. Mainnet is the one 
 
 Once you have entered your name, you can sign in by touching the profile you created and by entering the PIN you created earlier. From there, you can click on the bottom-right button to either create or import a wallet. If you are importing a wallet, click [here](#importing-a-wallet). If you are creating a new wallet, continue reading.
 
-## Creating a wallet
+## Creating a Wallet
 
 If you choose to generate a wallet, follow the prompts and you should be shown your shareable Public Address and your Secret Passphrase.
 
@@ -50,7 +50,7 @@ The next screen will show you the amount of ARK tokens you have in your wallets,
 
 ![ARK Mobile Wallet Passphrase](./assets/how-to-use-the-mobile-wallet/arkWallet8.png) ![ARK Mobile Wallet Balance](./assets/how-to-use-the-mobile-wallet/arkWallet9.png)
 
-## Importing a wallet
+## Importing a Wallet
 
 If you choose to import a wallet and follow the prompts, you will have two options to import your wallet: QR Code or by putting in your secret passphrase or address manually.
 

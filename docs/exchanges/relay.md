@@ -1,5 +1,5 @@
 ---
-title: "Installing and configuring a Relay Node (Bare Metal or VM)"
+title: "Installing and Configuring a Relay Node (Bare Metal or VM)"
 ---
 
 # Installing a Relay Node
@@ -40,7 +40,7 @@ Always ensure your server has the latest set of updates, due to performance and 
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-### 2. Add a new user and add to the sudo group
+### 2. Add a New User and Add to the Sudo Group
 
 It is best to create a specific ARK-related user, which can later own the required databases as well.
 
@@ -49,7 +49,7 @@ sudo adduser username
 sudo usermod -aG sudo username
 ```
 
-### 3. Switch to the new user
+### 3. Switch to the New User
 
 Switch to the new user account and go to the base directory.
 
@@ -58,7 +58,7 @@ sudo su - username
 cd ~
 ```
 
-### 4. Install dependencies and ARK Core
+### 4. Install Dependencies and ARK Core
 
 We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command.
 
@@ -70,13 +70,13 @@ You will be asked to input your current users password for sudo privileges. Writ
 
 Process might take a while, don't interrupt it and wait for it to finish.
 
-### 5. Selecting ARK Core network
+### 5. Selecting ARK Core Network
 
 Once installation of dependencies and ARK Core is finished you will need to select on which network you wish to operate, since we are setting `mainnet` node select it. This can be achieved by pressing `up` or `down` arrow keys and confirming selection with `enter`.
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`.
 
-### 6. Configuring ARK Core database
+### 6. Configuring ARK Core Database
 
 Last step of the ARK Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
@@ -96,7 +96,7 @@ Enter the database name: ark_mainnet
 
 This will create PostgreSQL role and database to be used for storing blockchain data.
 
-### 7. Starting ARK relay process
+### 7. Starting ARK Relay Process
 
 To start ARK relay process and with it synchronization process with ARK blockchain we need to start relay process with our integrated CLI:
 
@@ -114,7 +114,7 @@ Starting ark-relay... done
 All CLI commands with description can be viewed at [CLI Commands](/guidebook/core/cli.html#available-commands) or by executing the `ark help` command.
 :::
 
-### 8. Checking to see if everything is working
+### 8. Checking to See if Everything Is Working
 
 Now we want to see if the ARK relay process has started the synchronization process you can do that by running one of these two commands
 
@@ -148,7 +148,7 @@ pm2 restart all --update-env
 
 :::
 
-## Next steps
+## Next Steps
 
 ::: warning
 Please note that API will be available when the node has synced with the network, which can take up to 15 hours depending on your network speed.

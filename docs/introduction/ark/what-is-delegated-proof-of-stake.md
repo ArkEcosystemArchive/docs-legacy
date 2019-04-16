@@ -1,4 +1,4 @@
-# What Is Delegated Proof-Of-Stake
+# What Is Delegated Proof-of-Stake
 
 A decentralized blockchain network needs a consensus algorithm to replace the accountant, administrator, bank, or company who traditionally decide which transactions are valid and in which order they should appear in the ledger. It not only functions as a decentralized firewall to prevent attacks and manipulation but also as a way to store verified transactions page-by-page - or block-by-block - into the distributed ledger.
 

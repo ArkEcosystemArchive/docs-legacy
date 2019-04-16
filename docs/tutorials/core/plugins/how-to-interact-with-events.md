@@ -1,8 +1,8 @@
 ---
-title: How to interact with events
+title: "How to Interact With Events"
 ---
 
-# How to interact with events
+# How to Interact With Events
 
 [[toc]]
 
@@ -10,7 +10,7 @@ title: How to interact with events
 
 Core provides a package called [core-event-emitter](https://github.com/ARKEcosystem/core/tree/develop/packages/core-event-emitter/src) which exposes an instance of the [Node.js EventEmitter](https://nodejs.org/api/events.html). This plugin should not be installed manually but rather be resolved from the app container.
 
-## Listening for events
+## Listening for Events
 
 A common use-case is that your plugin will listen to events that core emitted in order to process the data for monitoring.
 
@@ -35,7 +35,7 @@ This example will resolve the `logger` and `event emitter` from the app containe
 In a real world use-case you should send notifications via slack, email, SMS or whatever else you prefer to use for notifications instead of doing simple logging for missed blocks if you intend to write a monitoring tool.
 :::
 
-## Emitting your own events
+## Emitting Your Own Events
 
 A less common use-case is that your plugin will emit events that can be listened to by other plugins _(or your own for internal use, core-snapshots does this)_ rather then your plugin itself listening and reacting to events that core emitted. The steps are basically the same as for the listener.
 

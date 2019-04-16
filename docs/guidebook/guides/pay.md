@@ -10,7 +10,7 @@ This is the reference implementation for ARK Pay, a simple open-source library t
 yarn add @arkecosystem/pay
 ```
 
-## Usage with Browsers
+## Usage With Browsers
 
 ::: warning
 When using this module from a website that requires secure connections via HTTPS (SSL), you will need to specify peers that use HTTPS as browsers will not allow connections from HTTPS to HTTP (Peers). The default for ARK Core is to run the public API on HTTP connections without SSL.
@@ -86,43 +86,43 @@ await gateway.start();
 
 ## API
 
-### Set the recipient of the transfer.
+### Set the Recipient of the Transfer.
 
 ```js
 .recipient('ARMy9u1XvrZ124JzQq3oeJpjmBEnYkyU7D')
 ```
 
-### Set the total amount of the transfer.
+### Set the Total Amount of the Transfer.
 
 ```js
 .amount(1)
 ```
 
-### Set the vendor field of the transfer.
+### Set the Vendor Field of the Transfer.
 
 ```js
 .vendorField('Hello World')
 ```
 
-### Set the fiat currency of the transfer.
+### Set the Fiat Currency of the Transfer.
 
 ```js
 .currency('USD')
 ```
 
-### Set the cryptocurrency of the transfer.
+### Set the Cryptocurrency of the Transfer.
 
 ```js
 .coin('ARK')
 ```
 
-### Set the network of the transfer.
+### Set the Network of the Transfer.
 
 ```js
 .network('devnet')
 ```
 
-### Set the seeds of the network.
+### Set the Seeds of the Network.
 
 ```js
 .seeds('ark', [{
@@ -137,7 +137,7 @@ await gateway.start();
 }])
 ```
 
-### Set the peers of the network.
+### Set the Peers of the Network.
 
 ```js
 .peers([{

@@ -1,4 +1,4 @@
-# Anonymous Vs Untraceable
+# Anonymous vs Untraceable
 
 All too often, the terms “anonymous” and “untraceable” are interchanged and misused, both by technical writers and amateurs. When Bitcoin initially entered the spotlight in 2011, many people getting familiar with the technology were proudly declaring Bitcoin as being “untraceable,” although what they really meant was “anonymous”. The difference lies in the fact that we cannot tie a name to a specific address, but we can track the origin of each coin all the way back to the very first block.
 

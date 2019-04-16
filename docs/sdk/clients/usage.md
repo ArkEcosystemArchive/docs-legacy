@@ -60,7 +60,7 @@ compile group: 'org.arkecosystem.client', name: 'client', version: '0.1.2'
 
 ::: tab .NET
 
-#### .NET installation
+#### .NET Installation
 
 To get started with `C#` and the `.NET` framework, follow the [official guide](https://docs.microsoft.com/en-us/dotnet/framework/install/guide-for-developers).
 
@@ -130,7 +130,7 @@ Go can be installed by following [this guide](https://golang.org/doc/install)
 
 The package can be installed by using the following commands in your terminal :
 
-#### go get
+#### Go Get
 
 ```bash
 go get github.com/ARKEcosystem/go-client/client
@@ -149,7 +149,7 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 ```bash
 git clone https://github.com/ARKEcosystem/cpp-client
 cd cpp-client
-# init & update micro-ecc submodule
+# Init & Update Micro-Ecc Submodule
 git submodule init
 git submodule update
 cmake .
@@ -163,7 +163,7 @@ Download and install the Arduino IDE (>=1.8.5) from [arduino.cc](https://www.ard
 Using the Arduino IDE's built-in Library Manager, install the ARK-Cpp-Client library.
 Be sure to install the "-arduino" version of Cpp-Client.
 
-#### Using with the Arduino IDE
+#### Using With the Arduino IDE
 
 Include the following header in your Arduino Sketch:
 
@@ -302,7 +302,7 @@ $ mix deps.get
 
 ::::
 
-## Development setup
+## Development Setup
 
 If you want to contribute to the SDKs itself, follow this guide.
 
@@ -437,7 +437,7 @@ cd go-client
 4. Install the dependencies.
 
 ```bash
-# -t also fetches dependencies related to tests
+# -t Also Fetches Dependencies Related to Tests
 go get -t ./...
 ```
 
@@ -552,7 +552,7 @@ cargo build
 cargo test
 ```
 
-#### Additional information
+#### Additional Information
 
 By default, the requests are performed with [Alamofire](https://github.com/Alamofire/Alamofire), and the response is given to the callback function as `[String: Any]`.
 The functions that are responsible for this can be found in `Utils.swift`.
@@ -791,7 +791,7 @@ It is not possible to `POST` a block through the public API. Relay Nodes accept 
 
 :::: tabs
 
-### List all blocks
+### List All Blocks
 
 ::: tab javascript
 
@@ -845,7 +845,7 @@ print(client.blocks.all(page=5, limit=10))
 >> {'meta': {'count': 10, ... }}
 ```
 
-#### Retrieve a block
+#### Retrieve a Block
 
 ```python
 print(client.blocks.get(block_id='1102328654748179318'))
@@ -853,7 +853,7 @@ print(client.blocks.get(block_id='1102328654748179318'))
 >> {'data': {'id': '11023286547481793189' ... }}
 ```
 
-#### List all transactions of a block
+#### List All Transactions of a Block
 
 ```python
 print(client.blocks.transactions(block_id='1596548201794970158', limit=10))
@@ -861,7 +861,7 @@ print(client.blocks.transactions(block_id='1596548201794970158', limit=10))
 >> {'meta': {'count': 4, ... }}
 ```
 
-#### Search all blocks
+#### Search All Blocks
 
 ```python
 print(client.blocks.search(
@@ -1002,35 +1002,35 @@ if ($response['data']) {
 
 ::: tab python
 
-#### List all delegates
+#### List All Delegates
 
 ```python
 print(client.delegates.all(page=5, limit=20))
 >> {'meta': {'count': 20, ... }}
 ```
 
-#### Retrieve a delegate
+#### Retrieve a Delegate
 
 ```python
 print(client.delegates.get(delegate_id="goose"))
 >> {'data': {'username': 'goose', ... }}
 ```
 
-#### Search delegates
+#### Search Delegates
 
 ```python
 print(client.delegates.search(username='goose'))
 >> {'meta': {'count': 1, ... }}
 ```
 
-#### List all blocks of a delegate
+#### List All Blocks of a Delegate
 
 ```python
 print(client.delegates.blocks(delegate_id="goose"))
 >> {'meta': {'count': 100, ... }}
 ```
 
-#### List all voters of a delegate
+#### List All Voters of a Delegate
 
 ```python
 print(client.delegates.voters(delegate_id="goose"))
@@ -1151,21 +1151,21 @@ if ($response['data']) {
 
 ::: tab python
 
-#### Retrieve the configuration
+#### Retrieve the Configuration
 
 ```python
 print(client.node.configuration())
 >> {'data': {'nethash': '6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988', ... }}
 ```
 
-#### Retrieve the status
+#### Retrieve the Status
 
 ```python
 print(client.node.status())
 >> {'data': {'synced': True, 'now': 6897158, 'blocksCount': -1}}
 ```
 
-#### Retrieve the syncing status
+#### Retrieve the Syncing Status
 
 ```python
 print(client.node.syncing())
@@ -1281,13 +1281,13 @@ $response = $connection->peers()->all(['limit' => 10]);
 
 ::: tab python
 
-#### List all peers
+#### List All Peers
 
 ```python
 client.peers.all()
 ```
 
-#### Retrieve a peer
+#### Retrieve a Peer
 
 ```python
 client.peers.get(ip='51.255.105.52')
@@ -1411,38 +1411,38 @@ $response = $connection->transactions()->all(['limit' => 10]);
 
 ::: tab python
 
-#### Create a transaction
+#### Create a Transaction
 
 ```python
 tx_response = client.transactions.create([signed_transaction])
 ```
 
-#### Retrieve a transaction
+#### Retrieve a Transaction
 
 ```python
 tx = client.transactions.get(
     transaction_id='e5f5de5716bffb2fa924d26fcfebaff58c8bfd50d8eac1487b0e981113b482fc')
 ```
 
-#### List all transactions
+#### List All Transactions
 
 ```python
 txs = client.transactions.all(limit=5)
 ```
 
-#### List all unconfirmed transactions
+#### List All Unconfirmed Transactions
 
 ```python
 txs = client.transactions.all_unconfirmed(limit=5)
 ```
 
-#### Get unconfirmed transaction
+#### Get Unconfirmed Transaction
 
 ```python
  txs = client.transactions.get_unconfirmed(transaction_id='18bd569d26047a3379f04dfa6df16fc72387ed7a20a477dd681d980cd794add2')
 ```
 
-#### Search transactions
+#### Search Transactions
 
 ```python
 txs = client.transactions.search(
@@ -1450,13 +1450,13 @@ txs = client.transactions.search(
     limit=5)
 ```
 
-#### List transaction types
+#### List Transaction Types
 
 ```python
 types = client.transactions.types()
 ```
 
-#### List transaction fees (Non-dynamic)
+#### List Transaction Fees (Non-Dynamic)
 
 ```python
 fees = client.transactions.fees()
@@ -1569,13 +1569,13 @@ $response = $connection->votes()->all(['limit' => 10]);
 
 ::: tab python
 
-#### List all votes
+#### List All Votes
 
 ```python
 votes = client.votes.all(limit=5)
 ```
 
-#### Retrieve a vote
+#### Retrieve a Vote
 
 ```python
 vote = (client.votes.get(
@@ -1690,50 +1690,50 @@ $response = $connection->wallets()->all(['limit' => 10]);
 
 ::: tab python
 
-#### Retrieve all wallets
+#### Retrieve All Wallets
 
 ```python
 wallets = client.wallets.all(limit=10)
 
 ```
 
-#### Retrieve a wallet
+#### Retrieve a Wallet
 
 ```python
 wallet = client.wallets.get(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN')
 ```
 
-#### List all transactions of a wallet
+#### List All Transactions of a Wallet
 
 ```python
 wallet_transactions = client.wallets.transactions(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN')
 ```
 
-#### List all received transactions of a wallet
+#### List All Received Transactions of a Wallet
 
 ```python
 received_transactions = client.wallets.transactions_received(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN')
 ```
 
-#### List all sent transactions of a wallet
+#### List All Sent Transactions of a Wallet
 
 ```python
 sent_transactions = client.wallets.transactions_sent(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN')
 ```
 
-#### List all votes of a wallet
+#### List All Votes of a Wallet
 
 ```python
 votes = client.wallets.votes(wallet_id='AQEA7wbPq9obWr2yEXRksanArn6Jyz4UPN')
 ```
 
-#### List all top wallets
+#### List All Top Wallets
 
 ```python
 top = client.wallets.top(limit=10)
 ```
 
-#### Search all wallets
+#### Search All Wallets
 
 ```python
 wallet = client.wallets.search(

@@ -1,12 +1,12 @@
 ---
-title: Public Transactions API
+title: "Public Transactions API"
 ---
 
 # Public Transactions API
 
 Transactions are signed, serialized payloads; batched together to form a [block](/api/public/v2/blocks.md).
 
-## Create a transaction
+## Create a Transaction
 
 Creating the correct payload for a transaction is non-trivial, as it requires cryptographic functions and a specific serialization protocol. Our [crypto SDKs](/sdk/cryptography/usage.html) provide the functionality needed in most major programming languages. You can read more about it in the [send transaction](/guidebook/developer/send-transaction.html) section.
 
@@ -44,7 +44,7 @@ POST /api/transactions
 }
 ```
 
-## Retrieve a transaction
+## Retrieve a Transaction
 
 Obtaining a transaction by ID does not require advanced logic; as the API does not return a serialized transaction, but a nicer [DTO](https://en.wikipedia.org/wiki/Data_transfer_object).
 
@@ -83,7 +83,7 @@ GET /api/transactions/{id}
 }
 ```
 
-## List all transactions
+## List All Transactions
 
 The paginated API is used to query for multiple transactions. You can apply _filters_ through the query parameter to search for specific transactions.
 
@@ -140,7 +140,7 @@ GET /api/transactions
 }
 ```
 
-## List all unconfirmed transaction
+## List All Unconfirmed Transaction
 
 Unconfirmed transactions have not been incorporated in the blockchain, but reside in the mempool. Although usually the mempool is cleared within minutes, during high network load a transaction with a low fee will live here for a considerable time. If you have set the transaction with a fee of near zero, it might not be picked up by a Delegate and will time out.
 
@@ -261,7 +261,7 @@ GET /api/transactions/unconfirmed/
 }
 ```
 
-## Get an unconfirmed transaction
+## Get an Unconfirmed Transaction
 
 As with confirmed transactions, you may query for unconfirmed transactions directly.
 
@@ -301,7 +301,7 @@ GET /api/transactions/unconfirmed/{id}
 }
 ```
 
-## Search for transactions
+## Search for Transactions
 
 For fine-grained searches, use the `search` endpoint. Note that unless you use specific body parameters, the response might contain a large number of transactions (hundreds of thousands). It is best to filter as many transactions node side, instead of dissecting the response client side.
 
@@ -379,7 +379,7 @@ POST /api/transactions/search
 }
 ```
 
-## Get transaction types
+## Get Transaction Types
 
 The transaction types are network specific. ARK currently supports eight different types, but BridgeChains may define more or less if needed for their business purpose.
 
@@ -407,7 +407,7 @@ GET /api/transactions/types
 }
 ```
 
-## Get transaction fees (non-dynamic)
+## Get Transaction Fees (Non-Dynamic)
 
 The static transaction fees are significantly higher than the dynamic transaction fees. Use the [node resource](/api/public/v2/node.html#retrieve-the-configuration) to find dynamic fees, and prefer using these.
 

@@ -1,5 +1,5 @@
 ---
-title: Arduino Cpp-Crypto - ESP8266 Example
+title: "Arduino Cpp-Crypto - ESP8266 Example"
 ---
 
 # Crypto: ESP8266 Arduino Example Sketch

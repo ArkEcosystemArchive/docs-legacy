@@ -1,4 +1,4 @@
-# How To Vote/Un-Vote In the ARK Desktop Wallet
+# How to Vote/Un-Vote in the ARK Desktop Wallet
 
 [[toc]]
 
@@ -10,7 +10,7 @@ Some basic voting info :
 - _1 ARK equals a voting weight of 1._ The more ARK you hold, the more voting weight you possess. If you split your ARK into multiple wallets, your voting power divides proportionally among those wallets. For example, if you have 1,000 ARK your voting power is equal to 1,000 ARK. If you split your ARK into two wallets, each will have a voting power of 500 ARK.
 - _Each vote or un-vote comes with a fee._ Each transaction in the ARK network costs a certain amount of ARK. With the implementation of dynamic fees, this cost will become adjustable. You can choose how much you want to spend for each specific transaction, even for voting and for un-voting.
 
-## Whom to Vote for?
+## Whom to Vote For?
 
 First of all, read the [Delegate Proposals](https://forum.ark.io/category/5/delegates) on our forum. From the current list of delegates, vote according to your preferences.
 
@@ -54,7 +54,7 @@ To see the number of confirmations for your transaction hover over the clock on 
 
 ![Hover over](./assets/how-to-vote-in-the-ark-desktop-wallet/hoveroverclock.jpg)
 
-### Un-voting
+### Un-Voting
 
 Open the ARK Desktop Wallet and select the wallet you wish to un-vote from. Again, the wallet can be chosen from the menu on the right.
 

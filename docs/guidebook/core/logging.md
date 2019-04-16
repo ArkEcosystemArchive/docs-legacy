@@ -12,7 +12,7 @@ To efficiently operate a node in the ARK network or a BridgeChain, logging malfu
 
 The default logger we provide is [winston](https://github.com/winstonjs/winston) which allows you to use multiple types of transport with minimal configuration needed.
 
-## A look under the hood
+## A Look Under the Hood
 
 Let's take a closer look at how the logger is bootstrapped and how easy it is to extend it.
 

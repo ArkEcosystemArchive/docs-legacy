@@ -1,18 +1,18 @@
 ---
-title: How to interact with wallets
+title: "How to Interact With Wallets"
 ---
 
-# How to interact with wallets
+# How to Interact With Wallets
 
 [[toc]]
 
-## Getting started
+## Getting Started
 
 Almost all plugins will need to access wallets in one way or another. Core rebuilds all wallets from scratch based on transactions when it restarts and manages those wallets in-memory through the `WalletManager` that is exposed by `core-database`.
 
 **Since 2.0 all interactions with wallets happen only in-memory as opposed to through the database like with 1.0.**
 
-## Accessing wallets
+## Accessing Wallets
 
 Below you can find a few examples of how to access wallets in different ways and perform checks on them.
 

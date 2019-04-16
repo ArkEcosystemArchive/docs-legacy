@@ -1,5 +1,5 @@
 ---
-title: How to setup the Cpp SDK's
+title: "How to Setup the Cpp SDK's"
 ---
 
 [[toc]]

@@ -1,10 +1,10 @@
 ---
-title: Public Peers API
+title: "Public Peers API"
 ---
 
 # Public Peers API
 
-## List all peers
+## List All Peers
 
 ### Endpoint
 
@@ -52,7 +52,7 @@ curl -X GET https://explorer.ark.io:8443/api/peers \
 ```
 </request-example>
 
-## Retrieve a peer
+## Retrieve a Peer
 
 ### Endpoint
 
@@ -92,7 +92,7 @@ curl -X GET https://explorer.ark.io:8443/api/peers/get?ip=185.233.104.31&port=40
 ```
 </request-example>
 
-## Retrieve the core version
+## Retrieve the Core Version
 
 ### Endpoint
 

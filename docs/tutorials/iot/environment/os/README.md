@@ -1,5 +1,5 @@
 ---
-title: How to setup VSCode and PlatformIO
+title: "How to Setup VSCode and PlatformIO"
 ---
 
 # VSCode and PlatformIO Setup

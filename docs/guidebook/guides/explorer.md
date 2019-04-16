@@ -18,7 +18,7 @@ You can access it at [https://explorer.ark.io/](https://explorer.ark.io/).
 
 ## Build Setup
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/ARKEcosystem/explorer

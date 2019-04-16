@@ -1,5 +1,5 @@
 ---
-title: Contributor's Introduction
+title: "Contributor's Introduction"
 ---
 
 # Contributor's Introduction

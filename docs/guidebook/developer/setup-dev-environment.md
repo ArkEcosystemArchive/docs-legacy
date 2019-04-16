@@ -42,7 +42,7 @@ git clone git@github.com:ARKEcosystem/core.git
 
 9. From `core/packages/core`, run the command `yarn full:testnet`.
 
-### Network boot
+### Network Boot
 
 This last command, `yarn full:testnet`, is where the magic happens. Let us do a quick walkthrough of what happens when this command is run:
 

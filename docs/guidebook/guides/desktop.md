@@ -99,7 +99,7 @@ npm install -g yarn
 </summary>
 
 ```bash
-# Install dependencies
+# Install Dependencies
 yarn install
 
 # Execute the application. Making changes in the code, updates the application (hot reloading).
@@ -111,49 +111,49 @@ yarn lint
 # Lint, and fix, all JS/Vue files in `src` and `__tests__`
 yarn lint:fix
 
-# Check that all dependencies are used
+# Check That All Dependencies Are Used
 yarn depcheck
 
-# Collect the code and produce a compressed file
+# Collect the Code and Produce a Compressed File
 yarn pack
 
-# Build electron application for production (Current OS)
+# Build Electron Application for Production (Current OS)
 yarn build
 
-# Build electron application for production (Windows)
+# Build Electron Application for Production (Windows)
 yarn build:win
 
-# Build electron application for production (Mac)
+# Build Electron Application for Production (Mac)
 yarn build:mac
 
-# Build electron application for production (Linux)
+# Build Electron Application for Production (Linux)
 yarn build:linux
 
-# Run unit and end-to-end tests
+# Run Unit and End-to-End Tests
 yarn test
 
-# Run unit tests
+# Run Unit Tests
 yarn test:unit
 
-# Run unit tests and generate and display the coverage report
+# Run Unit Tests and Generate and Display the Coverage Report
 yarn test:unit:coverage
 
-# Run unit tests and watch for changes to re-run the tests
+# Run Unit Tests and Watch for Changes to Re-Run the Tests
 yarn test:unit:watch
 
 # Run end-to-end tests, without building the application
 yarn test:e2e
 
-# Build the application and run end-to-end tests
+# Build the Application and Run End-to-End Tests
 yarn test:e2e:full
 
-# List what translations are missing or unused on a specific language. It could capture suggestions that are not accurate
+# List What Translations Are Missing or Unused on a Specific Language. It Could Capture Suggestions That Are Not Accurate
 yarn i18n 'src/renderer/i18n/locales/LANGUAGE.js'
 
-# List what English messages are missing or unused (English is the default language)
+# List What English Messages Are Missing or Unused (English Is the Default Language)
 yarn i18n:en-US
 
-# List what translations are missing or unused on every language
+# List What Translations Are Missing or Unused on Every Language
 yarn i18n:all
 ```
 

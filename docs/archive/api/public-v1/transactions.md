@@ -1,14 +1,14 @@
 ---
-title: Public Transactions API
+title: "Public Transactions API"
 ---
 
 # Public Transactions API
 
-## Create transactions
+## Create Transactions
 
 The Public API 1.0 does not provide an endpoint for creating transactions. Take a look at the [P2P API](/api/p2p/).
 
-## List all transactions
+## List All Transactions
 
 ### Endpoint
 
@@ -66,7 +66,7 @@ curl -X GET https://explorer.ark.io:8443/api/transactions \
 ```
 </request-example>
 
-## Retrieve a transaction
+## Retrieve a Transaction
 
 ### Endpoint
 
@@ -110,7 +110,7 @@ curl -X GET https://explorer.ark.io:8443/api/transactions/get?id=13786ab466a10e3
 ```
 </request-example>
 
-## List all unconfirmed transactions
+## List All Unconfirmed Transactions
 
 ### Endpoint
 
@@ -143,7 +143,7 @@ curl -X GET https://explorer.ark.io:8443/api/transactions/unconfirmed \
 ```
 </request-example>
 
-## Retrieve an unconfirmed transaction
+## Retrieve an Unconfirmed Transaction
 
 ### Endpoint
 

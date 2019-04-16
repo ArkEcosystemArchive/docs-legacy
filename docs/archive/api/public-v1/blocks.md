@@ -1,10 +1,10 @@
 ---
-title: Public Blocks API
+title: "Public Blocks API"
 ---
 
 # Public Blocks API
 
-## List all blocks
+## List All Blocks
 
 ### Endpoint
 
@@ -70,7 +70,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks \
 ```
 </request-example>
 
-## Retrieve a block
+## Retrieve a Block
 
 ### Endpoint
 
@@ -117,7 +117,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/get?id=7087584057375728132 \
 ```
 </request-example>
 
-## List all fees of the blockchain
+## List All Fees of the Blockchain
 
 ### Endpoint
 
@@ -140,7 +140,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getFees \
 ```
 </request-example>
 
-## Retrieve a fee
+## Retrieve a Fee
 
 ### Endpoint
 
@@ -166,7 +166,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getFee \
 ```
 </request-example>
 
-## Retrieve the epoch of the blockchain
+## Retrieve the Epoch of the Blockchain
 
 ### Endpoint
 
@@ -192,7 +192,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getEpoch \
 ```
 </request-example>
 
-## Retrieve the height of the blockchain
+## Retrieve the Height of the Blockchain
 
 ### Endpoint
 
@@ -219,7 +219,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getHeight \
 ```
 </request-example>
 
-## Retrieve the milestone of the blockchain
+## Retrieve the Milestone of the Blockchain
 
 ### Endpoint
 
@@ -245,7 +245,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getMilestone \
 ```
 </request-example>
 
-## Retrieve the nethash of the blockchain
+## Retrieve the Nethash of the Blockchain
 
 ### Endpoint
 
@@ -271,7 +271,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getNethash \
 ```
 </request-example>
 
-## Retrieve the reward of the blockchain
+## Retrieve the Reward of the Blockchain
 
 ### Endpoint
 
@@ -297,7 +297,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getReward \
 ```
 </request-example>
 
-## Retrieve the status of the blockchain
+## Retrieve the Status of the Blockchain
 
 ### Endpoint
 
@@ -329,7 +329,7 @@ curl -X GET https://explorer.ark.io:8443/api/blocks/getStatus \
 ```
 </request-example>
 
-## Retrieve the supply of the blockchain
+## Retrieve the Supply of the Blockchain
 
 ### Endpoint
 

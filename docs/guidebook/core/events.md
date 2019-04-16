@@ -42,137 +42,137 @@ emitter.on("block.forged", block => {
 
 ### block.applied
 
-#### event
+#### Event
 
 ```js
 "block.applied";
 ```
 
-#### description
+#### Description
 
 Emitted when a block is applied to the Node and all including transactions are applied to wallets.
 
-#### payload
+#### Payload
 
 [Block](/guidebook/core/data-models.html#block)
 
 ### block.forged
 
-#### event
+#### Event
 
 ```js
 "block.forged";
 ```
 
-#### description
+#### Description
 
 When a Delegate Node has created a new block, the newly created block is emitted.
 
-#### payload
+#### Payload
 
 [Block](/guidebook/core/data-models.html#block)
 
 ### block.reverted
 
-#### event
+#### Event
 
 ```js
 "block.reverted";
 ```
 
-#### description
+#### Description
 
 Due to data corruption or other reasons, a Node might revert its state until it reaches a valid state. Blocks -including their transactions- are reverted from wallets.
 
-#### payload
+#### Payload
 
 [Block](/guidebook/core/data-models.html#block)
 
 ### block.disregarded
 
-#### event
+#### Event
 
 ```js
 "block.disregarded";
 ```
 
-#### description
+#### Description
 
 Fires when a block is disregarded
 
 ### block.received
 
-#### event
+#### Event
 
 ```js
 "block.received";
 ```
 
-#### description
+#### Description
 
 Fires when a block is incoming
 
 ### delegate.registered
 
-#### event
+#### Event
 
 ```js
 "delegate.registered";
 ```
 
-#### description
+#### Description
 
 When a transaction has been processed, and a wallet registers itself as a Delegate, the registered wallet is emitted.
 
-#### payload
+#### Payload
 
 [Delegate](/guidebook/core/data-models.html#delegate)
 
 ### delegate.resigned
 
-#### event
+#### Event
 
 ```js
 "delegate.resigned";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a wallet resigns as a Delegate, and the transaction has been processed.
 
-#### payload
+#### Payload
 
 [Delegate](/guidebook/core/data-models.html#delegate)
 
 ### forger.failed
 
-#### event
+#### Event
 
 ```js
 "forger.failed";
 ```
 
-#### description
+#### Description
 
 Emitted when the `forger` module fails to forge a new block.
 
-#### payload
+#### Payload
 
 The `error` message causing the failure.
 
 ### forger.missing
 
-#### event
+#### Event
 
 ```js
 "forger.missing";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when the `forger` is missing a block.
 
-#### payload
+#### Payload
 
 The `error` message causing the failure.
 
@@ -182,180 +182,180 @@ The `error` message causing the failure.
 This event is currently [disabled](https://github.com/ARKEcosystem/core/blob/a71f007fe13e5465f2a5ecc20203ded04b2bc783/packages/core-forger/lib/manager.js#L197-L203) due to a bug in the implementation.
 :::
 
-#### event
+#### Event
 
 ```js
 "forger.started";
 ```
 
-#### description
+#### Description
 
 When the `forger` module has started, this event is emitted.
 
-#### payload
+#### Payload
 
 The `publicKey` of the forging Delegate.
 
 ### peer.added
 
-#### event
+#### Event
 
 ```js
 "peer.added";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a peer is added to the list of accepted peers.
 
-#### payload
+#### Payload
 
 [Peer](/guidebook/core/data-models.html#peer)
 
 ### peer.removed
 
-#### event
+#### Event
 
 ```js
 "peer.removed";
 ```
 
-#### description
+#### Description
 
 Fired after a peer has been removed from the accepted peers.
 
-#### payload
+#### Payload
 
 [Peer](/guidebook/core/data-models.html#peer)
 
 ### transaction.applied
 
-#### event
+#### Event
 
 ```js
 "transaction.applied";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a transaction is applied to a wallet.
 
-#### payload
+#### Payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
 
 ### transaction.expired
 
-#### event
+#### Event
 
 ```js
 "transaction.expired";
 ```
 
-#### description
+#### Description
 
 After a transaction has expired and is removed from the transaction pool, the `transactionGuard` emits this event.
 
-#### payload
+#### Payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
 
 ### transaction.forged
 
-#### event
+#### Event
 
 ```js
 "transaction.forged";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a transaction is included in a block and thus has been forged.
 
-#### payload
+#### Payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
 
 ### transaction.pool.added
 
-#### event
+#### Event
 
 ```js
 "transaction.pool.added";
 ```
 
-#### description
+#### Description
 
 Fires when transactions are added to the transaction pool
 
 ### transaction.pool.rejected
 
-#### event
+#### Event
 
 ```js
 "transaction.pool.rejected";
 ```
 
-#### description
+#### Description
 
 Fires when transactions are rejected and not added to the transaction pool
 
 ### transaction.pool.removed
 
-#### event
+#### Event
 
 ```js
 "transaction.pool.removed";
 ```
 
-#### description
+#### Description
 
 Fires when a transaction is removed from the transaction pool by its ID
 
 ### transaction.reverted
 
-#### event
+#### Event
 
 ```js
 "transaction.reverted";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a transaction is reverted from a wallet. Often fired in conjunction with `block.reverted`.
 
-#### payload
+#### Payload
 
 [Transaction](/guidebook/core/data-models.html#transaction)
 
 ### wallet.vote
 
-#### event
+#### Event
 
 ```js
 "wallet.vote";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a wallet casts a vote in on a delegate.
 
-#### payload
+#### Payload
 
 [Wallet](/guidebook/core/data-models.html#wallet)
 
 ### wallet.unvote
 
-#### event
+#### Event
 
 ```js
 "wallet.unvote";
 ```
 
-#### description
+#### Description
 
 This event will be emitted when a wallet removes the vote for their current delegate.
 
-#### payload
+#### Payload
 
 [Wallet](/guidebook/core/data-models.html#wallet)

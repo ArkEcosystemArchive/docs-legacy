@@ -130,7 +130,7 @@ app = Flask(__name__)
 verification = "0c8e74e1cbfe36404386d33a5bbd8b66"
 token = "fe944e318edb02b979d6bf0c87978b640c8e74e1cbfe36404386d33a5bbd8b66"
 
-# This should be middleware if this app is dedicated to webhooks
+# This Should Be Middleware if This App Is Dedicated to Webhooks
 def token_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):

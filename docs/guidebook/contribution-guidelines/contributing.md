@@ -54,7 +54,7 @@ When your pull request gets merged the issue will be automatically closed, and a
 
 > If your PR fixes a bug or resolves a feature request, be sure to reference the issue with a keyword. Read more about keywords at the [official GitHub docs](https://help.github.com/en/articles/closing-issues-using-keywords).
 
-## Things we DO NOT accept as additions to any applications or packages
+## Things We DO NOT Accept as Additions to Any Applications or Packages
 
 The ARK Team distances itself from anything that is related to payouts by delegates or voter calculations.
 

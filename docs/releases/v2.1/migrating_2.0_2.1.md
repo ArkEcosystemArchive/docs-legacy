@@ -37,7 +37,7 @@ git checkout master
 yarn run bootstrap
 yarn run upgrade
 
-# If you do not use Core Commander you can skip this step.
+# If You Do Not Use Core Commander You Can Skip This Step.
 cd ~/core-commander
 git reset --hard
 git pull

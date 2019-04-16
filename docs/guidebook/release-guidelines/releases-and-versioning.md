@@ -32,15 +32,15 @@ However, as you made a change that changes the behavior of your project, it is n
 
 ## Keep a Changelog
 
-### What is a changelog?
+### What Is a Changelog?
 
 > A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project.
 
-### Why keep a changelog?
+### Why Keep a Changelog?
 
 > To make it easier for users and contributors to see what notable changes have been made between each release (or version) of the project.
 
-### Who needs a changelog?
+### Who Needs a Changelog?
 
 > People do. Whether consumers or developers, the end users of software are human beings, who care about what's in the software. When the software changes, people want to know why and how.
 

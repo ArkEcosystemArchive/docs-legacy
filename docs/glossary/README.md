@@ -8,7 +8,7 @@ Our glossary contains key terminology that is utilized in documentation and in t
 
 [[toc]]
 
-## Common terms
+## Common Terms
 
 ### Account
 
@@ -89,7 +89,7 @@ The standard rate for a simple transfer of ARK from one address to another is 0.
 
 A blockchains height is the total number of blocks forged; where the genesis block is either height 0 or height 1: just a regular incremental ID. Timestamps cannot be wholly trusted in distributed ledgers, but the height can.
 
-### Missed block
+### Missed Block
 
 Sometimes, a delegate can have problems with their responsibility to forge a block when their time comes to do so.
 

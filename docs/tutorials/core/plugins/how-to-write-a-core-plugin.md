@@ -1,8 +1,8 @@
 ---
-title: How to write a Core Plugin
+title: "How to Write a Core Plugin"
 ---
 
-# How to write a Core Plugin
+# How to Write a Core Plugin
 
 [[toc]]
 
@@ -36,11 +36,11 @@ export const plugin: Container.PluginDescriptor = {
 
 This property contains all the information about your plugin that is needed to register it like the name and version, usually this will be simply your `package.json` as it already has all of that information.
 
-### defaults
+### Defaults
 
 All of the settings that your plugin provides should come with a default value so the user needs to configure as little as possible. An exception to this rule would be things like addresses, public keys or passphrases as those are things the user should configure so he knows the values.
 
-### alias
+### Alias
 
 In the above example you've probably noticed the `alias: "logger"` line. This serves as an alias to allow us quick access to the plugin via `container.resolvePlugin("logger")` instead of having to type the exact name of the logger we are using, e.g. `container.resolvePlugin("@arkecosystem/core-logger-pino")`.
 
@@ -48,13 +48,13 @@ In the above example you've probably noticed the `alias: "logger"` line. This se
 Aliases should be used with caution if you are using a lot of plugins as you might overwrite something that you did not intend to overwrite which can cause unwanted behaviours.
 :::
 
-### extends
+### Extends
 
 This property will be rarely used and only be seen in a few plugins like logger or database implementations. The `extends` property tells the container that we first need to load the plugin that was defined via the `extends` property before we can continue with registering our plugin.
 
 Plugins that are loaded via `extends` usually don't do anything on their own as they just provide an abstract, a factory or interfaces that should be used by plugins that provide concrete implementations.
 
-### register
+### Register
 
 As we've seen above, the **register** method accepts two parameters, **container** and **options**.
 
@@ -105,7 +105,7 @@ yarn bootstrap
 `yarn bootstrap` takes a long time, just let it finish obtaining all dependencies before continuing.
 :::
 
-#### Adding dependencies
+#### Adding Dependencies
 
 If your package relies on any dependencies you should install them via [lerna add](https://github.com/lerna/lerna/tree/master/commands/add) the plugin you are developing.
 

@@ -38,7 +38,7 @@ In order to communicate with the P2P API you will need to provide the nethash of
 | version | 1.0.3                                                            |
 | port    | 1                                                                |
 
-## Create a transaction
+## Create a Transaction
 
 ### Endpoint
 

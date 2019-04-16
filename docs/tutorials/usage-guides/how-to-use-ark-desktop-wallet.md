@@ -2,7 +2,7 @@
 
 [[toc]]
 
-## What is it?
+## What Is It?
 
 The ARK Desktop Wallet is an application which allows you to manage ARK transactions. It provides an extensive set of functionalities, including management of profiles and wallets, the creation of both online and offline transactions, wallet summary, stylistic customizations, multilingual support, various currency integrations including BTC and much more!
 
@@ -57,7 +57,7 @@ The Desktop Wallet has a dedicated section, showing news and other relevant upda
 
 ![News](./assets/how-to-use-the-desktop-wallet/new/News.png)
 
-## Creating or Importing your ARK Wallet
+## Creating or Importing Your ARK Wallet
 
 The ARK Desktop Wallet allows you to both create new wallets and import existing ones. You can begin either process by clicking the appropriate button at the top of the sidebar when on the app dashboard.
 
@@ -78,7 +78,7 @@ The ARK Desktop Wallet allows you to both create new wallets and import existing
 - _(Optional)_ **Name the new wallet and copy its address**
   ![Creation Confirmation](./assets/how-to-use-the-desktop-wallet/new/CreationConfirmation.png)
 
-### Importing your Wallet
+### Importing Your Wallet
 
 - **Import your wallet by providing its address, passphrase, or both**
   ![Import Wallet](./assets/how-to-use-the-desktop-wallet/new/ImportWallet.png)
@@ -95,7 +95,7 @@ The wallet interface page can be reached by clicking on the wallet icon in the n
 
 ![My Wallets](./assets/how-to-use-the-desktop-wallet/new/MyWallets.png)
 
-### Wallet details
+### Wallet Details
 
 On the wallet detail page, which is accessed by clicking on the wallet's name or icon from the wallet interface, you can:
 
@@ -109,7 +109,7 @@ On the wallet detail page, which is accessed by clicking on the wallet's name or
 
 ![Main Wallet](./assets/how-to-use-the-desktop-wallet/new/MainWallet.png)
 
-### Sending an ARK transfer
+### Sending an ARK Transfer
 
 Transferring ARK from your wallet is the most common type of transaction.
 

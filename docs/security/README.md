@@ -2,7 +2,7 @@
 
 Producing software inherently comes with risks. All software, especially new releases and substantial code re-writes, have a higher probability of producing bugs during production and initial release. To combat this, the ARK team has introduced modern testing methods, higher test coverage, a custom developed e2e testing framework and increased the availability for testing on our Development Network before the releases. Despite all of that, no one can catch every potential issue.
 
-## How ARK handles Security Vulnerabilities
+## How ARK Handles Security Vulnerabilities
 
 Instead of shying away from exposing security vulnerabilities, ARK encourages academics, researchers, hobbyists and community members to find and disclose critical errors and bugs.
 

@@ -1,5 +1,5 @@
 ---
-title: Deployer Tutorials
+title: "Deployer Tutorials"
 ---
 
 This guide is to help you get set up with your own ARK BridgeChain. It will focus on launching your blockchain, auto-forging setup, adding Delegate Nodes and using the official wallet to manage your funds.

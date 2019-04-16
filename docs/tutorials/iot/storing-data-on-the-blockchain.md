@@ -40,7 +40,7 @@ Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), o
 Start by adding the headers to import Arduino, ARK Cpp-Client, and Cpp-Crypto.
 
 ```cpp
-#include <Arduino.h>
+#"Include <Arduino.h>"
 
 #include <arkClient.h>
 #include <arkCrypto.h>
@@ -175,7 +175,7 @@ void loop() {
 }
 ```
 
-## Step 2: Create a SHA256 hash of your ESP32s Chip ID
+## Step 2: Create a SHA256 Hash of Your ESP32s Chip ID
 
 The data we will be posting is a SHA256 hash of your boards Chip ID.
 Let's start by creating a method for doing this.
@@ -257,7 +257,7 @@ Transaction txFromHash(char hashBuffer[64]) {
 };
 ```
 
-## Step 4: Tying it all together!
+## Step 4: Tying It All Together!
 
 Now that we have our methods setup, we'll continue with filling in the 'loop()' section of this sketch.
 

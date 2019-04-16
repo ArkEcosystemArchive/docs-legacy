@@ -1,5 +1,5 @@
 ---
-title: Intro to Core
+title: "Intro to Core"
 ---
 
 # Intro to Core

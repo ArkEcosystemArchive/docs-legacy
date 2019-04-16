@@ -1,5 +1,5 @@
 ---
-title: Adafruit ESP8266 Overview and Setup
+title: "Adafruit ESP8266 Overview and Setup"
 ---
 
 # Adafruit ESP8266 Feather

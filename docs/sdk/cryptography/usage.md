@@ -60,7 +60,7 @@ compile group: 'org.arkecosystem.crypto', name: 'crypto', version: '0.1.2'
 
 ::: tab .NET
 
-#### .NET installation
+#### .NET Installation
 
 To get started with `C#` and the `.NET` framework, follow the [official guide](https://docs.microsoft.com/en-us/dotnet/framework/install/guide-for-developers).
 
@@ -130,7 +130,7 @@ Go can be installed by following [this guide](https://golang.org/doc/install).
 
 The package can be installed by using the following commands in your terminal:
 
-#### go get
+#### Go Get
 
 ```bash
 go get github.com/ARKEcosystem/go-crypto/crypto
@@ -149,7 +149,7 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 ```bash
 git clone https://github.com/ARKEcosystem/cpp-crypto
 cd cpp-crypto
-# init & update micro-ecc submodule
+# Init & Update Micro-Ecc Submodule
 git submodule init
 git submodule update
 cmake .
@@ -170,7 +170,7 @@ Using the Arduino IDE's built-in Library Manager, also install the following lib
 - micro-ecc
 - ArduinoJson@5.13.5
 
-#### Using with the Arduino IDE
+#### Using With the Arduino IDE
 
 Include the following header in your Arduino Sketch:
 
@@ -309,7 +309,7 @@ mix deps.get
 
 ::::
 
-## Development setup
+## Development Setup
 
 If you want to contribute to the code of this SDK, execute the following commands:
 
@@ -435,7 +435,7 @@ cd go-crypto
 4. Install the dependencies.
 
 ```bash
-# -t will also fetch dependencies related to tests
+# -t Will Also Fetch Dependencies Related to Tests
 go get -t ./...
 ```
 
@@ -1417,7 +1417,7 @@ IO.puts Message.verify(message.message, message.signature, message.publicKey)
 
 The identities class allows for the creation and inspection of keypairs from `passphrases`. Here you find vital functions when creating transactions and managing wallets.
 
-### Derive the address from a passphrase
+### Derive the Address from a Passphrase
 
 :::: tabs
 
@@ -1526,7 +1526,7 @@ ARKEcosystem.Crypto.Identities.Address.from_passphrase('this is a top secret pas
 
 ::::
 
-### Derive the address from a public key
+### Derive the Address from a Public Key
 
 :::: tabs
 
@@ -1633,7 +1633,7 @@ ARKEcosystem.Crypto.Identities.Address.from_public_key('034151a3ec46b5670a682b0a
 
 ::::
 
-### Derive the address from a private key
+### Derive the Address from a Private Key
 
 :::: tabs
 
@@ -1741,7 +1741,7 @@ ARKEcosystem.Crypto.Identities.Address.from_private_key('d8839c2432bfd0a67ef10a8
 
 ::::
 
-### Validate an address
+### Validate an Address
 
 :::: tabs
 
@@ -1852,7 +1852,7 @@ As the name implies, private keys and passphrases are to remain private. Never s
 
 :::
 
-### Derive the private key from a passphrase
+### Derive the Private Key from a Passphrase
 
 :::: tabs
 
@@ -1954,7 +1954,7 @@ ARKEcosystem.Crypto.Identities.PrivateKey.from_passphrase('this is a top secret 
 
 ::::
 
-### Derive the private key instance object from a hexadecimal encoded string
+### Derive the Private Key Instance Object from a Hexadecimal Encoded String
 
 :::: tabs
 
@@ -2053,7 +2053,7 @@ ARKEcosystem.Crypto.Identities.PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba9
 
 ::::
 
-### Derive the private key from a WIF
+### Derive the Private Key from a WIF
 
 :::: tabs
 
@@ -2126,7 +2126,7 @@ Public Keys may be freely shared, and are included in transaction objects to val
 
 :::
 
-### Derive the public key from a passphrase
+### Derive the Public Key from a Passphrase
 
 :::: tabs
 
@@ -2229,7 +2229,7 @@ ARKEcosystem.Crypto.Identities.PublicKey.from_passphrase('this is a top secret p
 
 ::::
 
-### Derive the public key instance object from a hexadecimal encoded string
+### Derive the Public Key Instance Object from a Hexadecimal Encoded String
 
 :::: tabs
 
@@ -2321,7 +2321,7 @@ ARKEcosystem.Crypto.Identities.PublicKey.from_hex('034151a3ec46b5670a682b0a63394
 
 ::::
 
-### Validate a public key
+### Validate a Public Key
 
 :::: tabs
 
@@ -2394,7 +2394,7 @@ The WIF should remain secret, just like your `passphrase` and `private key`.
 
 :::
 
-### Derive the WIF from a passphrase
+### Derive the WIF from a Passphrase
 
 :::: tabs
 

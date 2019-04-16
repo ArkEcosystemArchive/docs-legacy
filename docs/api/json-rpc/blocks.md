@@ -1,10 +1,10 @@
 ---
-title: JSON-RPC Blocks API
+title: "JSON-RPC Blocks API"
 ---
 
 # JSON-RPC Blocks API
 
-## Get a block
+## Get a Block
 
 ### Endpoint
 
@@ -85,7 +85,7 @@ POST /
 }
 ```
 
-## Get the latest block
+## Get the Latest Block
 
 ### Endpoint
 
@@ -161,7 +161,7 @@ POST /
 }
 ```
 
-## Get a blocks transactions
+## Get a Blocks Transactions
 
 ### Endpoint
 

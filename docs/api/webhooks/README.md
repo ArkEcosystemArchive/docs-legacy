@@ -20,7 +20,7 @@ To communicate with the Webhooks API, you will need to provide the token you con
 | :------------ | :----: | :--------------------------------------------------- | :----------------: |
 | Authorization | string | The webhook token defined in the node configuration. | :white_check_mark: |
 
-## List all webhooks
+## List All Webhooks
 
 The webhooks resource returns all enabled and disabled webhooks. There is thus no need to store all active webhooks client side; as the node maintains a register for you.
 
@@ -69,7 +69,7 @@ GET /api/webhooks
 }
 ```
 
-## Retrieve a webhook
+## Retrieve a Webhook
 
 It is possible to query for a specific webhook by ID, which has to be saved client-side or obtained from another API call.
 
@@ -105,7 +105,7 @@ GET /api/webhooks/{id}
 }
 ```
 
-## Create a webhook
+## Create a Webhook
 
 Before creating a webhook, ensure you have a backend service running which exposes the target. Some example setups are listed [here](/guidebook/core/webhooks.md). A webhook may be triggered by multiple conditions; as long as one of the conditions evaluates to `true`, the webhook will fire.
 
@@ -147,7 +147,7 @@ POST /api/webhooks
 }
 ```
 
-### Events  
+### Events
 
 | Event                     | Description                                                                         | Implemented        |
 | :-------------------------| :-----------------------------------------------------------------------------------| :------------------|
@@ -175,7 +175,7 @@ POST /api/webhooks
 | wallet.saved              | Fires when a wallet is updated (e.g. its balance changed, voted etc)                | :white_check_mark: |
 | wallet.created.cold       | Fires when a wallet that never existed before is saved (e.g. received its first tx) | :white_check_mark: |
 
-### Conditions  
+### Conditions
 
 | Condition   | Description                                         |
 | :-----------| :---------------------------------------------------|  
@@ -192,7 +192,7 @@ POST /api/webhooks
 | regexp      | Check if the given value matches                    |
 | truthy      | Check if the given value is true                    |
 
-## Update a webhook
+## Update a Webhook
 
 Existing webhooks may be updated. *Note that this is the equivalent of deleting and creating a webhook; but retaining the same token*. If you are often updating and creating webhooks; consider deleting and creating new webhooks instead of updating to rotate your validation token often.
 
@@ -223,7 +223,7 @@ PUT /api/webhooks/{id}
 {}
 ```
 
-## Delete a webhook
+## Delete a Webhook
 
 A webhook may be deleted by ID. Delete unused webhooks to save machine resources.
 

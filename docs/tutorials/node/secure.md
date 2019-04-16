@@ -1,8 +1,8 @@
 ---
-title: "How To Secure Your ARK Node"
+title: "How to Secure Your ARK Node"
 ---
 
-# How To Secure Your ARK Node
+# How to Secure Your ARK Node
 
 [[toc]]
 
@@ -14,12 +14,12 @@ We assume you completed all the steps as outlined in the previous guide: [Setup 
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.
 :::
 
-## Security through Obscurity
+## Security Through Obscurity
 
 By outlining how to secure a node we're breaking a fundamental property of network security. We are telling people how we are defending our network. This breaks the security through obscurity([Wikipedia Reference](https://en.wikipedia.org/wiki/Security_through_obscurity)) rule.
 If all nodes were secured in the same way, a single exploit might compromise the entire network. It is therefore vital that you consider other sources as well to secure your node.
 
-## Making Sure Our Server is Updated
+## Making Sure Our Server Is Updated
 
 The first thing we're going to do is make sure we have the latest security updates for Ubuntu. Once everything installs, you will need to reboot to make sure all the upgrades applied adequately.
 
@@ -40,7 +40,7 @@ sudo apt-get install cron-apt
 
 ## SSH Security
 
-### Edit your SSH config
+### Edit Your SSH Config
 
 Edit your `sshd_config` by running the following command.
 
@@ -130,18 +130,18 @@ MaxStartups 2
 #Banner /etc/issue.net
 ```
 
-#### Save your config file
+#### Save Your Config File
 
 Press `CTRL+X` to exit the file, `Y` to save the file and then `Enter` to write to the file and return to the command line.
 
-#### Restart SSH daemon
+#### Restart SSH Daemon
 
 ```bash
 sudo service ssh restart
 exit
 ```
 
-#### Test new SSH connection
+#### Test New SSH Connection
 
 ```bash
 ssh user@yournode -p 55555
@@ -151,7 +151,7 @@ If everything was setup successfully, you should be reconnected to your ARK node
 
 ### Install Fail2Ban
 
-#### What is Fail2Ban
+#### What Is Fail2Ban
 
 The basic idea behind fail2ban is to monitor the logs of standard services to spot patterns in authentication failures. For example, by finding many password authentication failures originating from a single IP, `whois` commands shortly after connecting over SSH or other known exploits.
 
@@ -176,11 +176,11 @@ Find all the references that specify port = SSH (typically in the SSH header sec
 sudo nano /etc/fail2ban/jail.local
 ```
 
-##### file: /etc/fail2ban/jail.local
+##### File: /etc/fail2ban/jail.local
 
 ```
 #
-# SSH servers
+# SSH Servers
 #
 
 [sshd]
@@ -189,8 +189,8 @@ logpath = %(sshd_log)s
 
 
 [sshd-ddos]
-# This jail corresponds to the standard configuration in Fail2ban
-# the mail-whois action sends a notification e-mail with a whois request
+# This Jail Corresponds to the Standard Configuration in Fail2ban
+# The Mail-Whois Action Sends a Notification E-Mail With a Whois Request
 port = ssh
 logpath = %(sshd_log)s
 
@@ -205,11 +205,11 @@ logpath = %(auditd_log)s
 maxretry = 5
 ```
 
-#### Save your config file
+#### Save Your Config File
 
 Press `CTRL+X` to exit the file, `Y` to save the file and then `Enter` to write to the file and return to the command line.
 
-#### Restart Fail2Ban daemon
+#### Restart Fail2Ban Daemon
 
 ```bash
 sudo service fail2ban restart
@@ -218,7 +218,7 @@ exit
 
 ### Port Knocking
 
-#### What is Port Knocking?
+#### What Is Port Knocking?
 
 Port knocking is a technique used which obscures the port you're connecting on to prevent port scanning by opening and closing it when you need it. We will use a series of ports to essentially "knock" and your server will open your configured port for you to connect on by listening for connection attempts on those ports in a specific order.
 
@@ -233,7 +233,7 @@ sudo ufw disable
 
 You can verify that UFW is disabled by running `sudo ufw status` and get a response of `inactive`.
 
-#### Disable all incoming connections
+#### Disable All Incoming Connections
 
 ```bash
 sudo ufw default deny incoming
@@ -250,13 +250,13 @@ sudo ufw allow 4001/tcp
 sudo ufw allow 4003/tcp
 ```
 
-#### Install knockd on server
+#### Install Knockd on Server
 
 ```bash
 sudo apt-get install knockd -y
 ```
 
-#### Start knockd server on boot
+#### Start Knockd Server on Boot
 
 ```bash
 sudo nano /etc/default/knockd
@@ -264,7 +264,7 @@ sudo nano /etc/default/knockd
 
 We need to change `START_KNOCKD=0` to `START_KNOCKD=1`
 
-##### file: /etc/default/knockd
+##### File: /etc/default/knockd
 
 ```
 ################################################
@@ -273,18 +273,18 @@ We need to change `START_KNOCKD=0` to `START_KNOCKD=1`
 #
 ################################################
 
-# control if we start knockd at init or not
+# Control if We Start Knockd at Init or Not
 # 1 = start
 # anything else = don't start
 #
 # PLEASE EDIT /etc/knockd.conf BEFORE ENABLING
 START_KNOCKD=0
 
-# command line options
+# Command Line Options
 #KNOCKD_OPTS="-i eth1"
 ```
 
-##### file: /etc/default/knockd
+##### File: /etc/default/knockd
 
 ```
 ...
@@ -309,7 +309,7 @@ Modify your config file to match the one below with your own ports. We do not re
 
 Also, don't forget to replace `55555` with the port you chose for `SSH`.
 
-##### file: /etc/knockd.conf
+##### File: /etc/knockd.conf
 
 ```
 [options]
@@ -329,21 +329,21 @@ Also, don't forget to replace `55555` with the port you chose for `SSH`.
 
 ```
 
-#### Enable our Firewall and Start knockd
+#### Enable Our Firewall and Start Knockd
 
 ```bash
 sudo service knockd start
 sudo ufw enable
 ```
 
-#### Checking knockd and ufw Status
+#### Checking Knockd and Ufw Status
 
 ```bash
 sudo service knockd status
 sudo ufw status
 ```
 
-#### Install knockd client
+#### Install Knockd Client
 
 Install a client for your operating system to make knocking easier. There are even a couple of mobile apps you can use for quickly knocking on your server to open your ssh port.
 
@@ -424,7 +424,7 @@ Apr 17 04:23:37 node1 knockd: nodeip: closeSSH: OPEN SESAME
 Apr 17 04:23:37 node1 knockd: closeSSH: running command: ufw delete allow 55555/tcp
 ```
 
-### SSH connection using your keypair
+### SSH Connection Using Your Keypair
 
 ::: warning
 If you do not copy the correct key to your server, in the right location, you will be unable to authenticate.
@@ -454,10 +454,10 @@ ls -l
 Copy your key to your server
 
 ```bash
-# open SSH port it not already open
+# Open SSH Port It Not Already Open
 knock -v nodeip 7000 8000 9000
 
-# copy key
+# Copy Key
 ssh-copy-id -p 55555 user@nodeip
 ```
 
@@ -496,7 +496,7 @@ sudo service ssh restart
 
 The next time you log in you should log right in without a password prompt.
 
-### DDOS Protection with Cloudflare
+### DDOS Protection With Cloudflare
 
 In this section, we're going to setup Cloudflare and SSL for DDoS protection and security using Nginx as a reverse proxy.
 
@@ -515,7 +515,7 @@ sudo nano /etc/nginx/enabled-sites/default
 Paste in the following config, making sure you edit the `server_name` and `proxy_pass`. You may need to change `ssl_certificate` and `ssl_certificate_key`
 if you name your files something different.
 
-##### file: /etc/nginx/enabled-sites/default
+##### File: /etc/nginx/enabled-sites/default
 
 ```bash
 # HTTPS

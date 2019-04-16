@@ -1,5 +1,5 @@
 ---
-title: Adafruit ESP32 Overview and Setup
+title: "Adafruit ESP32 Overview and Setup"
 ---
 
 # Adafruit ESP32 Feather

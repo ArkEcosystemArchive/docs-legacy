@@ -1,8 +1,8 @@
 ---
-title: "Migrating your Tools from ARK Node to ARK Core"
+title: "Migrating Your Tools from ARK Node to ARK Core"
 ---
 
-# Migrating your Tools from ARK Node to ARK Core
+# Migrating Your Tools from ARK Node to ARK Core
 
 ## Introduction
 
@@ -33,7 +33,7 @@ If you interact with the 2.0 API and wish to paginate data you can append `?page
 
 Having those meta fields available will allow you to easily loop over all available pages without doing some wonky client-side calculations to figure out how many pages there are. Simply send requests until `meta.nextPage` is `null`.
 
-## Client libraries
+## Client Libraries
 
 The older SDKs consisted of different implementations per programming languages. ARK v2 also included a migration to a brand new SDK with a more consistent design across programming languages.
 

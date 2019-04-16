@@ -34,7 +34,7 @@ Another benefit of squashing is to have a clean & flat git history which allows 
 
 **We only care about the net effect of the pull-requests, i.e. "feat: wallet integration". We don't care about the 30 commits of "bugfix, added, removed, refactored". We want a clear and concise history without any noise.**
 
-## How to label and organize GitHub Issues & Pull Requests
+## How to Label and Organize GitHub Issues & Pull Requests
 
 To make everyone's life easier when looking for issues or pull requests of specific types, priority or severity it is important to make proper use of labels so it is possible to identify the status and importance without having to look into it.
 
@@ -375,7 +375,7 @@ To make everyone's life easier when looking for issues or pull requests of speci
 - ![#ffdd44](https://placehold.it/15/ffdd44/000000?text=+) `Weekly Digest`
   - The issue is a weekly report of the latest activities.
 
-## Assigning Bounty Tiers before merging a Pull Request
+## Assigning Bounty Tiers Before Merging a Pull Request
 
 Before a developer merges a PR, it is _required_ to assign one of the seven bounty labels. Those labels will be used by the _ARKEcosystem Bot_ to calculate bounty rewards and inform the contributors about those and other activities or requests.
 

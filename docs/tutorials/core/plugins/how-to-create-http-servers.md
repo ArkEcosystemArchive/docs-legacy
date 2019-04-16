@@ -1,8 +1,8 @@
 ---
-title: How to create HTTP servers
+title: "How to Create HTTP Servers"
 ---
 
-# How to create HTTP servers
+# How to Create HTTP Servers
 
 [[toc]]
 
@@ -12,11 +12,11 @@ A common use-case for a plugin is that you process some data from within core an
 
 Core provides a package called [core-http-utils](https://github.com/ARKEcosystem/core/tree/develop/packages/core-http-utils/src) which provides everything you will need to run an HTTP server with plugins. Core uses [hapi](https://hapijs.com/) for all its HTTP based services as it enables developers to focus on writing reusable application logic instead of spending time building infrastructure.
 
-## Installing dependencies
+## Installing Dependencies
 
 As you've learned in [How to write a Core Plugin](/tutorials/core/plugins/how-to-write-a-core-plugin.html) you will need to install the required dependencies. For the example we will use we need `core-http-utils` which you can install with `lerna add @arkecosystem/core-http-utils --scope=@vendor/demo-plugin`.
 
-## Creating our server
+## Creating Our Server
 
 Now that `core-http-utils` is installed we can get started with starting our HTTP server, which is fairly simple.
 
@@ -49,7 +49,7 @@ This example will register a server with a single endpoint at `http://localhost:
 Take a look at the [Implementation Guide](/tutorials/core/plugins/how-to-write-a-core-plugin.html#implementation) for plugins to see how to integrate this code example into your plugin.
 :::
 
-## Writing tests for your server
+## Writing Tests for Your Server
 
 Now that you have your HTTP server up and running it is time to write tests for it to guarantee that it returns the data you expect it to.
 

@@ -37,7 +37,7 @@ Orchestrators with Docker as a first class citizen:
 By default for both `relay` and `forger` modes, PostgreSQL is run in a separate container. It's port gets mapped to your `localhost`, so you should not have PostgreSQL running locally.
 :::
 
-### Run Relay only
+### Run Relay Only
 
 ```bash
 cd docker/production/$NETWORK     # (NETWORK = devnet || mainnet)
@@ -84,7 +84,7 @@ docker-compose up -d
 
 This will fire up two separate containers. One for Core itself and another one for PostgreSQL.
 
-### Custom settinings
+### Custom Settinings
 
 ::: tip
 If you prefer to use custom DB Name, DB User and DB Password simply adjust variables `POSTGRES_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB` `(file=docker-compose.yml)` and `CORE_DB_PASSWORD`, `CORE_DB_USERNAME` and `CORE_DB_DATABASE` `(file=$NETWORK.env)` correspondingly.
@@ -99,7 +99,7 @@ docker-compose up -d core
 
 ### FAQ
 
-#### How do i start with empty DB?
+#### How Do I Start With Empty DB?
 
 Just execute the following code:
 
@@ -108,7 +108,7 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-#### Where are the config files and logs located?
+#### Where Are the Config Files and Logs Located?
 
 ARK Core container mounts by default the following local paths as volumes:
 
@@ -142,11 +142,11 @@ Alternative way of following the logs would be, by using the command:
 docker exec -it core-$NETWORK pm2 logs
 ```
 
-#### How do i start everything from scratch?
+#### How Do I Start Everything from Scratch?
 
 Just use the **`purge_all.sh`** script.
 
-### Building your own ARK Core Docker image
+### Building Your Own ARK Core Docker Image
 
 Custom Docker image builds of ARK Core are possible by using the file `docker-compose-build.yml`.
 Make your own modifications of ARK Core source code and run your custom container by executing:
@@ -220,7 +220,7 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-### Serve ARK Core as a collection of Containers
+### Serve ARK Core as a Collection of Containers
 
 **Run a PostgreSQL container, build and run ARK-Core using a mounted volume.**
 

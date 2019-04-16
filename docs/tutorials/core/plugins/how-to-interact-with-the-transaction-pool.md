@@ -1,8 +1,8 @@
 ---
-title: How to interact with the transaction pool
+title: "How to Interact With the Transaction Pool"
 ---
 
-# How to interact with the transaction pool
+# How to Interact With the Transaction Pool
 
 [[toc]]
 
@@ -12,7 +12,7 @@ The `core-transaction-pool` package manages everything that is related to transa
 
 **Manual usage of the transaction pool methods should be avoided unless you are an experienced developer with core and understand potential consequences.**
 
-## Interacting with the transaction pool
+## Interacting With the Transaction Pool
 
 ```ts
 import { app } from "@arkecosystem/core-container";

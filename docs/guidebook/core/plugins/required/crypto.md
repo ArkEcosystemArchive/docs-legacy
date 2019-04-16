@@ -1,5 +1,5 @@
 ---
-title: Crypto
+title: "Crypto"
 ---
 
 # Crypto

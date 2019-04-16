@@ -1,5 +1,5 @@
 ---
-title: Public Node API
+title: "Public Node API"
 ---
 
 # Public Node API
@@ -10,7 +10,7 @@ The `node` resource is useful for service discovery, health checks, and obtainin
 Note that these parameters are returned by the specific Node and that other nodes might adhere to a different set of parameters.
 :::
 
-## Retrieve the configuration
+## Retrieve the Configuration
 
 Used to access a Node's configuration and the network it is attached to (identified by the `nethash`).
 
@@ -118,7 +118,7 @@ GET /api/node/configuration
 }
 ```
 
-## Retrieve the status
+## Retrieve the Status
 
 The status allows for health checking, showing if the node is in sync with the network.
 
@@ -140,7 +140,7 @@ GET /api/node/status
 }
 ```
 
-## Retrieve the syncing status
+## Retrieve the Syncing Status
 
 The `syncing` resource is very much alike `node/status`, providing information on the syncing progress. If a node is not syncing but significantly behind in blocks, it might be time to perform a check.
 

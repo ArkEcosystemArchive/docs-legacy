@@ -1,4 +1,4 @@
-# Deployments using Microsoft Azure
+# Deployments Using Microsoft Azure
 
 Microsoft Azure offers cheap, reliable servers, virtual machines, and container services.
 

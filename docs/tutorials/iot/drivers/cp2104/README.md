@@ -1,8 +1,8 @@
 ---
-title: CP2104 USB Driver installation on macOS systems
+title: "CP2104 USB Driver Installation on macOS Systems"
 ---
 
-# CP2104 USB Driver installation
+# CP2104 USB Driver Installation
 
 ![CP2104](../assets/cp2104/cp2104-usb-driver-1.jpeg)
 ![CP2104](../assets/cp2104/cp2104-usb-driver-2.jpeg)

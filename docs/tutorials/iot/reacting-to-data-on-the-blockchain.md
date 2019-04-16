@@ -42,7 +42,7 @@ Open a new sketch using the [Arduino IDE](/tutorials/iot/environment/arduino), o
 Start by adding the headers to import Arduino, ARK Cpp-Client, and Cpp-Crypto.
 
 ```cpp
-#include <Arduino.h>
+#"Include <Arduino.h>"
 
 #include <arkClient.h>
 #include <arkCrypto.h>
@@ -202,7 +202,7 @@ void loop() {
 }
 ```
 
-## Step 2: Posting your Data to the ARK blockchain
+## Step 2: Posting Your Data to the ARK Blockchain
 
 Next we'll be posting data to the [blockchain](/introduction/blockchain). You can just copy this method from below into your example project
 
@@ -301,7 +301,7 @@ bool txWasFound(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
 }
 ```
 
-## Step 4: Tying it all together!
+## Step 4: Tying It All Together!
 
 Now that we have set up our example and created the necessary variables to connect, send, and search for a transaction, we're ready to wrap things up by calling our 'sendTx' and 'txWasFound' methods from 'setup()' and 'loop()'.
 
@@ -526,7 +526,7 @@ void loop() {
 }
 ```
 
-## Step 5: Running your Example!!
+## Step 5: Running Your Example!!
 
 ### Arduino
 

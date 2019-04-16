@@ -117,15 +117,15 @@ You'll have to logout and login again or just open another session in order to a
 
 ## Install Docker Compose
 
-### Docker Compose install (Ubuntu / Debian / CentOS latest stable releases)
+### Docker Compose Install (Ubuntu / Debian / CentOS Latest Stable Releases)
 
 ```bash
  sudo curl -sL "https://github.com/docker/compose/releases/download/`curl -fsSLI -o /dev/null -w %{url_effective} https://github.com/docker/compose/releases/latest | sed 's#.*tag/##g' && echo`/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-## Using official ARK Core Docker image
+## Using Official ARK Core Docker Image
 
-### Getting the needed files
+### Getting the Needed Files
 
 ```bash
 mkdir mainnet &&
@@ -186,7 +186,7 @@ docker logs postgres-mainnet
 
 ## Maintenance
 
-### Monitoring Relay logs:
+### Monitoring Relay Logs:
 
 ```bash
 docker exec -it core-mainnet pm2 logs
@@ -214,7 +214,7 @@ Updates and all changes made to the containers are kept even on container or hos
 
 ### FAQ
 
-#### How do i start with empty DB?
+#### How Do I Start With Empty DB?
 
 Just execute the following code:
 
@@ -223,7 +223,7 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-#### How do i start everything from scratch?
+#### How Do I Start Everything from Scratch?
 
 Just stop and trash all containers and images:
 

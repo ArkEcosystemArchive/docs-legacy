@@ -46,7 +46,7 @@ Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logge
 ```js
 "@arkecosystem/core-logger-pino": {}, // Add this line
 ```
-6. Save the changes. Your configuration file should looks like this:
+6. Save the changes. Your configuration file should look like this:
 ```bash
 module.exports = {
     "@arkecosystem/core-event-emitter": {},

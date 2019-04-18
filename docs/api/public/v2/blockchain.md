@@ -14,13 +14,20 @@ Used to get the latest block and supply of the blockchain.
 GET /api/blockchain
 ```
 
-### Response
+### Examples
 
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/blockchain
 ```
+
+```json
 {
   "data": {
-    "block": { "height": 7968009, "id": "11184181948670407827" },
-    "supply": 14078482000000004
+    "block": {
+      "height": 8051250,
+      "id": "16024042256653583473"
+    },
+    "supply": 14095130200000004
   }
 }
 ```

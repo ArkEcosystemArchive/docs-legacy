@@ -68,24 +68,20 @@ To update to the v2.3 run the following command:
 ```bash
 ark update
 ```
+When running `ark update` for upgrading to 2.3 for the first time **Core will migrate the transactions table to the new asset column**. This can **take up to a few minutes on low-spec servers**. Be patient and wait for core to update.
 
-Wait for core to update, follow console output. **As a node operator your work here is done**. You successfully upgraded to the latest version of ARK Core.
-
-If you are a developer please check the info [Section below](https://docs.ark.io/releases/v2.3/migrating_2.2_2.3.html#devnet-only-developer-related-information).
-
-## Reporting Problems
-
-If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
+**As a node operator your work here is done**. You successfully upgraded to the latest version of ARK Core. If you are a developer please check the next Section below. 
 
 ---
 
 ## [DEVNET ONLY] Developer related information
 
-::: warning
-This section addresses developers and shows notable changes during this version upgrade. For more details make sure you checkout [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. 
-:::
+This section addresses developers and shows notable changes during this version upgrade. For more details make sure you checkout [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The follow breaking changes where introduced in v2.3: 
 
-### Renaming of Major Package Aliases
+### 1. Logger engine replacement
+This improves the performance of logging, when it occurs in batch (e.g. syncing). You will need to update plugins.js file to replace `winston` with `pino`. See Step 1 above.
+
+### 2. Renaming of Major Package Aliases
 
 From version 2.3 onwards all aliases defined by Core packages will adhere to the `kebab-case` format. If your plugin makes use of any of the following packages, make sure to adjust the calls to the core containers `resolvePlugin` and `resolveOptions` methods with the new alias:
 
@@ -107,7 +103,16 @@ to
 const logManager: LogManager = container.resolvePlugin("log-manager");
 ```
 
-### Switching to the `next` release channel
+### 3.The wallets table was removed from the database
+Core 2.0 has been fully reliant on in-memory wallets since the 2.0 release. This only removes the dumping of wallets into the database, reducing DB size and performance. If you have applications that rely on the database you should migrate them as soon as possible to using the API as only that data is provided in real-time.
+
+### 4. `core-webhooks` db engine replacement
+We replaced `SQLite3` with `lowdb` in `core-webhooks` plugin. This will require for you to recreate your `webhooks` as the storage method changed (only for those using webhooks). 
+
+### 5. Moving from `eventemitter3` back to node.js `EventEmitter` 
+Use the node.js EventEmitter from events instead of previous package `eventemitter3`.
+
+## Switching to the `next` release channel
 
 To continue testing alfa/beta releases follow the instructions below. This is for experienced user, developer project that know what are new features and want to test them ahead of the official release on mainnet.
 
@@ -118,4 +123,8 @@ yarn global add @arkecosystem/core@next
 ```
 
 From 2.3.0 onwards the `next` channel will serve as a combination of all of the old channels on `devnet`. This means there won't be the need to switch between alpha, beta or rc anymore.
+
+## Reporting Problems
+
+If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.
 

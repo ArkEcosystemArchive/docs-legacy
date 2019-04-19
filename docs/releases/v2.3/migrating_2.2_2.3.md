@@ -1,6 +1,6 @@
 # Migrating from v2.2 to v2.3
 
-Upgrading from `v2.2` to `v2.3` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC) as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
+Upgrading from `v2.2` to `v2.3` is fairly straightforward if you follow the instructions. Even though we try to ensure backward compatibility (BC** as much as possible, sometimes it is not possible or very complicated to avoid it and still create a good solution to a problem.
 
 ::: tip 
 Upgrading a complex software project always comes at the risk of breaking something, so make sure you have a backup.
@@ -12,13 +12,11 @@ After upgrading you should check whether your application still works as expecte
 
 ## Upgrade steps
 
-::: warning
-Be sure to complete all of the following changes before you continue to upgrade to the latest version.
-:::
+**Be sure to complete all of the following steps before you continue to upgrade with the `ark update` command to the latest version.**
 
 ### Step 1. Adjusting Configuration (new logger package)
 
-Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logger-pino`. We advise you to switch to the new package, to do so open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-logger-winston` plugin and replace it like shown below.
+With Core v2.3 we ship an additional logger implementation, the `@arkecosystem/core-logger-pino`. We advise you to switch to the new package. To do so open the `~/.config/ark-core/<network>/plugins.js` file (e.g. for mainnet using nano you would run `nano ~/.config/ark-core/mainnet/plugins.js`), locate the `@arkecosystem/core-logger-winston` plugin and replace it like shown below.
 
 
 1. Open the file `~/.config/ark-core/mainnet/plugins.js`
@@ -47,7 +45,7 @@ Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logge
 "@arkecosystem/core-logger-pino": {}, // Add this line
 ```
 6. Save the changes. Your configuration file should look like this:
-```bash
+```js
 module.exports = {
     "@arkecosystem/core-event-emitter": {},
     "@arkecosystem/core-logger-pino": {},
@@ -68,18 +66,17 @@ To update to the v2.3 run the following command:
 ```bash
 ark update
 ```
-When running `ark update` for upgrading to 2.3 for the first time **Core will migrate the transactions table to the new asset column**. This can **take up to a few minutes on low-spec servers**. Be patient and wait for core to update.
-
-**As a node operator your work here is done**. You successfully upgraded to the latest version of ARK Core. If you are a developer please check the next Section below. 
+When running `ark update` from v2.2->v2.3 **Core will migrate the transactions table to the new asset column**. This can **take up to a few minutes on low-spec servers**. Be patient and wait for `ark update` command to complete.
+**As a node operator your work here is done**. You successfully upgraded to the latest version of ARK Core. If you are a developer please check the next Section below, where major changes are listed. 
 
 ---
 
 ## [DEVNET ONLY] Developer related information
 
-This section addresses developers and shows notable changes during this version upgrade. For more details make sure you checkout [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The follow breaking changes where introduced in v2.3: 
+This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.3: 
 
 ### 1. Logger engine replacement
-This improves the performance of logging, when it occurs in batch (e.g. syncing). You will need to update plugins.js file to replace `winston` with `pino`. See Step 1 above.
+Default logger package was replaced to the `pino` logger. This improves the performance of logging, when it occurs in batch (e.g. syncing). You will need to update plugins.js file to replace `winston` with `pino`. See Upgrade Step 1 above.
 
 ### 2. Renaming of Major Package Aliases
 
@@ -104,25 +101,28 @@ const logManager: LogManager = container.resolvePlugin("log-manager");
 ```
 
 ### 3.The wallets table was removed from the database
-Core 2.0 has been fully reliant on in-memory wallets since the 2.0 release. This only removes the dumping of wallets into the database, reducing DB size and performance. If you have applications that rely on the database you should migrate them as soon as possible to using the API as only that data is provided in real-time.
+Core 2.0 has been fully reliant on in-memory wallets since the 2.0 release. This change removes storing of wallets in the database, reducing overall database size and improves performance. If you have applications that rely on the database wallets table you should migrate them as soon as possible to using the API calls, as this is the only way to get real-time data.
 
-### 4. `core-webhooks` db engine replacement
-We replaced `SQLite3` with `lowdb` in `core-webhooks` plugin. This will require for you to recreate your `webhooks` as the storage method changed (only for those using webhooks). 
+### 4. BlockID transition to full SHA-256 block IDs
+This major change is the transition to full SHA256 block IDs, encoded as a hex string. In simple terms, this eliminates a potential collision of block IDs with blockchain height or other block IDs, making ARK safer and future-proof.
 
-### 5. Moving from `eventemitter3` back to node.js `EventEmitter` 
-Use the node.js EventEmitter from events instead of previous package `eventemitter3`.
+### 5. Smartbridge size increases
+Smartbridge (Vendorfield) can hold much more, going from 64 bytes to 255 bytes, a four fold increase. This expansion will provide valuable additional transaction data capacity to expand the use-case landscape.
 
-## Switching to the `next` release channel
 
-To continue testing alfa/beta releases follow the instructions below. This is for experienced user, developer project that know what are new features and want to test them ahead of the official release on mainnet.
+For more detailed information about recent release and other minor changes please check the latest blog post on this topic.
 
-During the development of 2.2.0 there were the channels `alpha`, `beta` and `rc` as a lot of testing had to be done before going public with the switch from using a git repository to providing a CLI. Run the following command to install the 2.3.0 release.
+## Want to continue testing?
+
+To continue testing on the developer branch, you must switch your `ark cli` to the `next` release channel. This is for experienced users and developer projects that want to test the new features ahead of the official release on our mainnet.
+
+During the development of 2.2.0 we had channels for `alpha`, `beta` and `rc` as a lot of testing had to be done before going public with the switch from using a git repository to providing a CLI. Run the following command to install the 2.3.0 release and stay on the `next` release channel:
 
 ```shell
 yarn global add @arkecosystem/core@next
 ```
 
-From 2.3.0 onwards the `next` channel will serve as a combination of all of the old channels on `devnet`. This means there won't be the need to switch between alpha, beta or rc anymore.
+From 2.3.0 onwards the `next` channel will serve as a combination of all of the old channels on `devnet`. This means there won't be any need to switch between `alpha`, `beta` or `rc` anymore.
 
 ## Reporting Problems
 

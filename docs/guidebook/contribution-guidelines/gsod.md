@@ -1,4 +1,4 @@
-![gsod](https://imgur.com/mrT7vTn.png)
+![gsod](./assets/gsod-banner.png)
 
 [[toc]]
 

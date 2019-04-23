@@ -42,14 +42,13 @@ Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logge
    },
    ```
 
-4. Save the changes.
-5. Add the new logger configuration to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
+4. Add the new logger configuration to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
 
    ```js
    "@arkecosystem/core-logger-pino": {}, // Add this line
    ```
 
-6. Save the changes. Your configuration file should look like this:
+5. Save the changes. Your configuration file should look like this:
 
    ```js
    module.exports = {

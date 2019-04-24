@@ -10,7 +10,7 @@ Upgrading a complex software project always comes at the risk of breaking someth
 
 After upgrading you should check whether your application still works as expected and no plugins are broken. See the following notes on which changes to consider when upgrading from one version to another.
 
-## Upgrade steps
+## Upgrade Steps
 
 ::: tip
 Be sure to complete all of the following steps before you continue to upgrade with the `ark update` command to the latest version.
@@ -79,7 +79,7 @@ When updating from 2.2.x to 2.3.0 the first start might take a few minutes becau
 
 ---
 
-## Developer related information
+## Developer Related Information
 
 This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.3:
 
@@ -105,15 +105,15 @@ to
 const logManager: LogManager = container.resolvePlugin("log-manager");
 ```
 
-### 2. Wallets table removed from the database
+### 2. Wallets Table Removed from the Database
 
 Core 2.0 has been fully reliant on in-memory wallets since the 2.0 release. This change removes storing of wallets in the database, reducing the database size and bringing various performance improvements. If you have applications that rely on the database wallets table you will need to migrate them as soon as possible to using the API calls as this is the only way to get wallet data.
 
-### 3. Block ID transition to SHA-256 block IDs
+### 3. Block ID Transition to SHA-256 Block IDs
 
 This major change is the transition to full SHA256 block IDs, encoded as a hex string. In simple terms, this eliminates a potential collision of block IDs with blockchain height or other block IDs, making ARK safer and future-proof.
 
-### 4. Smartbridge size increased
+### 4. Smartbridge Size Increased
 
 The Smartbridge (Vendorfield) can now hold a total of 255 bytes of data, compared to the previous 64 bytes this is a four fold increase. This increase will allow applications to store more data on the blockchain and widen the use-case landscape.
 

@@ -230,7 +230,7 @@ void sendTX(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
 }
 ```
 
-## Step 3: Getting and Reacting to Data on the ARK blockchain
+## Step 3: Getting and Reacting to Data on the ARK Blockchain
 
 Now that we have the "sending" part of the process mapped out, we'll go ahead and create the logic to search the [ARK blockchain](/introduction/blockchain) for our [VendorField](/glossary/#smartbridge).
 This method should have the vendorField passed to it.

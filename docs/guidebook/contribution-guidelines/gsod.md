@@ -1,3 +1,9 @@
+---
+title: "Google Season of Docs"
+---
+
+# Google Season of Docs
+
 ![gsod](./assets/gsod-banner.png)
 
 [[toc]]
@@ -11,12 +17,13 @@ ARK empowers everyone, regardless of their aim or technical background, to quick
 The ARK Team, also known as the ARK Crew, is decentralized throughout the world and has no main office. Team members come from the United States, France, Spain, Brazil, United Kingdom, Germany, The Netherlands, Slovenia, Finland, Bulgaria, Ukraine, and others. The ARK Crew is determined to change the world by giving everyone accessibility to the awesome power of blockchain. We have been expanding and hiring more talent regardless of market conditions, and we are in possession of multiple years' worth of working capital in various cryptocurrencies.
 
 ## ARK and GSoD program
+
 Pending a successful application, ARK would like to provide a technical writer the opportunity to work on an open-source blockchain project that utilizes cutting edge technology combined with a very vibrant and active community. With various ARK Core milestones recently completed and a plethora of new technology to uncover, there is no shortage of technical documentation, for both evaluation and writing, related to our slate of products and services.
 We are looking for a new technical writer, that is flexible, understands technology in terms of scope, development, has the ability to write developer tutorials supported with examples, and can also help with basic user application guides. GSoD program gives us the ability to open our doors even more and potentially find a new member of our distributed team.
 
 ## How Do We Work?
 
-Our documentation is available on https://docs.ark.io. Everything can be found here and also on our  Blog. Documentation is a central point for Exchanges, Developers, Node Operators and blockchain enthusiast in general, allowing them to find information and build solutions on top of our blockchain platform. Documentation is based on VuePress, meaning that our docs are written in markdown language, making it easy to jump on and start collaborating from everywhere.
+Our documentation is available on https://docs.ark.io. Everything can be found here and also on our Blog. Documentation is a central point for Exchanges, Developers, Node Operators and blockchain enthusiast in general, allowing them to find information and build solutions on top of our blockchain platform. Documentation is based on VuePress, meaning that our docs are written in markdown language, making it easy to jump on and start collaborating from everywhere.
 Documentation is open-source and its source code can be found here: https://github.com/ArkEcosystem/docs/. 
 Just follow the Readme.md instructions and you will have your documentation project setup in a matter of minutes. We also prepared initial guidelines on How to Start Writing Documentation for ARK.
 Depending on the ability of the technical writer, we would like to provide the following projects (but are not limited to only them).
@@ -32,7 +39,6 @@ Getting started with new technology is always a challenge and a learning curve. 
 - [Developer Environment Guidebook](https://docs.ark.io/guidebook/developer/setup-dev-environment.html)
 - [ARK Core GitHub Repository](https://github.com/ArkEcosystem/core)
 
-
 ### Project 2 - Documentation Site Overview and layout improvement
 
 Analyze our documentation site and refactor it to provide an improved user experience (adjust layout, structure, address personas from the start, be creative). Put yourself into different roles and evaluate introduction tutorials, analyze what is missing and make notes/propose improvements.
@@ -40,7 +46,6 @@ Analyze our documentation site and refactor it to provide an improved user exper
 **Related materials:**
 
 - [VuePress Documentation Source Code](https://github.com/ArkEcosystem/docs/)
-
 
 ### Project 3 - ARK and IoT Tutorials
 
@@ -52,7 +57,6 @@ ARK, being a light and very flexible blockchain platform, targets IoT developmen
 - [Cpp Client Source Code](https://github.com/ARKEcosystem/cpp-client)
 - [Cpp Crypto Source Code](https://github.com/ARKEcosystem/cpp-crypto)
 
-
 ### Project 4 - A Step-By-Step Guide On Using Webhooks to listen to blockchain events
 
 From the release of ARK Core 2.0, we included webhooks as a means for developers to subscribe to blockchain events and use this approach in their applications. As a writer, your starting point would be evaluating the current documentation part on this topic and expanding on it with a complete step-by-step guide outlining the webhooks setup and usage process supported with a simple example of your choosing.
@@ -62,7 +66,6 @@ From the release of ARK Core 2.0, we included webhooks as a means for developers
 - [WebHooks Documentation](https://docs.ark.io/guidebook/core/webhooks.html)
 - [WebHooks Plugin Repository](https://github.com/ArkEcosystem/core/tree/develop/packages/core-webhooks)
 
-
 ### Project 5 - A Step-By-Step Guide On Building Plugins/dApps
 
 A plugin is a very powerful concept inside our Core blockchain platform. It is used by our development team as well as our partner projects. Plugins give you the ability to develop your own applications, and deploy them on the blockchain. Plugins are a typescript/javascript application and are only limited by your imagination (starting your own http server, develop a shop, an ecommerce plugin, a new website). Your task would be to evaluate current core-plugin documentation and use it to write a custom plugin (like sending an alert, a notification, …). You would use the developed example and lessons learned during the process to develop a detailed step-by-step guide for plugin development, supported by accompanying example.
@@ -70,7 +73,6 @@ A plugin is a very powerful concept inside our Core blockchain platform. It is u
 **Related materials:**
 
 - [Plugin Documentation](https://docs.ark.io/guidebook/core/plugins/)
-
 
 ### Project 6 - A Step-By-Step Guide On Building Custom Transactions
 
@@ -81,7 +83,6 @@ In a future ARK Core release we are introducing AIP 29, codename GTI ("Generaliz
 - [AIP-29 Specification](https://github.com/ArkEcosystem/AIPs/blob/master/AIPS/aip-29.md)
 - [Core Repository](https://github.com/ArkEcosystem/core/)
 
-
 ## Conclusion
-These are just some of the cutting edge projects we are working on. For each of these projects, we are focused on making our documentation more user friendly and more approachable to the wider technical and developer community. Pending the result of our GSoD application, we are looking forward to working with all technical writers and technically gifted people. We promise to support and assist you getting acquainted with our technology. Together, we will work in synergy to complete the tasks agreed by both parties.
 
+These are just some of the cutting edge projects we are working on. For each of these projects, we are focused on making our documentation more user friendly and more approachable to the wider technical and developer community. Pending the result of our GSoD application, we are looking forward to working with all technical writers and technically gifted people. We promise to support and assist you getting acquainted with our technology. Together, we will work in synergy to complete the tasks agreed by both parties.

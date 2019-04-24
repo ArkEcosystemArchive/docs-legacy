@@ -13,12 +13,12 @@ The default way to configure the node's rate limit is by editing the .env file f
 #### file: ~/.ark/.env
 
 ```json
-CORE_RATE_LIMIT=true
+CORE_API_RATE_LIMIT=true
 CORE_API_RATE_LIMIT_USER_LIMIT=300
 ```
 
-Setting `API_RATE_LIMIT` to false will globally disable all rate limits. For internal use this is secure. More fine-grained control may be exerted by using `CORE_API_RATE_LIMIT_USER_LIMIT`, which uses IP addresses to assign rate limits. The unit is `requests/minute`.
-
+Setting `CORE_API_RATE_LIMIT` to false will globally disable all rate limits. For internal use this is secure. More fine-grained control may be exerted by using `CORE_API_RATE_LIMIT_USER_LIMIT`, which uses IP addresses to assign rate limits. The unit is `requests/minute`.
+ 
 ## Configuration Through a Plugin
 
 Lower access to the rate limiting can be obtained by writing a plugin/ We can define custom behavior and [monkey patch](https://en.wikipedia.org/wiki/Monkey_patch) the ARK Core rate limiter.

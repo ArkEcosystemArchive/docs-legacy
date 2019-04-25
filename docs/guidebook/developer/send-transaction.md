@@ -475,7 +475,7 @@ You are welcome to pick any two passphrases, or select the same ones as we use h
 
 ::: danger
 
-Before we continue, heed our warning: including your passphrases directly in your source code is a ** terrible idea**, and you should never do so when sending transactions in a production environment. Either load your passwords from a `.env` file, dedicated KMS or environment variables.
+Before we continue, heed our warning: including your passphrases directly in your source code is a **terrible idea**, and you should never do so when sending transactions in a production environment. Either load your passwords from a `.env` file, dedicated KMS or environment variables.
 
 :::
 

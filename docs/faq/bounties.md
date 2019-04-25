@@ -38,7 +38,7 @@ You can pickup any of the existing issues on GitHub that are marked with the `Ty
 
 Payments will be made at the beginning of each month for the prior month and will be paid in ARK with USD valuation at the time of the payout.
 
-## Pull requests
+## Pull Requests
 
 ::: tip
 Discuss your idea first before starting work on any significant new features

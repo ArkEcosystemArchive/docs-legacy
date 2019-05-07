@@ -83,8 +83,8 @@ public class Main {
         System.out.println(transfer1.toJson());
 
         // adding transaction to payload, payload is an array of transactions
-        ArrayList<String> payload = new ArrayList();
-        payload.add(transfer1.toJson());
+        ArrayList<HashMap> payload = new ArrayList();
+        payload.add(transfer1.toHashMap());
 
         // posting transactions to the connected node as specified in the connection above
         LinkedTreeMap<String, Object> postResponse = connection.api().transactions.create(payload);

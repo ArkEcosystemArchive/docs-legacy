@@ -16,10 +16,10 @@ After upgrading you should check whether your application still works as expecte
 Be sure to complete all of the following steps before you continue to upgrade with the `ark update` command to the latest version.
 :::
 
-### Step 1. Adjusting Configuration
+### Step 1. Add `core-state` package
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
-2. Locate the `@arkecosystem/core-database-postgres` package.
+2. Locate the `@arkecosystem/core-database-postgres` entry.
 3. Add the new logger configuration to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
 
    ```js
@@ -40,13 +40,47 @@ Be sure to complete all of the following steps before you continue to upgrade wi
    }
    ```
 
-### Step 2. Running the update command via the `ark` CLI
+### Step 2. Update `core-p2p` configuration
+
+1. Open `~/.config/ark-core/<network>/plugins.js`
+2. Locate the `@arkecosystem/core-core-p2p` entry and replace the block like shown below.
+
+   **Old**
+
+   ```js
+   module.exports = {
+       ...
+       "@arkecosystem/core-p2p": {
+           host: process.env.CORE_P2P_HOST || "0.0.0.0",
+           port: process.env.CORE_P2P_PORT || 4001,
+       },
+       ...
+   }
+   ```
+
+   **New**
+
+   ```js
+   module.exports = {
+       ...
+       "@arkecosystem/core-p2p": {
+           server: {
+               port: process.env.CORE_P2P_PORT || 4001,
+           },
+       },
+       ...
+   }
+   ```
+
+3. Save the changes and restart.
+
+### Step 3. Running the update command via the `ark` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 :::
 
-Make sure that [Step 1](http://localhost:8080/releases/v2.4/migrating_2.3_2.4.html#step-1-adjusting-configuration) was successfully completed before running the `ark update` command via the cli.
+Make sure that [Step 1](#step-1-add-core-state-package) and [Step 2](#step-2-update-core-p2p-configuration) were successfully completed before running the `ark update` command via the cli.
 
 **To update to v2.4 run the following command:**
 

@@ -96,6 +96,7 @@ module.exports = [
             "/guidebook/contribution-guidelines/clean-code-and-tests",
             "/guidebook/contribution-guidelines/contributing",
             "/guidebook/contribution-guidelines/writing-documentation",
+            "/guidebook/contribution-guidelines/gsod",
             "/guidebook/contribution-guidelines/git-branch-guidelines",
             "/guidebook/contribution-guidelines/git-commit-guidelines",
             "/guidebook/contribution-guidelines/project-structuring",

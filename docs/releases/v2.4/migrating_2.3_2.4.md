@@ -124,7 +124,7 @@ You can check your ufw rules by running:
    module.exports = {
        ...
        "@arkecosystem/core-forger": {
-          hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4002}`],
+          hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4001}`],
        },
        ...
    }
@@ -139,7 +139,7 @@ You can check your ufw rules by running:
            hosts: [
               {
                  hostname: "127.0.0.1",
-                 port: process.env.CORE_P2P_PORT || 4000,
+                 port: process.env.CORE_P2P_PORT || 4001,
               },
           ],
        },

@@ -48,7 +48,7 @@ It's especially important to register this plugin as this is what the Desktop an
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
 2. Locate the `@arkecosystem/core-blockchain` entry.
-3. Add the new Wallet API to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
+3. Add this package addition line before it (see below):
 
    ```js
    "@arkecosystem/core-wallet-api": {}, // Add this line after it

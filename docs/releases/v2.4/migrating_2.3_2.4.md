@@ -40,7 +40,34 @@ Be sure to complete all of the following steps before you continue to upgrade wi
    }
    ```
 
-### Step 2. Update `core-p2p` configuration
+### Step 2. Add `core-wallet-api` package
+
+::: warning
+It's especially important to register this plugin as this is what the Desktop and Mobile wallet will to communicate with nodes.
+:::
+
+1. Open `~/.config/ark-core/<network>/plugins.js`
+2. Locate the `@arkecosystem/core-blockchain` entry.
+3. Add the new Wallet API to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
+
+   ```js
+   "@arkecosystem/core-wallet-api": {}, // Add this line after it
+   ```
+
+4. Save the changes. Your configuration file should look like this:
+
+   ```js
+   module.exports = {
+       ...
+       ...
+       "@arkecosystem/core-blockchain": {},
+       "@arkecosystem/core-wallet-api": {},
+       ...
+       ...
+   }
+   ```
+
+### Step 3. Update `core-p2p` configuration
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
 2. Locate the `@arkecosystem/core-core-p2p` entry and replace the block like shown below.
@@ -74,13 +101,13 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 
 3. Save the changes and restart.
 
-### Step 3. Running the update command via the `ark` CLI
+### Step 4. Running the update command via the `ark` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 :::
 
-Make sure that [Step 1](#step-1-add-core-state-package) and [Step 2](#step-2-update-core-p2p-configuration) were successfully completed before running the `ark update` command via the cli.
+Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package) and [Step 3](#step-3-update-core-p2p-configuration) were successfully completed before running the `ark update` command via the cli.
 
 **To update to v2.4 run the following command:**
 

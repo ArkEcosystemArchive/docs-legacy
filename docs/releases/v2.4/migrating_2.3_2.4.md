@@ -43,7 +43,7 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 ### Step 2. Add `core-wallet-api` package
 
 ::: warning
-It's especially important to register this plugin as this is what the Desktop and Mobile wallet will to communicate with nodes.
+It's especially important to register this plugin as this is what the Desktop and Mobile wallet will use to communicate with nodes.
 :::
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
@@ -67,10 +67,16 @@ It's especially important to register this plugin as this is what the Desktop an
    }
    ```
 
-5. Open port `4040` to make `core-wallet-api` accessible to wallets.
+5. If you are using default firewall don't forget to open port `4040` to make `core-wallet-api` accessible to wallets.
 
    ```shell
    sudo ufw allow 4040/tcp
+   ```
+
+You can check your ufw rules by running:
+
+   ```shell
+   sudo ufw status 
    ```
 
 ### Step 3. Update `core-p2p` configuration

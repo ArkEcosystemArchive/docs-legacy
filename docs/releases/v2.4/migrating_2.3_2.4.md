@@ -82,7 +82,7 @@ You can check your ufw rules by running:
 ### Step 3. Update `core-p2p` configuration
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
-2. Locate the `@arkecosystem/core-core-p2p` entry and replace the block like shown below.
+2. Locate the `@arkecosystem/core-p2p` entry and replace the block like shown below.
 
    **Old**
 
@@ -113,13 +113,47 @@ You can check your ufw rules by running:
 
 3. Save the changes and restart.
 
-### Step 4. Running the update command via the `ark` CLI
+### Step 4. Update `core-forger` configuration
+
+1. Open `~/.config/ark-core/<network>/plugins.js`
+2. Locate the `@arkecosystem/core-forger` entry and replace the block like shown below.
+
+   **Old**
+
+   ```js
+   module.exports = {
+       ...
+       "@arkecosystem/core-forger": {
+          hosts: [`http://127.0.0.1:${process.env.CORE_P2P_PORT || 4001}`],
+       },
+       ...
+   }
+   ```
+
+   **New**
+
+   ```js
+   module.exports = {
+       ...
+       "@arkecosystem/core-forger": {
+           hosts: [
+              {
+                 hostname: "127.0.0.1",
+                 port: process.env.CORE_P2P_PORT || 4001,
+              },
+          ],
+       },
+       ...
+   }
+   ```
+
+### Step 5. Running the update command via the `ark` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 :::
 
-Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package) and [Step 3](#step-3-update-core-p2p-configuration) were successfully completed before running the `ark update` command via the cli.
+Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package), [Step 3](#step-3-update-core-p2p-configuration) and [Step 4](#step-4-update-core-forger-configuration) were successfully completed before running the `ark update` command via the cli.
 
 **To update to v2.4 run the following command:**
 

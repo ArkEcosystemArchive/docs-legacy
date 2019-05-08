@@ -67,6 +67,12 @@ It's especially important to register this plugin as this is what the Desktop an
    }
    ```
 
+5. Open port `4040` to make `core-wallet-api` accessible to wallets.
+
+   ```shell
+   sudo ufw allow 4040/tcp
+   ```
+
 ### Step 3. Update `core-p2p` configuration
 
 1. Open `~/.config/ark-core/<network>/plugins.js`

@@ -20,7 +20,7 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
 2. Locate the `@arkecosystem/core-database-postgres` entry.
-3. Add the new logger configuration to the already opened file `~/.config/ark-core/mainnet/plugins.js`. Add this line (see below):
+3. Add this package addition line before it (see below):
 
    ```js
    "@arkecosystem/core-state": {}, // Add this line before it

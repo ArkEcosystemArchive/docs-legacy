@@ -73,13 +73,9 @@ It's especially important to register this plugin as this is what the Desktop an
    sudo ufw allow 4040/tcp
    ```
 
-::: tip
-You can check your ufw rules by running:
-
-```shell
-sudo ufw status
-```
-:::
+   ::: tip
+   You can check your ufw rules by running `sudo ufw status`
+   :::
 
 ### Step 3. Update `core-p2p` Configuration
 

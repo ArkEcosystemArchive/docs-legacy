@@ -61,7 +61,7 @@ Since 2.3 we ship an additional logger implementation, `@arkecosystem/core-logge
    }
    ```
 
-### Step 2. Running the update command via the `ark cli`
+### Step 2. Running the Update Command via the `ark` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.

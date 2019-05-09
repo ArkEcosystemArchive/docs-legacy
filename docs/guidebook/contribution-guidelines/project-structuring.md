@@ -6,7 +6,7 @@ title: "Project Structuring"
 
 While the following guidelines are not an absolute requirement, writing your code by these standards will ensure greater compatibility with the ARK Ecosystem and increases the likelihood your pull request will be accepted.
 
-## How to approach `JavaScript` projects
+## How to Approach `JavaScript` Projects
 
 ### Dependencies
 

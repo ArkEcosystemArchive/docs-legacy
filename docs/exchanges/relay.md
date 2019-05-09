@@ -28,7 +28,7 @@ ARK Nodes execute many query intensive operations. The most cost-effective appro
   | webhook    | 4004 |        :x:         |        :x:         | [reference](/api/webhooks/)             |
   | JSON-RPC   | 8080 |        :x:         |        :x:         | [reference](/exchanges/json-rpc.html)   |
 
-## Using the official `Installation Script`
+## Using the Official `Installation Script`
 
 On a fresh Ubuntu installation, follow these commands.
 

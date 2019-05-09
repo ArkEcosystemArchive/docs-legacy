@@ -10,13 +10,13 @@ Upgrading a complex software project always comes at the risk of breaking someth
 
 After upgrading you should check whether your application still works as expected and no plugins are broken. See the following notes on which changes to consider when upgrading from one version to another.
 
-## Upgrade steps
+## Upgrade Steps
 
 ::: tip
 Be sure to complete all of the following steps before you continue to upgrade with the `ark update` command to the latest version.
 :::
 
-### Step 1. Add `core-state` package
+### Step 1. Add `core-state` Package
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
 2. Locate the `@arkecosystem/core-database-postgres` entry.
@@ -40,7 +40,7 @@ Be sure to complete all of the following steps before you continue to upgrade wi
    }
    ```
 
-### Step 2. Add `core-wallet-api` package
+### Step 2. Add `core-wallet-api` Package
 
 ::: warning
 It's especially important to register this plugin as this is what the Desktop and Mobile wallet will use to communicate with nodes.
@@ -81,7 +81,7 @@ sudo ufw status
 ```
 :::
 
-### Step 3. Update `core-p2p` configuration
+### Step 3. Update `core-p2p` Configuration
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
 2. Locate the `@arkecosystem/core-p2p` entry and replace the block like shown below.
@@ -115,7 +115,7 @@ sudo ufw status
 
 3. Save the changes.
 
-### Step 4. Update `core-forger` configuration
+### Step 4. Update `core-forger` Configuration
 
 1. Open `~/.config/ark-core/<network>/plugins.js`
 2. Locate the `@arkecosystem/core-forger` entry and replace the block like shown below.
@@ -149,7 +149,9 @@ sudo ufw status
    }
    ```
 
-### Step 5. Running the update command via the `ark` CLI
+3. Save the changes.
+
+### Step 5. Running the Update Command via the `ark` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.

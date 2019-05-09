@@ -70,7 +70,7 @@ state-machine.test.ts
 state-storage.test.ts
 ```
 
-### Matching the `/src` folder
+### Matching the `/src` Folder
 
 Important thing to note: except for special directories like `mocks`, the directory structure **matches** the `/src` structure. We want to keep it this way as much as possible to make it easy to identify what is being tested. If you have worked with Go this [practice](https://golang.org/pkg/testing/) should be familiar.
 
@@ -403,7 +403,7 @@ expect({
 
 ## Guidelines for Writing Tests
 
-### Use `utils` folder for common stuff
+### Use `utils` Folder for Common Stuff
 
 For testing, we are doing a lot of common things across the packages. Let us try to use the `__tests__/utils` folder as a shared library to avoid duplication.
 

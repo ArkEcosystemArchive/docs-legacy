@@ -13,6 +13,7 @@ ARK Core allows you to use a [.env](https://github.com/bevry/envfile) file to pr
 | Variable           | Plugin                               | Default    |
 | :----------------- | :----------------------------------- | :--------- |
 | CORE_DB_HOST       | @arkecosystem/core-database-postgres | localhost  |
+| CORE_DB_PORT       | @arkecosystem/core-database-postgres | 5432       |
 | CORE_DB_USERNAME   | @arkecosystem/core-database-postgres | ark        |
 | CORE_DB_PASSWORD   | @arkecosystem/core-database-postgres | password   |
 | CORE_DB_DATABASE   | @arkecosystem/core-database-postgres | ark_devnet |

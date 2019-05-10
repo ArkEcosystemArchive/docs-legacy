@@ -84,7 +84,7 @@ If you are receiving a message to the effect of `The "..." process has entered a
 
 ## Available Commands
 
-### Autocomplete
+### autocomplete
 
 You might be used to tab completion, which the ARK CLI does support. Using this command does not configure autocompletion, but does show you instructions.
 
@@ -94,7 +94,7 @@ You might be used to tab completion, which the ARK CLI does support. Using this 
 ark autocomplete
 ```
 
-### Config:cli
+### config:cli
 
 Configure the CLI
 
@@ -125,7 +125,39 @@ ark config:cli --token="mine"
 ark config:cli --channel="beta"
 ```
 
-### Config:forger
+### config:database
+
+Configure the database
+
+#### Usage
+
+```bash
+ark config:database
+```
+
+::: tip
+Ommitting all flags will start the configuration in an interactive mode.
+:::
+
+#### Flags
+
+| Name       | Description                                       | Required |
+| :--------- | :------------------------------------------------ | :------: |
+| --host     | the host of the database                          |   :x:    |
+| --port     | the port of the database                          |   :x:    |
+| --database | the name of the database that should be used      |   :x:    |
+| --username | the name of the database user                     |   :x:    |
+| --password | the password for the database that should be used |   :x:    |
+| --network  | the name of the network that should be used       |   :x:    |
+| --token    | the name of the token that should be used         |   :x:    |
+
+#### Examples
+
+```bash
+ark config:database --host=localhost --port=5432 --database=ark_mainnet --username=ark --password=password
+```
+
+### config:forger
 
 Configure the forging delegate
 
@@ -134,6 +166,10 @@ Configure the forging delegate
 ```bash
 ark config:forger
 ```
+
+::: tip
+Ommitting all flags will start the configuration in an interactive mode.
+:::
 
 #### Flags
 
@@ -208,7 +244,7 @@ ark config:forger:bip39
 ark config:forger:bip39 --bip39="..."
 ```
 
-### Config:publish
+### config:publish
 
 Publish the configuration
 
@@ -233,7 +269,7 @@ ark config:publish
 ark config:publish
 ```
 
-### Config:reset
+### config:reset
 
 Reset the configuration
 
@@ -258,7 +294,7 @@ ark config:reset
 ark config:reset --network=mainnet
 ```
 
-### Core:log
+### core:log
 
 Show the core log
 
@@ -282,7 +318,7 @@ ark core:log
 ark core:log
 ```
 
-### Core:restart
+### core:restart
 
 Restart the core
 
@@ -307,7 +343,7 @@ ark core:restart
 ark core:restart
 ```
 
-### Core:start
+### core:start
 
 Start the core
 
@@ -383,7 +419,7 @@ or use the following command, which supports the same set of flags.:
 ark core:run
 ```
 
-### Core:stop
+### core:stop
 
 Stop the core
 
@@ -415,7 +451,7 @@ ark core:stop
 ark core:stop --daemon
 ```
 
-### Env:get
+### env:get
 
 Get the value of an environment variable
 
@@ -440,7 +476,7 @@ ark env:get KEY
 ark env:get CORE_LOG_LEVEL
 ```
 
-### Env:list
+### env:list
 
 List all environment variables
 
@@ -465,7 +501,7 @@ ark env:list
 ark env:list
 ```
 
-### Env:paths
+### env:paths
 
 Get all of the environment paths
 
@@ -490,7 +526,7 @@ ark env:paths
 ark env:paths
 ```
 
-### Env:set
+### env:set
 
 Set the value of an environment variable
 
@@ -515,7 +551,7 @@ ark env:set KEY VALUE
 ark env:set CORE_LOG_LEVEL info
 ```
 
-### Forger:log
+### forger:log
 
 Show the forger log
 
@@ -539,7 +575,7 @@ ark forger:log
 ark forger:log
 ```
 
-### Forger:restart
+### forger:restart
 
 Restart the forger
 
@@ -564,7 +600,7 @@ ark forger:restart
 ark forger:restart
 ```
 
-### Forger:start
+### forger:start
 
 Start the forger
 
@@ -611,7 +647,7 @@ ark forger:start --bip38="..." --password="..."
 ark forger:start --no-daemon
 ```
 
-### Forger:stop
+### forger:stop
 
 Stop the forger
 
@@ -643,7 +679,7 @@ ark forger:stop
 ark forger:stop --daemon
 ```
 
-### Forger:status
+### forger:status
 
 Show the forger status.
 
@@ -666,7 +702,7 @@ ark forger:status
 ark forger:status
 ```
 
-### Relay:log
+### relay:log
 
 Show the relay log
 
@@ -690,7 +726,7 @@ ark relay:log
 ark relay:log
 ```
 
-### Relay:restart
+### relay:restart
 
 Restart the relay
 
@@ -715,7 +751,7 @@ ark relay:restart
 ark relay:restart
 ```
 
-### Relay:start
+### relay:start
 
 Start the relay
 
@@ -788,7 +824,7 @@ ark relay:start --launchMode=seed
 ark relay:start --no-daemon
 ```
 
-### Relay:stop
+### relay:stop
 
 Stop the relay
 
@@ -820,7 +856,7 @@ ark relay:stop
 ark relay:stop --daemon
 ```
 
-### Top
+### top
 
 List all core daemons
 
@@ -838,7 +874,7 @@ ark top
 ark top
 ```
 
-### Snapshot:dump
+### snapshot:dump
 
 Create a dump of the database
 
@@ -860,7 +896,7 @@ ark snapshot:dump
 | --network         | the name of the network that should be used     |   :x:    |
 | --token           | the name of the token that should be used       |   :x:    |
 
-### Snapshot:restore
+### snapshot:restore
 
 Restore the database from a dump
 
@@ -884,7 +920,7 @@ ark snapshot:restore
 | --network          | the name of the network that should be used     |   :x:    |
 | --token            | the name of the token that should be used       |   :x:    |
 
-### Snapshot:rollback
+### snapshot:rollback
 
 Roll back the database to a specific height or by a specified number of blocks
 
@@ -908,7 +944,7 @@ Either `height` or `number` has to be provided.
 | --network | the name of the network that should be used     |           :x:           |
 | --token   | the name of the token that should be used       |           :x:           |
 
-### Snapshot:truncate
+### snapshot:truncate
 
 Truncate the database
 
@@ -923,7 +959,7 @@ ark snapshot:truncate
 | --network | the name of the network that should be used |   :x:    |
 | --token   | the name of the token that should be used   |   :x:    |
 
-### Snapshot:verify
+### snapshot:verify
 
 Create a new snapshot
 

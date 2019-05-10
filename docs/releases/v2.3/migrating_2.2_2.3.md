@@ -77,8 +77,6 @@ ark update
 When updating from 2.2.x to 2.3.0 the first start might take a few minutes because Core will need to migrate all transactions to have an `asset` column that is required for AIP29. This can **take up to a few minutes on low-spec servers**.
 **As a node operator your work here is done**. You successfully upgraded to the latest version of ARK Core. If you are a developer please check the next Section below, where major changes are listed.
 
----
-
 ## Developer Related Information
 
 This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.3:

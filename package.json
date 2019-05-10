@@ -23,9 +23,12 @@
   "homepage": "https://github.com/ARKEcosystem/docs",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "titles": "markdown-title-case docs",
+    "titles:fix": "markdown-title-case docs --fix"
   },
   "devDependencies": {
+    "@dated/markdown-title-case": "^0.1.4",
     "axios": "^0.18.0",
     "highlight.js": "^9.13.1",
     "nprogress": "^0.2.0",

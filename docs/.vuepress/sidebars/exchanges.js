@@ -1,30 +1,19 @@
 module.exports = [
   ['/', 'Back to Table of Contents'],
-  ["/exchanges/", "Exchanges Home"],
+  ['/exchanges/', 'Exchanges Home'],
   {
-    title: "Node Installation",
+    title: 'Node Installation',
     collapsable: false,
-    children: [
-      "/exchanges/relay",
-      "/exchanges/docker",
-    ]
+    children: ['/exchanges/relay', '/exchanges/docker']
   },
   {
-    title: "Communication endpoints",
+    title: 'Communication endpoints',
     collapsable: false,
-    children: [
-      "/exchanges/migrating-to-ark-core",
-      "/exchanges/public-api",
-      "/exchanges/json-rpc-quick",
-
-    ]
+    children: ['/exchanges/migrating-to-ark-core', '/exchanges/public-api', '/exchanges/json-rpc-quick']
   },
   {
-    title: "Advanced node configuration",
+    title: 'Advanced node configuration',
     collapsable: false,
-    children: [
-      "/exchanges/json-rpc",
-      "/exchanges/rate-limiting.md"
-    ]
-  },
-];
+    children: ['/exchanges/json-rpc', '/exchanges/rate-limiting.md']
+  }
+]

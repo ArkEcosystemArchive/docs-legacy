@@ -160,7 +160,7 @@ This will build your ARK Core Docker image and run two separate containers. One 
 
 ## Update
 
-### Docker live updates are now possible with [CLI](https://docs.ark.io/guidebook/core/cli.html)
+### Docker Live Updates Are Now Possible With [CLI](https://docs.ark.io/guidebook/core/cli.html)
 
 As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 

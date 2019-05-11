@@ -10,7 +10,7 @@ You can download the latest version of the ARK Desktop Wallet from our official 
 
 Just choose the wallet download that matches your operating system.
 
-## Why Is There a Line Through a Cloud Next to my Address?
+## Why Is There a Line Through a Cloud Next to My Address?
 
 Don’t worry about it, it means this account is new to the network. The symbol will disappear once your account has its first interaction with the network.
 
@@ -26,7 +26,7 @@ It means you did not write/copy your passphrase correctly when signing the trans
 
 You can use the offline folders to split-up your funds within a wallet. This allows you to better organize your ARK without paying any fees within the same address. The splitting up of your ARK is local to your computer and not stored on the blockchain.
 
-## When I Open my ARK Desktop Wallet I See an Empty ARK Address Which Should Have ARK Tokens in It.
+## When I Open My ARK Desktop Wallet I See an Empty ARK Address Which Should Have ARK Tokens in It
 
 Most likely you are not connected to the network, make sure the cloud icon in the upper right menu (3rd icon) has a checkmark inside it (meaning connected to network) and does not have line through it (disconnected from ARK network). If it has a line through it, it means either you are not connected to the internet or your firewall maybe blocking your data traffic.
 

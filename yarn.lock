@@ -667,10 +667,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@dated/markdown-title-case@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@dated/markdown-title-case/-/markdown-title-case-0.1.4.tgz#ed6e4df83f8cccdc8805fdfe3f4bdbddb2fb74a1"
-  integrity sha512-bfenom+FFyf2+KVmc5T9KarMTpGnTy0/KDYD3GSJFK8lhN3u7wuUqbyAGCFSNOl2NDXAeVb9jo26C99rhi1yqQ==
+"@dated/markdown-title-case@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@dated/markdown-title-case/-/markdown-title-case-0.1.6.tgz#5533c8cbad8faf7559b36f2ecad23100d8c138c5"
+  integrity sha512-wZPFwgyxmC1lMI53Y1ABnhSGHuotACTsS7FyVzdza700GDcaFO3zhqAQS4dL0d95PAF73dHKamPZWr1O9MZ69A==
   dependencies:
     "@oclif/command" "^1.5.13"
     "@oclif/config" "^1.13.0"

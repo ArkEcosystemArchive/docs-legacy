@@ -29,7 +29,7 @@ In this section we describe the software components of the ARK Ecosystem. We foc
 [_Contribution Guidelines_](/guidebook/contribution-guidelines/) details the process for contributing to ARK Ecosystem software. Reading this section also helps to understand the coding styles and practices that inform development across the Ecosystem.
 [_Guides_](/guidebook/guides/) offers software-specific information on how to develop for ARK Ecosystem. From running your first test suite to submitting pull requests for your code's inclusion into ARK itself, this is the section to read if you're a developer looking to get involved.
 
-### [The ARK Ecosystem tutorials](/tutorials/)
+### [The ARK Ecosystem Tutorials](/tutorials/)
 
 The counterpart to the Guidebook, the tutorials contains practical code snippets and guides to help developers write productive code with the ARK Ecosystem as quickly as possible. We'll always provide context for the code we post here, so you'll have the convenience of copy-and-paste and the knowledge to strike your own path when necessary.
 

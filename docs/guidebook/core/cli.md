@@ -136,7 +136,7 @@ ark config:database
 ```
 
 ::: tip
-Ommitting all flags will start the configuration in an interactive mode.
+Omitting all flags will start the configuration in an interactive mode.
 :::
 
 #### Flags
@@ -168,7 +168,7 @@ ark config:forger
 ```
 
 ::: tip
-Ommitting all flags will start the configuration in an interactive mode.
+Omitting all flags will start the configuration in an interactive mode.
 :::
 
 #### Flags

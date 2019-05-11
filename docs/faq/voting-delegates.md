@@ -16,11 +16,11 @@ The best places to find delegate information are:
 - [ARK forum](https://forum.ark.io/category/5/delegates)
 - [arkdelegates.io](https://arkdelegates.io/)
 
-## Is Voting a Risk for my Wallet?
+## Is Voting a Risk for My Wallet?
 
 No. All you can “lose” is the 1 ARK voting fee. All other ARK tokens will stay in your wallet and you have full control over them. Please do not send tokens to any of the delegates! That will not count as a vote and you might lose your tokens.
 
-## How Can I Change my Vote?
+## How Can I Change My Vote?
 
 You can remove the vote registration from a delegate (unvote). Then it’s best to restart the desktop client and vote for the new delegate of your choice.
 
@@ -30,7 +30,7 @@ Follow our [unvoting guide](/tutorials/usage-guides/how-to-use-ark-desktop-walle
 
 You can only vote for one delegate from one address. If you want to support multiple delegates you will have to create additional addresses and split up your ARK into multiple addresses.
 
-## Do I Have to Re-Vote When I Receive Additional ARK Tokens in my Wallet?
+## Do I Have to Re-Vote When I Receive Additional ARK Tokens in My Wallet?
 
 No. The vote weight will automatically adapt to your wallet balance for every deposit and withdrawal you make from that address.
 
@@ -42,6 +42,6 @@ No. You need to send the ARK to your personal ARK address and vote via the offic
 
 Yes. New address means new vote.
 
-## Do I Need to Keep my Wallet Open After I Vote?
+## Do I Need to Keep My Wallet Open After I Vote?
 
 No. Once you vote it is registered on the blockchain and tied to your specific address. You can open and close the wallet as you please.

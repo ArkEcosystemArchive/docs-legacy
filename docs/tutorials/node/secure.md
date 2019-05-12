@@ -4,11 +4,11 @@ title: "How to Secure Your ARK Node"
 
 # How to Secure Your ARK Node
 
-[[toc]]
-
 When running an ARK node, especially a Delegate Node, you should consider your server's security as your main priority. This guide will walk you through securing your nodes. It is not an exhaustive guide, and highly platform dependent, but it is a good start.
 
 We assume you completed all the steps as outlined in the previous guide: [Setup Your ARK Node]().
+
+[[toc]]
 
 ::: warning
 During this guide, we will configure network and SSH parameters, which if improperly performed might permanently lock you out of your server. Ensure you fully understand each step before proceeding.

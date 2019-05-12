@@ -2,8 +2,6 @@
 title: "How to Setup the Cpp SDK's"
 ---
 
-[[toc]]
-
 # ARK Cpp SDK Setup
 
 ARK IoT features the first crypto SDK's designed to support IoT architecture, enabling novel use-cases on platforms with otherwise constrained resources.

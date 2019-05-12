@@ -161,6 +161,14 @@ Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-co
 ark update
 ```
 
+## Developer Related Information
+
+This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.4:
+
+### 1. Fee Statistics Removed from `node/configuration` Endpoint
+
+The fee statistic are no longer included in the response of the `node/configuration` endpoint. They can be retrieved through a new dedicated endpoint instead, `node/fees`. More information on that endpoint can be found [here](/api/public/v2/node.html#retrieve-the-fee-statistics).
+
 ## Reporting Problems
 
 If you happen to experience any issues please [open an issue](https://github.com/ARKEcosystem/core/issues/new?template=Bug_report.md) with a detailed description of the problem, steps to reproduce it and info about your environment.

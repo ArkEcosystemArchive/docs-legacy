@@ -6,10 +6,10 @@ title: "Google Season of Docs"
 
 ![gsod](./assets/gsod-banner.png)
 
-[[toc]]
-
 The ARK Blockchain Platform is continuously expanding with it's modular Core design and extensive range of peripherals accompanying it. At this stage of development, we feel it would now be the appropriate time to apply for the Google Season of Docs program.
 This initiative will allow aspiring technical writers to hone their skills in the art of technical writing, as well as helping to evaluate and improve our documentation. You will be able to to work tightly with the ARK Team and our large technical community. ARK has always felt a huge amount of pride with our Open Source approach and we feel that participating in Open Source programs such as GSoD is not only important for ARK, but also for the wider Open Source community.
+
+[[toc]]
 
 ## What Is ARK?
 

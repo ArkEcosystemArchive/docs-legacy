@@ -28,9 +28,14 @@ module.exports = [
       '/tutorials/core/plugins/how-to-interact-with-events',
       '/tutorials/core/plugins/how-to-create-http-servers'
     ]
-  },
-  {
-    title: 'Node',
+  }, {
+    title: "Custom transactions",
+    collapsable: false,
+    children: [
+      "/tutorials/core/how-to-write-custom-transactions",
+    ]
+  }, {
+    title: "Node",
     collapsable: false,
     children: [
       '/tutorials/node/setup',

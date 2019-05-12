@@ -1,10 +1,10 @@
 # Understanding Consensus Models
 
-[[toc]]
-
 Consensus is integral to any blockchain, but often quite misunderstood. There are multiple mechanisms in peer-to-peer sharing protocols to maintain a valid, consistent history across different nodes, some more common than others. In this document, we review a wide range of algorithms so you can familiarize yourself with many different kinds of consensus mechanisms.
 
-A consensus protocol defines a way between different actors to determine the `state` of the blockchain so that everyone has exactly the same copy of the blockchain and adds transactions and blocks in exactly the same manner
+A consensus protocol defines a way between different actors to determine the `state` of the blockchain so that everyone has exactly the same copy of the blockchain and adds transactions and blocks in exactly the same manner.
+
+[[toc]]
 
 ## Byzantine Fault Tolerance
 

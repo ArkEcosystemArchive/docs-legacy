@@ -1,7 +1,5 @@
 # IoT (Internet of Things)
 
-[[toc]]
-
 ARK IoT is a growing ecosystem of _"things"_ interoperability that aims to make using IoT and blockchain technology easier.
 
 If you previously wanted to use IoT and Crypto tech in general, you had to try dozens of libraries; wasting countless hours of tweaking and debugging.
@@ -13,6 +11,8 @@ Even if you have the "big picture" in your head, you may not know where to start
 ARK provides the "edge pieces"--or starting point--for your project; so you can spend less time debugging, and more time building.
 
 ARK IoT features the first crypto SDK's designed to support IoT architecture, enabling novel use-cases on platforms with otherwise constrained resources.
+
+[[toc]]
 
 ## Which SDK Supports IoT
 
@@ -32,7 +32,7 @@ The [**Cpp-Client**](https://github.com/ARKEcosystem/cpp-client) SDK help develo
 
 The [**Cpp-Crypto**](https://github.com/ARKEcosystem/cpp-crypto) SDK, by contrast, assist developers in working with transactions: signing, serializing, deserializing, etc.
 
-#"# Currently Supported Boards"
+## Currently Supported Boards
 
 - [Adafruit ESP32 Overview and Setup](/tutorials/iot/boards/esp32-adafruit/)
 - [Adafruit ESP8266 Overview and Setup](/tutorials/iot/boards/esp8266-adafruit/)

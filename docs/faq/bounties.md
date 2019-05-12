@@ -4,9 +4,9 @@ title: "Bounties"
 
 # Bounties
 
-[[toc]]
-
 Thanks for your interest in contributing to the ARK Ecosystem! Please take a moment to review this document **before submitting a pull request**.
+
+[[toc]]
 
 ## Introduction
 

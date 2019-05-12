@@ -4,9 +4,9 @@ title: "How to Write a Core Plugin"
 
 # How to Write a Core Plugin
 
-[[toc]]
-
 In this guide, you will find information to enable you to write a proper ARK Core plugin, for use in your own ARK deployments; both in the case of ARK Core nodes a `BridgeChain` nodes.
+
+[[toc]]
 
 ## Basic Structure & Properties of a Plugin
 

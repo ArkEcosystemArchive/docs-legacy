@@ -61,40 +61,6 @@ GET /api/node/configuration
             },
             "ignoreInvalidSecondSignatureField": false
         },
-        "feeStatistics": [
-            {
-                "type": 0,
-                "fees": {
-                    "minFee": 155,
-                    "maxFee": 10000000,
-                    "avgFee": 3186765
-                }
-            },
-            {
-                "type": 3,
-                "fees": {
-                    "minFee": 156,
-                    "maxFee": 100000000,
-                    "avgFee": 18470653
-                }
-            },
-            {
-                "type": 1,
-                "fees": {
-                    "minFee": 500000000,
-                    "maxFee": 500000000,
-                    "avgFee": 500000000
-                }
-            },
-            {
-                "type": 2,
-                "fees": {
-                    "minFee": 200,
-                    "maxFee": 2500000000,
-                    "avgFee": 127583435
-                }
-            }
-        ],
         "transactionPool": {
             "maxTransactionAge": 21600,
             "dynamicFees": {
@@ -115,6 +81,50 @@ GET /api/node/configuration
             }
         }
     }
+}
+```
+
+## Retrieve the Fee Statistics
+
+Used to access a Node's fee statistics.
+
+### Endpoint
+
+```
+GET /api/node/fees
+```
+
+### Query Parameters
+
+| Name   | Type   | Description                                | Required |
+| :----- | :----: | :----------------------------------------- | :------: |
+| days   | int    | The number of days which will be regarded. |   :x:    |
+
+### Response
+
+```json
+{
+    "meta": {
+        "days": 7
+    },
+    "data": [
+        {
+            "type": "0",
+            "min": "192309",
+            "max": "100000000",
+            "avg": "653891",
+            "sum": "2820887339",
+            "median": "460000"
+        },
+        {
+            "type": "3",
+            "min": "1822918",
+            "max": "73422894",
+            "avg": "59645587",
+            "sum": "715747046",
+            "median": "68488514"
+        }
+    ]
 }
 ```
 

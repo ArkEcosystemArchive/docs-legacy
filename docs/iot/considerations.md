@@ -1,3 +1,7 @@
+---
+title: "Considerations"
+---
+
 # Overview
 
 There are a few considerations that must be understood when developing with **IoT**.

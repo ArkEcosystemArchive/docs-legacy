@@ -16,7 +16,7 @@ Typically, this means that the node you are sending your requests to is out of s
 
 To troubleshoot, ensure you're querying a node that is in sync, and third-party application restrictions are not blocking access. Querying the [explorer](https://explorer.ark.io:8443/api) is usually a good start.
 
-## Why Am I Not Seeing All my Results?
+## Why Am I Not Seeing All My Results?
 
 Most API calls accessing a list of resources (e.g., blocks and transactions) support pagination. If you're making requests and receiving an incomplete set of results, you're probably only seeing the first page. You'll need to request the remaining pages to get more results.
 

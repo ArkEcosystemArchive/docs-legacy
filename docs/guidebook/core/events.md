@@ -2,11 +2,11 @@
 title: "Events"
 ---
 
-[[toc]]
-
 # Events
 
 Effective integrations in your backend can be achieved using events, similar to how webhooks work. An event emitter will inform you about any events that could require actions to be performed like missing a block, saving you from repeatedly querying the API.
+
+[[toc]]
 
 ## Emitting Events
 

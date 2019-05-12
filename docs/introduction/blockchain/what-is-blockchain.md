@@ -2,12 +2,14 @@
 
 [[toc]]
 
+## Overview
+
 Blockchain talk seems to be everywhere these days. But what is a blockchain? Well, using as many buzzwords as possible, a blockchain is an uncensorable, immutable, decentralized, distributed ledger. Peeling these buzzwords away, one will see that a blockchain is an unalterable database that no one person or entity controls, spread out across multiple points of operation, and anyone can anonymously interact with it and add to it without a central authority controlling or stopping the interaction.
 
 Consider this: What is “The Internet?” In the purest form of the term, the internet refers to a group of interconnected machines that forward packets of information to each other. Things like apps, websites, and message boards are accessible via the internet, but they are not the internet itself. Interestingly, a blockchain does not refer to the computers or machines that participate in the blockchain. A blockchain refers to the ledger itself, in simplest terms, a giant file that is identical and unalterable across all machines that store it. The file contains the entire history of interactions among the blockchain users. This “file” is referred to as the blockchain.
 Moreover, there will very likely never come a day where the general public refers to “The Blockchain” as a singular entity as we do with “The Internet.” At the very least, not accurately. There are already thousands of blockchains out there with more coming to existence every day, and all these blockchains are tailored to specific uses. One may be for music streaming, one for file storage, one for finance, one for asset management, and so on. In the future, these blockchains will be able to communicate with one another similar to how websites talk to one another today. However, to say that you are storing some money on “The Blockchain” and uploading a song to “The Blockchain” and signing a land contract on “The Blockchain” will probably be a misnomer, as you will likely be interacting with many different blockchains without even knowing it.
 
-### Deconstructing Blockchains
+## Deconstructing Blockchains
 
 Blockchains come in many different types and flavors. They all utilize some form of the following concepts:
 
@@ -34,7 +36,7 @@ It should be mentioned here, that in the ARK Ecosystem mainnet, voting for a del
 
 **Signatures.** When a wallet wants to submit data to be added to the blockchain, the wallet cryptographically combines the public and private keys along with blockchain data to create a signature. This signature is used by the network to validate the origin and authenticity of a transaction. In most blockchain architectures, signatures are public, but no information about the private key can be gleaned from the signature itself. However, anyone can use the public key to determine the “correctness” of the signature.
 
-### Conclusion
+## Conclusion
 
 Let us put it all together in the context of a blockchain that transfers value.
 

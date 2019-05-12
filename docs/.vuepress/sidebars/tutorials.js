@@ -29,13 +29,13 @@ module.exports = [
       '/tutorials/core/plugins/how-to-create-http-servers'
     ]
   }, {
-    title: "Custom transactions",
+    title: 'Custom transactions',
     collapsable: false,
     children: [
-      "/tutorials/core/how-to-write-custom-transactions",
+      '/tutorials/core/how-to-write-custom-transactions'
     ]
   }, {
-    title: "Node",
+    title: 'Node',
     collapsable: false,
     children: [
       '/tutorials/node/setup',

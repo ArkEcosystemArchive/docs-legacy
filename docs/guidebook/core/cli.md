@@ -84,7 +84,7 @@ If you are receiving a message to the effect of `The "..." process has entered a
 
 ## Available Commands
 
-### autocomplete
+### autocomplete <!-- markdown-title-case: skip-line -->
 
 You might be used to tab completion, which the ARK CLI does support. Using this command does not configure autocompletion, but does show you instructions.
 
@@ -856,7 +856,7 @@ ark relay:stop
 ark relay:stop --daemon
 ```
 
-### top
+### top <!-- markdown-title-case: skip-line -->
 
 List all core daemons
 

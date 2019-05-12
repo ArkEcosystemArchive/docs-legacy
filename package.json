@@ -30,7 +30,7 @@
     "titles:fix": "markdown-title-case docs -r --fix"
   },
   "devDependencies": {
-    "@dated/markdown-title-case": "^0.1.6",
+    "@dated/markdown-title-case": "^0.1.7",
     "axios": "^0.18.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",

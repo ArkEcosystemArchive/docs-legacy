@@ -67,7 +67,7 @@ SSH into your new VM using the Public DNS Name and log in with the credentials u
 
 ![Image 5](./assets/setup-with-azure/5.png)
 
-Run the following command (It’s a one-liner, copy and paste the full contents from here or from the **[ARK Azure Github page](https://github.com/ARKEcosystem/ark-azure)**)
+Run the following command (it’s a one-liner, copy and paste the full contents from here or from the [ARK Azure GitHub page](https://github.com/ARKEcosystem/ark-azure))
 
 ```bash
 curl -o- https://raw.githubusercontent.com/ARKEcosystem/ark-azure/master/script/arkdefaultinstall.sh | bash

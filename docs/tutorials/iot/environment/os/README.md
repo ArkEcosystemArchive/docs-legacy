@@ -36,7 +36,7 @@ This setup is geared more towards advanced users; those who already know their w
   - Windows 7 (with .NET Framework 4.5.2), 8.0, 8.1 and 10 (32-bit and 64-bit)
   - Linux (Debian): Ubuntu Desktop 14.04, Debian 7
   - Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 23
-    > src: **https://code.visualstudio.com/docs/supporting/requirements**
+    > Source: [https://code.visualstudio.com/docs/supporting/requirements](https://code.visualstudio.com/docs/supporting/requirements)
 
 > **note:** While these are the minimum VSCode requirements,
 > a more recent computer _**will**_ bring the benefit of faster compile times.
@@ -98,7 +98,7 @@ This is also a fairly straightforward process and installs like pretty much any 
     > All commands below should be executed in Command-line application (Terminal).
     > For macOS and Linux OS - Terminal application, for Windows OS – cmd.exe application.
   - Access to Serial Ports (USB/UART): - Windows Users: Please check that you have correctly installed USB driver from board manufacturer - Linux Users: Please install [99-platformio-udev.rules](https://docs.platformio.org/en/latest/faq.html#faq-udev-rules) - Raspberry Pi users, please read this article [Enable serial port on Raspberry Pi](https://hallard.me/enable-serial-port-on-raspberry-pi/).
-    > src: **https://docs.platformio.org/en/latest/installation.html#system-requirements**
+    > Source: [https://docs.platformio.org/en/latest/installation.html#system-requirements](https://docs.platformio.org/en/latest/installation.html#system-requirements)
 
 There don't seem to be _concrete_ references to system hardware requirements for PlatformIO,
 though your system should probably meet the miminum specs for [VSCode](https://code.visualstudio.com/docs/supporting/requirements).

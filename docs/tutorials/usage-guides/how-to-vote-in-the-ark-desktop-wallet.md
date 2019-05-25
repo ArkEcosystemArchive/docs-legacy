@@ -52,7 +52,7 @@ The final step is to review the transaction information and press the **_Send_**
 
 ![Confirmation window](./assets/how-to-vote-in-the-ark-desktop-wallet/clickonsend.jpg)
 
-That’s it! A message in the lower left corner tells you that the transaction was broadcasted successfully.
+That's it! A message in the lower left corner tells you that the transaction was broadcasted successfully.
 
 ![Voted successfully](./assets/how-to-vote-in-the-ark-desktop-wallet/votedsuccessfully.jpg)
 

@@ -13,7 +13,7 @@ A `transaction` is nothing more than the transfer of data from a sender to a rec
 
 Blockchains built on top of UTXOs will also reference prior outputs (the ownership side of the transaction) to prove that the transaction is valid. Account based blockchains keep track of balances using an account based model and do not require UTXOs. [Bitcoin](https://en.bitcoin.it/wiki/Main_Page) is based on UTXOs while [Ethereum](https://en.wikipedia.org/wiki/Ethereum) uses accounts. ARK also uses an account model, but the address scheme used is actually derived from Bitcoin.
 
-Let’s look over an ARK network transaction step by step so you can see how it works.
+Let's look over an ARK network transaction step by step so you can see how it works.
 
 ![Transactions 1](./assets/understanding-transactions-and-block-propagation/Transactions_01.png)
 

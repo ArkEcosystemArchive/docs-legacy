@@ -43,7 +43,7 @@ sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
 
-3. Add Docker’s official GPG key:
+3. Add Docker's official GPG key:
 
 ```bash
 curl -fsSL https://download.docker.com/linux/$(grep "^ID=" /etc/os-release | cut -d\= -f2)/gpg | sudo apt-key add -

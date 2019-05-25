@@ -1,15 +1,18 @@
 <template>
-    <div>
-        <div ref="request">
-            <slot></slot>
-        </div>
-
-        <button class="action-button" @click="sendRequest">
-            Execute
-        </button>
-
-        <div ref="response"></div>
+  <div>
+    <div ref="request">
+      <slot />
     </div>
+
+    <button
+      class="action-button"
+      @click="sendRequest"
+    >
+      Execute
+    </button>
+
+    <div ref="response" />
+  </div>
 </template>
 
 <script type="text/javascript">
@@ -20,74 +23,76 @@ import curl from '../utils/curl'
 import request from '../utils/request'
 
 export default {
-    name: 'request-example',
-    data() {
-        return {
-            loading: false,
-        }
-    },
-    mounted () {
-        nprogress.configure({
-            showSpinner: false
+  name: 'RequestExample',
+  data () {
+    return {
+      loading: false
+    }
+  },
+  mounted () {
+    nprogress.configure({
+      showSpinner: false
+    })
+  },
+  methods: {
+    sendRequest () {
+      const cmd = this.$refs.request.outerText.trim()
+
+      if (this.loading) {
+        return
+      }
+
+      const options = curl(cmd)
+
+      if (!options) {
+        this.showError('The supplied command is invalid. Please check it and try again.')
+
+        return
+      }
+
+      this.openLoading()
+
+      request(options)
+        .then(data => {
+          this.closeLoading()
+
+          this.renderResponse(data)
+        })
+        .catch(err => {
+          this.closeLoading()
+
+          this.showError(`${err.status} ${err.message}`)
         })
     },
-    methods: {
-        sendRequest() {
-            const cmd = this.$refs.request.outerText.trim()
+    renderResponse (data) {
+      const highlight = require('../utils/highlight')
+      const markdown = require('markdown-it')().set({ highlight })
 
-            if (this.loading) {
-                return
-            }
+      let content = '```json\n'
+      content += JSON.stringify(data, null, 4)
+      content += '\n```'
 
-            const options = curl(cmd)
+      this.$refs.response.innerHTML = markdown.render('## Example Response')
+      this.$refs.response.innerHTML += markdown.render(content)
+    },
+    openLoading () {
+      this.loading = true
 
-            if (!options) {
-                this.showError("The supplied command is invalid. Please check it and try again.")
+      nprogress.start()
+    },
+    closeLoading () {
+      this.loading = false
 
-                return
-            }
-
-            this.openLoading()
-
-            request(options).then(data => {
-                this.closeLoading()
-
-                this.renderResponse(data)
-            }).catch(err => {
-                this.closeLoading()
-
-                this.showError(`${err.status} ${err.message}`)
-            })
-        },
-        renderResponse(data) {
-            const highlight = require('../utils/highlight')
-            const markdown = require('markdown-it')().set({ highlight })
-
-            let content = '```json\n'
-            content += JSON.stringify(data, null, 4)
-            content += '\n```'
-
-            this.$refs.response.innerHTML = markdown.render("## Example Response")
-            this.$refs.response.innerHTML += markdown.render(content)
-        },
-        openLoading() {
-            this.loading = true
-
-            nprogress.start()
-        },
-        closeLoading() {
-            this.loading = false
-
-            nprogress.done()
-        },
-        showError(text) {
-            swal({
-                title: "Yikes!",
-                text,
-                icon: "error",
-                dangerMode: true,
-            })
-        }
+      nprogress.done()
+    },
+    showError (text) {
+      swal({
+        title: 'Yikes!',
+        text,
+        icon: 'error',
+        dangerMode: true
+      })
     }
+  }
 }
 </script>

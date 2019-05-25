@@ -1,11 +1,9 @@
 module.exports = [
   ['/', 'Back to Table of Contents'],
-  ["/iot/", "IoT Home"],
+  ['/iot/', 'IoT Home'],
   {
-    title: "Considerations",
+    title: 'Considerations',
     collapsable: true,
-    children: [
-      "/iot/considerations"
-    ]
+    children: ['/iot/considerations']
   }
-];
+]

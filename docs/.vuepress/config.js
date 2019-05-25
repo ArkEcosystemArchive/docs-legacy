@@ -1,64 +1,64 @@
 const config = {
-  title: "ARK Ecosystem Documentation",
-  description: "The central knowledge hub for all things ARK Ecosystem",
-  plugins: ["tabs"],
+  title: 'ARK Ecosystem Documentation',
+  description: 'The central knowledge hub for all things ARK Ecosystem',
+  plugins: ['tabs'],
   head: [
     [
-      "link",
+      'link',
       {
-        rel: "icon",
-        href: "https://ark.io/images/media-kit/red-corners.png"
+        rel: 'icon',
+        href: 'https://ark.io/images/media-kit/red-corners.png'
       }
     ]
   ],
   themeConfig: {
-    logo: "https://ark.io/images/media-kit/red-corners.png",
-    repo: "ARKEcosystem/docs",
-    repoLabel: "Contribute!",
+    logo: 'https://ark.io/images/media-kit/red-corners.png',
+    repo: 'ARKEcosystem/docs',
+    repoLabel: 'Contribute!',
     editLinks: true,
-    editLinkText: "Help us improve this page!",
-    docsDir: "docs",
+    editLinkText: 'Help us improve this page!',
+    docsDir: 'docs',
     lastUpdated: true,
     activeHeaderLinks: true,
     nav: [
       {
-        text: "Home",
-        link: "/"
+        text: 'Home',
+        link: '/'
       },
       {
-        text: "Exchanges",
-        link: "/exchanges/"
+        text: 'Exchanges',
+        link: '/exchanges/'
       },
       {
-        text: "Public API",
-        link: "/api/public/v2/"
+        text: 'Public API',
+        link: '/api/public/v2/'
       },
       {
-        text: "SDK Overview",
-        link: "/SDK/"
+        text: 'SDK Overview',
+        link: '/SDK/'
       }
     ],
     sidebar: {
-      "/api/json-rpc/": require("./sidebars/api/json-rpc"),
-      "/api/public/": require("./sidebars/api/public"),
-      "/api/": require("./sidebars/api"),
-      "/sdk/": require("./sidebars/sdk"),
-      "/faq/": require("./sidebars/faq"),
-      "/introduction/": require("./sidebars/introduction"),
-      "/tutorials/": require("./sidebars/tutorials"),
-      "/iot/": require("./sidebars/iot"),
-      "/guidebook/": require("./sidebars/guidebook"),
-      "/exchanges/": require("./sidebars/exchanges"),
-      "/releases/": require("./sidebars/releases"),
-      "/security/": require("./sidebars/security"),
-      "/archive/": require("./sidebars/archive"),
-      "/": require("./sidebars/main")
+      '/api/json-rpc/': require('./sidebars/api/json-rpc'),
+      '/api/public/': require('./sidebars/api/public'),
+      '/api/': require('./sidebars/api'),
+      '/sdk/': require('./sidebars/sdk'),
+      '/faq/': require('./sidebars/faq'),
+      '/introduction/': require('./sidebars/introduction'),
+      '/tutorials/': require('./sidebars/tutorials'),
+      '/iot/': require('./sidebars/iot'),
+      '/guidebook/': require('./sidebars/guidebook'),
+      '/exchanges/': require('./sidebars/exchanges'),
+      '/releases/': require('./sidebars/releases'),
+      '/security/': require('./sidebars/security'),
+      '/archive/': require('./sidebars/archive'),
+      '/': require('./sidebars/main')
     }
-    //algolia: {
+    // algolia: {
     //  apiKey: '93e1d829aa41bf2114b9de44dadb4998',
     //  indexName: 'ark'
-    //}
+    // }
   }
-};
+}
 
-module.exports = config;
+module.exports = config

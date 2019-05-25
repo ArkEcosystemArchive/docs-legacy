@@ -1,7 +1,7 @@
 module.exports = [
   ['/api/', 'Back to API Home'],
   {
-    title: "Public API",
+    title: 'Public API',
     collapsable: false,
     children: [
       ['/api/public/', 'Overview'],
@@ -10,7 +10,7 @@ module.exports = [
     ]
   },
   {
-    title: "API 2.0",
+    title: 'API 2.0',
     collapsable: false,
     children: [
       ['/api/public/v2/', 'Getting Started'],
@@ -21,7 +21,7 @@ module.exports = [
       ['/api/public/v2/peers', 'Peers'],
       ['/api/public/v2/transactions', 'Transactions'],
       ['/api/public/v2/votes', 'Votes'],
-      ['/api/public/v2/wallets', 'Wallets'],
+      ['/api/public/v2/wallets', 'Wallets']
     ]
-  },
+  }
 ]

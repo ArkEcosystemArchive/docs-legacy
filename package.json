@@ -24,18 +24,35 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter docs/.vuepress",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter docs/.vuepress --fix",
     "titles": "markdown-title-case docs -r",
     "titles:fix": "markdown-title-case docs -r --fix"
   },
   "devDependencies": {
-    "@dated/markdown-title-case": "^0.1.6",
+    "@dated/markdown-title-case": "^0.1.7",
     "axios": "^0.18.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
     "highlight.js": "^9.13.1",
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
     "nprogress": "^0.2.0",
     "sweetalert": "^2.1.0",
     "vue": "^2.5.21",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^1.0.0-alpha.44",
     "vuepress-plugin-tabs": "^0.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

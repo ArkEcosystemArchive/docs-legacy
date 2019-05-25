@@ -169,7 +169,7 @@ You can see we defined the asset property to have our *businessRegistration* obj
 
 Notice we didn't set up any validation rule for the fee (that we decided to be 5 ARK). This will be done in another file, we will see it in the next sections.
 
-### serialize
+### serialize <!-- markdown-title-case: skip-line -->
 
 The *serialize* method will take the data from the transaction class, and serialize it to a single "buffer" of bytes.
 
@@ -199,7 +199,7 @@ We use *ByteBuffer* to write our bytes, and serialize our two properties by firs
 
 Notice that we serialize only our custom properties, the rest will be done by the core code.
 
-### deserialize
+### deserialize <!-- markdown-title-case: skip-line -->
 
 The *deserialize* method does the opposite transformation: from bytes to setting the class `asset` property to our *businessRegistration* object.
 
@@ -285,7 +285,7 @@ public getConstructor(): Transactions.TransactionConstructor {
 }
 ```
 
-### bootstrap
+### bootstrap <!-- markdown-title-case: skip-line -->
 
 *bootstrap* initializes the wallets from existing *BusinessRegistration* transactions.
 

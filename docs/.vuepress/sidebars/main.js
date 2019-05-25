@@ -1,7 +1,7 @@
 module.exports = [
-  "/",
+  '/',
   {
-    title: "Table of Contents",
+    title: 'Table of Contents',
     collapsable: false,
     children: [
       '/introduction/',
@@ -16,7 +16,7 @@ module.exports = [
       '/security/',
       '/faq/',
       '/glossary/',
-      '/archive/',
+      '/archive/'
     ]
   }
 ]

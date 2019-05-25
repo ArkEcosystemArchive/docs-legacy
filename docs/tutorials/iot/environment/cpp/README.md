@@ -21,7 +21,7 @@ The [**Cpp-Crypto**](https://github.com/ARKEcosystem/cpp-crypto) SDK, by contras
 There are 2 ways to install the Cpp SDK's.
 
 1). Arduino IDE Library Manager.
-2). Github.
+2). GitHub.
 
 ### Arduino IDE Library Manager
 
@@ -62,7 +62,7 @@ Cpp-Crypto uses "micro-ecc" and "ArduinoJson"; use the Arduino Library Manager t
 
 ---
 
-### Github
+### GitHub
 
 **Cpp-Client:**
 
@@ -90,7 +90,7 @@ git clone --branch arduino https://github.com/ARKEcosystem/cpp-crypto.git
 
 #### Dependencies for Arduino
 
-We can download the release packages from Github or use Arduino's Library Manager. The cloned GitHub packages must be placed into our "_~Documents/Arduino/libraries_" directory.
+We can download the release packages from GitHub or use Arduino's Library Manager. The cloned GitHub packages must be placed into our "_~Documents/Arduino/libraries_" directory.
 
 #### Cpp-Client
 

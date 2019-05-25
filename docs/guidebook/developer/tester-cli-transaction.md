@@ -36,7 +36,7 @@ Some parameters are common to all transaction types:
 ```
 
 :::tip
-`--base-url` is the node IP to which you'll be broadcasting (replace that with your own node’s IP, localhost or any other relay node's IP).
+`--base-url` is the node IP to which you'll be broadcasting (replace that with your own node's IP, localhost or any other relay node's IP).
 
 `--passphrase` is the secret for the wallet you wish to send transactions from.
 :::

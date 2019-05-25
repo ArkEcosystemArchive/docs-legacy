@@ -13,7 +13,7 @@ title: "Mobile Wallet"
 [![Latest Version](https://badgen.now.sh/github/release/ARKEcosystem/mobile-wallet)](https://github.com/ARKEcosystem/mobile-wallet/releases/latest)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-ARK's Mobile Wallet is a hybrid application built for both Android and iOS. Created using Ionic framework and ARK’s [TypeScript API](https://github.com/ARKEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
+ARK's Mobile Wallet is a hybrid application built for both Android and iOS. Created using Ionic framework and ARK's [TypeScript API](https://github.com/ARKEcosystem/ark-ts) to interact with the ARK network via your mobile phone, anytime, anywhere (as long as you have an internet connection).
 
 ## Download
 

@@ -108,8 +108,8 @@ It's especially important to register this plugin as this is what the Desktop an
        ...
    }
    ```
-
-3. Save the changes.
+3. If you have a `whitelist` property in the `core-p2p` entry, make sure to remove this too. Starting with v2.4 this property will filter out any peers that don't match the whitelist.
+4. Save the changes.
 
 ### Step 4. Update `core-forger` Configuration
 

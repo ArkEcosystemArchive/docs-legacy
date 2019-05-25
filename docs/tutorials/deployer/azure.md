@@ -48,7 +48,7 @@ Click `Agree`, and `Purchase` to begin deployment. The entire process should tak
 
 ## Connecting to the VM + ARK Deployer
 
-You are welcome to explore your new VM’s Overview by clicking on `Resource Groups` and finding your new group, and the VM inside. There are lots of configuration items here.
+You are welcome to explore your new VM's Overview by clicking on `Resource Groups` and finding your new group, and the VM inside. There are lots of configuration items here.
 
 If you do not remember your Public DNS name or IP address (for SSH), go to: `Resource Groups` > `My-ARK-RG` > `MyUbuntuVM` > `Overview`. This has all the general information you will need.
 
@@ -67,7 +67,7 @@ SSH into your new VM using the Public DNS Name and log in with the credentials u
 
 ![Image 5](./assets/setup-with-azure/5.png)
 
-Run the following command (It’s a one-liner, copy and paste the full contents from here or from the **[ARK Azure Github page](https://github.com/ARKEcosystem/ark-azure)**)
+Run the following command (it's a one-liner, copy and paste the full contents from here or from the [ARK Azure GitHub page](https://github.com/ARKEcosystem/ark-azure))
 
 ```bash
 curl -o- https://raw.githubusercontent.com/ARKEcosystem/ark-azure/master/script/arkdefaultinstall.sh | bash
@@ -103,7 +103,7 @@ If you wish to customize your deployment of ARK within the bounds of ARK Deploye
 
 Within this file, you’re welcome to edit the list of variables on lines 21–31 and personalize them. These variables all align with an optional parameter of ARK Deployer (See GitHub: [optional parameters](https://github.com/ARKEcosystem/ark-deployer#optional-parameters))
 
-You can then run this new version of your script against a new VM, or, you can uninstall the original node/explorer and re-install using the script again. We would recommend just rolling out a new server for ease of use, but that’s your call.
+You can then run this new version of your script against a new VM, or, you can uninstall the original node/explorer and re-install using the script again. We would recommend just rolling out a new server for ease of use, but that's your call.
 
 ## Personalize the Script
 

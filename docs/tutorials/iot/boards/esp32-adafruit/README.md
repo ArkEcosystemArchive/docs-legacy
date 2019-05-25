@@ -217,7 +217,7 @@ These are the specifications for the Adafruit ESP32 Feather board.
 >
 > The ESP32 is a perfect upgrade from the ESP8266 that has been so popular. In comparison, the ESP32 has way more GPIO, plenty of analog inputs, two analog outputs, multiple extra peripherals (like a spare UART), two cores so you don't have to yield to the WiFi manager, much higher-speed processor, etc. etc! We think that as the ESP32 gets traction, we'll see more people move to this chip exclusively, as it is so full-featured.
 >
-> ~ [Adafruit.com](https://www.adafruit.com/product/3405)
+> _Source: [Adafruit.com](https://www.adafruit.com/product/3405)_
 
 - 240 MHz dual core Tensilica LX6 microcontroller with 600 DMIPS
 - Integrated 520 KB SRAM
@@ -307,10 +307,7 @@ These are the specifications for the Adafruit ESP32 Feather board.
   > both are 3.3V logic
 - TX/17 - this is the output from the module
 - 21 - General purpose IO pin #21
-- https://www.adafruit.com/product/3405
-
-> The ESP32 is a perfect upgrade from the ESP8266 that has been so popular. In comparison, the ESP32 has way more GPIO, plenty of analog inputs, two analog outputs, multiple extra peripherals (like a spare UART), two cores so you don't have to yield to the WiFi manager, much higher-speed processor, etc. etc! We think that as the ESP32 gets traction, we'll see more people move to this chip exclusively, as it is so full-featured.
-> <br>src: adafruit.com
+- [https://www.adafruit.com/product/3405](https://www.adafruit.com/product/3405)
 
 </details>
 

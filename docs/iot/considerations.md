@@ -37,15 +37,11 @@ Available memory is potentially one of the biggest concerns when developing for 
 ### Heap Fragmentation
 
 A desktop/server environment can generally handle large objects and operations fairly well.  
-In microprocessor environments, a 50K string, or making lots of copy/new/malloc calls can and will cause a crash.  
-This is due to something known as **Heap Fragmentation**.
+In microprocessor environments, a 50K string, or making lots of copy/new/malloc calls can and will cause a crash. This is due to something known as **Heap Fragmentation**.
 
-<p align="left">
-    <img src="https://cdn-learn.adafruit.com/assets/assets/000/010/296/original/learn_arduino_Stack_Operation.gif" width="400" alt="Heap Fragmentation">
-</p>
+![Heap Fragmentation](./assets/stack_operation.png)
 
-> _src: https://learn.adafruit.com/memories-of-an-arduino/_
-
+> _Source: [https://learn.adafruit.com/memories-of-an-arduino](https://learn.adafruit.com/memories-of-an-arduino)_
 
 ## Dos and Don'ts
 

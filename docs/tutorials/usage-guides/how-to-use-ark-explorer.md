@@ -1,5 +1,5 @@
 ---
-title: "How to Use the ARK Explorer?"
+title: "How to Use the ARK Explorer"
 ---
 
 # How to Use the ARK Explorer on Mobile
@@ -10,7 +10,7 @@ If a blockchain is a highway of transactional records, from the very first to th
 Block explorers can give anyone access to all the information contained within that blockchain. You can search every block that was ever created, see every transaction an address has conducted as well as a snapshot of the status of that network.
 Most blockchains have a block explorer, and ARK is no different; however, we pride ourselves on making all our interfaces intuitive and easy to read for users of any level.
 
-Let’s begin our journey into the ARK explorer.
+Let's begin our journey into the ARK explorer.
 
 ![MOBILE BLOCK EXPLORER Overview](./assets/how-to-use-the-ark-explorer/MobileBlockExplorerOverview.png)
 
@@ -94,7 +94,7 @@ The delegate monitor shows two tabs: **"Active"** and **"Standby"**.
 
 ![Delegate Overview](./assets/how-to-use-the-ark-explorer/DELEGATEOVERVIEW.png)
 
-If you click on a delegate’s username, you will be taken to the delegate's wallet address page and see the following information:
+If you click on a delegate's username, you will be taken to the delegate's wallet address page and see the following information:
 
 - **Balance:** Total amount of ARK in the delegate's wallet.
 

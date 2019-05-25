@@ -22,7 +22,7 @@ Most noticeable for end users is the addition of dynamic fees enabling delegates
 
 ### Plugin System 
 
-ARK is the first blockchain protocol released that allows you to quickly develop customized modules or plugins, to leverage the power of blockchain. The majority of ARK’s processes have been decoupled, modularized and developed as plugins. Only a few lines of code are required to add or remove new plugins to the system. Our goal of developing the ‘WordPress of blockchains’ has been realized. You can now develop your plugins and easily include them into your blockchain.
+ARK is the first blockchain protocol released that allows you to quickly develop customized modules or plugins, to leverage the power of blockchain. The majority of ARK's processes have been decoupled, modularized and developed as plugins. Only a few lines of code are required to add or remove new plugins to the system. Our goal of developing the ‘WordPress of blockchains' has been realized. You can now develop your plugins and easily include them into your blockchain.
 
 ### Increased TPS (Transactions per Second) and TPB (Transactions per Block)
 
@@ -30,7 +30,7 @@ Transactions that can be included in a single block are increased from 50 to 150
 
 ### New API 
 
-A much more powerful API provides additional endpoints, is much more stable and follows the latest API standards, giving developers more options to get necessary information and interact with ARK’s blockchain.
+A much more powerful API provides additional endpoints, is much more stable and follows the latest API standards, giving developers more options to get necessary information and interact with ARK's blockchain.
 
 ### Webhook Support 
 

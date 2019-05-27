@@ -76,7 +76,7 @@ Other prefixes are up to your discretion. Suggested prefixes are `docs`, `chore`
 
 ### Scope
 
-The scope could be anything specifying the place of the commit change. For example `core`, `compiler`, `ssr`, `v-model`, `transition` etc...
+The scope could be anything specifying the place of the commit change. For example `core`, `profile`, `crypto`, `database` etc...
 
 ### Subject
 

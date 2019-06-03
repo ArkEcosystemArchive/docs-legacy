@@ -108,6 +108,7 @@ It's especially important to register this plugin as this is what the Desktop an
        ...
    }
    ```
+
 3. If you have a `whitelist` property in the `core-p2p` entry, make sure to remove this too. Starting with v2.4 this property will filter out any peers that don't match the whitelist.
 4. Save the changes.
 
@@ -147,13 +148,27 @@ It's especially important to register this plugin as this is what the Desktop an
 
 3. Save the changes.
 
-### Step 5. Running the Update Command via the `ark` CLI
+### Step 5. Update `core-json-rpc` to `core-exchange-json-rpc`
+
+::: warning
+This only applies if you have the JSON-RPC registered in your `plugins.js` file, otherwise skip this section.
+:::
+
+```sh
+sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/.env
+sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/.env
+sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/plugins.js
+sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/plugins.js
+sed -i 's/core-json-rpc/core-exchange-json-rpc/g' ~/.config/ark-core/<network>/plugins.js
+```
+
+### Step 6. Running the Update Command via the `ark` CLI
 
 ::: warning
 Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 :::
 
-Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package), [Step 3](#step-3-update-core-p2p-configuration) and [Step 4](#step-4-update-core-forger-configuration) were successfully completed before running the `ark update` command via the cli.
+Make sure that [Step 1](#step-1-add-core-state-package), [Step 2](#step-2-add-core-wallet-api-package), [Step 3](#step-3-update-core-p2p-configuration), [Step 4](#step-4-update-core-forger-configuration) and [Step 5](#step-5-update-core-json-rpc-to-core-exchange-json-rpc) were successfully completed before running the `ark update` command via the cli.
 
 **To update to v2.4 run the following command:**
 

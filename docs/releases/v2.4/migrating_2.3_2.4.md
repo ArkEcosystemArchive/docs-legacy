@@ -18,7 +18,7 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 
 ### Step 1. Add `core-state` Package
 
-1. Open `~/.config/ark-core/<network>/plugins.js`
+1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-database-postgres` entry.
 3. Add this package addition line before it (see below):
 
@@ -46,7 +46,7 @@ Be sure to complete all of the following steps before you continue to upgrade wi
 It's especially important to register this plugin as this is what the Desktop and Mobile wallet will use to communicate with nodes.
 :::
 
-1. Open `~/.config/ark-core/<network>/plugins.js`
+1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-blockchain` entry.
 3. Add this package addition line after it (see below):
 
@@ -79,7 +79,7 @@ It's especially important to register this plugin as this is what the Desktop an
 
 ### Step 3. Update `core-p2p` Configuration
 
-1. Open `~/.config/ark-core/<network>/plugins.js`
+1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-p2p` entry and replace the block like shown below.
 
    **Old**
@@ -114,7 +114,7 @@ It's especially important to register this plugin as this is what the Desktop an
 
 ### Step 4. Update `core-forger` Configuration
 
-1. Open `~/.config/ark-core/<network>/plugins.js`
+1. Open `~/.config/ark-core/mainnet/plugins.js`
 2. Locate the `@arkecosystem/core-forger` entry and replace the block like shown below.
 
    **Old**

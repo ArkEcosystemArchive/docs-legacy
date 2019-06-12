@@ -155,11 +155,11 @@ This only applies if you have the JSON-RPC registered in your `plugins.js` file,
 :::
 
 ```sh
-sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/.env
-sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/.env
-sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/plugins.js
-sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/<network>/plugins.js
-sed -i 's/core-json-rpc/core-exchange-json-rpc/g' ~/.config/ark-core/<network>/plugins.js
+sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/mainnet/.env
+sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/mainnet/.env
+sed -i 's/CORE_JSONRPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/mainnet/plugins.js
+sed -i 's/CORE_JSON_RPC/CORE_EXCHANGE_JSON_RPC/g' ~/.config/ark-core/mainnet/plugins.js
+sed -i 's/core-json-rpc/core-exchange-json-rpc/g' ~/.config/ark-core/mainnet/plugins.js
 ```
 
 ### Step 6. Running the Update Command via the `ark` CLI

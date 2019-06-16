@@ -23,7 +23,7 @@ The [_ARK_](/docs/introduction/ark/) section highlights the philosophy behind th
 
 ### [The ARK Ecosystem Guidebook](/docs/guidebook/)
 
-In this section we describe the software components of the ARK Ecosystem. We focus in particular on ARK Core: the codebase powering the nodes that, in turn, power the ARK network.
+In this section, we describe the software components of the ARK Ecosystem. We focus in particular on ARK Core: the codebase powering the nodes that, in turn, power the ARK network.
 
 [_Core_](/docs/guidebook/core/) describes the architecture of ARK Core. At present, the documentation focuses on the packages that allow for easy application and blockchain customization.
 [_Contribution Guidelines_](/docs/guidebook/contribution-guidelines/) details the process for contributing to ARK Ecosystem software. Reading this section also helps to understand the coding styles and practices that inform development across the Ecosystem.
@@ -31,7 +31,7 @@ In this section we describe the software components of the ARK Ecosystem. We foc
 
 ### [The ARK Ecosystem Tutorials](/docs/tutorials/)
 
-The counterpart to the Guidebook, the tutorials contains practical code snippets and guides to help developers write productive code with the ARK Ecosystem as quickly as possible. We'll always provide context for the code we post here, so you'll have the convenience of copy-and-paste and the knowledge to strike your own path when necessary.
+The counterpart to the Guidebook, the tutorials contain practical code snippets and guides to help developers write productive code with the ARK Ecosystem as quickly as possible. We'll always provide context for the code we post here, so you'll have the convenience of copy-and-paste and the knowledge to strike your own path when necessary.
 
 [_Usage Guides_](/docs/tutorials/usage-guides/) describe how to use the various ARK packages, including:
 

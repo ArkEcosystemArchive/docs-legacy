@@ -22,6 +22,12 @@ POST /api/transactions
 | :----------- | :---: | :---------------------------------- | :----------------: |
 | transactions | array | The list of transactions to create. | :white_check_mark: |
 
+### Examples
+
+```sh
+curl --header 'API-Version: 2' --header "Content-type: application/json" --data '{"transactions":[{"id":"14e7ee53a8897cb352ecc371f2aeea865228ef14add45e750b1ed4e2b1db2043","signature":"304402200e5c92338ee7e0faf9510b51bb941d7d02fe0407518493b35be8def4b2b01da102204923ad3d7021075d5086ff76e220b8e0d13877522526967c18eeba063018166f","timestamp":70651828,"version":1,"type":0,"fee":"10000000","senderPublicKey":"033e6e27afd6336946b21a3f4fc1a03205a9a561fbd982ce38e6dfd771c983e70c","amount":"1","recipientId":"DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq","expiration":0}]}' 'https://api.ark.io/api/transactions'
+```
+
 ### Response
 
 ```json
@@ -59,6 +65,12 @@ GET /api/transactions/{id}
 | Name |  Type  | Description                                        |      Required      |
 | :--- | :----: | :------------------------------------------------- | :----------------: |
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions/b618cb6add488140e89079ff05c5d7eb803a581a1de5ccd8ba09a5a554e3af80
+```
 
 ### Response
 
@@ -102,6 +114,12 @@ GET /api/transactions
 | type    | int  | The transaction type to be retrieved.         |   :x:    |
 | blockId | int  | The block id to be retrieved.                 |   :x:    |
 | id      | int  | The transaction id to be retrieved.           |   :x:    |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions?limit=1
+```
 
 ### Response
 
@@ -156,6 +174,12 @@ GET /api/transactions/unconfirmed/
 | :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions/unconfirmed
+```
 
 ### Response
 
@@ -277,6 +301,12 @@ GET /api/transactions/unconfirmed/{id}
 | :--- | :----: | :------------------------------------------------- | :----------------: |
 | id   | string | The identifier of the transaction to be retrieved. | :white_check_mark: |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions/unconfirmed/5685946299c426f68c6a6f007059e8f5f015538575b5ef05584963b5837b4c5d
+```
+
 ### Response
 
 ```json
@@ -342,6 +372,12 @@ POST /api/transactions/search
 | fee.from        |  int   | ...         |   :x:    |
 | fee.to          |  int   | ...         |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" --data 'amount={ "from": 1000000000000, "to": 20000000000000 }' https://api.ark.io/api/transactions/search
+```
+
 ### Response
 
 ```json
@@ -389,6 +425,12 @@ The transaction types are network specific. ARK currently supports eight differe
 GET /api/transactions/types
 ```
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions/types
+```
+
 ### Response
 
 ```json
@@ -415,6 +457,12 @@ The static transaction fees are significantly higher than the dynamic transactio
 
 ```
 GET /api/transactions/fees
+```
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions/fees
 ```
 
 ### Response

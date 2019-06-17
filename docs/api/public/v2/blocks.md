@@ -37,20 +37,20 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?limit=2
 {
     "meta": {
         "count": 2,
-        "pageCount": 3927594,
-        "totalCount": 7855187,
+        "pageCount": 4412706,
+        "totalCount": 8825411,
         "next": "/api/v2/blocks?limit=2&page=2",
         "previous": null,
         "self": "/api/v2/blocks?limit=2&page=1",
         "first": "/api/v2/blocks?limit=2&page=1",
-        "last": "/api/v2/blocks?limit=2&page=3927594"
+        "last": "/api/v2/blocks?limit=2&page=4412706"
     },
     "data": [
         {
-            "id": "10598610037719670879",
+            "id": "b711bbdad2340c0926ff230b423db1e37264f7380fd7a28174c20e53fab84314",
             "version": 0,
-            "height": 7813396,
-            "previous": "8441333128785068929",
+            "height": 8691127,
+            "previous": "d908c1a22fdbd6764051e7b9c0d52b2028a4d0bee425492f6c8598b9f31e4107",
             "forged": {
                 "reward": 200000000,
                 "fee": 0,
@@ -62,23 +62,24 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?limit=2
                 "length": 0
             },
             "generator": {
-                "username": "arkworld",
-                "address": "AeaqhUKfBtVqNhtMct3piBiWfdhbRwbg4W",
-                "publicKey": "0257581c82d1931c4b0b2df9d658ecd303fcf2a6ea4ec291669ed06f44fb75c8fe"
+                "username": "rising_sun",
+                "address": "AJ1eWcCz8xnq1ZZxSunVBpe8r6kZcqWbCq",
+                "publicKey": "03f25207238ef72cc3a0482af05a5296996da80c92dd0c1eb80e911281eedaf237"
             },
-            "signature": "30450221009ae77d6b1c3c0e1a7efa488b2f1448f0ec1160650d836014cb739a645586f42902207e426224159252497b335e57da65c1352a6164a897bec350ad175eedf55d779a",
+            "signature": "3044022065400e57e8061b45b1b5145a02b9848b6b13d033a737cc5efd24ebc663a930ff0220316b82b9376c1ddf7162524035d1977ba9d8b3879ef102fb6a507efb2946bb80",
+            "confirmations": 0,
             "transactions": 0,
             "timestamp": {
-                "epoch": 63574994,
-                "unix": 1553676194,
-                "human": "2019-03-27T08:43:14.000Z"
+                "epoch": 70647184,
+                "unix": 1560748384,
+                "human": "2019-06-17T05:13:04.000Z"
             }
         },
         {
-            "id": "8441333128785068929",
+            "id": "d908c1a22fdbd6764051e7b9c0d52b2028a4d0bee425492f6c8598b9f31e4107",
             "version": 0,
-            "height": 7813395,
-            "previous": "7893686533852805129",
+            "height": 8691126,
+            "previous": "24ab4b7914a0dbaf4c0c8ed7aa25315670b189084d67a692fbce33940b757d52",
             "forged": {
                 "reward": 200000000,
                 "fee": 0,
@@ -90,16 +91,17 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?limit=2
                 "length": 0
             },
             "generator": {
-                "username": "bioly",
-                "address": "AbUdMhk96FbzxH7vDYAwdyqUELmLopZV5x",
-                "publicKey": "02c0b645f19ab304d25aae3add139edd9f6ca9fd0d98e57a808100de0e93832181"
+                "username": "tibonos",
+                "address": "AMdPL5Br3nsWyJB4LCB5qZ9cYnKBdVXKJi",
+                "publicKey": "02bd74ba354e4533cbbb0d03076622c15917e2e1d65fe4c4c8294d6b4c57d667b4"
             },
-            "signature": "3045022100ae93480145a56c3122a93d92c5504635a3cd86eead21bb6b75501b6e370e734c0220490ef1518ed4d70469868621bc41f33c0031953643ac64bde28e7dc4b55bf2ff",
+            "signature": "3045022100bdc1d4ea68e73a1c674c78ede7da849d741165b67243c9911b33aca775b8472402201817932308b356a70dbef5412aa6783c8e9f87e2fe4565c2279f8e5df6c49e6a",
+            "confirmations": 1,
             "transactions": 0,
             "timestamp": {
-                "epoch": 63574986,
-                "unix": 1553676186,
-                "human": "2019-03-27T08:43:06.000Z"
+                "epoch": 70647176,
+                "unix": 1560748376,
+                "human": "2019-06-17T05:12:56.000Z"
             }
         }
     ]
@@ -114,13 +116,13 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?height=7000042
 {
     "meta": {
         "count": 1,
-        "pageCount": 1,
-        "totalCount": 1,
-        "next": null,
+        "pageCount": 2,
+        "totalCount": 101,
+        "next": "/api/v2/blocks?height=7000042&page=2&limit=100",
         "previous": null,
         "self": "/api/v2/blocks?height=7000042&page=1&limit=100",
         "first": "/api/v2/blocks?height=7000042&page=1&limit=100",
-        "last": "/api/v2/blocks?height=7000042&page=1&limit=100"
+        "last": "/api/v2/blocks?height=7000042&page=2&limit=100"
     },
     "data": [
         {
@@ -144,6 +146,7 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?height=7000042
                 "publicKey": "0257581c82d1931c4b0b2df9d658ecd303fcf2a6ea4ec291669ed06f44fb75c8fe"
             },
             "signature": "3045022100f564e103c7474d2f7af5782544664f7188a5aa4e7c5829a63b15a2094a9480ae022049d18c5455dddcb5838fcac42be2d55f870ff18dd17aee3cab643f067544fcdd",
+            "confirmations": 1691087,
             "transactions": 0,
             "timestamp": {
                 "epoch": 57039818,
@@ -206,6 +209,7 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks/7000042
             "publicKey": "0257581c82d1931c4b0b2df9d658ecd303fcf2a6ea4ec291669ed06f44fb75c8fe"
         },
         "signature": "3045022100f564e103c7474d2f7af5782544664f7188a5aa4e7c5829a63b15a2094a9480ae022049d18c5455dddcb5838fcac42be2d55f870ff18dd17aee3cab643f067544fcdd",
+        "confirmations": 1691090,
         "transactions": 0,
         "timestamp": {
             "epoch": 57039818,
@@ -249,13 +253,13 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks/1207994422066799667
 {
     "meta": {
         "count": 2,
-        "pageCount": 1,
-        "totalCount": 2,
-        "next": null,
+        "pageCount": 2,
+        "totalCount": 102,
+        "next": "/api/v2/blocks/12079944220667996670/transactions?page=2&limit=100",
         "previous": null,
         "self": "/api/v2/blocks/12079944220667996670/transactions?page=1&limit=100",
         "first": "/api/v2/blocks/12079944220667996670/transactions?page=1&limit=100",
-        "last": "/api/v2/blocks/12079944220667996670/transactions?page=1&limit=100"
+        "last": "/api/v2/blocks/12079944220667996670/transactions?page=2&limit=100"
     },
     "data": [
         {
@@ -266,15 +270,16 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks/1207994422066799667
             "amount": 100059429,
             "fee": 816000,
             "sender": "AKATy581uXWrbm8B4DTQh4R9RbqaWRiKRY",
+            "senderPublicKey": "0232b96d57ac27f9a99242bc886e433baa89f596d435153c9dae47222c0d1cecc3",
             "recipient": "AKp7Bu9Nzpq3idcatrLmjsS76E6WkZ2Q2a",
             "signature": "3045022100f9af677be546ec1645fe16f057bff7e06d9410ada259960d1e89fd9cc940221a022052023db0f829d13e43f614a1dab9b07559faa15e2e571494eaf9cf93813ea7f1",
             "signSignature": "3044022067d039dcda866eb89803c9c649308db755aec1d2f7d0894436c6a06511033daf0220348a50856be0902066f8686a78c667cf5c64c504124ed1576d8aa8b029649700",
             "vendorField": "Payout from arkmoon",
-            "confirmations": 356,
+            "confirmations": 877904,
             "timestamp": {
-                "epoch": 63573682,
-                "unix": 1553674882,
-                "human": "2019-03-27T08:21:22.000Z"
+                "epoch": 63573384,
+                "unix": 1553674584,
+                "human": "2019-03-27T08:16:24.000Z"
             }
         },
         {
@@ -285,13 +290,14 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks/1207994422066799667
             "amount": 188600000,
             "fee": 10000000,
             "sender": "AUexKjGtgsSpVzPLs6jNMM6vJ6znEVTQWK",
+            "senderPublicKey": "02ff171adaef486b7db9fc160b28433d20cf43163d56fd28fee72145f0d5219a4b",
             "recipient": "AFvsCDPsYYUSSqmnAT7bomdAwPrdq7vDHp",
             "signature": "30440220438bb7293731cbfb62e2229590b64bc9858879d47a34caf88b29eed7761864fc022042fb49ceb25ba7982cbdde6cf544a20a893ceed2378be0564c3405e52cd33d11",
-            "confirmations": 356,
+            "confirmations": 877904,
             "timestamp": {
-                "epoch": 63573682,
-                "unix": 1553674882,
-                "human": "2019-03-27T08:21:22.000Z"
+                "epoch": 63573683,
+                "unix": 1553674883,
+                "human": "2019-03-27T08:21:23.000Z"
             }
         }
     ]
@@ -357,69 +363,71 @@ curl --header "API-Version: 2" --data 'numberOfTransactions={ "from": 100, "to":
 {
     "meta": {
         "count": 2,
-        "pageCount": 4,
-        "totalCount": 7,
+        "pageCount": 219,
+        "totalCount": 437,
         "next": "/api/v2/blocks/search?limit=2&page=2",
         "previous": null,
         "self": "/api/v2/blocks/search?limit=2&page=1",
         "first": "/api/v2/blocks/search?limit=2&page=1",
-        "last": "/api/v2/blocks/search?limit=2&page=4"
+        "last": "/api/v2/blocks/search?limit=2&page=219"
     },
     "data": [
         {
-            "id": "884117316712991715",
+            "id": "07f8047a302fb2e35635d48c453f2b044a92172bd9353f00483d59736765812d",
             "version": 0,
-            "height": 7812000,
-            "previous": "11133306790169853761",
+            "height": 8685636,
+            "previous": "c1727a42f8b8f454c9b73b3f2508fd04d5feb38fcacaddcdcdb2f52fdabb0be5",
             "forged": {
                 "reward": 200000000,
-                "fee": 46920000,
-                "total": 246920000,
-                "amount": 414375753
+                "fee": 312000000,
+                "total": 512000000,
+                "amount": 41915645699
             },
             "payload": {
-                "hash": "65b32bc2792f1c84613027503bc4534febeadce4e45612357086a46233a2199d",
-                "length": 3264
+                "hash": "a9bf4a7ed669d4c02cc98b0540953a52fb30aaba8d1a4ef52686008a0ebcebb2",
+                "length": 3328
             },
             "generator": {
-                "username": "geops",
-                "address": "AU1TGCYoWzBnGMyMK9GTS8BG6EFbgc5xxC",
-                "publicKey": "02bf72c578a12c35a97ca1230b93017161ee42c3f0ab82f6fe7c95b3b43561a076"
+                "username": "arkworld",
+                "address": "AeaqhUKfBtVqNhtMct3piBiWfdhbRwbg4W",
+                "publicKey": "0257581c82d1931c4b0b2df9d658ecd303fcf2a6ea4ec291669ed06f44fb75c8fe"
             },
-            "signature": "3044022007082f2d025c49a1daf30f8461daf0cca0fad3a67c1e0369d9438687670fbbd5022028e9cbaadc5a33c55111cf98aad23697c4618e38fa178cc8163bf8275b41632c",
-            "transactions": 102,
+            "signature": "30440220646552049201204efc86874ec777e125e0e7b47f44894bc700af35e2362ce7e602200f1b13a76b4ee4b8c6a127d14dcc05afef00164cb41d811ac7818f45e6357452",
+            "confirmations": 5564,
+            "transactions": 104,
             "timestamp": {
-                "epoch": 63563826,
-                "unix": 1553665026,
-                "human": "2019-03-27T05:37:06.000Z"
+                "epoch": 70603216,
+                "unix": 1560704416,
+                "human": "2019-06-16T17:00:16.000Z"
             }
         },
         {
-            "id": "14707858435494505009",
+            "id": "ce7653769bee47e1bf9a68bfc7c5cd74186fb9745e04719581ba5559dbd7fc0e",
             "version": 0,
-            "height": 7806541,
-            "previous": "10644622929675679656",
+            "height": 8684282,
+            "previous": "e02a02f1e51be05b1f527b6ff6ab6fdb5cc3151effe1d5370105c7a6b1f172c1",
             "forged": {
                 "reward": 200000000,
-                "fee": 112845000,
-                "total": 312845000,
-                "amount": 296221771579
+                "fee": 27664,
+                "total": 200027664,
+                "amount": 42199100226
             },
             "payload": {
-                "hash": "9ffe089a0058c1a28f0b54643fcee66c8a8cce1c1b60253951e81170c80610ca",
-                "length": 3360
+                "hash": "b341b8f941b06bd568aa8ae7bb3fffafd23fa49d18be2572fa5e103cc42c3a95",
+                "length": 3328
             },
             "generator": {
-                "username": "cams_yellow_jacket",
-                "address": "AGvhBGb4cCZnP2wUo1oCSi83LUtGDG7Y6X",
-                "publicKey": "02902de3fcb257e9248e2ae668d2e314027f0ca05c1eb21e1c5817c7580014669f"
+                "username": "cryptology",
+                "address": "Aa74QyqAFBsevReox3rMWy6FhMUyJVGPop",
+                "publicKey": "03364c62f7c5a7948dcaacdc72bac595e8f6e79944e722d05c8346d68aa1331b4a"
             },
-            "signature": "30440220715fdf928549266485e4a61bf1468d4a1fe1c6d4b9d452379ad8da742e58244b022059a9f586a2fc07521fa45bdf6dd122dc78cf594174c445648b254f4c3ef4fc29",
-            "transactions": 105,
+            "signature": "3045022100aa42be64786ad19e9e4e09911a463398a2f41fda8aa4bbe0e59f07e09eb060db02205b15e3b6207dc844b6f69c98eaf970c6969485d6d85d9411c81da9288161ca33",
+            "confirmations": 6918,
+            "transactions": 104,
             "timestamp": {
-                "epoch": 63520130,
-                "unix": 1553621330,
-                "human": "2019-03-26T17:28:50.000Z"
+                "epoch": 70592360,
+                "unix": 1560693560,
+                "human": "2019-06-16T13:59:20.000Z"
             }
         }
     ]

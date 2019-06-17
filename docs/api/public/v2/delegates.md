@@ -35,48 +35,46 @@ curl --header "API-Version: 2" https://api.ark.io/api/delegates
 
 ```json
 {
-  "meta": {
-    "count": 100,
-    "pageCount": 11,
-    "totalCount": 1022,
-    "next": "/api/v2/delegates?page=2&limit=100",
-    "previous": null,
-    "self": "/api/v2/delegates?page=1&limit=100",
-    "first": "/api/v2/delegates?page=1&limit=100",
-    "last": "/api/v2/delegates?page=11&limit=100"
-  },
-  "data": [
-    {
-      "username": "biz_classic",
-      "address": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
-      "publicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
-      "votes": 290192277300775,
-      "rank": 1,
-      "blocks": {
-        "produced": 137929,
-        "missed": 294,
-        "last": {
-          "id": "4969352721420908242",
-          "height": 8051390,
-          "timestamp": {
-            "epoch": 65479992,
-            "unix": 1555581192,
-            "human": "2019-04-18T09:53:12.000Z"
-          }
-        }
-      },
-      "production": {
-        "approval": 2.27,
-        "productivity": 99.79
-      },
-      "forged": {
-        "fees": 1173040419815,
-        "rewards": 27585800000000,
-        "total": 28758840419815
-      }
+    "meta": {
+        "count": 100,
+        "pageCount": 11,
+        "totalCount": 1038,
+        "next": "/api/v2/delegates?page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/delegates?page=1&limit=100",
+        "first": "/api/v2/delegates?page=1&limit=100",
+        "last": "/api/v2/delegates?page=11&limit=100"
     },
-    ...
-  ]
+    "data": [
+        {
+            "username": "biz_classic",
+            "address": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "publicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "votes": 296139495328751,
+            "rank": 1,
+            "blocks": {
+                "produced": 150581,
+                "last": {
+                    "id": "65fa7472f8977d48509ff9f721d815679b5d53236b218248b87233a59cf2ff61",
+                    "height": 8691202,
+                    "timestamp": {
+                        "epoch": 70647784,
+                        "unix": 1560748984,
+                        "human": "2019-06-17T05:23:04.000Z"
+                    }
+                }
+            },
+            "production": {
+                "approval": 2.35
+            },
+            "forged": {
+                "fees": 1173040419815,
+                "rewards": 30116200000000,
+                "total": 31289240419815
+            }
+        },
+        ...
+    ]
 }
 ```
 
@@ -86,76 +84,72 @@ curl --header "API-Version: 2" "https://api.ark.io/api/delegates?page=5&limit=2"
 
 ```json
 {
-  "meta": {
-    "count": 2,
-    "pageCount": 511,
-    "totalCount": 1022,
-    "next": "/api/v2/delegates?page=6&limit=2",
-    "previous": "/api/v2/delegates?page=4&limit=2",
-    "self": "/api/v2/delegates?page=5&limit=2",
-    "first": "/api/v2/delegates?page=1&limit=2",
-    "last": "/api/v2/delegates?page=511&limit=2"
-  },
-  "data": [
-    {
-      "username": "goose",
-      "address": "ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ",
-      "publicKey": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c",
-      "votes": 171643014160739,
-      "rank": 9,
-      "blocks": {
-        "produced": 119844,
-        "missed": 337,
-        "last": {
-          "id": "4941983238011713644",
-          "height": 8051380,
-          "timestamp": {
-            "epoch": 65479914,
-            "unix": 1555581114,
-            "human": "2019-04-18T09:51:54.000Z"
-          }
-        }
-      },
-      "production": {
-        "approval": 1.34,
-        "productivity": 99.72
-      },
-      "forged": {
-        "fees": 846370414394,
-        "rewards": 23968800000000,
-        "total": 24815170414394
-      }
+    "meta": {
+        "count": 2,
+        "pageCount": 519,
+        "totalCount": 1038,
+        "next": "/api/v2/delegates?page=6&limit=2",
+        "previous": "/api/v2/delegates?page=4&limit=2",
+        "self": "/api/v2/delegates?page=5&limit=2",
+        "first": "/api/v2/delegates?page=1&limit=2",
+        "last": "/api/v2/delegates?page=519&limit=2"
     },
-    {
-      "username": "biz_private",
-      "address": "AaAy8BZkjV86YN7xUtZ35iwyXRMQKtKoAy",
-      "publicKey": "02fa6902e91e127d6d3410f6abc271a79ae24029079caa0db5819757e3c1c1c5a4",
-      "votes": 168585645882892,
-      "rank": 10,
-      "blocks": {
-        "produced": 111777,
-        "missed": 368,
-        "last": {
-          "id": "9030517911522129229",
-          "height": 8051409,
-          "timestamp": {
-            "epoch": 65480144,
-            "unix": 1555581344,
-            "human": "2019-04-18T09:55:44.000Z"
-          }
+    "data": [
+        {
+            "username": "biz_private",
+            "address": "AaAy8BZkjV86YN7xUtZ35iwyXRMQKtKoAy",
+            "publicKey": "02fa6902e91e127d6d3410f6abc271a79ae24029079caa0db5819757e3c1c1c5a4",
+            "votes": 169224664359522,
+            "rank": 9,
+            "blocks": {
+                "produced": 124439,
+                "last": {
+                    "id": "6cc848e00e10cf870ece6f380a01f53e949fed0e1e4c1ef61db2f40b8de63016",
+                    "height": 8691217,
+                    "timestamp": {
+                        "epoch": 70647904,
+                        "unix": 1560749104,
+                        "human": "2019-06-17T05:25:04.000Z"
+                    }
+                }
+            },
+            "production": {
+                "approval": 1.34
+            },
+            "forged": {
+                "fees": 1608233193755,
+                "rewards": 24887800000000,
+                "total": 26496033193755
+            }
+        },
+        {
+            "username": "goose",
+            "address": "ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ",
+            "publicKey": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c",
+            "votes": 167925930087295,
+            "rank": 10,
+            "blocks": {
+                "produced": 132468,
+                "last": {
+                    "id": "d8e08a70b91673eb02fc20b542b6a431cfbdbff33394710fbb33bdf0fe6a52ea",
+                    "height": 8691245,
+                    "timestamp": {
+                        "epoch": 70648128,
+                        "unix": 1560749328,
+                        "human": "2019-06-17T05:28:48.000Z"
+                    }
+                }
+            },
+            "production": {
+                "approval": 1.33
+            },
+            "forged": {
+                "fees": 866998159298,
+                "rewards": 26493600000000,
+                "total": 27360598159298
+            }
         }
-      },
-      "production": {
-        "approval": 1.32,
-        "productivity": 99.67
-      },
-      "forged": {
-        "fees": 1405755397853,
-        "rewards": 22355400000000,
-        "total": 23761155397853
-      }
-    }
-  ]
+    ]
 }
 ```
 
@@ -192,35 +186,33 @@ curl --header "API-Version: 2" https://api.ark.io/api/delegates/035217d8ff31d789
 
 ```json
 {
-  "data": {
-    "username": "boldninja",
-    "address": "ARMy9u1XvrZ124JzQq3oeJpjmBEnYkyU7D",
-    "publicKey": "035217d8ff31d78992e0821667fed6d9298d2b923cd63b650e894e0bf11a0a6d7a",
-    "votes": 10000000,
-    "rank": 180,
-    "blocks": {
-      "produced": 3,
-      "missed": 4,
-      "last": {
-        "id": "17262490796048771853",
-        "height": 1058,
-        "timestamp": {
-          "epoch": 19400,
-          "unix": 1490120600,
-          "human": "2017-03-21T18:23:20.000Z"
+    "data": {
+        "username": "boldninja",
+        "address": "ARMy9u1XvrZ124JzQq3oeJpjmBEnYkyU7D",
+        "publicKey": "035217d8ff31d78992e0821667fed6d9298d2b923cd63b650e894e0bf11a0a6d7a",
+        "votes": 10000000,
+        "rank": 184,
+        "blocks": {
+            "produced": 3,
+            "last": {
+                "id": "17262490796048771853",
+                "height": 1058,
+                "timestamp": {
+                    "epoch": 19400,
+                    "unix": 1490120600,
+                    "human": "2017-03-21T18:23:20.000Z"
+                }
+            }
+        },
+        "production": {
+            "approval": 0
+        },
+        "forged": {
+            "fees": 0,
+            "rewards": 0,
+            "total": 0
         }
-      }
-    },
-    "production": {
-      "approval": 0,
-      "productivity": 42.86
-    },
-    "forged": {
-      "fees": 0,
-      "rewards": 0,
-      "total": 0
     }
-  }
 }
 ```
 
@@ -255,74 +247,76 @@ curl --header "API-Version: 2" "https://api.ark.io/api/delegates/ALLZ3TQKTaHm2Bt
 
 ```json
 {
-  "meta": {
-    "count": 2,
-    "pageCount": 62029,
-    "totalCount": 124057,
-    "next": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=6&limit=2",
-    "previous": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=4&limit=2",
-    "self": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=5&limit=2",
-    "first": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=1&limit=2",
-    "last": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=62029&limit=2"
-  },
-  "data": [
-    {
-      "id": "15452336890126796922",
-      "version": 0,
-      "height": 8051452,
-      "previous": "9864401348516061780",
-      "forged": {
-        "reward": 200000000,
-        "fee": 0,
-        "total": 200000000,
-        "amount": 0
-      },
-      "payload": {
-        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "length": 0
-      },
-      "generator": {
-        "username": "goose",
-        "address": "ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ",
-        "publicKey": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c"
-      },
-      "signature": "3045022100b768b2a96868c4f442699f5b3978c8fb3ac94b31d44568ba9431be04611c5b8d02201d79cb91e5dd0fb88985a72f73643b96d34baaf196ec6ce6785308ce7a56e4b9",
-      "transactions": 0,
-      "timestamp": {
-        "epoch": 65480490,
-        "unix": 1555581690,
-        "human": "2019-04-18T10:01:30.000Z"
-      }
+    "meta": {
+        "count": 2,
+        "pageCount": 73400,
+        "totalCount": 146799,
+        "next": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=6&limit=2",
+        "previous": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=4&limit=2",
+        "self": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=5&limit=2",
+        "first": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=1&limit=2",
+        "last": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/blocks?page=73400&limit=2"
     },
-    {
-      "id": "4941983238011713644",
-      "version": 0,
-      "height": 8051380,
-      "previous": "10030681307966151993",
-      "forged": {
-        "reward": 200000000,
-        "fee": 0,
-        "total": 200000000,
-        "amount": 0
-      },
-      "payload": {
-        "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "length": 0
-      },
-      "generator": {
-        "username": "goose",
-        "address": "ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ",
-        "publicKey": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c"
-      },
-      "signature": "304502210080ab4a74453a2fa456dea52188397a3f9a5edd64e592dd2e2fb0c0a9714eff9a0220216fb5aeeebc8189e5ee8dab643457a393f2874df8aff531f7b8377dd8d6deb1",
-      "transactions": 0,
-      "timestamp": {
-        "epoch": 65479914,
-        "unix": 1555581114,
-        "human": "2019-04-18T09:51:54.000Z"
-      }
-    }
-  ]
+    "data": [
+        {
+            "id": "a84a1174e52afed2de39c4847e0f147af56887f2925bc464408ff9012651c780",
+            "version": 0,
+            "height": 8690828,
+            "previous": "626cdb1ddfa028920334c4f08aefcf42bd919cce209f9a900bf7831478237753",
+            "forged": {
+                "reward": 200000000,
+                "fee": 0,
+                "total": 200000000,
+                "amount": 0
+            },
+            "payload": {
+                "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "length": 0
+            },
+            "generator": {
+                "username": "goose",
+                "address": "ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ",
+                "publicKey": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c"
+            },
+            "signature": "3045022100de78040331ab2ee01749c588fed181fd465e1d885c94a38bd69a1907cb9338e9022052f204fbc10f0a70d3b0c0fe8840c875c557ddc5165d95f3b52ab4aeadc0e317",
+            "confirmations": 436,
+            "transactions": 0,
+            "timestamp": {
+                "epoch": 70644792,
+                "unix": 1560745992,
+                "human": "2019-06-17T04:33:12.000Z"
+            }
+        },
+        {
+            "id": "29f42f6ce22aefb65cb94c2ce9a7ed60734cb2a65e38a51ab1923136355c1862",
+            "version": 0,
+            "height": 8690786,
+            "previous": "c0b643ac7844fe7d527ccfdd2595083d0e32d44332afb4dafe7d7f8da79e2bcc",
+            "forged": {
+                "reward": 200000000,
+                "fee": 0,
+                "total": 200000000,
+                "amount": 0
+            },
+            "payload": {
+                "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "length": 0
+            },
+            "generator": {
+                "username": "goose",
+                "address": "ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ",
+                "publicKey": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c"
+            },
+            "signature": "3045022100a07050e654533be78adbeae4ac3b6b7bb27e3549aaf749dc3f27b62e7aec67ae02200d9b530aefa3f2c5518792c63a8f25fae333dfe198ef26d2ce49e9bcb54f1e3d",
+            "confirmations": 478,
+            "transactions": 0,
+            "timestamp": {
+                "epoch": 70644456,
+                "unix": 1560745656,
+                "human": "2019-06-17T04:27:36.000Z"
+            }
+        }
+    ]
 }
 ```
 
@@ -357,27 +351,25 @@ curl --header "API-Version: 2" "https://api.ark.io/api/delegates/ALLZ3TQKTaHm2Bt
 
 ```json
 {
-  "meta": {
-    "count": 1,
-    "pageCount": 626,
-    "totalCount": 626,
-    "next": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=2&limit=1",
-    "previous": null,
-    "self": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=1&limit=1",
-    "first": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=1&limit=1",
-    "last": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=626&limit=1"
-  },
-  "data": [
-    {
-      "address": "Af1e7oavXTJs1RYs7DeRuphC6eSAUFpsWC",
-      "publicKey": "02a589e02e853bb5b9c989b2935a63eab88d847addb35bcbd838597a7623ba5748",
-      "username": null,
-      "secondPublicKey": null,
-      "balance": 16338033891543,
-      "isDelegate": false,
-      "vote": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c"
-    }
-  ]
+    "meta": {
+        "count": 1,
+        "pageCount": 644,
+        "totalCount": 644,
+        "next": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=2&limit=1",
+        "previous": null,
+        "self": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=1&limit=1",
+        "first": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=1&limit=1",
+        "last": "/api/v2/delegates/ALLZ3TQKTaHm2Bte4SrXL9C5cS8ZovqFfZ/voters?page=644&limit=1"
+    },
+    "data": [
+        {
+            "address": "Af1e7oavXTJs1RYs7DeRuphC6eSAUFpsWC",
+            "publicKey": "02a589e02e853bb5b9c989b2935a63eab88d847addb35bcbd838597a7623ba5748",
+            "balance": 16553077168251,
+            "isDelegate": false,
+            "vote": "03c5d32dedf5441b3aafb2e0c6ad3e5568bb0b3e822807b133e2276e014d830e3c"
+        }
+    ]
 }
 ```
 
@@ -433,45 +425,45 @@ curl --header "API-Version: 2" --data 'producedBlocks={ "from": 41100 }' https:/
 
 ```json
 {
-  "meta": {
-    "count": 8,
-    "pageCount": 1,
-    "totalCount": 8,
-    "next": null,
-    "previous": null,
-    "self": "/api/v2/delegates/search?page=1&limit=100",
-    "first": "/api/v2/delegates/search?page=1&limit=100",
-    "last": "/api/v2/delegates/search?page=1&limit=100"
-  },
-  "data": [
-    {
-      "username": "geops",
-      "address": "DJpFwW39QnQvQRQJF2MCfAoKvsX4DJ28jq",
-      "publicKey": "027716e659220085e41389efc7cf6a05f7f7c659cf3db9126caabce6cda9156582",
-      "votes": 9241946380207,
-      "rank": 9,
-      "blocks": {
-        "produced": 41226,
-        "last": {
-          "id": "c71bdf9695cadd91ac45483bf343e15c69b65590d866972023370707ce3b950b",
-          "height": 1961065,
-          "timestamp": {
-            "epoch": 63998664,
-            "unix": 1554096264,
-            "human": "2019-04-01T05:24:24.000Z"
-          }
-        }
-      },
-      "production": {
-        "approval": 0.07
-      },
-      "forged": {
-        "fees": 124498624079,
-        "rewards": 8205200000000,
-        "total": 8329698624079
-      }
+    "meta": {
+        "count": 67,
+        "pageCount": 1,
+        "totalCount": 67,
+        "next": null,
+        "previous": null,
+        "self": "/api/v2/delegates/search?page=1&limit=100",
+        "first": "/api/v2/delegates/search?page=1&limit=100",
+        "last": "/api/v2/delegates/search?page=1&limit=100"
     },
-    ...
-  ]
+    "data": [
+        {
+            "username": "biz_classic",
+            "address": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "publicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "votes": 296139495328751,
+            "rank": 1,
+            "blocks": {
+                "produced": 150583,
+                "last": {
+                    "id": "ff4b099cc4793e21b015be251d8fd71b7196bb05038ea599adab86154f8c757e",
+                    "height": 8691274,
+                    "timestamp": {
+                        "epoch": 70648360,
+                        "unix": 1560749560,
+                        "human": "2019-06-17T05:32:40.000Z"
+                    }
+                }
+            },
+            "production": {
+                "approval": 2.35
+            },
+            "forged": {
+                "fees": 1173040419815,
+                "rewards": 30116600000000,
+                "total": 31289640419815
+            }
+        },
+        ...
+    ]
 }
 ```

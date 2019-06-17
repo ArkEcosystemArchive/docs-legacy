@@ -20,6 +20,12 @@ Used to access a Node's configuration and the network it is attached to (identif
 GET /api/node/configuration
 ```
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/node/configuration
+```
+
 ### Response
 
 ```json
@@ -92,6 +98,12 @@ Used to access a Node's configuration for the `@arkecosystem/crypto` package tha
 
 ```
 GET /api/node/configuration/crypto
+```
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/node/configuration/crypto
 ```
 
 ### Response
@@ -274,6 +286,12 @@ Used to access a Node's fee statistics.
 GET /api/node/fees
 ```
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/node/fees
+```
+
 ### Query Parameters
 
 | Name   | Type   | Description                                | Required |
@@ -318,6 +336,12 @@ The status allows for health checking, showing if the node is in sync with the n
 GET /api/node/status
 ```
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/node/status
+```
+
 ### Response
 
 ```json
@@ -338,6 +362,10 @@ The `syncing` resource is very much alike `node/status`, providing information o
 
 ```
 GET /api/node/syncing
+```
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/node/syncing
 ```
 
 ### Response

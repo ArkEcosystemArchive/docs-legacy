@@ -40,38 +40,40 @@ curl --header "API-Version: 2" https://api.ark.io/api/votes
 ```json
 {
     "meta": {
-        "count": 2,
-        "pageCount": 658,
-        "totalCount": 1315,
-        "next": "/v2/votes?page=2",
+        "count": 100,
+        "pageCount": 288,
+        "totalCount": 28702,
+        "next": "/api/v2/votes?page=2&limit=100",
         "previous": null,
-        "self": "/v2/votes?page=1",
-        "first": "/v2/votes?page=1",
-        "last": "/v2/votes?page=658"
+        "self": "/api/v2/votes?page=1&limit=100",
+        "first": "/api/v2/votes?page=1&limit=100",
+        "last": "/api/v2/votes?page=288&limit=100"
     },
     "data": [
         {
-            "id": "560959e435cbf8eec60691890f3dd55d141e76077e1fe803f65d137c91099240",
-            "blockId": "12872155462883631430",
+            "id": "d3462a5d5c9712d128847b5a26941f16718e0107fd41c9a99cb2fc7d03c5cc52",
+            "blockId": "d39289ae5d037ae109b012c3fcd65f3f9151b486118af0265f5b7cb4021fb71f",
             "version": 1,
             "type": 3,
             "amount": 0,
-            "fee": 100000000,
-            "sender": "DAp7JjULVgqzd4jLofkUyLRovHRPUTQwiZ",
-            "recipient": "DAp7JjULVgqzd4jLofkUyLRovHRPUTQwiZ",
-            "signature": "30440220522eadff84b5b4b2fc6a3ef611bf093dbd0a06963c32c767ee28729898d0a1d302203f851594e5b2271a987e98daa4fc8b5f384fac65c41eb1c43739af2d4b5dc902",
+            "fee": 23858371,
+            "sender": "ALCT5ahUdfUwX6nw3H6yzuv7Dbb4HgYBGi",
+            "senderPublicKey": "0355480237497cdb7925a9b497449dcdf9ac6273c218bbf997fc1ffb71153c54f6",
+            "recipient": "ALCT5ahUdfUwX6nw3H6yzuv7Dbb4HgYBGi",
+            "signature": "3045022100ebe55d6851cfec45f4ceb5dec26f45c7a8b27b7b397b518d2f95b382ce8dfe9c02203330447fb46b826981ec52b3d8f4c697185fbe9fab45ac5e7448d3f6616f88d0",
             "asset": {
                 "votes": [
-                    "-032fe001dff675a6edfe3d0e51201b2900d3b5050a46d770306aefaa574c022672"
+                    "+03cbf08dcbf09502ca015c99321f6fea8511d39c18684353feb9c3015825d7ec67"
                 ]
             },
-            "confirmations": 39989,
+            "confirmations": 403,
             "timestamp": {
-                "epoch": 32414926,
-                "unix": 1522516126,
-                "human": "2018-03-31T17:08:46Z"
+                "epoch": 70650961,
+                "unix": 1560752161,
+                "human": "2019-06-17T06:16:01.000Z"
             }
-        }
+        },
+        ...
     ]
 }
 ```
@@ -103,25 +105,26 @@ curl --header "API-Version: 2" https://api.ark.io/api/votes/d3462a5d5c9712d12884
 ```json
 {
     "data": {
-        "id": "beb8dd43c640f562704090159154b2742afba7eacada9e8edee447e34e7675c6",
-        "blockId": "13661015019049808045",
+        "id": "d3462a5d5c9712d128847b5a26941f16718e0107fd41c9a99cb2fc7d03c5cc52",
+        "blockId": "d39289ae5d037ae109b012c3fcd65f3f9151b486118af0265f5b7cb4021fb71f",
         "version": 1,
         "type": 3,
         "amount": 0,
-        "fee": 100000000,
-        "sender": "DAp7JjULVgqzd4jLofkUyLRovHRPUTQwiZ",
-        "recipient": "DAp7JjULVgqzd4jLofkUyLRovHRPUTQwiZ",
-        "signature": "3045022100e9a743c5aa0df427f49af61d35fe617182479f7e8d368ce23b7ec43ab6d269c80220193aafd4ccb3eedbd76ded7ea99f31629013dc3af60540029fe98b274d42d284",
+        "fee": 23858371,
+        "sender": "ALCT5ahUdfUwX6nw3H6yzuv7Dbb4HgYBGi",
+        "senderPublicKey": "0355480237497cdb7925a9b497449dcdf9ac6273c218bbf997fc1ffb71153c54f6",
+        "recipient": "ALCT5ahUdfUwX6nw3H6yzuv7Dbb4HgYBGi",
+        "signature": "3045022100ebe55d6851cfec45f4ceb5dec26f45c7a8b27b7b397b518d2f95b382ce8dfe9c02203330447fb46b826981ec52b3d8f4c697185fbe9fab45ac5e7448d3f6616f88d0",
         "asset": {
             "votes": [
-                "+032fe001dff675a6edfe3d0e51201b2900d3b5050a46d770306aefaa574c022672"
+                "+03cbf08dcbf09502ca015c99321f6fea8511d39c18684353feb9c3015825d7ec67"
             ]
         },
-        "confirmations": 48189,
+        "confirmations": 407,
         "timestamp": {
-            "epoch": 32338609,
-            "unix": 1522439809,
-            "human": "2018-03-30T19:56:49Z"
+            "epoch": 70650961,
+            "unix": 1560752161,
+            "human": "2019-06-17T06:16:01.000Z"
         }
     }
 }

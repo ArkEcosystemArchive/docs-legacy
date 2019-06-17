@@ -39,25 +39,30 @@ curl --header "API-Version: 2" https://api.ark.io/api/peers
 ```json
 {
     "meta": {
-        "count": 2,
-        "pageCount": 1,
-        "totalCount": 2,
-        "next": null,
+        "count": 100,
+        "pageCount": 2,
+        "totalCount": 170,
+        "next": "/api/v2/peers?page=2&limit=100",
         "previous": null,
-        "self": "/v2/peers?page=1",
-        "first": "/v2/peers?page=1",
-        "last": "/v2/peers?page=1"
+        "self": "/api/v2/peers?page=1&limit=100",
+        "first": "/api/v2/peers?page=1&limit=100",
+        "last": "/api/v2/peers?page=2&limit=100"
     },
     "data": [
         {
-            "ip": "167.114.29.53",
+            "ip": "178.32.65.139",
             "port": 4001,
-            "version": "2.0.16",
-            "height": 6881793,
-            "status": 200,
-            "os": "linux", 
-            "latency": 1390
-        }
+            "ports": {
+                "@arkecosystem/core-webhooks": -1,
+                "@arkecosystem/core-exchange-json-rpc": -1,
+                "@arkecosystem/core-wallet-api": 4040,
+                "@arkecosystem/core-api": 4003
+            },
+            "version": "2.4.12",
+            "height": 8691474,
+            "latency": 11
+        },
+        ...
     ]
 }
 ```
@@ -90,13 +95,17 @@ curl --header "API-Version: 2" https://api.ark.io/api/peers/148.251.178.12
 ```json
 {
     "data": {
-        "ip": "167.114.29.55",
+        "ip": "148.251.178.12",
         "port": 4001,
-        "version": "2.0.16",
-        "height": 6881793,
-        "status": 200,
-        "os": "linux", 
-        "latency": 355
+        "ports": {
+            "@arkecosystem/core-api": 4003,
+            "@arkecosystem/core-wallet-api": 4040,
+            "@arkecosystem/core-webhooks": -1,
+            "@arkecosystem/core-exchange-json-rpc": -1
+        },
+        "version": "2.4.12",
+        "height": 8691462,
+        "latency": 77
     }
 }
 ```

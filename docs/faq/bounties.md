@@ -14,7 +14,7 @@ The ARK development bounty program has been updated for 2019. Previous years hav
 
 More information about the **ARK Development and Security Bounty Program** can be found in the dedicated [ARK blog post](https://blog.ark.io/ark-development-and-security-bounty-program-a95122d06879).
 
-Before pushing a PR (Pull Request), please [jump in our slack #development](https://ark.io/slack) channel in order to discuss your contributions or to connect with other ARK developers.
+Before pushing a PR (Pull Request), please [jump in our slack #general](https://ark.io/slack) channel in order to discuss your contributions or to connect with other ARK developers.
 
 ::: tip
 ARKs bounty program includes all accepted PRs for [this repository](https://github.com/ArkEcosystem/docs)

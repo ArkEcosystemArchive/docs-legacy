@@ -23,6 +23,12 @@ GET /api/wallets
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets
+```
+
 ### Response
 
 ```json
@@ -66,6 +72,16 @@ GET /api/wallets/{id}
 | :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj
+```
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92
+```
+
 ### Response
 
 ```json
@@ -103,6 +119,12 @@ GET /api/wallets/{id}/transactions
 | :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions
+```
 
 ### Response
 
@@ -164,6 +186,12 @@ GET /api/wallets/{id}/transactions/received
 | :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/received
+```
 
 ### Response
 
@@ -232,6 +260,12 @@ GET /api/wallets/{id}/transactions/sent
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/sent
+```
+
 ### Response
 
 ```json
@@ -297,6 +331,12 @@ GET /api/wallets/{id}/votes
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/votes?limit=2
+```
+
 ### Response
 
 ```json
@@ -354,6 +394,12 @@ GET /api/wallets/top
 | :---- | :--: | :-------------------------------------------- | :------: |
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/top
+```
 
 ### Response
 
@@ -423,6 +469,12 @@ POST /api/wallets/search
 | votebalance      | object | ...         |   :x:    |
 | votebalance.from |  int   | ...         |   :x:    |
 | votebalance.to   |  int   | ...         |   :x:    |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" --data 'balance={ "from": 200000000000000 }' https://api.ark.io/api/wallets/search
+```
 
 ### Response
 

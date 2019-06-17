@@ -29,6 +29,12 @@ GET /api/votes
 | page    | int  | The number of the page that will be returned. | :x:      |
 | limit   | int  | The number of resources per page.             | :x:      |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/votes
+```
+
 ### Response
 
 ```json
@@ -85,6 +91,12 @@ GET /api/votes/{id}
 | Name | Type   | Description                                 | Required           |
 | :--- | :----: | :------------------------------------------ | :----------------: |
 | id   | string | The identifier of the vote to be retrieved. | :white_check_mark: |
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/votes/d3462a5d5c9712d128847b5a26941f16718e0107fd41c9a99cb2fc7d03c5cc52
+```
 
 ### Response
 

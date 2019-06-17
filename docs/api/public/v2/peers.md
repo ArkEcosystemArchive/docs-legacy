@@ -28,6 +28,12 @@ GET /api/peers
 | version | string | The node version by which the resources will be filtered.     | :x:      |
 | orderBy | string | The column by which the resources will be sorted.             | :x:      |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/peers
+```
+
 ### Response
 
 ```json
@@ -71,6 +77,13 @@ GET /api/peers/{ip}
 | Name | Type   | Description                                 | Required           |
 | :--- | :----: | :------------------------------------------ | :----------------: |
 | ip   | string | The IP address of the peer to be retrieved. | :white_check_mark: |
+
+
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/peers/148.251.178.12
+```
 
 ### Response
 

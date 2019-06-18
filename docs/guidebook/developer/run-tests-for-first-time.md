@@ -1,4 +1,4 @@
-# Quick Start: 
+# Quick Start - tests
 
 If you are a developer, the following steps will help you to validate your installation.
 
@@ -18,8 +18,10 @@ If you are a developer, the following steps will help you to validate your insta
 * `yarn test:integration`
 * `yarn test:functional`
 
-## If things go wrong:
+## Troubleshooting
 
+* A few tests are deprecated. Errors on deprecated tests can be ignored.
+* If you see an error about too many open files, use yarn to add 'watchman' library, and modify watchman flag in package.json
 * Try to shut down any preexisting postgres database that may be running on your machine.
 * Try the above steps again.
 * If still failing, draft an email that contains your node version, your operating system version, your level of general experience, and anything that might be odd about your system.

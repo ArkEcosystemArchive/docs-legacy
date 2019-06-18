@@ -13,7 +13,7 @@ If you are a developer, the following steps will help you to validate your insta
 * `yarn setup`
 * `yarn docker ark`
 * `(cd docker/environments/unitnet && docker-up -d postgres)`
-  * Note: if you do not use the parenthesis in this command, you will need to ensure you return back to the core/ directory. 
+  * Note: if you do not use the parentheses in this command, you will need to ensure you return back to the core/ directory. 
 * `yarn test:unit`
 * `yarn test:integration`
 * `yarn test:functional`

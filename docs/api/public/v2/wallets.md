@@ -23,30 +23,35 @@ GET /api/wallets
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets
+```
+
 ### Response
 
 ```json
 {
-  "meta": {
-    "count": 2,
-    "pageCount": 421,
-    "totalCount": 841,
-    "next": "/v2/wallets?page=2",
-    "previous": null,
-    "self": "/v2/wallets?page=1",
-    "first": "/v2/wallets?page=1",
-    "last": "/v2/wallets?page=421"
-  },
-  "data": [
-    {
-      "address": "D59NTfV92ca9QevUydvMiFMFdubbCaAVCV",
-      "publicKey": "037d035f08b3bad0d5bb605232c7aa41555693c480044dbeb797270a44c339da5a",
-      "username": null,
-      "secondPublicKey": null,
-      "balance": 1023145260990,
-      "isDelegate": false
-    }
-  ]
+    "meta": {
+        "count": 100,
+        "pageCount": 1186,
+        "totalCount": 118536,
+        "next": "/api/v2/wallets?page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/wallets?page=1&limit=100",
+        "first": "/api/v2/wallets?page=1&limit=100",
+        "last": "/api/v2/wallets?page=1186&limit=100"
+    },
+    "data": [
+        {
+            "address": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+            "publicKey": "021d03bace0687a1a5e797f884b13fb46f817ec32de1374a7f223f24404401d220",
+            "balance": 1969102010034762,
+            "isDelegate": false
+        },
+        ...
+    ]
 }
 ```
 
@@ -66,18 +71,29 @@ GET /api/wallets/{id}
 | :--- | :----: | :-------------------------------------------- | :----------------: |
 | id   | string | The identifier of the wallet to be retrieved. | :white_check_mark: |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj
+```
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92
+```
+
 ### Response
 
 ```json
 {
-  "data": {
-    "address": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-    "publicKey": "0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7",
-    "username": "bongoninja",
-    "secondPublicKey": null,
-    "balance": 12534670000000,
-    "isDelegate": true
-  }
+    "data": {
+        "address": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+        "publicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+        "username": "biz_classic",
+        "secondPublicKey": "024e3a261bba72f0a92dcf4bb6406fa7f2df2d6a8bfccb75652802b035244a0e17",
+        "balance": 243543952431,
+        "isDelegate": true,
+        "vote": "03f25207238ef72cc3a0482af05a5296996da80c92dd0c1eb80e911281eedaf237"
+    }
 }
 ```
 
@@ -104,40 +120,47 @@ GET /api/wallets/{id}/transactions
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions
+```
+
 ### Response
 
 ```json
 {
     "meta": {
-        "count": 2,
-        "pageCount": 127430,
-        "totalCount": 254860,
-        "next": "/v2/wallets/boldninja/transactions?page=2",
+        "count": 100,
+        "pageCount": 41,
+        "totalCount": 4057,
+        "next": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions?page=2&limit=100",
         "previous": null,
-        "self": "/v2/wallets/boldninja/transactions?page=1",
-        "first": "/v2/wallets/boldninja/transactions?page=1",
-        "last": "/v2/wallets/boldninja/transactions?page=127430"
+        "self": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions?page=1&limit=100",
+        "first": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions?page=1&limit=100",
+        "last": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions?page=41&limit=100"
     },
     "data": [
         {
-            "id": "261ec03a90e8c287fb2dcbb35bb8a842fe5ef1c7a6425319da7aa123c48dd929",
-            "blockId": "15006101391552623930",
+            "id": "fe7e6d56d735f06e9a60205726754966e10c03a2f219bec8295c3345b040a7b4",
+            "blockId": "9b6129f1f988936a4ad52f5aaa5bf26a3df002d980e9f1893c8d0035e01e6fc0",
             "version": 1,
             "type": 0,
-            "amount": 100000000,
-            "fee": 10000000,
-            "sender": "DHWBaG44rstymZjWFU4b7BiuTZjiKxfJpL",
-            "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-            "signature": "3045022100d7b59289b9576978fc0cbfea2f7f490409ef9455f2c4d28cc49f155c9ed69d6002206a32c4b668050f81b789b49fe5c29164872f9f1db63d7ba8604a6296f183a18a",
-            "signSignature": "3045022100dae0598ff7dcab0184d36e3d8313da17401893b2b6b476276412f2682e66c34402205df085dae213c561e5db293cd5bc8930f6343783a99ce48c349e92abfd2e2fa1",
-            "vendorField": ":bongocrazy"
-            "confirmations": 347019,
+            "amount": 27575207,
+            "fee": 5000000,
+            "sender": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "senderPublicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "recipient": "AZK5FQdAv973EBiFhei4fqHcW4aQdsdwtH",
+            "signature": "30440220241cef6976955c676387edfa021d2552900262e52d10dfa6d1bb95ef980387b702201f54955dd4fc10a2d45c8fc429586d3f9ee05c866f9d6f3b9994c708d80fc1ed",
+            "signSignature": "304402201050f009b0638d7a56100a0c5d6d34e7388b90cfa5488dc9c7917f6ca2d5c373022023314b02815881d8a754e6dc38fa853a725bd4d32ec5439281ee4910a806bace",
+            "confirmations": 1255,
             "timestamp": {
-                "epoch": 51704908,
-                "unix": 1541806108,
-                "human": "2018-11-09T23:28:28.000Z"
+                "epoch": 70643497,
+                "unix": 1560744697,
+                "human": "2019-06-17T04:11:37.000Z"
             }
-        }
+        },
+        ...
     ]
 }
 ```
@@ -165,40 +188,47 @@ GET /api/wallets/{id}/transactions/received
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/received
+```
+
 ### Response
 
 ```json
 {
     "meta": {
-        "count": 2,
-        "pageCount": 4,
-        "totalCount": 8,
-        "next": "/v2/wallets/boldninja/transactions/received?page=2",
+        "count": 100,
+        "pageCount": 41,
+        "totalCount": 4057,
+        "next": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/received?page=2&limit=100",
         "previous": null,
-        "self": "/v2/wallets/boldninja/transactions/received?page=1",
-        "first": "/v2/wallets/boldninja/transactions/received?page=1",
-        "last": "/v2/wallets/boldninja/transactions/received?page=4"
+        "self": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/received?page=1&limit=100",
+        "first": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/received?page=1&limit=100",
+        "last": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/received?page=41&limit=100"
     },
     "data": [
         {
-            "id": "261ec03a90e8c287fb2dcbb35bb8a842fe5ef1c7a6425319da7aa123c48dd929",
-            "blockId": "15006101391552623930",
+            "id": "c4fa61d030b6a221e7ee900a5f65281e0bb9fa69d56a81e0714a863f0076b479",
+            "blockId": "42eeae1a54d173414a0cf0011d2e019603d036662e8a802a2a4ab8b529d052bf",
             "version": 1,
             "type": 0,
-            "amount": 100000000,
-            "fee": 10000000,
-            "sender": "DHWBaG44rstymZjWFU4b7BiuTZjiKxfJpL",
-            "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-            "signature": "3045022100d7b59289b9576978fc0cbfea2f7f490409ef9455f2c4d28cc49f155c9ed69d6002206a32c4b668050f81b789b49fe5c29164872f9f1db63d7ba8604a6296f183a18a",
-            "signSignature": "3045022100dae0598ff7dcab0184d36e3d8313da17401893b2b6b476276412f2682e66c34402205df085dae213c561e5db293cd5bc8930f6343783a99ce48c349e92abfd2e2fa1",
-            "vendorField": ":bongocrazy"
-            "confirmations": 347019,
+            "amount": 10,
+            "fee": 2988125,
+            "sender": "AQ5JZnzggkCGY6hdszt2WietHCFVoLMdLB",
+            "senderPublicKey": "03387dd2fa3f056e730ccb0e86ee75d488375c2c5c602dfc8b9258c1ee08377d29",
+            "recipient": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "signature": "3044022045d0f09448823b78c255679f5660b402ee676bf26650de81380989d1643638ed02200f0ad3490c4612e6be0ff311e186d515473d2d4af6164cb279b54ec179f731a6",
+            "vendorField": "4f19cf90-90b6-11e9-ab24-77ec6195107c",
+            "confirmations": 1459,
             "timestamp": {
-                "epoch": 51704908,
-                "unix": 1541806108,
-                "human": "2018-11-09T23:28:28.000Z"
+                "epoch": 70643725,
+                "unix": 1560744925,
+                "human": "2019-06-17T04:15:25.000Z"
             }
-        }
+        },
+        ...
     ]
 }
 ```
@@ -232,45 +262,48 @@ GET /api/wallets/{id}/transactions/sent
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/sent
+```
+
 ### Response
 
 ```json
 {
-  "meta": {
-    "count": 2,
-    "pageCount": 2,
-    "totalCount": 4,
-    "next": "/v2/wallets/boldninja/transactions/sent?page=2",
-    "previous": null,
-    "self": "/v2/wallets/boldninja/transactions/sent?page=1",
-    "first": "/v2/wallets/boldninja/transactions/sent?page=1",
-    "last": "/v2/wallets/boldninja/transactions/sent?page=2"
-  },
-  "data": [
-    {
-      "id": "686b989f56ede8141289691d166b8158f0b2c3b272112fdf77198e394fa4b59a",
-      "blockId": "16409699706603010399",
-      "version": 1,
-      "type": 3,
-      "amount": 0,
-      "fee": 100000000,
-      "sender": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-      "recipient": "D9YiyRYMBS2ofzqkufjrkB9nHofWgJLM7f",
-      "signature": "304402202ad26e82b6b9c96babfb7fba4389d17e868cc802ada3a7d263848a8b7baa144402205e5571afdba7b1c0cad698620c5306e320f3dadcb9a82df6ebbd3af7df757904",
-      "signSignature": null,
-      "asset": {
-        "votes": [
-          "+0306950dae7158103814e3828b1ab97a87dbb3680db1b4c6998b8208865b2f9db7"
-        ]
-      },
-      "confirmations": 526006,
-      "timestamp": {
-        "epoch": 49663543,
-        "unix": 1539764743,
-        "human": "2018-10-17T08:25:43.000Z"
-      }
-    }
-  ]
+    "meta": {
+        "count": 100,
+        "pageCount": 2367,
+        "totalCount": 236692,
+        "next": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/sent?page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/sent?page=1&limit=100",
+        "first": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/sent?page=1&limit=100",
+        "last": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/transactions/sent?page=2367&limit=100"
+    },
+    "data": [
+        {
+            "id": "fe7e6d56d735f06e9a60205726754966e10c03a2f219bec8295c3345b040a7b4",
+            "blockId": "9b6129f1f988936a4ad52f5aaa5bf26a3df002d980e9f1893c8d0035e01e6fc0",
+            "version": 1,
+            "type": 0,
+            "amount": 27575207,
+            "fee": 5000000,
+            "sender": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "senderPublicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "recipient": "AZK5FQdAv973EBiFhei4fqHcW4aQdsdwtH",
+            "signature": "30440220241cef6976955c676387edfa021d2552900262e52d10dfa6d1bb95ef980387b702201f54955dd4fc10a2d45c8fc429586d3f9ee05c866f9d6f3b9994c708d80fc1ed",
+            "signSignature": "304402201050f009b0638d7a56100a0c5d6d34e7388b90cfa5488dc9c7917f6ca2d5c373022023314b02815881d8a754e6dc38fa853a725bd4d32ec5439281ee4910a806bace",
+            "confirmations": 1276,
+            "timestamp": {
+                "epoch": 70643497,
+                "unix": 1560744697,
+                "human": "2019-06-17T04:11:37.000Z"
+            }
+        },
+        ...
+    ]
 }
 ```
 
@@ -297,44 +330,76 @@ GET /api/wallets/{id}/votes
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/votes?limit=2
+```
+
 ### Response
 
 ```json
 {
-  "meta": {
-    "count": 2,
-    "pageCount": 2,
-    "totalCount": 3,
-    "next": "/v2/wallets/boldninja/votes?page=2",
-    "previous": null,
-    "self": "/v2/wallets/boldninja/votes?page=1",
-    "first": "/v2/wallets/boldninja/votes?page=1",
-    "last": "/v2/wallets/boldninja/votes?page=2"
-  },
-  "data": [
-    {
-      "id": "08c6b23f9edd97b613f17153fb97a316a4fb83136e9842655dafc8262f363e0e",
-      "blockId": "14847399772737279404",
-      "version": 1,
-      "type": 3,
-      "amount": 0,
-      "fee": 100000000,
-      "sender": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-      "recipient": "DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN",
-      "signature": "304402207ba0e8aaee93695360081b7ce713f13d62b544038ac440bd46357398af86cae6022059ac74586738be1ef622e0baba992d0e417d9aed7ab980f374eb0c9d53e25f8e",
-      "asset": {
-        "votes": [
-          "+0257b7724e97cd832e0c28533a86da5220656f9b5122141daab20e8526decce01f"
-        ]
-      },
-      "confirmations": 1636029,
-      "timestamp": {
-        "epoch": 17094358,
-        "unix": 1507195558,
-        "human": "2017-10-05T09:25:58Z"
-      }
-    }
-  ]
+    "meta": {
+        "count": 2,
+        "pageCount": 1312,
+        "totalCount": 2623,
+        "next": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/votes?limit=2&page=2",
+        "previous": null,
+        "self": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/votes?limit=2&page=1",
+        "first": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/votes?limit=2&page=1",
+        "last": "/api/v2/wallets/AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj/votes?limit=2&page=1312"
+    },
+    "data": [
+        {
+            "id": "266f3a67fa32c098f5db9674d78c77db54314e0eb9caee9b083132374ba3a770",
+            "blockId": "16478765994703749209",
+            "version": 1,
+            "type": 3,
+            "amount": 0,
+            "fee": 10000000,
+            "sender": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "senderPublicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "recipient": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "signature": "3045022100878620caf54454625ddfa9c4b05c6c7fdba1d453b6971316822b700fd19a65f0022007e1f5617a2fdea7d4aa5e6f522768b9f805a2a8d6b247058c323645dad92a17",
+            "signSignature": "30450221009faf7081db4f474e37bbee763875b2c987e92344d333750a9c15c4b400bbacd20220012d30f04e12c6d57b2e318ce0c46fb3f88d93e133e30990ef1423b90789673e",
+            "asset": {
+                "votes": [
+                    "+03f25207238ef72cc3a0482af05a5296996da80c92dd0c1eb80e911281eedaf237"
+                ]
+            },
+            "confirmations": 1698272,
+            "timestamp": {
+                "epoch": 56990275,
+                "unix": 1547091475,
+                "human": "2019-01-10T03:37:55.000Z"
+            }
+        },
+        {
+            "id": "7741140b12bc0560ca71ba7e5dcdb0fd2e1701e0c0d5475b2524f88b8ea9184f",
+            "blockId": "13207144586696941140",
+            "version": 1,
+            "type": 3,
+            "amount": 0,
+            "fee": 10000000,
+            "sender": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "senderPublicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "recipient": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "signature": "3045022100dd3c84cc2f1dd70e397148d1e1be9683b68c5c5527b4d0e03657aa041a0650d00220584352285798086bd33d7c0c7be434a2fca0911b1eaa145d49331fa81c187085",
+            "signSignature": "3045022100eb7179a05e461f9d4f2288cf971cf3733c688efece875f85f072ee17d4c5816e02205f88f9c03d444ed3b37cd6045f42bb7282fca408e8c4008ada1901ab002cbf1d",
+            "asset": {
+                "votes": [
+                    "-0232b96d57ac27f9a99242bc886e433baa89f596d435153c9dae47222c0d1cecc3"
+                ]
+            },
+            "confirmations": 1698277,
+            "timestamp": {
+                "epoch": 56990234,
+                "unix": 1547091434,
+                "human": "2019-01-10T03:37:14.000Z"
+            }
+        }
+    ]
 }
 ```
 
@@ -355,39 +420,47 @@ GET /api/wallets/top
 | page  | int  | The number of the page that will be returned. |   :x:    |
 | limit | int  | The number of resources per page.             |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/wallets/top
+```
+
 ### Response
 
 ```json
 {
-  "meta": {
-    "count": 100,
-    "pageCount": 1859,
-    "totalCount": 185829,
-    "next": "/api/v2/wallets/top?page=2&limit=100",
-    "previous": null,
-    "self": "/api/v2/wallets/top?page=1&limit=100",
-    "first": "/api/v2/wallets/top?page=1&limit=100",
-    "last": "/api/v2/wallets/top?page=1859&limit=100"
-  },
-  "data": [
-    {
-      "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
-      "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
-      "username": null,
-      "secondPublicKey": null,
-      "balance": 11499593462120632,
-      "isDelegate": false
+    "meta": {
+        "count": 100,
+        "pageCount": 1186,
+        "totalCount": 118536,
+        "next": "/api/v2/wallets/top?page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/wallets/top?page=1&limit=100",
+        "first": "/api/v2/wallets/top?page=1&limit=100",
+        "last": "/api/v2/wallets/top?page=1186&limit=100"
     },
-    {
-      "address": "DRac35wghMcmUSe5jDMLBDLWkVVjyKZFxK",
-      "publicKey": "0374e9a97611540a9ce4812b0980e62d3c5141ea964c2cab051f14a78284570dcd",
-      "username": null,
-      "secondPublicKey": null,
-      "balance": 554107676293547,
-      "isDelegate": false
-    }
-    //... 98 more wallets
-  ]
+    "data": [
+        {
+            "address": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+            "publicKey": "021d03bace0687a1a5e797f884b13fb46f817ec32de1374a7f223f24404401d220",
+            "balance": 1969102010034762,
+            "isDelegate": false
+        },
+        {
+            "address": "AUexKjGtgsSpVzPLs6jNMM6vJ6znEVTQWK",
+            "publicKey": "02ff171adaef486b7db9fc160b28433d20cf43163d56fd28fee72145f0d5219a4b",
+            "balance": 1218835378129161,
+            "isDelegate": false
+        },
+        {
+            "address": "AdTyTzaXPtj1J1DzTgVksa9NYdUuXCRbm1",
+            "publicKey": "02d4c5a7206d8298ef84a79b4c21a73ad5ae460cfff964f660f517960bb834040d",
+            "balance": 875001440401317,
+            "isDelegate": false
+        },
+        ...
+    ]
 }
 ```
 
@@ -424,29 +497,57 @@ POST /api/wallets/search
 | votebalance.from |  int   | ...         |   :x:    |
 | votebalance.to   |  int   | ...         |   :x:    |
 
+### Examples
+
+```sh
+curl --header "API-Version: 2" --data 'balance={ "from": 200000000000000 }' https://api.ark.io/api/wallets/search
+```
+
 ### Response
 
 ```json
 {
-  "meta": {
-    "count": 2,
-    "pageCount": 2,
-    "totalCount": 3,
-    "next": "/v2/wallets/search?page=2",
-    "previous": null,
-    "self": "/v2/wallets/search?page=1",
-    "first": "/v2/wallets/search?page=1",
-    "last": "/v2/wallets/search?page=2"
-  },
-  "data": [
-    {
-      "address": "DGihocTkwDygiFvmg6aG8jThYTic47GzU9",
-      "publicKey": "024c8247388a02ecd1de2a3e3fd5b7c61ecc2797fa3776599d558333ef1802d231",
-      "username": null,
-      "secondPublicKey": null,
-      "balance": 351774803773,
-      "isDelegate": false
-    }
-  ]
+    "meta": {
+        "count": 5,
+        "pageCount": 1,
+        "totalCount": 5,
+        "next": null,
+        "previous": null,
+        "self": "/api/v2/wallets/search?page=1&limit=100",
+        "first": "/api/v2/wallets/search?page=1&limit=100",
+        "last": "/api/v2/wallets/search?page=1&limit=100"
+    },
+    "data": [
+        {
+            "address": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+            "publicKey": "021d03bace0687a1a5e797f884b13fb46f817ec32de1374a7f223f24404401d220",
+            "balance": 1969102010034762,
+            "isDelegate": false
+        },
+        {
+            "address": "AUexKjGtgsSpVzPLs6jNMM6vJ6znEVTQWK",
+            "publicKey": "02ff171adaef486b7db9fc160b28433d20cf43163d56fd28fee72145f0d5219a4b",
+            "balance": 1218835378129161,
+            "isDelegate": false
+        },
+        {
+            "address": "AdTyTzaXPtj1J1DzTgVksa9NYdUuXCRbm1",
+            "publicKey": "02d4c5a7206d8298ef84a79b4c21a73ad5ae460cfff964f660f517960bb834040d",
+            "balance": 875001440401317,
+            "isDelegate": false
+        },
+        {
+            "address": "AdS7WvzqusoP759qRo6HDmUz2L34u4fMHz",
+            "publicKey": "03e7635481b035149829ef74f972e69eca75363bc96e75be57579b0e6fb3f22192",
+            "balance": 686779104859574,
+            "isDelegate": false
+        },
+        {
+            "address": "Aakg29vVhQhJ5nrsAHysTUqkTBVfmgBSXU",
+            "publicKey": "0394e9f4d4eb47e8cbfda6e0d1a4082973ae178e3a60662ac84591c39d06e059f5",
+            "balance": 324230940003474,
+            "isDelegate": false
+        }
+    ]
 }
 ```

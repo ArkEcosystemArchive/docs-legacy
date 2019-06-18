@@ -5,7 +5,7 @@ ARK IoT is a growing ecosystem of _"things"_ interoperability that aims to make 
 If you previously wanted to use IoT and Crypto tech in general, you had to try dozens of libraries; wasting countless hours of tweaking and debugging.
 It's a lot like getting a 5,000-piece puzzle with no picture and no edges.
 
-Much like in crypto, ARK's approach to a _"framework for mass adoption"_ fit's perfectly here.
+Much like in crypto, ARK's approach to a _"framework for mass adoption"_ fits perfectly here.
 
 Even if you have the "big picture" in your head, you may not know where to start.
 ARK provides the "edge pieces"--or starting point--for your project; so you can spend less time debugging, and more time building.

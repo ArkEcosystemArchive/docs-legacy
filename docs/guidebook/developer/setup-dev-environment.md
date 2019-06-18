@@ -30,11 +30,11 @@ git clone git@github.com:ARKEcosystem/core.git
 
 3. Move inside the newly-created `core` directory.
 
-4. Run `lerna bootstrap`. This command will install all necessary JavaScript dependencies to get you up and running with ARK Core.
+4. Run `yarn setup`. This command will install all necessary JavaScript dependencies to get you up and running with ARK Core.
 
 5. Although we have now installed all required JavaScript dependencies, there are a couple more missing pieces that we will need to fill in to get our testnet running. In particular, ARK Core makes use of the database technology [PostgreSQL](https://www.postgresql.org/). Installing Postgres the traditional way can be somewhat cumbersome. Fortunately, Docker has our backs here, and we've got your back with Docker.
 
-6. From `core`, navigate to `docker/testnet`. From within this directory, run the following command: `docker-compose up -d postgres`. This will install Postgres with the necessary settings to work with ARK Core.
+6. Run `yarn docker ark`. This command will generate all necessary docker files. From `core`, navigate to `docker/development/testnet`. From within this directory, run the following command: `docker-compose up -d postgres`. This will install Postgres with the necessary settings to work with ARK Core.
 
 7. Return to the `core` directory.
 

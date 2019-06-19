@@ -105,21 +105,24 @@ GET /api/transactions
 
 ### Query Parameters
 
-| Name    | Type | Description                                   | Required |
-| :------ | :--: | :-------------------------------------------- | :------: |
-| page    | int  | The number of the page that will be returned. |   :x:    |
-| limit   | int  | The number of resources per page.             |   :x:    |
-| type    | int  | The transaction type to be retrieved.         |   :x:    |
-| blockId | int  | The block id to be retrieved.                 |   :x:    |
-| id      | int  | The transaction id to be retrieved.           |   :x:    |
+| Name    | Type   | Description                                       | Required |
+| :------ | :----: | :------------------------------------------------ | :------: |
+| page    | int    | The number of the page that will be returned.     | :x:      |
+| limit   | int    | The number of resources per page.                 | :x:      |
+| type    | int    | The transaction type to be retrieved.             | :x:      |
+| blockId | int    | The block id to be retrieved.                     | :x:      |
+| id      | int    | The transaction id to be retrieved.               | :x:      |
+| orderBy | string | The column by which the resources will be sorted. | :x:      |
+
+::: tip
+The `orderBy` parameter on this endpoint supports the following values: *id*, *block_id*, *type*, *version*, *timestamp*, *amount*, *fee*
+:::
 
 ### Examples
 
 ```sh
 curl --header "API-Version: 2" https://api.ark.io/api/transactions?limit=1
 ```
-
-### Response
 
 ```json
 {
@@ -152,6 +155,61 @@ curl --header "API-Version: 2" https://api.ark.io/api/transactions?limit=1
                 "human": "2019-06-17T06:54:41.000Z"
             }
         }
+    ]
+}
+```
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/transactions?orderBy=fee:desc
+```
+
+```json
+{
+    "meta": {
+        "count": 100,
+        "pageCount": 26018,
+        "totalCount": 2601719,
+        "next": "/api/v2/transactions?orderBy=fee%3Adesc&page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/transactions?orderBy=fee%3Adesc&page=1&limit=100",
+        "first": "/api/v2/transactions?orderBy=fee%3Adesc&page=1&limit=100",
+        "last": "/api/v2/transactions?orderBy=fee%3Adesc&page=26018&limit=100"
+    },
+    "data": [
+        {
+            "id": "31de62ecd08b12b897d0ab50fb8cb07cff149b8cee7116c17ccb8b3916e2eeb7",
+            "blockId": "14135536682818837490",
+            "version": 1,
+            "type": 4,
+            "amount": 0,
+            "fee": 3000000000,
+            "sender": "ARSEY4zRjc4wicXgzRZmuvUcKtBrdY4zsn",
+            "senderPublicKey": "021cd9ee596d56032e7c77e3ba8c0413ff2d5539d7a36782e8187433c3b03d22bf",
+            "signature": "3045022100e714ef935c1844f3c80a6d0aa801fb3656f914951ae4616ed6780e1721d1914a02207cf0e172ecf83081c199ffa716b1082dc06838bbebeaec6b184dd81b6d22a775",
+            "signatures": [
+                "304402204d319b1172708320cf912986d4961a513470a153d373de61ff59c34565aab55802206334f13c4a7f0b035ab49504a895e380a2f0325336204d4920cb499287b62e163045022100e5da7d060c920dbb75f44e5728ef9bd78291e470525d34885c591630707db07e0220383e244823bc3073fa43a5c597ae88fbf9292b0e3ad10901cbf47ad78353b30c304402206d659e1dbfb178be171c3fde4ce4b324e607cf75b53dc5cd80e17dc8faa99bcc0220675ec782d333564071792b3df1ad60225f7dcabd4ed124d53540206b23cac7ce304402201e083e0012e2b312aa790ed09155e9dc28a55c6f88681bdcd1fd8f511fa70dd402201ba1913eb019aeea1fdb7ae2358f16e49d32d58f927f5f7bb3b76206d2b5acf530450221009435b1327df3f96caeb275533b268d056eeaf7f23da86cb9c8a531d57c3fabda02204a1e9692844c93cd583086d9e53e7249454058fc9fb05ebd839f7663ad6e3273"
+            ],
+            "asset": {
+                "multiSignatureLegacy": {
+                    "keysgroup": [
+                        "+0294e3a351e44e87be58bf8b8a15780475c8a189b9d46304fb7140c8b042904bc9",
+                        "+02b5c2c1902d06221a2752310bbdd191c6b5febce2868e673e0efb4ceafabd9ed2",
+                        "+0308156438f8ac290d27caa9f61a38c9e7c09394d254584bd9bd1d21d90605dbde",
+                        "+023fb26000436f51b045c5a0e5cd40fd28744752d9f704ba24f4b294f4d28f3ca9",
+                        "+02e9b6be0d66aa295a8c714712e7b4570030f3f6f6f480eb829488db9cab0d60fb"
+                    ],
+                    "lifetime": 72,
+                    "min": 3
+                }
+            },
+            "confirmations": 2628705,
+            "timestamp": {
+                "epoch": 49671405,
+                "unix": 1539772605,
+                "human": "2018-10-17T10:36:45.000Z"
+            }
+        },
+        ...
     ]
 }
 ```

@@ -9,7 +9,6 @@ If you are a developer, the following steps will help you to validate your insta
   * Ensure yarn is installed. If yarn is not found, you may need to close, exit, and re-open your terminal.
 * checkout git repository for core, located here: [https://github.com/ArkEcosystem/core](https://github.com/ArkEcosystem/core)
 * `cd core`
-* `yarn install`
 * `yarn setup`
 * `yarn docker ark`
 * `(cd docker/environments/unitnet && docker-up -d postgres)`

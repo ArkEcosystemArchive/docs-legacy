@@ -10,17 +10,33 @@ title: "Testing"
 
 Core is built with testing in mind. In fact, support for testing with `jest` is included out of the box and a `jest-preset.json` file is already set up.
 
-By default, Core's `__tests__` directory contains two directories: `integration` and `unit`. Unit tests are tests that focus on a very small, isolated portion of your code. In fact, most unit tests probably focus on a single method. Integration tests may test a larger portion of your code, including how several objects interact with each other or even a full HTTP request to a JSON endpoint.
+Core's `__tests__` directory contains 4 main test directories: `e2e`, `functional`, `integration` and `unit`.
 
-## Benefits
-
-### Integration Tests
-
-Integration tests generally are rather slow compared to unit tests as they test the behaviour of larger parts of an application. While that could be seen as a negative, those tests will ensure that the application is tested from the end-users perspective.
+## The 4 types of tests
 
 ### Unit Tests
 
-Unit tests generally are the fastest tests in your suite. The speed at which they are executed is great but they give you no guarantee that all components work once they are stitched together, which is why need the previously mentioned `integration` tests.
+Unit tests are tests that focus on a very small, isolated portion of your code. In fact, most unit tests probably focus on a single method.
+
+They generally are the fastest tests in your suite. The speed at which they are executed is great but they give you no guarantee that all components work once they are stitched together, which is why need the previously mentioned `integration` tests.
+
+### Integration Tests
+
+Integration tests may test a larger portion of your code, including how several objects interact with each other or external interaction like making an HTTP request to an API endpoint.
+
+They are generally a bit slower compared to unit tests as they test the behaviour of larger parts of an application. However they guarantee that different parts of the application are working correctly together.
+
+### Functional Tests
+
+Functional tests launch the whole application and apply some real-life scenarios : for example creating and sending a valid transaction, expecting it to be forged in the next block.
+
+Those tests will ensure that the application is tested from the end-users perspective.
+
+### End-to-end tests
+
+End-to-end (e2e) tests go further by spinning up real nodes on a local network, actually running the Ark blockchain on a test network (testnet) and executing scenarios on it.
+
+They will be most useful to verify peer-to-peer interaction and running scenarios on a real network.
 
 ## Code Organization
 

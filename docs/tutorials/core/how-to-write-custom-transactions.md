@@ -169,6 +169,9 @@ You can see we defined the asset property to have our *businessRegistration* obj
 
 Notice we didn't set up any validation rule for the fee (that we decided to be 5 ARK). This will be done in another file, we will see it in the next sections.
 
+To understand how the validation engine works, I recommend you to check out the [AJV website](https://ajv.js.org/). We have set up some custom keywords that can be useful, like *address*, *publicKey*, *bignumber*, *base58* : you can check them all in `packages/crypto/src/validation/schemas.ts`.
+
+
 ### serialize <!-- markdown-title-case: skip-line -->
 
 The *serialize* method will take the data from the transaction class, and serialize it to a single "buffer" of bytes.
@@ -221,6 +224,14 @@ public deserialize(buf: ByteBuffer): void {
 ```
 
 We use the same *ByteBuffer* to read the bytes and set our `asset` property to the corresponding *businessRegistration* object.
+
+### About ser / deserializing
+
+Serialize / deserialize is used extensively in Core code for storage, transfer and validation.
+
+This is why it is important for you to write ser / deserialize methods for your custom transactions. To make sure you implemented correctly these methods, you have to test that your transaction object, when serialized and deserialized, gives back the same transaction object (you can see examples in core crypto unit tests).
+
+We use `ByteBuffer` as it allows easily to convert an object to a series of bytes, and doing the reverse operation reading from bytes. You can read about it in [ByteBuffer github](https://github.com/protobufjs/bytebuffer.js#readme) and see how existing Core transactions use it for examples.
 
 ## The BusinessRegistrationTransactionHandler Class
 
@@ -520,6 +531,81 @@ Again, there is a fee configuration to do here for static fees:
 ```
 
 Here we set the static fee to 5 ARK.
+
+## BusinessBuilder to create our transactions
+
+An additional step is to create what we call a *builder* for our custom transaction type.
+
+We have those *builders* for every transaction in Core, they are helpers to create transactions : we use them extensively in tests.
+
+Have a look at the `crypto/src/transactions/builder` folder where you will see how it is implemented for each transaction type.
+
+Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessBuilder :
+
+```ts
+import { Transactions, Interfaces, Utils } from "@arkecosystem/crypto";
+
+export class BusinessBuilder extends Transactions.TransactionBuilder<BusinessBuilder> {
+    constructor() {
+        super();
+
+        this.data.type = 100;
+        this.data.fee = Utils.BigNumber.make(500000000);
+        this.data.amount = Utils.BigNumber.ZERO;
+        this.data.asset = {};
+    }
+
+    public businessAsset(name: string, website: string): BusinessBuilder {
+        this.data.asset = {
+            name,
+            website
+        };
+
+        return this;
+    }
+
+    public getStruct(): Interfaces.ITransactionData {
+        const struct: Interfaces.ITransactionData = super.getStruct();
+        struct.amount = this.data.amount;
+        struct.asset = this.data.asset;
+        return struct;
+    }
+
+    protected instance(): BusinessBuilder {
+        return this;
+    }
+}
+```
+
+Pretty straightforward as you can see :
+
+- We initialize the transaction type, fee, amount and asset in the constructor
+
+- We implement a specific method `businessAsset` in order to set the asset property of our transaction
+
+- We implement the `getStruct` method, using the inherited method and adding the properties we want to have in the struct object
+
+Now we could use this builder to create our transactions :
+
+```ts
+const builder = new BusinessBuilder();
+const businessTx = builder
+    .businessAsset("google", "www.google.com")
+    .sign("passphrase")
+    .getStruct();
+```
+
+Note : creating builders inside plugin folder is enabled starting with Core version 2.6.
+
+## Testing
+
+All testing happens in the root `__tests__` directory. (not inside your plugin directory)
+
+Basically there are 4 main folders in the `__tests__` directory : `e2e`, `functional`, `integration`, `unit`. Each corresponds to a type of tests.
+
+Say you want to write unit tests for your plugin. Then you will create a directory inside the `unit` subfolder with your plugin name, and write your tests inside. You will run them with `yarn test unit/<yourPluginName>`.
+
+You can read about testing details in [the testing documentation](../../../guidebook/testing.md).
 
 ## Wrapping It Up
 

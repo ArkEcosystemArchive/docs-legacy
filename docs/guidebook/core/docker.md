@@ -33,10 +33,6 @@ Orchestrators with Docker as a first class citizen:
 
 - ARK Core Production ready Docker images are now available at [Docker Hub](https://hub.docker.com/r/arkecosystem/core)
 
-::: warning
-By default for both `relay` and `forger` modes, PostgreSQL is run in a separate container. It's port gets mapped to your `localhost`, so you should not have PostgreSQL running locally.
-:::
-
 ### Run Relay Only
 
 ```bash
@@ -165,18 +161,32 @@ This will build your ARK Core Docker image and run two separate containers. One 
 As a preliminary step, installation of development tools is necessary (only needed once, when doing initial update):
 
 ```bash
-docker exec -it core-devnet sudo apk add make gcc g++ git python
+docker exec -it core-$NETWORK sudo apk add make gcc g++ git python
 ```
 
 > We are all set! Run the update and follow instructions:
 
 ```bash
-docker exec -it core-devnet ark update
+docker exec -it core-$NETWORK ark update
 ```
 
 ::: tip
 Updates and all changes made to the containers are kept even on container or host restart.
 :::
+
+### Update is also possible by destroying and running Core container from scratch, so it downloads the latest image.
+
+::: tip
+Make sure you destroy only Core container in order to keep your database and avoid syncing the blockchain from zero block. The commands example below does it.
+:::
+
+```bash
+cd docker/production/$NETWORK 
+docker stop core-$NETWORK
+docker rm core-$NETWORK
+docker rmi $(docker images -q)
+docker-compose up -d core
+```
 
 ## Development
 

@@ -212,6 +212,20 @@ docker exec -it core-mainnet ark update
 Updates and all changes made to the containers are kept even on container or host restart.
 :::
 
+### Update is also possible by destroying and running Core container from scratch, so it downloads the latest image.
+
+::: tip
+Make sure you destroy only Core container in order to keep your database and avoid syncing the blockchain from zero block. The commands example below does it.
+:::
+
+```bash
+cd mainnet 
+docker stop core-mainnet
+docker rm core-mainnet
+docker rmi $(docker images -q)
+docker-compose up -d core
+```
+
 ### FAQ
 
 #### How Do I Start With Empty DB?

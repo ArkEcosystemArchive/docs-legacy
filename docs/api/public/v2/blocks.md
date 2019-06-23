@@ -20,12 +20,17 @@ GET /api/blocks
 
 ### Query Parameters
 
-| Name   | Type   | Description                                   | Required |
-| :----- | :----: | :-------------------------------------------- | :------: |
-| page   | int    | The number of the page that will be returned. | :x:      |
-| limit  | int    | The number of resources per page.             | :x:      |
-| id     | string | The identifier of the block to be retrieved.  | :x:      |
-| height | int    | The height of the block to be retrieved.      | :x:      |
+| Name    | Type   | Description                                       | Required |
+| :------ | :----: | :------------------------------------------------ | :------: |
+| page    | int    | The number of the page that will be returned.     | :x:      |
+| limit   | int    | The number of resources per page.                 | :x:      |
+| id      | string | The identifier of the block to be retrieved.      | :x:      |
+| height  | int    | The height of the block to be retrieved.          | :x:      |
+| orderBy | string | The column by which the resources will be sorted. | :x:      |
+
+::: tip
+The `orderBy` parameter on this endpoint supports the following values: *id*, *height*, *previous_block*, *payload_hash*, *generator_public_key*, *timestamp*
+:::
 
 ### Examples
 
@@ -152,6 +157,55 @@ curl --header "API-Version: 2" https://api.ark.io/api/blocks?height=7000042
                 "epoch": 57039818,
                 "unix": 1547141018,
                 "human": "2019-01-10T17:23:38.000Z"
+            }
+        }
+    ]
+}
+```
+
+```sh
+curl --header "API-Version: 2" "https://api.ark.io/api/blocks?limit=1&orderBy=height:asc"
+```
+
+```json
+{
+    "meta": {
+        "count": 1,
+        "pageCount": 8864471,
+        "totalCount": 8864471,
+        "next": "/api/v2/blocks?limit=1&orderBy=height%3Aasc&page=2",
+        "previous": null,
+        "self": "/api/v2/blocks?limit=1&orderBy=height%3Aasc&page=1",
+        "first": "/api/v2/blocks?limit=1&orderBy=height%3Aasc&page=1",
+        "last": "/api/v2/blocks?limit=1&orderBy=height%3Aasc&page=8864471"
+    },
+    "data": [
+        {
+            "id": "4366553906931540162",
+            "version": 0,
+            "height": 1,
+            "previous": null,
+            "forged": {
+                "reward": 0,
+                "fee": 0,
+                "total": 0,
+                "amount": 12500000000000004
+            },
+            "payload": {
+                "hash": "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
+                "length": 313052
+            },
+            "generator": {
+                "address": "AdLb2r8XEmhNqW3CXyNGEEVZxXAfvTqPWR",
+                "publicKey": "03a4d147a417376742f9ab78c7c3891574d19376aa62e7bbddceaf12e096e79fe0"
+            },
+            "signature": "3045022100c442ef265f2a7fa102d61e9a180e335fd17e8e3224307dadf8ac856e569c5c5102201a34cb1302cf4e0887b45784bfbdaf5cfbc44f6d6dad638d56bafa82ec96fd45",
+            "confirmations": 8715645,
+            "transactions": 1492,
+            "timestamp": {
+                "epoch": 0,
+                "unix": 1490101200,
+                "human": "2017-03-21T13:00:00.000Z"
             }
         }
     ]

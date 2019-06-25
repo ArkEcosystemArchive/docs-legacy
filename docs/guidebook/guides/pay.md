@@ -151,3 +151,9 @@ await gateway.start();
     port: '4003'
 }])
 ```
+
+### Stop the Listener and Reset the Configuration.
+
+```js
+.reset()
+```

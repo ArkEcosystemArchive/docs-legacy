@@ -28,10 +28,14 @@ GET /api/peers
 | version | string | The node version by which the resources will be filtered.     | :x:      |
 | orderBy | string | The column by which the resources will be sorted.             | :x:      |
 
+::: tip
+The `orderBy` parameter on this endpoint supports the following value: *version*
+:::
+
 ### Examples
 
 ```sh
-curl --header "API-Version: 2" https://api.ark.io/api/peers
+curl --header "API-Version: 2" https://api.ark.io/api/peers?orderBy=version:desc
 ```
 
 ### Response
@@ -42,15 +46,15 @@ curl --header "API-Version: 2" https://api.ark.io/api/peers
         "count": 100,
         "pageCount": 2,
         "totalCount": 170,
-        "next": "/api/v2/peers?page=2&limit=100",
+        "next": "/api/v2/peers?orderBy=version%3Adesc&page=2&limit=100",
         "previous": null,
-        "self": "/api/v2/peers?page=1&limit=100",
-        "first": "/api/v2/peers?page=1&limit=100",
-        "last": "/api/v2/peers?page=2&limit=100"
+        "self": "/api/v2/peers?orderBy=version%3Adesc&page=1&limit=100",
+        "first": "/api/v2/peers?orderBy=version%3Adesc&page=1&limit=100",
+        "last": "/api/v2/peers?orderBy=version%3Adesc&page=2&limit=100"
     },
     "data": [
         {
-            "ip": "178.32.65.139",
+            "ip": "5.196.105.36",
             "port": 4001,
             "ports": {
                 "@arkecosystem/core-webhooks": -1,
@@ -59,8 +63,8 @@ curl --header "API-Version: 2" https://api.ark.io/api/peers
                 "@arkecosystem/core-api": 4003
             },
             "version": "2.4.12",
-            "height": 8691474,
-            "latency": 11
+            "height": 8716307,
+            "latency": 529
         },
         ...
     ]

@@ -18,18 +18,21 @@ GET /api/wallets
 
 ### Query Parameters
 
-| Name  | Type | Description                                   | Required |
-| :---- | :--: | :-------------------------------------------- | :------: |
-| page  | int  | The number of the page that will be returned. |   :x:    |
-| limit | int  | The number of resources per page.             |   :x:    |
+| Name    | Type   | Description                                       | Required |
+| :------ | :----: | :------------------------------------------------ | :------: |
+| page    | int    | The number of the page that will be returned.     | :x:      |
+| limit   | int    | The number of resources per page.                 | :x:      |
+| orderBy | string | The column by which the resources will be sorted. | :x:      |
+
+::: tip
+The `orderBy` parameter on this endpoint supports the following values: *address*, *balance*, *username*, *vote*
+:::
 
 ### Examples
 
 ```sh
 curl --header "API-Version: 2" https://api.ark.io/api/wallets
 ```
-
-### Response
 
 ```json
 {
@@ -51,6 +54,57 @@ curl --header "API-Version: 2" https://api.ark.io/api/wallets
             "isDelegate": false
         },
         ...
+    ]
+}
+```
+
+```sh
+curl --header "API-Version: 2" "https://api.ark.io/api/wallets?orderBy=balance&limit=5"
+```
+
+```json
+{
+    "meta": {
+        "count": 5,
+        "pageCount": 23733,
+        "totalCount": 118664,
+        "next": "/api/v2/wallets?orderBy=balance&limit=5&page=2",
+        "previous": null,
+        "self": "/api/v2/wallets?orderBy=balance&limit=5&page=1",
+        "first": "/api/v2/wallets?orderBy=balance&limit=5&page=1",
+        "last": "/api/v2/wallets?orderBy=balance&limit=5&page=23733"
+    },
+    "data": [
+        {
+            "address": "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
+            "publicKey": "021d03bace0687a1a5e797f884b13fb46f817ec32de1374a7f223f24404401d220",
+            "balance": 1969102010034762,
+            "isDelegate": false
+        },
+        {
+            "address": "AUexKjGtgsSpVzPLs6jNMM6vJ6znEVTQWK",
+            "publicKey": "02ff171adaef486b7db9fc160b28433d20cf43163d56fd28fee72145f0d5219a4b",
+            "balance": 1252766744221840,
+            "isDelegate": false
+        },
+        {
+            "address": "AdTyTzaXPtj1J1DzTgVksa9NYdUuXCRbm1",
+            "publicKey": "02d4c5a7206d8298ef84a79b4c21a73ad5ae460cfff964f660f517960bb834040d",
+            "balance": 875001440401317,
+            "isDelegate": false
+        },
+        {
+            "address": "AdS7WvzqusoP759qRo6HDmUz2L34u4fMHz",
+            "publicKey": "03e7635481b035149829ef74f972e69eca75363bc96e75be57579b0e6fb3f22192",
+            "balance": 686779104859574,
+            "isDelegate": false
+        },
+        {
+            "address": "Aakg29vVhQhJ5nrsAHysTUqkTBVfmgBSXU",
+            "publicKey": "0394e9f4d4eb47e8cbfda6e0d1a4082973ae178e3a60662ac84591c39d06e059f5",
+            "balance": 299230936869587,
+            "isDelegate": false
+        }
     ]
 }
 ```

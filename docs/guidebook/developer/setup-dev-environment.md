@@ -12,8 +12,6 @@ The following development tools need to be installed on your machine to develop 
 
 - [Docker](https://www.docker.com/). Docker is a container management tool that's rapidly becoming the industry standard. If you are unfamiliar with containers or why managing them is important, fear not: when you install ARK Core, a robust Docker setup is provided for you out of the box. However, to use that setup, you are going to need a Docker installation on your machine already.
 
-- [Lerna](https://github.com/lerna/lerna). In Greek mythology, Lerna was the home of the hydra, a fearsome beast with many heads. In JavaScript land, Lerna is a library used to tackle JavaScript projects with many packages. With Lerna installed as a **global** dependency, you are empowered to be fearless in the face of large JavaScript projects with many moving parts — including ARK Core.
-
 - [Yarn](https://yarnpkg.com/en/). Yarn is a package manager that seeks to build upon the foundation of Node's npm. Although yarn is not a strict requirement, in many cases it works faster and more elegantly than npm. Most ARK developers use yarn, and as such, you will see `yarn` commands often used throughout our documentation.
 
 ## Spinning Up Your First Testnet

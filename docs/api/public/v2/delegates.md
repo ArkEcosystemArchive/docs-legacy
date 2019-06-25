@@ -22,10 +22,15 @@ GET /api/delegates
 
 ### Query Parameters
 
-| Name  | Type | Description                                   | Required |
-| :---- | :--: | :-------------------------------------------- | :------: |
-| page  | int  | The number of the page that will be returned. |   :x:    |
-| limit | int  | The number of resources per page.             |   :x:    |
+| Name    | Type   | Description                                       | Required |
+| :------ | :----: | :------------------------------------------------ | :------: |
+| page    | int    | The number of the page that will be returned.     | :x:      |
+| limit   | int    | The number of resources per page.                 | :x:      |
+| orderBy | string | The column by which the resources will be sorted. | :x:      |
+
+::: tip
+The `orderBy` parameter on this endpoint supports the following values: *username*, *rank*, *votes*
+:::
 
 ### Examples
 
@@ -149,6 +154,55 @@ curl --header "API-Version: 2" "https://api.ark.io/api/delegates?page=5&limit=2"
                 "total": 27360598159298
             }
         }
+    ]
+}
+```
+
+```sh
+curl --header "API-Version: 2" https://api.ark.io/api/delegates?orderBy=votes:desc
+```
+
+```json
+{
+    "meta": {
+        "count": 100,
+        "pageCount": 11,
+        "totalCount": 1038,
+        "next": "/api/v2/delegates?orderBy=votes%3Adesc&page=2&limit=100",
+        "previous": null,
+        "self": "/api/v2/delegates?orderBy=votes%3Adesc&page=1&limit=100",
+        "first": "/api/v2/delegates?orderBy=votes%3Adesc&page=1&limit=100",
+        "last": "/api/v2/delegates?orderBy=votes%3Adesc&page=11&limit=100"
+    },
+    "data": [
+        {
+            "username": "biz_classic",
+            "address": "AKdr5d9AMEnsKYxpDcoHdyyjSCKVx3r9Nj",
+            "publicKey": "020431436cf94f3c6a6ba566fe9e42678db8486590c732ca6c3803a10a86f50b92",
+            "votes": 296505542169896,
+            "rank": 1,
+            "blocks": {
+                "produced": 151063,
+                "last": {
+                    "id": "41451ba9c5af806b3b56b3c5fa60001cf26a98d33d63e4e25aeae94ca789d574",
+                    "height": 8715707,
+                    "timestamp": {
+                        "epoch": 70844000,
+                        "unix": 1560945200,
+                        "human": "2019-06-19T11:53:20.000Z"
+                    }
+                }
+            },
+            "production": {
+                "approval": 2.35
+            },
+            "forged": {
+                "fees": 1173040419815,
+                "rewards": 30212600000000,
+                "total": 31385640419815
+            }
+        },
+        ...
     ]
 }
 ```

@@ -232,13 +232,13 @@ const char* password = "yourWiFiPassword";
 
 void doExample() {
     //  create the connection.
-    ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.55", 4003);
+    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
 
     //  retrieve a specific block.
     std::string blockResponse = connection.api.blocks.get("58328125061111756");
 
     //  create transaction payload.
-    auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
+    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
         "recipientID",
         1000000000,
         "vendorfield",
@@ -328,13 +328,13 @@ const char* password = "yourWiFiPassword";
 
 void doExample() {
     //  create the connection.
-    ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.55", 4003);
+    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
 
     //  retrieve a specific block.
     std::string blockResponse = connection.api.blocks.get("58328125061111756");
 
     //  create transaction payload.
-    auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
+    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
         "recipientID",
         1000000000,
         "vendorfield",
@@ -389,13 +389,13 @@ void loop() { };
 
 int main() {
     //  create the connection.
-    ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.55", 4003);
+    Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.55", 4003);
 
     //  retrieve a specific block.
     std::string blockResponse = connection.api.blocks.get("58328125061111756");
 
     //  create transaction payload.
-    auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
+    auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
         "recipientID",
         1000000000,
         "vendorfield",

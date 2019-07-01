@@ -104,7 +104,7 @@ We'll also define the pin of the LED we want to blink.
 Create the connection object we'll use to talk to the [ARK blockchain](/introduction/blockchain) via its [API](/api).
 
 ```cpp
-ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
+Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
 ```
 
 Also create a variable to store your [VendorField](/glossary/#smartbridge), this will be your board ID's hash and is what we'll be searching for on the blockchain later.
@@ -172,7 +172,7 @@ const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 #define led 13
 
-ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
+Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
 
 char vendorField[Sha256::BLOCK_LEN + 1] = { '\0' };
 
@@ -219,7 +219,7 @@ void sendTX(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
     const auto shaHash = Sha256::getHash(&bytArray[0], idByteLen);
     memmove(vfBuffer, BytesToHex(&shaHash.value[0], &shaHash.value[0] + shaHash.HASH_LEN).c_str(), Sha256::BLOCK_LEN);
 
-     Transaction transaction = ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
+     Transaction transaction = Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
     const auto txJson = transaction.toJson();
 
     char jsonBuffer[576] = { '\0' };
@@ -441,7 +441,7 @@ const char* yourSecretPassphrase = "yourSecretPassphrase";
 
 #define led 13
 
-ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
+Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
 
 char vendorField[Sha256::BLOCK_LEN + 1] = { '\0' };
 
@@ -455,7 +455,7 @@ void sendTX(char vfBuffer[Sha256::BLOCK_LEN + 1]) {
     const auto shaHash = Sha256::getHash(&bytArray[0], idByteLen);
     memmove(vfBuffer, BytesToHex(&shaHash.value[0], &shaHash.value[0] + shaHash.HASH_LEN).c_str(), Sha256::BLOCK_LEN);
 
-    Transaction transaction = ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
+    Transaction transaction = Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, vfBuffer, yourSecretPassphrase);
     const auto txJson = transaction.toJson();
 
     char jsonBuffer[576] = { '\0' };

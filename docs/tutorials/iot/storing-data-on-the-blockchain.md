@@ -246,14 +246,14 @@ Transaction txFromHash(char hashBuffer[64]) {
 'return' the line to build the transaction.
 
 ```cpp
-return ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+return Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 ```
 
 It should look like this when you're finished:
 
 ```cpp
 Transaction txFromHash(char hashBuffer[64]) {
-   return ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+   return Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 };
 ```
 
@@ -285,7 +285,7 @@ std::string jsonStr(jsonBuffer);
 This is where we will use ARK Cpp-Client to create an API connection using the 'darkIp' and 'darkPort' we declared earlier.
 
 ```cpp
-ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
+Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
 ```
 
 Next we send the transactions array to the ARK network!
@@ -315,7 +315,7 @@ void loop() {
     snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_str());
     std::string jsonStr(jsonBuffer);
 
-    ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
+    Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
 
     std::string txSendResponse = connection.api.transactions.send(jsonStr);
         Serial.print("\ntxSendResponse: ");
@@ -359,7 +359,7 @@ void idHashToBuffer(char hashBuffer[64]) {
 }
 
 Transaction txFromHash(char hashBuffer[64]) {
-    return ARK::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
+    return Ark::Crypto::Transactions::Builder::buildTransfer(recipientId, 1, hashBuffer, yourSecretPassphrase);
 }
 
 void setupWiFi() {
@@ -390,7 +390,7 @@ void loop() {
     snprintf(&jsonBuffer[0], 576, "{\"transactions\":[%s]}", transaction.toJson().c_str());
     std::string jsonStr(jsonBuffer);
 
-    ARK::Client::Connection<ARK::Client::Api> connection(darkIp, darkPort);
+    Ark::Client::Connection<Ark::Client::Api> connection(darkIp, darkPort);
 
     std::string txSendResponse = connection.api.transactions.send(jsonStr);
         Serial.print("\ntxSendResponse: ");

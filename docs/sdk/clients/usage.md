@@ -147,7 +147,7 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 #### CMake
 
 ```bash
-git clone https://github.com/ARKEcosystem/cpp-client
+git clone https://github.com/ArkEcosystem/cpp-client
 cd cpp-client
 # Init & Update Micro-Ecc Submodule
 git submodule init
@@ -712,7 +712,7 @@ A `Connection` expects an IP Address and Port by which the API can be reached.
 An example Connection, that interfaces with the API of an ARK node, would be created as follows:
 
 ```cpp
-ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.54", 4003);
+Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::

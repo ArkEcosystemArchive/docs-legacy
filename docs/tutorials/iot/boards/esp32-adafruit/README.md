@@ -472,7 +472,7 @@ int port = 4003;
  * This is how you define a connection while speficying the API class as a 'template argument'
  * You instantiate a connection by passing a IP address as a 'c_string', and the port as an 'int'.
  */
-ARK::Client::Connection<ARK::Client::Api> connection(peer, port);
+Ark::Client::Connection<Ark::Client::Api> connection(peer, port);
 /**/
 
 /****************************************/
@@ -927,7 +927,7 @@ void checkCrypto() {
    * This is how you can check the default 'Network' "Transaction 'Fees' by type.
    * In this example, it should return a 'uint64_t' integer of '10000000' as the default 'Fee' for a 'Transaction' of 'Type' '0'.
    */
-    ARK::Crypto::Configuration::Fee fee;
+    Ark::Crypto::Configuration::Fee fee;
     unsigned long typeZeroTransactionFee = fee.get(0);
     Serial.print("\n Type 0 default Transaction Fee: ");
     Serial.println(typeZeroTransactionFee); // The response is a 'uint64_t' integer.
@@ -1016,7 +1016,7 @@ void checkCrypto() {
    */
   const auto text = "Computer science is no more about computers than astronomy is about telescopes.";
   const auto passphrase5 = "viable weasel wage promote praise inflict jaguar tackle color unusual exclude direct";
-  ARK::Crypto::Utils::Message message;
+  Ark::Crypto::Utils::Message message;
   message.sign(text, passphrase5);
     Serial.print("\nSignature from Signed Message: ");
     Serial.println(BytesToHex(message.signature).c_str()); // the 'message.signature' is a byte-array. Use 'BytesToHex()' to view the output. Arduino requires a 'c_str()' to 'print'.

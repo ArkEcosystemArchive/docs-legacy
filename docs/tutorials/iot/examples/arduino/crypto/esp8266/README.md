@@ -44,7 +44,7 @@ void checkCrypto() {
    * This is how you can check the default 'Network' "Transaction 'Fees' by type.
    * In this example, it should return a 'uint64_t' integer of '10000000' as the default 'Fee' for a 'Transaction' of 'Type' '0'.
    */
-    ARK::Crypto::Configuration::Fee fee;
+    Ark::Crypto::Configuration::Fee fee;
     unsigned long typeZeroTransactionFee = fee.get(0);
     Serial.print("\n Type 0 default Transaction Fee: ");
     Serial.println(typeZeroTransactionFee); // The response is a 'uint64_t' integer.

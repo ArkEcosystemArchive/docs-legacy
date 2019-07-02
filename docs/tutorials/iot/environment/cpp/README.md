@@ -81,7 +81,7 @@ git clone --branch arduino https://github.com/ARKEcosystem/cpp-client.git
 1). Clone the Cpp-Crypto from GitHub.
 
 ```asciidoc
-git clone --branch arduino https://github.com/ARKEcosystem/cpp-crypto.git
+git clone --branch arduino https://github.com/ArkEcosystem/cpp-crypto.git
 ```
 
 2). Copy the Cpp-Crypto folder to your Arduino "/libraries" folder.

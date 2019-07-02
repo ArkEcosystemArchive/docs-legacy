@@ -147,7 +147,7 @@ If you are using CMake head over to [cmake.org](https://www.cmake.org/download/)
 #### Make
 
 ```bash
-git clone https://github.com/ARKEcosystem/cpp-crypto
+git clone https://github.com/ArkEcosystem/cpp-crypto
 cd cpp-crypto
 # Init & Update Micro-Ecc Submodule
 git submodule init
@@ -807,7 +807,7 @@ transaction := crypto.BuildTransfer(
 Using the Transaction builder class.
 
 ```cpp
-ARK::Crypto::Transactions::Transaction transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
+Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",
@@ -818,9 +818,9 @@ ARK::Crypto::Transactions::Transaction transfer = ARK::Crypto::Transactions::Bui
 We can also do this manually.
 
 ```cpp
-  ARK::Crypto::Transactions::Transaction transaction;
-  transaction.type = ARK::Crypto::Enums::Types::TRANSFER;
-  transaction.fee = ARK::Crypto::Configuration::Fee().get(ARK::Crypto::Enums::Types::TRANSFER);
+  Ark::Crypto::Transactions::Transaction transaction;
+  transaction.type = Ark::Crypto::Enums::Types::TRANSFER;
+  transaction.fee = Ark::Crypto::Configuration::Fee().get(Ark::Crypto::Enums::Types::TRANSFER);
   transaction.recipientId = "recipientId";
   transaction.amount = 1000000000;
   transaction.vendorField = "vendorfield";
@@ -963,14 +963,14 @@ serialized := crypto.SerializeTransaction(transaction)
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Transactions::Transaction transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
+Ark::Crypto::Transactions::Transaction transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",
     "passphrase",
     "secondPassphrase");
 
-ARK::Crypto::Transactions::Serializer serializer(transfer);
+Ark::Crypto::Transactions::Serializer serializer(transfer);
 std::string serializedTransaction = serializer.serialize();
 ```
 
@@ -1085,7 +1085,7 @@ transaction := crypto.DeserializeTransaction(serialized)
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Transactions::Deserializer deserializer("serialized_transaction");
+Ark::Crypto::Transactions::Deserializer deserializer("serialized_transaction");
 auto actual = deserializer.deserialize();
 ```
 
@@ -1210,7 +1210,7 @@ message, _ := crypto.SignMessage("Hello World", "top secret")
 ```cpp
 const auto text = "Computer science is no more about computers than astronomy is about telescopes.";
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-ARK::Crypto::Utils::Message message;
+Ark::Crypto::Utils::Message message;
 message.sign(text, passphrase);
 ```
 
@@ -1340,10 +1340,10 @@ ok, err := message.Verify()
 
 ```cpp
 const auto text = "Computer science is no more about computers than astronomy is about telescopes.";
-ARK::Crypto::Identities::PublicKey publicKey = ARK::Crypto::Identities::PublicKey::fromHex("0275776018638e5c40f1b922901e96cac2caa734585ef302b4a2801ee9a338a456");
+Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromHex("0275776018638e5c40f1b922901e96cac2caa734585ef302b4a2801ee9a338a456");
 std::vector<uint8_t> signature = HexToBytes("3044022021704f2adb2e4a10a3ddc1d7d64552b8061c05f6d12a168c69091c75581d611402200edf37689d2786fc690af9f0f6fa1f629c95695039f648a6d455484302402e93");
 
-ARK::Crypto::Utils::Message message(
+Ark::Crypto::Utils::Message message(
     text,
     publicKey,
     signature
@@ -1486,7 +1486,7 @@ address, _ := crypto.AddressFromPassphrase("this is a top secret passphrase")
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
 const uint8_t networkVersion = 0x1E;
-ARK::Crypto::Identities::Address address = ARK::Crypto::Identities::Address::fromPassphrase(passphrase, networkVersion);
+Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPassphrase(passphrase, networkVersion);
 ```
 
 :::
@@ -1590,9 +1590,9 @@ address := publicKey.ToAddress()
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+Ark::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
 const uint8_t networkVersion = 0x1E;
-ARK::Crypto::Identities::Address address = ARK::Crypto::Identities::Address::fromPublicKey(publicKey, networkVersion);
+Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPublicKey(publicKey, networkVersion);
 ```
 
 :::
@@ -1700,7 +1700,7 @@ fmt.Println(privateKey.ToAddress())
 ```cpp
 PrivateKey privateKey("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
 const uint8_t networkVersion = 0x1E;
-ARK::Crypto::Identities::Address address = ARK::Crypto::Identities::Address::fromPrivateKey(privateKey, networkVersion);
+Ark::Crypto::Identities::Address address = Ark::Crypto::Identities::Address::fromPrivateKey(privateKey, networkVersion);
 ```
 
 :::
@@ -1802,9 +1802,9 @@ fmt.Println(crypto.ValidateAddress("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib"))
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Identities::Address address("DStZXkgpEjxbG355nQ26vnkp95p24U9tsV");
+Ark::Crypto::Identities::Address address("DStZXkgpEjxbG355nQ26vnkp95p24U9tsV");
 const uint8_t networkVersion = 0x1E;
-bool isValid = ARK::Crypto::Identities::Address::validate(address, networkVersion);
+bool isValid = Ark::Crypto::Identities::Address::validate(address, networkVersion);
 ```
 
 :::
@@ -1914,7 +1914,7 @@ privateKey, _ := crypto.PrivateKeyFromPassphrase("this is a top secret passphras
 
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-ARK::Crypto::Identities::PrivateKey privateKey = ARK::Crypto::Identities::PrivateKey::fromPassphrase(passphrase);
+Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromPassphrase(passphrase);
 ```
 
 :::
@@ -2013,7 +2013,7 @@ privateKey, _ := crypto.PrivateKeyFromHex("d8839c2432bfd0a67ef10a804ba991eabba19
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Identities::PrivateKey privateKey = ARK::Crypto::Identities::PrivateKey::fromHex("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
+Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromHex("950981ce17df662dbc1d25305f8597a71309fb8f7232203a0944477e2534b021");
 ```
 
 :::
@@ -2095,7 +2095,7 @@ This function has not been implemented in this client library.
 
 ```cpp
 const char* wifStr = "SEZuJZouNK8GLXNApjciH4QnSKiNr971exVcL2Y6XfrDF5o977zB";
-ARK::Crypto::Identities::PrivateKey privateKey = ARK::Crypto::Identities::PrivateKey::fromWIFString(wifStr, wifByte);
+Ark::Crypto::Identities::PrivateKey privateKey = Ark::Crypto::Identities::PrivateKey::fromWIFString(wifStr, wifByte);
 ```
 
 :::
@@ -2188,7 +2188,7 @@ publicKey, _ := crypto.PublicKeyFromPassphrase("this is a top secret passphrase"
 
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
-ARK::Crypto::Identities::PublicKey publicKey = ARK::Crypto::Identities::PublicKey::fromPassphrase(passphrase);
+Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromPassphrase(passphrase);
 ```
 
 :::
@@ -2280,7 +2280,7 @@ publicKey, _ := crypto.PublicKeyFromHex("034151a3ec46b5670a682b0a63394f863587d1b
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Identities::PublicKey publicKey = ARK::Crypto::Identities::PublicKey::fromHex("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+Ark::Crypto::Identities::PublicKey publicKey = Ark::Crypto::Identities::PublicKey::fromHex("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
 ```
 
 :::
@@ -2362,8 +2362,8 @@ This function has not been implemented in this client library.
 ::: tab C++
 
 ```cpp
-ARK::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
-bool isValid = ARK::Crypto::Identities::PublicKey::validate(publicKey);
+Ark::Crypto::Identities::PublicKey publicKey("029fdf41a7d69d8efc7b236c21b9509a23d862ea4ed8b13a56e31eee58dbfd97b4");
+bool isValid = Ark::Crypto::Identities::PublicKey::validate(publicKey);
 ```
 
 :::
@@ -2457,7 +2457,7 @@ privateKey, _ := crypto.PrivateKeyFromPassphrase("this is a top secret passphras
 ```cpp
 const auto passphrase = "bullet parade snow bacon mutual deposit brass floor staff list concert ask";
 const uint8_t wifByte = 0xaa;
-ARK::Crypto::Identities::WIF wif = ARK::Crypto::Identities::WIF::fromPassphrase(passphrase, wifByte);
+Ark::Crypto::Identities::WIF wif = Ark::Crypto::Identities::WIF::fromPassphrase(passphrase, wifByte);
 ```
 
 :::

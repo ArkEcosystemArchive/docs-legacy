@@ -156,7 +156,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-ARK::Client::Connection<ARK::Client::Api> connection("167.114.29.54", 4003);
+Ark::Client::Connection<Ark::Client::Api> connection("167.114.29.54", 4003);
 ```
 
 :::
@@ -430,7 +430,7 @@ Address address = Address::fromPassphrase(passphrase, devnetByte);
 ```
 
 ````cpp
-uint64_t epoch = ARK::Crypto::Utils::Slot::epoch(ARK::Crypto::Networks::Devnet);
+uint64_t epoch = Ark::Crypto::Utils::Slot::epoch(Ark::Crypto::Networks::Devnet);
 
 //  'epoch' output: 1490101200
 :::
@@ -548,7 +548,7 @@ func main() {
 ::: tab C++
 
 ```cpp
-auto transfer = ARK::Crypto::Transactions::Builder::buildTransfer(
+auto transfer = Ark::Crypto::Transactions::Builder::buildTransfer(
     "recipientID",
     1000000000,
     "vendorfield",

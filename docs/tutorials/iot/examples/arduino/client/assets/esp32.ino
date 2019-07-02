@@ -61,7 +61,7 @@ int port = 4003;
  * This is how you define a connection while speficying the API class as a 'template argument'
  * You instantiate a connection by passing a IP address as a 'c_string', and the port as an 'int'.
  */
-ARK::Client::Connection<ARK::Client::Api> connection(peer, port);
+Ark::Client::Connection<Ark::Client::Api> connection(peer, port);
 /**/
 
 /****************************************/

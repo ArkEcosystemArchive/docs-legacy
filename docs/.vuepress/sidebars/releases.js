@@ -2,6 +2,11 @@ module.exports = [
   ['/', 'Back to Table of Contents'],
   ['/releases/', 'Releases Home'],
   {
+    title: 'v2.5',
+    collapsable: true,
+    children: [['/releases/v2.5/', 'Summary'], '/releases/v2.5/migrating_2.4_2.5.md']
+  },
+  {
     title: 'v2.4',
     collapsable: true,
     children: [['/releases/v2.4/', 'Summary'], '/releases/v2.4/migrating_2.3_2.4.md']

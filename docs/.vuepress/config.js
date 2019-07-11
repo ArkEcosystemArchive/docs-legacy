@@ -7,12 +7,12 @@ const config = {
       'link',
       {
         rel: 'icon',
-        href: 'https://ark.io/images/media-kit/red-corners.png'
+        href: './red-corners.png'
       }
     ]
   ],
   themeConfig: {
-    logo: 'https://ark.io/images/media-kit/red-corners.png',
+    logo: './red-corners.png',
     repo: 'ARKEcosystem/docs',
     repoLabel: 'Contribute!',
     editLinks: true,

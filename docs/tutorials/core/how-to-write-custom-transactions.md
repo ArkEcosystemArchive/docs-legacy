@@ -239,7 +239,7 @@ The `BusinessRegistrationTransactionHandler` class handles:
 
 - *apply* logic: applying the transaction to the current state of the blockchain (for example for a transfer transaction this would reduce the wallet balance of sender by transfer amount + fees, and increase balance of receiver by the amount)
 - *revert* logic: reverting the transaction
-- *canBeApplied* check: validation method to determine if transaction can be applied (for example does sender have sufficient funds for a transfer)
+- *throwIfCannotBeApplied* check: validation method to determine if transaction can be applied (for example does sender have sufficient funds for a transfer)
 - *canEnterTransactionPool* check: validation method to determine if the transaction can enter the transaction pool (to prevent for example to have multiple transactions from the same sender in the pool)
 - *bootstrap* method to initialize data related to our custom transaction on startup (in our case updating wallets from existing *BusinessRegistration* transactions)
 - *getConstructor* method needs to return the *BusinessRegistrationTransaction* class
@@ -259,12 +259,12 @@ export class BusinessRegistrationTransactionHandler extends Handlers.Transaction
 
     public async bootstrap(connection: Database.IConnection, walletManager: State.IWalletManager): Promise<void> {}
 
-    public canBeApplied(
+ public throwIfCannotBeApplied(
         transaction: Interfaces.ITransaction,
         wallet: State.IWallet,
         databaseWalletManager: State.IWalletManager,
-    ): boolean {}
-
+    ): void {}
+    
     public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.EventEmitter): void {}
 
     public canEnterTransactionPool(
@@ -311,28 +311,29 @@ public async bootstrap(connection: Database.IConnection, walletManager: State.IW
 }
 ```
 
-### canBeApplied
+### throwIfCannotBeApplied
 
 *canBeApplied* checks that the wallet initiating the transaction is not already registered as business: we can register a business only once.
 
 ```ts
-public canBeApplied(
-    transaction: Interfaces.ITransaction,
-    wallet: State.IWallet,
-    databaseWalletManager: State.IWalletManager,
-): boolean {
-    const { data }: Interfaces.ITransaction = transaction;
+public throwIfCannotBeApplied(
+       transaction: Interfaces.ITransaction,
+       wallet: State.IWallet,
+       databaseWalletManager: State.IWalletManager,
+   ): void {
+       const { data }: Interfaces.ITransaction = transaction;
+       
+       const { name, website }: { name: string; website: string } = data.asset.businessRegistration;
+       if (!name || !website) {
+           throw new BusinessRegistrationAssetError();
+       }
 
-    const { name, website }: { name: string, website: string } = data.asset.businessRegistration;
-    if (!name || !website) {
-        throw new BusinessRegistrationAssetError();
+       if ((wallet as any).business) {
+           throw new WalletIsAlreadyABusiness();
+       }
+
+       super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
     }
-
-    if ((wallet as any).business) {
-        throw new WalletIsAlreadyABusiness();
-    }
-
-    return super.canBeApplied(transaction, wallet, databaseWalletManager);
 }
 ```
 
@@ -400,7 +401,7 @@ public canEnterTransactionPool(
 *applyToSender* sets the wallet business data from the transaction.
 
 ```ts
-protected applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
     super.applyToSender(transaction, walletManager);
 
     const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
@@ -413,7 +414,7 @@ protected applyToSender(transaction: Interfaces.ITransaction, walletManager: Sta
 *revertForSender* unsets the wallet business data.
 
 ```ts
-protected revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
     super.revertForSender(transaction, walletManager);
 
     const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
@@ -427,11 +428,11 @@ protected revertForSender(transaction: Interfaces.ITransaction, walletManager: S
 These methods don't do anything because there is no recipient for this kind of transaction.
 
 ```ts
-protected applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
     return;
 }
 
-protected revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
     return;
 }
 ```
@@ -552,7 +553,7 @@ export class BusinessBuilder extends Transactions.TransactionBuilder<BusinessBui
         this.data.type = 100;
         this.data.fee = Utils.BigNumber.make(500000000);
         this.data.amount = Utils.BigNumber.ZERO;
-        this.data.asset = {};
+        this.data.asset = { businessRegistration: {} };
     }
 
     public businessAsset(name: string, website: string): BusinessBuilder {
@@ -599,13 +600,22 @@ Note : creating builders inside plugin folder is enabled starting with Core vers
 
 ## Testing
 
-All testing happens in the root `__tests__` directory. (not inside your plugin directory)
+All core testing happens in the root `__tests__` directory.
 
 Basically there are 4 main folders in the `__tests__` directory : `e2e`, `functional`, `integration`, `unit`. Each corresponds to a type of tests.
 
-Say you want to write unit tests for your plugin. Then you will create a directory inside the `unit` subfolder with your plugin name, and write your tests inside. You will run them with `yarn test unit/<yourPluginName>`.
+Say you want to write unit tests for your plugin. 
+You have two options then:
 
-You can read about testing details in [the testing documentation](../../../guidebook/testing.md).
+### Writing them in `core/__tests__` directory
+
+Create a directory inside the `unit` subfolder with your plugin name, and write your tests inside. You will run them with `yarn test unit/<yourPluginName>`.
+
+### Including them inside your plugin directory
+
+Create a subfolder `__tests__` inside your custom-transaction.
+Then you have to include some framework for tasting you code, ark core uses jest, you can read more about it in the following link: [https://jestjs.io/](https://jestjs.io/)
+
 
 ## Wrapping It Up
 

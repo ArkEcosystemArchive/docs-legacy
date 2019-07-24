@@ -12,7 +12,7 @@ const config = {
     ]
   ],
   themeConfig: {
-    logo: './red-corners.png',
+    logo: '/red-corners.png',
     repo: 'ARKEcosystem/docs',
     repoLabel: 'Contribute!',
     editLinks: true,

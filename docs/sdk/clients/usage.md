@@ -29,7 +29,8 @@ Yarn can be downloaded [here](https://yarnpkg.com/lang/en/docs/install/#windows-
 #### Installation
 
 ```bash
-$ yarn add @arkecosystem/client
+$ yarn add @arkecosystem/client --save
+$ yarn add @arkecosystem/crypto --save
 ```
 
 :::
@@ -604,10 +605,8 @@ Each SDK attempts to return a response in an idiomatic way (i.e., using structs 
 ::: tab javascript
 
 ```js
-const Client = require("@arkecosystem/client");
-
-const client = new Client("http://my.node.ip:port");
-client.setVersion(2);
+const { Connection } = require("@arkecosystem/client");
+const connection = new Connection("http://my.node.ip:port/api/v2");
 ```
 
 :::
@@ -798,7 +797,7 @@ It is not possible to `POST` a block through the public API. Relay Nodes accept 
 ```js
 async function init() {
   try {
-    const response = await client.resource('blocks').all('limit': 1);
+    const response = await connection.api('blocks').all('limit': 1);
     return response.data;
   } catch (e) {
     console.log(e);
@@ -960,7 +959,7 @@ You may query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource("delegates").all({ limit: 1 });
+    const response = await connection.api("delegates").all({ limit: 1 });
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1109,7 +1108,7 @@ You may query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource("node").status();
+    const response = await connection.api("node").status();
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1245,7 +1244,7 @@ You may query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource("peers").all({ limit: 1 });
+    const response = await connection.api("peers").all({ limit: 1 });
     return response.data;
   } catch (e) {
     console.log(e);
@@ -1372,7 +1371,7 @@ Through this API you can:
 ```js
 async function init() {
   try {
-    const response = await client.resource("transactions").all({
+    const response = await connection.api("transactions").all({
       senderId: "AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv",
       orderBy: "timestamp.epoch"
     });
@@ -1533,7 +1532,7 @@ Through the votes resource, you can query for:
 ```js
 async function init() {
   try {
-    const response = await client.resource("votes").all();
+    const response = await connection.api("votes").all();
     return response.data;
   } catch (e) {
     console.log(e);

@@ -89,7 +89,7 @@ A few things to notice:
 - `type` with value 100: for custom transactions we have to define a type above 99 - so we choose 100
 - `fee` of 5 ARK (or whatever your coin is): we decide that this is the fee we want for our transaction
 - `asset` is the property where we can define additional fields: here we have our *businessRegistration* object containing our two properties *name* and *website*
-. `nonce` is a sequential number of senders wallet transactions
+- `nonce` is a sequential number of senders wallet transactions
 
 We use `interfaces.ts` to define clearly our *businessRegistration* object (we will refer to it in the code):
 
@@ -324,7 +324,7 @@ public async bootstrap(connection: Database.IConnection, walletManager: State.IW
 
 ### throwIfCannotBeApplied
 
-*canBeApplied* checks that the wallet initiating the transaction is not already registered as business: we can register a business only once.
+*throwIfCannotBeApplied* checks that the wallet initiating the transaction is not already registered as business: we can register a business only once.
 
 ```ts
 public throwIfCannotBeApplied(
@@ -575,12 +575,12 @@ Now we could use this builder to create our transactions :
 ```ts
 const builder = new BusinessBuilder();
 const businessTx = builder
+    .nonce("1")
     .businessAsset("google", "www.google.com")
     .sign("passphrase")
     .getStruct();
 ```
 
-Note : creating builders inside plugin folder is enabled starting with Core version 2.6.
 
 ## Testing
 
@@ -612,6 +612,8 @@ You may start to see what would be nice to have now:
 
 This is out of scope for this tutorial, but don't hesitate to go further and build up on this!
 
+Note : this tutorial is compatible with branch 2.6.
+
 ## References
 
-GitHub repository for this custom plugin: [https://github.com/supaiku0/custom-transactions](https://github.com/supaiku0/custom-transactions)
+GitHub repository for this custom plugin: [https://github.com/KovacZan/custom-transaction](https://github.com/KovacZan/custom-transaction)

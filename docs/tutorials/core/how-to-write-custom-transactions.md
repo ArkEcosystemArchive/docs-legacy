@@ -179,7 +179,7 @@ You can see we defined the asset property to have our *businessRegistration* obj
 
 Notice we didn't set up any validation rule for the fee (that we decided to be 5 ARK). This will be done in another file, we will see it in the next sections.
 
-To understand how the validation engine works, I recommend you to check out the [AJV website](https://ajv.js.org/). We have set up some custom keywords that can be useful, like *address*, *publicKey*, *bignumber*, *base58* : you can check them all in `packages/crypto/src/validation/schemas.ts`.
+To understand how the validation engine works, I recommend you to check out the [AJV website](https://ajv.js.org/). We have set up some custom keywords that can be useful, like *address*, *publicKey*, *bignumber*, *base58*: you can check them all in `packages/crypto/src/validation/schemas.ts`.
 
 
 ### serialize <!-- markdown-title-case: skip-line -->
@@ -328,23 +328,22 @@ public async bootstrap(connection: Database.IConnection, walletManager: State.IW
 
 ```ts
 public throwIfCannotBeApplied(
-       transaction: Interfaces.ITransaction,
-       wallet: State.IWallet,
-       databaseWalletManager: State.IWalletManager,
-   ): void {
-      const { data }: Interfaces.ITransaction = transaction;
-      
-      const { name, website }: { name: string; website: string } = data.asset.businessRegistration;
-      if (!name || !website) {
-        throw new BusinessRegistrationAssetError();
-      }
-      
-      if (wallet.hasAttribute("business")) {
-        throw new WalletIsAlreadyABusiness();
-      }
+    transaction: Interfaces.ITransaction,
+    wallet: State.IWallet,
+    databaseWalletManager: State.IWalletManager,
+): void {
+    const { data }: Interfaces.ITransaction = transaction;
 
-       super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
+    const { name, website }: { name: string; website: string } = data.asset.businessRegistration;
+    if (!name || !website) {
+        throw new BusinessRegistrationAssetError();
     }
+
+    if (wallet.hasAttribute("business")) {
+        throw new WalletIsAlreadyABusiness();
+    }
+
+    super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
 }
 ```
 
@@ -483,7 +482,7 @@ Updating the *plugins.js* which contains all the plugins parameters for our netw
 
 **First**, let's add our plugin to `plugins.js`. You can simply add after all core plugins this line:
 
-```json
+```js
 "custom-transactions": {},
 ```
 
@@ -491,7 +490,7 @@ Here *custom-transactions* is the alias we have chosen (plugin definition in `in
 
 **Second**, there is a change we need to make in *core-transaction-pool* plugin:
 
-```json
+```js
 "@arkecosystem/core-transaction-pool": {
     enabled: true,
     maxTransactionsPerSender: process.env.CORE_TRANSACTION_POOL_MAX_PER_SENDER || 300,
@@ -522,47 +521,47 @@ This is related to dynamic fees calculation, we need to provide the fee per addi
 
 An additional step is to create what we call a *builder* for our custom transaction type.
 
-We have those *builders* for every transaction in Core, they are helpers to create transactions : we use them extensively in tests.
+We have those *builders* for every transaction in Core, they are helpers to create transactions: we use them extensively in tests.
 
 Have a look at the `crypto/src/transactions/builder` folder where you will see how it is implemented for each transaction type.
 
-Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessBuilder :
+Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessBuilder:
 
 ```ts
 import { Interfaces, Transactions, Utils } from "@arkecosystem/crypto";
 
 export class BusinessRegistrationBuilder extends Transactions.TransactionBuilder<BusinessRegistrationBuilder> {
-  constructor() {
-    super();
-    this.data.type = 100;
-    this.data.fee = Utils.BigNumber.make("5000000000");
-    this.data.amount = Utils.BigNumber.ZERO;
-    this.data.asset = { businessRegistration: {} };
-  }
+    constructor() {
+        super();
+        this.data.type = 100;
+        this.data.fee = Utils.BigNumber.make("5000000000");
+        this.data.amount = Utils.BigNumber.ZERO;
+        this.data.asset = { businessRegistration: {} };
+    }
 
-  public businessAsset(name: string, website: string): BusinessRegistrationBuilder {
-    this.data.asset.businessRegistration = {
-      name,
-      website,
-    };
+    public businessAsset(name: string, website: string): BusinessRegistrationBuilder {
+        this.data.asset.businessRegistration = {
+            name,
+            website,
+        };
 
-    return this;
-  }
+        return this;
+    }
 
-  public getStruct(): Interfaces.ITransactionData {
-    const struct: Interfaces.ITransactionData = super.getStruct();
-    struct.amount = this.data.amount;
-    struct.asset = this.data.asset;
-    return struct;
-  }
+    public getStruct(): Interfaces.ITransactionData {
+        const struct: Interfaces.ITransactionData = super.getStruct();
+        struct.amount = this.data.amount;
+        struct.asset = this.data.asset;
+        return struct;
+    }
 
-  protected instance(): BusinessRegistrationBuilder {
-    return this;
-  }
+    protected instance(): BusinessRegistrationBuilder {
+        return this;
+    }
 }
 ```
 
-Pretty straightforward as you can see :
+Pretty straightforward as you can see:
 
 - We initialize the transaction type, fee, amount and asset in the constructor
 
@@ -570,7 +569,7 @@ Pretty straightforward as you can see :
 
 - We implement the `getStruct` method, using the inherited method and adding the properties we want to have in the struct object
 
-Now we could use this builder to create our transactions :
+Now we could use this builder to create our transactions:
 
 ```ts
 const builder = new BusinessBuilder();
@@ -586,7 +585,7 @@ const businessTx = builder
 
 All core testing happens in the root `__tests__` directory.
 
-Basically there are 4 main folders in the `__tests__` directory : `e2e`, `functional`, `integration`, `unit`. Each corresponds to a type of tests.
+Basically there are 4 main folders in the `__tests__` directory: `e2e`, `functional`, `integration`, `unit`. Each corresponds to a type of tests.
 
 Say you want to write unit tests for your plugin. 
 You have two options then:
@@ -612,7 +611,9 @@ You may start to see what would be nice to have now:
 
 This is out of scope for this tutorial, but don't hesitate to go further and build up on this!
 
-Note : this tutorial is compatible with branch 2.6.
+::: tip Note
+This tutorial is compatible with the `2.6` branch.
+:::
 
 ## References
 

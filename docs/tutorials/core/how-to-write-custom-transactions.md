@@ -118,6 +118,7 @@ const { schemas } = Transactions;
 const BUSINESS_REGISTRATION_TYPE = 100;
 
 export class BusinessRegistrationTransaction extends Transactions.Transaction {
+    public static typeGroup = 1;
     public static type = BUSINESS_REGISTRATION_TYPE;
     public static key: string = "businessRegistration";
     protected static defaultStaticFee: Utils.BigNumber = Utils.BigNumber.make("500000000");
@@ -131,6 +132,7 @@ export class BusinessRegistrationTransaction extends Transactions.Transaction {
 ```
 
 Notice three static properties we have to set:
+- `typeGroup` is a number of transaction group (we will assigned it to core group with number 1)
 - `type` is a number of a transaction (in our case number 100)
 - `key` by which core looks for static fees
 - `defaultStaticFee` is amount user will have to pay for this transaction
@@ -254,6 +256,9 @@ The `BusinessRegistrationTransactionHandler` class handles:
 - *bootstrap* method to initialize data related to our custom transaction on startup (in our case updating wallets from existing *BusinessRegistration* transactions)
 - *getConstructor* method needs to return the *BusinessRegistrationTransaction* class
 - *emitEvents* is a method which will be called after applying the transaction, it allows you to emit events which can be then picked up by another plugin for example
+- *dependencies* defines Array of transaction types which have to be loaded before this type
+- *walletAttributes* defines Array of wallet properties which this handler access or apply
+- *isActivated* apply logic for when this transaction type is allowed
 
 Here is how the class looks (without method implementation):
 
@@ -267,29 +272,35 @@ import { BusinessRegistrationAssetError, WalletIsAlreadyABusiness } from "../err
 export class BusinessRegistrationTransactionHandler extends Handlers.TransactionHandler {
     public getConstructor(): Transactions.TransactionConstructor {}
 
+    public dependencies(): ReadonlyArray<any> {}
+    
+    public walletAttributes(): ReadonlyArray<string> {}
+
+    public async isActivated(): Promise<boolean> {}
+
     public async bootstrap(connection: Database.IConnection, walletManager: State.IWalletManager): Promise<void> {}
 
- public throwIfCannotBeApplied(
+    public async throwIfCannotBeApplied(
         transaction: Interfaces.ITransaction,
         wallet: State.IWallet,
         databaseWalletManager: State.IWalletManager,
-    ): void {}
+    ): Promise<boolean> {}
     
-    public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.EventEmitter): void {}
+    public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.EventEmitter): Promise<void> {}
 
-    public canEnterTransactionPool(
+    public async canEnterTransactionPool(
         data: Interfaces.ITransactionData,
         pool: TransactionPool.IConnection,
         processor: TransactionPool.IProcessor,
-    ): boolean {}
+    ): Promise<boolean> {}
 
-    public applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
-    public revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
-    public applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
-    public revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
 }
 ```
@@ -306,17 +317,37 @@ public getConstructor(): Transactions.TransactionConstructor {
 }
 ```
 
+### dependencies
+
+*dependencies* in this case returns an empty array because we are not dependent on any other transaction type
+
+```ts
+  public dependencies(): ReadonlyArray<any> {
+      return [];
+  }
+```
+
+### walletAttributes
+
+*walletAttributes* this transaction will access and add `business` property
+
+```ts
+  public walletAttributes(): ReadonlyArray<string> {
+      return ["business"];
+  }
+```
+
 ### bootstrap <!-- markdown-title-case: skip-line -->
 
 *bootstrap* initializes the wallets from existing *BusinessRegistration* transactions.
 
 ```ts
 public async bootstrap(connection: Database.IConnection, walletManager: State.IWalletManager): Promise<void> {
-    const transactions = await connection.transactionsRepository.getAssetsByType(this.getConstructor().type);
+     const transactions = await connection.transactionsRepository.getAssetsByType(this.getConstructor().type);
 
         for (const transaction of transactions) {
           const wallet = walletManager.findByPublicKey(transaction.senderPublicKey);
-          wallet.setAttribute("business", transaction.asset.businessRegistration);
+          wallet.setAttribute<IBusinessRegistrationAsset>("business", transaction.asset.businessRegistration);
           walletManager.reindex(wallet);
         }
 }
@@ -327,11 +358,11 @@ public async bootstrap(connection: Database.IConnection, walletManager: State.IW
 *throwIfCannotBeApplied* checks that the wallet initiating the transaction is not already registered as business: we can register a business only once.
 
 ```ts
-public throwIfCannotBeApplied(
+public async throwIfCannotBeApplied(
     transaction: Interfaces.ITransaction,
     wallet: State.IWallet,
     databaseWalletManager: State.IWalletManager,
-): void {
+): Promise<void> {
     const { data }: Interfaces.ITransaction = transaction;
 
     const { name, website }: { name: string; website: string } = data.asset.businessRegistration;
@@ -367,11 +398,11 @@ public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.Ev
 - there is not another *BusinessRegistration* transaction for the same business name in the pool
 
 ```ts
-public canEnterTransactionPool(
+public async canEnterTransactionPool(
     data: Interfaces.ITransactionData,
     pool: TransactionPool.IConnection,
     processor: TransactionPool.IProcessor,
-): boolean {
+): Promise<boolean> {
     if (this.typeFromSenderAlreadyInPool(data, pool, processor)) {
         return false;
     }
@@ -391,7 +422,7 @@ public canEnterTransactionPool(
     }
 
     const businessRegistrationsInPool: Interfaces.ITransactionData[] = Array.from(
-        pool.getTransactionsByType(this.getConstructor().type),
+       await pool.getTransactionsByType(this.getConstructor().type),
     ).map((memTx: Interfaces.ITransaction) => memTx.data);
 
     const containsBusinessRegistrationForSameNameInPool: boolean = businessRegistrationsInPool.some(
@@ -411,11 +442,11 @@ public canEnterTransactionPool(
 *applyToSender* sets the wallet business data from the transaction.
 
 ```ts
-public applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
-    super.applyToSender(transaction, walletManager);
-    const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
-    sender.setAttribute("business", transaction.data.asset.businessRegistration);
-    walletManager.reindex(sender);
+public async applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
+   await super.applyToSender(transaction, walletManager);
+   const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
+   sender.setAttribute<IBusinessRegistrationAsset>("business", transaction.data.asset.businessRegistration);
+   walletManager.reindex(sender);
 }
 ```
 
@@ -424,8 +455,8 @@ public applyToSender(transaction: Interfaces.ITransaction, walletManager: State.
 *revertForSender* unsets the wallet business data.
 
 ```ts
-public revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
-    super.revertForSender(transaction, walletManager);
+public async revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
+    await super.revertForSender(transaction, walletManager);
     const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
     sender.forgetAttribute("business");
     walletManager.reindex(sender);
@@ -437,11 +468,11 @@ public revertForSender(transaction: Interfaces.ITransaction, walletManager: Stat
 These methods don't do anything because there is no recipient for this kind of transaction.
 
 ```ts
-public applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public async applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
     return;
 }
 
-public revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public async revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
     return;
 }
 ```
@@ -466,7 +497,6 @@ export const plugin: Container.IPluginDescriptor = {
   },
   async deregister(container: Container.IContainer, options) {
     container.resolvePlugin<Logger.ILogger>("logger").info("Deregistering custom transaction");
-    Handlers.Registry.deregisterCustomTransactionHandler(BusinessRegistrationTransactionHandler);
   }
 };
 ```
@@ -534,6 +564,8 @@ export class BusinessRegistrationBuilder extends Transactions.TransactionBuilder
     constructor() {
         super();
         this.data.type = 100;
+        this.data.typeGroup = 1;
+        this.data.version = 2;
         this.data.fee = Utils.BigNumber.make("5000000000");
         this.data.amount = Utils.BigNumber.ZERO;
         this.data.asset = { businessRegistration: {} };
@@ -612,7 +644,7 @@ You may start to see what would be nice to have now:
 This is out of scope for this tutorial, but don't hesitate to go further and build up on this!
 
 ::: tip Note
-This tutorial is compatible with the `2.6` branch.
+This tutorial is compatible with the `develop` branch.
 :::
 
 ## References

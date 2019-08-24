@@ -52,10 +52,8 @@ As mentioned above, by default our testnet will connect its Public API to the [h
 ::: tab javascript
 
 ```js
-const Client = require("@arkecosystem/client");
-
-const client = new Client("http://0.0.0.0:4003");
-client.setVersion(2);
+const { Connection } = require("@arkecosystem/client");
+const connection = new Connection("http://0.0.0.0:4003/api/v2");
 ```
 
 :::
@@ -225,7 +223,7 @@ Using the `client` package follows a similar pattern no matter what SDK you use;
 ```js
 async function init() {
   try {
-    const response = await client.resource('blocks').all('limit': 1);
+    const response = await connection.api('blocks').all('limit': 1);
     return response.data;
   } catch (e) {
     console.log(e);
@@ -350,19 +348,18 @@ However, there are some network-level differences between testnet and devnet tha
 
 The fastest way to do so is by using the `configManager` module that ships with the `crypto` library. As Node caches all `require` expressions to reuse across your application, setting `configManager` to use `testnet` once at the beginning of our app will ensure that we won't have to worry about it again, as our preferences will be saved and reused when needed.
 
-To do so, import the `configManager` package from `crypto`, then tell it to use the `ark` network on `testnet` settings:
+To do so, import the `Managers` package from `crypto`, then tell it to use the  `testnet` settings:
 
 :::: tabs
 
 ::: tab javascript
 
 ```js
-const Client = require("@arkecosystem/client");
-const { configManager } = require("@arkecosystem/crypto");
+const { Connection } = require("@arkecosystem/client");
+const { Managers } = require("@arkecosystem/crypto");
+Managers.configManager.setFromPreset("testnet");
 
-configManager.setFromPreset("ark", "testnet");
-
-const testnetClient = new Client("http://0.0.0.0:4003", 2); // (API URL, API version)
+const connection = new Connection("http://my.node.ip:port/api/v2");
 ```
 
 :::
@@ -496,7 +493,9 @@ This object formats our transaction correctly so that our testnet node will acce
 ::: tab javascript
 
 ```js
-const transaction = transactionBuilder
+const { Transactions } = require("@arkecosystem/crypto");
+
+const transaction = Transactions.BuilderFactory
   .transfer() // specify 'transfer' as our AIP11 transaction type
   .amount(20 * 1e8) // 20 ARK, multiplied by 10^8 to get arktoshi value
   .vendorField("your vendorField message here")
@@ -581,8 +580,8 @@ With everything in place, it's time to send some TARK (testnet ARK) using the `c
 ::: tab javascript
 
 ```js
-testnetClient
-  .resource("transactions")
+connection
+  .api("transactions")
   .create({ transactions: [transaction] })
   .then(response => console.log(response.data))
   .catch(error => console.error(error));

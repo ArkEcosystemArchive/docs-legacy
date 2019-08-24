@@ -30,10 +30,15 @@ We need two main classes to implement our custom transaction:
 
 - `BusinessRegistrationTransactionHandler` class to define how will this transaction be applied (adding *business name* and *website* properties to the wallet), and some related logic.
 
+- `BusinessRegistrationBuilder` class which will build our transaction after we insert name, website and passphrase. 
+
 Here is how our plugin will look like (`src` folder):
 
 ```sh
 .
+├── builders
+│   ├── BusinessRegistrationBuilder.ts
+│   └── index.ts
 ├── handlers
 │   ├── BusinessRegistrationTransactionHandler.ts
 │   └── index.ts
@@ -43,15 +48,16 @@ Here is how our plugin will look like (`src` folder):
 ├── defaults.ts
 ├── errors.ts
 ├── index.ts
-└── interfaces.ts
+├── interfaces.ts
+└── plugin.ts
 ```
 
 You notice a few more files than the two classes we talked about:
 
 - `defaults.ts` contains the default options for our plugin (will be an empty object)
 - `errors.ts` are some errors we will use in our transaction classes
-- `index.ts` is the entry point of our plugin, this is where we will initialize and register our custom transaction to the core
 - `interfaces.ts` contains the definition of the data in our transaction (*business name* and *website*) to be used in our code
+- `plugin.ts` is the entry point of our plugin, this is where we will initialize and register our custom transaction to the core
 
 In the next sections, we will look take a detailed look at each file.
 
@@ -63,7 +69,7 @@ We will allow to specify a *business name* and a *website* in our custom transac
 {
     "id": "ec137bc0a992ad9fdcb904797595fe9f6a1fd283fe929def5cddbed64e5f44ec",
     "signature": "304402204b514cb059c5352f3481c1715e061366c32f0d373805d38e89dd018ec94f126b02205a12e0d737ff30f0639c14f566960714b7ddb5b9247e259ef2f93a5b66c73da7",
-    "timestamp": 62981722,
+    "nonce": 0,
     "type": 100,
     "fee": 500000000,
     "senderPublicKey": "03f39ee110e9f11eafc390b1aeea3a0d406b7aa63aa352d5be855850f1102ab6ec",
@@ -83,6 +89,7 @@ A few things to notice:
 - `type` with value 100: for custom transactions we have to define a type above 99 - so we choose 100
 - `fee` of 5 ARK (or whatever your coin is): we decide that this is the fee we want for our transaction
 - `asset` is the property where we can define additional fields: here we have our *businessRegistration* object containing our two properties *name* and *website*
+- `nonce` is a sequential number of senders wallet transactions
 
 We use `interfaces.ts` to define clearly our *businessRegistration* object (we will refer to it in the code):
 
@@ -96,7 +103,6 @@ export interface IBusinessRegistrationAsset {
 ## The BusinessRegistrationTransaction Class
 
 The `BusinessRegistrationTransaction` class will:
-
 - define the transaction *schema* which is how the transaction is supposed to look
 - implement ser-deserialize methods
 
@@ -112,7 +118,10 @@ const { schemas } = Transactions;
 const BUSINESS_REGISTRATION_TYPE = 100;
 
 export class BusinessRegistrationTransaction extends Transactions.Transaction {
+    public static typeGroup = 1;
     public static type = BUSINESS_REGISTRATION_TYPE;
+    public static key: string = "businessRegistration";
+    protected static defaultStaticFee: Utils.BigNumber = Utils.BigNumber.make("500000000");
 
     public static getSchema(): Transactions.schemas.TransactionSchema {}
 
@@ -122,8 +131,11 @@ export class BusinessRegistrationTransaction extends Transactions.Transaction {
 }
 ```
 
-Notice the `type` property and the three methods implementing transaction schema definition, and ser-deserialize.
-
+Notice three static properties we have to set:
+- `typeGroup` is a number of transaction group (we will assigned it to core group with number 1)
+- `type` is a number of a transaction (in our case number 100)
+- `key` by which core looks for static fees
+- `defaultStaticFee` is amount user will have to pay for this transaction
 ### getSchema
 
 *getSchema* will return an [AJV](https://ajv.js.org/) validation object, extending the base transaction schema (defined in core *crypto* package). This is where we ensure that the transaction will have the desired properties.
@@ -169,7 +181,7 @@ You can see we defined the asset property to have our *businessRegistration* obj
 
 Notice we didn't set up any validation rule for the fee (that we decided to be 5 ARK). This will be done in another file, we will see it in the next sections.
 
-To understand how the validation engine works, I recommend you to check out the [AJV website](https://ajv.js.org/). We have set up some custom keywords that can be useful, like *address*, *publicKey*, *bignumber*, *base58* : you can check them all in `packages/crypto/src/validation/schemas.ts`.
+To understand how the validation engine works, I recommend you to check out the [AJV website](https://ajv.js.org/). We have set up some custom keywords that can be useful, like *address*, *publicKey*, *bignumber*, *base58*: you can check them all in `packages/crypto/src/validation/schemas.ts`.
 
 
 ### serialize <!-- markdown-title-case: skip-line -->
@@ -244,6 +256,9 @@ The `BusinessRegistrationTransactionHandler` class handles:
 - *bootstrap* method to initialize data related to our custom transaction on startup (in our case updating wallets from existing *BusinessRegistration* transactions)
 - *getConstructor* method needs to return the *BusinessRegistrationTransaction* class
 - *emitEvents* is a method which will be called after applying the transaction, it allows you to emit events which can be then picked up by another plugin for example
+- *dependencies* defines Array of transaction types which have to be loaded before this type
+- *walletAttributes* defines Array of wallet properties which this handler access or apply
+- *isActivated* apply logic for when this transaction type is allowed
 
 Here is how the class looks (without method implementation):
 
@@ -257,29 +272,35 @@ import { BusinessRegistrationAssetError, WalletIsAlreadyABusiness } from "../err
 export class BusinessRegistrationTransactionHandler extends Handlers.TransactionHandler {
     public getConstructor(): Transactions.TransactionConstructor {}
 
+    public dependencies(): ReadonlyArray<any> {}
+    
+    public walletAttributes(): ReadonlyArray<string> {}
+
+    public async isActivated(): Promise<boolean> {}
+
     public async bootstrap(connection: Database.IConnection, walletManager: State.IWalletManager): Promise<void> {}
 
- public throwIfCannotBeApplied(
+    public async throwIfCannotBeApplied(
         transaction: Interfaces.ITransaction,
         wallet: State.IWallet,
         databaseWalletManager: State.IWalletManager,
-    ): void {}
+    ): Promise<boolean> {}
     
-    public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.EventEmitter): void {}
+    public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.EventEmitter): Promise<void> {}
 
-    public canEnterTransactionPool(
+    public async canEnterTransactionPool(
         data: Interfaces.ITransactionData,
         pool: TransactionPool.IConnection,
         processor: TransactionPool.IProcessor,
-    ): boolean {}
+    ): Promise<boolean> {}
 
-    protected applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
-    protected revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
-    protected applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
-    protected revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {}
+    public async revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {}
 
 }
 ```
@@ -296,44 +317,64 @@ public getConstructor(): Transactions.TransactionConstructor {
 }
 ```
 
+### dependencies
+
+*dependencies* in this case returns an empty array because we are not dependent on any other transaction type
+
+```ts
+  public dependencies(): ReadonlyArray<any> {
+      return [];
+  }
+```
+
+### walletAttributes
+
+*walletAttributes* this transaction will access and add `business` property
+
+```ts
+  public walletAttributes(): ReadonlyArray<string> {
+      return ["business"];
+  }
+```
+
 ### bootstrap <!-- markdown-title-case: skip-line -->
 
 *bootstrap* initializes the wallets from existing *BusinessRegistration* transactions.
 
 ```ts
 public async bootstrap(connection: Database.IConnection, walletManager: State.IWalletManager): Promise<void> {
-    const transactions = await connection.transactionsRepository.getAssetsByType(this.getConstructor().type);
+     const transactions = await connection.transactionsRepository.getAssetsByType(this.getConstructor().type);
 
-    for (const transaction of transactions) {
-        const wallet = walletManager.findByPublicKey(transaction.senderPublicKey);
-        (wallet as any).business = transaction.asset.businessRegistration;
-    }
+        for (const transaction of transactions) {
+          const wallet = walletManager.findByPublicKey(transaction.senderPublicKey);
+          wallet.setAttribute<IBusinessRegistrationAsset>("business", transaction.asset.businessRegistration);
+          walletManager.reindex(wallet);
+        }
 }
 ```
 
 ### throwIfCannotBeApplied
 
-*canBeApplied* checks that the wallet initiating the transaction is not already registered as business: we can register a business only once.
+*throwIfCannotBeApplied* checks that the wallet initiating the transaction is not already registered as business: we can register a business only once.
 
 ```ts
-public throwIfCannotBeApplied(
-       transaction: Interfaces.ITransaction,
-       wallet: State.IWallet,
-       databaseWalletManager: State.IWalletManager,
-   ): void {
-       const { data }: Interfaces.ITransaction = transaction;
-       
-       const { name, website }: { name: string; website: string } = data.asset.businessRegistration;
-       if (!name || !website) {
-           throw new BusinessRegistrationAssetError();
-       }
+public async throwIfCannotBeApplied(
+    transaction: Interfaces.ITransaction,
+    wallet: State.IWallet,
+    databaseWalletManager: State.IWalletManager,
+): Promise<void> {
+    const { data }: Interfaces.ITransaction = transaction;
 
-       if ((wallet as any).business) {
-           throw new WalletIsAlreadyABusiness();
-       }
-
-       super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
+    const { name, website }: { name: string; website: string } = data.asset.businessRegistration;
+    if (!name || !website) {
+        throw new BusinessRegistrationAssetError();
     }
+
+    if (wallet.hasAttribute("business")) {
+        throw new WalletIsAlreadyABusiness();
+    }
+
+    super.throwIfCannotBeApplied(transaction, wallet, databaseWalletManager);
 }
 ```
 
@@ -357,11 +398,11 @@ public emitEvents(transaction: Interfaces.ITransaction, emitter: EventEmitter.Ev
 - there is not another *BusinessRegistration* transaction for the same business name in the pool
 
 ```ts
-public canEnterTransactionPool(
+public async canEnterTransactionPool(
     data: Interfaces.ITransactionData,
     pool: TransactionPool.IConnection,
     processor: TransactionPool.IProcessor,
-): boolean {
+): Promise<boolean> {
     if (this.typeFromSenderAlreadyInPool(data, pool, processor)) {
         return false;
     }
@@ -381,7 +422,7 @@ public canEnterTransactionPool(
     }
 
     const businessRegistrationsInPool: Interfaces.ITransactionData[] = Array.from(
-        pool.getTransactionsByType(this.getConstructor().type),
+       await pool.getTransactionsByType(this.getConstructor().type),
     ).map((memTx: Interfaces.ITransaction) => memTx.data);
 
     const containsBusinessRegistrationForSameNameInPool: boolean = businessRegistrationsInPool.some(
@@ -401,11 +442,11 @@ public canEnterTransactionPool(
 *applyToSender* sets the wallet business data from the transaction.
 
 ```ts
-public applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
-    super.applyToSender(transaction, walletManager);
-
-    const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
-    (sender as any).business = transaction.data.asset.businessRegistration;
+public async applyToSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
+   await super.applyToSender(transaction, walletManager);
+   const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
+   sender.setAttribute<IBusinessRegistrationAsset>("business", transaction.data.asset.businessRegistration);
+   walletManager.reindex(sender);
 }
 ```
 
@@ -414,12 +455,11 @@ public applyToSender(transaction: Interfaces.ITransaction, walletManager: State.
 *revertForSender* unsets the wallet business data.
 
 ```ts
-public revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
-    super.revertForSender(transaction, walletManager);
-
+public async revertForSender(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
+    await super.revertForSender(transaction, walletManager);
     const sender: State.IWallet = walletManager.findByPublicKey(transaction.data.senderPublicKey);
-
-    (sender as any).business = undefined;
+    sender.forgetAttribute("business");
+    walletManager.reindex(sender);
 }
 ```
 
@@ -428,18 +468,18 @@ public revertForSender(transaction: Interfaces.ITransaction, walletManager: Stat
 These methods don't do anything because there is no recipient for this kind of transaction.
 
 ```ts
-public applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public async applyToRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
     return;
 }
 
-public revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+public async revertForRecipient(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
     return;
 }
 ```
 
 ## Plugin Setup
 
-Now all is left is some code for registering our plugin! This is done in `index.ts`.
+Now all is left is some code for registering our plugin! This is done in `plugin.ts`.
 
 ```ts
 import { Container, Logger } from "@arkecosystem/core-interfaces";
@@ -448,17 +488,16 @@ import { defaults } from "./defaults";
 import { BusinessRegistrationTransactionHandler } from "./handlers";
 
 export const plugin: Container.IPluginDescriptor = {
-    pkg: require("../package.json"),
-    defaults,
-    alias: "custom-transactions",
-    async register(container: Container.IContainer, options) {
-        container.resolvePlugin<Logger.ILogger>("logger").info("Registering custom transactions");
-        Handlers.Registry.registerCustomTransactionHandler(BusinessRegistrationTransactionHandler);
-    },
-    async deregister(container: Container.IContainer, options) {
-        container.resolvePlugin<Logger.ILogger>("logger").info("Deregistering custom transactions");
-        Handlers.Registry.deregisterCustomTransactionHandler(BusinessRegistrationTransactionHandler);
-    },
+  pkg: require("../package.json"),
+  defaults,
+  alias: "my-custom-transaction",
+  async register(container: Container.IContainer, options) {
+    container.resolvePlugin<Logger.ILogger>("logger").info("Registering custom transaction");
+    Handlers.Registry.registerCustomTransactionHandler(BusinessRegistrationTransactionHandler);
+  },
+  async deregister(container: Container.IContainer, options) {
+    container.resolvePlugin<Logger.ILogger>("logger").info("Deregistering custom transaction");
+  }
 };
 ```
 
@@ -466,16 +505,14 @@ We use `Handlers.Registry` from *@arkecosystem/core-transactions* to register an
 
 ## Configuration
 
-To use our plugin there is one last configuration step. Two files need to be updated:
-
-- *plugins.js* which contains all the plugins parameters for our network
-- *milestones.json* which contains configuration for our network by height milestones
+To use our plugin there is one last configuration step.
+Updating the *plugins.js* which contains all the plugins parameters for our network.
 
 ### plugins.js
 
 **First**, let's add our plugin to `plugins.js`. You can simply add after all core plugins this line:
 
-```json
+```js
 "custom-transactions": {},
 ```
 
@@ -510,56 +547,34 @@ Here *custom-transactions* is the alias we have chosen (plugin definition in `in
 
 This is related to dynamic fees calculation, we need to provide the fee per additional byte for our transaction.
 
-### milestones.json
-
-Again, there is a fee configuration to do here for static fees:
-
-```json
-"fees": {
-    "staticFees": {
-        "transfer": 10000000,
-        "secondSignature": 500000000,
-        "delegateRegistration": 2500000000,
-        "vote": 100000000,
-        "multiSignature": 500000000,
-        "ipfs": 500000000,
-        "timelockTransfer": 0,
-        "multiPayment": 0,
-        "delegateResignation": 0,
-        "businessRegistration": 500000000
-    }
-},
-```
-
-Here we set the static fee to 5 ARK.
-
 ## BusinessBuilder to create our transactions
 
 An additional step is to create what we call a *builder* for our custom transaction type.
 
-We have those *builders* for every transaction in Core, they are helpers to create transactions : we use them extensively in tests.
+We have those *builders* for every transaction in Core, they are helpers to create transactions: we use them extensively in tests.
 
 Have a look at the `crypto/src/transactions/builder` folder where you will see how it is implemented for each transaction type.
 
-Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessBuilder :
+Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessBuilder:
 
 ```ts
-import { Transactions, Interfaces, Utils } from "@arkecosystem/crypto";
+import { Interfaces, Transactions, Utils } from "@arkecosystem/crypto";
 
-export class BusinessBuilder extends Transactions.TransactionBuilder<BusinessBuilder> {
+export class BusinessRegistrationBuilder extends Transactions.TransactionBuilder<BusinessRegistrationBuilder> {
     constructor() {
         super();
-
         this.data.type = 100;
-        this.data.fee = Utils.BigNumber.make(500000000);
+        this.data.typeGroup = 1;
+        this.data.version = 2;
+        this.data.fee = Utils.BigNumber.make("5000000000");
         this.data.amount = Utils.BigNumber.ZERO;
         this.data.asset = { businessRegistration: {} };
     }
 
-    public businessAsset(name: string, website: string): BusinessBuilder {
-        this.data.asset = {
+    public businessAsset(name: string, website: string): BusinessRegistrationBuilder {
+        this.data.asset.businessRegistration = {
             name,
-            website
+            website,
         };
 
         return this;
@@ -572,13 +587,13 @@ export class BusinessBuilder extends Transactions.TransactionBuilder<BusinessBui
         return struct;
     }
 
-    protected instance(): BusinessBuilder {
+    protected instance(): BusinessRegistrationBuilder {
         return this;
     }
 }
 ```
 
-Pretty straightforward as you can see :
+Pretty straightforward as you can see:
 
 - We initialize the transaction type, fee, amount and asset in the constructor
 
@@ -586,23 +601,23 @@ Pretty straightforward as you can see :
 
 - We implement the `getStruct` method, using the inherited method and adding the properties we want to have in the struct object
 
-Now we could use this builder to create our transactions :
+Now we could use this builder to create our transactions:
 
 ```ts
 const builder = new BusinessBuilder();
 const businessTx = builder
+    .nonce("1")
     .businessAsset("google", "www.google.com")
     .sign("passphrase")
     .getStruct();
 ```
 
-Note : creating builders inside plugin folder is enabled starting with Core version 2.6.
 
 ## Testing
 
 All core testing happens in the root `__tests__` directory.
 
-Basically there are 4 main folders in the `__tests__` directory : `e2e`, `functional`, `integration`, `unit`. Each corresponds to a type of tests.
+Basically there are 4 main folders in the `__tests__` directory: `e2e`, `functional`, `integration`, `unit`. Each corresponds to a type of tests.
 
 Say you want to write unit tests for your plugin. 
 You have two options then:
@@ -628,6 +643,10 @@ You may start to see what would be nice to have now:
 
 This is out of scope for this tutorial, but don't hesitate to go further and build up on this!
 
+::: tip Note
+This tutorial is compatible with the `develop` branch.
+:::
+
 ## References
 
-GitHub repository for this custom plugin: [https://github.com/supaiku0/custom-transactions](https://github.com/supaiku0/custom-transactions)
+GitHub repository for this custom plugin: [https://github.com/KovacZan/custom-transaction](https://github.com/KovacZan/custom-transaction)

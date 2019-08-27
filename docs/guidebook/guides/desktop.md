@@ -428,10 +428,8 @@ If you discover a security vulnerability within this project, please send an e-m
 ## Credits
 
 - [Alex Barnsley](https://github.com/alexbarnsley)
-- [ItsANameToo](https://github.com/ItsANameToo)
-- [Juan A. Martín](https://github.com/j-a-m-l)
+- [Michel Kraaijeveld](https://github.com/ItsANameToo)
 - [Lúcio Rubens](https://github.com/luciorubeens)
-- [Mario Vega](https://github.com/mvega3)
 
 ## License
 

@@ -159,6 +159,268 @@ yarn i18n:all
 
 </details>
 
+## Plugins
+
+You can find a plugin template [here](https://github.com/ark-ecosystem-desktop-plugins/template) which will help get you started.
+
+### File Structure
+
+All plugins require at least the following files in order to work: 
+
+- package.json
+- src/index.js
+
+### Installation
+
+Plugins are to be installed inside of the `~/.ark-desktop/plugins` folder.
+
+**Note: If running in development mode, the path used is `~/.ark-desktop/plugins-dev`.**
+
+### Permissions
+
+You also have the option of using the following permissions:
+
+<details>
+<summary>
+  <h4>Accessibility permissions</h4>
+</summary>
+
+#### COMPONENTS
+Load in custom components.
+
+To be used in combination with other permissions:
+
+- ROUTES
+- MENU_ITEMS
+- AVATARS
+- WALLET_TABS
+
+#### ROUTES
+
+Loads additional routes into the Desktop Wallet.
+
+To be used in combination with other permissions:
+
+- COMPONENTS
+- MENU_ITEMS
+
+#### MENU_ITEMS
+
+Loads custom menu items into the Desktop Wallet for the sidebar.
+
+To be used in combination with other permissions:
+
+- ROUTES (required)
+- COMPONENTS
+
+#### AVATARS
+
+Plugin contains custom components.
+
+Can be used in combination with the COMPONENTS permission.
+
+#### WALLET_TABS
+
+Allow showing an additional tab/page on the Wallet screen.
+
+Can be used in combination with the COMPONENTS permission.
+
+#### THEMES
+
+Allow additional custom themes for the Desktop Wallet.
+
+</details>
+
+<details>
+<summary>
+  <h4>Wallet API permissions</h4>
+</summary>
+
+#### UI_COMPONENTS
+
+Allow access to the standard Desktop Wallet components used throughout. This gives plugins the ability to look and feel like they are a part of the application.
+
+**`walletApi.components.Button`**
+
+Allows access to all of the Button components:
+
+- ButtonClipboard
+- ButtonClose
+- ButtonGeneric
+- ButtonLayout
+- ButtonLetter
+- ButtonModal
+- ButtonReload
+- ButtonSwitch
+
+**`walletApi.components.Collapse`**
+
+Allows access to all of the Collapse components:
+
+- Collapse
+- CollapseAccordion
+
+**`walletApi.components.Input`**
+
+Allows access to all of the Input components:
+
+- InputAddress
+- InputCurrency
+- InputDelegate
+- InputFee
+- InputField
+- InputLanguage
+- InputPassword
+- InputSelect
+- InputSwitch
+- InputText
+
+**`walletApi.components.ListDivided`**
+
+Allows access to all of the ListDivided components:
+
+- ListDivided
+- ListDividedItem
+
+**`walletApi.components.Loader`**
+
+Allows access to the Loader component
+
+**`walletApi.components.Menu`**
+
+Allows access to all of the Menu components:
+
+- MenuDropdown
+- MenuDropdownAlternativeHandler
+- MenuDropdownHandler
+- MenuDropdownItem
+- MenuNavigation
+- MenuNavigationItem
+- MenuOptions
+- MenuOptionsItem
+- MenuStep
+- MenuStepItem
+- MenuTab
+- MenuTabItem
+
+**`walletApi.components.TableWrapper`**
+
+Allows access to the TableWrapper component
+
+#### WEBFRAME
+
+Allow showing remote URL pages within a frame. For example, showing the explorer within a page on the Desktop Wallet.
+
+**`walletApi.components.WebFrame`**
+
+#### EVENTS
+
+Allow access to the Desktop Wallet events. For example, an event is triggered every time a new transaction is received.
+
+**`walletApi.eventBus.on(event, callback)`**
+
+Used to listen for an event
+
+**`walletApi.eventBus.off(event, callback)`**
+
+Used to disable listening for an event
+
+**`walletApi.eventBus.emit(event, data)`**
+
+Used to send data to trigger events elsewhere
+
+#### AUDIO
+
+Allow access to play audio from within the Desktop Wallet. For example, they could be used as an announcement for a new transaction.
+
+**`AudioContext`**
+
+#### ALERTS
+
+Allow access to the Desktop Wallet alerts. For example, they could be used for notifications.
+
+**`walletApi.alert.error(...)`**
+
+Trigger an error notification alert
+
+**`walletApi.alert.success(...)`**
+
+Trigger an success notification alert
+
+**`walletApi.alert.info(...)`**
+
+Trigger an info notification alert
+
+**`walletApi.alert.warn(...)`**
+
+Trigger an warn notification alert
+
+#### MESSAGING
+
+Allow WebFrame to have access to a one-way messaging system. E.g. trigger a plugin change when a button is pressed on an external page inside the WebFrame component.
+
+Run `sendToHost(event, data)` from within a WebFrame to trigger a messaging event.
+
+**`walletApi.messages.on(action, eventCallback)`**
+
+Listen for a message from within the WebFrame
+
+#### STORAGE
+
+Allow storing data within the Desktop Wallet, using a key-value pair.
+
+**`walletApi.storage.get(key)`**
+
+Get a single value from the store based on key
+
+**`walletApi.storage.set(key, value)`**
+
+Set a value in the store.
+
+**`walletApi.storage.getOptions()`**
+
+Get all values from the store for the plugin.
+
+#### HTTP
+
+Allow performing external web requests. E.g. accessing the API of a third-party provider. 
+
+**Note: This relies on a whitelist being provided within the `package.json` file**
+
+**`sandbox.walletApi.http.get(url, opts)`**
+
+Perform a GET request
+
+**`sandbox.walletApi.http.post(url, opts)`**
+
+Perform a POST request
+
+#### PEER_CURRENT
+
+Allows access to the currently connected peer. E.g. to fetch additional data from the network.
+
+**`sandbox.walletApi.peers.current.get(url, timeout = 3000)`**
+
+Perform a GET request on the network
+
+**`sandbox.walletApi.peers.current.post(url, timeout = 3000)`**
+
+Perform a POST request on the network
+
+#### PROFILE_CURRENT
+
+Get the currently active profile. E.g. to provide a list of wallets for the user to choose from.
+
+**`sandbox.walletApi.profiles.getCurrent()`**
+
+#### PROFILE_ALL
+
+Get all available profiles. E.g. to provide a list of wallets for the user to choose from which could be network independent.
+
+**`sandbox.walletApi.profiles.all`**
+
+</details>
+
 ## Security
 
 If you discover a security vulnerability within this project, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.

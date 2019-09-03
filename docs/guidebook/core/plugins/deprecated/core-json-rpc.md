@@ -8,8 +8,12 @@ If you are looking to just broadcast transactions you should take a look at [Cre
 
 # JSON-RPC
 
+::: warning
+This package is deprecated and is no longer maintained and supported.
+:::
+
 ::: tip
-You can find the source code of this package at [packages/core-json-rpc](https://github.com/ARKEcosystem/core/tree/develop/packages/core-json-rpc).
+You can find the source code of this package at [core-plugins-deprecated/core-json-rpc](https://github.com/ArkEcosystem/core-plugins-deprecated/tree/master/core-json-rpc).
 :::
 
 ## Installation

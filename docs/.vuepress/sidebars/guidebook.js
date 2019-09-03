@@ -64,7 +64,6 @@ module.exports = [
           '/guidebook/core/plugins/optional/core-error-tracker-raygun.md',
           '/guidebook/core/plugins/optional/core-error-tracker-rollbar.md',
           '/guidebook/core/plugins/optional/core-error-tracker-sentry.md',
-          '/guidebook/core/plugins/optional/core-json-rpc.md',
           '/guidebook/core/plugins/optional/core-logger-winston.md',
           '/guidebook/core/plugins/optional/core-tester-cli.md',
           '/guidebook/core/plugins/optional/core-vote-report.md',
@@ -73,7 +72,14 @@ module.exports = [
       },
       {
         title: 'Deprecated',
-        children: ['/guidebook/core/plugins/deprecated/', '/guidebook/core/plugins/deprecated/core-graphql.md']
+        children: [
+          '/guidebook/core/plugins/deprecated/',
+          '/guidebook/core/plugins/deprecated/core-database-sequelize.md',
+          '/guidebook/core/plugins/deprecated/core-graphql.md',
+          '/guidebook/core/plugins/deprecated/core-json-rpc.md',
+          '/guidebook/core/plugins/deprecated/core-snapshots-cli.md',
+          '/guidebook/core/plugins/deprecated/core-transaction-pool-redis.md'
+        ]
       }
     ]
   },

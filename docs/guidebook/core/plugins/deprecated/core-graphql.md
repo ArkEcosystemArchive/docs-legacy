@@ -4,8 +4,12 @@ title: "GraphQL"
 
 # GraphQL
 
+::: warning
+This package is deprecated and is no longer maintained and supported.
+:::
+
 ::: tip
-You can find the source code of this package at [packages/core-graphql](https://github.com/ARKEcosystem/core/tree/develop/packages/core-graphql).
+You can find the source code of this package at [core-plugins-deprecated/core-graphql](https://github.com/ArkEcosystem/core-plugins-deprecated/tree/master/core-graphql).
 :::
 
 ## Installation

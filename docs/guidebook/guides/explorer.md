@@ -110,7 +110,9 @@ yarn dev --env.routerMode=history
 
 ## Running your own explorer
 
-To run your own explorer, or a mirror of the ARK explorer, there are a couple of ways to achieve this:
+At ARK.io, we have a [mainnet](https://explorer.ark.io) and [devnet](https://dexplorer.ark.io) explorer running to show the current state of the network and what is happening on it. In addition, there is are official mirrors for the mainnet explorer too, which you can find on different services such as [GitHub pages](https://arkecosystem.github.io/explorer/) and [Netlify](https://ark-explorer.netlify.com/#/).
+
+To run your own explorer, or an additional mirror of the ARK explorer, there are a couple of ways to achieve this:
 
 ### GitHub Pages
 Our [explorer mirror](https://arkecosystem.github.io/explorer/) runs on GitHub pages and is simply said a branch that contains the `dist` directory that is generated when you build the explorer. To run the explorer on your own GitHub pages website, you can do one of the following:
@@ -120,6 +122,15 @@ Your root repository for GitHub pages is one named `username.github.io`, for exa
 
 #### GitHub Pages with variable repository
 When you don't use a root repository for GitHub pages (e.g. because it's already in use), you can still have it hosted in a sub-directory of your GitHub pages website. If you for example create a repository called `my-explorer`, it will become available on `username.github.io/my-explorer`. If you would then build the explorer by running `yarn build --base https://username.github.io/my-explorer/` and push the contents of the generated `dist` files to your repository `my-explorer`, it will be served on your GitHub pages website. The additional `--base` parameter is needed to point the explorer to the correct url, as it will use the root domain by default.
+
+### Netlify
+The explorer is also compatible with [Netlify](https://www.netlify.com). In order to run it on there, you'll need to:
+
+1. link your explorer repository
+2. choose the `master` branch
+3. set `yarn build:mainnet` or (`devnet`, depending on what you need) as build command
+4. set `dist` as publish directory
+5. deploy, and your explorer will become visible on your netfily url
 
 ### Express Server
 You can run the explorer as an express server. This makes it a little more light-weight but not needing to have services such as apache or nginx.

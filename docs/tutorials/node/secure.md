@@ -520,9 +520,8 @@ if you name your files something different.
 ```bash
 # HTTPS
 server {
-  listen 443;
+  listen 443 ssl;
   server_name node.yoursite.com;
-ssl on;
   ssl_certificate /etc/nginx/ssl/ark.crt;
   ssl_certificate_key /etc/nginx/ssl/ark.key;
   ssl_verify_client off;

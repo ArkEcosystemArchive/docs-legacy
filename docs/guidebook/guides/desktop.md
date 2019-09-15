@@ -6,7 +6,7 @@ title: "ARK Desktop Wallet v2.x.x"
 
 ![ARK Desktop](./assets/desktop/banner.png)
 
-[![Build Status](https://badgen.now.sh/circleci/github/ARKEcosystem/desktop-wallet)](https://circleci.com/gh/ARKEcosystem/desktop-wallet)
+[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/desktop-wallet)](https://circleci.com/gh/ArkEcosystem/desktop-wallet)
 [![Latest Version](https://badgen.now.sh/github/release/ARKEcosystem/desktop-wallet)](https://github.com/ARKEcosystem/desktop-wallet/releases)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 

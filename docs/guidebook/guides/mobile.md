@@ -8,7 +8,7 @@ title: "Mobile Wallet"
 
 > A Wallet for Everyone
 
-[![Build Status](https://badgen.now.sh/circleci/github/ARKEcosystem/mobile-wallet)](https://circleci.com/gh/ARKEcosystem/mobile-wallet)
+[![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/mobile-wallet)](https://circleci.com/gh/ArkEcosystem/mobile-wallet)
 [![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/mobile-wallet)](https://codecov.io/gh/arkecosystem/mobile-wallet)
 [![Latest Version](https://badgen.now.sh/github/release/ARKEcosystem/mobile-wallet)](https://github.com/ARKEcosystem/mobile-wallet/releases/latest)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)

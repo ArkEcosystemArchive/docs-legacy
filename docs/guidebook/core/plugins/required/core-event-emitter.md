@@ -30,34 +30,32 @@ Conceptually, this feature is similar to the [Hooks implementation in WordPress]
 
 Another way to think of the Event API is in the context of a [publish-subscribe pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). In this pattern, ARK Core packages can act both as publishers and subscribers of events.
 
-The list of events published by ARK Core packages can be found in `core-blockchain`'s `getEvents` [method](https://github.com/ARKEcosystem/core/blob/develop/packages/core-blockchain/src/blockchain.ts#L589-L610):
+The list of events published by ARK Core packages can be found in `core-event-emitter` package as `enum` type [ApplicationEvents](https://github.com/ArkEcosystem/core/blob/master/packages/core-event-emitter/src/index.ts#L12):
 
 ```ts
-public getEvents() {
-    return [
-        "block.applied",
-        "block.disregarded",
-        "block.forged",
-        "block.received",
-        "block.reverted",
-        "delegate.registered",
-        "delegate.resigned",
-        "forger.failed",
-        "forger.missing",
-        "forger.started",
-        "peer.added",
-        "peer.removed",
-        "round.created",
-        "state:started",
-        "transaction.applied",
-        "transaction.expired",
-        "transaction.forged",
-        "transaction.pool.added",
-        "transaction.pool.rejected",
-        "transaction.pool.removed",
-        "transaction.reverted",
-        "wallet.saved",
-        "wallet.created.cold",
-    ];
+export enum ApplicationEvents {
+    BlockApplied = "block.applied",
+    BlockDisregarded = "block.disregarded",
+    BlockForged = "block.forged",
+    BlockReceived = "block.received",
+    BlockReverted = "block.reverted",
+    DelegateRegistered = "delegate.registered",
+    DelegateResigned = "delegate.resigned",
+    ForgerFailed = "forger.failed",
+    ForgerMissing = "forger.missing",
+    ForgerStarted = "forger.started",
+    PeerAdded = "peer.added",
+    PeerRemoved = "peer.removed",
+    RoundApplied = "round.applied",
+    RoundCreated = "round.created",
+    StateStarted = "state.started",
+    TransactionApplied = "transaction.applied",
+    TransactionExpired = "transaction.expired",
+    TransactionForged = "transaction.forged",
+    TransactionPoolAdded = "transaction.pool.added",
+    TransactionPoolRejected = "transaction.pool.rejected",
+    TransactionPoolRemoved = "transaction.pool.removed",
+    TransactionReverted = "transaction.reverted",
+    WalletColdCreated = "wallet.created.cold",
+    WalletSaved = "wallet.saved",
 }
-```

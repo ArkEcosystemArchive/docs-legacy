@@ -132,7 +132,7 @@ export class BusinessRegistrationTransaction extends Transactions.Transaction {
 ```
 
 Notice three static properties we have to set:
-- `typeGroup` is a number of transaction group (we will assigned it to core group with number 1)
+- `typeGroup` is a number of transaction group (we will assign it to core group with number 1)
 - `type` is a number of a transaction (in our case number 100)
 - `key` by which core looks for static fees
 - `defaultStaticFee` is amount user will have to pay for this transaction

@@ -510,10 +510,13 @@ Updating the *plugins.js* which contains all the plugins parameters for our netw
 
 ### plugins.js
 
-**First**, let's add our plugin to `plugins.js`. You can simply add after all core plugins this line:
+**First**, let's add our plugin to `plugins.js`. Make sure to add your plug-in before `"@arkecosystem/core-state"` e.g.:
 
 ```js
+...
 "custom-transactions": {},
+"@arkecosystem/core-state": {},
+...
 ```
 
 Here *custom-transactions* is the alias we have chosen (plugin definition in `index.ts`). No parameter is needed so we leave the parameters as en empty object.

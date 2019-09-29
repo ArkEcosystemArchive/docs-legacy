@@ -41,7 +41,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.2.2",
     "highlight.js": "^9.13.1",
-    "husky": "^2.2.0",
+    "husky": "^3.0.0",
     "lint-staged": "^8.1.6",
     "nprogress": "^0.2.0",
     "sweetalert": "^2.1.0",

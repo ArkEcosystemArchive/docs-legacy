@@ -32,7 +32,7 @@
   "devDependencies": {
     "@dated/markdown-title-case": "^0.1.7",
     "axios": "^0.18.1",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "eslint-config-standard": "^14.0.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-import": "^2.17.2",

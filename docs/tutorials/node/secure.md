@@ -509,7 +509,7 @@ sudo apt-get install nginx
 #### Edit Nginx Config
 
 ```bash
-sudo nano /etc/nginx/enabled-sites/default
+sudo nano /etc/nginx/sites-enabled/default
 ```
 
 Paste in the following config, making sure you edit the `server_name` and `proxy_pass`. You may need to change `ssl_certificate` and `ssl_certificate_key`

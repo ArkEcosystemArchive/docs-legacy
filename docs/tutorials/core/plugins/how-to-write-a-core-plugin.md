@@ -155,7 +155,7 @@ export const plugin: Container.PluginDescriptor = {
   defaults,
   alias: "demo-plugin",
   async register(container: Container.IContainer, options) {
-    return new Demo(container);
+    return new Demo();
   },
   async deregister(container: Container.IContainer, options) {
     return container.resolvePlugin("demo-plugin").exit();

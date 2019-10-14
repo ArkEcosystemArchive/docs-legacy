@@ -672,9 +672,9 @@ $connection = new Connection([
 ::: tab python
 
 ```python
-from client import ARKClient
+from client import ArkClient
 
-client = ARKClient('http://127.0.0.1:4003/api')
+client = ArkClient('http://127.0.0.1:4003/api')
 ```
 
 :::

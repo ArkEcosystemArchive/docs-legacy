@@ -600,13 +600,15 @@ Depending on the library, you must import and initialize it in a specific way.
 To perform cryptographic functions with the ARK JavaScript Crypto library, you must first require it:
 
 ```js
-const { crypto } = require("@arkecosystem/crypto");
+const { Crypto } = require("@arkecosystem/crypto");
 ```
 
 Throughout this document, the keys object used is:
 
 ```js
-const keys = crypto.getKeys("this is a top-secret passphrase");
+const BIP32Wallet = Crypto.HDWallet.fromMnemonic("this is a top-secret passphrase");
+
+const keys = Crypto.HDWallet.getKeys(BIP32Wallet);
 ```
 
 :::
@@ -906,7 +908,7 @@ Serialization of a transaction object ensures it is compact and properly formatt
 ::: tab javascript
 
 ```js
-const serialized = Transaction.serialize(transaction).toString("hex");
+const serialized = Transactions.Serializer.getBytes(transaction).toString("hex");
 ```
 
 :::
@@ -1029,7 +1031,7 @@ A serialized transaction may be deserialized for inspection purposes. The public
 ::: tab javascript
 
 ```js
-const deserialized = Transaction.deserialize(serialized);
+const deserialized = Transactions.deserializer.deserialize(serialized);
 ```
 
 :::
@@ -1144,14 +1146,21 @@ Signing a string works much like signing a transaction: in most implementations,
 ::: tab javascript
 
 ```js
-const message = "Arbitrary entry of data";
-const hash = utils.sha256(message);
-const signature = crypto.signHash(hash, keys);
+const message = 'Arbitrary entry of data';
+const hash = Crypto.HashAlgorithms.sha256(message);
+const signatureECDSA = Crypto.Hash.signECDSA(hash, keys);
+const signatureSchnorr = Crypto.Hash.signSchnorr(hash, keys);
 
-const signed = {
+const signedECDSA = {
   message,
   hash,
-  signature
+  signature: signatureECDSA,
+};
+
+const signedSchnorr = {
+  message,
+  hash,
+  signature: signatureSchnorr,
 };
 ```
 
@@ -1265,11 +1274,9 @@ A message's signature can easily be verified by hash, without the private key th
 ::: tab javascript
 
 ```js
-crypto.verifyHash(
-  signed.hash,
-  signed.signature,
-  "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b"
-);
+Crypto.Hash.verifyECDSA(hash, signatureECDSA, keys.publicKey);
+
+Crypto.Hash.verifySchnorr(hash, signatureECDSA, keys.publicKey);
 ```
 
 :::
@@ -1426,11 +1433,11 @@ The identities class allows for the creation and inspection of keypairs from `pa
 To use identities in your project, first, require the module.
 
 ```js
-const { identities } = require("@arkecosystem/crypto");
+const { Identities } = require("@arkecosystem/crypto");
 ```
 
 ```js
-identities.address.fromPassphrase("this is a top secret passphrase");
+Identities.Address.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -1533,8 +1540,8 @@ ARKEcosystem.Crypto.Identities.Address.from_passphrase('this is a top secret pas
 ::: tab javascript
 
 ```js
-identities.address.fromPublicKey(
-  "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b"
+Identities.Address.fromPublicKey(
+  keys.publicKey
 );
 ```
 
@@ -1640,9 +1647,9 @@ ARKEcosystem.Crypto.Identities.Address.from_public_key('034151a3ec46b5670a682b0a
 ::: tab javascript
 
 ```js
-identities.address.fromPrivateKey(
-  "d8839c2432bfd0a67ef10a804ba991eabba19f154a3d707917681d45822a5712"
-);
+Identities.Address.fromPrivateKey({
+  publicKey: keys.publicKey
+});
 ```
 
 :::
@@ -1748,7 +1755,7 @@ ARKEcosystem.Crypto.Identities.Address.from_private_key('d8839c2432bfd0a67ef10a8
 ::: tab javascript
 
 ```js
-identities.address.validate("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
+Identities.Address.validate("D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib");
 ```
 
 :::
@@ -1859,7 +1866,7 @@ As the name implies, private keys and passphrases are to remain private. Never s
 ::: tab javascript
 
 ```js
-identities.privateKey.fromPassphrase("this is a top secret passphrase");
+Identities.PrivateKey.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -2060,7 +2067,7 @@ ARKEcosystem.Crypto.Identities.PrivateKey.from_hex('d8839c2432bfd0a67ef10a804ba9
 ::: tab javascript
 
 ```js
-identities.privateKey.fromWIF(
+Identities.PrivateKey.fromWIF(
   "SGq4xLgZKCGxs7bjmwnBrWcT4C1ADFEermj846KC97FSv1WFD1dA"
 );
 ```
@@ -2133,7 +2140,7 @@ Public Keys may be freely shared, and are included in transaction objects to val
 ::: tab javascript
 
 ```js
-identities.publicKey.fromPassphrase("this is a top secret passphrase");
+Identities.PublicKey.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::
@@ -2328,7 +2335,7 @@ ARKEcosystem.Crypto.Identities.PublicKey.from_hex('034151a3ec46b5670a682b0a63394
 ::: tab javascript
 
 ```js
-identities.publicKey.validate(
+Identities.PublicKey.validate(
   "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192"
 );
 ```
@@ -2401,7 +2408,7 @@ The WIF should remain secret, just like your `passphrase` and `private key`.
 ::: tab javascript
 
 ```js
-identities.wif.fromPassphrase("this is a top secret passphrase");
+Identities.WIF.fromPassphrase("this is a top secret passphrase");
 ```
 
 :::

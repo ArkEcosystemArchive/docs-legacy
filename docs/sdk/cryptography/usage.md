@@ -1146,22 +1146,7 @@ Signing a string works much like signing a transaction: in most implementations,
 ::: tab javascript
 
 ```js
-const message = 'Arbitrary entry of data';
-const hash = Crypto.HashAlgorithms.sha256(message);
-const signatureECDSA = Crypto.Hash.signECDSA(hash, keys);
-const signatureSchnorr = Crypto.Hash.signSchnorr(hash, keys);
-
-const signedECDSA = {
-  message,
-  hash,
-  signature: signatureECDSA,
-};
-
-const signedSchnorr = {
-  message,
-  hash,
-  signature: signatureSchnorr,
-};
+const signature = Crypto.Message.sign("Hello World", "this is a top secret passphrase")
 ```
 
 :::
@@ -1181,7 +1166,7 @@ Message message = Message.sign("Hello World", "this is a top secret passphrase")
 ```csharp
 using ARKEcosystem.Crypto;
 
-var message = Message.Sign("Hello World", "passphrase");
+var message = Message.Sign("Hello World", "this is a top secret passphrase");
 ```
 
 :::
@@ -1209,7 +1194,7 @@ message = Message.sign('Hello World', 'this is a top secret passphrase')
 ::: tab golang
 
 ```go
-message, _ := crypto.SignMessage("Hello World", "top secret")
+message, _ := crypto.SignMessage("Hello World", "this is a top secret passphrase")
 ```
 
 :::

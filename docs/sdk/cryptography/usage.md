@@ -1276,7 +1276,7 @@ A message's signature can easily be verified by hash, without the private key th
 ```js
 Crypto.Hash.verifyECDSA(hash, signatureECDSA, keys.publicKey);
 
-Crypto.Hash.verifySchnorr(hash, signatureECDSA, keys.publicKey);
+Crypto.Hash.verifySchnorr(hash, signatureSchnorr, keys.publicKey);
 ```
 
 :::

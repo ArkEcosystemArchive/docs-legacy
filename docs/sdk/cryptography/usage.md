@@ -1146,7 +1146,27 @@ Signing a string works much like signing a transaction: in most implementations,
 ::: tab javascript
 
 ```js
-const signature = Crypto.Message.sign("Hello World", "this is a top secret passphrase")
+const signature = Crypto.Message.sign("Hello World", "this is a top secret passphrase");
+
+// Different hashing algorithms.
+
+const message = "Hello World";
+const hash = Crypto.HashAlgorithms.sha256(message);
+const signatureECDSA = Crypto.Hash.signECDSA(hash, keys);
+const signatureSchnorr = Crypto.Hash.signSchnorr(hash, keys);
+
+const signedECDSA = {
+  message,
+  hash,
+  signature: signatureECDSA,
+};
+
+const signedSchnorr = {
+  message,
+  hash,
+  signature: signatureSchnorr,
+};
+
 ```
 
 :::

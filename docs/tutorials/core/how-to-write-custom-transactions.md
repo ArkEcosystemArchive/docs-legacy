@@ -550,7 +550,7 @@ Here *custom-transactions* is the alias we have chosen (plugin definition in `in
 
 This is related to dynamic fees calculation, we need to provide the fee per additional byte for our transaction.
 
-## BusinessBuilder to create our transactions
+## BusinessRegistrationBuilder to create our transactions
 
 An additional step is to create what we call a *builder* for our custom transaction type.
 
@@ -558,7 +558,7 @@ We have those *builders* for every transaction in Core, they are helpers to crea
 
 Have a look at the `crypto/src/transactions/builder` folder where you will see how it is implemented for each transaction type.
 
-Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessBuilder:
+Based on this, we can create a `builder` directory inside our plugin, and implement our BusinessRegistrationBuilder:
 
 ```ts
 import { Interfaces, Transactions, Utils } from "@arkecosystem/crypto";
@@ -607,7 +607,7 @@ Pretty straightforward as you can see:
 Now we could use this builder to create our transactions:
 
 ```ts
-const builder = new BusinessBuilder();
+const builder = new BusinessRegistrationBuilder();
 const businessTx = builder
     .nonce("1")
     .businessAsset("google", "www.google.com")

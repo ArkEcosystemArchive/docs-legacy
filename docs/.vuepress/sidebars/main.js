@@ -1,22 +1,19 @@
 module.exports = [
-  '/',
+  "/",
   {
-    title: 'Table of Contents',
+    title: "Table of Contents",
     collapsable: false,
     children: [
-      '/introduction/',
-      '/guidebook/',
-      '/tutorials/',
-      '/cryptography/',
-      '/iot/',
-      '/exchanges/',
-      '/api/',
-      '/sdk/',
-      '/releases/',
-      '/security/',
-      '/faq/',
-      '/glossary/',
-      '/archive/'
+      "/introduction/",
+      "/guidebook/",
+      "/tutorials/",
+      "/cryptography/",
+      "/iot/",
+      "/releases/",
+      "/security/",
+      "/faq/",
+      "/glossary/",
+      "/archive/"
     ]
   }
-]
+];

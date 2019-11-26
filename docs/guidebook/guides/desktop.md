@@ -219,28 +219,23 @@ Plugin contains custom components.
 
 Can be used in combination with the COMPONENTS permission.
 
+#### PUBLIC
+
+Allow access to Font Awesome components.
+
+#### THEMES
+
+Allow additional custom themes for the Desktop Wallet.
+
 #### WALLET_TABS
 
 Allow showing an additional tab/page on the Wallet screen.
 
 Can be used in combination with the COMPONENTS permission.
 
-#### THEMES
-
-Allow additional custom themes for the Desktop Wallet.
-
-</details>
-
-<details>
-<summary>
-  <h4>Wallet API permissions</h4>
-</summary>
-
 #### UI_COMPONENTS
 
-Allow access to the standard Desktop Wallet components used throughout. This gives plugins the ability to look and feel like they are a part of the application.
-
-**`walletApi.components.Button`**
+Allow access to the standard Desktop Wallet components used throughout the wallet. This gives plugins the ability to look and feel like they are a part of the application.
 
 Allows access to all of the Button components:
 
@@ -253,14 +248,10 @@ Allows access to all of the Button components:
 - ButtonReload
 - ButtonSwitch
 
-**`walletApi.components.Collapse`**
-
 Allows access to all of the Collapse components:
 
 - Collapse
 - CollapseAccordion
-
-**`walletApi.components.Input`**
 
 Allows access to all of the Input components:
 
@@ -275,18 +266,14 @@ Allows access to all of the Input components:
 - InputSwitch
 - InputText
 
-**`walletApi.components.ListDivided`**
-
 Allows access to all of the ListDivided components:
 
 - ListDivided
 - ListDividedItem
 
-**`walletApi.components.Loader`**
+Allows access to the Loader component:
 
-Allows access to the Loader component
-
-**`walletApi.components.Menu`**
+- Loader
 
 Allows access to all of the Menu components:
 
@@ -303,37 +290,22 @@ Allows access to all of the Menu components:
 - MenuTab
 - MenuTabItem
 
-**`walletApi.components.TableWrapper`**
+Allows access to the TableWrapper component:
 
-Allows access to the TableWrapper component
+- TableWrapper
 
 #### WEBFRAME
 
-Allow showing remote URL pages within a frame. For example, showing the explorer within a page on the Desktop Wallet.
+Allow showing remote URL pages within a frame. For example, showing the explorer within a page on the Desktop Wallet:
 
-**`walletApi.components.WebFrame`**
+- WebFrame
 
-#### EVENTS
+</details>
 
-Allow access to the Desktop Wallet events. For example, an event is triggered every time a new transaction is received.
-
-**`walletApi.eventBus.on(event, callback)`**
-
-Used to listen for an event
-
-**`walletApi.eventBus.off(event, callback)`**
-
-Used to disable listening for an event
-
-**`walletApi.eventBus.emit(event, data)`**
-
-Used to send data to trigger events elsewhere
-
-#### AUDIO
-
-Allow access to play audio from within the Desktop Wallet. For example, they could be used as an announcement for a new transaction.
-
-**`AudioContext`**
+<details>
+<summary>
+  <h4>Wallet API permissions</h4>
+</summary>
 
 #### ALERTS
 
@@ -341,19 +313,55 @@ Allow access to the Desktop Wallet alerts. For example, they could be used for n
 
 **`walletApi.alert.error(...)`**
 
-Trigger an error notification alert
+Trigger an error notification alert.
 
 **`walletApi.alert.success(...)`**
 
-Trigger an success notification alert
+Trigger a success notification alert.
 
 **`walletApi.alert.info(...)`**
 
-Trigger an info notification alert
+Trigger an info notification alert.
 
 **`walletApi.alert.warn(...)`**
 
-Trigger an warn notification alert
+Trigger a warn notification alert.
+
+#### AUDIO
+
+Allow access to play audio from within the Desktop Wallet. For example, they could be used as an announcement for a new transaction.
+
+**`AudioContext`**
+
+#### EVENTS
+
+Allow access to the Desktop Wallet events. For example, an event is triggered every time a new transaction is received.
+
+**`walletApi.eventBus.on(event, callback)`**
+
+Used to listen for an event.
+
+**`walletApi.eventBus.off(event, callback)`**
+
+Used to disable listening for an event.
+
+**`walletApi.eventBus.emit(event, data)`**
+
+Used to send data to trigger events elsewhere.
+
+#### HTTP
+
+Allow performing external web requests. E.g. accessing the API of a third-party provider. 
+
+**Note: This relies on a whitelist being provided within the `package.json` file**
+
+**`walletApi.http.get(url, opts)`**
+
+Perform a GET request.
+
+**`walletApi.http.post(url, opts)`**
+
+Perform a POST request.
 
 #### MESSAGING
 
@@ -363,61 +371,139 @@ Run `sendToHost(event, data)` from within a WebFrame to trigger a messaging even
 
 **`walletApi.messages.on(action, eventCallback)`**
 
-Listen for a message from within the WebFrame
+Listen for a message from within the WebFrame.
 
-#### STORAGE
+**`walletApi.messages.clear()`**
 
-Allow storing data within the Desktop Wallet, using a key-value pair.
-
-**`walletApi.storage.get(key)`**
-
-Get a single value from the store based on key
-
-**`walletApi.storage.set(key, value)`**
-
-Set a value in the store.
-
-**`walletApi.storage.getOptions()`**
-
-Get all values from the store for the plugin.
-
-#### HTTP
-
-Allow performing external web requests. E.g. accessing the API of a third-party provider. 
-
-**Note: This relies on a whitelist being provided within the `package.json` file**
-
-**`sandbox.walletApi.http.get(url, opts)`**
-
-Perform a GET request
-
-**`sandbox.walletApi.http.post(url, opts)`**
-
-Perform a POST request
+Clear all messaging events.
 
 #### PEER_CURRENT
 
 Allows access to the currently connected peer. E.g. to fetch additional data from the network.
 
-**`sandbox.walletApi.peers.current.get(url, timeout = 3000)`**
+**`walletApi.peers.current.get(url, timeout = 3000)`**
 
-Perform a GET request on the network
+Perform a GET request on the network.
 
-**`sandbox.walletApi.peers.current.post(url, timeout = 3000)`**
+**`walletApi.peers.current.post(url, timeout = 3000)`**
 
-Perform a POST request on the network
-
-#### PROFILE_CURRENT
-
-Get the currently active profile. E.g. to provide a list of wallets for the user to choose from.
-
-**`sandbox.walletApi.profiles.getCurrent()`**
+Perform a POST request on the network.
 
 #### PROFILE_ALL
 
 Get all available profiles. E.g. to provide a list of wallets for the user to choose from which could be network independent.
 
-**`sandbox.walletApi.profiles.all`**
+**`walletApi.profiles.all`**
+
+#### PROFILE_CURRENT
+
+Get the currently active profile. E.g. to provide a list of wallets for the user to choose from.
+
+**`walletApi.profiles.getCurrent()`**
+
+#### PUBLIC
+
+Allow access to the current route, including being able to navigate.
+
+**`walletApi.route.get()`**
+
+Get the current route.
+
+**`walletApi.route.goTo()`**
+
+Navigate to a new route.
+
+#### STORAGE
+
+Allow storing data within the Desktop Wallet, using a key-value pair.
+
+**`walletApi.storage.get(key, global = false)`**
+
+Get a single value from the store based on key. If `global` is `true`, it will fetch the data stored globally in the wallet.
+
+**`walletApi.storage.set(key, value, global = false)`**
+
+Set a value in the store. If `global` is `true`, it will globally store the data in the wallet.
+
+**`walletApi.storage.getOptions()`**
+
+Get all values from the store for the plugin.
+
+#### TIMERS
+
+Allows initiating and dealing with timers from inside a plugin.
+
+**`walletApi.timers.setInterval(method, interval, ...args)`**
+
+Start interval timer to run every `interval` milliseconds.
+
+**`walletApi.timers.setTimeout(method, interval, ...args)`**
+
+Start timeout timer to run once after `interval` milliseconds.
+
+**`walletApi.timers.clearInterval(id)`**
+
+Clear interval timer created using `setInterval`.
+
+**`walletApi.timers.clearTimeout(id)`**
+
+Clear timeout timer created using `setTimeout`.
+
+**`walletApi.timers.intervals`**
+
+Get a list of intervals which are active.
+
+**`walletApi.timers.timeouts`**
+
+Get a list of timeouts which are active.
+
+#### WEBSOCKET
+
+Allows initiating and dealing with websockets from inside a plugin.
+
+**`walletApi.websocket.clear()`**
+
+Clear existing websockets.
+
+**`walletApi.websocket.on(action, eventCallback)`**
+
+Create new websocket event.
+
+**`walletApi.websocket.close()`**
+
+Close an open websocket.
+
+**`walletApi.websocket.destroy()`**
+
+Close an open websocket and clear all active events.
+
+**`walletApi.websocket.send(data)`**
+
+Send data across the websocket.
+
+**`walletApi.websocket.isConnecting()`**
+
+Get whether the websocket is currently connecting.
+
+**`walletApi.websocket.isDestroyed()`**
+
+Get whether the websocket is uninitiated or destroyed.
+
+**`walletApi.websocket.isOpen()`**
+
+Get whether the websocket is open.
+
+**`walletApi.websocket.isClosing()`**
+
+Get whether the websocket is in the process of closing.
+
+**`walletApi.websocket.isClosed()`**
+
+Get whether the websocket is closed.
+
+**`walletApi.websocket.binaryType`**
+
+Get or set the binary type for the websocket.
 
 </details>
 

@@ -184,11 +184,11 @@ After you made your selection you will need to confirm by pressing `y` and confi
 ? Can you confirm? › (y/N)
 ```
 
-With that we have sucessfully installed ARK Devnet Core and published our configuration options.
+With that we have successfully installed ARK Devnet Core and published our configuration options.
 
 #### Configuring ARK Devnet Core Database
 
-Last step of the ARK Devnet Core essential configuration is to configure database parameters. You will be presented with a prompt:
+The ARK Devnet Core essential configuration is to configure database parameters. You will be presented with a prompt:
 
 ```bash
 Would you like to configure the database? [y/N]:
@@ -206,13 +206,17 @@ Enter the database name: ark
 
 This will create PostgreSQL role and database to be used for storing blockchain data. 
 
-#### Since devnet is currently on version 2.6 with new transaction types you need to include these by opening the plugin.js file .
+#### Configuring New Transaction Types
+
+Since Ark Devnet Core is running on 2.6 with new transaction types you need to include these by opening the `plugin.js` file .
 
 ```bash
 nano ~/.config/ark-core/devnet/plugins.js
 ```
 
-Then add "@arkecosystem/core-magistrate-transactions": {},after "@arkecosystem/core-state": {}, . Press ctrl+x and Y to save and exit the file.
+Then add: `"@arkecosystem/core-magistrate-transactions": {},`
+after `"@arkecosystem/core-state": {},`
+Press `ctrl+x` and `Y` to save and exit the file.
 It should look like this:
 
 ```bash

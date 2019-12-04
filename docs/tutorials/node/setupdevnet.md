@@ -8,7 +8,7 @@ title: "How to Setup Your ARK Devnet Node"
 
 ## Introduction
 
-Here we will help you set up an ARK relay Devnet node, which relays transactions and secures the ARK network.
+Here we will help you set up an ARK Devnet Node, which relays transactions, helps you testing, developing and secures the ARK Devnet network.
 
 ## Bare-Metal
 

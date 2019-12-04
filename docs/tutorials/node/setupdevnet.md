@@ -136,7 +136,7 @@ By default, this is a `superuser`.
 usermod -a -G sudo username
 ```
 
-### Installing ARK Core
+### Installing ARK Core for Developers
 
 We're now ready to begin installing ARK. The initial install may take a while
 and at times appear not to be doing anything. Please have patience and let the process
@@ -144,16 +144,16 @@ finish.
 
 #### Switch to the ARK User
 
-While installing ARK Core, we should use the ARK user that we created above and go to the base directory. To switch to it, run:
+While installing ARK Devnet Core, we should use the ARK user that we created above and go to the base directory. To switch to it, run:
 
 ```bash
 sudo su - username
 cd ~
 ```
 
-#### Running ARK Core Installation Script
+#### Running ARK Core Installation Script for Developers
 
-Installing ARK Core is a straightforward process. We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command:
+Installing ARK Devnet Core is a straightforward process. We will use ARK installer script that will install all of the necessary dependencies, ARK Core onto your server and publish configuration files for it. To install essentials run this command:
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/ARKEcosystem/core/develop/install.sh)
@@ -176,7 +176,7 @@ Once installation of dependencies and ARK Core is finished you will need to sele
    testnet
 ```
 
-If you are tinkering and want to play with ARK for the first time, select `devnet` and request DARK coins in our [public Slack](https://ark.io/slack/) or [faucet] (https://devnet.money/).
+Devnet is to play with ARK for the first time, select `devnet` and request DARK coins in our [public Slack](https://ark.io/slack/) or [faucet] (https://devnet.money/).
 
 After you made your selection you will need to confirm by pressing `y` and confirm with `enter`
 

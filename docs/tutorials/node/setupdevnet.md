@@ -37,8 +37,7 @@ Running an ARK Core Devnet node is not like Bitcoin mining, and thus there are m
 Delegate Nodes have a higher minimum requirement on the hardware specifications. These nodes are the security of our network
 so their uptime is of most importance in making sure the network runs smoothly.
 
-The recommended specifications are what we would consider the minimum specs
-for Delegate Mainnet Nodes. Smaller nodes are fine for relays or Devnet Nodes. We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides use Debian flavored Linux variants though.
+We recommend using Ubuntu 16.04 however you are free to use any version of Linux you're comfortable with. These guides use Debian flavored Linux variants though.
 
 With each provider, the setup process for creating a new virtual server is going to
 be different. If choosing one of the listed providers, we have created quick

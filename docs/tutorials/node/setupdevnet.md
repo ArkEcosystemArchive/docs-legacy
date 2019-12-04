@@ -14,7 +14,7 @@ Here we will help you set up an ARK Devnet Node, which relays transactions, used
 
 ### Minimum Requirements
 
-The setup is not suitable as a Delegate Devnet Node
+The setup is only suitable as a Delegate Devnet Node or an Ark relay Node.
 
 - 1 Dedicated CPU Core
 - 4GB Ram

@@ -316,15 +316,15 @@ If the process has started you will see a lot of messages like this (with actual
 
 Note that depending on the network you use synchronization of the blockchain and the node specifications this can take upwards of 10 hours.
 
-### Recommended Configurations for a Forger Relay
+### Recommended Configurations for a Mainnet Forger Relay
 
 ::: warning
 **Default configurations that ship with Core are meant for the use of normal relays.**
 
-If you are a forging delegate you are strongly advised to take additional security measures and disable as many public access points as possible on your relay to minimise the surface for possible attacks.
+If you are a forging delegate on mainnet you are strongly advised to take additional security measures and disable as many public access points as possible on your relay to minimise the surface for possible attacks.
 :::
 
-We recommend to run multiple relays to strengthen the the network and to make it possible to disable public access to things like the API on your relay that is connected to your forger.
+We recommend to run multiple relays on mainnet to strengthen the the network and to make it possible to disable public access to things like the API on your relay that is connected to your forger.
 
 Simple things like whitelists can already go a long way to limit the access of outsiders to public facing services like APIs or your plugins that might expose public access.
 
@@ -344,13 +344,10 @@ We recommend to limit the whitelist to IPs/Servers that you control or know are 
 ### What's Next?
 
 Great! You have a working node, but now you should think about securing it.
-It is especially important if you plan on using this as your delegate/forging node.
+It is especially important if you plan on using a node as your delegate/forging node on mainnet.
 
-In our next section, we'll discuss making sure your ARK node is as secure as possible.
+In our next section, we'll discuss making sure your ARK Devnet Node is as secure as possible.
 As the ARK network grows, hacking attempts on delegate and relay nodes will become
 more prevalent. Defending against DDOS and other various attacks is extremely
 important in securing the network.
 
-## Docker
-
-Check our [official guide](/guidebook/core/docker.html) to get your node running with Docker.

@@ -345,10 +345,6 @@ Used to listen for an event.
 
 Used to disable listening for an event.
 
-**`walletApi.eventBus.emit(event, data)`**
-
-Used to send data to trigger events elsewhere.
-
 #### HTTP
 
 Allow performing external web requests. E.g. accessing the API of a third-party provider. 

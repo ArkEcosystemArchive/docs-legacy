@@ -606,9 +606,8 @@ const { Crypto } = require("@arkecosystem/crypto");
 Throughout this document, the keys object used is:
 
 ```js
-const BIP32Wallet = Crypto.HDWallet.fromMnemonic("this is a top-secret passphrase");
+const keys = Identities.Keys.fromPassphrase("this is a top secret passphrase");
 
-const keys = Crypto.HDWallet.getKeys(BIP32Wallet);
 ```
 
 :::

@@ -39,6 +39,7 @@ module.exports = [
     collapsable: false,
     children: [
       '/tutorials/node/setup',
+      '/tutorials/node/setupdevnet',
       '/tutorials/node/secure',
       '/tutorials/node/snapshots',
       '/tutorials/node/dynamic-fees'

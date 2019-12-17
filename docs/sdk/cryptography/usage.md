@@ -1030,7 +1030,7 @@ A serialized transaction may be deserialized for inspection purposes. The public
 ::: tab javascript
 
 ```js
-const deserialized = Transactions.deserializer.deserialize(serialized);
+const deserialized = Transactions.Deserializer.deserialize(serialized);
 ```
 
 :::

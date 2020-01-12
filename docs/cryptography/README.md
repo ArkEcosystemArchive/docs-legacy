@@ -116,8 +116,8 @@ Since an address is derived from a [PublicKey](#publickey), that means it is als
 
 | Network | dec |  hex   | Prefix  | Example address                      |
 | :------ | :-: | :----: | :-----: | :----------------------------------- |
-| Mainnet | 30  | `0x17` |   `A`   | `AewxfHQobSc49a4radHp74JZCGP8LRe4xA` |
-| Devnet  | 23  | `0x1E` |   `D`   | `D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib` |
+| Mainnet | 23  | `0x17` |   `A`   | `AewxfHQobSc49a4radHp74JZCGP8LRe4xA` |
+| Devnet  | 30  | `0x1E` |   `D`   | `D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib` |
 
 #### Address Prefix Table
 

@@ -223,7 +223,7 @@ Using the `client` package follows a similar pattern no matter what SDK you use;
 ```js
 async function init() {
   try {
-    const response = await connection.api('blocks').all('limit': 1);
+    const response = await connection.api('blocks').all({'limit': 1});
     return response.data;
   } catch (e) {
     console.log(e);

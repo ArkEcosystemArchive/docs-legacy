@@ -24,7 +24,7 @@ ark update
 
 ## Developer Related Information
 
-This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document. The following breaking changes where introduced in v2.5:
+This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document.
 
 ### Step 1. Add `core-magistrate-transactions` Package
 

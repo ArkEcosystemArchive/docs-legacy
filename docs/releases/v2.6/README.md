@@ -1,7 +1,7 @@
 # Summary
 
-ARK `v2.5` is a minor update and backward compatible with `v2.5.X`. This update removes the legacy public API that was ported from `ark-node`.
+ARK `v2.6` is a minor update but not backward compatible with `v2.5.X`. This update introduces implementations of AIP11 and AIP18.
 
-- **Upgrade time**: low - upgrading to `v2.5` requires no changes.
-- **Complexity**: low - only legacy code was removed and numerical format issues resolved.
-- **Risk**: medium - applications that relied on the legacy API will stop working. _An announcement was made that the legacy public API will be removed last year so the risk of this should be low._
+- **Upgrade time**: low - upgrading to `v2.6` only requires minimal configuration changes.
+- **Complexity**: high - AIP11 and AIP18 were implemented which bring various cryptography changes after a milestone is reached.
+- **Risk**: high - `v2.6` is not backward compatible with `v2.5` and as it includes AIP11 and AIP18 which will cause communication with 2.5 nodes to fail once a milestone is reached.

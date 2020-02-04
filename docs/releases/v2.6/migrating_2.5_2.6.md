@@ -22,10 +22,6 @@ Do not run any of the mentioned commands with `sudo` unless explicitly stated.
 ark update
 ```
 
-## Developer Related Information
-
-This section addresses developers and lists notable changes during this version upgrade. For more details make sure you checkout the [CHANGELOG](https://github.com/ArkEcosystem/core/blob/master/CHANGELOG.md) document.
-
 ### Step 1. Add `core-magistrate-transactions` Package
 
 1. Open `~/.config/ark-core/mainnet/plugins.js`

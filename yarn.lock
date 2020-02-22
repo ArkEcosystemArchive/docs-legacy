@@ -8486,10 +8486,10 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-plugin-tabs@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-tabs/-/vuepress-plugin-tabs-0.2.0.tgz#86ce4e6b5994e7604f44b1ce271e4f400c319912"
-  integrity sha512-33jGoKfA7fnCGfxtOEMcXaU49tCDi6VmqW/C9BuDf0DmL9WPncCN0McF+5Kx3nfHWCpWur5oOya5NHyWa+lf9A==
+vuepress-plugin-tabs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-tabs/-/vuepress-plugin-tabs-0.3.0.tgz#e95fb98d3736af450a9baaf1a09b8677983ca8d8"
+  integrity sha512-jooDlcMdBqhXgIaF1awFSaOTM56mleP6bbCiGxyQxTZexfvCfDvZhNLGpyXqMQA50ZmNGmvLrK82YYb63k1jfA==
 
 vuepress@^1.0.0-alpha.44:
   version "1.0.0-alpha.44"
